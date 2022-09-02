@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<title>Redirecting...</title>
-		<meta http-equiv="refresh" content="0;url=httpswww.valewood.org/privacy-policy/amp/">
+		<meta http-equiv="refresh" content="0;url=/privacy-policy/amp/">
 	</head>
 	<body>
 		<script type="text/javascript">
-			window.location = "httpswww.valewood.org/privacy-policy/amp/";
+			window.location = "/privacy-policy/amp/";
 		</script>
 
-		<p>You are being redirected to <a href="httpswww.valewood.org/privacy-policy/amp/">httpswww.valewood.org/privacy-policy/amp/</a></p>
+		<p>You are being redirected to <a href="/privacy-policy/amp/">/privacy-policy/amp/</a></p>
 	</body>
 </html>
