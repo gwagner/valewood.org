@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Redirecting...</title>
+		<meta http-equiv="refresh" content="0;url=httpswww.valewood.org/terms-of-use/amp/">
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.location = "httpswww.valewood.org/terms-of-use/amp/";
+		</script>
+
+		<p>You are being redirected to <a href="httpswww.valewood.org/terms-of-use/amp/">httpswww.valewood.org/terms-of-use/amp/</a></p>
+	</body>
+</html>

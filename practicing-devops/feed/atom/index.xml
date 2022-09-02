@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?><feed
+	xmlns="http://www.w3.org/2005/Atom"
+	xml:lang="en-US"
+	xmlns:thr="http://purl.org/syndication/thread/1.0"
+	>
+	<title type="text">
+	Comments on Practicing DevOps &#8211; A Surprising Alternative	</title>
+	<subtitle type="text">Occasionally a developer makes an Oops!</subtitle>
+
+	<updated>2022-08-13T04:15:27Z</updated>
+
+	<link rel="alternate" type="text/html" href="/practicing-devops/#respond" />
+	<link rel="self" type="application/atom+xml" href="/practicing-devops/feed/atom/" />
+	<id>/practicing-devops/feed/atom/</id>
+<generator uri="https://wordpress.org/" version="6.0.2">WordPress</generator>
+</feed>

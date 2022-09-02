@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>DevOps &#8211; A DevOps Blog</title>
+	<atom:link href="/devops/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Occasionally a developer makes an Oops!</description>
+	<lastBuildDate>Tue, 30 Aug 2022 02:47:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
+	<title>DevOps &#8211; A DevOps Blog</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>DevOps Roll-up: August</title>
+		<link>/devops-roll-up-august/</link>
+					<comments>/devops-roll-up-august/#respond</comments>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Wed, 31 Aug 2022 17:00:00 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[Roll-up]]></category>
+		<category><![CDATA[day2ops]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[kubernetes]]></category>
+		<guid isPermaLink="false">https://www.lab.valewood.org/?p=52</guid>
+
+					<description><![CDATA[Below is a list of DevOps articles/sites that I discovered over the past month and found interesting. DevOps Roadmap First is a link to a DevOps roadmap. This is a&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Below is a list of DevOps articles/sites that I discovered over the past month and found interesting.</p>
+
+
+
+<h2>DevOps Roadmap</h2>
+
+
+
+<p>First is a link to a DevOps roadmap.  This is a more technological than a philosophical view of what kinds of skills can be acquired in order to perform DevOps activities when on a team that does delivery via DevOps practices.</p>
+
+
+
+<p><a href="https://roadmap.sh/devops" target="_blank" rel="noreferrer noopener">https://roadmap.sh/devops</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>Diagramming and Documentation</h2>
+
+
+
+<p>Next is a programmatic diagramming tool that allows you to set up diagrams for your implementations via Python.  One of the most difficult parts of any progressive technology implementation is ensuring that your materials remain up to date and available to new and existing team members.  By putting this information into the code repository, and by allowing those artifacts to become part of the build pipeline, you can get much closer to that idealistic view of well-developed and well-run technology by closing this particular </p>
+
+
+
+<p><a href="https://diagrams.mingrammer.com/" target="_blank" rel="noopener">https://diagrams.mingrammer.com/</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>DoorDash Outage</h2>
+
+
+
+<p>Next is an article that describes a postmortem from a <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> outage at DoorDash.  This article helps illustrate the importance of not only reading the docs but also expresses the importance of testing your various failure scenarios to ensure that your entire team understands the various failure mechanisms and their impacts on a normally operating system.</p>
+
+
+
+<p><a href="https://doordash.engineering/2022/08/09/how-to-handle-kubernetes-health-checks/" target="_blank" rel="noopener">https://doordash.engineering/2022/08/09/how-to-handle-kubernetes-health-checks/</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>Kubernetes Storage</h2>
+
+
+
+<p>Sticking with Kubernetes (and any flavor of Kubernetes you may be interested in); dealing with storage as part of your implementation OnPrem is a challenge.  This article does a great job of illustrating that challenge and what i means to anyone who has not yet made it to the cloud.  What I hope you take from this is, it is not impossible to accomplish and there are many solutions to this problem, but the downstream operational impacts of doing this are far broader than the initial implementation.</p>
+
+
+
+<p><a href="https://refaktory.net/blog/posts/self-hosted-kubernetes-solving-the-storage-problem" target="_blank" rel="noopener">https://refaktory.net/blog/posts/self-hosted-kubernetes-solving-the-storage-problem</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>Traffic Visualization</h2>
+
+
+
+<p>Visualizing what is happening in your cluster can be a challenge.  I have taken the strategy of implementing <a href="https://linkerd.io/" data-internallinksmanager029f6b8e52c="3" title="Linkerd" rel="nofollow noopener" target="_blank">Linkerd</a> into my lab cluster to support both mTLS along with traffic visualization, but that is not the only way to accomplish this.  Lots of teams are familiar with <a href="https://grafana.com/" data-internallinksmanager029f6b8e52c="1" title="Grafana" rel="nofollow noopener" target="_blank">Grafana</a> as their source of information, especially with the proliferation of something like <a href="https://prometheus.io/" data-internallinksmanager029f6b8e52c="2" title="Prometheus" rel="nofollow noopener" target="_blank">Prometheus</a>.  k8spacket is a tool that helps bring a version of that visualization directly into Grafana dashboards.</p>
+
+
+
+<p><a href="https://medium.com/@bareckidarek/tcp-packets-traffic-visualization-for-kubernetes-by-k8spacket-and-grafana-bb87cb106f30" target="_blank" rel="noopener">https://medium.com/@bareckidarek/tcp-packets-traffic-visualization-for-kubernetes-by-k8spacket-and-grafana-bb87cb106f30</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+]]></content:encoded>
+					
+					<wfw:commentRss>/devops-roll-up-august/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How to Build a DevOps Pipeline Geared for Stability?</title>
+		<link>/devops-pipeline-geared-for-stability/</link>
+					<comments>/devops-pipeline-geared-for-stability/#respond</comments>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Tue, 30 Aug 2022 02:47:33 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<guid isPermaLink="false">https://www.lab.valewood.org/?p=95</guid>
+
+					<description><![CDATA[Intro Building a devops pipeline is easy. Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!! Well&#8230;&#8230;]]></description>
+										<content:encoded><![CDATA[
+<h2>Intro</h2>
+
+
+
+<p>Building a devops pipeline is easy.  Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!!  Well&#8230; not exactly.  In my experience, this is where things usually start, but will quickly lead to new and additional churn in a delivery cycle which was never intended.  Sometimes that churn goes completely unrecognized simply because the thought of doing DevOps is far better than the idea of not doing DevOps.  Either way, do yourself a favor and take a step back to look into how intentional design, intentional component selection, along with care and feeding can get you into a spot where your pipelines work for you instead of you working for your pipelines.</p>
+
+
+
+<p>In case you are wondering, &#8220;what is a pipeline in DevOps&#8221;?  A pipeline in DevOps is centered around the idea of ensuring code is continuously delivered which in turn means the business is seeing a continuous flow of value.  There are many DevOps pipeline tools on the market, but I want to take step back and discuss more of the planning and design side of things before diving directly into tooling.</p>
+
+
+
+<h2>Intentional Design</h2>
+
+
+
+<p>Deploying Jenkins, giving it some keys, giving it a job to do, and then finally pointing at production will yield a short-term win with long-term consequences.  While I believe that most aspiring DevOps engineers will start here, more intentional design should be considered when building a pipeline.</p>
+
+
+
+<h3>Who are the consumers of your DevOps Pipeline?</h3>
+
+
+
+<p>Consider who is going to be consuming the pipeline that is being created.  Some organizations want manual approvals, some want automated approvals, some are a bit more cowboy and approvals are not part of the conversation.  Sometimes a QA team, project/program management, developers, executives, or the lunch lady could be consumers of your pipeline.  Consider them when designing what you will use for delivery.</p>
+
+
+
+<h3>What are the goals of your DevOps Pipeline?</h3>
+
+
+
+<p>Not everyone is going to agree here, but when I am doing a design, I start by conceptualizing my end state much like pointing a ship in the direction that I think I want to go.  This allows me to get more eyes on the concept that I am building toward while pulling in feedback from interested stakeholders.  On the back of that work, I will take a step back and try to understand the strategic themes and goals of the pipeline to get more broad alignment from the consumers and stakeholders.  </p>
+
+
+
+<p>Just because someone tells you that they want something, doesn&#8217;t mean that you heard them correctly or they fully understood what they are asking for.  Try to take time and dissect their request and either align it to your design walking the requestor through how your solution solves their needs, or reframe your specific thinking of the problem to accommodate their request.</p>
+
+
+
+<h3>Is there a logical flow you can follow?</h3>
+
+
+
+<p>I like to map out my process as illustrated below.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img width="1024" height="204" src="/wp-content/uploads/2022/08/devops-pipeline-flowchart-1024x204.png" alt="DevOps Pipeline Flowchart" class="wp-image-273" srcset="/wp-content/uploads/2022/08/devops-pipeline-flowchart-1024x204.png 1024w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-300x60.png 300w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-768x153.png 768w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1536x306.png 1536w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-2048x409.png 2048w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1920x383.png 1920w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1170x233.png 1170w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-585x117.png 585w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+
+
+<p>By taking the time to understand the ins and outs of your pipeline, the decision tree that gets created, necessary supplemental steps, and points of failure you can design a logical flow that works across many different arenas.  A single logical flow may work well to get code into a development environment, but do you really need to redo each and every step to move code to the next environment or can you adjust your logical flow to be less cumbersome?</p>
+
+
+
+<h2>Intentional Component Selection</h2>
+
+
+
+<p>Normally I am not a fan of Jenkins.  I believe that it is allowing for quick and dirty instances of automation to be put out into the market in a way that does not promote stability.  Don&#8217;t get me wrong, Jenkins is an interesting tool if you look at it as a dumb task runner, but is a pretty poor tool if you are really taking automation seriously.  Intentional component selection is a topic we should spend some time on due to the technology strongholds that are out in the market today.</p>
+
+
+
+<h3>Who are the consumers of your DevOps Pipeline?</h3>
+
+
+
+<p>No no, this section is not a duplicate.  When choosing your components, you need to consider your consumers.  Luckily, most of your consumers in this space are going to be technology focused so we can hopefully ignore non-technical actors for the most part.  If your team is primarily composed of PHP developers, it is probably not a good idea to try and pull in something which is well outside of the PHP ecosystem.  Stick with tools that are similar to other existing tools in your environment.</p>
+
+
+
+<p>Providing good feedback to your engineers is also something you should pay attention to.  If your pipeline does happen to break for one reason or another, and the error messages are cryptic, you will end up in the &#8220;You built it you own it&#8221; paradigm.  There is no democratization of the pipeline out to consumers to facilitate care and feeding, which we will discuss later.  A good DevOps pipeline should support your engineers, not be an exercise in decoding the enigma machine.</p>
+
+
+
+<h3>Perfection is the enemy of progress!</h3>
+
+
+
+<p>Component selections can be a long drawn-out process.  Spending too much time trying to decide will lead to the projects around you getting too far ahead of your efforts causing a lot of undo stress and rework.  It is better to pick something and prove why it won&#8217;t work over time instead of trying to find the magical purple unicorn which solves 200% of use cases.</p>
+
+
+
+<h3>Clearly defined single responsibilities!</h3>
+
+
+
+<p>To fight perfection shutting down progress, try to limit your components to single responsibilities.  You can really apply <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design" target="_blank" rel="noopener">SOLID OOD</a> can really be applied anywhere in technology.  By limiting your components to a single responsibility, you can set up your components as interfaces with each other.  Component 1 expects this input and provides this output.  The magic between input and output can be as complex as you want it to be as long as the inputs and outputs are consistent.  You can then feed the outputs of component 1 into the inputs of component 2.  Continue this pattern for N components.</p>
+
+
+
+<p>What you end up with is a set of &#8220;jobs&#8221; which facilitate specific tasks.  Each of these jobs is testable, improvable, observable, and most importantly; your jobs are understandable!  If you want to break free from &#8220;you built it, you own it&#8221; then everything in your stack should be something that can be handed off to another flesh and blood human being who can pick up your work and run with it.</p>
+
+
+
+<h2>Care and Feeding</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium is-resized"><img src="/wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-200x300.jpg" alt="Care and Feeding (Not a real picture of the Ron Popeil Rotisserie)" class="wp-image-278" width="133" height="198" srcset="/wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-683x1024.jpg 683w, /wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-scaled.jpg 1707w" sizes="(max-width: 133px) 100vw, 133px" /></figure></div>
+
+
+<p>Any technology anywhere will need care and feeding.  There is nothing that can be built and just runs like a perpetual motion machine.  You will need to consider the care and feeding of your DevOps pipeline.  Some of the care and feeding will be simple.  Password rotations, library updates, edge case fixes, etc. can all be accomplished as part of the daily flow of work.  More complex care and feeding such as component replacement, break glass in case of emergency, security hardening, etc. will need to be planned into your delivery lifecycle planning.  </p>
+
+
+
+<p>As a quick side tangent, when the term care and feeding comes up as part of normal conversation, does anyone else hear Ron Popeil and his overly excited audience say &#8220;Set it and forget it&#8221;?</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you can see, a stable DevOps pipeline will consist of many steps which all feed off of each other ending up in a GitOps-style deployment pipeline.  I believe that the magic in any well-developed, well-set-up DevOps pipeline has a foundation in having a clear definition of your intentions, and intentional components which provide specific functionality, and each component needs attention + care and feeding like any other technology stack that is being supported.  Not every pipeline needs to be as complex, or overly simplistic depending on your frame of reference since there is no one size fits all solution to robust delivery.  Start small, but be intentional and you too can have a DevOps Pipeline Geared for Stability!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/devops-pipeline-geared-for-stability/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>DevOps Deployments: Fast, Easy, and Fun!</title>
+		<link>/devops-deployments-fast-easy-and-fun/</link>
+					<comments>/devops-deployments-fast-easy-and-fun/#respond</comments>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sun, 21 Aug 2022 19:33:46 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[gitops]]></category>
+		<category><![CDATA[nfr]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<guid isPermaLink="false">https://www.lab.valewood.org/?p=48</guid>
+
+					<description><![CDATA[Preface One of the core fundamentals of DevOps is to ensure that deployments are fully automated. The technology stack that you are supporting should be fully production ready at all&#8230;]]></description>
+										<content:encoded><![CDATA[
+<div class="wp-container-1 wp-block-group"><div class="wp-block-group__inner-container">
+<h2>Preface</h2>
+
+
+
+<p>One of the core fundamentals of DevOps is to ensure that deployments are fully automated.  The technology stack that you are supporting should be fully production ready at all times. This means that DevOps does not stop at IaC automation.  The full SDLC needs to be constructed in such a way that it enables more of a GitOps model rather than a series of disconnected pieces.</p>
+
+
+
+<p>Let&#8217;s face it; unless we are heavily invested in FOSS, we work for a company that is trying to bring in revenue to support payroll.  I am not saying that FOSS does not bring in revenue, but I would say many of the most successful FOSS projects are funded through the generosity of the community and businesses which leverage their technology.  This means that any DevOps model that most of us are producing against is centered around some concept of value engineering.  Value engineering is a tough topic to cover holistically, but the general idea is that technology must support some kind of product, service, widget, etc. that brings value to the market.  </p>
+
+
+
+<p>My experience is that the emphasis on value engineering is far too constraining to the internal consumers of your DevOps pipelines.  Sure, we work for a business that needs to make revenue to be successful, but; I believe that the idea of value engineering goes both into the market and inversely into the team producing the technology.  This article will touch more on the idealistic side of what DevOps can do for teams with the idea of ancillary market benefits being gained by a team doing DevOps well.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+</div></div>
+
+
+
+<div class="wp-container-9 wp-block-group"><div class="wp-block-group__inner-container">
+<h2>Primary Considerations for DevOps Deployments</h2>
+
+
+
+<div class="wp-container-2 wp-block-group"><div class="wp-block-group__inner-container">
+<h3>Goals and Values</h3>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium"><img src="/cdn-cgi/image/width=300,height=197,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/08/annie-spratt-hCb3lIB8L8E-unsplash.jpg" alt="DevOps Team" class="wp-image-108"/></figure></div>
+
+
+<p>This is probably one of the toughest considerations to grasp and do well.  Goals and values are closely aligned and intertwined yet it is very simple for them to shift directions very quickly.  A business is always going to have some kind of goal that they are trying to reach, and a technology team will also have goals and aspirations that they are reaching for as well.  Let&#8217;s all remember that as technologists, we got into this for the love of technology no matter how jaded we may have become by trying to accomplish a never-ending stream of difficult customer requirements.</p>
+
+
+
+<p>Since DevOps is as much about the team as it is about the business, make sure that goals/values swing in both directions. There may be a business-related goal out there to reduce defects by X% or increase the speed of delivery of a feature by Y timeline, but those goals are only part of the story.  As technologists, we owe each other an awesome experience developing and delivering technology.  Make sure the team takes time to learn and understand each other in a constructive way, and set goals through understanding each other values.</p>
+</div></div>
+
+
+
+<div class="wp-container-3 wp-block-group"><div class="wp-block-group__inner-container">
+<h3>Approachability</h3>
+
+
+
+<p>A DevOps pipeline should be approachable to the consumers of the pipeline.  Not only should a team be able to use it, but a team should also be able to enhance it.  Generally, this is boiled down to technology choice, but I believe that is the second facet of approachability.  A group must first determine what activities their pipelines should be responsible for.  Some tools are good at certain parts of pipeline development and some are not, and by determining the activities; a team can make good technology choices that support the rest of the considerations below. </p>
+
+
+
+<p>To illustrate this point, here is an example of what I mean by approachability.  The gold standard for a complete DevOps pipeline is one that allows you to commit code and it is safely delivered to production.  Starting a journey at its finale is rarely a good idea.  That means a group must determine their jumping-off point which will usually lead a team into some kind of configuration management.  Ensuring 100% of configurations are stored in a code repository can be an extremely daunting task simply due to the vast array of methods and technologies available to accomplish that goal.  Start small by getting the team involved in adding and pushing configuration management.  Listen to the concerns of the team and work your way toward addressing those concerns.  Ensure that the team around you are bought into your ideas and methods.  Do not be afraid to pivot based on feedback to ensure that your methods are well received before moving on to the next phase which may be orchestration, testing, monitoring, etc.</p>
+
+
+
+<p>If the team is struggling to get going with DevOps, I would encourage them to read through <a href="/practicing-devops/" data-type="post" data-id="14">Practicing DevOps – A Surprising Alternative</a> which may give them some interesting insights on how to get engaged.</p>
+</div></div>
+
+
+
+<div class="wp-container-4 wp-block-group"><div class="wp-block-group__inner-container">
+<h3>Repeatability and Dependability</h3>
+
+
+
+<p>When designing a pipeline, a focus should be on how DevOps can help with the repeatability of known tasks and how dependably can automation take hold to accomplish tasks which used to be in the domain of mere mortals.  This is often harder to quantify than you may think.  Let&#8217;s take something as simple as adding metadata to a build that ties back to a commit hash.  In Golang you will be using an <code>-ldflags</code> param to a <code>go build</code> command which must be able to run a git command to understand the hash of the head commit.  If your build environment has both Windows and Linux build agents, can both of them reliably run your command?</p>
+
+
+
+<p>Another way to think about Dependability is to consider the end consumers of what you are DevOps-ing.  Do they expect your pipeline to fail safe or fail in an unsafe way?  As long as they can rely on specific failure scenarios, then they can at least depend on your pipeline doing the same thing.  If your pipeline is consistently failing in new and unforeseen ways, then the only thing that the teams around you can depend on is that your pipeline is unreliable.</p>
+</div></div>
+
+
+
+<div class="wp-container-5 wp-block-group"><div class="wp-block-group__inner-container">
+<h3>Speed</h3>
+
+
+
+<p>The first thing that a business will talk about is &#8220;Speed of Delivery&#8221;.  If we can ship more products/products faster, then the business will make more revenue.  Companies like <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> and Amazon got it right by fully automating their deployments. In a post from 2012, GitHub was deploying roughly 200 times per day to production. Amazon deploys to production every 11.7 seconds equaling roughly ~7400 deployments per day. This speed to production ensures that code does not sit and languish in a code repository for days or worse, weeks.</p>
+
+
+
+<p>Amazon and Github are actually ensuring updates are reaching other engineers and architects quickly reducing the overall feedback loop and increasing the opportunities for learning.  By ensuring that a higher number of smaller units are going to production either as minor improvements or feature-gated enhancements, the teams that are working on their products are able to shorten their feedback loop which pushes decision-making as close to the individual contributor as possible.  The more we can empower the people around us with information, the better we will all be and the faster rumor mills will be stopped dead in their tracks.</p>
+</div></div>
+
+
+
+<div class="wp-container-6 wp-block-group"><div class="wp-block-group__inner-container">
+<h3>Flexibility</h3>
+
+
+
+<p>More often than not, design choices have been made for you which you can not really walk back to ensure that all technology fits a specific pipeline or delivery flow model.  This is quite alright when you design with flexibility in mind.  In my experience, the general overall steps of a DevOps pipeline will always be the same.  I will cover those steps in a subsequent blog post.  If you take a step back and look at what you are producing and turn them into more of an interface-style design, then the only thing that is really changing is your concrete implementation of functionality.  That is the panacea of flexibility because only a portion of your overall work changes.  You are able to get an economy of scale out of other materials that team members owe each other like validations, documentation, expectation setting, etc.</p>
+</div></div>
+
+
+
+<div class="wp-container-7 wp-block-group"><div class="wp-block-group__inner-container">
+<h3>Feedback Loops</h3>
+
+
+
+<p>Getting feedback into the hands of stakeholders will help aid in good decision-making along with the overall stability of a solution.  The most important consideration here is this: make sure your feedback loops are consumable and actionable.  Spamming your stakeholders, business or technical, can create a TON of churn which doesn&#8217;t do anyone any good.  Ensure that any feedback provided is directly actionable.</p>
+
+
+
+<p>Sometimes this is easier said than done.  Starting out, you will end up with a deluge of information that feels insurmountable.  The most dangerous thing you can do is either silence the information or assume that you are seeing false positives.  False positives can happen, and it is very much worth digging in and understanding why.  On the other hand, silencing information and subsequently ignoring it can lead to mishaps in the future.  Dive in and get to know your tooling and ensure you are doing everything you can to logically keep them clean.</p>
+</div></div>
+
+
+
+<div class="wp-container-8 wp-block-group"><div class="wp-block-group__inner-container">
+<h3>Completeness</h3>
+
+
+
+<p>An incomplete DevOps pipeline with some jank will inevitably lead to issues that erode confidence in the technology stack.  There is no gold standard of 100% complete here, but you can transpose completeness with confidence in most cases.  If your team and business partners feel that the pipeline is doing everything that it should, then you are in great shape.  If your pipeline feels like there is something left to be desired, don&#8217;t ignore that feeling and continue to build confidence through completeness.</p>
+</div></div>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+</div></div>
+
+
+
+<div class="wp-container-11 wp-block-group"><div class="wp-block-group__inner-container">
+<h2>Technology</h2>
+
+
+
+<div class="wp-container-10 wp-block-group"><div class="wp-block-group__inner-container">
+<h3>A GitOps Methodology</h3>
+
+
+
+<p>First, I think we need to define what GitOps is.  GitOps is the idea that on a push to a repository, a full deployment pipeline can take place which deploys code into production.  On top of that, all controls, settings, adjustments, etc. happen from the Git repository rather than a smattering of distributed user interfaces.  This is a developer/technologist first approach which means that all changes will need to be visibly pushed to central source control before electricity is run through them out in the wild.</p>
+
+
+
+<p>GitOps being a developer/technologist first approach is an important consideration to make because not everyone who is normally part of the technology delivery flow is necessarily a technology-minded individual contributor.  When making a change over to GitOps, you will need to consider what barrier to entry this creates for the end users and design your GitOps flow to be inclusive of all contributors, not just the contributors who are in the know.</p>
+</div></div>
+
+
+
+<h3>Tools</h3>
+
+
+<div class="wp-block-image">
+<figure class="alignleft size-medium"><img src="/cdn-cgi/image/width=300,height=244,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/08/todd-quackenbush-IClZBVw5W5A-unsplash.jpg" alt="DevOps Tools" class="wp-image-235"/></figure></div>
+
+
+<p>Selection of the right tools to do the job is both a critical juncture in any project and sparks the most religious debates showing where allegiances really lie.  Don&#8217;t fall into that trap.  A tool performs an action through specific syntax.  At it&#8217;s core, my preferred technology stack consists of something which orchestrates actions, something which performs tests, and something which performs configuration management.  This generally means <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>, Inspec, and <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>/<a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a>.  Could you skip the Chef/Puppet and do everything 100% in ansible?  Absolutely.  Could you skip ansible and do everything in Chef/Puppet?  Absolutely!  I think the point is that anyone who argues that there is a right or wrong way to go about tool selection is flat-out wrong.  The tools must work for the team dynamic and then work for the technology.  If you start at technology first, more often than not, that effort will fail.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+</div></div>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you can see above, there are a lot of things to consider when putting together a DevOps pipeline, most of which have nothing to do with technology at all.  One of the best things I have learned in my time building and deploying DevOps pipelines is this: If the pipeline does not work for the people, then the pipeline does not work at all.  Consider how you are going to push on the soft skills side of your DevOps practices more than the technological side when starting out.  As you grow in your understanding of what DevOps really is technologically, you will come to appreciate that 90% of the problem is solved before the first line of code is ever put into a repository.</p>
+
+
+
+<div class="wp-container-12 wp-block-group"><div class="wp-block-group__inner-container">
+<h2>References</h2>
+
+
+
+<ul><li><a href="https://icinga.com/blog/2022/05/25/embedding-git-commit-information-in-go-binaries/" target="_blank" rel="noreferrer noopener">Embedding Git Commit Information in Go Binaries</a></li></ul>
+</div></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>/devops-deployments-fast-easy-and-fun/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Practicing DevOps &#8211; A Surprising Alternative</title>
+		<link>/practicing-devops/</link>
+					<comments>/practicing-devops/#respond</comments>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sun, 07 Aug 2022 20:26:05 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<guid isPermaLink="false">https://www.lab.valewood.org/?p=14</guid>
+
+					<description><![CDATA[Preface A very common question that I see over on Reddit is &#8220;How do I do the DevOps?&#8221; or &#8220;How do I get better at DevOps?&#8221;. I think that this&#8230;]]></description>
+										<content:encoded><![CDATA[
+<h2>Preface</h2>
+
+
+
+<p>A very common question that I see over on Reddit is &#8220;How do I do the DevOps?&#8221; or &#8220;How do I get better at DevOps?&#8221;.  I think that this question fails to meet the fundamental understanding of what DevOps really is.</p>
+
+
+
+<p>On its face; DevOps blogs, articles, YouTube videos, etc. will classify DevOps as a series of tools that are composed to do some form of IaC or Configuration Management.  While this is a small component of DevOps, it is not the whole story.  DevOps is more about enabling the flow of delivery than it is about any singular or composition of tools.  Basic human nature will tell us that we always want to get more for less, and DevOps is the &#8220;branding&#8221; behind that idea in technology.  I have more to come on this topic down below.  With this basic understanding, I want to get into the meat of the issue first.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2 style="font-style:normal;font-weight:700">The Good, The Bad, and The Jaded</h2>
+
+
+
+<p>The responses to this question are always interesting.  The most common responses come from the husks of talented yet jaded idealists who have had every ounce of their positivity sucked out by their corporate overlords&#8230; or maybe they don&#8217;t get enough hugs on a regular basis.  Either way, I believe that this makes it difficult for someone to break into a space that interests them.  So, let&#8217;s look at some versions of what DevOps is first, and then let&#8217;s talk about how you can practice it!</p>
+
+
+
+<p>DevOps is centered around ensuring that the flow of value (generally custom software) is enhanced to be faster, more reliable, and continuously deployable.  Knowing that the technology space is a vast expanse with a nearly infinite number of ways to accomplish this, what can an aspiring DevOps engineer do to break into this space?  I think the simplest answer is to do your research on delivery patterns more than specific technologies.</p>
+
+
+
+<p>Technology delivery is done by humans with preconceived ideas about what is or is not important when it comes to things like quality delivery.  This means that there is no single &#8220;Best&#8221; or &#8220;Right&#8221; way to do DevOps.  Any technology which is put in place must work for the people who are consuming it.  Think about it like front-end design on a website.  I personally don&#8217;t really care for flashy front-end designs which are loaded to the hilt with highly stylized graphics.  I enjoy a much cleaner and minimalist aesthetic.  This means that I am going to gravitate towards websites that present that aesthetic to me and I will generally abandon a website that does not.  You can think about how you accomplish a DevOps flow in exactly the same way.  Something which is overly complex with too many rules or considerations may not play well with the consumers of your pipeline where it may be just what the doctor ordered with other teams.  This is why understanding and researching delivery patterns is so important to start with.</p>
+
+
+
+<p>The next step I would take is to identify a use case that you are passionate about.  Spend some time looking at a variety of tooling which can help take that use case and put it into a CI/CD stance.  Something like <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> pages is a really good starting point.  Make yourself a generic website talking about yourself and your skills.  This will help understand the fundamental flow of releasing a piece of software out into the wild.  From there, start looking at adding page stats to your Github Pages profile which require calculation in a build pipeline.  Add tests, add SCSS/SASS compilation, push some images to cloud storage and link them in, etc.  All of these steps help illustrate the complexity of flow at an extremely minimal cost if not free depending on what kinds of complexity you want to add.  </p>
+
+
+
+<p>Once you have all of that in place, think about what you are doing from a market competitiveness standpoint and take a hard pivot.  Maybe this is replacing your site&#8217;s themes or layouts.  Maybe this is moving from Github pages to <a href="https://www.digitalocean.com/" data-internallinksmanager029f6b8e52c="5" title="DigialOcean" rel="nofollow noopener" target="_blank">DigitalOcean</a> running on a server using configuration management.  This could also be containerizing your pipeline into a <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> deployment.  Any/all of these activities are what businesses do all of the time to stay relevant in the market.  By understanding what is important inflow of delivery, you can lean out your pipelines and ensure that they work well for the pivot you are looking to make.  </p>
+
+
+
+<p>Lastly,  don&#8217;t be afraid to get a peer review from someone.  Because DevOps is about flow, assume that your way of thinking about a problem is NOT the best way to approach it.  By getting a peer review you are getting a more global view of what is or is not important to potential consumers of your delivery flow.  Their feedback may be around adding features, reducing complexity, or pointers to more standard ways to approach a problem.  All of that is good and should not be taken personally.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>Flow of delivery</h2>
+
+
+
+<p>So, what is flow of delivery?  Flow of delivery is the idea that you should be able to quantify all of the steps from the second a task is started through the time that thing is released for consumption by the market.  In software, this generally means: The time it takes from when <a href="https://www.imdb.com/title/tt0151804/characters/nm0726223" target="_blank" rel="noreferrer noopener">Tom Smykowski</a> receives a request to the time in which it is available to the customer.</p>
+
+
+
+<p>In the antiquated world of slow monolithic SDLC practices, you could have any number of double-digit touch points all leading to a monolithic release of software doing out for consumption.  Each of those touch points continues to increase the cost and reduce the agility of the specific work product being produced.  This is unavoidable if you are not interested in optimizing that SDLC process.</p>
+
+
+
+<p>In a DevOps delivery model, Tom should be able to bring in a request which is then broken down into smaller continuously deployable units which are able to make it to production once committed.  This generally leads to a shift in overall spending from individual touchpoints over to automated testing.  Customers can get their value much sooner by having smaller portions of their solution delivered to them in real-time.  They are also able to provide feedback which makes the inevitable pivot much more achievable.</p>
+
+
+
+<p>What I believe is generally missed when making this calculated decision of a change from monolithic SDLC over to DevOps is simply this: Saying you want DevOps doesn&#8217;t work when the team that is delivering your product does not work in lock step with the same goals to accomplish DevOps.  If DevOps was a single-faceted practice, then it would be called Dev or Ops, not DevOps.  The automation, principles, technology, and processes must work for the team which is delivering the solution.  There is NO &#8220;one size fits all&#8221; solution for DevOps.  As leaders, we must enable people to do well and people will often astound us.  If we expect technology to make people better, then we failed before we started.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>How do you practice DevOps?  First, read about traditional SDLC flows and read about DevOps flows.  Understand the differences and why the market must modernize to stay competitive.  Next, get interested in enabling the flow of technology delivery and practice delivering your own technology in some simple use cases.  Last, get some peer reviews to help grow your global perspective.</p>
+
+
+
+<h3>Additional Resources</h3>
+
+
+
+<p>Below are some additional resources which help understand the fundamentals of an SLDC and automated delivery:</p>
+
+
+
+<ul><li><a href="https://hackr.io/blog/sdlc-methodologies" target="_blank" rel="noreferrer noopener">https://hackr.io/blog/sdlc-methodologies</a></li><li><a href="https://developerexperience.io/practices/automated-deployment" target="_blank" rel="noreferrer noopener">https://developerexperience.io/practices/automated-deployment</a></li><li><a href="https://www.redhat.com/en/topics/automation/what-is-deployment-automation" target="_blank" rel="noreferrer noopener">https://www.redhat.com/en/topics/automation/what-is-deployment-automation</a></li><li><a href="https://aws.amazon.com/builders-library/automating-safe-hands-off-deployments/" target="_blank" rel="noreferrer noopener">https://aws.amazon.com/builders-library/automating-safe-hands-off-deployments/</a></li></ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>/practicing-devops/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
