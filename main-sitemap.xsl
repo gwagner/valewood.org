@@ -1,5 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="UTF-8"?><xsl:stylesheet version="2.0"
+	xmlns:html="http://www.w3.org/TR/REC-html40"
+	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+	xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:kml="http://www.opengis.net/kml/2.2"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:atom="http://www.w3.org/2005/Atom">
 <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
 	<xsl:template match="/">
 		<html xmlns="http://www.w3.org/1999/xhtml">
@@ -113,7 +118,7 @@
 								This KML file contains <xsl:value-of select="count(kml:kml/kml:Document/kml:Folder/kml:Placemark)"/> Locations.
 							</p>
 							<p class="expl">
-								<a href="https://www.valewood.org/sitemap_index.xml">← Sitemap Index</a>							</p>
+								<a href="/sitemap_index.xml">&#8592; Sitemap Index</a>							</p>
 							<table id="sitemap" cellpadding="3">
 								<thead>
 									<tr>
@@ -133,7 +138,7 @@
 												<xsl:variable name="itemURL">
 													<xsl:value-of select="atom:link/@href"/>
 												</xsl:variable>
-												<a href="https://www.valewood.org/{$itemURL}">
+												<a href="{$itemURL}">
 													<xsl:value-of select="kml:name"/>
 												</a>
 											</td>
@@ -191,7 +196,7 @@
 											</xsl:variable>
 											<tr>
 												<td>
-													<a href="https://www.valewood.org/{$sitemapURL}"><xsl:value-of select="sitemap:loc"/></a>
+													<a href="{$sitemapURL}"><xsl:value-of select="sitemap:loc"/></a>
 												</td>
 												<td>
 													<xsl:value-of select="concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)),concat(' ', substring(sitemap:lastmod,20,6)))"/>
@@ -208,7 +213,7 @@
 									This XML Sitemap contains <strong><xsl:value-of select="count(sitemap:urlset/sitemap:url)"/></strong> URLs.								</p>
 
 								<p class="expl">
-									<a href="https://www.valewood.org/sitemap_index.xml">← Sitemap Index</a>								</p>
+									<a href="/sitemap_index.xml">&#8592; Sitemap Index</a>								</p>
 
 								<table id="sitemap" cellpadding="3">
 
@@ -228,7 +233,7 @@
 													<xsl:variable name="itemURL">
 														<xsl:value-of select="sitemap:loc"/>
 													</xsl:variable>
-													<a href="https://www.valewood.org/{$itemURL}">
+													<a href="{$itemURL}">
 														<xsl:value-of select="sitemap:loc"/>
 													</a>
 												</td>
