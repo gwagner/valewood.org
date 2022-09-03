@@ -21,7 +21,7 @@
 	<generator>https://wordpress.org/?v=6.0.2</generator>
 
 <image>
-	<url>/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
+	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
 	<title>gitops &#8211; A DevOps Blog</title>
 	<link>/</link>
 	<width>32</width>
@@ -39,7 +39,7 @@
 		<category><![CDATA[gitops]]></category>
 		<category><![CDATA[nfr]]></category>
 		<category><![CDATA[sdlc]]></category>
-		<guid isPermaLink="false">https://www.lab.valewood.org/?p=48</guid>
+		<guid isPermaLink="false">/?p=48</guid>
 
 					<description><![CDATA[Preface One of the core fundamentals of DevOps is to ensure that deployments are fully automated. The technology stack that you are supporting should be fully production ready at all&#8230;]]></description>
 										<content:encoded><![CDATA[
@@ -75,7 +75,7 @@
 
 
 <div class="wp-block-image">
-<figure class="alignright size-medium"><img src="/cdn-cgi/image/width=300,height=197,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/08/annie-spratt-hCb3lIB8L8E-unsplash.jpg" alt="DevOps Team" class="wp-image-108"/></figure></div>
+<figure class="alignright size-medium"><img src="https://www.valewood.org/cdn-cgi/image/width=300,height=197,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/08/annie-spratt-hCb3lIB8L8E-unsplash.jpg" alt="DevOps Team" class="wp-image-108"/></figure></div>
 
 
 <p>This is probably one of the toughest considerations to grasp and do well.  Goals and values are closely aligned and intertwined yet it is very simple for them to shift directions very quickly.  A business is always going to have some kind of goal that they are trying to reach, and a technology team will also have goals and aspirations that they are reaching for as well.  Let&#8217;s all remember that as technologists, we got into this for the love of technology no matter how jaded we may have become by trying to accomplish a never-ending stream of difficult customer requirements.</p>
@@ -100,7 +100,7 @@
 
 
 
-<p>If the team is struggling to get going with DevOps, I would encourage them to read through <a href="/practicing-devops/" data-type="post" data-id="14">Practicing DevOps – A Surprising Alternative</a> which may give them some interesting insights on how to get engaged.</p>
+<p>If the team is struggling to get going with DevOps, I would encourage them to read through <a href="https://www.valewood.org/practicing-devops/" data-type="post" data-id="14" target="_blank" rel="noopener">Practicing DevOps – A Surprising Alternative</a> which may give them some interesting insights on how to get engaged.</p>
 </div></div>
 
 
@@ -195,7 +195,7 @@
 
 
 <div class="wp-block-image">
-<figure class="alignleft size-medium"><img src="/cdn-cgi/image/width=300,height=244,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/08/todd-quackenbush-IClZBVw5W5A-unsplash.jpg" alt="DevOps Tools" class="wp-image-235"/></figure></div>
+<figure class="alignleft size-medium"><img src="https://www.valewood.org/cdn-cgi/image/width=300,height=244,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/08/todd-quackenbush-IClZBVw5W5A-unsplash.jpg" alt="DevOps Tools" class="wp-image-235"/></figure></div>
 
 
 <p>Selection of the right tools to do the job is both a critical juncture in any project and sparks the most religious debates showing where allegiances really lie.  Don&#8217;t fall into that trap.  A tool performs an action through specific syntax.  At it&#8217;s core, my preferred technology stack consists of something which orchestrates actions, something which performs tests, and something which performs configuration management.  This generally means <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>, Inspec, and <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>/<a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a>.  Could you skip the Chef/Puppet and do everything 100% in ansible?  Absolutely.  Could you skip ansible and do everything in Chef/Puppet?  Absolutely!  I think the point is that anyone who argues that there is a right or wrong way to go about tool selection is flat-out wrong.  The tools must work for the team dynamic and then work for the technology.  If you start at technology first, more often than not, that effort will fail.</p>

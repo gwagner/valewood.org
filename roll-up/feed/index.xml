@@ -21,7 +21,7 @@
 	<generator>https://wordpress.org/?v=6.0.2</generator>
 
 <image>
-	<url>/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
+	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
 	<title>Roll-up &#8211; A DevOps Blog</title>
 	<link>/</link>
 	<width>32</width>
@@ -39,7 +39,7 @@
 		<category><![CDATA[day2ops]]></category>
 		<category><![CDATA[devops]]></category>
 		<category><![CDATA[kubernetes]]></category>
-		<guid isPermaLink="false">https://www.lab.valewood.org/?p=52</guid>
+		<guid isPermaLink="false">/?p=52</guid>
 
 					<description><![CDATA[Below is a list of DevOps articles/sites that I discovered over the past month and found interesting. DevOps Roadmap First is a link to a DevOps roadmap. This is a&#8230;]]></description>
 										<content:encoded><![CDATA[

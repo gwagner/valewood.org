@@ -21,7 +21,7 @@
 	<generator>https://wordpress.org/?v=6.0.2</generator>
 
 <image>
-	<url>/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
+	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
 	<title>software &#8211; A DevOps Blog</title>
 	<link>/</link>
 	<width>32</width>
@@ -38,7 +38,7 @@
 		<category><![CDATA[development]]></category>
 		<category><![CDATA[devops]]></category>
 		<category><![CDATA[software]]></category>
-		<guid isPermaLink="false">https://www.lab.valewood.org/?p=7</guid>
+		<guid isPermaLink="false">/?p=7</guid>
 
 					<description><![CDATA[As developers, we are always under the gun to get X feature shipped, or to get Y Sev 1 resolved as quickly as possible. Sometimes in that quest to service&#8230;]]></description>
 										<content:encoded><![CDATA[
