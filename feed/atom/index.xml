@@ -6,7 +6,7 @@
 	<title type="text">A DevOps Blog</title>
 	<subtitle type="text">Occasionally a developer makes an Oops!</subtitle>
 
-	<updated>2022-08-30T02:47:37Z</updated>
+	<updated>2022-09-04T18:50:24Z</updated>
 
 	<link rel="alternate" type="text/html" href="/" />
 	<id>/feed/atom/</id>
@@ -15,6 +15,78 @@
 	<generator uri="https://wordpress.org/" version="6.0.2">WordPress</generator>
 <icon>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</icon>
 	<entry>
+		<author>
+			<name>Geoff Wagner</name>
+							<uri>http://www.valewood.org/</uri>
+						</author>
+
+		<title type="html"><![CDATA[How DevOps Can Improve Your Technology Stack]]></title>
+		<link rel="alternate" type="text/html" href="/how-devops-can-improve-your-technology-stack/" />
+
+		<id>/?p=304</id>
+		<updated>2022-09-04T18:50:24Z</updated>
+		<published>2022-09-04T18:50:18Z</published>
+		<category scheme="/" term="DevOps" /><category scheme="/" term="devops" /><category scheme="/" term="software" />
+		<summary type="html"><![CDATA[Introduction DevOps is a set of practices that combines software development and operations to improve the speed, quality, and reliability of software delivery. DevOps is about collaboration and communication between&#8230;]]></summary>
+
+					<content type="html" xml:base="/how-devops-can-improve-your-technology-stack/"><![CDATA[
+<h2>Introduction</h2>
+
+
+
+<p>DevOps is a set of practices that combines software development and operations to improve the speed, quality, and reliability of software delivery. DevOps is about collaboration and communication between development and operations teams.  In many instances, these 2 teams are combined into one providing a shared focus and shared set of responsibilities.  The team becomes responsible for the entire lifecycle surrounding a set of technology.  The strategic themes for this team center around automating the software delivery process so that software can be delivered faster, with fewer errors. DevOps is a relatively new concept, but it’s quickly gaining popularity because it’s an effective way to improve the technology stack. In this article, we’ll explore how DevOps can improve your technology stack.</p>
+
+
+
+<h2>What is DevOps?</h2>
+
+
+
+<p>DevOps is a software development methodology that seeks to automate the software delivery process. The goal of DevOps is to improve the speed, quality, and reliability of software delivery by integrating software development and operations.  This shared responsibility builds on a set of common goals which may have caused tension in the past.  Development teams have been traditionally focused on shipping new features while handing those features off to the operations team to run them.  The operations team was then responsible for running something they did not build and may have had additional considerations to improve overall quality.</p>
+
+
+
+<p>Combining Development and Operations together nets out a single team that can view the entire landscape of technology improving visibility which improves decision-making.  There is a misnomer out there in the industry which drives me bonkers, and that is the idea of a &#8220;Full Stack Engineer&#8221;.  I don&#8217;t actually know what that is, do you?  My best guess is that a hiring manager needs A LOT of skills and doesn&#8217;t have the budget to pay for them.  Instead, by building a &#8220;Full Stack Team&#8221; someone could yield all of the benefits of a &#8220;Full Stack Engineer&#8221; without overworking any individual contributor. </p>
+
+
+
+<p>By employing a more DevOps-focused delivery methodology, businesses can respond more quickly to new market opportunities, deliver products and services with less downtime, and provide more reliable customer experiences.  Everything you need to move large rocks uphill exists inside of a single team with a singular focus.</p>
+
+
+
+<h2>The Benefits of DevOps</h2>
+
+
+
+<p>If you’re wondering why you should invest time and resources in implementing a DevOps strategy, here are some of the key benefits of DevOps:</p>
+
+
+
+<ul><li>Increased speed and agility &#8211; DevOps can help businesses respond more quickly to new market opportunities.  DevOps enables businesses to adapt and respond to changes quickly, while also meeting their service-level agreements (SLAs). It also enables continuous deployment, which means businesses can release software more often.  By releasing more frequently, you’re able to respond quickly when the market changes.</li><li>Higher quality &#8211; DevOps is often associated with implementing automation. By using automation to build, test, and deploy applications, you can catch bugs and other quality issues before they make their way into production. Automation also allows you to test the quality of your application more frequently, which enhances your ability to identify and fix quality issues as soon as possible.</li><li>Better collaboration &#8211; DevOps is a very collaborative approach to software development. When everyone works together to solve problems, issues are identified and resolved more quickly. Plus, collaboration helps teams solve more complex problems, which leads to higher-quality work and more innovative products.</li><li>Reducing risk &#8211; DevOps helps teams identify and mitigate risks early in the software delivery chain, which reduces overall risk. If you’re able to identify risks related to security, architecture, or other factors, you can address them quickly and effectively. This helps your organization avoid costly problems, such as data breaches or system failures.</li><li>More reliable customer experiences &#8211; When customers use your product or service, they expect it to work. By integrating development and operations, DevOps helps teams identify and resolve issues quickly, which means fewer disruptions and fewer outages.</li></ul>
+
+
+
+<h2>Implementing DevOps in Your Organization</h2>
+
+
+
+<p>If you’re wondering how to get started with DevOps, there are three steps you can take to get your organization on the path toward success.</p>
+
+
+
+<ul><li>Build a strong culture of trust &#8211; Successful DevOps implementations depend heavily on trust. Your organization needs to trust that developers and operations personnel will do what’s best for the company. Operations staff needs to trust that developers have the skills and knowledge to deliver what’s needed. So, when you’re first implementing DevOps, focus on building a culture of trust.</li><li>Invest in automation &#8211; Automation is critical to successful DevOps implementations because it enables organizations to release more frequently without increasing risk. Automating application builds, deployments, and tests allows teams to complete tasks more quickly and with fewer errors. Automating environments, such-as infrastructure and application configuration, also helps you avoid hand-crafted environments.</li><li>Create a single source of truth &#8211; A single source of truth refers to a central location where all critical information is stored. It’s critical that all members of the organization have access to this information. By creating a single source of truth, you can create a culture of collaboration and knowledge sharing that’s crucial to DevOps implementation success.</li></ul>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you’ve seen, DevOps is a software development methodology that seeks to automate the software delivery process. The goal of DevOps is to improve the speed, quality, and reliability of software delivery by integrating software development and operations. DevOps has several benefits, including increased speed and agility, increased quality, better collaboration, reduced risk, and more reliable customer experiences. To implement DevOps in your organization, you first need to build a strong culture of trust, invest in automation, and create a single source of truth.</p>
+]]></content>
+		
+			</entry>
+		<entry>
 		<author>
 			<name>Geoff Wagner</name>
 							<uri>http://www.valewood.org/</uri>
