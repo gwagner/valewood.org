@@ -5,11 +5,11 @@ import fs from 'fs';
 
 var webpJs = `
 <script defer type="text/javascript">
-$(window).on('load', function() {
+jQuery(window).on('load', function() {
      var WebP=new Image();
      WebP.onload=WebP.onerror=function(){
        if(WebP.height!=2){
-         $('img[src$=".webp"]').each(function(index,element) {
+        jQuery('img[src$=".webp"]').each(function(index,element) {
            element.src = element.src.replace('.webp','.jpg');
            element.src = element.src.replace('.webp','.png');
          });
