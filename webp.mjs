@@ -21,7 +21,7 @@ jQuery(window).on('load', function() {
                       .getPropertyValue('background-image') !== 'none';
           }).each(function(){
             var bg = jQuery(this).css('background-image');
-            bg = bg.substring(0,bg.lastIndexOf(".")+1) + "webp\")";
+            bg = bg.substring(0,bg.lastIndexOf(".")+1) + 'webp")';
             jQuery(this).css("background-image", bg);
           });
       }
