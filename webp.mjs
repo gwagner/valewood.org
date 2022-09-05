@@ -6,16 +6,27 @@ import fs from 'fs';
 var webpJs = `
 <script defer type="text/javascript">
 jQuery(window).on('load', function() {
-     var WebP=new Image();
-     WebP.onload=WebP.onerror=function(){
-       if(WebP.height!=2){
-        jQuery('img[src$=".webp"]').each(function(index,element) {
-           element.src = element.src.replace('.webp','.jpg');
-           element.src = element.src.replace('.webp','.png');
-         });
-       }
-     };
-     WebP.src='data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+  var WebP = new Image();
+  WebP.onload = WebP.onerror = function() {
+      if (WebP.height != 2) {
+          jQuery('img[src$=".webp"]').each(function(index, element) {
+              element.src = element.src.replace('.webp', '.jpg');
+              element.src = element.src.replace('.webp', '.png');
+          });
+          jQuery('*').filter(function() {
+              if (this.currentStyle)
+                  return this.currentStyle['backgroundImage'] !== 'none';
+              else if (window.getComputedStyle)
+                  return document.defaultView.getComputedStyle(this, null)
+                      .getPropertyValue('background-image') !== 'none';
+          }).each(function(){
+            var bg = jQuery(this).css('background-image');
+            bg = filePath.substring(0,bg.lastIndexOf(".")+1) + "webp";
+            jQuery(this).css("background-image", "url('" + bg + "')");
+          });
+      }
+  };
+  WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 });
 </script>
 `;
