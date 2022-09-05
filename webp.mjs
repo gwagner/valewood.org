@@ -3,9 +3,6 @@ import webp from "imagemin-webp";
 import glob from "glob";
 import fs from 'fs';
 
-// Path for conversions
-const directoryPath = process.cwd().concat('/wp-content');
-
 var webpJs = `
 <script type="text/javascript">
 $(function() {
@@ -24,7 +21,7 @@ $(function() {
 
 // options is optional
 glob("**/*.{jpg,png}", {}, function (er, files) {
-   files.forEach(function(file, index){
+   files.forEach(function(file){
         var filePath = process.cwd().concat("/" + file)
 
         if(fs.lstatSync(filePath).isDirectory()) {
