@@ -41,7 +41,7 @@
 		<category><![CDATA[sdlc]]></category>
 		<guid isPermaLink="false">/?p=48</guid>
 
-					<description><![CDATA[Preface One of the core fundamentals of DevOps is to ensure that deployments are fully automated. The technology stack that you are supporting should be fully production ready at all&#8230;]]></description>
+					<description><![CDATA[Preface One of the core fundamentals of DevOps is to ensure that deployments are fully automated. The technology stack that you are supporting should be fully production ready at all times. This means that DevOps does not stop at IaC&#8230;]]></description>
 										<content:encoded><![CDATA[
 <div class="wp-container-1 wp-block-group"><div class="wp-block-group__inner-container">
 <h2>Preface</h2>
