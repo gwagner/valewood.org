@@ -5,7 +5,7 @@ import fs from 'fs';
 
 var webpJs = `
 <script defer type="text/javascript">
-$(function() {
+$(window).on('load', function() {
      var WebP=new Image();
      WebP.onload=WebP.onerror=function(){
        if(WebP.height!=2){
