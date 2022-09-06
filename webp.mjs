@@ -2,85 +2,119 @@ import imagemin from "imagemin";
 import webp from "imagemin-webp";
 import glob from "glob";
 import fs from 'fs';
+import crypto from 'crypto';
+
+var backgroundImageRegexp = /style=\"background-image\:\s(url\('(.*?)\.([jpgne]{3,4})'\));\"/ig;
 
 var webpJs = `
 <script defer type="text/javascript">
+
 jQuery(window).on('load', function() {
-  var WebP = new Image();
-  WebP.onload = WebP.onerror = function() {
-      if (WebP.height != 2) {
-          jQuery('img[src$=".webp"]').each(function(index, element) {
-              element.src = element.src.replace('.webp', '.jpg');
-              element.src = element.src.replace('.webp', '.png');
+  function WebpIsSupported(callback) {
+      // If the browser doesn't has the method createImageBitmap, you can't display webp format
+      if (!window.createImageBitmap) {
+          callback(false);
+          return;
+      }
+
+      // Base64 representation of a white point image
+      var webpdata = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=';
+
+      // Retrieve the Image in Blob Format
+      fetch(webpdata).then(function(response) {
+          return response.blob();
+      }).then(function(blob) {
+          // If the createImageBitmap method succeeds, return true, otherwise false
+          createImageBitmap(blob).then(function() {
+              callback(true);
+          }, function() {
+              callback(false);
           });
-          jQuery('*').filter(function() {
-              if (this.currentStyle)
-                  return this.currentStyle['backgroundImage'] !== 'none';
-              else if (window.getComputedStyle)
-                  return document.defaultView.getComputedStyle(this, null)
-                      .getPropertyValue('background-image') !== 'none';
-          }).each(function(){
-            var bg = jQuery(this).css('background-image');
-            bg = bg.substring(0,bg.lastIndexOf(".")+1) + 'webp")';
-            jQuery(this).css("background-image", bg);
+      });
+  }
+  // You can run the code like !
+  WebpIsSupported(function(isSupported) {
+      if (isSupported) {
+          jQuery('[image-loader]').each(function() {
+              var bg = jQuery(this).attr('image-loader');
+              jQuery(this).css("background-image", "url('" + imageMap[bg].file + ".webp')");
+          });
+      } else {
+          jQuery('[image-loader]').each(function() {
+              var bg = jQuery(this).attr('image-loader');
+              jQuery(this).css("background-image", "url('" + imageMap[bg].file + "." + imageMap[bg].ext + "')");
           });
       }
-  };
-  WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+  });
 });
 </script>
 `;
 
-// options is optional
+
+
+// Ensure that all images have a WebP version
 glob("**/*.{jpg,png}", {}, function (er, files) {
-   files.forEach(function(file){
-        var filePath = process.cwd().concat("/" + file)
+  files.forEach(function (file) {
+    var filePath = process.cwd().concat("/" + file)
 
-        if(fs.lstatSync(filePath).isDirectory()) {
-            console.log("Image " + filePath + " is a directory, skipping");
-            return;
-        }
+    if (fs.lstatSync(filePath).isDirectory()) {
+      console.log("Image " + filePath + " is a directory, skipping");
+      return;
+    }
 
-        var webpFilePath = filePath.substring(0,filePath.lastIndexOf(".")+1) + "webp";
-        if (fs.existsSync(webpFilePath)) {
-            console.log("Image " + webpFilePath + " Exists");
-            return;
-        }
+    var webpFilePath = filePath.substring(0, filePath.lastIndexOf(".") + 1) + "webp";
+    if (fs.existsSync(webpFilePath)) {
+      console.log("Image " + webpFilePath + " Exists");
+      return;
+    }
 
-        var parentDir = filePath.substring(0,filePath.lastIndexOf("/")+1);
-        const convertImage = async () => {
-            await imagemin([filePath], {
-                destination: parentDir,
-                plugins: [
-                    webp({
-                        lossless: true,
-                    }),
-                ],
-            });
-            console.log("Image " + filePath + " Converted Successfully into " + parentDir);
-        }
-        convertImage();
-   })
+    var parentDir = filePath.substring(0, filePath.lastIndexOf("/") + 1);
+    const convertImage = async () => {
+      await imagemin([filePath], {
+        destination: parentDir,
+        plugins: [
+          webp({
+            lossless: true,
+          }),
+        ],
+      });
+      console.log("Image " + filePath + " Converted Successfully into " + parentDir);
+    }
+    convertImage();
+  })
 })
 
-// // options is optional
+// Ensure that all images are lazy loaded with webp first
 glob("**/*.html", {}, function (er, files) {
-    files.forEach(function(file, index){
-         var filePath = process.cwd().concat("/" + file)
-         try {
-            var data = fs.readFileSync(filePath, 'utf8');
-            if(data.includes(webpJs)) {
-                console.log("File " + filePath + " Already contains WebPJS");
-                return;
-            }
+  files.forEach(function (file, index) {
+    var filePath = process.cwd().concat("/" + file)
+    try {
+      var data = fs.readFileSync(filePath, 'utf8');
+      if (data.includes("WebpIsSupported")) {
+        return
+      }
 
-            data = data.replace("</body>", webpJs + "</body>")
-            fs.writeFileSync(filePath, data);
-          } catch (err) {
-            console.error(err);
-          }
-    })
-    console.log(er)
- })
+      var matches = [...data.matchAll(backgroundImageRegexp)];
 
+      if (matches.length < 1) {
+        return
+      }
 
+      var imageMap = '<script type="text/javascript">';
+      imageMap = imageMap + "\nvar imageMap={"
+
+      matches.forEach(function (match) {
+        data = data.replace(match[0], "image-loader=\"" + crypto.createHash('md5').update(match[2]).digest('hex') + "\"")
+        imageMap = imageMap + '"' + crypto.createHash('md5').update(match[2]).digest('hex') + '": {file: "' + match[2] + '", ext: "' + match[3] + '"},';
+      })
+      imageMap = imageMap.substring(0, imageMap.length - 1); + "}\n</script>"
+
+      data = data.replace("</body>", imageMap + webpJs + "</body>")
+      fs.writeFileSync(filePath, data);
+    } catch (err) {
+      console.error(err);
+    }
+  })
+
+  console.log(er)
+})
