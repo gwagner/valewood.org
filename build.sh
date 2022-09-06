@@ -1,17 +1,10 @@
-#!/bin/zsh -
+#!/bin/bash
 
-mkdir new-site/
-unzip $1 -d ./new-site/
+echo "Install Node Deps"
+npm install imagemin
+npm install imagemin-webp
+npm install glob
 
-echo "Rsyncing content"
-rsync -cvr ./new-site/ ./
+node webp.mjs
 
-rm -rf ./new-site/
-
-echo "Replacing www.lab.valewood.org with www.valewood.org"
-grep -rl www.lab.valewood.org . --exclude='build.sh' | xargs sed -i 's/www.lab.valewood.org/www.valewood.org/g'
-
-echo "Fixing canonical links with https://www.valewood.org"
-grep -rl '<link rel="canonical" href="/' . --exclude='build.sh' | xargs sed -i 's/\(<link rel="canonical" href="\)\//\1https:\/\/www.valewood.org\//g'
-
-echo "You can now remove the source files: rm -rf $1"
+rm -rf /work/node_modules/ webp.mjs package.json package-lock.json docker.sh build.sh update.sh .gitignore
