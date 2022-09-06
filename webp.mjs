@@ -58,13 +58,11 @@ glob("**/*.{jpg,png}", {}, function (er, files) {
     var filePath = process.cwd().concat("/" + file)
 
     if (fs.lstatSync(filePath).isDirectory()) {
-      console.log("Image " + filePath + " is a directory, skipping");
       return;
     }
 
     var webpFilePath = filePath.substring(0, filePath.lastIndexOf(".") + 1) + "webp";
     if (fs.existsSync(webpFilePath)) {
-      console.log("Image " + webpFilePath + " Exists");
       return;
     }
 
@@ -78,7 +76,6 @@ glob("**/*.{jpg,png}", {}, function (er, files) {
           }),
         ],
       });
-      console.log("Image " + filePath + " Converted Successfully into " + parentDir);
     }
     convertImage();
   })
@@ -107,7 +104,7 @@ glob("**/*.html", {}, function (er, files) {
         data = data.replace(match[0], "image-loader=\"" + crypto.createHash('md5').update(match[2]).digest('hex') + "\"")
         imageMap = imageMap + '"' + crypto.createHash('md5').update(match[2]).digest('hex') + '": {file: "' + match[2] + '", ext: "' + match[3] + '"},';
       })
-      imageMap = imageMap.substring(0, imageMap.length - 1); + "}\n</script>"
+      imageMap = imageMap.substring(0, imageMap.length - 1) + "}\n</script>"
 
       data = data.replace("</body>", imageMap + webpJs + "</body>")
       fs.writeFileSync(filePath, data);
