@@ -72,7 +72,7 @@ glob("**/*.{jpg,png}", {}, function (er, files) {
         destination: parentDir,
         plugins: [
           webp({
-            lossless: true,
+            quality: 50,
           }),
         ],
       });
