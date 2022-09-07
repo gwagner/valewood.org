@@ -81,37 +81,37 @@ glob("**/*.{jpg,png}", {}, function (er, files) {
   })
 })
 
-// Ensure that all images are lazy loaded with webp first
-glob("**/*.html", {}, function (er, files) {
-  files.forEach(function (file, index) {
-    var filePath = process.cwd().concat("/" + file)
-    try {
-      var data = fs.readFileSync(filePath, 'utf8');
-      if (data.includes("WebpIsSupported")) {
-        return
-      }
+// // Ensure that all images are lazy loaded with webp first
+// glob("**/*.html", {}, function (er, files) {
+//   files.forEach(function (file, index) {
+//     var filePath = process.cwd().concat("/" + file)
+//     try {
+//       var data = fs.readFileSync(filePath, 'utf8');
+//       if (data.includes("WebpIsSupported")) {
+//         return
+//       }
 
-      var matches = [...data.matchAll(backgroundImageRegexp)];
+//       var matches = [...data.matchAll(backgroundImageRegexp)];
 
-      if (matches.length < 1) {
-        return
-      }
+//       if (matches.length < 1) {
+//         return
+//       }
 
-      var imageMap = '<script type="text/javascript">';
-      imageMap = imageMap + "\nvar imageMap={"
+//       var imageMap = '<script type="text/javascript">';
+//       imageMap = imageMap + "\nvar imageMap={"
 
-      matches.forEach(function (match) {
-        data = data.replace(match[0], "image-loader=\"" + crypto.createHash('md5').update(match[2]).digest('hex') + "\"")
-        imageMap = imageMap + '"' + crypto.createHash('md5').update(match[2]).digest('hex') + '": {file: "' + match[2] + '", ext: "' + match[3] + '"},';
-      })
-      imageMap = imageMap.substring(0, imageMap.length - 1) + "}\n</script>"
+//       matches.forEach(function (match) {
+//         data = data.replace(match[0], "image-loader=\"" + crypto.createHash('md5').update(match[2]).digest('hex') + "\"")
+//         imageMap = imageMap + '"' + crypto.createHash('md5').update(match[2]).digest('hex') + '": {file: "' + match[2] + '", ext: "' + match[3] + '"},';
+//       })
+//       imageMap = imageMap.substring(0, imageMap.length - 1) + "}\n</script>"
 
-      data = data.replace("</body>", imageMap + webpJs + "</body>")
-      fs.writeFileSync(filePath, data);
-    } catch (err) {
-      console.error(err);
-    }
-  })
+//       data = data.replace("</body>", imageMap + webpJs + "</body>")
+//       fs.writeFileSync(filePath, data);
+//     } catch (err) {
+//       console.error(err);
+//     }
+//   })
 
-  console.log(er)
-})
+//   console.log(er)
+// })
