@@ -15,20 +15,18 @@ export async function onRequest(context) {
     if(url.searchParams.get('s') == null)
         return next();
 
-    const asset = await env.ASSETS.fetch(url.origin + '/search/');
+    const asset = await env.ASSETS.fetch(url.origin + '/search/index.html');
     if(asset && asset.status === 200){
         // If we did not get a proper status code back, then bail
         if([101, 204, 205, 304].includes(asset.status)){
             return next()
         }
 
-        console.log(asset)
-
         // found the asset, so we can serve it
         return asset;
     }
 	
-    console.log('fall through')
+
 	// no acceptable formats found, pass-through for original image
 	return next();
 }

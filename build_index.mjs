@@ -165,7 +165,6 @@ function main() {
         }
 
         docs.forEach(function(doc){
-            console.log(doc)
             this.add(doc)
         }, this)
     });

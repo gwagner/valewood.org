@@ -9,7 +9,6 @@ export async function onRequest(context) {
         data, // arbitrary space for passing data between middlewares
     } = context;
 
-    console.log('hi')
     var info = JSON.stringify({}, null, 2);
     return new Response(info);
 }
