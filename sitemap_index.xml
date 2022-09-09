@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/main-sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
-		<loc>/post-sitemap.xml</loc>
+		<loc>https://www.valewood.org/post-sitemap.xml</loc>
 		<lastmod>2022-09-05T11:47:38-05:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/page-sitemap.xml</loc>
+		<loc>https://www.valewood.org/page-sitemap.xml</loc>
 		<lastmod>2022-08-21T15:19:47-05:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>/category-sitemap.xml</loc>
+		<loc>https://www.valewood.org/category-sitemap.xml</loc>
 		<lastmod>2022-09-05T11:47:38-05:00</lastmod>
 	</sitemap>
 </sitemapindex>
