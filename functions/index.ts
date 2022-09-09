@@ -15,7 +15,7 @@ export async function onRequest(context) {
     if(url.searchParams.get('s') == null)
         return next();
 
-    const asset = await env.ASSETS.fetch(url.origin + '/search/');
+    const asset = await env.ASSETS.fetch(new URL(url.origin + '/search/'));
     if(asset && asset.status === 200){
         // If we did not get a proper status code back, then bail
         if([101, 204, 205, 304].includes(asset.status)){
