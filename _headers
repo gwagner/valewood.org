@@ -7,3 +7,6 @@
 
 /robots.txt
   Content-Type: text/plain
+
+/*.json
+  Content-Type: application/json;charset=utf-8
