@@ -131,6 +131,6 @@ fs.writeFile('search/index.html', $.html(), function(err) {
   if(err) {
           return console.log(err);
   }
-  console.log("SERP Page saved as search.html");
+  console.log("SERP Page saved as search/index.html");
 });
 

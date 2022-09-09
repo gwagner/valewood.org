@@ -17,4 +17,7 @@ node build_index.mjs
 # Generate the SERP page
 node create_serp_page.mjs
 
-rm -rf webp.mjs build_index.mjs package.json package-lock.json build.sh run.sh update.sh .gitignore
+# Generate the 404 page
+node create_404_page.mjs
+
+rm -rf webp.mjs build_index.mjs create_serp_page.mjs package.json package-lock.json build.sh run.sh update.sh .gitignore
