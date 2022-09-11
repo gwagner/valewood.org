@@ -12,7 +12,7 @@
 	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description>Occasionally a developer makes an Oops!</description>
-	<lastBuildDate>Mon, 05 Sep 2022 16:47:38 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 11 Sep 2022 17:03:48 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,221 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>What essential DevOps tools should you be using today?</title>
+		<link>/essential-devops-tools/</link>
+					<comments>/essential-devops-tools/#respond</comments>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sun, 11 Sep 2022 17:03:41 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=5</guid>
+
+					<description><![CDATA[The goal of any DevOps tool should be to help your team communicate more effectively, automate manual tasks, and track the progress of your projects. With the right tools, you can significantly speed up your development process and produce better&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>The goal of any DevOps tool should be to help your team communicate more effectively, automate manual tasks, and track the progress of your projects. With the right tools, you can significantly speed up your development process and produce better results. In this post, you’ll find a list of the most essential DevOps tools and advice on how to choose the right ones for your team.</p>
+
+
+
+<h2><strong>Build Tools</strong></h2>
+
+
+
+<p>Build tools are an important cornerstone for any kind of DevOps workflow. Just choosing one without doing an evaluation can mean the difference between success and failure in a lot of circumstances. The build tooling must jive with the team and accomplish producing the CI/CD processes which the team expects in the way they expect them to be run. Think of them as task runners with a GUI, but each task runner has its own flare. Below is a list of tools that are widely used and could fit the bill for your next project.</p>
+
+
+
+<h3>Jenkins</h3>
+
+
+
+<p>If you have spent any time in the software space, or have done any googling around building software, Jenkins is sure to be the first thing that pops up. Jenkins is an open-source automation tool used for continuous integration and continuous delivery (CI/CD). Companies use it to automate the software development process, build and test their code, and deploy their applications. Jenkins is a highly configurable tool that allows you to choose from a large range of plugins. These plugins allow you to integrate Jenkins with other tools such as Docker Hub, JIRA, and others. Jenkins can be used for DevOps to automate the software delivery process, deploy apps, and manage infrastructure.</p>
+
+
+
+<h3>Atlassian Bamboo</h3>
+
+
+
+<p>Atlassian Bamboo is a platform for building and managing builds and deployments of software. It is generally utilized due to its tie-ins with other Atlassian products such as Jira and Confluence giving you an entire ecosystem out of the box. It is a great option if you are working in a team and want to set up a standardized process for building your code. Bamboo allows you to set up different stages of your workflow, each with its own set of tasks. This way, you can create a dev stage where your team has access to the latest version of the code and works directly from it, a test stage where your team can run tests on the latest version of the code and a production stage to deploy the code once it has been tested. As a rule of thumb, if you are working in a team that is already entrenched in the Atlassian ecosystem, go for Bamboo.</p>
+
+
+
+<h3>Drone CI</h3>
+
+
+
+<p>Drone bills itself as a &#8220;Self Service Continuous Integration System&#8221;, but I think you can really view any of the tools listed under build as exactly that. If you are looking for the more modern cool kid on the block, Drone CI is probably going to be a pretty good choice. Drone CI is natively built around Docker and the container ecosystem. This makes building modern applications more intuitive for individuals who are accustomed to the container ecosystem already. Drone CI also supports other types of containers, such as rkt. For developers who are not as familiar with Docker, Drone CI does have a user interface that allows you to manually configure a build environment. Drone also has a plug-in architecture, which means that you can also extend Drone’s capabilities with your own plug-ins, allowing you to configure a custom build environment as well.</p>
+
+
+
+<h3>Travis CI</h3>
+
+
+
+<p>Travis CI is a bit of a unique take amongst its competitors listed above. Travis CI is not a service you would normally go and locally install in your data center. Its origins are built under the idea that building environments should be ephemeral, cheap, easy, and defined via software. Their service allows you to create a new build environment by just pushing code to your <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> repository. The great thing about this is that it allows you to create any type of environment you want. In the case of Travis CI, they allow you to build your environment in a way that is open source and completely controlled by you.</p>
+
+
+
+<h3>GitHub Actions</h3>
+
+
+
+<p>GitHub Actions is a new entrant to the build and deploy space, and frankly, the next logical step in GitHub&#8217;s journey of code hosting. GitHub has become the de-facto standard for hosting code, and Actions takes it a step further by allowing you to programmatically trigger a series of actions on your code, such as building, testing, publishing, and deploying it. Actions is a game changer as it allows anyone to create their own automated workflow without the need for any additional software. For example, let’s say you want to deploy your code to your staging environment every time you push a new commit to your master branch. You can now easily set up an action that listens for new commits on the master branch, checks out the code, kicks off a build process, and then deploys the code to your staging environment.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>In this space, I am a fan of the tool that gets the job done. I don&#8217;t have any particular allegiances because build tools are just dumb task runners. Maybe a UI speaks to you more, or a set of tools plugs into an ecosystem more seamlessly than another tool. Either way, do a bit of evaluation and make sure you are not painting yourself into a corner, and you will be just fine with any of these tools. Sign up for free trials, do a bit of exploring, and if you have questions, there is a vibrant community of people who are happy to help! Stay tuned to blog posts, newsletters and social media to stay up to date on new features and helpful tips and tricks!</p>
+
+
+
+<h2><strong>Server Configuration Management</strong></h2>
+
+
+
+<p>Below, <a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a> and <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>, are the two 5000-pound gorillas in the room when it comes to configuration management DevOps tools. Other competitors exist in the space, but I would argue always live on the fringes and are not really taking any market share away from these two primary options any time soon. Some would argue that <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> should be in this category as well, but I would argue that Ansible is a task orchestrator and NOT a configuration management tool. Give Ansible tasks, it orchestrates tasks, and when it completes someone will need to write more code to determine if the task was executed correctly. In my eyes, DSCM-level validation of completion is a core feature that a configuration management system should have out of the box, otherwise, it is a task orchestrator masquerading around to be something like a configuration management DevOps tool. Don&#8217;t get me wrong, there is still a spot in my heart for Ansible, just not under configuration management.</p>
+
+
+
+<h3>Puppet </h3>
+
+
+
+<p>Puppet is an open-source tool for managing infrastructure as code (IaC). It’s often used for configuration management, service deployment, and continuous delivery. Puppet works by installing agents on different system types and installing the Puppet server on one or more machines. The Puppet server manages the agents to configure the systems based on user-defined policies. It can be used with DevOps to manage configuration policies, provision and configure infrastructure, and automate deployment. When using Puppet myself, I normally do not connect Puppet back to a Puppet master. I run puppet headless so that my idempotent builds can be deployed and triggered at will. This also helps avoid some of the licensing costs of Puppet. As of the writing of this post, their pricing is also hidden behind a contact wall. This generally means: &#8220;If you have to ask, you probably can&#8217;t afford it&#8221;.</p>
+
+
+
+<h3>Chef</h3>
+
+
+
+<p>Chef is an open-source tool for managing infrastructure as code (IaC). It’s often used for configuration management, service deployment, and continuous delivery. Chef works by installing agents on different system types and installing the Chef server on one or more machines. The Chef server manages the agents to configure the systems based on user-defined policies. It can be used with DevOps to manage configuration policies, provision and configure infrastructure, and automate deployment. When using Chef myself, I normally do not connect Chef back to a Chef master. I run puppet headless so that my idempotent builds can be deployed and triggered at will. This also helps avoid some of the licensing costs of Chef.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>As you can see, the descriptions of the tools are nearly identical. The primary difference between these two tools is going to be the community supporting package availability, price, and their specific DSL. Chef is primarily Ruby driven which gives you a TON of flexibility when you need it by diving into the Ruby space. This is an antipattern so use it sparingly, but it can be helpful in a pinch. I would also argue that the Chef community is currently much stronger than the Puppet community having many more packages developed and maintained by the community. In my career, I started with Puppet and converted to Chef simply for that fact.</p>
+
+
+
+<h2><strong>Infrastucture Configuration Management</strong></h2>
+
+
+
+<p>In this post, I am going to be focusing on AWS and Azure as the primary examples of IaC CM tools. I am explicitly ignoring GCP, <a href="https://www.digitalocean.com/" data-internallinksmanager029f6b8e52c="5" title="DigialOcean" rel="nofollow noopener" target="_blank">DigitalOcean</a>, etc. because every cloud vendor has its own APIs, its own tool sets, and its own concepts which are really all born from what AWS and Azure have already pioneered.  If you are interested in the most marketable DevOps tools focusing on infrastructure configuration management, then these are the tools I would focus on first.</p>
+
+
+
+<h3>AWS CloudFormation</h3>
+
+
+
+<p>AWS CloudFormation is a native toolset provided by AWS which is utilized to configure their cloud platform. It enables you to configure your cloud infrastructure and also create templates for future usage. These templates can be used to create infrastructure as code, which is a best practice in terms of cloud adoption. CloudFormation provides you with a lot of flexibility as compared to other tools, but it is not easy to start with.</p>
+
+
+
+<h3>Azure ARM Templates</h3>
+
+
+
+<p>Using an ARM template, you can declaratively create and deploy Azure infrastructure, including virtual machines, networks, storage systems, and any other resources you require. The template simply describes what you want to happen, and Azure takes care of the details. You can also use templates to generate code or scripts to create or customize resources. Versioning: You can keep track of changes to your templates by keeping them in source control, just like you would any other code. You can also use templates to generate reports, giving you an easy way to track changes to your infrastructure. Reusability: You can create a library of templates to use in different scenarios.</p>
+
+
+
+<h3>Terraform</h3>
+
+
+
+<p>Terraform is a cross-cloud IaC tool produced by HasiCorp. They take a unique view of IaC where components that span across multiple clouds should be abstracted out for future reuse. Terraform is also a unique tool in that its open source, but has a paid enterprise version with additional features. Terraform is a great fit for enterprise environments where you want to maintain strict version control of your cloud infrastructure, have strict regulatory requirements, or have a dedicated team managing the infrastructure where you want to streamline your process with a tool that can enforce policies across the organization.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>I really don&#8217;t have a right or wrong answer for this space. I do believe that if you have a need to get into the deepest nooks and crannies of a cloud hosting vendor, using native tooling (CloudFormation and ARM Templates) will always beat what Terraform has to offer. If you are looking to be a bit more functional cross-cloud by providing an interface for your organization to consume, Terraform is probably a better option.</p>
+
+
+
+<h2><strong>Monitoring and Observability:</strong></h2>
+
+
+
+<p>I believe that there is no right answer to monitoring and observability as long as the answer doesn&#8217;t work for the team that needs to receive the alerts. If you are using a 24&#215;7 on-call system like OpsGenie, and your technologists refuse to install the application on their devices to get notified, it is probably the wrong way to go about ensuring someone is alerted to issues. The tools listed below range from out-of-the-box to highly customizable tools. Each approach has its advantages and disadvantages. If you are going to go with highly customizable and integrate that directly into your pipelines, then the team must be on board with the idea of additional maintenance in code space rather than the GUI space, and vice-versa for the out-of-the-box tools. As long as you and your team agree on the strong fundamentals of &#8220;99.9% of the time, get an alert that something is wrong before someone else notices and reports it&#8221;, then you at least have a good foundation to start selecting monitoring from.</p>
+
+
+
+<h3>LogicMonitor</h3>
+
+
+
+<p>From physical hardware to software applications, to virtual hosts, to network devices, to cloud infrastructure — LogicMonitor monitors it all. LogicMonitor is able to monitor virtual environments with its application monitoring capabilities. It can also monitor physical environments with its physical monitoring capabilities. With LogicMonitor’s comprehensive monitoring capabilities, it’s no wonder that it’s the monitoring software of choice for thousands of organizations worldwide.</p>
+
+
+
+<h3>Sensu </h3>
+
+
+
+<p>It works with any monitoring tool, like Graphite, Collectd, Elastic, and more. It can also receive data from other loggers, like statsd, in real-time. Sensu Go can collect data from virtually any source, maintain it in a data store for analysis, and send it to any output, including email, mobile push notifications, or synchronous or asynchronous webhooks. It is open source, flexible, and extensible with a wide range of configuration options.</p>
+
+
+
+<h3>Prometheus</h3>
+
+
+
+<p><a href="https://prometheus.io/" data-internallinksmanager029f6b8e52c="2" title="Prometheus" rel="nofollow noopener" target="_blank">Prometheus</a> is a popular open-source monitoring system for metrics, logs, and events. It enables querying, graphing, and alerting on time-series data. It collects metrics from a variety of sources, including systems and applications, and stores the metrics data in a data store. The metrics data is then made available for analysis via a variety of tools. Prometheus has a flexible architecture and can be deployed on-prem or in the cloud. It is highly scalable and can support metrics from any type of application. It is widely used by enterprises to monitor their production systems.</p>
+
+
+
+<h2><strong>Task Runners / Orchestration Tools:</strong></h2>
+
+
+
+<p>I am only putting one tool in this section because I believe that there is only one tool worth talking about. That DevOps tool is Ansible.  Ansible is like a swiss army knife of task orchestration and your ability to hop in and out of specific contexts is unparalleled.</p>
+
+
+
+<h3>Ansible</h3>
+
+
+
+<p>Ansible is a tool for automating tasks across multiple devices &#8211; from physical hosts to virtual machines and even cloud providers. It allows you to programmatically automate tasks and workflows, and it’s the most widely adopted open-source automation tool in the world. In fact, according to the 2017 State Of Configuration Management Survey, Ansible is the most widely used configuration management tool in enterprises. Unlike other tools, Ansible requires very little upfront investment — you can get started with a free download. Additionally, there are many ways to scale Ansible beyond a single node, including cloud services like AWS, Microsoft Azure, or Google Cloud Platform.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>If you are looking to orchestrate events across multiple machines, services, or clouds; I honestly do not know why you would choose anything else.  I have used ansible to manage 1000+ machines in a data center orchestrating events across servers, services, clouds, and physical equipment all while making the intentions of the orchestration very clear to future engineers.</p>
+
+
+
+<h2><strong>Conclusion</strong></h2>
+
+
+
+<p>DevOps is a set of practices that combines software development and operations to shorten the development life cycle and provide continuous delivery and faster time to market. It’s a culture shift that requires collaboration between Development and Operations teams. The tools used in DevOps can be customized to meet the unique needs of your organization. These tools can automate the software delivery process, provision and configure infrastructure, and deploy applications.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/essential-devops-tools/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>Why are CI/CD Pipelines Part of DevOps?</title>
 		<link>/why-are-ci-cd-pipelines-part-of-devops/</link>
 		
@@ -653,12 +868,8 @@
 		<category><![CDATA[devops]]></category>
 		<guid isPermaLink="false">/?p=14</guid>
 
-					<description><![CDATA[Preface A very common question that I see over on Reddit is &#8220;How do I do the DevOps?&#8221; or &#8220;How do I get better at DevOps?&#8221;. I think that this question fails to meet the fundamental understanding of what DevOps&#8230;]]></description>
+					<description><![CDATA[A very common question that I see over on Reddit is &#8220;How do I do the DevOps?&#8221; or &#8220;How do I get better at DevOps?&#8221;. I think that this question fails to meet the fundamental understanding of what DevOps really&#8230;]]></description>
 										<content:encoded><![CDATA[
-<h2>Preface</h2>
-
-
-
 <p>A very common question that I see over on Reddit is &#8220;How do I do the DevOps?&#8221; or &#8220;How do I get better at DevOps?&#8221;.  I think that this question fails to meet the fundamental understanding of what DevOps really is.</p>
 
 
@@ -687,7 +898,7 @@
 
 
 
-<p>The next step I would take is to identify a use case that you are passionate about.  Spend some time looking at a variety of tooling which can help take that use case and put it into a CI/CD stance.  Something like <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> pages is a really good starting point.  Make yourself a generic website talking about yourself and your skills.  This will help understand the fundamental flow of releasing a piece of software out into the wild.  From there, start looking at adding page stats to your Github Pages profile which require calculation in a build pipeline.  Add tests, add SCSS/SASS compilation, push some images to cloud storage and link them in, etc.  All of these steps help illustrate the complexity of flow at an extremely minimal cost if not free depending on what kinds of complexity you want to add.  </p>
+<p>The next step I would take is to identify a use case that you are passionate about.  Spend some time looking at a variety of tooling which can help take that use case and put it into a CI/CD stance.  Something like <a href="https://pages.github.com/" data-internallinksmanager029f6b8e52c="11" title="Github Pages" rel="nofollow noopener" target="_blank">GitHub pages</a> is a really good starting point.  Make yourself a generic website talking about yourself and your skills.  This will help understand the fundamental flow of releasing a piece of software out into the wild.  From there, start looking at adding page stats to your Github Pages profile which require calculation in a build pipeline.  Add tests, add SCSS/SASS compilation, push some images to cloud storage and link them in, etc.  All of these steps help illustrate the complexity of flow at an extremely minimal cost if not free depending on what kinds of complexity you want to add.  </p>
 
 
 
@@ -723,7 +934,19 @@
 
 
 
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<h2>So, Is DevOps Easy to Learn?</h2>
+
+
+
+<p>This question implies that there is a potential mastery of DevOps.  I believe that the idea of DevOps is evolving and changing rapidly which does make it a bit of a moving target.  You can compartmentalize DevOps into some small chunks like building a simple release pipeline which does make DevOps very easy to learn. </p>
+
+
+
+<p>I also believe that DevOps takes a mindset shift from focusing on getting a task done to focusing on getting something released.  The better you can get at breaking work down into chunks, accomplishing working through those chunks, and quickly getting them released to receive feedback and criticisms all of which ladders up to meeting a high standard of quality; the better handle you are getting on DevOps.  If you are focused on answering the question &#8220;how does technology X do a thing&#8221;, there is room for that but, your DevOps journey is going to take a bit longer.  </p>
+
+
+
+<p>If you start to expand even further into aspects like the vast array of tools that the <a href="https://www.cncf.io/" data-internallinksmanager029f6b8e52c="12" title="CNCF" rel="nofollow noopener" target="_blank">CNCF</a> has to offer, then you are going to be learning and growing for a very long time.  I believe that the simplest jumping-off point on a DevOps journey is to build some simple deployment pipelines from something like GitHub and GitHub Pages or <a href="https://pages.cloudflare.com/" data-internallinksmanager029f6b8e52c="10" title="Cloudflare Pages" rel="nofollow noopener" target="_blank">CloudFlare Pages</a> utilizing some scripting and git-flow to get used to the nuances that are required when diving more fully into DevOps.</p>
 
 
 
