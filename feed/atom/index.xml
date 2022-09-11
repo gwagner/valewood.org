@@ -6,7 +6,7 @@
 	<title type="text">A DevOps Blog</title>
 	<subtitle type="text">Occasionally a developer makes an Oops!</subtitle>
 
-	<updated>2022-09-11T17:03:48Z</updated>
+	<updated>2022-09-11T19:05:58Z</updated>
 
 	<link rel="alternate" type="text/html" href="https://www.valewood.org/" />
 	<id>/feed/atom/</id>
@@ -24,7 +24,7 @@
 		<link rel="alternate" type="text/html" href="https://www.valewood.org/essential-devops-tools/" />
 
 		<id>/?p=5</id>
-		<updated>2022-09-11T17:03:48Z</updated>
+		<updated>2022-09-11T19:05:58Z</updated>
 		<published>2022-09-11T17:03:41Z</published>
 		<category scheme="/" term="DevOps" /><category scheme="/" term="devops" /><category scheme="/" term="sdlc" /><category scheme="/" term="tools" />
 		<summary type="html"><![CDATA[The goal of any DevOps tool should be to help your team communicate more effectively, automate manual tasks, and track the progress of your projects. With the right tools, you can significantly speed up your development process and produce better&#8230;]]></summary>
@@ -162,7 +162,7 @@
 
 
 
-<h2><strong>Monitoring and Observability:</strong></h2>
+<h2><strong>Monitoring and Observability</strong></h2>
 
 
 
@@ -194,7 +194,7 @@
 
 
 
-<h2><strong>Task Runners / Orchestration Tools:</strong></h2>
+<h2><strong>Task Runners / Orchestration Tools</strong></h2>
 
 
 

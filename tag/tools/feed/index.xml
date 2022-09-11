@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/tools/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Oops!</description>
-	<lastBuildDate>Sun, 11 Sep 2022 17:03:48 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 11 Sep 2022 19:05:58 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -174,7 +174,7 @@
 
 
 
-<h2><strong>Monitoring and Observability:</strong></h2>
+<h2><strong>Monitoring and Observability</strong></h2>
 
 
 
@@ -206,7 +206,7 @@
 
 
 
-<h2><strong>Task Runners / Orchestration Tools:</strong></h2>
+<h2><strong>Task Runners / Orchestration Tools</strong></h2>
 
 
 
