@@ -8,9 +8,9 @@
 
 	<updated>2022-09-11T17:03:48Z</updated>
 
-	<link rel="alternate" type="text/html" href="/" />
+	<link rel="alternate" type="text/html" href="https://www.valewood.org/" />
 	<id>/feed/atom/</id>
-	<link rel="self" type="application/atom+xml" href="/feed/atom/" />
+	<link rel="self" type="application/atom+xml" href="https://www.valewood.org/feed/atom/" />
 
 	<generator uri="https://wordpress.org/" version="6.0.2">WordPress</generator>
 <icon>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</icon>
@@ -21,7 +21,7 @@
 						</author>
 
 		<title type="html"><![CDATA[What essential DevOps tools should you be using today?]]></title>
-		<link rel="alternate" type="text/html" href="/essential-devops-tools/" />
+		<link rel="alternate" type="text/html" href="https://www.valewood.org/essential-devops-tools/" />
 
 		<id>/?p=5</id>
 		<updated>2022-09-11T17:03:48Z</updated>
@@ -225,8 +225,8 @@
 <p>DevOps is a set of practices that combines software development and operations to shorten the development life cycle and provide continuous delivery and faster time to market. It’s a culture shift that requires collaboration between Development and Operations teams. The tools used in DevOps can be customized to meet the unique needs of your organization. These tools can automate the software delivery process, provision and configure infrastructure, and deploy applications.</p>
 ]]></content>
 		
-					<link rel="replies" type="text/html" href="/essential-devops-tools/#comments" thr:count="0" />
-			<link rel="replies" type="application/atom+xml" href="/essential-devops-tools/feed/atom/" thr:count="0" />
+					<link rel="replies" type="text/html" href="https://www.valewood.org/essential-devops-tools/#comments" thr:count="0" />
+			<link rel="replies" type="application/atom+xml" href="https://www.valewood.org/essential-devops-tools/feed/atom/" thr:count="0" />
 			<thr:total>0</thr:total>
 			</entry>
 		<entry>
@@ -236,7 +236,7 @@
 						</author>
 
 		<title type="html"><![CDATA[Why are CI/CD Pipelines Part of DevOps?]]></title>
-		<link rel="alternate" type="text/html" href="/why-are-ci-cd-pipelines-part-of-devops/" />
+		<link rel="alternate" type="text/html" href="https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/" />
 
 		<id>/?p=312</id>
 		<updated>2022-09-05T16:47:38Z</updated>
@@ -336,7 +336,7 @@
 						</author>
 
 		<title type="html"><![CDATA[How DevOps Can Improve Your Technology Stack]]></title>
-		<link rel="alternate" type="text/html" href="/how-devops-can-improve-your-technology-stack/" />
+		<link rel="alternate" type="text/html" href="https://www.valewood.org/how-devops-can-improve-your-technology-stack/" />
 
 		<id>/?p=304</id>
 		<updated>2022-09-04T18:50:24Z</updated>
@@ -408,7 +408,7 @@
 						</author>
 
 		<title type="html"><![CDATA[DevOps Roll-up: August]]></title>
-		<link rel="alternate" type="text/html" href="/devops-roll-up-august/" />
+		<link rel="alternate" type="text/html" href="https://www.valewood.org/devops-roll-up-august/" />
 
 		<id>/?p=52</id>
 		<updated>2022-08-22T20:45:43Z</updated>
@@ -500,8 +500,8 @@
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 ]]></content>
 		
-					<link rel="replies" type="text/html" href="/devops-roll-up-august/#comments" thr:count="0" />
-			<link rel="replies" type="application/atom+xml" href="/devops-roll-up-august/feed/atom/" thr:count="0" />
+					<link rel="replies" type="text/html" href="https://www.valewood.org/devops-roll-up-august/#comments" thr:count="0" />
+			<link rel="replies" type="application/atom+xml" href="https://www.valewood.org/devops-roll-up-august/feed/atom/" thr:count="0" />
 			<thr:total>0</thr:total>
 			</entry>
 		<entry>
@@ -511,7 +511,7 @@
 						</author>
 
 		<title type="html"><![CDATA[How to Build a DevOps Pipeline Geared for Stability?]]></title>
-		<link rel="alternate" type="text/html" href="/devops-pipeline-geared-for-stability/" />
+		<link rel="alternate" type="text/html" href="https://www.valewood.org/devops-pipeline-geared-for-stability/" />
 
 		<id>/?p=95</id>
 		<updated>2022-08-30T02:47:37Z</updated>
@@ -637,8 +637,8 @@
 <p>As you can see, a stable DevOps pipeline will consist of many steps which all feed off of each other ending up in a GitOps-style deployment pipeline.  I believe that the magic in any well-developed, well-set-up DevOps pipeline has a foundation in having a clear definition of your intentions, and intentional components which provide specific functionality, and each component needs attention + care and feeding like any other technology stack that is being supported.  Not every pipeline needs to be as complex, or overly simplistic depending on your frame of reference since there is no one size fits all solution to robust delivery.  Start small, but be intentional and you too can have a DevOps Pipeline Geared for Stability!</p>
 ]]></content>
 		
-					<link rel="replies" type="text/html" href="/devops-pipeline-geared-for-stability/#comments" thr:count="0" />
-			<link rel="replies" type="application/atom+xml" href="/devops-pipeline-geared-for-stability/feed/atom/" thr:count="0" />
+					<link rel="replies" type="text/html" href="https://www.valewood.org/devops-pipeline-geared-for-stability/#comments" thr:count="0" />
+			<link rel="replies" type="application/atom+xml" href="https://www.valewood.org/devops-pipeline-geared-for-stability/feed/atom/" thr:count="0" />
 			<thr:total>0</thr:total>
 			</entry>
 		<entry>
@@ -648,7 +648,7 @@
 						</author>
 
 		<title type="html"><![CDATA[DevOps Deployments: Fast, Easy, and Fun!]]></title>
-		<link rel="alternate" type="text/html" href="/devops-deployments-fast-easy-and-fun/" />
+		<link rel="alternate" type="text/html" href="https://www.valewood.org/devops-deployments-fast-easy-and-fun/" />
 
 		<id>/?p=48</id>
 		<updated>2022-08-21T19:36:59Z</updated>
@@ -838,8 +838,8 @@
 </div></div>
 ]]></content>
 		
-					<link rel="replies" type="text/html" href="/devops-deployments-fast-easy-and-fun/#comments" thr:count="0" />
-			<link rel="replies" type="application/atom+xml" href="/devops-deployments-fast-easy-and-fun/feed/atom/" thr:count="0" />
+					<link rel="replies" type="text/html" href="https://www.valewood.org/devops-deployments-fast-easy-and-fun/#comments" thr:count="0" />
+			<link rel="replies" type="application/atom+xml" href="https://www.valewood.org/devops-deployments-fast-easy-and-fun/feed/atom/" thr:count="0" />
 			<thr:total>0</thr:total>
 			</entry>
 		<entry>
@@ -849,7 +849,7 @@
 						</author>
 
 		<title type="html"><![CDATA[Practicing DevOps &#8211; A Surprising Alternative]]></title>
-		<link rel="alternate" type="text/html" href="/practicing-devops/" />
+		<link rel="alternate" type="text/html" href="https://www.valewood.org/practicing-devops/" />
 
 		<id>/?p=14</id>
 		<updated>2022-09-10T02:42:52Z</updated>
@@ -957,8 +957,8 @@
 <ul><li><a href="https://hackr.io/blog/sdlc-methodologies" target="_blank" rel="noreferrer noopener">https://hackr.io/blog/sdlc-methodologies</a></li><li><a href="https://developerexperience.io/practices/automated-deployment" target="_blank" rel="noreferrer noopener">https://developerexperience.io/practices/automated-deployment</a></li><li><a href="https://www.redhat.com/en/topics/automation/what-is-deployment-automation" target="_blank" rel="noreferrer noopener">https://www.redhat.com/en/topics/automation/what-is-deployment-automation</a></li><li><a href="https://aws.amazon.com/builders-library/automating-safe-hands-off-deployments/" target="_blank" rel="noreferrer noopener">https://aws.amazon.com/builders-library/automating-safe-hands-off-deployments/</a></li></ul>
 ]]></content>
 		
-					<link rel="replies" type="text/html" href="/practicing-devops/#comments" thr:count="0" />
-			<link rel="replies" type="application/atom+xml" href="/practicing-devops/feed/atom/" thr:count="0" />
+					<link rel="replies" type="text/html" href="https://www.valewood.org/practicing-devops/#comments" thr:count="0" />
+			<link rel="replies" type="application/atom+xml" href="https://www.valewood.org/practicing-devops/feed/atom/" thr:count="0" />
 			<thr:total>0</thr:total>
 			</entry>
 		<entry>
@@ -968,7 +968,7 @@
 						</author>
 
 		<title type="html"><![CDATA[Welcome to A DevOoops]]></title>
-		<link rel="alternate" type="text/html" href="/welcome-to-a-devooops/" />
+		<link rel="alternate" type="text/html" href="https://www.valewood.org/welcome-to-a-devooops/" />
 
 		<id>/?p=7</id>
 		<updated>2022-08-18T02:07:31Z</updated>
@@ -984,8 +984,8 @@
 <p>I want to talk about technology abstracted from the corporate atmosphere.  There are some really cool things going on out there in space of Development and DevOps, and all that coolness rarely sees the light of day.  Let&#8217;s give it some air here and see what happens <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
 ]]></content>
 		
-					<link rel="replies" type="text/html" href="/welcome-to-a-devooops/#comments" thr:count="0" />
-			<link rel="replies" type="application/atom+xml" href="/welcome-to-a-devooops/feed/atom/" thr:count="0" />
+					<link rel="replies" type="text/html" href="https://www.valewood.org/welcome-to-a-devooops/#comments" thr:count="0" />
+			<link rel="replies" type="application/atom+xml" href="https://www.valewood.org/welcome-to-a-devooops/feed/atom/" thr:count="0" />
 			<thr:total>0</thr:total>
 			</entry>
 	</feed>

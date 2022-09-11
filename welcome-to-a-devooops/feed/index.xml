@@ -8,7 +8,7 @@
 <channel>
 	<title>
 	Comments on: Welcome to A DevOoops	</title>
-	<atom:link href="/welcome-to-a-devooops/feed/" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.valewood.org/welcome-to-a-devooops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/welcome-to-a-devooops/</link>
 	<description>Occasionally a developer makes an Oops!</description>
 	<lastBuildDate>Thu, 18 Aug 2022 02:07:31 +0000</lastBuildDate>

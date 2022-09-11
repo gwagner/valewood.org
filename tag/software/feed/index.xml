@@ -9,7 +9,7 @@
 
 <channel>
 	<title>software &#8211; A DevOps Blog</title>
-	<atom:link href="/tag/software/feed/" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.valewood.org/tag/software/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Oops!</description>
 	<lastBuildDate>Mon, 05 Sep 2022 16:47:38 +0000</lastBuildDate>
@@ -202,7 +202,7 @@
 		<item>
 		<title>Welcome to A DevOoops</title>
 		<link>https://www.valewood.org/welcome-to-a-devooops/</link>
-					<comments>/welcome-to-a-devooops/#respond</comments>
+					<comments>https://www.valewood.org/welcome-to-a-devooops/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Sun, 07 Aug 2022 02:36:51 +0000</pubDate>
@@ -221,7 +221,7 @@
 <p>I want to talk about technology abstracted from the corporate atmosphere.  There are some really cool things going on out there in space of Development and DevOps, and all that coolness rarely sees the light of day.  Let&#8217;s give it some air here and see what happens <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/welcome-to-a-devooops/feed/</wfw:commentRss>
+					<wfw:commentRss>https://www.valewood.org/welcome-to-a-devooops/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		

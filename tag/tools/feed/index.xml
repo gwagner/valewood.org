@@ -9,7 +9,7 @@
 
 <channel>
 	<title>tools &#8211; A DevOps Blog</title>
-	<atom:link href="/tag/tools/feed/" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.valewood.org/tag/tools/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Oops!</description>
 	<lastBuildDate>Sun, 11 Sep 2022 17:03:48 +0000</lastBuildDate>
@@ -30,7 +30,7 @@
 	<item>
 		<title>What essential DevOps tools should you be using today?</title>
 		<link>https://www.valewood.org/essential-devops-tools/</link>
-					<comments>/essential-devops-tools/#respond</comments>
+					<comments>https://www.valewood.org/essential-devops-tools/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Sun, 11 Sep 2022 17:03:41 +0000</pubDate>
@@ -237,7 +237,7 @@
 <p>DevOps is a set of practices that combines software development and operations to shorten the development life cycle and provide continuous delivery and faster time to market. It’s a culture shift that requires collaboration between Development and Operations teams. The tools used in DevOps can be customized to meet the unique needs of your organization. These tools can automate the software delivery process, provision and configure infrastructure, and deploy applications.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/essential-devops-tools/feed/</wfw:commentRss>
+					<wfw:commentRss>https://www.valewood.org/essential-devops-tools/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		

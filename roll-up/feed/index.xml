@@ -9,7 +9,7 @@
 
 <channel>
 	<title>Roll-up &#8211; A DevOps Blog</title>
-	<atom:link href="/roll-up/feed/" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.valewood.org/roll-up/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Oops!</description>
 	<lastBuildDate>Mon, 22 Aug 2022 20:45:43 +0000</lastBuildDate>
@@ -30,7 +30,7 @@
 	<item>
 		<title>DevOps Roll-up: August</title>
 		<link>https://www.valewood.org/devops-roll-up-august/</link>
-					<comments>/devops-roll-up-august/#respond</comments>
+					<comments>https://www.valewood.org/devops-roll-up-august/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Wed, 31 Aug 2022 17:00:00 +0000</pubDate>
@@ -126,7 +126,7 @@
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/devops-roll-up-august/feed/</wfw:commentRss>
+					<wfw:commentRss>https://www.valewood.org/devops-roll-up-august/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
