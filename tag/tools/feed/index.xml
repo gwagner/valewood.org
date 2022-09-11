@@ -10,7 +10,7 @@
 <channel>
 	<title>tools &#8211; A DevOps Blog</title>
 	<atom:link href="/tag/tools/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Oops!</description>
 	<lastBuildDate>Sun, 11 Sep 2022 17:03:48 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -23,13 +23,13 @@
 <image>
 	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
 	<title>tools &#8211; A DevOps Blog</title>
-	<link>/</link>
+	<link>https://www.valewood.org/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
 	<item>
 		<title>What essential DevOps tools should you be using today?</title>
-		<link>/essential-devops-tools/</link>
+		<link>https://www.valewood.org/essential-devops-tools/</link>
 					<comments>/essential-devops-tools/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>

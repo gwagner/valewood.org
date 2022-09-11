@@ -10,7 +10,7 @@
 <channel>
 	<title>devops &#8211; A DevOps Blog</title>
 	<atom:link href="/tag/devops/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Oops!</description>
 	<lastBuildDate>Sun, 11 Sep 2022 17:03:48 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -23,13 +23,13 @@
 <image>
 	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
 	<title>devops &#8211; A DevOps Blog</title>
-	<link>/</link>
+	<link>https://www.valewood.org/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
 	<item>
 		<title>What essential DevOps tools should you be using today?</title>
-		<link>/essential-devops-tools/</link>
+		<link>https://www.valewood.org/essential-devops-tools/</link>
 					<comments>/essential-devops-tools/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -244,7 +244,7 @@
 			</item>
 		<item>
 		<title>Why are CI/CD Pipelines Part of DevOps?</title>
-		<link>/why-are-ci-cd-pipelines-part-of-devops/</link>
+		<link>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Mon, 05 Sep 2022 16:47:35 +0000</pubDate>
@@ -345,7 +345,7 @@
 			</item>
 		<item>
 		<title>How DevOps Can Improve Your Technology Stack</title>
-		<link>/how-devops-can-improve-your-technology-stack/</link>
+		<link>https://www.valewood.org/how-devops-can-improve-your-technology-stack/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Sun, 04 Sep 2022 18:50:18 +0000</pubDate>
@@ -416,7 +416,7 @@
 			</item>
 		<item>
 		<title>DevOps Roll-up: August</title>
-		<link>/devops-roll-up-august/</link>
+		<link>https://www.valewood.org/devops-roll-up-august/</link>
 					<comments>/devops-roll-up-august/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -520,7 +520,7 @@
 			</item>
 		<item>
 		<title>How to Build a DevOps Pipeline Geared for Stability?</title>
-		<link>/devops-pipeline-geared-for-stability/</link>
+		<link>https://www.valewood.org/devops-pipeline-geared-for-stability/</link>
 					<comments>/devops-pipeline-geared-for-stability/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -657,7 +657,7 @@
 			</item>
 		<item>
 		<title>DevOps Deployments: Fast, Easy, and Fun!</title>
-		<link>/devops-deployments-fast-easy-and-fun/</link>
+		<link>https://www.valewood.org/devops-deployments-fast-easy-and-fun/</link>
 					<comments>/devops-deployments-fast-easy-and-fun/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -859,7 +859,7 @@
 			</item>
 		<item>
 		<title>Practicing DevOps &#8211; A Surprising Alternative</title>
-		<link>/practicing-devops/</link>
+		<link>https://www.valewood.org/practicing-devops/</link>
 					<comments>/practicing-devops/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -976,7 +976,7 @@
 			</item>
 		<item>
 		<title>Welcome to A DevOoops</title>
-		<link>/welcome-to-a-devooops/</link>
+		<link>https://www.valewood.org/welcome-to-a-devooops/</link>
 					<comments>/welcome-to-a-devooops/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
