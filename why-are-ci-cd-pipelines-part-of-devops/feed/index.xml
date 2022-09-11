@@ -8,8 +8,8 @@
 <channel>
 	<title>
 	Comments on: Why are CI/CD Pipelines Part of DevOps?	</title>
-	<atom:link href="/why-are-ci-cd-pipelines-part-of-devops/feed/" rel="self" type="application/rss+xml" />
-	<link>/why-are-ci-cd-pipelines-part-of-devops/</link>
+	<atom:link href="https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</link>
 	<description>Occasionally a developer makes an Oops!</description>
 	<lastBuildDate>Mon, 05 Sep 2022 16:47:38 +0000</lastBuildDate>
 	<sy:updatePeriod>

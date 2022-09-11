@@ -9,8 +9,8 @@
 
 <channel>
 	<title>Geoff Wagner &#8211; A DevOps Blog</title>
-	<atom:link href="/author/gwagner/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Oops!</description>
 	<lastBuildDate>Sun, 11 Sep 2022 17:03:48 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -23,14 +23,14 @@
 <image>
 	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
 	<title>Geoff Wagner &#8211; A DevOps Blog</title>
-	<link>/</link>
+	<link>https://www.valewood.org/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
 	<item>
 		<title>What essential DevOps tools should you be using today?</title>
-		<link>/essential-devops-tools/</link>
-					<comments>/essential-devops-tools/#respond</comments>
+		<link>https://www.valewood.org/essential-devops-tools/</link>
+					<comments>https://www.valewood.org/essential-devops-tools/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Sun, 11 Sep 2022 17:03:41 +0000</pubDate>
@@ -237,14 +237,14 @@
 <p>DevOps is a set of practices that combines software development and operations to shorten the development life cycle and provide continuous delivery and faster time to market. It’s a culture shift that requires collaboration between Development and Operations teams. The tools used in DevOps can be customized to meet the unique needs of your organization. These tools can automate the software delivery process, provision and configure infrastructure, and deploy applications.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/essential-devops-tools/feed/</wfw:commentRss>
+					<wfw:commentRss>https://www.valewood.org/essential-devops-tools/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Why are CI/CD Pipelines Part of DevOps?</title>
-		<link>/why-are-ci-cd-pipelines-part-of-devops/</link>
+		<link>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Mon, 05 Sep 2022 16:47:35 +0000</pubDate>
@@ -345,7 +345,7 @@
 			</item>
 		<item>
 		<title>How DevOps Can Improve Your Technology Stack</title>
-		<link>/how-devops-can-improve-your-technology-stack/</link>
+		<link>https://www.valewood.org/how-devops-can-improve-your-technology-stack/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Sun, 04 Sep 2022 18:50:18 +0000</pubDate>
@@ -416,8 +416,8 @@
 			</item>
 		<item>
 		<title>DevOps Roll-up: August</title>
-		<link>/devops-roll-up-august/</link>
-					<comments>/devops-roll-up-august/#respond</comments>
+		<link>https://www.valewood.org/devops-roll-up-august/</link>
+					<comments>https://www.valewood.org/devops-roll-up-august/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Wed, 31 Aug 2022 17:00:00 +0000</pubDate>
@@ -513,15 +513,15 @@
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/devops-roll-up-august/feed/</wfw:commentRss>
+					<wfw:commentRss>https://www.valewood.org/devops-roll-up-august/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>How to Build a DevOps Pipeline Geared for Stability?</title>
-		<link>/devops-pipeline-geared-for-stability/</link>
-					<comments>/devops-pipeline-geared-for-stability/#respond</comments>
+		<link>https://www.valewood.org/devops-pipeline-geared-for-stability/</link>
+					<comments>https://www.valewood.org/devops-pipeline-geared-for-stability/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Tue, 30 Aug 2022 02:47:33 +0000</pubDate>
@@ -650,15 +650,15 @@
 <p>As you can see, a stable DevOps pipeline will consist of many steps which all feed off of each other ending up in a GitOps-style deployment pipeline.  I believe that the magic in any well-developed, well-set-up DevOps pipeline has a foundation in having a clear definition of your intentions, and intentional components which provide specific functionality, and each component needs attention + care and feeding like any other technology stack that is being supported.  Not every pipeline needs to be as complex, or overly simplistic depending on your frame of reference since there is no one size fits all solution to robust delivery.  Start small, but be intentional and you too can have a DevOps Pipeline Geared for Stability!</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/devops-pipeline-geared-for-stability/feed/</wfw:commentRss>
+					<wfw:commentRss>https://www.valewood.org/devops-pipeline-geared-for-stability/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>DevOps Deployments: Fast, Easy, and Fun!</title>
-		<link>/devops-deployments-fast-easy-and-fun/</link>
-					<comments>/devops-deployments-fast-easy-and-fun/#respond</comments>
+		<link>https://www.valewood.org/devops-deployments-fast-easy-and-fun/</link>
+					<comments>https://www.valewood.org/devops-deployments-fast-easy-and-fun/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Sun, 21 Aug 2022 19:33:46 +0000</pubDate>
@@ -852,15 +852,15 @@
 </div></div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/devops-deployments-fast-easy-and-fun/feed/</wfw:commentRss>
+					<wfw:commentRss>https://www.valewood.org/devops-deployments-fast-easy-and-fun/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Practicing DevOps &#8211; A Surprising Alternative</title>
-		<link>/practicing-devops/</link>
-					<comments>/practicing-devops/#respond</comments>
+		<link>https://www.valewood.org/practicing-devops/</link>
+					<comments>https://www.valewood.org/practicing-devops/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Sun, 07 Aug 2022 20:26:05 +0000</pubDate>
@@ -969,15 +969,15 @@
 <ul><li><a href="https://hackr.io/blog/sdlc-methodologies" target="_blank" rel="noreferrer noopener">https://hackr.io/blog/sdlc-methodologies</a></li><li><a href="https://developerexperience.io/practices/automated-deployment" target="_blank" rel="noreferrer noopener">https://developerexperience.io/practices/automated-deployment</a></li><li><a href="https://www.redhat.com/en/topics/automation/what-is-deployment-automation" target="_blank" rel="noreferrer noopener">https://www.redhat.com/en/topics/automation/what-is-deployment-automation</a></li><li><a href="https://aws.amazon.com/builders-library/automating-safe-hands-off-deployments/" target="_blank" rel="noreferrer noopener">https://aws.amazon.com/builders-library/automating-safe-hands-off-deployments/</a></li></ul>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/practicing-devops/feed/</wfw:commentRss>
+					<wfw:commentRss>https://www.valewood.org/practicing-devops/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Welcome to A DevOoops</title>
-		<link>/welcome-to-a-devooops/</link>
-					<comments>/welcome-to-a-devooops/#respond</comments>
+		<link>https://www.valewood.org/welcome-to-a-devooops/</link>
+					<comments>https://www.valewood.org/welcome-to-a-devooops/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Sun, 07 Aug 2022 02:36:51 +0000</pubDate>
@@ -996,7 +996,7 @@
 <p>I want to talk about technology abstracted from the corporate atmosphere.  There are some really cool things going on out there in space of Development and DevOps, and all that coolness rarely sees the light of day.  Let&#8217;s give it some air here and see what happens <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/welcome-to-a-devooops/feed/</wfw:commentRss>
+					<wfw:commentRss>https://www.valewood.org/welcome-to-a-devooops/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		

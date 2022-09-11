@@ -9,8 +9,8 @@
 
 <channel>
 	<title>nfr &#8211; A DevOps Blog</title>
-	<atom:link href="/tag/nfr/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="https://www.valewood.org/tag/nfr/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Oops!</description>
 	<lastBuildDate>Sun, 21 Aug 2022 19:36:59 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -23,14 +23,14 @@
 <image>
 	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
 	<title>nfr &#8211; A DevOps Blog</title>
-	<link>/</link>
+	<link>https://www.valewood.org/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
 	<item>
 		<title>DevOps Deployments: Fast, Easy, and Fun!</title>
-		<link>/devops-deployments-fast-easy-and-fun/</link>
-					<comments>/devops-deployments-fast-easy-and-fun/#respond</comments>
+		<link>https://www.valewood.org/devops-deployments-fast-easy-and-fun/</link>
+					<comments>https://www.valewood.org/devops-deployments-fast-easy-and-fun/#respond</comments>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
 		<pubDate>Sun, 21 Aug 2022 19:33:46 +0000</pubDate>
@@ -224,7 +224,7 @@
 </div></div>
 ]]></content:encoded>
 					
-					<wfw:commentRss>/devops-deployments-fast-easy-and-fun/feed/</wfw:commentRss>
+					<wfw:commentRss>https://www.valewood.org/devops-deployments-fast-easy-and-fun/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
