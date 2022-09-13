@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sun, 11 Sep 2022 19:05:58 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 13 Sep 2022 02:31:53 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,196 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>What are the top Relevant DevOps Skills?</title>
+		<link>https://www.valewood.org/top-relevant-devops-skills/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Tue, 13 Sep 2022 02:31:49 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<guid isPermaLink="false">/?p=330</guid>
+
+					<description><![CDATA[DevOps skills include a variety of disciplines that range from system administration to software development. This article provides an overview of the skills that are relevant to DevOps.]]></description>
+										<content:encoded><![CDATA[
+<p>DevOps requires a variety of skills and competencies to realize the full benefits of the methodology.  The most pertinent DevOps skills are needed in the disciplines of system administration, security, software development, delivery automation, and quality assurance. It is not feasible or practical for a single person to accomplish all these things quickly as a result. We will take a look at some of the skills that are important in DevOps in different areas to provide a little more focus. If you are a business leader looking to improve your team&#8217;s performance, this is an excellent starting point.</p>
+
+
+
+<h2>DevOps Skills for Everyone</h2>
+
+
+
+<p>No matter where you are in your career, everyone could do with a little polishing on their communication and collaboration skills.  People build and run technology and machines do what they are told to do.  Remember, at the end of the day, technology is built by people for people.  </p>
+
+
+
+<p>Another area to polish right along with communication and collaboration is creativity.  We are out trying to solve complex technical problems which require time to think and time to reflect.  Building a mental model of your problem while looking for a creative solution is a good first step.  Getting your creativity out to the masses, or colleagues is the next step.  Do not worry about how your creative ideas will be received because you miss 100% of the shots you don&#8217;t take.</p>
+
+
+
+<p>I think the final skill is to know when to hold&#8217;em and know when to fold&#8217;em.  Not every idea, approach, strategy, or moment of self-indulging brilliance is going to be a winner.  It is ok to look at something you are working on and throw it in the trash.  It is also ok to take feedback from your peers on your ideas and be constructive with the feedback. </p>
+
+
+
+<h2>System Administration</h2>
+
+
+
+<p>Every technology effort relies on systems and system administration to function. Regardless of whether you&#8217;re creating serverless lambda functions or maintaining a static HTML website like this one, system administration is important to every technological endeavor.  Robust DevOps skillsets ensure that you remain competitive. It is the essential lifeblood of technology.</p>
+
+
+
+<h3>On-Prem System Administration</h3>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-onprem-servers-300x200.jpg" alt="" class="wp-image-413" srcset="/wp-content/uploads/2022/09/devops-onprem-servers-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-onprem-servers-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-onprem-servers-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-onprem-servers-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-onprem-servers-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-onprem-servers-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-onprem-servers-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-onprem-servers-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-onprem-servers-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
+
+
+<p>On-Prem administrators should be looking at skills that help reliably create interfaces that can be leveraged for quick environment standups.  By creating more automated or scripted actions, those actions can become far more reusable than accomplishing the task once through a GUI.</p>
+
+
+
+<p>In a more traditional approach, when a database administrator needs more disk space they would log a change ticket.  That ticket would hit the system admin group which would open a change ticket with the SAN team.  The SAN team would then review their allotments and take the ticket to CAB.  That ticket would get approved, space would be released which would then go back to the system admin team to expand the disk after it goes through its CAB approval process.  Finally, the database admin would then be able to go through their CAB to adjust SQL parameters to account for the new space.</p>
+
+
+
+<p>THIS IS SLOW, not to mention so 1990s!</p>
+
+
+
+<p>Unless you are in the mainframe market, most technology vendors are now exposing APIs which can be utilized to configure their systems.  As an on-prem system administrator, you should be building your technology stack out in a way that you can expose DevOps tools like <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> to the consumers of the infrastructure to safely self-service their requests.  If a DBA needs more disk space, it should be as simple as updating some YAML and that space is provisioned and ready for use.</p>
+
+
+
+<p>Focus more on SLA management than pure system administration.  Designing systems to achieve specific SLAs is going to be a lot more valuable to the teams you work with than managing capacity numbers.  If you are building your automation correctly, the automation itself can also understand the SLAs and ensure that people do not violate them with their configuration changes.</p>
+
+
+
+<p>Finally, focus on developing or integrating directly into an observability stack.  The more data that is visible to teams the better decisions can be made on how to optimize their current stance.</p>
+
+
+
+<h3>Cloud System Administrators</h3>
+
+
+
+<p>Cloud System Administrators should be focused on developing and making available sane cloud baselines.  Just because you are the system administrator does not mean that you need to hold the keys to the kingdom when it comes to the cloud.  In my experience, the cloud is a toolbox full of tools and when a more junior team tries to utilize the cloud, they view all of those tools as hammers.  By providing sane baselines which consumers can pick up and utilize in the cloud, your teams are going to become a lot more efficient.</p>
+
+
+
+<p>The key areas of focus here are going to be automation and security.  Out in the cloud, the security perimeter is much wider than it is in the on-prem space.  Providing sane defaults to end users lets you understand what the preset patterns look like.  Through the mountain of data that the cloud provides, analysis can then be done with persistent feedback when one of those ordained patterns changes.</p>
+
+
+
+<p>When it comes to automation, there should not be a huge barrier to entry between when someone receives their cloud account and when they start to produce technology.  Service catalogs and pre-built playbooks with very well-documented parameters are a great way to kickstart a project and grow DevOps skills on a team.  Once you are able to do that, you can then create automated building blocks that allow the team to get into production faster and build out the infrastructure which is required for their project.</p>
+
+
+
+<h2>Security / DevSecOps</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignleft size-medium"><img width="300" height="206" src="/wp-content/uploads/2022/09/devsecops-helicopter-300x206.png" alt="" class="wp-image-412" srcset="/wp-content/uploads/2022/09/devsecops-helicopter-300x206.png 300w, /wp-content/uploads/2022/09/devsecops-helicopter-1024x703.png 1024w, /wp-content/uploads/2022/09/devsecops-helicopter-768x527.png 768w, /wp-content/uploads/2022/09/devsecops-helicopter-1170x803.png 1170w, /wp-content/uploads/2022/09/devsecops-helicopter-585x402.png 585w, /wp-content/uploads/2022/09/devsecops-helicopter.png 1509w" sizes="(max-width: 300px) 100vw, 300px" /><figcaption>SecOps in Action!</figcaption></figure></div>
+
+
+<p>In a more traditional world, Security is going to be proactively scanning digital assets with tooling waiting to deploy from their stealthy helicopters when an incident occurs.  Security was viewed as a cost of doing business when in reality it should be viewed as an enhancement to the flow of delivery while lower the overall risk of costly delays or worse, security incidents.  When embracing a more DevOps-focused skillset, security can integrate right into the overall delivery flow to ensure quality, speed, and transparency to stakeholders.</p>
+
+
+
+<p>The first DevOps skills that security professionals should bring to the table center around integration to routine scanning tools.  It is one thing to kick off a scan on an environment when something is deployed to production, but that may not prevent something from making its way into the wild which could have a lasting impact on digital properties.  As part of the release pipelines that the team is using, security tooling should be integrated directly into the release structure and used as a quality gate.</p>
+
+
+
+<p>When working with other teams, security should be able to provide automated testing suites. A certain type of testing should be performed, not one that verifies whether the automated tooling is working properly, but one that evaluates whether the code being developed is either hardened or tested with a focus on security. </p>
+
+
+
+<p><strong>Example: </strong>When developing or maintaining programs teams must continuously test for scenarios where unauthenticated sessions allow for access to data that requires authentication. This testing path may not be in the original requirements material, so it may not get tested as part of a normal feature release.</p>
+
+
+
+<p>Another DevOps skill that security professionals should focus on is continuous feedback.  Getting information back into the hands of the teams delivering features is paramount to keeping a system safe.  If the individuals writing code or working on infrastructure do not know that they are ending up in a compromised state as early in the pipeline as possible, there is a very good chance that code will end up in production and someone with malicious intent will find it.  </p>
+
+
+
+<p>The last DevOps skill is a soft skill centered around communication.  When working through trying to bring a more robust security posture to a team, decision-makers are left with a numbers game of risk management instead of understanding how security can help enhance their product.  Tailoring communication around security in a way that stakeholders and decision-makers understand the benefits of security outside of the normal gloom and doom rhetoric will help open doors for bringing in more advanced tooling and methods.</p>
+
+
+
+<h2>Software Development</h2>
+
+
+
+<p>Software developers are generally concerned with producing the next feature and getting that out into the market for consumption.  The code is pushed and it ends up going through whatever gates may live between their keyboard and production.  Occasionally they are going to get something kicked back which needs to get fixed and re-pushed.</p>
+
+
+
+<p>To start developing some DevOps skills, I would take a look at how you are engaging this cycle.  One of the core tenants of a DevOps flow is &#8220;Always be ready to release to production&#8221;.  This really means that the main branch needs to be ready to be pushed to production at all times.  </p>
+
+
+
+<p>Feature flags can be used to write and deliver code that is ready to be turned on in production via a configuration switch.  By wrapping your code paths in feature flags, you can take time to incrementally work through your code and automated testing and flip it on in production when the time is right.  Since we are mere mortals working on highly precise machines trying to get them to do our bidding, this is a great way to get incremental feedback on your approach both from our machine overlords along with other stakeholders.</p>
+
+
+
+<p>Lastly, I would take a strong look at how to develop some DevOps skills around application building and packaging.  Composing your application to be low touch, small, and quick to deploy and tear down will really help your peers reduce the complexity of their accompanying pipelines and work.  A hot topic is microservices, but I don&#8217;t buy that microservices are the only way to do this.  I think a logical composition of your application by defining your data domain is a great way to understand the definable boundaries of what your application should be doing vs what another application may be responsible for.</p>
+
+
+
+<h2>Delivery Automation</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-software-development-300x200.jpg" alt="" class="wp-image-414" srcset="/wp-content/uploads/2022/09/devops-software-development-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-software-development-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-software-development-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-software-development-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-software-development-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-software-development-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-software-development-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-software-development-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-software-development-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
+
+
+<p>This discipline is going to be taking on a lot of different challenges from different DevOps skill sets.  You will be releasing new or updated applications, new or updated data or data schemas, new configurations, security updates, firewall rules, and many more disconnected technologies.  </p>
+
+
+
+<p>Start by working through a specific domain like application releases.  Getting into containers in <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> is great, but you can focus on server-based deployments as well.  The gold standard is immutable deployments, but not every situation will fit immutable deployments.</p>
+
+
+
+<p>Ensure that you are able to both deploy an application along with being able to completely remove all traces of that application from the deployment target.  Successful deployment along with successful removal should give you the full scope of understanding the application that you are working with</p>
+
+
+
+<p>Next, I would look at credential management strategies.  Putting plain text passwords in code is a cardinal sin in today&#8217;s ecosystem.  Work on strategies that can provide the teams around you with a good interface for utilizing credentials without exposing them.  I personally like using Ansible Vault as a solution here where ansible is a trampoline to a more robust credential storage solution.</p>
+
+
+
+<p>The last DevOps skill that I would build is around deployment validation.  If you are not able to tease out clear requirements around a successful deployment, that is ok.  Work towards getting deployment validation built into your pipeline in a rudimentary way such as doing a GET call to the deployed application.  As failures occur, harden your validations with more steps like running a search or calling a page that makes a database query to ensure that you could trigger a rollback if things are not working as expected.</p>
+
+
+
+<h2>Quality Assurance</h2>
+
+
+
+<p>Quality is DevOps and DevOps is focused on quality.  Quality assurance teams will traditionally look at the functionality of the application to give it a clean bill of health before release.  I would urge QA teams to broaden their horizons and bring QA practices into all phases of the delivery cycle.</p>
+
+
+
+<p>A key focus of DevOps is the observability of an application.  If QA teams work towards building DevOps skills around automated testing, you now have a nice monitoring suite that you can use to ensure the persistent quality of production assets.  Automated testing is also a great way to provide feedback to the team.  Make sure automated testing is accessible and ready for consumption by the whole team since quality is everyone&#8217;s responsibility.</p>
+
+
+
+<p>Next, I would look at building some DevOps skills around providing quality for free through frameworks.  There are many different edge cases out there that can be easy or difficult to test for.  Building out or deploying frameworks that test for standard application edge cases is a great way to empower the team with quick feedback on development to know that baseline quality standards are met.  I know that I never want to write another test that checks to see if an email address was put into the email field ever again.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you can see above, a wide range of DevOps skills is needed in the automated delivery space.  Teams are composed of many different disciplines to be self-sufficient in their delivery of technology and not every requisite skill exists in all teams.  Do not be afraid to expand your DevOps skillset to cover those gaps.  When someone blurts out &#8220;There has to be a better way!&#8221;, there probably is a better way.  While delivering technology, never stop learning and growing at the same time.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>What essential DevOps tools should you be using today?</title>
 		<link>https://www.valewood.org/essential-devops-tools/</link>
 					<comments>https://www.valewood.org/essential-devops-tools/#respond</comments>

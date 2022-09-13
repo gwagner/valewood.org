@@ -4,6 +4,19 @@
 		<loc>https://www.valewood.org/</loc>
 	</url>
 	<url>
+		<loc>https://www.valewood.org/top-relevant-devops-skills/</loc>
+		<lastmod>2022-09-12T21:31:53-05:00</lastmod>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-onprem-servers.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devsecops-helicopter.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-software-development.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/essential-devops-tools/</loc>
 		<lastmod>2022-09-11T14:05:58-05:00</lastmod>
 	</url>
