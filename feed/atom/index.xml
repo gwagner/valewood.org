@@ -6,7 +6,7 @@
 	<title type="text">A DevOps Blog</title>
 	<subtitle type="text">Occasionally a developer makes an Ops!</subtitle>
 
-	<updated>2022-09-13T02:31:53Z</updated>
+	<updated>2022-09-13T03:35:54Z</updated>
 
 	<link rel="alternate" type="text/html" href="https://www.valewood.org/" />
 	<id>/feed/atom/</id>
@@ -24,7 +24,7 @@
 		<link rel="alternate" type="text/html" href="https://www.valewood.org/top-relevant-devops-skills/" />
 
 		<id>/?p=330</id>
-		<updated>2022-09-13T02:31:53Z</updated>
+		<updated>2022-09-13T03:35:54Z</updated>
 		<published>2022-09-13T02:31:49Z</published>
 		<category scheme="/" term="DevOps" />
 		<summary type="html"><![CDATA[DevOps skills include a variety of disciplines that range from system administration to software development. This article provides an overview of the skills that are relevant to DevOps.]]></summary>
