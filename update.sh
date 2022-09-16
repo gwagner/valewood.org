@@ -38,6 +38,10 @@ grep -rl "href=\"/" . --include="*.xml" | xargs sed -i 's/\(href="\)\//\1https:\
 echo "Fixing canonical links with https://www.valewood.org"
 grep -rl '<link rel="canonical" href="/' . --exclude='update.sh' | xargs sed -i 's/\(<link rel="canonical" href="\)\//\1https:\/\/www.valewood.org\//g'
 
+# Fix ads
+echo "Replacing adsbygoogle.js\" with adsbygoogle.js?client=ca-pub-7120242057450442\""
+grep -rl "adsbygoogle.js\"" . --exclude='update.sh' | xargs sed -i 's/\(adsbygoogle.js\)"/\1?client=ca-pub-7120242057450442"/g'
+
 SOURCE_FILE=$1
 echo "Do you wish to remove the source files from $SOURCE_FILE"
 select yn in "Yes" "No"; do
