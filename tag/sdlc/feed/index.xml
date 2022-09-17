@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/sdlc/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sat, 17 Sep 2022 01:13:28 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 17 Sep 2022 01:37:00 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -53,12 +53,14 @@
 <p>Build tools are an important cornerstone for any kind of DevOps workflow. Just choosing one without doing an evaluation can mean the difference between success and failure in a lot of circumstances. The build tooling must jive with the team and accomplish producing the CI/CD processes which the team expects in the way they expect them to be run. Think of them as task runners with a GUI, but each task runner has its own flare. Below is a list of tools that are widely used and could fit the bill for your next project.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -263,12 +265,8 @@
 		<category><![CDATA[software]]></category>
 		<guid isPermaLink="false">/?p=312</guid>
 
-					<description><![CDATA[Introduction CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD. CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed&#8230;]]></description>
+					<description><![CDATA[CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD. CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up&#8230;]]></description>
 										<content:encoded><![CDATA[
-<h2>Introduction</h2>
-
-
-
 <p>CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD.  CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up the process and ensure that your code is always in a ready-to-deploy state. There are a number of different tools that you can use for creating DevOps pipelines. You can think of it like an assembly line where technology components and quality checks and gates are passed on the way to production. A more apt analogy would be the assembly line in the manufacturing industry where physical products are made. Think of a car made of parts going down a conveyor belt to different stations where it is assembled. A DevOps pipeline is kind of like that. But instead of cars, DevOps pipelines are for software and applications. And instead of physical parts, they are for software components like source code and automated scripts.</p>
 
 
@@ -276,12 +274,14 @@
 <p>There are several key parts of the assembly line that must be considered. The key parts of a successful DevOps pipeline are all continuous; integration, delivery, testing, monitoring, feedback, and operations.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -381,12 +381,14 @@
 <p>In case you are wondering, &#8220;what is a pipeline in DevOps&#8221;?  A pipeline in DevOps is centered around the idea of ensuring code is continuously delivered which in turn means the business is seeing a continuous flow of value.  There are many DevOps pipeline tools on the market, but I want to take step back and discuss more of the planning and design side of things before diving directly into tooling.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -528,12 +530,14 @@
 <p>My experience is that the emphasis on value engineering is far too constraining to the internal consumers of your DevOps pipelines.  Sure, we work for a business that needs to make revenue to be successful, but; I believe that the idea of value engineering goes both into the market and inversely into the team producing the technology.  This article will touch more on the idealistic side of what DevOps can do for teams with the idea of ancillary market benefits being gained by a team doing DevOps well.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 </div></div>
 
 

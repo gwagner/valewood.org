@@ -4,6 +4,10 @@
 		<loc>https://www.valewood.org/</loc>
 	</url>
 	<url>
+		<loc>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</loc>
+		<lastmod>2022-09-16T20:37:00-05:00</lastmod>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/practicing-devops/</loc>
 		<lastmod>2022-09-16T20:15:58-05:00</lastmod>
 	</url>
@@ -34,10 +38,6 @@
 	<url>
 		<loc>https://www.valewood.org/how-devops-can-improve-your-technology-stack/</loc>
 		<lastmod>2022-09-16T20:11:07-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</loc>
-		<lastmod>2022-09-16T20:10:29-05:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/essential-devops-tools/</loc>
