@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/tools/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sun, 11 Sep 2022 19:05:58 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 17 Sep 2022 01:10:10 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -51,6 +51,14 @@
 
 
 <p>Build tools are an important cornerstone for any kind of DevOps workflow. Just choosing one without doing an evaluation can mean the difference between success and failure in a lot of circumstances. The build tooling must jive with the team and accomplish producing the CI/CD processes which the team expects in the way they expect them to be run. Think of them as task runners with a GUI, but each task runner has its own flare. Below is a list of tools that are widely used and could fit the bill for your next project.</p>
+
+
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
 
 
 

@@ -4,37 +4,22 @@
 		<loc>https://www.valewood.org/</loc>
 	</url>
 	<url>
-		<loc>https://www.valewood.org/top-relevant-devops-skills/</loc>
-		<lastmod>2022-09-12T21:31:53-05:00</lastmod>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-onprem-servers.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devsecops-helicopter.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-software-development.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/essential-devops-tools/</loc>
-		<lastmod>2022-09-11T14:05:58-05:00</lastmod>
-	</url>
-	<url>
 		<loc>https://www.valewood.org/practicing-devops/</loc>
-		<lastmod>2022-09-09T21:42:52-05:00</lastmod>
+		<lastmod>2022-09-16T20:15:58-05:00</lastmod>
 	</url>
 	<url>
-		<loc>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</loc>
-		<lastmod>2022-09-05T11:47:38-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/how-devops-can-improve-your-technology-stack/</loc>
-		<lastmod>2022-09-04T13:50:24-05:00</lastmod>
+		<loc>https://www.valewood.org/devops-deployments-fast-easy-and-fun/</loc>
+		<lastmod>2022-09-16T20:13:28-05:00</lastmod>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/annie-spratt-hCb3lIB8L8E-unsplash-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/todd-quackenbush-IClZBVw5W5A-unsplash-scaled.jpg</image:loc>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-pipeline-geared-for-stability/</loc>
-		<lastmod>2022-08-29T21:47:37-05:00</lastmod>
+		<lastmod>2022-09-16T20:12:00-05:00</lastmod>
 		<image:image>
 			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/devops-pipeline-flowchart.png</image:loc>
 		</image:image>
@@ -44,16 +29,31 @@
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-roll-up-august/</loc>
-		<lastmod>2022-08-31T12:00:00-05:00</lastmod>
+		<lastmod>2022-09-16T20:11:44-05:00</lastmod>
 	</url>
 	<url>
-		<loc>https://www.valewood.org/devops-deployments-fast-easy-and-fun/</loc>
-		<lastmod>2022-08-21T14:36:59-05:00</lastmod>
+		<loc>https://www.valewood.org/how-devops-can-improve-your-technology-stack/</loc>
+		<lastmod>2022-09-16T20:11:07-05:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</loc>
+		<lastmod>2022-09-16T20:10:29-05:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/essential-devops-tools/</loc>
+		<lastmod>2022-09-16T20:10:10-05:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/top-relevant-devops-skills/</loc>
+		<lastmod>2022-09-16T20:09:34-05:00</lastmod>
 		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/annie-spratt-hCb3lIB8L8E-unsplash-scaled.jpg</image:loc>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-onprem-servers.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/todd-quackenbush-IClZBVw5W5A-unsplash-scaled.jpg</image:loc>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devsecops-helicopter.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-software-development.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>

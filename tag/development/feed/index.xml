@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/development/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Mon, 05 Sep 2022 16:47:38 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 17 Sep 2022 01:12:00 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -51,6 +51,14 @@
 
 
 <p>There are several key parts of the assembly line that must be considered. The key parts of a successful DevOps pipeline are all continuous; integration, delivery, testing, monitoring, feedback, and operations.</p>
+
+
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
 
 
 
@@ -141,17 +149,21 @@
 		<category><![CDATA[sdlc]]></category>
 		<guid isPermaLink="false">/?p=95</guid>
 
-					<description><![CDATA[Intro Building a devops pipeline is easy. Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!! Well&#8230; not exactly. In my experience, this is where things usually&#8230;]]></description>
+					<description><![CDATA[Building a devops pipeline is easy. Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!! Well&#8230; not exactly. In my experience, this is where things usually start,&#8230;]]></description>
 										<content:encoded><![CDATA[
-<h2>Intro</h2>
-
-
-
 <p>Building a devops pipeline is easy.  Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!!  Well&#8230; not exactly.  In my experience, this is where things usually start, but will quickly lead to new and additional churn in a delivery cycle which was never intended.  Sometimes that churn goes completely unrecognized simply because the thought of doing DevOps is far better than the idea of not doing DevOps.  Either way, do yourself a favor and take a step back to look into how intentional design, intentional component selection, along with care and feeding can get you into a spot where your pipelines work for you instead of you working for your pipelines.</p>
 
 
 
 <p>In case you are wondering, &#8220;what is a pipeline in DevOps&#8221;?  A pipeline in DevOps is centered around the idea of ensuring code is continuously delivered which in turn means the business is seeing a continuous flow of value.  There are many DevOps pipeline tools on the market, but I want to take step back and discuss more of the planning and design side of things before diving directly into tooling.</p>
+
+
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
 
 
 
