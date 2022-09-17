@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/gitops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sun, 21 Aug 2022 19:36:59 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 17 Sep 2022 01:13:28 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -41,13 +41,9 @@
 		<category><![CDATA[sdlc]]></category>
 		<guid isPermaLink="false">/?p=48</guid>
 
-					<description><![CDATA[Preface One of the core fundamentals of DevOps is to ensure that deployments are fully automated. The technology stack that you are supporting should be fully production ready at all times. This means that DevOps does not stop at IaC&#8230;]]></description>
+					<description><![CDATA[One of the core fundamentals of DevOps is to ensure that deployments are fully automated. The technology stack that you are supporting should be fully production ready at all times. This means that DevOps does not stop at IaC automation.&#8230;]]></description>
 										<content:encoded><![CDATA[
 <div class="wp-container-1 wp-block-group"><div class="wp-block-group__inner-container">
-<h2>Preface</h2>
-
-
-
 <p>One of the core fundamentals of DevOps is to ensure that deployments are fully automated.  The technology stack that you are supporting should be fully production ready at all times. This means that DevOps does not stop at IaC automation.  The full SDLC needs to be constructed in such a way that it enables more of a GitOps model rather than a series of disconnected pieces.</p>
 
 
@@ -59,8 +55,12 @@
 <p>My experience is that the emphasis on value engineering is far too constraining to the internal consumers of your DevOps pipelines.  Sure, we work for a business that needs to make revenue to be successful, but; I believe that the idea of value engineering goes both into the market and inversely into the team producing the technology.  This article will touch more on the idealistic side of what DevOps can do for teams with the idea of ancillary market benefits being gained by a team doing DevOps well.</p>
 
 
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
 </div></div>
 
 
@@ -164,10 +164,6 @@
 
 <p>An incomplete DevOps pipeline with some jank will inevitably lead to issues that erode confidence in the technology stack.  There is no gold standard of 100% complete here, but you can transpose completeness with confidence in most cases.  If your team and business partners feel that the pipeline is doing everything that it should, then you are in great shape.  If your pipeline feels like there is something left to be desired, don&#8217;t ignore that feeling and continue to build confidence through completeness.</p>
 </div></div>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
 </div></div>
 
 
@@ -199,10 +195,6 @@
 
 
 <p>Selection of the right tools to do the job is both a critical juncture in any project and sparks the most religious debates showing where allegiances really lie.  Don&#8217;t fall into that trap.  A tool performs an action through specific syntax.  At it&#8217;s core, my preferred technology stack consists of something which orchestrates actions, something which performs tests, and something which performs configuration management.  This generally means <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>, Inspec, and <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>/<a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a>.  Could you skip the Chef/Puppet and do everything 100% in ansible?  Absolutely.  Could you skip ansible and do everything in Chef/Puppet?  Absolutely!  I think the point is that anyone who argues that there is a right or wrong way to go about tool selection is flat-out wrong.  The tools must work for the team dynamic and then work for the technology.  If you start at technology first, more often than not, that effort will fail.</p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
 </div></div>
 
 

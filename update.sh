@@ -12,7 +12,7 @@ rsync -cvr ./new-site/ ./
 rm -rf ./new-site/
 
 
-
+# Fix URLs
 echo "Correct funky //www.valewood.org formatting"
 grep -rl "\"//www.lab.valewood.org" . --exclude='update.sh' | xargs sed -i 's/"\/\/www.lab.valewood.org/"https:\/\/www.lab.valewood.org/g'
 
@@ -21,6 +21,9 @@ grep -rl www.lab.valewood.org . --exclude='update.sh' | xargs sed -i 's/www.lab.
 
 echo "Replacing loc>/ with www.valewood.org"
 grep -rl "loc>/" . --exclude='update.sh' | xargs sed -i 's/\(loc>\)\//\1https:\/\/www.valewood.org\//g'
+
+echo "Fix og:url property"
+grep -rl "<meta property=\"og:url\" content=\"/" . --exclude='update.sh' | xargs sed -i 's/\(<meta property="og:url" content="\)\//\1https:\/\/www.valewood.org\//g'
 
 # RSS Atom Feed Fixing
 echo "Replacing link>/ with www.valewood.org"

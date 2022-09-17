@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/software/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Mon, 05 Sep 2022 16:47:38 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 17 Sep 2022 01:11:07 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -51,6 +51,14 @@
 
 
 <p>There are several key parts of the assembly line that must be considered. The key parts of a successful DevOps pipeline are all continuous; integration, delivery, testing, monitoring, feedback, and operations.</p>
+
+
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
 
 
 
@@ -139,13 +147,17 @@
 		<category><![CDATA[software]]></category>
 		<guid isPermaLink="false">/?p=304</guid>
 
-					<description><![CDATA[Introduction DevOps is a set of practices that combines software development and operations to improve the speed, quality, and reliability of software delivery. DevOps is about collaboration and communication between development and operations teams. In many instances, these 2 teams&#8230;]]></description>
+					<description><![CDATA[DevOps is a set of practices that combines software development and operations to improve the speed, quality, and reliability of software delivery. DevOps is about collaboration and communication between development and operations teams. In many instances, these 2 teams are&#8230;]]></description>
 										<content:encoded><![CDATA[
-<h2>Introduction</h2>
-
-
-
 <p>DevOps is a set of practices that combines software development and operations to improve the speed, quality, and reliability of software delivery. DevOps is about collaboration and communication between development and operations teams.  In many instances, these 2 teams are combined into one providing a shared focus and shared set of responsibilities.  The team becomes responsible for the entire lifecycle surrounding a set of technology.  The strategic themes for this team center around automating the software delivery process so that software can be delivered faster, with fewer errors. DevOps is a relatively new concept, but it’s quickly gaining popularity because it’s an effective way to improve the technology stack. In this article, we’ll explore how DevOps can improve your technology stack.</p>
+
+
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
 
 
 
