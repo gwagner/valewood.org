@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/software/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sat, 17 Sep 2022 01:11:07 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 17 Sep 2022 01:37:00 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -40,12 +40,8 @@
 		<category><![CDATA[software]]></category>
 		<guid isPermaLink="false">/?p=312</guid>
 
-					<description><![CDATA[Introduction CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD. CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed&#8230;]]></description>
+					<description><![CDATA[CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD. CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up&#8230;]]></description>
 										<content:encoded><![CDATA[
-<h2>Introduction</h2>
-
-
-
 <p>CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD.  CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up the process and ensure that your code is always in a ready-to-deploy state. There are a number of different tools that you can use for creating DevOps pipelines. You can think of it like an assembly line where technology components and quality checks and gates are passed on the way to production. A more apt analogy would be the assembly line in the manufacturing industry where physical products are made. Think of a car made of parts going down a conveyor belt to different stations where it is assembled. A DevOps pipeline is kind of like that. But instead of cars, DevOps pipelines are for software and applications. And instead of physical parts, they are for software components like source code and automated scripts.</p>
 
 
@@ -53,12 +49,14 @@
 <p>There are several key parts of the assembly line that must be considered. The key parts of a successful DevOps pipeline are all continuous; integration, delivery, testing, monitoring, feedback, and operations.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -152,12 +150,14 @@
 <p>DevOps is a set of practices that combines software development and operations to improve the speed, quality, and reliability of software delivery. DevOps is about collaboration and communication between development and operations teams.  In many instances, these 2 teams are combined into one providing a shared focus and shared set of responsibilities.  The team becomes responsible for the entire lifecycle surrounding a set of technology.  The strategic themes for this team center around automating the software delivery process so that software can be delivered faster, with fewer errors. DevOps is a relatively new concept, but it’s quickly gaining popularity because it’s an effective way to improve the technology stack. In this article, we’ll explore how DevOps can improve your technology stack.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 

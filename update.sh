@@ -5,6 +5,7 @@ unzip $1 -d ./new-site/
 
 echo "Removing old JS files"
 rm -rf ./wp-content/cache/autoptimize/js/*.js
+rm -f ./new-site/robots.txt # Local code repo has changes to block indexing of Cloudflare things, Manually merge this file if needed
 
 echo "Rsyncing content"
 rsync -cvr ./new-site/ ./

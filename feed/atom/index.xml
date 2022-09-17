@@ -6,7 +6,7 @@
 	<title type="text">A DevOps Blog</title>
 	<subtitle type="text">Occasionally a developer makes an Ops!</subtitle>
 
-	<updated>2022-09-17T01:15:58Z</updated>
+	<updated>2022-09-17T01:37:00Z</updated>
 
 	<link rel="alternate" type="text/html" href="https://www.valewood.org/" />
 	<id>/feed/atom/</id>
@@ -49,12 +49,14 @@
 <p>I think the final skill is to know when to hold&#8217;em and know when to fold&#8217;em.  Not every idea, approach, strategy, or moment of self-indulging brilliance is going to be a winner.  It is ok to look at something you are working on and throw it in the trash.  It is also ok to take feedback from your peers on your ideas and be constructive with the feedback. </p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -242,12 +244,14 @@
 <p>Build tools are an important cornerstone for any kind of DevOps workflow. Just choosing one without doing an evaluation can mean the difference between success and failure in a lot of circumstances. The build tooling must jive with the team and accomplish producing the CI/CD processes which the team expects in the way they expect them to be run. Think of them as task runners with a GUI, but each task runner has its own flare. Below is a list of tools that are widely used and could fit the bill for your next project.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -448,16 +452,12 @@
 		<link rel="alternate" type="text/html" href="https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/" />
 
 		<id>/?p=312</id>
-		<updated>2022-09-17T01:10:29Z</updated>
+		<updated>2022-09-17T01:37:00Z</updated>
 		<published>2022-09-05T16:47:35Z</published>
 		<category scheme="/" term="DevOps" /><category scheme="/" term="development" /><category scheme="/" term="devops" /><category scheme="/" term="sdlc" /><category scheme="/" term="software" />
-		<summary type="html"><![CDATA[Introduction CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD. CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed&#8230;]]></summary>
+		<summary type="html"><![CDATA[CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD. CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up&#8230;]]></summary>
 
 					<content type="html" xml:base="/why-are-ci-cd-pipelines-part-of-devops/"><![CDATA[
-<h2>Introduction</h2>
-
-
-
 <p>CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD.  CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up the process and ensure that your code is always in a ready-to-deploy state. There are a number of different tools that you can use for creating DevOps pipelines. You can think of it like an assembly line where technology components and quality checks and gates are passed on the way to production. A more apt analogy would be the assembly line in the manufacturing industry where physical products are made. Think of a car made of parts going down a conveyor belt to different stations where it is assembled. A DevOps pipeline is kind of like that. But instead of cars, DevOps pipelines are for software and applications. And instead of physical parts, they are for software components like source code and automated scripts.</p>
 
 
@@ -465,12 +465,14 @@
 <p>There are several key parts of the assembly line that must be considered. The key parts of a successful DevOps pipeline are all continuous; integration, delivery, testing, monitoring, feedback, and operations.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -565,12 +567,14 @@
 <p>DevOps is a set of practices that combines software development and operations to improve the speed, quality, and reliability of software delivery. DevOps is about collaboration and communication between development and operations teams.  In many instances, these 2 teams are combined into one providing a shared focus and shared set of responsibilities.  The team becomes responsible for the entire lifecycle surrounding a set of technology.  The strategic themes for this team center around automating the software delivery process so that software can be delivered faster, with fewer errors. DevOps is a relatively new concept, but it’s quickly gaining popularity because it’s an effective way to improve the technology stack. In this article, we’ll explore how DevOps can improve your technology stack.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -673,12 +677,14 @@
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -760,12 +766,14 @@
 <p>In case you are wondering, &#8220;what is a pipeline in DevOps&#8221;?  A pipeline in DevOps is centered around the idea of ensuring code is continuously delivered which in turn means the business is seeing a continuous flow of value.  There are many DevOps pipeline tools on the market, but I want to take step back and discuss more of the planning and design side of things before diving directly into tooling.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -906,12 +914,14 @@
 <p>My experience is that the emphasis on value engineering is far too constraining to the internal consumers of your DevOps pipelines.  Sure, we work for a business that needs to make revenue to be successful, but; I believe that the idea of value engineering goes both into the market and inversely into the team producing the technology.  This article will touch more on the idealistic side of what DevOps can do for teams with the idea of ancillary market benefits being gained by a team doing DevOps well.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 </div></div>
 
 
@@ -1094,12 +1104,14 @@
 <p>On its face; DevOps blogs, articles, YouTube videos, etc. will classify DevOps as a series of tools that are composed to do some form of IaC or Configuration Management.  While this is a small component of DevOps, it is not the whole story.  DevOps is more about enabling the flow of delivery than it is about any singular or composition of tools.  Basic human nature will tell us that we always want to get more for less, and DevOps is the &#8220;branding&#8221; behind that idea in technology.  I have more to come on this topic down below.  With this basic understanding, I want to get into the meat of the issue first.</p>
 
 
+<p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+</p>
 
 
 
