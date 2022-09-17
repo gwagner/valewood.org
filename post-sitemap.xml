@@ -4,6 +4,19 @@
 		<loc>https://www.valewood.org/</loc>
 	</url>
 	<url>
+		<loc>https://www.valewood.org/what-is-devops-automation/</loc>
+		<lastmod>2022-09-17T10:28:47-05:00</lastmod>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-automation-questions.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-automation.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-automation-process.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</loc>
 		<lastmod>2022-09-16T20:37:00-05:00</lastmod>
 	</url>

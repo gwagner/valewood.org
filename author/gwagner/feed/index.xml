@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sat, 17 Sep 2022 01:37:00 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 17 Sep 2022 15:28:47 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,146 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>What is DevOps Automation?</title>
+		<link>https://www.valewood.org/what-is-devops-automation/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sat, 17 Sep 2022 15:19:44 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<guid isPermaLink="false">/?p=450</guid>
+
+					<description><![CDATA[Automation is a cornerstone of DevOps. If you are not doing DevOps Automation, I am not entirely sure what you are doing? Building robust automation helps drive the consistency and quality that the DevOps methodology is known for. In a&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Automation is a cornerstone of DevOps.  If you are not doing DevOps Automation, I am not entirely sure what you are doing?  Building robust automation helps drive the consistency and quality that the DevOps methodology is known for.  In a lot of ways, we can look towards manufacturing to understand why DevOps automation is so important.  Unless you are looking at a niche hand-made luxury item car a Pagani Utopia, anything that is being produced at scale is done in a factory with automation.  Let&#8217;s dive in and understand the manufacturing benefits of automation and see if we can apply them to DevOps automation!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>DevOps Automation through the lens of Manufacturing</h2>
+
+
+
+<p>In the intro of this article, I used a car analogy to highlight something that is a one of a kind hand made luxury item.  Cars are a bit overdone, so let&#8217;s actually walk down analogy road with prefabricated houses.  I actually think houses are a better fit here because it is hard to change up an automated manufacturing line to put a nice casement window into your Pagani, but prefabricated homes have that all figured out!</p>
+
+
+
+<h2>Process</h2>
+
+
+
+<p>Much like any work in any industry, someone is going to be requesting something and there is someone out there that is going to produce that request.  That is what keeps the world moving.</p>
+
+
+
+<p>The process for buying a prefab house is generally as follows.</p>
+
+
+
+<ul><li>Do some research on prefabricated housing companies</li><li>Meet with their sales department</li><li>Pick a base model from a design catalog</li><li>Design the building with an architect</li><li>Review and make adjustments</li><li>Sign off on the design</li><li>Generate cut lists from detailed plans</li><li>Send to manufacturing</li><li>Boom, House!</li></ul>
+
+
+
+<p>The biggest caveat here is that the architects will generally start off from base plans that they know the manufacturing department can build rather than starting from scratch.  Because this is being designed from a prebuilt manufacturing process, you don&#8217;t want to start from a blank slate because quality will suffer assuming that your primary considerations are cost and time.</p>
+
+
+
+<p>The process for building technology with DevOps automation does not need to really be all that different.</p>
+
+
+
+<ul><li>Pick a baseline technology stack that is recognized as a pattern</li><li>Design your technology requirements with an architect</li><li>Review and make adjustments</li><li>Sign off on the design</li><li>Generate epics and stories from detailed plans</li><li>Send to engineering teams</li><li>Boom, Technology!</li></ul>
+
+
+
+<p>When building stacks with DevOps automation, going from the ground up can be expensive and take a lot of additional time.  Working with defined technology stacks and reusing existing investments can really speed up the process and reinforce quality delivery.</p>
+
+
+
+<h2>What do you do?</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-questions-300x200.jpg" alt="DevOps Automation Questions" class="wp-image-462" srcset="/wp-content/uploads/2022/09/devops-automation-questions-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-questions-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-questions-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-questions-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-questions-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-questions-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-questions-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-questions-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-questions-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
+
+
+<p>Buildings are going to have a few main components to them.  You are generally going to have a foundation, walls, roof, doors, windows, bathroom, kitchen, and bedrooms.  Those are the known knowns.  When a prefab housing company goes out to try and build a new house, they are not trying to bolt on a rocket ship launch pad.  Prefab companies are trying to build the BEST walls, and the BEST roof because they are putting these components together in a controlled environment utilizing their specialized processes and methods.</p>
+
+
+
+<p>DevOps automation is really trying to achieve the same goal here.  If the bathrooms are servers and the roof is a firewall, DevOps engineers are trying to build the BEST bathrooms and roofs possible in their controlled environments utilizing their specialized processes to get the job done.  </p>
+
+
+
+<p>Now imagine a customer showing up to a prefab housing company and asking them to build out the aforementioned rocket ship launch pad.  Since this company is a group of builders, giving infinite time and money, I am sure they could build a serviceable launch pad that could send someone&#8217;s rocket to the moon.  A DevOps engineer is going to face a similar challenge when someone asks them to build out a mainframe, our analogous rocket launch pad when they are used to building something in AWS.  </p>
+
+
+
+<p>A business should be in a position to provide its DevOps engineers with reliable processes that they can lean back on.  Part of that is tool selection, but part of that is having a definition of WHAT you are building.  A term that I end up using a lot in the office is &#8220;Selling the cars that we have on the lot&#8221;.  Under this analogy, I should probably change that to houses in the yard.  If we are constantly asking our people to context shift and come up with new and creative ways to build out the next diverse set of infrastructure without any processes to lean back on, they are never going to be able to do their best work.</p>
+
+
+
+<h2>Tool Selection</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignleft size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-300x200.jpg" alt="DevOps Automation" class="wp-image-452" srcset="/wp-content/uploads/2022/09/devops-automation-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
+
+
+<p>This is generally a very spicy topic.  There are some individuals who have STRONG allegiances to specific tool stacks, and others that don&#8217;t really care what the tool is as long as they get to learn something new.</p>
+
+
+
+<p>We can equate this topic to fixtures in a house like windows, doors, faucets, toilets, showers, and other such finishings.  We know we need them and we know that we are going to have to live with them for a long time.  Windows and doors are very hard to change over time.  Changing them out essential means you are cutting stuff out of your house which keeps out bugs and burglars.  If new windows and doors are not installed correctly, you may end up with a creak or a jammed window, or you may end up with bugs and burglars inside of your house.</p>
+
+
+
+<p>In a prefab manufacturing space, they are going to be really good at hanging windows and doors in their fixtures from a specific set of manufacturers.  If you ask for double-hung windows, sliding windows, awning windows, or a bay window; the company that you are working with probably has something to offer you.  If you show up asking for a highly energy-efficient stained glass window that is UV resistant with a 100-year warranty, they probably are not going to be able to help.</p>
+
+
+
+<p>DevOps automation tooling is very similar in nature to windows.  If your engineers and architects are very used to using something like Jenkins and someone shows up with TravisCI then you are probably not going to make a lot of progress delivering your project.  Now, luckily, unlike the stained glass windows analogy; tooling in the DevOps space is trainable if the team is interested in learning something new.  Please take note, just because we are really good at computers does not mean that we know everything about computers.  We all need time and space to learn.</p>
+
+
+
+<h2>Specs and Standards</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-process-300x200.jpg" alt="DevOps Automation Specs and Standards" class="wp-image-463" srcset="/wp-content/uploads/2022/09/devops-automation-process-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-process-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-process-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-process-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-process-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-process-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-process-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-process-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-process-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
+
+
+<p>Every industry has some kind of standards or &#8220;code&#8221; that they must meet to be &#8220;compliant&#8221;.  The housing industry has varying standards across the country and is even broader when you look at the world holistically.  The building industry is going to be governed by regulatory compliance through Building Codes.  Your foundation must be below the frost line in many places where it is cold, but on-grade foundations are common where it is warmer.</p>
+
+
+
+<p>Technology may not have as many specific codes written into law as buildings do, but we are governed by certain specifications, certifications, and expectations.  A company building prefab homes will need to read up and study exactly what their service areas expect them to be producing to ensure that their buildings will pass inspections.  Businesses producing technology need to do the same thing except it is going to be more focused on the industries that they serve.  </p>
+
+
+
+<p>DevOps automation can help provide baselines that define those standards and make them reusable across projects which serve the same industries.  If you are developing technology for the medical space, there are many stringent controls that need to be put in place.  If you are building those stacks out in a more traditional way, it can be costly to re-engineer many solutions over and over again.  Employing DevOps automation is analogous to a prefab housing company utilizing jigs to repeat similar work while adhering to a 16-inch on-center standard.  You won&#8217;t see prefab housing companies constantly pulling out the tape measure, they will throw lumber into a preset jig and start nailing off a wall with speed and precision.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>There are a lot of lessons we can draw from the manufacturing space when developing technology.  There is a reason why Toyota and its <a href="https://global.toyota/en/company/vision-and-philosophy/production-system/" data-internallinksmanager029f6b8e52c="13" title="Toyota Production System" rel="nofollow noopener" target="_blank">Toyota Production System</a> are highly regarded for their lean manufacturing processes.  Technology expectations should not really be any different than expectations that we have around how things are produced outside of cyberspace.  Embrace DevOps automation in a similar way that manufacturing has embraced automation and you will see quality increases immediately!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>What are the top Relevant DevOps Skills?</title>
 		<link>https://www.valewood.org/top-relevant-devops-skills/</link>
 		
