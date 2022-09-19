@@ -4,6 +4,20 @@
 		<loc>https://www.valewood.org/</loc>
 	</url>
 	<url>
+		<loc>https://www.valewood.org/do-devops-engineers-need-a-coding-background/</loc>
+		<lastmod>2022-09-19T16:57:04-05:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-pipeline-geared-for-stability/</loc>
+		<lastmod>2022-09-18T13:01:19-05:00</lastmod>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/devops-pipeline-flowchart.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-scaled.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/what-is-devops-automation/</loc>
 		<lastmod>2022-09-17T10:28:47-05:00</lastmod>
 		<image:image>
@@ -32,16 +46,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/todd-quackenbush-IClZBVw5W5A-unsplash-scaled.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/devops-pipeline-geared-for-stability/</loc>
-		<lastmod>2022-09-16T20:12:00-05:00</lastmod>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/devops-pipeline-flowchart.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-scaled.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>

@@ -4,15 +4,15 @@
 		<loc>https://www.valewood.org/</loc>
 	</url>
 	<url>
-		<loc>https://www.valewood.org/devops-faq/</loc>
-		<lastmod>2022-09-17T10:46:24-05:00</lastmod>
-	</url>
-	<url>
 		<loc>https://www.valewood.org/about-me/</loc>
-		<lastmod>2022-08-21T15:19:47-05:00</lastmod>
+		<lastmod>2022-09-17T11:14:48-05:00</lastmod>
 		<image:image>
 			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/geoff-wagner.jpg</image:loc>
 		</image:image>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-faq/</loc>
+		<lastmod>2022-09-17T10:46:24-05:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/privacy-policy/</loc>
