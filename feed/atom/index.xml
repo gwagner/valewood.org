@@ -6,7 +6,7 @@
 	<title type="text">A DevOps Blog</title>
 	<subtitle type="text">Occasionally a developer makes an Ops!</subtitle>
 
-	<updated>2022-09-17T15:28:47Z</updated>
+	<updated>2022-09-19T21:57:04Z</updated>
 
 	<link rel="alternate" type="text/html" href="https://www.valewood.org/" />
 	<id>/feed/atom/</id>
@@ -15,6 +15,92 @@
 	<generator uri="https://wordpress.org/" version="6.0.2">WordPress</generator>
 <icon>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</icon>
 	<entry>
+		<author>
+			<name>Geoff Wagner</name>
+							<uri>http://www.valewood.org/</uri>
+						</author>
+
+		<title type="html"><![CDATA[Do DevOps engineers need a coding background?]]></title>
+		<link rel="alternate" type="text/html" href="https://www.valewood.org/do-devops-engineers-need-a-coding-background/" />
+
+		<id>/?p=326</id>
+		<updated>2022-09-19T21:57:04Z</updated>
+		<published>2022-09-19T21:55:03Z</published>
+		<category scheme="/" term="DevOps" /><category scheme="/" term="coding" /><category scheme="/" term="development" /><category scheme="/" term="devops" /><category scheme="/" term="opinion" /><category scheme="/" term="software" />
+		<summary type="html"><![CDATA[The primary skill sets that DevOps engineers need are either in the system administration or software development space. Those 2 foundational skill sets will help any team build some cool solutions to complex problems. There are fringe cases where the&#8230;]]></summary>
+
+					<content type="html" xml:base="/do-devops-engineers-need-a-coding-background/"><![CDATA[
+<p>The primary skill sets that DevOps engineers need are either in the system administration or software development space.  Those 2 foundational skill sets will help any team build some cool solutions to complex problems.  There are fringe cases where the skillset matures outside of those two primary skill sets. Whichever skillset is lacking when making the transition from traditional delivery patterns over to a more DevOps-focused delivery pattern will need to be picked up to ensure that the team has a complete understanding of the technology stack. A system administrator will not need to become a full software developer, and a software developer will not need to become a veteran system administrator.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Role Separation</h2>
+
+
+
+<p>First, let&#8217;s dive into role separation.  I am a firm believer in specialization in job functions.  Someone who is a jack of all trades is also generally not a master at any of them.  Individuals on the team should not be looking to be a master at every part of their delivery pipeline but they should be in a position where they are picking up adjacent skills to help backup their team members when needed.  A software developer does not need to be intimately familiar with every intricate detail of a backup solution but should know how to retrieve and restore backups when necessary.  A system administrator does not need to dive deeply into SQL query optimization, but knowing how to write and retrieve data from the database is a useful skill to help support the team.</p>
+
+
+
+<h2>Software Development</h2>
+
+
+
+<p>Now, this is a bit of an unfair section because I believe that the software development side of DevOps does need a coding background.  How are you going to do software development without that?</p>
+
+
+
+<p>In all seriousness, I believe the question &#8220;Do DevOps engineers need a coding background?&#8221; can be extended into the Ops and Infrastructure space pretty easily.  Software developers should be familiar with the basic fundamentals of a data center or cloud depending on where your solution(s) is/are hosted.  If you are in a data center, become familiar with fault domains, SANs, LUNs, or anything that may impact the stability or performance of your application.  In the cloud, become familiar with the cloud&#8217;s elastic nature of volumes, instances, and services.</p>
+
+
+
+<p>Along with the familiarity with computing platforms, it will be advantageous to also familiarize yourself with solution delivery and system configuration.  Solution delivery and delivery pipelines are essential to a good DevOps background.  In my experience, most developers are really good at utilizing their ecosystems to compile a binary or build out a package.  Aside from SFTPing that package out to a server and bouncing a service the idea of automated blue/green solution delivery flow with configuration management, rollbacks,  database updates, monitoring changes, etc. is not the norm.  </p>
+
+
+
+<p>You SFTPers out there know who you are, don&#8217;t try to deny it.</p>
+
+
+
+<p>The primary driver behind configuration management is trying to hit the gold standard of immutable infrastructure.  While application code is being perpetually updated and changed, servers should be treated like cattle instead of pets.  We should be able to easily destroy and fully rebuild a server and deploy the newest version of the application on top of it.  This helps keep things clean and up to date.</p>
+
+
+
+<h2>System Administrators</h2>
+
+
+
+<p>As system administrators make the transition from the GUI to doing DevOps, they will be faced with many challenges where a coding background can really help out.  </p>
+
+
+
+<p>DevOps is all about automating the flow of delivery through resilient pipelines to increase quality.  To do this, most of your work is going to be through scripts or tools like <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>, Terraform, <a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a>, CloudFormation, etc.  Composing individual scripts for individual tasks is a good place to start, but will quickly become overwhelming if you are not embracing a more generated approach.  </p>
+
+
+
+<p>Now, all teams are going to be set up a bit differently, but a common thread across all of them will be the scale of technology becoming overwhelming at some point.  One day you may be looking at fifteen servers/services and the next day your product explodes in popularity and you are dealing with thousands of servers/services.  Take a step back and ask yourself how you can use business logic to generate your infrastructure, monitoring, configurations, backups solutions, etc.  This approach will make something that feels unmanageable and makes it manageable again.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>Do DevOps engineers need a coding background?  My perspective is, that it wouldn&#8217;t hurt.  Diving into software development patterns and extending them into the DevOps delivery space allows for greater consistency, along with the ability to scale to meet demand much more quickly without feeling overwhelmed.  I don&#8217;t think that software developers need to become the best systems administrators ever created.  I don&#8217;t think that systems administrators need to become the greatest software developers ever created.  I do think that everyone in technology could benefit from a bit of exposure to spaces outside of their primary responsibilities because it lends itself well to increasing quality and flexibility while delivering solutions.</p>
+]]></content>
+		
+			</entry>
+		<entry>
 		<author>
 			<name>Geoff Wagner</name>
 							<uri>http://www.valewood.org/</uri>
@@ -896,7 +982,7 @@
 		<link rel="alternate" type="text/html" href="https://www.valewood.org/devops-pipeline-geared-for-stability/" />
 
 		<id>/?p=95</id>
-		<updated>2022-09-17T01:12:00Z</updated>
+		<updated>2022-09-18T18:01:19Z</updated>
 		<published>2022-08-30T02:47:33Z</published>
 		<category scheme="/" term="DevOps" /><category scheme="/" term="development" /><category scheme="/" term="devops" /><category scheme="/" term="sdlc" />
 		<summary type="html"><![CDATA[Building a devops pipeline is easy. Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!! Well&#8230; not exactly. In my experience, this is where things usually start,&#8230;]]></summary>
@@ -971,7 +1057,7 @@
 
 
 
-<h3>Who are the consumers of your DevOps Pipeline?</h3>
+<h3>So, who are the consumers of your DevOps Pipeline?</h3>
 
 
 
@@ -1343,33 +1429,6 @@
 		
 					<link rel="replies" type="text/html" href="https://www.valewood.org/practicing-devops/#comments" thr:count="0" />
 			<link rel="replies" type="application/atom+xml" href="https://www.valewood.org/practicing-devops/feed/atom/" thr:count="0" />
-			<thr:total>0</thr:total>
-			</entry>
-		<entry>
-		<author>
-			<name>Geoff Wagner</name>
-							<uri>http://www.valewood.org/</uri>
-						</author>
-
-		<title type="html"><![CDATA[Welcome to A DevOoops]]></title>
-		<link rel="alternate" type="text/html" href="https://www.valewood.org/welcome-to-a-devooops/" />
-
-		<id>/?p=7</id>
-		<updated>2022-08-18T02:07:31Z</updated>
-		<published>2022-08-07T02:36:51Z</published>
-		<category scheme="/" term="Fluff" /><category scheme="/" term="development" /><category scheme="/" term="devops" /><category scheme="/" term="software" />
-		<summary type="html"><![CDATA[As developers, we are always under the gun to get X feature shipped, or to get Y Sev 1 resolved as quickly as possible. Sometimes in that quest to service our corpo overlords, an Ooops happens in the middle. That&#8230;]]></summary>
-
-					<content type="html" xml:base="/welcome-to-a-devooops/"><![CDATA[
-<p>As developers, we are always under the gun to get X feature shipped, or to get Y Sev 1 resolved as quickly as possible.  Sometimes in that quest to service our corpo overlords, an Ooops happens in the middle.  That is where this blog comes in!  </p>
-
-
-
-<p>I want to talk about technology abstracted from the corporate atmosphere.  There are some really cool things going on out there in space of Development and DevOps, and all that coolness rarely sees the light of day.  Let&#8217;s give it some air here and see what happens <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-]]></content>
-		
-					<link rel="replies" type="text/html" href="https://www.valewood.org/welcome-to-a-devooops/#comments" thr:count="0" />
-			<link rel="replies" type="application/atom+xml" href="https://www.valewood.org/welcome-to-a-devooops/feed/atom/" thr:count="0" />
 			<thr:total>0</thr:total>
 			</entry>
 	</feed>
