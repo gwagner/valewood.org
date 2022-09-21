@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/software/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Mon, 19 Sep 2022 21:57:04 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 21 Sep 2022 22:13:35 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,270 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Which language should I learn for DevOps?</title>
+		<link>https://www.valewood.org/devops-languages/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Wed, 21 Sep 2022 22:11:50 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[software]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=344</guid>
+
+					<description><![CDATA[DevOps is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&#160; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>DevOps is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&nbsp; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers is “Are there languages to learn for DevOps?”</p>
+
+
+
+<p>Everyone could use a little bit of development in their life.&nbsp; It could be something as simple as a bash script to take care of a simple task, all the way up to running a blog like this one.&nbsp; Learning about the logical flow that a computer takes to compute everything is an empowering door to open when growing as a technology specialist in whatever field you specialize in.&nbsp; Below are a few of my favorite DevOps languages but this is by no means a definitive list.&nbsp; These are languages that I have used in my workflows and found some great success.</p>
+
+
+
+<p>Let’s discuss some of the languages you can learn as someone with little to no experience so you can level up your DevOps game!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Interpreted vs Compiled Languages</h2>
+
+
+
+<p>The first concept that we should tackle is the difference between an interpreted language vs a compiled language.&nbsp; There are some specific semantics to get under your belt as part of your language selection process.&nbsp; In the world of DevOps, I would say that there really is not an incorrect choice here, but; DevOps is all about flow and your choices here can have an impact on your desired technology flow.</p>
+
+
+
+<h3>Interpreted Langauge</h3>
+
+
+
+<p>An interpreted language requires that a separate runtime be installed on your system which will generally perform a JIT runtime on the code you have written.&nbsp;&nbsp;</p>
+
+
+
+<p>If I am writing code in Python, and I want that python to run on a remote Linux system, I need to have both the Python runtime installed on the remote system along with ensuring my code also exists on that system.</p>
+
+
+
+<p>There is some practical utility to this.&nbsp; Your systems require a dependency like Python, PHP, Ruby, Bash, etc. to be installed on the remote system, but you get a pretty good guarantee that you can write code once and use it in many places across many architectures.&nbsp; The architecture (x86, ARM, SPARC, etc) has the runtime binaries installed (Python) and Just In Time “compile” (interprets) your code to be run on that architecture.&nbsp; Pretty neat right?</p>
+
+
+
+<h3>Compiled Languages</h3>
+
+
+
+<p>A compiled language requires that a full compilation happens prior to the code being runnable.&nbsp; In Windows land, think about this like a .exe file, or on Linux, this would be a binary.&nbsp;&nbsp;</p>
+
+
+
+<p>If I am writing code in C++, and I want to run by C++ on a remote Linux system, I have 2 options.&nbsp; I can install C++ on the remote system, add my code to that system, run a compile step, and finally run my binary.&nbsp; Alternatively, I could compile my binary locally (ensuring I match the OS and CPU architecture as part of the compile step) and then distribute that binary to the remote system for execution.</p>
+
+
+
+<p>Generally, a compiled language will be statically linked which means that there are zero additional dependencies that need to live on a remote system, unlike an interpreted language.&nbsp; You do need to have a more detailed understanding of the remote system you will be deploying to so that your pre-compiled binary has a much better shot of being able to run on the destination.</p>
+
+
+
+<h3>Need for Speed?</h3>
+
+
+
+<p>Compiled languages are generally going to be faster than interpreted languages.&nbsp; A compiled application or script does not need to get converted from human-readable text into a binary that the CPU will understand.&nbsp; That compilation was done when the application was built.&nbsp; An interpreted language is going to need some kind of JIT compilation in order to be executed through the language&#8217;s runtime.&nbsp; In the PHP world, this JIT compilation is transforming human-readable text into OpCode.&nbsp; Once that OpCode is created then the PHP runtime can just execute what the OpCode tells it to execute.</p>
+
+
+
+<p>When trying to do tool selection, there is generally an argument about the speed an application runs and whether the right tool is the fastest tool.&nbsp; When doing DevOps where you are generally trying to get a machine or environment into a specific state, the speed of the language itself is generally not your biggest impediment.&nbsp; Your biggest bottleneck will be remote resources like packages, downloads, etc.&nbsp; I would rather choose the right tool for the job inside of the ecosystem that I work in instead of trying to make my tool selection for DevOps based solely on performance.</p>
+
+
+
+<h2>Python</h2>
+
+
+
+<p>Python is an interpreted language and was created in the 1980s by Guido van Rossum in the Netherlands.&nbsp; It is widely adopted and widely used across the industry.&nbsp; You can find Python pre-installed on most modern Linux distributions today, though there is still a bit of fracturing between Python 2.x and 3.x communities.</p>
+
+
+
+<h3>Community</h3>
+
+
+
+<p>Python has a strong community backing it.&nbsp; At the time of writing this, PyPI has ~391,000 packages with nearly 660,000,000 package downloads per day.&nbsp; PyPI is a package repository for Python where you can download community or vendor-developed code and add it directly to your project.&nbsp; There are a lot of pre-solved problems out there like connecting to a database.&nbsp; PyPI enables users to download packages like those database connectors automatically.</p>
+
+
+
+<h3>Utility</h3>
+
+
+
+<p>Python has a lot of utility in the DevOps space.&nbsp; Since it is born out of the Linux and Unix ecosystem, it has some very strong ties to the Linux operating system for performing common tasks.&nbsp; It is so well suited for this task that <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>-Core is written in Python.&nbsp; Python is also runnable on Windows!</p>
+
+
+
+<p>Python is clearly a good choice when it comes to writing automation code for DevOps, but it has a lot of other utilities as well.&nbsp; Much of the Big-Data space is using python for number crunching and machine learning specifically because the language lends itself well to that kind of computation.&nbsp; Being a dynamically typed language instead of a statically typed one, data transformations can be done quickly without a lot of overhead by the end user.</p>
+
+
+
+<p>Being an interpreted language gives it a lot of power as well when it comes to distributing and running the code.&nbsp; Aside from activities like automated testing, packaging Python consists of compressing your directory structure, moving it to where you want, decompressing, and finally running the code.&nbsp; If there is a bug, you can also fix it in place, though I would recommend ensuring that you have centralized code repositories and follow a good process of version control and pushing new versions out.</p>
+
+
+
+<h3>Learning Resources</h3>
+
+
+
+<ul><li><a href="https://www.learnpython.org/" target="_blank" rel="noreferrer noopener">https://www.learnpython.org/</a></li><li><a href="https://www.codecademy.com/learn/learn-python" target="_blank" rel="noreferrer noopener">https://www.codecademy.com/learn/learn-python</a></li><li><a href="https://www.pythontutorial.net/python-basics/python-write-csv-file/" target="_blank" rel="noreferrer noopener">https://www.pythontutorial.net/python-basics/python-write-csv-file/</a></li></ul>
+
+
+
+<h2>Golang</h2>
+
+
+
+<p>Golang was originally designed at Google in 2007 as a replacement for C and C++.&nbsp; Go foregoes some of the more tedious facets of C and C++ like header files for type definitions.&nbsp; Go is also a compiled language instead of an interpreted language meaning that the result of something in Golang is going to be a binary.&nbsp; Golant has quickly grown in popularity and is the core language behind the very popular container orchestration framework <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>.</p>
+
+
+
+<h3>Community</h3>
+
+
+
+<p>The size of the Golang community is tough to nail down because of the way that Go mod works.&nbsp; Go mod can be any git URL that has a go.mod and go.sum file in its repository.&nbsp; From there, go mod will check out the code, and check out the code&#8217;s dependencies all while doing dependency resolution in the background.&nbsp; Since git can be hosted anywhere, nailing down how many downloads a day without some kind of body providing central registration of packages like PyPI does, the best we can do is look at something like google trends for a baseline of activity.</p>
+
+
+
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3045_RC01/embed_loader.js"></script>
+  <script type="text/javascript">
+    trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/09gbxjr","geo":"US","time":"today 12-m"},{"keyword":"/m/06ff5","geo":"US","time":"today 12-m"},{"keyword":"/m/05z1_","geo":"US","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"geo=US&q=%2Fm%2F09gbxjr,%2Fm%2F06ff5,%2Fm%2F05z1_&date=today 12-m,today 12-m,today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"});
+  </script>
+
+
+
+<p>As you can see by the graphic above, at the time of writing, Python is the dominant search in Google Trends compared to something like Golang.&nbsp; I would consider Golang a strong and growing community with projects like Kubernetes and CockroachDB along with large technology groups moving into using the stack like <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> and Uber.</p>
+
+
+
+<h3>Utility</h3>
+
+
+
+<p>In my workflow, I am generally using Golang for 2 things; microservice apps and API middleware.</p>
+
+
+
+<p>When I say microservice apps, I am generally not talking about something which is composed of a larger ecosystem.&nbsp; My microservice-type apps are usually tied into a Kubernetes stack.&nbsp; I had a particular challenge with <a href="https://linkerd.io/" data-internallinksmanager029f6b8e52c="3" title="Linkerd" rel="nofollow noopener" target="_blank">LinkerD</a> where I need to create a MutatingAdmissionWebhook to rewrite my HTTP(s) probes as in pod curl probes after setting my namespace to deny all.&nbsp; This was a good workaround to wrapping and rewriting many different helm charts to use curl probes instead of using standard HTTP(s) probes.</p>
+
+
+
+<p>You can find that code <a href="https://github.com/gwagner/linkerd-convert-http-to-curl" target="_blank" rel="noopener">here</a>.&nbsp;&nbsp;</p>
+
+
+
+<p>When doing API orchestration, I have written a few applications which will pull data from one API (or have data pushed via a webhook) into an application that may amend or transform the data before pushing it into another receiving API.&nbsp; This is particularly useful when trying to normalize data from system A to system B.&nbsp; This was particularly useful when moving from a Graphite-based metric TSDB system over to InfluxDB.&nbsp; We did not need to rewrite all of our metric collectors, we just needed to tap into the metric stream, do an on-the-fly conversion, and then output metrics to InfluxDB.</p>
+
+
+
+<h3>Learning Resources</h3>
+
+
+
+<ul><li><a href="https://www.udemy.com/course/go-building-devops-tools/" target="_blank" rel="noreferrer noopener">https://www.udemy.com/course/go-building-devops-tools/</a></li><li><a href="https://go.dev/learn/" target="_blank" rel="noreferrer noopener">https://go.dev/learn/</a></li><li><a href="https://www.codecademy.com/learn/learn-go" target="_blank" rel="noreferrer noopener">https://www.codecademy.com/learn/learn-go</a></li></ul>
+
+
+
+<h2>Ruby</h2>
+
+
+
+<p>Because of its efficiency in DevOps, Ruby is a preferred scripting language for automating IT environments&#8217; repetitive tasks. In addition to web development, data science, and unit testing, this dynamic, interpreted programming language is used for DevOps. Ruby is also fairly simple to learn. As a result, the language has a fast-growing community of DevOps engineers. With no prior programming experience, beginners can get started with Ruby pretty quickly.&nbsp;</p>
+
+
+
+<h3>Community</h3>
+
+
+
+<p>Ruby is a difficult community to quantify fully simply because of how spread out it is.&nbsp; Ruby Gem can be a good baseline metric with roughly ~174,000 gems available from RubyGems.org and 111B+ (yeah, billion) downloads.&nbsp; If you look past ruby gems, the second most popular place that ruby is being utilized is with <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>.&nbsp; The marketplace has roughly 4,000 cookbooks with roughly ~80,0000 maintainers</p>
+
+
+
+<h3>Utility</h3>
+
+
+
+<p>Ruby has some great utility when it comes to DevOps automation.&nbsp; When building out an early DevOps-focused monitoring stack, we chose Sensu Core due to its configuration-driven and scalable design.&nbsp; Most of the community-produced checks at that point were written in ruby which lent itself very well to building reusable consistent libraries that were well-tested.</p>
+
+
+
+<p>Much like the Golang example above, I have also utilized ruby as an API middleware for doing data payload manipulations.&nbsp; Prior to Docker supporting <a href="https://docs.docker.com/config/containers/logging/json-file/" target="_blank" rel="noopener">JSON File Logging</a>, there were very long debates about what separation between log entries means between different programming languages.&nbsp; Ruby was used in an environment where I was working into tail log output from containers and based on its configuration, properly parse and package logs to be sent to centralized logging systems upstream with additional metadata.</p>
+
+
+
+<h3>Learning Resources</h3>
+
+
+
+<ul><li><a href="https://gorails.com/" target="_blank" rel="noreferrer noopener">https://gorails.com/</a></li><li><a href="https://www.chef.io/" target="_blank" rel="noreferrer noopener">https://www.chef.io/</a></li></ul>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Security Considerations</h2>
+
+
+
+<p>When utilizing any code for any function whether it be DevOps or software development, you should always be concerned about security.&nbsp; Let’s say you have a 3-year-old server sitting around and its original automation code has not had any electricity run through it in the same time frame.&nbsp; That server&#8217;s automation code is probably outdated enough that there is at least some kind of CVE attached to it.&nbsp; This will be particularly easy to find if you are doing robust infrastructure scanning but will be much more obscure if you are running compiled binaries where the source code is not under some kind of routine scrutiny.&nbsp; Regardless of how you are building and running code, please make sure to clean up after yourself and avoid getting attacked by leaving a trail of outdated technology behind you.</p>
+
+
+
+<h3>Supply Chain Attacks</h3>
+
+
+
+<p>Supply chain attacks are all the rage these days.&nbsp; Consider the supply chain of your code dependency management system.&nbsp; Are you routinely scanning it for CVEs?&nbsp; Are you doing any kind of dynamic automated or manual testing of the code looking for vulnerabilities?&nbsp; Are you sure you can trust the source of your code dependencies?</p>
+
+
+
+<p>DevOps code can be commonly overlooked in a supply chain attack scenario.&nbsp; Maybe you are writing a console tool to help make your life a little bit easier.&nbsp; You go ahead and pull in a few libraries from the internet to help aid in the creation of that tool like colored output.&nbsp; You also want to be really good and write automated tests as a best practice and you need help generating some data for those tests.&nbsp; Without a persistent review of code dependencies, the OSS developer/contributor of one of the dependencies that you are utilizing is tired of their <a href="https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/" target="_blank" rel="noopener">work being used for free without any recognition or compensation</a> and deliberately destroys the project.&nbsp; There are also less directly malicious scenarios where the developer of a <a href="https://blog.sonatype.com/npm-project-used-by-millions-hijacked-in-supply-chain-attack" target="_blank" rel="noopener">popular package gets targeted and code is unknowingly slipped into their project</a>.</p>
+
+
+
+<p>The lesson is this: assume that attack vectors are everywhere and ensure that you are scanning everything you can get your hands on for CVEs.&nbsp; The industry has a good focus on this now, and the question is not IF you will get compromised, but when.&nbsp; Keep yourself safe by being proactive.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As I stated at the beginning of this article, this is by no means a definitive list.&nbsp; This is a list of some of the tools that I utilized to build effective DevOps workflows and to enable the flow of delivery.&nbsp; I utilize these tools at my job along with utilizing these tools in my homelab.&nbsp; I believe that everyone could use a little bit of software development in their life.&nbsp; Python, Golang, or Ruby are really great places to start with languages because of their utility, communities, and ties to DevOps and DevOps tooling.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Do DevOps engineers need a coding background?</title>
 		<link>https://www.valewood.org/do-devops-engineers-need-a-coding-background/</link>
 		
