@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Greer Shepherd &#8211; A DevOps Blog</title>
+	<atom:link href="https://www.valewood.org/author/greer-shepherd/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.valewood.org/</link>
+	<description>Occasionally a developer makes an Ops!</description>
+	<lastBuildDate>Wed, 21 Sep 2022 21:16:24 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+
+<image>
+	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
+	<title>Greer Shepherd &#8211; A DevOps Blog</title>
+	<link>https://www.valewood.org/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What are the two major benefits of DevOps?</title>
+		<link>https://www.valewood.org/major-benefits-of-devops/</link>
+		
+		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
+		<pubDate>Wed, 21 Sep 2022 21:16:20 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[business]]></category>
+		<category><![CDATA[delivery]]></category>
+		<category><![CDATA[devops]]></category>
+		<guid isPermaLink="false">/?p=488</guid>
+
+					<description><![CDATA[The first benefit of DevOps is that it enables organizations to release software faster, more reliably, and with higher quality. By breaking down the barriers between development and operations, DevOps allows teams to work together more effectively and efficiently. This&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>The first benefit of DevOps is that it enables organizations to release software faster, more reliably, and with higher quality. By breaking down the barriers between development and operations, DevOps allows teams to work together more effectively and efficiently. This helps companies get new features and updates into the hands of their customers more quickly.</p>
+
+
+
+<p>The second benefit of DevOps is that it helps organizations become more agile. By automating the deployment process, DevOps makes it possible for companies to respond quickly to changes in customer demand or market conditions. This allows businesses to be more competitive and stay ahead of the curve.</p>
+
+
+
+<p>Let&#8217;s take a look at each of these benefits in detail!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2><strong>Benefit #1: Deliver technology faster and at higher </strong>quality</h2>
+
+
+
+<p>When your customers want more complex software products and expect you to deliver for them more quickly, the ways in which your company revolutionizes its product and service offerings will require a complete revamp. Collaboration and productivity enhancements brought about by DevOps are a big assist in meeting the innovation objectives of businesses. </p>
+
+
+
+<p>The DevOps method of app development provides a company with a number of benefits, but the following five are the most important for any business that wishes to be inventive, available, and scalable. The following are those in question:</p>
+
+
+
+<h3><strong>Accelerate Time To Market</strong></h3>
+
+
+
+<p>DevOps reduces the amount of time it takes to bring a product to market, which in turn boosts business revenue. As a result of bringing together the IT and development teams to collaborate, the amount of time required to construct, test, and launch services or features is cut significantly.&nbsp;</p>
+
+
+
+<p>The DevOps strategy enables businesses to rapidly introduce new features, rapidly improve already existing ones, and rapidly make these new or improved features available to users.</p>
+
+
+
+<h3><strong>Changing in Response to the Industry and Competition</strong></h3>
+
+
+
+<p>You have to consistently offer high-quality items if you want to succeed in an industry that is very competitive. Even if you had a fantastic idea for a business and had already started building it, that wouldn&#8217;t help you capture market share. You are in need of an improved strategy as well as a process, both of which are provided by DevOps.&nbsp;</p>
+
+
+
+<p>The delivery of new code is made both speedy and dependable thanks to DevOps. In addition, it allows teams to construct a scalable and robust application environment while still providing users with an outstanding experience. This approach not only helps acquire the market but also thrives in a competitive market by boosting the user base and income. In other words, it is a win-win situation.</p>
+
+
+
+<h3><strong>Keeping the System Reliable While Preserving Its Stability</strong></h3>
+
+
+
+<p>Continuous testing or automated testing is something that DevOps encourages. Testing that is automated enables engineers to provide test results that are more accurate, offer fast feedback on the build, and monitor the completion of all operations. When the team searches for results, the DevOps methodology provides time savings by accelerating the availability and the entire body of work related to results in analysis on each CI/CT cycle.&nbsp;</p>
+
+
+
+<p>This helps the team get results more quickly. The team is able to simply manage the system&#8217;s stability and dependability while also guaranteeing that the software products have excellent performance and availability.</p>
+
+
+
+<h3><strong>Bringing Down The Average Time To Recovery</strong></h3>
+
+
+
+<p>The bigger the financial effect that a corporation will have to deal with, the longer the MTTR will be. MTTR, which stands for &#8220;mean time to recovery,&#8221; is a problem that can be solved via DevOps. When a service experiences an outage, having DevOps in place may help speed up the process of repair, reaction, and recovery.&nbsp;</p>
+
+
+
+<p>It provides assistance for monitoring mission-critical systems, which enables users to gain real-time insights on decreased performance as well as entire outages caused by events and failures. The methodology of DevOps not only makes it easier to collect precise information but also makes the incident-management system more automated. In this method, it is feasible to swiftly address the issue, which will ultimately result in a reduced MTTR.</p>
+
+
+
+<h3><strong>Capabilities for Providing a Better Experience to Customers</strong></h3>
+
+
+
+<p>DevOps approaches also place an emphasis on the one-of-a-kind characteristics of software designed for the user experience. The development of both the quality of the software and the customer experience may be sped up with the use of DevOps.&nbsp;</p>
+
+
+
+<p>DevOps specialists monitor the customer&#8217;s point of view, plan sprints in accordance with that perspective, and test the product with the customer&#8217;s objective in mind. The team not only rapidly develops new features but also defines and enhances the whole customer journey for omnichannel.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2><strong>Benefit #2: </strong>React to changing market conditions more quickly</h2>
+
+
+
+<p>These days, businesses undergo digital transformations by adopting innovative technology and methods. Keeping up with the digital economy is a top priority, and as a result, they are putting in extra effort to improve in all areas.&nbsp;</p>
+
+
+
+<p>They need to improve their financial performance, product quality, product speed to market, and overall company adaptability. Maintaining competitive flexibility requires effective communication, collaboration, and bug-free code, all of which may be attained through the use of Agile and DevOps processes.</p>
+
+
+
+<h3><strong>Create a Culture-Oriented Structure</strong></h3>
+
+
+
+<p>It is common practice for an organization&#8217;s culture and structure to become one and the same. Teams need to adjust their mindset in order to use DevOps successfully. To put it simply, DevOps is a rearrangement of the teams and the way they work together and communicate.&nbsp;</p>
+
+
+
+<p>Only when individuals work well together as a team can organizations make effective use of the available resources and technology. Both the development and operations teams need each other&#8217;s support. Being able to think critically sets humans apart from machines.&nbsp;</p>
+
+
+
+<p>Therefore, agile culture and the way humans naturally think are incompatible with the sequential waterfall paradigm. There is an urgent need to proactively address these difficulties, and the classic waterfall approach can do just that. It can also impart the benefits of the DevOps paradigm and harmonize the organizational structure.&nbsp;</p>
+
+
+
+<p>This will boost overall collaboration and adaptability and guarantee that the company&#8217;s culture and the culture of its employees are properly melded. By focusing on the whole value chain of software delivery, DevOps is the logical next step after Agile.</p>
+
+
+
+<h3><strong>Streamline Techniques, Procedures, and Policies</strong></h3>
+
+
+
+<p>Collaboration across the organization&#8217;s development, testing, infrastructure, and IT teams is essential. Thus, the organization&#8217;s rules, procedures, and processes should reflect this. DevOps needs to reevaluate its workflow, roles, responsibilities, and methodologies if it is to attain genuine agility.&nbsp;</p>
+
+
+
+<p>In other words, they need to have a mentality that is consistent with the agile culture, which centers on producing incremental results and accommodating change. It&#8217;s not as simple as just adding weekly scrums on top of everything else, so be prepared for some complexity.&nbsp;</p>
+
+
+
+<p>Development and operations must collaborate with automation technologies and fully integrated processes to operate in a succession of brief efforts and genuinely execute production-ready code that can actually be delivered to clients.</p>
+
+
+
+<h3><strong>Streamline Rapid Growth with Minimal Discomfort</strong></h3>
+
+
+
+<p>Agility in DevOps is achieved by bringing together the principles of rapid development, high throughput, and careful scheduling to improve dependability and minimize disturbance.&nbsp;</p>
+
+
+
+<p>To take advantage of Agile&#8217;s rapid iteration cycles without sacrificing quality, the DevOps model may be used to zero in on the best approach and set you up with the best agile testing tools. It helps businesses find their footing so they can effectively and efficiently adapt to changing market conditions and capitalize on emerging possibilities.</p>
+
+
+
+<h3><strong>Remove Organizational Barriers</strong></h3>
+
+
+
+<p>Organizational agility may be improved by closing the communication and collaboration gaps across departments like operations, development, and testing. By enabling continuous development, testing, and deployment with a reliable toolchain, agility may be accomplished.&nbsp;</p>
+
+
+
+<p>There is a tight coupling between the teams, instruments, and procedures in this method. The success of the DevOps model relies on effective communication and cooperation between several functional teams, which guarantees zero barriers across multiple agile teams supported by the proper collaboration technologies.</p>
+
+
+
+<h3><strong>Maintain Constant Monitoring</strong></h3>
+
+
+
+<p>For DevOps to be effective and for a plan to be developed, feedback is essential. Having fast and accurate input is crucial to the success of a DevOps approach. Each deployment should record the basic metrics of duration, expense, and quality. Over time, this information may be examined to determine DevOps&#8217;s efficiency and adaptability and to pinpoint problem spots.</p>
+
+
+
+<p>Culture-based indicators like team cohesion, the average time to resolve conflicts, sense of pride and ownership, and so on can be challenging to quantify. When determining the speed and efficiency of DevOps, however, these cultural criteria are crucial.&nbsp;</p>
+
+
+
+<p>Organizational culture, methods, mentality, and toolchain should be streamlined in order to expand the DevOps model and keep it agile and relevant for providing excellent deliveries. For this reason, it is essential to employ experienced teams that can work together to concentrate on constant development and evaluation.</p>
+
+
+
+<h2><strong>Conclusion</strong></h2>
+
+
+
+<p>By focusing on the whole value chain of software delivery, DevOps is the logical next step after Agile. Additionally, the DevOps model helps businesses find their footing so they can effectively and efficiently adapt to changing market conditions and capitalize on emerging possibilities.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
