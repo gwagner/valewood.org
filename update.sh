@@ -43,8 +43,8 @@ echo "Fixing canonical links with https://www.valewood.org"
 grep -rl '<link rel="canonical" href="/' . --exclude='update.sh' | xargs sed -i 's/\(<link rel="canonical" href="\)\//\1https:\/\/www.valewood.org\//g'
 
 # Fix ads
-echo "Replacing adsbygoogle.js\" with adsbygoogle.js?client=ca-pub-7120242057450442\""
-grep -rl "adsbygoogle.js\"" . --exclude='update.sh' | xargs sed -i 's/\(adsbygoogle.js\)"/\1?client=ca-pub-7120242057450442"/g'
+# echo "Replacing adsbygoogle.js\" with adsbygoogle.js?client=ca-pub-7120242057450442\""
+# grep -rl "adsbygoogle.js\"" . --exclude='update.sh' | xargs sed -i 's/\(adsbygoogle.js\)"/\1?client=ca-pub-7120242057450442"/g'
 
 echo "Add push javascript to ins"
 grep -rl "</ins>" . --exclude='update.sh' | xargs sed -i 's/\(<\/ins>\)<\//\1<script>\(adsbygoogle = window.adsbygoogle || []\).push\({}\);<\/script><\//g'
