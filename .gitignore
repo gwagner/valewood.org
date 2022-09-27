@@ -6,5 +6,4 @@ search_*.json
 package*.json
 node_modules/**
 search/index.html
-404.html
 notes/

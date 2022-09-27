@@ -18,7 +18,7 @@ node build_index.mjs
 node create_serp_page.mjs
 
 # Generate the 404 page
-node create_404_page.mjs
+#node create_404_page.mjs
 
 # Generate table of contents
 node fix_table_of_contents.mjs
