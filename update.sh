@@ -16,8 +16,8 @@ rm -rf ./new-site/
 
 # Add missing JS
 echo "Download missing JS files"
-grep -ohP "\"([a-z0-9A-Z\.]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor/assets/js/{} -s -S -f -o wp-content/plugins/elementor/assets/js/{}
-grep -ohP "\"([a-z0-9A-Z\.]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor-pro/assets/js/{} -s -S -f -o wp-content/plugins/elementor-pro/assets/js/{}
+grep -ohP "\"([a-z0-9A-Z\.\-\_]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor/assets/js/{} -s -S -f -w %{url_effective} -o wp-content/plugins/elementor/assets/js/{}
+grep -ohP "\"([a-z0-9A-Z\.\-\_]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor-pro/assets/js/{} -s -S -f -w %{url_effective} -o wp-content/plugins/elementor-pro/assets/js/{}
 
 # Fix URLs
 echo "Correct funky //www.valewood.org formatting"
