@@ -19,6 +19,11 @@ echo "Download missing JS files"
 grep -ohP "\"([a-z0-9A-Z\.\-\_]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor/assets/js/{} -s -S -f -w %{url_effective} -o wp-content/plugins/elementor/assets/js/{}
 grep -ohP "\"([a-z0-9A-Z\.\-\_]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor-pro/assets/js/{} -s -S -f -w %{url_effective} -o wp-content/plugins/elementor-pro/assets/js/{}
 
+# Download 404 page
+echo "Download 404 page"
+rm -f ./404.html
+curl -k https://www.lab.valewood.org/404.html -o 404.html
+
 # Fix URLs
 echo "Correct funky //www.valewood.org formatting"
 grep -rl "\"//www.lab.valewood.org" . --exclude='update.sh' | xargs sed -i 's/"\/\/www.lab.valewood.org/"https:\/\/www.lab.valewood.org/g'
