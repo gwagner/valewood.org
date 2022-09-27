@@ -5,6 +5,8 @@ unzip $1 -d ./new-site/
 
 echo "Removing old JS files"
 rm -rf ./wp-content/cache/autoptimize/js/*.js
+rm -rf ./wp-content/plugins/elementor/assets/js/*.js
+rm -rf ./wp-content/plugins/elementor-pro/assets/js/*.js
 rm -f ./new-site/robots.txt # Local code repo has changes to block indexing of Cloudflare things, Manually merge this file if needed
 
 echo "Rsyncing content"
@@ -12,6 +14,10 @@ rsync -cvr ./new-site/ ./
 
 rm -rf ./new-site/
 
+# Add missing JS
+echo "Download missing JS files"
+grep -ohP "\"([a-z0-9A-Z\.]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor/assets/js/{} -s -S -f -o wp-content/plugins/elementor/assets/js/{}
+grep -ohP "\"([a-z0-9A-Z\.]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor-pro/assets/js/{} -s -S -f -o wp-content/plugins/elementor-pro/assets/js/{}
 
 # Fix URLs
 echo "Correct funky //www.valewood.org formatting"
