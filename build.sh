@@ -20,4 +20,7 @@ node create_serp_page.mjs
 # Generate the 404 page
 node create_404_page.mjs
 
+# Generate table of contents
+node fix_table_of_contents.mjs
+
 rm -rf webp.mjs build_index.mjs create_serp_page.mjs package.json package-lock.json build.sh run.sh update.sh .gitignore

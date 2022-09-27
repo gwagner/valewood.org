@@ -1,0 +1,1609 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Search Results for &#8220;devops&#8221; &#8211; A DevOps Blog</title>
+	<atom:link href="https://www.valewood.org/search/devops/feed/rss2/" rel="self" type="application/rss+xml" />
+	<link>https://www.valewood.org/</link>
+	<description>Occasionally a developer makes an Ops!</description>
+	<lastBuildDate>Sun, 25 Sep 2022 16:55:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+
+<image>
+	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
+	<title>Search Results for &#8220;devops&#8221; &#8211; A DevOps Blog</title>
+	<link>https://www.valewood.org/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Which programming language should I learn as a DevOps engineer?</title>
+		<link>https://www.valewood.org/devops-languages/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Wed, 21 Sep 2022 22:11:50 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[software]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=344</guid>
+
+					<description><![CDATA[DevOps is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&#160; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>DevOps is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&nbsp; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers is “Are there languages to learn for DevOps?”</p>
+
+
+
+<p>Everyone could use a little bit of development in their life.&nbsp; It could be something as simple as a bash script to take care of a simple task, all the way up to running a blog like this one.&nbsp; Learning about the logical flow that a computer takes to compute everything is an empowering door to open when growing as a technology specialist in whatever field you specialize in.&nbsp; Below are a few of my favorite DevOps languages but this is by no means a definitive list.&nbsp; These are languages that I have used in my workflows and found some great success.</p>
+
+
+
+<p>Let’s discuss some of the languages you can learn as someone with little to no experience so you can level up your DevOps game!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Interpreted vs Compiled Languages</h2>
+
+
+
+<p>The first concept that we should tackle is the difference between an interpreted language vs a compiled language.&nbsp; There are some specific semantics to get under your belt as part of your language selection process.&nbsp; In the world of DevOps, I would say that there really is not an incorrect choice here, but; DevOps is all about flow and your choices here can have an impact on your desired technology flow.</p>
+
+
+
+<h3>Interpreted Langauge</h3>
+
+
+
+<p>An interpreted language requires that a separate runtime be installed on your system which will generally perform a JIT runtime on the code you have written.&nbsp;&nbsp;</p>
+
+
+
+<p>If I am writing code in Python, and I want that python to run on a remote Linux system, I need to have both the Python runtime installed on the remote system along with ensuring my code also exists on that system.</p>
+
+
+
+<p>There is some practical utility to this.&nbsp; Your systems require a dependency like Python, PHP, Ruby, Bash, etc. to be installed on the remote system, but you get a pretty good guarantee that you can write code once and use it in many places across many architectures.&nbsp; The architecture (x86, ARM, SPARC, etc) has the runtime binaries installed (Python) and Just In Time “compile” (interprets) your code to be run on that architecture.&nbsp; Pretty neat right?</p>
+
+
+
+<h3>Compiled Languages</h3>
+
+
+
+<p>A compiled language requires that a full compilation happens prior to the code being runnable.&nbsp; In Windows land, think about this like a .exe file, or on Linux, this would be a binary.&nbsp;&nbsp;</p>
+
+
+
+<p>If I am writing code in C++, and I want to run by C++ on a remote Linux system, I have 2 options.&nbsp; I can install C++ on the remote system, add my code to that system, run a compile step, and finally run my binary.&nbsp; Alternatively, I could compile my binary locally (ensuring I match the OS and CPU architecture as part of the compile step) and then distribute that binary to the remote system for execution.</p>
+
+
+
+<p>Generally, a compiled language will be statically linked which means that there are zero additional dependencies that need to live on a remote system, unlike an interpreted language.&nbsp; You do need to have a more detailed understanding of the remote system you will be deploying to so that your pre-compiled binary has a much better shot of being able to run on the destination.</p>
+
+
+
+<h3>Need for Speed?</h3>
+
+
+
+<p>Compiled languages are generally going to be faster than interpreted languages.&nbsp; A compiled application or script does not need to get converted from human-readable text into a binary that the CPU will understand.&nbsp; That compilation was done when the application was built.&nbsp; An interpreted language is going to need some kind of JIT compilation in order to be executed through the language&#8217;s runtime.&nbsp; In the PHP world, this JIT compilation is transforming human-readable text into OpCode.&nbsp; Once that OpCode is created then the PHP runtime can just execute what the OpCode tells it to execute.</p>
+
+
+
+<p>When trying to do tool selection, there is generally an argument about the speed an application runs and whether the right tool is the fastest tool.&nbsp; When doing DevOps where you are generally trying to get a machine or environment into a specific state, the speed of the language itself is generally not your biggest impediment.&nbsp; Your biggest bottleneck will be remote resources like packages, downloads, etc.&nbsp; I would rather choose the right tool for the job inside of the ecosystem that I work in instead of trying to make my tool selection for DevOps based solely on performance.</p>
+
+
+
+<h2>DevOps with Python</h2>
+
+
+
+<p>Python is an interpreted language and was created in the 1980s by Guido van Rossum in the Netherlands.&nbsp; It is widely adopted and widely used across the industry.&nbsp; You can find Python pre-installed on most modern Linux distributions today, though there is still a bit of fracturing between Python 2.x and 3.x communities.</p>
+
+
+
+<h3>Community</h3>
+
+
+
+<p>Python has a strong community backing it.&nbsp; At the time of writing this, PyPI has ~391,000 packages with nearly 660,000,000 package downloads per day.&nbsp; PyPI is a package repository for Python where you can download community or vendor-developed code and add it directly to your project.&nbsp; There are a lot of pre-solved problems out there like connecting to a database.&nbsp; PyPI enables users to download packages like those database connectors automatically.</p>
+
+
+
+<h3>Utility</h3>
+
+
+
+<p>Python has a lot of utility in the DevOps space.&nbsp; Since it is born out of the Linux and Unix ecosystem, it has some very strong ties to the Linux operating system for performing common tasks.&nbsp; It is so well suited for this task that <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>-Core is written in Python.&nbsp; Python is also runnable on Windows!</p>
+
+
+
+<p>Python is clearly a good choice when it comes to writing automation code for DevOps, but it has a lot of other utilities as well.&nbsp; Much of the Big-Data space is using python for number crunching and machine learning specifically because the language lends itself well to that kind of computation.&nbsp; Being a dynamically typed language instead of a statically typed one, data transformations can be done quickly without a lot of overhead by the end user.</p>
+
+
+
+<p>Being an interpreted language gives it a lot of power as well when it comes to distributing and running the code.&nbsp; Aside from activities like automated testing, packaging Python consists of compressing your directory structure, moving it to where you want, decompressing, and finally running the code.&nbsp; If there is a bug, you can also fix it in place, though I would recommend ensuring that you have centralized code repositories and follow a good process of version control and pushing new versions out.</p>
+
+
+
+<h3>Learning Resources</h3>
+
+
+
+<ul><li><a href="https://www.learnpython.org/" target="_blank" rel="noreferrer noopener">https://www.learnpython.org/</a></li><li><a href="https://www.codecademy.com/learn/learn-python" target="_blank" rel="noreferrer noopener">https://www.codecademy.com/learn/learn-python</a></li><li><a href="https://www.pythontutorial.net/python-basics/python-write-csv-file/" target="_blank" rel="noreferrer noopener">https://www.pythontutorial.net/python-basics/python-write-csv-file/</a></li></ul>
+
+
+
+<h2>DevOps with Golang</h2>
+
+
+
+<p>Golang was originally designed at Google in 2007 as a replacement for C and C++.&nbsp; Go foregoes some of the more tedious facets of C and C++ like header files for type definitions.&nbsp; Go is also a compiled language instead of an interpreted language meaning that the result of something in Golang is going to be a binary.&nbsp; Golant has quickly grown in popularity and is the core language behind the very popular container orchestration framework <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>.</p>
+
+
+
+<h3>Community</h3>
+
+
+
+<p>The size of the Golang community is tough to nail down because of the way that Go mod works.&nbsp; Go mod can be any git URL that has a go.mod and go.sum file in its repository.&nbsp; From there, go mod will check out the code, and check out the code&#8217;s dependencies all while doing dependency resolution in the background.&nbsp; Since git can be hosted anywhere, nailing down how many downloads a day without some kind of body providing central registration of packages like PyPI does, the best we can do is look at something like google trends for a baseline of activity.</p>
+
+
+
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3045_RC01/embed_loader.js"></script>
+  <script type="text/javascript">
+    trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/09gbxjr","geo":"US","time":"today 12-m"},{"keyword":"/m/06ff5","geo":"US","time":"today 12-m"},{"keyword":"/m/05z1_","geo":"US","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"geo=US&q=%2Fm%2F09gbxjr,%2Fm%2F06ff5,%2Fm%2F05z1_&date=today 12-m,today 12-m,today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"});
+  </script>
+
+
+
+<p>As you can see by the graphic above, at the time of writing, Python is the dominant search in Google Trends compared to something like Golang.&nbsp; I would consider Golang a strong and growing community with projects like Kubernetes and CockroachDB along with large technology groups moving into using the stack like <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> and Uber.</p>
+
+
+
+<h3>Utility</h3>
+
+
+
+<p>In my workflow, I am generally using Golang for 2 things; microservice apps and API middleware.</p>
+
+
+
+<p>When I say microservice apps, I am generally not talking about something which is composed of a larger ecosystem.&nbsp; My microservice-type apps are usually tied into a Kubernetes stack.&nbsp; I had a particular challenge with <a href="https://linkerd.io/" data-internallinksmanager029f6b8e52c="3" title="Linkerd" rel="nofollow noopener" target="_blank">LinkerD</a> where I need to create a MutatingAdmissionWebhook to rewrite my HTTP(s) probes as in pod curl probes after setting my namespace to deny all.&nbsp; This was a good workaround to wrapping and rewriting many different helm charts to use curl probes instead of using standard HTTP(s) probes.</p>
+
+
+
+<p>You can find that code <a href="https://github.com/gwagner/linkerd-convert-http-to-curl" target="_blank" rel="noopener">here</a>.&nbsp;&nbsp;</p>
+
+
+
+<p>When doing API orchestration, I have written a few applications which will pull data from one API (or have data pushed via a webhook) into an application that may amend or transform the data before pushing it into another receiving API.&nbsp; This is particularly useful when trying to normalize data from system A to system B.&nbsp; This was particularly useful when moving from a Graphite-based metric TSDB system over to InfluxDB.&nbsp; We did not need to rewrite all of our metric collectors, we just needed to tap into the metric stream, do an on-the-fly conversion, and then output metrics to InfluxDB.</p>
+
+
+
+<h3>Learning Resources</h3>
+
+
+
+<ul><li><a href="https://www.udemy.com/course/go-building-devops-tools/" target="_blank" rel="noreferrer noopener">https://www.udemy.com/course/go-building-devops-tools/</a></li><li><a href="https://go.dev/learn/" target="_blank" rel="noreferrer noopener">https://go.dev/learn/</a></li><li><a href="https://www.codecademy.com/learn/learn-go" target="_blank" rel="noreferrer noopener">https://www.codecademy.com/learn/learn-go</a></li></ul>
+
+
+
+<h2>DevOps with Ruby</h2>
+
+
+
+<p>Because of its efficiency in DevOps, Ruby is a preferred scripting language for automating IT environments&#8217; repetitive tasks. In addition to web development, data science, and unit testing, this dynamic, interpreted programming language is used for DevOps. Ruby is also fairly simple to learn. As a result, the language has a fast-growing community of DevOps engineers. With no prior programming experience, beginners can get started with Ruby pretty quickly.&nbsp;</p>
+
+
+
+<h3>Community</h3>
+
+
+
+<p>Ruby is a difficult community to quantify fully simply because of how spread out it is.&nbsp; Ruby Gem can be a good baseline metric with roughly ~174,000 gems available from RubyGems.org and 111B+ (yeah, billion) downloads.&nbsp; If you look past ruby gems, the second most popular place that ruby is being utilized is with <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>.&nbsp; The marketplace has roughly 4,000 cookbooks with roughly ~80,0000 maintainers</p>
+
+
+
+<h3>Utility</h3>
+
+
+
+<p>Ruby has some great utility when it comes to DevOps automation.&nbsp; When building out an early DevOps-focused monitoring stack, we chose Sensu Core due to its configuration-driven and scalable design.&nbsp; Most of the community-produced checks at that point were written in ruby which lent itself very well to building reusable consistent libraries that were well-tested.</p>
+
+
+
+<p>Much like the Golang example above, I have also utilized ruby as an API middleware for doing data payload manipulations.&nbsp; Prior to Docker supporting <a href="https://docs.docker.com/config/containers/logging/json-file/" target="_blank" rel="noopener">JSON File Logging</a>, there were very long debates about what separation between log entries means between different programming languages.&nbsp; Ruby was used in an environment where I was working into tail log output from containers and based on its configuration, properly parse and package logs to be sent to centralized logging systems upstream with additional metadata.</p>
+
+
+
+<h3>Learning Resources</h3>
+
+
+
+<ul><li><a href="https://gorails.com/" target="_blank" rel="noreferrer noopener">https://gorails.com/</a></li><li><a href="https://www.chef.io/" target="_blank" rel="noreferrer noopener">https://www.chef.io/</a></li></ul>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Security Considerations</h2>
+
+
+
+<p>When utilizing any code for any function whether it be DevOps or software development, you should always be concerned about security.&nbsp; Let’s say you have a 3-year-old server sitting around and its original automation code has not had any electricity run through it in the same time frame.&nbsp; That server&#8217;s automation code is probably outdated enough that there is at least some kind of CVE attached to it.&nbsp; This will be particularly easy to find if you are doing robust infrastructure scanning but will be much more obscure if you are running compiled binaries where the source code is not under some kind of routine scrutiny.&nbsp; Regardless of how you are building and running code, please make sure to clean up after yourself and avoid getting attacked by leaving a trail of outdated technology behind you.</p>
+
+
+
+<h3>Supply Chain Attacks</h3>
+
+
+
+<p>Supply chain attacks are all the rage these days.&nbsp; Consider the supply chain of your code dependency management system.&nbsp; Are you routinely scanning it for CVEs?&nbsp; Are you doing any kind of dynamic automated or manual testing of the code looking for vulnerabilities?&nbsp; Are you sure you can trust the source of your code dependencies?</p>
+
+
+
+<p>DevOps code can be commonly overlooked in a supply chain attack scenario.&nbsp; Maybe you are writing a console tool to help make your life a little bit easier.&nbsp; You go ahead and pull in a few libraries from the internet to help aid in the creation of that tool like colored output.&nbsp; You also want to be really good and write automated tests as a best practice and you need help generating some data for those tests.&nbsp; Without a persistent review of code dependencies, the OSS developer/contributor of one of the dependencies that you are utilizing is tired of their <a href="https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/" target="_blank" rel="noopener">work being used for free without any recognition or compensation</a> and deliberately destroys the project.&nbsp; There are also less directly malicious scenarios where the developer of a <a href="https://blog.sonatype.com/npm-project-used-by-millions-hijacked-in-supply-chain-attack" target="_blank" rel="noopener">popular package gets targeted and code is unknowingly slipped into their project</a>.</p>
+
+
+
+<p>The lesson is this: assume that attack vectors are everywhere and ensure that you are scanning everything you can get your hands on for CVEs.&nbsp; The industry has a good focus on this now, and the question is not IF you will get compromised, but when.&nbsp; Keep yourself safe by being proactive.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As I stated at the beginning of this article, this is by no means a definitive list.&nbsp; This is a list of some of the tools that I utilized to build effective DevOps workflows and to enable the flow of delivery.&nbsp; I utilize these tools at my job along with utilizing these tools in my homelab.&nbsp; I believe that everyone could use a little bit of software development in their life.&nbsp; Python, Golang, or Ruby are really great places to start with languages because of their utility, communities, and ties to DevOps and DevOps tooling.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What are the two major benefits of DevOps?</title>
+		<link>https://www.valewood.org/major-benefits-of-devops/</link>
+		
+		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
+		<pubDate>Wed, 21 Sep 2022 21:16:20 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[business]]></category>
+		<category><![CDATA[delivery]]></category>
+		<category><![CDATA[devops]]></category>
+		<guid isPermaLink="false">/?p=488</guid>
+
+					<description><![CDATA[The first benefit of DevOps is that it enables organizations to release software faster, more reliably, and with higher quality. By breaking down the barriers between development and operations, DevOps allows teams to work together more effectively and efficiently. This&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>The first benefit of DevOps is that it enables organizations to release software faster, more reliably, and with higher quality. By breaking down the barriers between development and operations, DevOps allows teams to work together more effectively and efficiently. This helps companies get new features and updates into the hands of their customers more quickly.</p>
+
+
+
+<p>The second benefit of DevOps is that it helps organizations become more agile. By automating the deployment process, DevOps makes it possible for companies to respond quickly to changes in customer demand or market conditions. This allows businesses to be more competitive and stay ahead of the curve.</p>
+
+
+
+<p>Let&#8217;s take a look at each of these benefits in detail!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Benefit #1: Deliver technology faster and at higher quality</h2>
+
+
+
+<p>When your customers want more complex software products and expect you to deliver for them more quickly, the ways in which your company revolutionizes its product and service offerings will require a complete revamp. Collaboration and productivity enhancements brought about by DevOps are a big assist in meeting the innovation objectives of businesses.&nbsp;</p>
+
+
+
+<p>The DevOps method of app development provides a company with a number of benefits, but the following five are the most important for any business that wishes to be inventive, available, and scalable. The following are those in question:</p>
+
+
+
+<h3>Accelerate Time To Market</h3>
+
+
+
+<p>DevOps reduces the amount of time it takes to bring a product to market, which in turn boosts business revenue. As a result of bringing together the IT and development teams to collaborate, the amount of time required to construct, test, and launch services or features is cut significantly.&nbsp;</p>
+
+
+
+<p>The DevOps strategy enables businesses to rapidly introduce new features, rapidly improve already existing ones, and rapidly make these new or improved features available to users.</p>
+
+
+
+<h3>Changing in Response to the Industry and Competition</h3>
+
+
+
+<p>You have to consistently offer high-quality items if you want to succeed in an industry that is very competitive. Even if you had a fantastic idea for a business and had already started building it, that wouldn&#8217;t help you capture market share. You are in need of an improved strategy as well as a process, both of which are provided by DevOps.&nbsp;</p>
+
+
+
+<p>The delivery of new code is made both speedy and dependable thanks to DevOps. In addition, it allows teams to construct a scalable and robust application environment while still providing users with an outstanding experience. This approach not only helps acquire the market but also thrives in a competitive market by boosting the user base and income. In other words, it is a win-win situation.</p>
+
+
+
+<h3>Keeping the System Reliable While Preserving Its Stability</h3>
+
+
+
+<p>Continuous testing or automated testing is something that DevOps encourages. Testing that is automated enables engineers to provide test results that are more accurate, offer fast feedback on the build, and monitor the completion of all operations. When the team searches for results, the DevOps methodology provides time savings by accelerating the availability and the entire body of work related to results in analysis on each CI/CT cycle.&nbsp;</p>
+
+
+
+<p>This helps the team get results more quickly. The team is able to simply manage the system&#8217;s stability and dependability while also guaranteeing that the software products have excellent performance and availability.</p>
+
+
+
+<h3>Bringing Down The Average Time To Recovery</h3>
+
+
+
+<p>The bigger the financial effect that a corporation will have to deal with, the longer the MTTR will be. MTTR, which stands for &#8220;mean time to recovery,&#8221; is a problem that can be solved via DevOps. When a service experiences an outage, having DevOps in place may help speed up the process of repair, reaction, and recovery.&nbsp;</p>
+
+
+
+<p>It provides assistance for monitoring mission-critical systems, which enables users to gain real-time insights on decreased performance as well as entire outages caused by events and failures. The methodology of DevOps not only makes it easier to collect precise information but also makes the incident-management system more automated. In this method, it is feasible to swiftly address the issue, which will ultimately result in a reduced MTTR.</p>
+
+
+
+<h3>Capabilities for Providing a Better Experience to Customers</h3>
+
+
+
+<p>DevOps approaches also place an emphasis on the one-of-a-kind characteristics of software designed for the user experience. The development of both the quality of the software and the customer experience may be sped up with the use of DevOps.&nbsp;</p>
+
+
+
+<p>DevOps specialists monitor the customer&#8217;s point of view, plan sprints in accordance with that perspective, and test the product with the customer&#8217;s objective in mind. The team not only rapidly develops new features but also defines and enhances the whole customer journey for omnichannel.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Benefit #2: React to changing market conditions more quickly</h2>
+
+
+
+<p>These days, businesses undergo digital transformations by adopting innovative technology and methods. Keeping up with the digital economy is a top priority, and as a result, they are putting in extra effort to improve in all areas.&nbsp;</p>
+
+
+
+<p>They need to improve their financial performance, product quality, product speed to market, and overall company adaptability. Maintaining competitive flexibility requires effective communication, collaboration, and bug-free code, all of which may be attained through the use of Agile and DevOps processes.</p>
+
+
+
+<h3>Create a Culture-Oriented Structure</h3>
+
+
+
+<p>It is common practice for an organization&#8217;s culture and structure to become one and the same. Teams need to adjust their mindset in order to use DevOps successfully. To put it simply, DevOps is a rearrangement of the teams and the way they work together and communicate.&nbsp;</p>
+
+
+
+<p>Only when individuals work well together as a team can organizations make effective use of the available resources and technology. Both the development and operations teams need each other&#8217;s support. Being able to think critically sets humans apart from machines.&nbsp;</p>
+
+
+
+<p>Therefore, agile culture and the way humans naturally think are incompatible with the sequential waterfall paradigm. There is an urgent need to proactively address these difficulties, and the classic waterfall approach can do just that. It can also impart the benefits of the DevOps paradigm and harmonize the organizational structure.&nbsp;</p>
+
+
+
+<p>This will boost overall collaboration and adaptability and guarantee that the company&#8217;s culture and the culture of its employees are properly melded. By focusing on the whole value chain of software delivery, DevOps is the logical next step after Agile.</p>
+
+
+
+<h3>Streamline Techniques, Procedures, and Policies</h3>
+
+
+
+<p>Collaboration across the organization&#8217;s development, testing, infrastructure, and IT teams is essential. Thus, the organization&#8217;s rules, procedures, and processes should reflect this. DevOps needs to reevaluate its workflow, roles, responsibilities, and methodologies if it is to attain genuine agility.&nbsp;</p>
+
+
+
+<p>In other words, they need to have a mentality that is consistent with the agile culture, which centers on producing incremental results and accommodating change. It&#8217;s not as simple as just adding weekly scrums on top of everything else, so be prepared for some complexity.&nbsp;</p>
+
+
+
+<p>Development and operations must collaborate with automation technologies and fully integrated processes to operate in a succession of brief efforts and genuinely execute production-ready code that can actually be delivered to clients.</p>
+
+
+
+<h3>Streamline Rapid Growth with Minimal Discomfort</h3>
+
+
+
+<p>Agility in DevOps is achieved by bringing together the principles of rapid development, high throughput, and careful scheduling to improve dependability and minimize disturbance.&nbsp;</p>
+
+
+
+<p>To take advantage of Agile&#8217;s rapid iteration cycles without sacrificing quality, the DevOps model may be used to zero in on the best approach and set you up with the best agile testing tools. It helps businesses find their footing so they can effectively and efficiently adapt to changing market conditions and capitalize on emerging possibilities.</p>
+
+
+
+<h3>Remove Organizational Barriers</h3>
+
+
+
+<p>Organizational agility may be improved by closing the communication and collaboration gaps across departments like operations, development, and testing. By enabling continuous development, testing, and deployment with a reliable toolchain, agility may be accomplished.&nbsp;</p>
+
+
+
+<p>There is a tight coupling between the teams, instruments, and procedures in this method. The success of the DevOps model relies on effective communication and cooperation between several functional teams, which guarantees zero barriers across multiple agile teams supported by the proper collaboration technologies.</p>
+
+
+
+<h3>Maintain Constant Monitoring</h3>
+
+
+
+<p>For DevOps to be effective and for a plan to be developed, feedback is essential. Having fast and accurate input is crucial to the success of a DevOps approach. Each deployment should record the basic metrics of duration, expense, and quality. Over time, this information may be examined to determine DevOps&#8217;s efficiency and adaptability and to pinpoint problem spots.</p>
+
+
+
+<p>Culture-based indicators like team cohesion, the average time to resolve conflicts, sense of pride and ownership, and so on can be challenging to quantify. When determining the speed and efficiency of DevOps, however, these cultural criteria are crucial.&nbsp;</p>
+
+
+
+<p>Organizational culture, methods, mentality, and toolchain should be streamlined in order to expand the DevOps model and keep it agile and relevant for providing excellent deliveries. For this reason, it is essential to employ experienced teams that can work together to concentrate on constant development and evaluation.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>By focusing on the whole value chain of software delivery, DevOps is the logical next step after Agile. Additionally, the DevOps model helps businesses find their footing so they can effectively and efficiently adapt to changing market conditions and capitalize on emerging possibilities.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Do DevOps engineers need a coding background?</title>
+		<link>https://www.valewood.org/do-devops-engineers-need-a-coding-background/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Mon, 19 Sep 2022 21:55:03 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[coding]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[opinion]]></category>
+		<category><![CDATA[software]]></category>
+		<guid isPermaLink="false">/?p=326</guid>
+
+					<description><![CDATA[The primary skill sets that DevOps engineers need are either in the system administration or software development space. Those 2 foundational skill sets will help any team build some cool solutions to complex problems. There are fringe cases where the&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>The primary skill sets that DevOps engineers need are either in the system administration or software development space.  Those 2 foundational skill sets will help any team build some cool solutions to complex problems.  There are fringe cases where the skillset matures outside of those two primary skill sets. Whichever skillset is lacking when making the transition from traditional delivery patterns over to a more DevOps-focused delivery pattern will need to be picked up to ensure that the team has a complete understanding of the technology stack. A system administrator will not need to become a full software developer, and a software developer will not need to become a veteran system administrator.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Role Separation</h2>
+
+
+
+<p>First, let&#8217;s dive into role separation.  I am a firm believer in specialization in job functions.  Someone who is a jack of all trades is also generally not a master at any of them.  Individuals on the team should not be looking to be a master at every part of their delivery pipeline but they should be in a position where they are picking up adjacent skills to help backup their team members when needed.  A software developer does not need to be intimately familiar with every intricate detail of a backup solution but should know how to retrieve and restore backups when necessary.  A system administrator does not need to dive deeply into SQL query optimization, but knowing how to write and retrieve data from the database is a useful skill to help support the team.</p>
+
+
+
+<h2>Software Development</h2>
+
+
+
+<p>Now, this is a bit of an unfair section because I believe that the software development side of DevOps does need a coding background.  How are you going to do software development without that?</p>
+
+
+
+<p>In all seriousness, I believe the question &#8220;Do DevOps engineers need a coding background?&#8221; can be extended into the Ops and Infrastructure space pretty easily.  Software developers should be familiar with the basic fundamentals of a data center or cloud depending on where your solution(s) is/are hosted.  If you are in a data center, become familiar with fault domains, SANs, LUNs, or anything that may impact the stability or performance of your application.  In the cloud, become familiar with the cloud&#8217;s elastic nature of volumes, instances, and services.</p>
+
+
+
+<p>Along with the familiarity with computing platforms, it will be advantageous to also familiarize yourself with solution delivery and system configuration.  Solution delivery and delivery pipelines are essential to a good DevOps background.  In my experience, most developers are really good at utilizing their ecosystems to compile a binary or build out a package.  Aside from SFTPing that package out to a server and bouncing a service the idea of automated blue/green solution delivery flow with configuration management, rollbacks,  database updates, monitoring changes, etc. is not the norm.  </p>
+
+
+
+<p>You SFTPers out there know who you are, don&#8217;t try to deny it.</p>
+
+
+
+<p>The primary driver behind configuration management is trying to hit the gold standard of immutable infrastructure.  While application code is being perpetually updated and changed, servers should be treated like cattle instead of pets.  We should be able to easily destroy and fully rebuild a server and deploy the newest version of the application on top of it.  This helps keep things clean and up to date.</p>
+
+
+
+<h2>System Administrators</h2>
+
+
+
+<p>As system administrators make the transition from the GUI to doing DevOps, they will be faced with many challenges where a coding background can really help out.  </p>
+
+
+
+<p>DevOps is all about automating the flow of delivery through resilient pipelines to increase quality.  To do this, most of your work is going to be through scripts or tools like <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>, Terraform, <a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a>, CloudFormation, etc.  Composing individual scripts for individual tasks is a good place to start, but will quickly become overwhelming if you are not embracing a more generated approach.  </p>
+
+
+
+<p>Now, all teams are going to be set up a bit differently, but a common thread across all of them will be the scale of technology becoming overwhelming at some point.  One day you may be looking at fifteen servers/services and the next day your product explodes in popularity and you are dealing with thousands of servers/services.  Take a step back and ask yourself how you can use business logic to generate your infrastructure, monitoring, configurations, backups solutions, etc.  This approach will make something that feels unmanageable and makes it manageable again.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>Do DevOps engineers need a coding background?  My perspective is, that it wouldn&#8217;t hurt.  Diving into software development patterns and extending them into the DevOps delivery space allows for greater consistency, along with the ability to scale to meet demand much more quickly without feeling overwhelmed.  I don&#8217;t think that software developers need to become the best systems administrators ever created.  I don&#8217;t think that systems administrators need to become the greatest software developers ever created.  I do think that everyone in technology could benefit from a bit of exposure to spaces outside of their primary responsibilities because it lends itself well to increasing quality and flexibility while delivering solutions.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What is DevOps Automation?</title>
+		<link>https://www.valewood.org/what-is-devops-automation/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sat, 17 Sep 2022 15:19:44 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<guid isPermaLink="false">/?p=450</guid>
+
+					<description><![CDATA[Automation is a cornerstone of DevOps. If you are not doing DevOps Automation, I am not entirely sure what you are doing? Building robust automation helps drive the consistency and quality that the DevOps methodology is known for. In a&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Automation is a cornerstone of DevOps.  If you are not doing DevOps Automation, I am not entirely sure what you are doing?  Building robust automation helps drive the consistency and quality that the DevOps methodology is known for.  In a lot of ways, we can look towards manufacturing to understand why DevOps automation is so important.  Unless you are looking at a niche hand-made luxury item car a Pagani Utopia, anything that is being produced at scale is done in a factory with automation.  Let&#8217;s dive in and understand the manufacturing benefits of automation and see if we can apply them to DevOps automation!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>DevOps Automation through the lens of Manufacturing</h2>
+
+
+
+<p>In the intro of this article, I used a car analogy to highlight something that is a one of a kind hand made luxury item.  Cars are a bit overdone, so let&#8217;s actually walk down analogy road with prefabricated houses.  I actually think houses are a better fit here because it is hard to change up an automated manufacturing line to put a nice casement window into your Pagani, but prefabricated homes have that all figured out!</p>
+
+
+
+<h2>Process</h2>
+
+
+
+<p>Much like any work in any industry, someone is going to be requesting something and there is someone out there that is going to produce that request.  That is what keeps the world moving.</p>
+
+
+
+<p>The process for buying a prefab house is generally as follows.</p>
+
+
+
+<ul><li>Do some research on prefabricated housing companies</li><li>Meet with their sales department</li><li>Pick a base model from a design catalog</li><li>Design the building with an architect</li><li>Review and make adjustments</li><li>Sign off on the design</li><li>Generate cut lists from detailed plans</li><li>Send to manufacturing</li><li>Boom, House!</li></ul>
+
+
+
+<p>The biggest caveat here is that the architects will generally start off from base plans that they know the manufacturing department can build rather than starting from scratch.  Because this is being designed from a prebuilt manufacturing process, you don&#8217;t want to start from a blank slate because quality will suffer assuming that your primary considerations are cost and time.</p>
+
+
+
+<p>The process for building technology with DevOps automation does not need to really be all that different.</p>
+
+
+
+<ul><li>Pick a baseline technology stack that is recognized as a pattern</li><li>Design your technology requirements with an architect</li><li>Review and make adjustments</li><li>Sign off on the design</li><li>Generate epics and stories from detailed plans</li><li>Send to engineering teams</li><li>Boom, Technology!</li></ul>
+
+
+
+<p>When building stacks with DevOps automation, going from the ground up can be expensive and take a lot of additional time.  Working with defined technology stacks and reusing existing investments can really speed up the process and reinforce quality delivery.</p>
+
+
+
+<h2>What do you do?</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-questions-300x200.jpg" alt="DevOps Automation Questions" class="wp-image-462" srcset="/wp-content/uploads/2022/09/devops-automation-questions-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-questions-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-questions-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-questions-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-questions-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-questions-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-questions-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-questions-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-questions-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
+
+
+<p>Buildings are going to have a few main components to them.  You are generally going to have a foundation, walls, roof, doors, windows, bathroom, kitchen, and bedrooms.  Those are the known knowns.  When a prefab housing company goes out to try and build a new house, they are not trying to bolt on a rocket ship launch pad.  Prefab companies are trying to build the BEST walls, and the BEST roof because they are putting these components together in a controlled environment utilizing their specialized processes and methods.</p>
+
+
+
+<p>DevOps automation is really trying to achieve the same goal here.  If the bathrooms are servers and the roof is a firewall, DevOps engineers are trying to build the BEST bathrooms and roofs possible in their controlled environments utilizing their specialized processes to get the job done.  </p>
+
+
+
+<p>Now imagine a customer showing up to a prefab housing company and asking them to build out the aforementioned rocket ship launch pad.  Since this company is a group of builders, giving infinite time and money, I am sure they could build a serviceable launch pad that could send someone&#8217;s rocket to the moon.  A DevOps engineer is going to face a similar challenge when someone asks them to build out a mainframe, our analogous rocket launch pad when they are used to building something in <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a>.  </p>
+
+
+
+<p>A business should be in a position to provide its DevOps engineers with reliable processes that they can lean back on.  Part of that is tool selection, but part of that is having a definition of WHAT you are building.  A term that I end up using a lot in the office is &#8220;Selling the cars that we have on the lot&#8221;.  Under this analogy, I should probably change that to houses in the yard.  If we are constantly asking our people to context shift and come up with new and creative ways to build out the next diverse set of infrastructure without any processes to lean back on, they are never going to be able to do their best work.</p>
+
+
+
+<h2>Tool Selection</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignleft size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-300x200.jpg" alt="DevOps Automation" class="wp-image-452" srcset="/wp-content/uploads/2022/09/devops-automation-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
+
+
+<p>This is generally a very spicy topic.  There are some individuals who have STRONG allegiances to specific tool stacks, and others that don&#8217;t really care what the tool is as long as they get to learn something new.</p>
+
+
+
+<p>We can equate this topic to fixtures in a house like windows, doors, faucets, toilets, showers, and other such finishings.  We know we need them and we know that we are going to have to live with them for a long time.  Windows and doors are very hard to change over time.  Changing them out essential means you are cutting stuff out of your house which keeps out bugs and burglars.  If new windows and doors are not installed correctly, you may end up with a creak or a jammed window, or you may end up with bugs and burglars inside of your house.</p>
+
+
+
+<p>In a prefab manufacturing space, they are going to be really good at hanging windows and doors in their fixtures from a specific set of manufacturers.  If you ask for double-hung windows, sliding windows, awning windows, or a bay window; the company that you are working with probably has something to offer you.  If you show up asking for a highly energy-efficient stained glass window that is UV resistant with a 100-year warranty, they probably are not going to be able to help.</p>
+
+
+
+<p>DevOps automation tooling is very similar in nature to windows.  If your engineers and architects are very used to using something like Jenkins and someone shows up with TravisCI then you are probably not going to make a lot of progress delivering your project.  Now, luckily, unlike the stained glass windows analogy; tooling in the DevOps space is trainable if the team is interested in learning something new.  Please take note, just because we are really good at computers does not mean that we know everything about computers.  We all need time and space to learn.</p>
+
+
+
+<h2>Specs and Standards</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-process-300x200.jpg" alt="DevOps Automation Specs and Standards" class="wp-image-463" srcset="/wp-content/uploads/2022/09/devops-automation-process-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-process-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-process-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-process-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-process-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-process-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-process-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-process-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-process-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
+
+
+<p>Every industry has some kind of standards or &#8220;code&#8221; that they must meet to be &#8220;compliant&#8221;.  The housing industry has varying standards across the country and is even broader when you look at the world holistically.  The building industry is going to be governed by regulatory compliance through Building Codes.  Your foundation must be below the frost line in many places where it is cold, but on-grade foundations are common where it is warmer.</p>
+
+
+
+<p>Technology may not have as many specific codes written into law as buildings do, but we are governed by certain specifications, certifications, and expectations.  A company building prefab homes will need to read up and study exactly what their service areas expect them to be producing to ensure that their buildings will pass inspections.  Businesses producing technology need to do the same thing except it is going to be more focused on the industries that they serve.  </p>
+
+
+
+<p>DevOps automation can help provide baselines that define those standards and make them reusable across projects which serve the same industries.  If you are developing technology for the medical space, there are many stringent controls that need to be put in place.  If you are building those stacks out in a more traditional way, it can be costly to re-engineer many solutions over and over again.  Employing DevOps automation is analogous to a prefab housing company utilizing jigs to repeat similar work while adhering to a 16-inch on-center standard.  You won&#8217;t see prefab housing companies constantly pulling out the tape measure, they will throw lumber into a preset jig and start nailing off a wall with speed and precision.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>There are a lot of lessons we can draw from the manufacturing space when developing technology.  There is a reason why Toyota and its <a href="https://global.toyota/en/company/vision-and-philosophy/production-system/" data-internallinksmanager029f6b8e52c="13" title="Toyota Production System" rel="nofollow noopener" target="_blank">Toyota Production System</a> are highly regarded for their lean manufacturing processes.  Technology expectations should not really be any different than expectations that we have around how things are produced outside of cyberspace.  Embrace DevOps automation in a similar way that manufacturing has embraced automation and you will see quality increases immediately!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What are the top Relevant DevOps Skills?</title>
+		<link>https://www.valewood.org/top-relevant-devops-skills/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Tue, 13 Sep 2022 02:31:49 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<guid isPermaLink="false">/?p=330</guid>
+
+					<description><![CDATA[DevOps skills include a variety of disciplines that range from system administration to software development. This article provides an overview of the skills that are relevant to DevOps.]]></description>
+										<content:encoded><![CDATA[
+<p>DevOps requires a variety of skills and competencies to realize the full benefits of the methodology.  The most pertinent DevOps skills are needed in the disciplines of system administration, security, software development, delivery automation, and quality assurance. It is not feasible or practical for a single person to accomplish all these things quickly as a result. We will take a look at some of the skills that are important in DevOps in different areas to provide a little more focus. If you are a business leader looking to improve your team&#8217;s performance, this is an excellent starting point.</p>
+
+
+
+<h2>DevOps Skills for Everyone</h2>
+
+
+
+<p>No matter where you are in your career, everyone could do with a little polishing on their communication and collaboration skills.  People build and run technology and machines do what they are told to do.  Remember, at the end of the day, technology is built by people for people.  </p>
+
+
+
+<p>Another area to polish right along with communication and collaboration is creativity.  We are out trying to solve complex technical problems which require time to think and time to reflect.  Building a mental model of your problem while looking for a creative solution is a good first step.  Getting your creativity out to the masses, or colleagues is the next step.  Do not worry about how your creative ideas will be received because you miss 100% of the shots you don&#8217;t take.</p>
+
+
+
+<p>I think the final skill is to know when to hold&#8217;em and know when to fold&#8217;em.  Not every idea, approach, strategy, or moment of self-indulging brilliance is going to be a winner.  It is ok to look at something you are working on and throw it in the trash.  It is also ok to take feedback from your peers on your ideas and be constructive with the feedback. </p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>System Administration</h2>
+
+
+
+<p>Every technology effort relies on systems and system administration to function. Regardless of whether you&#8217;re creating serverless lambda functions or maintaining a static HTML website like this one, system administration is important to every technological endeavor.  Robust DevOps skillsets ensure that you remain competitive. It is the essential lifeblood of technology.</p>
+
+
+
+<h3>On-Prem System Administration</h3>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-onprem-servers-300x200.jpg" alt="" class="wp-image-413" srcset="/wp-content/uploads/2022/09/devops-onprem-servers-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-onprem-servers-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-onprem-servers-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-onprem-servers-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-onprem-servers-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-onprem-servers-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-onprem-servers-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-onprem-servers-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-onprem-servers-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
+
+
+<p>On-Prem administrators should be looking at skills that help reliably create interfaces that can be leveraged for quick environment standups.  By creating more automated or scripted actions, those actions can become far more reusable than accomplishing the task once through a GUI.</p>
+
+
+
+<p>In a more traditional approach, when a database administrator needs more disk space they would log a change ticket.  That ticket would hit the system admin group which would open a change ticket with the SAN team.  The SAN team would then review their allotments and take the ticket to CAB.  That ticket would get approved, space would be released which would then go back to the system admin team to expand the disk after it goes through its CAB approval process.  Finally, the database admin would then be able to go through their CAB to adjust SQL parameters to account for the new space.</p>
+
+
+
+<p>THIS IS SLOW, not to mention so 1990s!</p>
+
+
+
+<p>Unless you are in the mainframe market, most technology vendors are now exposing APIs which can be utilized to configure their systems.  As an on-prem system administrator, you should be building your technology stack out in a way that you can expose DevOps tools like <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> to the consumers of the infrastructure to safely self-service their requests.  If a DBA needs more disk space, it should be as simple as updating some YAML and that space is provisioned and ready for use.</p>
+
+
+
+<p>Focus more on SLA management than pure system administration.  Designing systems to achieve specific SLAs is going to be a lot more valuable to the teams you work with than managing capacity numbers.  If you are building your automation correctly, the automation itself can also understand the SLAs and ensure that people do not violate them with their configuration changes.</p>
+
+
+
+<p>Finally, focus on developing or integrating directly into an observability stack.  The more data that is visible to teams the better decisions can be made on how to optimize their current stance.</p>
+
+
+
+<h3>Cloud System Administrators</h3>
+
+
+
+<p>Cloud System Administrators should be focused on developing and making available sane cloud baselines.  Just because you are the system administrator does not mean that you need to hold the keys to the kingdom when it comes to the cloud.  In my experience, the cloud is a toolbox full of tools and when a more junior team tries to utilize the cloud, they view all of those tools as hammers.  By providing sane baselines which consumers can pick up and utilize in the cloud, your teams are going to become a lot more efficient.</p>
+
+
+
+<p>The key areas of focus here are going to be automation and security.  Out in the cloud, the security perimeter is much wider than it is in the on-prem space.  Providing sane defaults to end users lets you understand what the preset patterns look like.  Through the mountain of data that the cloud provides, analysis can then be done with persistent feedback when one of those ordained patterns changes.</p>
+
+
+
+<p>When it comes to automation, there should not be a huge barrier to entry between when someone receives their cloud account and when they start to produce technology.  Service catalogs and pre-built playbooks with very well-documented parameters are a great way to kickstart a project and grow DevOps skills on a team.  Once you are able to do that, you can then create automated building blocks that allow the team to get into production faster and build out the infrastructure which is required for their project.</p>
+
+
+
+<h2>Security / DevSecOps</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignleft size-medium"><img width="300" height="206" src="/wp-content/uploads/2022/09/devsecops-helicopter-300x206.png" alt="" class="wp-image-412" srcset="/wp-content/uploads/2022/09/devsecops-helicopter-300x206.png 300w, /wp-content/uploads/2022/09/devsecops-helicopter-1024x703.png 1024w, /wp-content/uploads/2022/09/devsecops-helicopter-768x527.png 768w, /wp-content/uploads/2022/09/devsecops-helicopter-1170x803.png 1170w, /wp-content/uploads/2022/09/devsecops-helicopter-585x402.png 585w, /wp-content/uploads/2022/09/devsecops-helicopter.png 1509w" sizes="(max-width: 300px) 100vw, 300px" /><figcaption>SecOps in Action!</figcaption></figure></div>
+
+
+<p>In a more traditional world, Security is going to be proactively scanning digital assets with tooling waiting to deploy from their stealthy helicopters when an incident occurs.  Security was viewed as a cost of doing business when in reality it should be viewed as an enhancement to the flow of delivery while lower the overall risk of costly delays or worse, security incidents.  When embracing a more DevOps-focused skillset, security can integrate right into the overall delivery flow to ensure quality, speed, and transparency to stakeholders.</p>
+
+
+
+<p>The first DevOps skills that security professionals should bring to the table center around integration to routine scanning tools.  It is one thing to kick off a scan on an environment when something is deployed to production, but that may not prevent something from making its way into the wild which could have a lasting impact on digital properties.  As part of the release pipelines that the team is using, security tooling should be integrated directly into the release structure and used as a quality gate.</p>
+
+
+
+<p>When working with other teams, security should be able to provide automated testing suites. A certain type of testing should be performed, not one that verifies whether the automated tooling is working properly, but one that evaluates whether the code being developed is either hardened or tested with a focus on security. </p>
+
+
+
+<p><strong>Example: </strong>When developing or maintaining programs teams must continuously test for scenarios where unauthenticated sessions allow for access to data that requires authentication. This testing path may not be in the original requirements material, so it may not get tested as part of a normal feature release.</p>
+
+
+
+<p>Another DevOps skill that security professionals should focus on is continuous feedback.  Getting information back into the hands of the teams delivering features is paramount to keeping a system safe.  If the individuals writing code or working on infrastructure do not know that they are ending up in a compromised state as early in the pipeline as possible, there is a very good chance that code will end up in production and someone with malicious intent will find it.  </p>
+
+
+
+<p>The last DevOps skill is a soft skill centered around communication.  When working through trying to bring a more robust security posture to a team, decision-makers are left with a numbers game of risk management instead of understanding how security can help enhance their product.  Tailoring communication around security in a way that stakeholders and decision-makers understand the benefits of security outside of the normal gloom and doom rhetoric will help open doors for bringing in more advanced tooling and methods.</p>
+
+
+
+<h2>Software Development</h2>
+
+
+
+<p>Software developers are generally concerned with producing the next feature and getting that out into the market for consumption.  The code is pushed and it ends up going through whatever gates may live between their keyboard and production.  Occasionally they are going to get something kicked back which needs to get fixed and re-pushed.</p>
+
+
+
+<p>To start developing some DevOps skills, I would take a look at how you are engaging this cycle.  One of the core tenants of a DevOps flow is &#8220;Always be ready to release to production&#8221;.  This really means that the main branch needs to be ready to be pushed to production at all times.  </p>
+
+
+
+<p>Feature flags can be used to write and deliver code that is ready to be turned on in production via a configuration switch.  By wrapping your code paths in feature flags, you can take time to incrementally work through your code and automated testing and flip it on in production when the time is right.  Since we are mere mortals working on highly precise machines trying to get them to do our bidding, this is a great way to get incremental feedback on your approach both from our machine overlords along with other stakeholders.</p>
+
+
+
+<p>Lastly, I would take a strong look at how to develop some DevOps skills around application building and packaging.  Composing your application to be low touch, small, and quick to deploy and tear down will really help your peers reduce the complexity of their accompanying pipelines and work.  A hot topic is microservices, but I don&#8217;t buy that microservices are the only way to do this.  I think a logical composition of your application by defining your data domain is a great way to understand the definable boundaries of what your application should be doing vs what another application may be responsible for.</p>
+
+
+
+<h2>Delivery Automation</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-software-development-300x200.jpg" alt="" class="wp-image-414" srcset="/wp-content/uploads/2022/09/devops-software-development-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-software-development-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-software-development-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-software-development-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-software-development-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-software-development-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-software-development-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-software-development-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-software-development-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
+
+
+<p>This discipline is going to be taking on a lot of different challenges from different DevOps skill sets.  You will be releasing new or updated applications, new or updated data or data schemas, new configurations, security updates, firewall rules, and many more disconnected technologies.  </p>
+
+
+
+<p>Start by working through a specific domain like application releases.  Getting into containers in <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> is great, but you can focus on server-based deployments as well.  The gold standard is immutable deployments, but not every situation will fit immutable deployments.</p>
+
+
+
+<p>Ensure that you are able to both deploy an application along with being able to completely remove all traces of that application from the deployment target.  Successful deployment along with successful removal should give you the full scope of understanding the application that you are working with</p>
+
+
+
+<p>Next, I would look at credential management strategies.  Putting plain text passwords in code is a cardinal sin in today&#8217;s ecosystem.  Work on strategies that can provide the teams around you with a good interface for utilizing credentials without exposing them.  I personally like using Ansible Vault as a solution here where ansible is a trampoline to a more robust credential storage solution.</p>
+
+
+
+<p>The last DevOps skill that I would build is around deployment validation.  If you are not able to tease out clear requirements around a successful deployment, that is ok.  Work towards getting deployment validation built into your pipeline in a rudimentary way such as doing a GET call to the deployed application.  As failures occur, harden your validations with more steps like running a search or calling a page that makes a database query to ensure that you could trigger a rollback if things are not working as expected.</p>
+
+
+
+<h2>Quality Assurance</h2>
+
+
+
+<p>Quality is DevOps and DevOps is focused on quality.  Quality assurance teams will traditionally look at the functionality of the application to give it a clean bill of health before release.  I would urge QA teams to broaden their horizons and bring QA practices into all phases of the delivery cycle.</p>
+
+
+
+<p>A key focus of DevOps is the observability of an application.  If QA teams work towards building DevOps skills around automated testing, you now have a nice monitoring suite that you can use to ensure the persistent quality of production assets.  Automated testing is also a great way to provide feedback to the team.  Make sure automated testing is accessible and ready for consumption by the whole team since quality is everyone&#8217;s responsibility.</p>
+
+
+
+<p>Next, I would look at building some DevOps skills around providing quality for free through frameworks.  There are many different edge cases out there that can be easy or difficult to test for.  Building out or deploying frameworks that test for standard application edge cases is a great way to empower the team with quick feedback on development to know that baseline quality standards are met.  I know that I never want to write another test that checks to see if an email address was put into the email field ever again.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you can see above, a wide range of DevOps skills is needed in the automated delivery space.  Teams are composed of many different disciplines to be self-sufficient in their delivery of technology and not every requisite skill exists in all teams.  Do not be afraid to expand your DevOps skillset to cover those gaps.  When someone blurts out &#8220;There has to be a better way!&#8221;, there probably is a better way.  While delivering technology, never stop learning and growing at the same time.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What essential DevOps tools should you be using today?</title>
+		<link>https://www.valewood.org/essential-devops-tools/</link>
+					<comments>https://www.valewood.org/essential-devops-tools/#respond</comments>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sun, 11 Sep 2022 17:03:41 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=5</guid>
+
+					<description><![CDATA[The goal of any DevOps tool should be to help your team communicate more effectively, automate manual tasks, and track the progress of your projects. With the right tools, you can significantly speed up your development process and produce better&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>The goal of any DevOps tool should be to help your team communicate more effectively, automate manual tasks, and track the progress of your projects. With the right tools, you can significantly speed up your development process and produce better results. In this post, you’ll find a list of the most essential DevOps tools and advice on how to choose the right ones for your team.</p>
+
+
+
+<h2><strong>Build Tools</strong></h2>
+
+
+
+<p>Build tools are an important cornerstone for any kind of DevOps workflow. Just choosing one without doing an evaluation can mean the difference between success and failure in a lot of circumstances. The build tooling must jive with the team and accomplish producing the CI/CD processes which the team expects in the way they expect them to be run. Think of them as task runners with a GUI, but each task runner has its own flare. Below is a list of tools that are widely used and could fit the bill for your next project.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h3>Jenkins</h3>
+
+
+
+<p>If you have spent any time in the software space, or have done any googling around building software, Jenkins is sure to be the first thing that pops up. Jenkins is an open-source automation tool used for continuous integration and continuous delivery (CI/CD). Companies use it to automate the software development process, build and test their code, and deploy their applications. Jenkins is a highly configurable tool that allows you to choose from a large range of plugins. These plugins allow you to integrate Jenkins with other tools such as Docker Hub, JIRA, and others. Jenkins can be used for DevOps to automate the software delivery process, deploy apps, and manage infrastructure.</p>
+
+
+
+<h3>Atlassian Bamboo</h3>
+
+
+
+<p>Atlassian Bamboo is a platform for building and managing builds and deployments of software. It is generally utilized due to its tie-ins with other Atlassian products such as Jira and Confluence giving you an entire ecosystem out of the box. It is a great option if you are working in a team and want to set up a standardized process for building your code. Bamboo allows you to set up different stages of your workflow, each with its own set of tasks. This way, you can create a dev stage where your team has access to the latest version of the code and works directly from it, a test stage where your team can run tests on the latest version of the code and a production stage to deploy the code once it has been tested. As a rule of thumb, if you are working in a team that is already entrenched in the Atlassian ecosystem, go for Bamboo.</p>
+
+
+
+<h3>Drone CI</h3>
+
+
+
+<p>Drone bills itself as a &#8220;Self Service Continuous Integration System&#8221;, but I think you can really view any of the tools listed under build as exactly that. If you are looking for the more modern cool kid on the block, Drone CI is probably going to be a pretty good choice. Drone CI is natively built around Docker and the container ecosystem. This makes building modern applications more intuitive for individuals who are accustomed to the container ecosystem already. Drone CI also supports other types of containers, such as rkt. For developers who are not as familiar with Docker, Drone CI does have a user interface that allows you to manually configure a build environment. Drone also has a plug-in architecture, which means that you can also extend Drone’s capabilities with your own plug-ins, allowing you to configure a custom build environment as well.</p>
+
+
+
+<h3>Travis CI</h3>
+
+
+
+<p>Travis CI is a bit of a unique take amongst its competitors listed above. Travis CI is not a service you would normally go and locally install in your data center. Its origins are built under the idea that building environments should be ephemeral, cheap, easy, and defined via software. Their service allows you to create a new build environment by just pushing code to your <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> repository. The great thing about this is that it allows you to create any type of environment you want. In the case of Travis CI, they allow you to build your environment in a way that is open source and completely controlled by you.</p>
+
+
+
+<h3>GitHub Actions</h3>
+
+
+
+<p>GitHub Actions is a new entrant to the build and deploy space, and frankly, the next logical step in GitHub&#8217;s journey of code hosting. GitHub has become the de-facto standard for hosting code, and Actions takes it a step further by allowing you to programmatically trigger a series of actions on your code, such as building, testing, publishing, and deploying it. Actions is a game changer as it allows anyone to create their own automated workflow without the need for any additional software. For example, let’s say you want to deploy your code to your staging environment every time you push a new commit to your master branch. You can now easily set up an action that listens for new commits on the master branch, checks out the code, kicks off a build process, and then deploys the code to your staging environment.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>In this space, I am a fan of the tool that gets the job done. I don&#8217;t have any particular allegiances because build tools are just dumb task runners. Maybe a UI speaks to you more, or a set of tools plugs into an ecosystem more seamlessly than another tool. Either way, do a bit of evaluation and make sure you are not painting yourself into a corner, and you will be just fine with any of these tools. Sign up for free trials, do a bit of exploring, and if you have questions, there is a vibrant community of people who are happy to help! Stay tuned to blog posts, newsletters and social media to stay up to date on new features and helpful tips and tricks!</p>
+
+
+
+<h2><strong>Server Configuration Management</strong></h2>
+
+
+
+<p>Below, <a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a> and <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>, are the two 5000-pound gorillas in the room when it comes to configuration management DevOps tools. Other competitors exist in the space, but I would argue always live on the fringes and are not really taking any market share away from these two primary options any time soon. Some would argue that <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> should be in this category as well, but I would argue that Ansible is a task orchestrator and NOT a configuration management tool. Give Ansible tasks, it orchestrates tasks, and when it completes someone will need to write more code to determine if the task was executed correctly. In my eyes, DSCM-level validation of completion is a core feature that a configuration management system should have out of the box, otherwise, it is a task orchestrator masquerading around to be something like a configuration management DevOps tool. Don&#8217;t get me wrong, there is still a spot in my heart for Ansible, just not under configuration management.</p>
+
+
+
+<h3>Puppet </h3>
+
+
+
+<p>Puppet is an open-source tool for managing infrastructure as code (IaC). It’s often used for configuration management, service deployment, and continuous delivery. Puppet works by installing agents on different system types and installing the Puppet server on one or more machines. The Puppet server manages the agents to configure the systems based on user-defined policies. It can be used with DevOps to manage configuration policies, provision and configure infrastructure, and automate deployment. When using Puppet myself, I normally do not connect Puppet back to a Puppet master. I run puppet headless so that my idempotent builds can be deployed and triggered at will. This also helps avoid some of the licensing costs of Puppet. As of the writing of this post, their pricing is also hidden behind a contact wall. This generally means: &#8220;If you have to ask, you probably can&#8217;t afford it&#8221;.</p>
+
+
+
+<h3>Chef</h3>
+
+
+
+<p>Chef is an open-source tool for managing infrastructure as code (IaC). It’s often used for configuration management, service deployment, and continuous delivery. Chef works by installing agents on different system types and installing the Chef server on one or more machines. The Chef server manages the agents to configure the systems based on user-defined policies. It can be used with DevOps to manage configuration policies, provision and configure infrastructure, and automate deployment. When using Chef myself, I normally do not connect Chef back to a Chef master. I run puppet headless so that my idempotent builds can be deployed and triggered at will. This also helps avoid some of the licensing costs of Chef.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>As you can see, the descriptions of the tools are nearly identical. The primary difference between these two tools is going to be the community supporting package availability, price, and their specific DSL. Chef is primarily Ruby driven which gives you a TON of flexibility when you need it by diving into the Ruby space. This is an antipattern so use it sparingly, but it can be helpful in a pinch. I would also argue that the Chef community is currently much stronger than the Puppet community having many more packages developed and maintained by the community. In my career, I started with Puppet and converted to Chef simply for that fact.</p>
+
+
+
+<h2><strong>Infrastucture Configuration Management</strong></h2>
+
+
+
+<p>In this post, I am going to be focusing on <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a> and Azure as the primary examples of IaC CM tools. I am explicitly ignoring GCP, <a href="https://www.digitalocean.com/" data-internallinksmanager029f6b8e52c="5" title="DigialOcean" rel="nofollow noopener" target="_blank">DigitalOcean</a>, etc. because every cloud vendor has its own APIs, its own tool sets, and its own concepts which are really all born from what AWS and Azure have already pioneered.  If you are interested in the most marketable DevOps tools focusing on infrastructure configuration management, then these are the tools I would focus on first.</p>
+
+
+
+<h3>AWS CloudFormation</h3>
+
+
+
+<p>AWS CloudFormation is a native toolset provided by AWS which is utilized to configure their cloud platform. It enables you to configure your cloud infrastructure and also create templates for future usage. These templates can be used to create infrastructure as code, which is a best practice in terms of cloud adoption. CloudFormation provides you with a lot of flexibility as compared to other tools, but it is not easy to start with.</p>
+
+
+
+<h3>Azure ARM Templates</h3>
+
+
+
+<p>Using an ARM template, you can declaratively create and deploy Azure infrastructure, including virtual machines, networks, storage systems, and any other resources you require. The template simply describes what you want to happen, and Azure takes care of the details. You can also use templates to generate code or scripts to create or customize resources. Versioning: You can keep track of changes to your templates by keeping them in source control, just like you would any other code. You can also use templates to generate reports, giving you an easy way to track changes to your infrastructure. Reusability: You can create a library of templates to use in different scenarios.</p>
+
+
+
+<h3>Terraform</h3>
+
+
+
+<p>Terraform is a cross-cloud IaC tool produced by HasiCorp. They take a unique view of IaC where components that span across multiple clouds should be abstracted out for future reuse. Terraform is also a unique tool in that its open source, but has a paid enterprise version with additional features. Terraform is a great fit for enterprise environments where you want to maintain strict version control of your cloud infrastructure, have strict regulatory requirements, or have a dedicated team managing the infrastructure where you want to streamline your process with a tool that can enforce policies across the organization.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>I really don&#8217;t have a right or wrong answer for this space. I do believe that if you have a need to get into the deepest nooks and crannies of a cloud hosting vendor, using native tooling (CloudFormation and ARM Templates) will always beat what Terraform has to offer. If you are looking to be a bit more functional cross-cloud by providing an interface for your organization to consume, Terraform is probably a better option.</p>
+
+
+
+<h2><strong>Monitoring and Observability</strong></h2>
+
+
+
+<p>I believe that there is no right answer to monitoring and observability as long as the answer doesn&#8217;t work for the team that needs to receive the alerts. If you are using a 24&#215;7 on-call system like OpsGenie, and your technologists refuse to install the application on their devices to get notified, it is probably the wrong way to go about ensuring someone is alerted to issues. The tools listed below range from out-of-the-box to highly customizable tools. Each approach has its advantages and disadvantages. If you are going to go with highly customizable and integrate that directly into your pipelines, then the team must be on board with the idea of additional maintenance in code space rather than the GUI space, and vice-versa for the out-of-the-box tools. As long as you and your team agree on the strong fundamentals of &#8220;99.9% of the time, get an alert that something is wrong before someone else notices and reports it&#8221;, then you at least have a good foundation to start selecting monitoring from.</p>
+
+
+
+<h3>LogicMonitor</h3>
+
+
+
+<p>From physical hardware to software applications, to virtual hosts, to network devices, to cloud infrastructure — LogicMonitor monitors it all. LogicMonitor is able to monitor virtual environments with its application monitoring capabilities. It can also monitor physical environments with its physical monitoring capabilities. With LogicMonitor’s comprehensive monitoring capabilities, it’s no wonder that it’s the monitoring software of choice for thousands of organizations worldwide.</p>
+
+
+
+<h3>Sensu </h3>
+
+
+
+<p>It works with any monitoring tool, like Graphite, Collectd, Elastic, and more. It can also receive data from other loggers, like statsd, in real-time. Sensu Go can collect data from virtually any source, maintain it in a data store for analysis, and send it to any output, including email, mobile push notifications, or synchronous or asynchronous webhooks. It is open source, flexible, and extensible with a wide range of configuration options.</p>
+
+
+
+<h3>Prometheus</h3>
+
+
+
+<p><a href="https://prometheus.io/" data-internallinksmanager029f6b8e52c="2" title="Prometheus" rel="nofollow noopener" target="_blank">Prometheus</a> is a popular open-source monitoring system for metrics, logs, and events. It enables querying, graphing, and alerting on time-series data. It collects metrics from a variety of sources, including systems and applications, and stores the metrics data in a data store. The metrics data is then made available for analysis via a variety of tools. Prometheus has a flexible architecture and can be deployed on-prem or in the cloud. It is highly scalable and can support metrics from any type of application. It is widely used by enterprises to monitor their production systems.</p>
+
+
+
+<h2><strong>Task Runners / Orchestration Tools</strong></h2>
+
+
+
+<p>I am only putting one tool in this section because I believe that there is only one tool worth talking about. That DevOps tool is Ansible.  Ansible is like a swiss army knife of task orchestration and your ability to hop in and out of specific contexts is unparalleled.</p>
+
+
+
+<h3>Ansible</h3>
+
+
+
+<p>Ansible is a tool for automating tasks across multiple devices &#8211; from physical hosts to virtual machines and even cloud providers. It allows you to programmatically automate tasks and workflows, and it’s the most widely adopted open-source automation tool in the world. In fact, according to the 2017 State Of Configuration Management Survey, Ansible is the most widely used configuration management tool in enterprises. Unlike other tools, Ansible requires very little upfront investment — you can get started with a free download. Additionally, there are many ways to scale Ansible beyond a single node, including cloud services like AWS, Microsoft Azure, or Google Cloud Platform.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>If you are looking to orchestrate events across multiple machines, services, or clouds; I honestly do not know why you would choose anything else.  I have used ansible to manage 1000+ machines in a data center orchestrating events across servers, services, clouds, and physical equipment all while making the intentions of the orchestration very clear to future engineers.</p>
+
+
+
+<h2><strong>Conclusion</strong></h2>
+
+
+
+<p>DevOps is a set of practices that combines software development and operations to shorten the development life cycle and provide continuous delivery and faster time to market. It’s a culture shift that requires collaboration between Development and Operations teams. The tools used in DevOps can be customized to meet the unique needs of your organization. These tools can automate the software delivery process, provision and configure infrastructure, and deploy applications.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.valewood.org/essential-devops-tools/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Why are CI/CD Pipelines Part of DevOps?</title>
+		<link>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Mon, 05 Sep 2022 16:47:35 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<category><![CDATA[software]]></category>
+		<guid isPermaLink="false">/?p=312</guid>
+
+					<description><![CDATA[CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD. CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD.  CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up the process and ensure that your code is always in a ready-to-deploy state. There are a number of different tools that you can use for creating DevOps pipelines. You can think of it like an assembly line where technology components and quality checks and gates are passed on the way to production. A more apt analogy would be the assembly line in the manufacturing industry where physical products are made. Think of a car made of parts going down a conveyor belt to different stations where it is assembled. A DevOps pipeline is kind of like that. But instead of cars, DevOps pipelines are for software and applications. And instead of physical parts, they are for software components like source code and automated scripts.</p>
+
+
+
+<p>There are several key parts of the assembly line that must be considered. The key parts of a successful DevOps pipeline are all continuous; integration, delivery, testing, monitoring, feedback, and operations.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>The DevOps <s>Assembly Line</s> CI/CD Pipeline</h2>
+
+
+
+<h3>Continuous Integration</h3>
+
+
+
+<p>Integration is the process whereby all developers make their code changes available to other team members. This is often done using a source code repository and an automated build step. Developers, ops, qa, etc. all contribute to the same process which enhances the same product with everybody moving the same automobile down the assembly line together.</p>
+
+
+
+<p>Most organizations have a &#8220;git&#8221; repository that holds all the source code. This can be a private repository, shared publically, or a combination of both. It is commonly referred to as a &#8220;<a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a>&#8221; or &#8220;GitLab&#8221; repository. Utilizing feature branching strategies, build or feature flags, and a myriad of other code organization strategies; the code repository becomes the central hub for all work happening in and around the technology product.</p>
+
+
+
+<h3>Continuous Delivery</h3>
+
+
+
+<p>Delivery is the process whereby the integrated code changes are deployed to a test or production environment. It involves package or container creation, deployment, and feature enablement in a production environment. The overall scope of work is narrowed down from large unwieldy projects to something more complementary to a single bolt being added to a car or truck. In the physical world, those incremental steps are not only performed, but in our modern industrial assembly lines, the impact wrench which is utilized will measure and record the torque applied while the car is being assembled. Continuous delivery is no different. Code should always be ready to be deployed to production because every minor tweak, change, or enhancement is fully tested as it is added to the code repository.</p>
+
+
+
+<h3>Continuous Testing</h3>
+
+
+
+<p>Testing is the stage where the output of delivery is tested to ensure that it performs as expected in a testing environment. The gold standard here is to ensure that 100% of your application is fully tested on every single commit. Full coverage testing is often used when developing in an agile or Scrum environment, where developers will have small, incremental changes to the code. When modernizing an application where automated testing was not done from the start, you may see much lower percentages as you get your application up to spec. This is OK! Make sure testing is a focus and a breakpoint is added where it no longer becomes acceptable to not test changes.</p>
+
+
+
+<h3>Continuous Monitoring and Feedback</h3>
+
+
+
+<p>I am going to let you in on a secret, &#8220;humans are not robots&#8221;. This means that we are going to make mistakes. It is just part of the job. Mistakes should always be an acceptable part of the work done in the technology sector. Here is what should really drive people crazy instead of mistakes, not knowing when mistakes were made or when something fails. So, what can we do about it? Simply put, build some observability!</p>
+
+
+
+<p>Observability, a common NFR in technology, is the concept that not only should your technology have some up/down state monitoring behind it, but you should be able to also get good telemetry around the full set of business processes as well. Looking at some basic observability items such as activity counters, page performance and event timing, errors, failures, success, etc. you can build a set of observability around key metrics which tell you can line up to show the differences between how you expect your application to be performing versus the reality of how it is performing.</p>
+
+
+
+<p>When it comes to Continous Feedback, now that we are in this panacea of speedy and rigorously tested application deployments, we can get this observability feedback into the hands of our DevOps teams to ensure that appropriate changes are put into the application. Without good early feedback supported by a mountain of data, the team will be left guessing. Let’s be honest, everyone on the team needs this feedback. The DevOps team doesn’t need to know everything. They do need to know enough to assess whether or not the changes they make to the application are safe and meet business requirements.</p>
+
+
+
+<p>Regardless of whether you’re building a standalone product or a company, the key takeaway here is that you want to be thinking about observability in terms of the business process as a whole paired directly with technology. A car company is not going to set out to produce the next top-of-the-line pickup truck and end up with a Pontiac Aztec unless something goes very wrong while nobody is looking.</p>
+
+
+
+<h3>Continuous Operations</h3>
+
+
+
+<p>Everyone is responsible for operations. Product Managers, Developers, CEOs, Finance and Accounting, and Operations; everybody shares some role in the responsibility. When it comes to DevOps the role of operations is filtered directly into the central workstreams of the team. When an outage occurs, RCAs and post-mortems do not stop at a ceremonial activity. They are carried through to completion with real changes being put in place. Utilizing all of the aforementioned steps of the assembly line, the DevOps team is able to more quickly remediate issues that either show up due to mistakes or show up due to the growth of a system over time.</p>
+
+
+
+<p>One of the core things to remember about operations is that technology does not age well. The longer something is running in the wild, the frailer it will get. Think about it this way; if you never service your car, the engine will start to overheat, your tires will start to go bald, and you may run out of blinker fluid. As time goes on, the car gets more and more unreliable. This is true of any technology as well. Operations needs to be accessible to everyone, and it needs to be prioritized in a way that allows for a healthy mix of feature functionality and operations to coexist.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>In conclusion, DevOps Pipelines can be easily attributed to an assembly line of technology. Through a set of core principles, like always being ready for production, along with integrated technology which promotes testing, monitoring, feedback, and observability the pipeline approach enables organizations to achieve rapid time-to-market and continuous delivery of software products and services (and they can enjoy the velocity and quality benefits at a fraction of the cost).</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>How DevOps Can Improve Your Technology Stack</title>
+		<link>https://www.valewood.org/how-devops-can-improve-your-technology-stack/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sun, 04 Sep 2022 18:50:18 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[software]]></category>
+		<guid isPermaLink="false">/?p=304</guid>
+
+					<description><![CDATA[DevOps is a set of practices that combines software development and operations to improve the speed, quality, and reliability of software delivery. DevOps is about collaboration and communication between development and operations teams. In many instances, these 2 teams are&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>DevOps is a set of practices that combines software development and operations to improve the speed, quality, and reliability of software delivery. DevOps is about collaboration and communication between development and operations teams.  In many instances, these 2 teams are combined into one providing a shared focus and shared set of responsibilities.  The team becomes responsible for the entire lifecycle surrounding a set of technology.  The strategic themes for this team center around automating the software delivery process so that software can be delivered faster, with fewer errors. DevOps is a relatively new concept, but it’s quickly gaining popularity because it’s an effective way to improve the technology stack. In this article, we’ll explore how DevOps can improve your technology stack.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>What is DevOps?</h2>
+
+
+
+<p>DevOps is a software development methodology that seeks to automate the software delivery process. The goal of DevOps is to improve the speed, quality, and reliability of software delivery by integrating software development and operations.  This shared responsibility builds on a set of common goals which may have caused tension in the past.  Development teams have been traditionally focused on shipping new features while handing those features off to the operations team to run them.  The operations team was then responsible for running something they did not build and may have had additional considerations to improve overall quality.</p>
+
+
+
+<p>Combining Development and Operations together nets out a single team that can view the entire landscape of technology improving visibility which improves decision-making.  There is a misnomer out there in the industry which drives me bonkers, and that is the idea of a &#8220;Full Stack Engineer&#8221;.  I don&#8217;t actually know what that is, do you?  My best guess is that a hiring manager needs A LOT of skills and doesn&#8217;t have the budget to pay for them.  Instead, by building a &#8220;Full Stack Team&#8221; someone could yield all of the benefits of a &#8220;Full Stack Engineer&#8221; without overworking any individual contributor. </p>
+
+
+
+<p>By employing a more DevOps-focused delivery methodology, businesses can respond more quickly to new market opportunities, deliver products and services with less downtime, and provide more reliable customer experiences.  Everything you need to move large rocks uphill exists inside of a single team with a singular focus.</p>
+
+
+
+<h2>The Benefits of DevOps</h2>
+
+
+
+<p>If you’re wondering why you should invest time and resources in implementing a DevOps strategy, here are some of the key benefits of DevOps:</p>
+
+
+
+<ul><li>Increased speed and agility &#8211; DevOps can help businesses respond more quickly to new market opportunities.  DevOps enables businesses to adapt and respond to changes quickly, while also meeting their service-level agreements (SLAs). It also enables continuous deployment, which means businesses can release software more often.  By releasing more frequently, you’re able to respond quickly when the market changes.</li><li>Higher quality &#8211; DevOps is often associated with implementing automation. By using automation to build, test, and deploy applications, you can catch bugs and other quality issues before they make their way into production. Automation also allows you to test the quality of your application more frequently, which enhances your ability to identify and fix quality issues as soon as possible.</li><li>Better collaboration &#8211; DevOps is a very collaborative approach to software development. When everyone works together to solve problems, issues are identified and resolved more quickly. Plus, collaboration helps teams solve more complex problems, which leads to higher-quality work and more innovative products.</li><li>Reducing risk &#8211; DevOps helps teams identify and mitigate risks early in the software delivery chain, which reduces overall risk. If you’re able to identify risks related to security, architecture, or other factors, you can address them quickly and effectively. This helps your organization avoid costly problems, such as data breaches or system failures.</li><li>More reliable customer experiences &#8211; When customers use your product or service, they expect it to work. By integrating development and operations, DevOps helps teams identify and resolve issues quickly, which means fewer disruptions and fewer outages.</li></ul>
+
+
+
+<h2>Implementing DevOps in Your Organization</h2>
+
+
+
+<p>If you’re wondering how to get started with DevOps, there are three steps you can take to get your organization on the path toward success.</p>
+
+
+
+<ul><li>Build a strong culture of trust &#8211; Successful DevOps implementations depend heavily on trust. Your organization needs to trust that developers and operations personnel will do what’s best for the company. Operations staff needs to trust that developers have the skills and knowledge to deliver what’s needed. So, when you’re first implementing DevOps, focus on building a culture of trust.</li><li>Invest in automation &#8211; Automation is critical to successful DevOps implementations because it enables organizations to release more frequently without increasing risk. Automating application builds, deployments, and tests allows teams to complete tasks more quickly and with fewer errors. Automating environments, such-as infrastructure and application configuration, also helps you avoid hand-crafted environments.</li><li>Create a single source of truth &#8211; A single source of truth refers to a central location where all critical information is stored. It’s critical that all members of the organization have access to this information. By creating a single source of truth, you can create a culture of collaboration and knowledge sharing that’s crucial to DevOps implementation success.</li></ul>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you’ve seen, DevOps is a software development methodology that seeks to automate the software delivery process. The goal of DevOps is to improve the speed, quality, and reliability of software delivery by integrating software development and operations. DevOps has several benefits, including increased speed and agility, increased quality, better collaboration, reduced risk, and more reliable customer experiences. To implement DevOps in your organization, you first need to build a strong culture of trust, invest in automation, and create a single source of truth.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>DevOps Roll-up: August</title>
+		<link>https://www.valewood.org/devops-roll-up-august/</link>
+					<comments>https://www.valewood.org/devops-roll-up-august/#respond</comments>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Wed, 31 Aug 2022 17:00:00 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[Roll-up]]></category>
+		<category><![CDATA[day2ops]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[kubernetes]]></category>
+		<guid isPermaLink="false">/?p=52</guid>
+
+					<description><![CDATA[Below is a list of DevOps articles/sites that I discovered over the past month and found interesting. DevOps Roadmap First is a link to a DevOps roadmap. This is a more technological than a philosophical view of what kinds of&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Below is a list of DevOps articles/sites that I discovered over the past month and found interesting.</p>
+
+
+
+<h2>DevOps Roadmap</h2>
+
+
+
+<p>First is a link to a DevOps roadmap.  This is a more technological than a philosophical view of what kinds of skills can be acquired in order to perform DevOps activities when on a team that does delivery via DevOps practices.</p>
+
+
+
+<p><a href="https://roadmap.sh/devops" target="_blank" rel="noreferrer noopener">https://roadmap.sh/devops</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>Diagramming and Documentation</h2>
+
+
+
+<p>Next is a programmatic diagramming tool that allows you to set up diagrams for your implementations via Python.  One of the most difficult parts of any progressive technology implementation is ensuring that your materials remain up to date and available to new and existing team members.  By putting this information into the code repository, and by allowing those artifacts to become part of the build pipeline, you can get much closer to that idealistic view of well-developed and well-run technology by closing this particular </p>
+
+
+
+<p><a href="https://diagrams.mingrammer.com/" target="_blank" rel="noopener">https://diagrams.mingrammer.com/</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>DoorDash Outage</h2>
+
+
+
+<p>Next is an article that describes a postmortem from a <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> outage at DoorDash.  This article helps illustrate the importance of not only reading the docs but also expresses the importance of testing your various failure scenarios to ensure that your entire team understands the various failure mechanisms and their impacts on a normally operating system.</p>
+
+
+
+<p><a href="https://doordash.engineering/2022/08/09/how-to-handle-kubernetes-health-checks/" target="_blank" rel="noopener">https://doordash.engineering/2022/08/09/how-to-handle-kubernetes-health-checks/</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>Kubernetes Storage</h2>
+
+
+
+<p>Sticking with Kubernetes (and any flavor of Kubernetes you may be interested in); dealing with storage as part of your implementation OnPrem is a challenge.  This article does a great job of illustrating that challenge and what i means to anyone who has not yet made it to the cloud.  What I hope you take from this is, it is not impossible to accomplish and there are many solutions to this problem, but the downstream operational impacts of doing this are far broader than the initial implementation.</p>
+
+
+
+<p><a href="https://refaktory.net/blog/posts/self-hosted-kubernetes-solving-the-storage-problem" target="_blank" rel="noopener">https://refaktory.net/blog/posts/self-hosted-kubernetes-solving-the-storage-problem</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>Traffic Visualization</h2>
+
+
+
+<p>Visualizing what is happening in your cluster can be a challenge.  I have taken the strategy of implementing <a href="https://linkerd.io/" data-internallinksmanager029f6b8e52c="3" title="Linkerd" rel="nofollow noopener" target="_blank">Linkerd</a> into my lab cluster to support both mTLS along with traffic visualization, but that is not the only way to accomplish this.  Lots of teams are familiar with <a href="https://grafana.com/" data-internallinksmanager029f6b8e52c="1" title="Grafana" rel="nofollow noopener" target="_blank">Grafana</a> as their source of information, especially with the proliferation of something like <a href="https://prometheus.io/" data-internallinksmanager029f6b8e52c="2" title="Prometheus" rel="nofollow noopener" target="_blank">Prometheus</a>.  k8spacket is a tool that helps bring a version of that visualization directly into Grafana dashboards.</p>
+
+
+
+<p><a href="https://medium.com/@bareckidarek/tcp-packets-traffic-visualization-for-kubernetes-by-k8spacket-and-grafana-bb87cb106f30" target="_blank" rel="noopener">https://medium.com/@bareckidarek/tcp-packets-traffic-visualization-for-kubernetes-by-k8spacket-and-grafana-bb87cb106f30</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.valewood.org/devops-roll-up-august/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How to Build a DevOps Pipeline Geared for Stability?</title>
+		<link>https://www.valewood.org/devops-pipeline-geared-for-stability/</link>
+					<comments>https://www.valewood.org/devops-pipeline-geared-for-stability/#respond</comments>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Tue, 30 Aug 2022 02:47:33 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<guid isPermaLink="false">/?p=95</guid>
+
+					<description><![CDATA[Building a devops pipeline is easy. Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!! Well&#8230; not exactly. In my experience, this is where things usually start,&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Building a devops pipeline is easy.  Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!!  Well&#8230; not exactly.  In my experience, this is where things usually start, but will quickly lead to new and additional churn in a delivery cycle which was never intended.  Sometimes that churn goes completely unrecognized simply because the thought of doing DevOps is far better than the idea of not doing DevOps.  Either way, do yourself a favor and take a step back to look into how intentional design, intentional component selection, along with care and feeding can get you into a spot where your pipelines work for you instead of you working for your pipelines.</p>
+
+
+
+<p>In case you are wondering, &#8220;what is a pipeline in DevOps&#8221;?  A pipeline in DevOps is centered around the idea of ensuring code is continuously delivered which in turn means the business is seeing a continuous flow of value.  There are many DevOps pipeline tools on the market, but I want to take step back and discuss more of the planning and design side of things before diving directly into tooling.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Intentional Design</h2>
+
+
+
+<p>Deploying Jenkins, giving it some keys, giving it a job to do, and then finally pointing at production will yield a short-term win with long-term consequences.  While I believe that most aspiring DevOps engineers will start here, more intentional design should be considered when building a pipeline.</p>
+
+
+
+<h3>Who are the consumers of your DevOps Pipeline?</h3>
+
+
+
+<p>Consider who is going to be consuming the pipeline that is being created.  Some organizations want manual approvals, some want automated approvals, some are a bit more cowboy and approvals are not part of the conversation.  Sometimes a QA team, project/program management, developers, executives, or the lunch lady could be consumers of your pipeline.  Consider them when designing what you will use for delivery.</p>
+
+
+
+<h3>What are the goals of your DevOps Pipeline?</h3>
+
+
+
+<p>Not everyone is going to agree here, but when I am doing a design, I start by conceptualizing my end state much like pointing a ship in the direction that I think I want to go.  This allows me to get more eyes on the concept that I am building toward while pulling in feedback from interested stakeholders.  On the back of that work, I will take a step back and try to understand the strategic themes and goals of the pipeline to get more broad alignment from the consumers and stakeholders.  </p>
+
+
+
+<p>Just because someone tells you that they want something, doesn&#8217;t mean that you heard them correctly or they fully understood what they are asking for.  Try to take time and dissect their request and either align it to your design walking the requestor through how your solution solves their needs, or reframe your specific thinking of the problem to accommodate their request.</p>
+
+
+
+<h3>Is there a logical flow you can follow?</h3>
+
+
+
+<p>I like to map out my process as illustrated below.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img width="1024" height="204" src="https://www.valewood.org/wp-content/uploads/2022/08/devops-pipeline-flowchart-1024x204.png" alt="DevOps Pipeline Flowchart" class="wp-image-273" srcset="/wp-content/uploads/2022/08/devops-pipeline-flowchart-1024x204.png 1024w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-300x60.png 300w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-768x153.png 768w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1536x306.png 1536w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-2048x409.png 2048w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1920x383.png 1920w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1170x233.png 1170w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-585x117.png 585w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+
+
+<p>By taking the time to understand the ins and outs of your pipeline, the decision tree that gets created, necessary supplemental steps, and points of failure you can design a logical flow that works across many different arenas.  A single logical flow may work well to get code into a development environment, but do you really need to redo each and every step to move code to the next environment or can you adjust your logical flow to be less cumbersome?</p>
+
+
+
+<h2>Intentional Component Selection</h2>
+
+
+
+<p>Normally I am not a fan of Jenkins.  I believe that it is allowing for quick and dirty instances of automation to be put out into the market in a way that does not promote stability.  Don&#8217;t get me wrong, Jenkins is an interesting tool if you look at it as a dumb task runner, but is a pretty poor tool if you are really taking automation seriously.  Intentional component selection is a topic we should spend some time on due to the technology strongholds that are out in the market today.</p>
+
+
+
+<h3>So, who are the consumers of your DevOps Pipeline?</h3>
+
+
+
+<p>No no, this section is not a duplicate.  When choosing your components, you need to consider your consumers.  Luckily, most of your consumers in this space are going to be technology focused so we can hopefully ignore non-technical actors for the most part.  If your team is primarily composed of PHP developers, it is probably not a good idea to try and pull in something which is well outside of the PHP ecosystem.  Stick with tools that are similar to other existing tools in your environment.</p>
+
+
+
+<p>Providing good feedback to your engineers is also something you should pay attention to.  If your pipeline does happen to break for one reason or another, and the error messages are cryptic, you will end up in the &#8220;You built it you own it&#8221; paradigm.  There is no democratization of the pipeline out to consumers to facilitate care and feeding, which we will discuss later.  A good DevOps pipeline should support your engineers, not be an exercise in decoding the enigma machine.</p>
+
+
+
+<h3>Perfection is the enemy of progress!</h3>
+
+
+
+<p>Component selections can be a long drawn-out process.  Spending too much time trying to decide will lead to the projects around you getting too far ahead of your efforts causing a lot of undo stress and rework.  It is better to pick something and prove why it won&#8217;t work over time instead of trying to find the magical purple unicorn which solves 200% of use cases.</p>
+
+
+
+<h3>Clearly defined single responsibilities!</h3>
+
+
+
+<p>To fight perfection shutting down progress, try to limit your components to single responsibilities.  You can really apply <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design" target="_blank" rel="noopener">SOLID OOD</a> can really be applied anywhere in technology.  By limiting your components to a single responsibility, you can set up your components as interfaces with each other.  Component 1 expects this input and provides this output.  The magic between input and output can be as complex as you want it to be as long as the inputs and outputs are consistent.  You can then feed the outputs of component 1 into the inputs of component 2.  Continue this pattern for N components.</p>
+
+
+
+<p>What you end up with is a set of &#8220;jobs&#8221; which facilitate specific tasks.  Each of these jobs is testable, improvable, observable, and most importantly; your jobs are understandable!  If you want to break free from &#8220;you built it, you own it&#8221; then everything in your stack should be something that can be handed off to another flesh and blood human being who can pick up your work and run with it.</p>
+
+
+
+<h2>Care and Feeding</h2>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium is-resized"><img src="https://www.valewood.org/wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-200x300.jpg" alt="Care and Feeding (Not a real picture of the Ron Popeil Rotisserie)" class="wp-image-278" width="133" height="198" srcset="/wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-683x1024.jpg 683w, /wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-scaled.jpg 1707w" sizes="(max-width: 133px) 100vw, 133px" /></figure></div>
+
+
+<p>Any technology anywhere will need care and feeding.  There is nothing that can be built and just runs like a perpetual motion machine.  You will need to consider the care and feeding of your DevOps pipeline.  Some of the care and feeding will be simple.  Password rotations, library updates, edge case fixes, etc. can all be accomplished as part of the daily flow of work.  More complex care and feeding such as component replacement, break glass in case of emergency, security hardening, etc. will need to be planned into your delivery lifecycle planning.  </p>
+
+
+
+<p>As a quick side tangent, when the term care and feeding comes up as part of normal conversation, does anyone else hear Ron Popeil and his overly excited audience say &#8220;Set it and forget it&#8221;?</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you can see, a stable DevOps pipeline will consist of many steps which all feed off of each other ending up in a GitOps-style deployment pipeline.  I believe that the magic in any well-developed, well-set-up DevOps pipeline has a foundation in having a clear definition of your intentions, and intentional components which provide specific functionality, and each component needs attention + care and feeding like any other technology stack that is being supported.  Not every pipeline needs to be as complex, or overly simplistic depending on your frame of reference since there is no one size fits all solution to robust delivery.  Start small, but be intentional and you too can have a DevOps Pipeline Geared for Stability!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.valewood.org/devops-pipeline-geared-for-stability/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

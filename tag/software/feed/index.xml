@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/software/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 21 Sep 2022 22:13:35 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 22 Sep 2022 22:12:05 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,7 +28,7 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>Which language should I learn for DevOps?</title>
+		<title>Which programming language should I learn as a DevOps engineer?</title>
 		<link>https://www.valewood.org/devops-languages/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -116,7 +116,7 @@
 
 
 
-<h2>Python</h2>
+<h2>DevOps with Python</h2>
 
 
 
@@ -156,7 +156,7 @@
 
 
 
-<h2>Golang</h2>
+<h2>DevOps with Golang</h2>
 
 
 
@@ -211,7 +211,7 @@
 
 
 
-<h2>Ruby</h2>
+<h2>DevOps with Ruby</h2>
 
 
 
