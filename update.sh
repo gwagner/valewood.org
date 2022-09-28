@@ -16,13 +16,15 @@ rm -rf ./new-site/
 
 # Add missing JS
 echo "Download missing JS files"
-grep -ohP "\"([a-z0-9A-Z\.\-\_]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor/assets/js/{} -s -S -f -w %{url_effective} -o wp-content/plugins/elementor/assets/js/{}
-grep -ohP "\"([a-z0-9A-Z\.\-\_]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor-pro/assets/js/{} -s -S -f -w %{url_effective} -o wp-content/plugins/elementor-pro/assets/js/{}
+grep -ohP "\"([a-z0-9A-Z\.\-\_]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor/assets/js/{} -s -S -f -w "%{url_effective}\n" -o wp-content/plugins/elementor/assets/js/{}
+grep -ohP "\"([a-z0-9A-Z\.\-\_]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor-pro/assets/js/{} -s -S -f -w "%{url_effective}\n" -o wp-content/plugins/elementor-pro/assets/js/{}
 
 # Download 404 page
 echo "Download 404 page"
 rm -f ./404.html
 curl -k https://www.lab.valewood.org/404.html -o 404.html
+grep -ohP "(autoptimize[^\"\'\/]+?.js)" 404.html | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/cache/autoptimize/js/{} -s -S -f -w "%{url_effective}\n" -o wp-content/cache/autoptimize/js/{}
+grep -ohP "(autoptimize[^\"\'\/]+?.css)" 404.html | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/cache/autoptimize/css/{} -s -S -f -w "%{url_effective}\n" -o wp-content/cache/autoptimize/css/{}
 
 # Fix URLs
 echo "Correct funky //www.valewood.org formatting"
