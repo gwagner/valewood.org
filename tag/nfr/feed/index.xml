@@ -44,7 +44,7 @@
 					<description><![CDATA[One of the core fundamentals of DevOps is to ensure that deployments are fully automated. The technology stack that you are supporting should be fully production ready at all times. This means that DevOps does not stop at IaC automation.&#8230;]]></description>
 										<content:encoded><![CDATA[
 <div class="wp-container-1 wp-block-group"><div class="wp-block-group__inner-container">
-<p>One of the core fundamentals of DevOps is to ensure that deployments are fully automated.  The technology stack that you are supporting should be fully production ready at all times. This means that DevOps does not stop at IaC automation.  The full SDLC needs to be constructed in such a way that it enables more of a GitOps model rather than a series of disconnected pieces.</p>
+<p>One of the core fundamentals of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> is to ensure that deployments are fully automated.  The technology stack that you are supporting should be fully production ready at all times. This means that DevOps does not stop at IaC automation.  The full SDLC needs to be constructed in such a way that it enables more of a GitOps model rather than a series of disconnected pieces.</p>
 
 
 
