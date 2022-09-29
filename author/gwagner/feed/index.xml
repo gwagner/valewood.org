@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Thu, 22 Sep 2022 22:12:05 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 28 Sep 2022 13:16:54 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -528,9 +528,13 @@
 				<category><![CDATA[DevOps]]></category>
 		<guid isPermaLink="false">/?p=330</guid>
 
-					<description><![CDATA[DevOps skills include a variety of disciplines that range from system administration to software development. This article provides an overview of the skills that are relevant to DevOps.]]></description>
+					<description><![CDATA[DevOps requires a variety of skills and competencies to realize the full benefits of the methodology. The most pertinent DevOps skills are needed in the disciplines of system administration, security, software development, delivery automation, and quality assurance. It is not&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> requires a variety of skills and competencies to realize the full benefits of the methodology.  The most pertinent DevOps skills are needed in the disciplines of system administration, security, software development, delivery automation, and quality assurance. It is not feasible or practical for a single person to accomplish all these things quickly as a result. We will take a look at some of the skills that are important in DevOps in different areas to provide a little more focus. If you are a business leader looking to improve your team&#8217;s performance, this is an excellent starting point.</p>
+<p></p>
+
+
+
+<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> requires a variety of skills and competencies to realize the full benefits of the methodology. The most pertinent DevOps skills are needed in the disciplines of system administration, security, software development, delivery automation, and quality assurance. It is not feasible or practical for a single person to accomplish all these things quickly as a result. We will take a look at some of the skills that are important in DevOps in different areas to provide a little more focus. If you are a business leader looking to improve your team&#8217;s performance, this is an excellent starting point.</p>
 
 
 

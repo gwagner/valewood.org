@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sun, 25 Sep 2022 16:55:42 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 29 Sep 2022 02:38:59 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -1472,13 +1472,21 @@
 		<category><![CDATA[devops]]></category>
 		<guid isPermaLink="false">/?p=14</guid>
 
-					<description><![CDATA[A very common question that I see over on Reddit is &#8220;How do I do the DevOps?&#8221; or &#8220;How do I get better at DevOps?&#8221;. I think that this question fails to meet the fundamental understanding of what DevOps really&#8230;]]></description>
+					<description><![CDATA[A very common question that I see over on Reddit is “How do I do the DevOps?” or “How do I get better at DevOps?”. I think that this question fails to meet the fundamental understanding of what DevOps really&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p>A very common question that I see over on Reddit is &#8220;How do I do the <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a>?&#8221; or &#8220;How do I get better at DevOps?&#8221;.  I think that this question fails to meet the fundamental understanding of what DevOps really is.</p>
+<p>A very common question that I see over on Reddit is “How do I do the <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a>?” or “How do I get better at DevOps?”. I think that this question fails to meet the fundamental understanding of what DevOps really is.</p>
 
 
 
-<p>On its face; DevOps blogs, articles, YouTube videos, etc. will classify DevOps as a series of tools that are composed to do some form of IaC or Configuration Management.  While this is a small component of DevOps, it is not the whole story.  DevOps is more about enabling the flow of delivery than it is about any singular or composition of tools.  Basic human nature will tell us that we always want to get more for less, and DevOps is the &#8220;branding&#8221; behind that idea in technology.  I have more to come on this topic down below.  With this basic understanding, I want to get into the meat of the issue first.</p>
+<p>On its face; DevOps blogs, articles, YouTube videos, etc. will classify DevOps as a series of tools that are composed to do some form of infrastructure as code or configuration management. While this is a small component of DevOps, it is not the whole story.</p>
+
+
+
+<p>DevOps is more about enabling delivery flow than it is about any singular tool or composition of tools. Basic human nature will tell us that we always want to get more for less, and DevOps is the “branding” behind that idea in technology. I have more to come on this topic down below.</p>
+
+
+
+<p>With this basic understanding, I want to get into the meat of the issue first.</p>
 
 
 <p>
@@ -1492,31 +1500,197 @@
 
 
 
-<h2 style="font-style:normal;font-weight:700">The Good, The Bad, and The Jaded</h2>
+<h2><strong>How Do I Practice DevOps?</strong></h2>
 
 
 
-<p>The responses to this question are always interesting.  The most common responses come from the husks of talented yet jaded idealists who have had every ounce of their positivity sucked out by their corporate overlords&#8230; or maybe they don&#8217;t get enough hugs on a regular basis.  Either way, I believe that this makes it difficult for someone to break into a space that interests them.  So, let&#8217;s look at some versions of what DevOps is first, and then let&#8217;s talk about how you can practice it!</p>
+<p>The responses to this question are always interesting. The most common responses come from the husks of talented yet jaded idealists who have had every ounce of their positivity sucked out by their corporate overlords… or maybe they don’t get enough hugs on a regular basis. Either way, I believe that this makes it difficult for someone to break into a space that interests them. So, let’s look at some versions of what DevOps is first, and then let’s talk about how you can practice it!</p>
 
 
 
-<p>DevOps ensures that the flow of value (generally custom software) is enhanced to be faster, more reliable, and continuously deployable.  Knowing that the technology space is a vast expanse with a nearly infinite number of ways to accomplish this, what can an aspiring DevOps engineer do to break into this space?  I think the simplest answer is to do your research on delivery patterns more than specific technologies.</p>
+<p>DevOps ensures that the flow of value (generally custom software) is enhanced to be faster, more reliable, higher quality, and continuously deployable. Knowing that the technology space is a vast expanse with nearly infinite ways to accomplish this, what can an aspiring DevOps engineer do to break into this space? I think the simplest answer is to do your research on delivery patterns more than specific technologies.</p>
 
 
 
-<p>Technology delivery is done by humans with preconceived ideas about what is or is not important when it comes to things like quality delivery.  This means that there is no single &#8220;Best&#8221; or &#8220;Right&#8221; way to do DevOps.  Any technology which is put in place must work for the people who are consuming it.  Think about it like front-end design on a website.  I personally don&#8217;t really care for flashy front-end designs which are loaded to the hilt with highly stylized graphics.  I enjoy a much cleaner and minimalist aesthetic.  This means that I am going to gravitate toward websites that present that aesthetic to me and I will generally abandon a website that does not.  You can think about how you accomplish a DevOps flow in exactly the same way.  Something which is overly complex with too many rules or considerations may not play well with the consumers of your pipeline where it may be just what the doctor ordered with other teams.  This is why understanding and researching delivery patterns is so important to start with.</p>
+<h3>Deliver Software for Humans</h3>
 
 
 
-<p>The next step I would take is to identify a use case that you are passionate about.  Spend some time looking at a variety of tooling which can help take that use case and put it into a CI/CD stance.  Something like <a href="https://pages.github.com/" data-internallinksmanager029f6b8e52c="11" title="Github Pages" rel="nofollow noopener" target="_blank">GitHub pages</a> is a really good starting point.  Make yourself a generic website talking about yourself and your skills.  This will help us understand the fundamental flow of releasing a piece of software out into the wild.  From there, start looking at adding page stats to your Github Pages profile which requires calculation in a build pipeline.  Add tests, add SCSS/SASS compilation, push some images to cloud storage and link them in, etc.  All of these steps help illustrate the complexity of flow at an extremely minimal cost if not free depending on what kinds of complexity you want to add.  </p>
+<p>Technology delivery is done by humans with preconceived ideas about what is or is not important when it comes to things like quality delivery. This means that there is no single “Best” or “Right” way to do DevOps.</p>
 
 
 
-<p>Once you have all of that in place, think about what you are doing from a market competitiveness standpoint and take a hard pivot.  Maybe this is replacing your site&#8217;s themes or layouts.  Maybe this is moving from Github pages to <a href="https://www.digitalocean.com/" data-internallinksmanager029f6b8e52c="5" title="DigialOcean" rel="nofollow noopener" target="_blank">DigitalOcean</a> running on a server using configuration management.  This could also be containerizing your pipeline into a <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> deployment.  Any/all of these activities are what businesses do all of the time to stay relevant in the market.  By understanding what is an important inflow of delivery, you can lean out your pipelines and ensure that they work well for the pivot you are looking to make.  </p>
+<p>Any technology that is put in place must work for the people who are consuming it. Think about it similarly to front-end design on a website. I personally don’t really care for flashy front-end designs which are loaded to the hilt with highly stylized graphics. I enjoy a much cleaner and minimalist aesthetic. This means that I am going to gravitate toward websites that present a more clean aesthetic to me and I will generally abandon a website that does not.</p>
 
 
 
-<p>Lastly,  don&#8217;t be afraid to get a peer review from someone.  Because DevOps is about flow, assume that your way of thinking about a problem is NOT the best way to approach it.  By getting a peer review you are getting a more global view of what is or is not important to potential consumers of your delivery flow.  Their feedback may be around adding features, reducing complexity, or pointers to more standard ways to approach a problem.  All of that is good and should not be taken personally.</p>
+<p>You can think about how you accomplish a DevOps flow in exactly the same way. Something which is overly complex with too many rules or considerations may not play well with the consumers of your pipeline where it may be just what the doctor ordered with other teams. This is why understanding and researching delivery patterns are so important to start with.</p>
+
+
+
+<h3>Find your Passion</h3>
+
+
+
+<p>The next step is to identify a use case that you are passionate about. Spend some time looking at a variety of different automation tools that can help take the identified use case and get it into a continuous integration and continuous delivery model.</p>
+
+
+
+<p>Utilizing a service to kickstart your effort, like <a href="https://pages.github.com/" data-internallinksmanager029f6b8e52c="11" title="Github Pages" rel="nofollow noopener" target="_blank">GitHub pages</a>, is a really good starting point. Open up your favorite editor or pull down some templates to create a simple static website. Keep it really basic and talk about yourself and your skills as the primary content. Follow the GitHub pages <a target="_blank" rel="noreferrer noopener" href="https://docs.github.com/en/pages/quickstart">Quickstart guide</a> to get your site launched.</p>
+
+
+
+<p>This will help us understand the fundamental flow of releasing a piece of software out into the wild. This will also help build some baseline skills around version control systems.</p>
+
+
+
+<h3>Software Delivery Process</h3>
+
+
+
+<p>Once you have a technology project that is yours, start to add some flair to your pages. Integrate a build process that starts to optimize your content to improve metrics like <a target="_blank" rel="noreferrer noopener" href="https://pagespeed.web.dev/">Google PageSpeed</a>. Here are some example activities you could perform:</p>
+
+
+
+<ul><li>Utilize SCSS or SASS to build beautiful javascript</li><li>Push your images to optimizers like <a target="_blank" rel="noreferrer noopener" href="https://shortpixel.com/">Shortpixel</a> to boost</li><li>Minify HTML, Javascript, and CSS for faster loading times</li><li>Inject tracking code like <a target="_blank" rel="noreferrer noopener" href="https://analytics.google.com/">Google Analytics</a> to your website</li></ul>
+
+
+
+<p>All of these activities require some kind of intermediate step that can have a positive impact on your delivery flow. But, like any software development project, they can also introduce bugs that will have a negative impact. By working through these scenarios, you will build an understanding of the soft edges of software development techniques and gain more skills as a DevOps engineer.</p>
+
+
+
+<h3>Make a Pivot</h3>
+
+
+
+<p>Once you have all of that in place, think about what you are doing from a market competitiveness standpoint and take a hard pivot. GitHub pages may be an elegant starting point, but there is not a huge swath of companies looking for specific experience there.</p>
+
+
+
+<p>The industry is going to either be hosting its content on servers or containers. Since you already have a continuous delivery pipeline setup, it is probably time to start looking at continuous integration. Containers are a great way to practice the skill of building integrations between technologies.</p>
+
+
+
+<p>Start by installing a tool like Docker onto your workstation. From there, pull down a container image from <a target="_blank" rel="noreferrer noopener" href="https://hub.docker.com/">Docker Hub</a>. Add a Dockerfile to your code repo which will be used to run a container build. Once packaged, you should be able to run your container and see your website running live right from your computer. This is also the foundation of learning and understanding configuration management techniques.</p>
+
+
+
+<h3>Develop Automated Testing</h3>
+
+
+
+<p>The previous steps have taken you from ground zero to a continuous integration pipeline running directly on your workstation. Pretty cool right? The problem is, the steps have only covered software development teams and infrastructure teams but we have not discussed quality or quality assurance teams yet.</p>
+
+
+
+<p>I would be willing to make an assumption that the website you have running in your container right now does not look nearly as good as what is running out on GitHub pages. Utilizing tools built right into the web browser like &#8220;Web Developer Tools&#8221;, you may find some interesting 404s being introduced into your site that used to just work.</p>
+
+
+
+<p>Part of any good continuous integration pipeline is automated testing. Any form of testing can be scary at first to anyone who has not done it in the past. You can start off pretty simply either by picking up some automated tools or by simply writing bash scripts with curl to validate the assets on your website are loading as expected.</p>
+
+
+
+<p>If you really want to get fancy here, you could run a <a target="_blank" rel="noreferrer noopener" href="https://www.selenium.dev/">Selenium</a> in a second Docker container to supercharge your testing efforts. Regardless of the tool, you should be focused on building an automated process that you can ultimately trust to work and provide real results. Work on quelling some of the initial noise and false positives.</p>
+
+
+
+<h3>Dabble in Some Software Development</h3>
+
+
+
+<p>This website is a combination of a few different technologies. I start by doing WYSIWYG editing in WordPress. From there, i am using a plugin to generate static content that can be pushed to a <a target="_blank" rel="noreferrer noopener" href="https://github.com/gwagner/valewood.org">GitHub Repository</a>. From there, a few build pipeline steps need to happen for this site to finally make its way to <a target="_blank" rel="noreferrer noopener" href="https://pages.cloudflare.com/">Cloudflare Pages</a>. One of those steps is to build a search index.</p>
+
+
+
+<p>Google itself is a HUGE search index running on tens of thousands of servers, so how does this website do it? It actually isn&#8217;t that complicated, and I am using tools that are already in the ecosystems discussed earlier in this article.</p>
+
+
+
+<p>In the linked repository, there is a script, build_index.mjs, which is fired off as part of build.sh. That script is a NodeJS script that is responsible for finding all of the static articles on the site, reading them, and creating search_index.js and search_previews.js files at the root of the website. Those files can then be served up to <a target="_blank" rel="noreferrer noopener" href="https://lunrjs.com/">Lunr.js</a> on a custom-built landing SERP page effectively giving my website a micro Google.</p>
+
+
+
+<p>By integrating software development processes into my project, and while still hosting a 100% static blog site, I am able to offer some rich functionality without the cost, operations teams and security teams/risks that hosting on an EC2 might bring with it.</p>
+
+
+
+<h3>Find a New Hosting Provider</h3>
+
+
+
+<p>As mentioned before, there is not a huge market for DevOps engineers who are really great at GitHub pages. This means that you will need some exposure to other hosting providers. This is where this article is going to get a little bit tricky because everything mentioned above has been free. You could technically host your containerized website application from your home internet if you would like, but I feel that defeats the point of getting relevant exposure and practice.</p>
+
+
+
+<p><a href="https://www.digitalocean.com/" data-internallinksmanager029f6b8e52c="5" title="DigialOcean" rel="nofollow noopener" target="_blank">DigitalOcean</a> can be a really good and cheap hosting provider for anyone just starting out. You can get a virtual machine for about the same price as a cup of coffee. Start by pushing your container to DockerHub. From there, log in to your virtual machine from DigitalOcean and install docker. Pull your image and turn it on. Depending on how things are set up, you may need to either open a firewall port or do some port forwarding, but you should have a running and fully tested website ready for the world to consume.</p>
+
+
+
+<p>If you really want to flex, DigitalOcean also offers <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> hosting for roughly the cost of a foot long from Subway per month. More and more of the market is ending up with Kubernetes as a great way to orchestrate both infrastructure and code changes under a single definable schema.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h3>Inject some Configuration Management</h3>
+
+
+
+<p>Configuring resources can be a fairly daunting task. First, you need to configure resources in your providers environment. DigitalOcean does make this pretty easy by providing out of the box integration code.</p>
+
+
+
+<p>Next, you will need to configure your virtual instance. There is generally some kind of key exchange that you will need to do here to ensure it can be an anonymous process. Plese note, do not ever put your private keys in your version control system.</p>
+
+
+
+<p>Last, you will need to be in a position where you can treat your server like cattle instead of a pet. The pancea of DevOps is immutable infrastructure supported by infrastructure as code. This means that you should be building the capability of being able to delete your server and completely restore your environment in a single action.</p>
+
+
+
+<h3>Continuous Delivery (CI/CD)</h3>
+
+
+
+<p>To really tie all of this into a nice neat bow, the next step should center around continuous delivery and triggered actions. Your code lives in GitHub, your website lives in DigitalOcean, and you build containers on your workstation. Wouldn&#8217;t it be great to cut your workstation out of the mix? You are really not that far away from achieving that.</p>
+
+
+
+<p>An emerging trend in the industry is called GitOps. There are again automation tools you can utilize for this, but let&#8217;s start really simple. DigitalOcean has a really great <a target="_blank" rel="noreferrer noopener" href="https://www.digitalocean.com/community/tech_talks/deploying-to-digitalocean-with-github-actions">guide</a> on how to set up this deployment process in detail.</p>
+
+
+
+<h3>Continuous Monitoring</h3>
+
+
+
+<p>Any DevOps engineer worth their weight is going to ensure that their solutions are monitored and available. Right now, the risk is pretty low that your static website running on a containerized web server is going to have an availability concern, but it is good to get practice in this space.</p>
+
+
+
+<p>To get into the practice of utilizing DevOps tools to set up automated monitoring, there are some great services out there that either have free trials or are very inexpensive. On my personal projects, I have integrated into <a target="_blank" rel="noreferrer noopener" href="https://updown.io/api">Updown.io</a>&#8216;s API to automated testing of my sites availability. I have then used cron jobs to hit the API and pull back downtime information. It is not the most elegant solution in the world, but it has helped solidify some of the concepts around monitoring.</p>
+
+
+
+<p>If you are willing to spend the money, services like <a target="_blank" rel="noreferrer noopener" href="https://www.pingdom.com/">Pingdom</a> are also great. They will give you continuous performance monitoring of your site.</p>
+
+
+
+<h3>Peers are a Great Resource</h3>
+
+
+
+<p>Lastly, don’t be afraid to get a peer review from someone. Because DevOps is about flow, assume that your way of thinking about a problem is NOT the best way to approach it. By getting a peer review you are getting a more global view of what is or is not important to potential consumers of your delivery flow. Their feedback may be around adding features, reducing complexity, or pointers to more standard ways to approach a problem. All of that is good and should not be taken personally.</p>
 
 
 
@@ -1524,35 +1698,45 @@
 
 
 
-<p>So, what is flow of delivery?  Flow of delivery is the idea that you should be able to quantify all of the steps from the second a task is started through the time that thing is released for consumption by the market.  In software, this generally means: The time it takes from when <a href="https://www.imdb.com/title/tt0151804/characters/nm0726223" target="_blank" rel="noreferrer noopener">Tom Smykowski</a> receives a request to the time in which it is available to the customer.</p>
+<p>So, what is the flow of delivery? The flow of delivery is the idea that you should be able to quantify all of the steps from the second a task is started through the time that thing is released for consumption by the market. In software, this generally means The time it takes from when <a target="_blank" rel="noreferrer noopener" href="https://www.imdb.com/title/tt0151804/characters/nm0726223">Tom Smykowski</a> receives a request to the time in which it is available to the customer.</p>
 
 
 
-<p>In the antiquated world of slow monolithic SDLC practices, you could have any number of double-digit touchpoints all leading to a monolithic release of software going out for consumption.  Each of those touch points continues to increase the cost and reduce the agility of the specific work product being produced.  This is unavoidable if you are not interested in optimizing that SDLC process.</p>
+<p>In the old world of slow monolithic SDLC practices, you could have any number of double-digit touchpoints all leading to a monolithic release of software going out for consumption. Each of those touch points continues to increase the cost and reduce the agility of the specific work product. This is unavoidable if you are not interested in optimizing that SDLC process.</p>
 
 
 
-<p>In a DevOps delivery model, Tom should be able to bring in a request which is then broken down into smaller continuously deployable units which are able to make it to production once committed.  This generally leads to a shift in overall spending from individual touchpoints over to automated testing.  Customers can get their value much sooner by having smaller portions of their solution delivered to them in real time.  They are also able to provide feedback which makes the inevitable pivot much more achievable.</p>
+<p>In a DevOps delivery model, Tom should be able to bring in a request which is then broken down into smaller continuously deployable units which are able to make it to production once committed. This generally leads to a shift in overall spending from individual touchpoints over to automated testing. Customers can get their value much sooner by having smaller portions of their solution delivered to them in real time. They are also able to provide feedback which makes the inevitable pivot much more achievable.</p>
 
 
 
-<p>What I believe is generally missed when making this calculated decision of a change from monolithic SDLC over to DevOps is simply this: Saying you want DevOps doesn&#8217;t work when the team that is delivering your product does not work in lock step with the same goals to accomplish DevOps.  If DevOps was a single-faceted practice, then it would be called Dev or Ops, not DevOps.  The automation, principles, technology, and processes must work for the team which is delivering the solution.  There is NO &#8220;one size fits all&#8221; solution for DevOps.  As leaders, we must enable people to do well and people will often astound us.  If we expect technology to make people better, then we failed before we started.</p>
+<p>What I believe is generally missed when making this calculated decision to change from monolithic SDLC over to DevOps is simply this: Saying you want DevOps doesn’t work when the team delivering your product does not work in lock step with the same goals to accomplish DevOps. If DevOps was a single-faceted practice, then it would be called Dev or Ops, not DevOps. The automation, principles, technology, and processes must work for the team which is delivering the solution. There is NO “one size fits all” solution for DevOps. As leaders, we must enable people to do well and people will often astound us. If we expect technology to make people better, then we failed before we started.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
 
 
 
-<h2>So, Is DevOps Easy to Learn?</h2>
+<h2>Is DevOps Easy to Learn?</h2>
 
 
 
-<p>This question implies that there is a potential mastery of DevOps.  I believe that the idea of DevOps is evolving and changing rapidly which does make it a bit of a moving target.  You can compartmentalize DevOps into some small chunks like building a simple release pipeline which does make DevOps very easy to learn. </p>
+<p>This question implies that there is a potential mastery of DevOps. I believe that the idea of DevOps is evolving and changing rapidly which does make it a bit of a moving target. You can compartmentalize DevOps into some small chunks like building a simple release pipeline which does make DevOps very easy to learn.</p>
 
 
 
-<p>I also believe that DevOps takes a mindset shift from focusing on getting a task done to focusing on getting something released.  The better you can get at breaking work down into chunks, accomplishing working through those chunks, and quickly getting them released to receive feedback and criticisms all of which ladders up to meeting a high standard of quality; the better handle you are getting on DevOps.  If you are focused on answering the question &#8220;how does technology X do a thing&#8221;, there is room for that but, your DevOps journey is going to take a bit longer.  </p>
+<p>I also believe that DevOps takes a mindset shift from focusing on getting a task done to focusing on getting something released. The better you can get at breaking work down into chunks, accomplishing working through those chunks, and quickly getting them released to receive feedback and criticisms all of which ladders up to meeting a high standard of quality; the better handle you are getting on DevOps. If you are focused on answering the question “how does technology X do a thing”, there is room for that but, your DevOps journey is going to take a bit longer.</p>
 
 
 
-<p>If you start to expand even further into aspects like the vast array of tools that the <a href="https://www.cncf.io/" data-internallinksmanager029f6b8e52c="12" title="CNCF" rel="nofollow noopener" target="_blank">CNCF</a> has to offer, then you are going to be learning and growing for a very long time.  I believe that the simplest jumping-off point on a DevOps journey is to build some simple deployment pipelines from something like GitHub and GitHub Pages or <a href="https://pages.cloudflare.com/" data-internallinksmanager029f6b8e52c="10" title="Cloudflare Pages" rel="nofollow noopener" target="_blank">CloudFlare Pages</a> utilizing some scripting and git-flow to get used to the nuances that are required when diving more fully into DevOps.</p>
+<p>If you start to expand even further into aspects like the vast array of tools that the <a href="https://www.cncf.io/" data-internallinksmanager029f6b8e52c="12" title="CNCF" rel="nofollow noopener" target="_blank">CNCF</a> has to offer, then you are going to be learning and growing for a very long time. I believe that the simplest jumping-off point on a DevOps journey is to build some simple deployment pipelines from something like GitHub and GitHub Pages or <a href="https://pages.cloudflare.com/" data-internallinksmanager029f6b8e52c="10" title="Cloudflare Pages" rel="nofollow noopener" target="_blank">Cloudflare Pages</a> utilizing some scripting and git-flow to get used to the nuances that are required when diving more fully into DevOps.</p>
 
 
 
@@ -1560,7 +1744,7 @@
 
 
 
-<p>How do you practice DevOps?  First, read about traditional SDLC flows and read about DevOps flows.  Understand the differences and why the market must modernize to stay competitive.  Next, get interested in enabling the flow of technology delivery and practice delivering your own technology in some simple use cases.  Last, get some peer reviews to help grow your global perspective.</p>
+<p>How do you practice DevOps? First, read about traditional SDLC flows and read about DevOps flows. Understand the differences and why the market must modernize to stay competitive. Next, get interested in enabling the flow through continuous integration and continuous delivery while practicing delivering your own technology in some simple use cases. Last, get some peer reviews to help grow your global perspective.  </p>
 
 
 

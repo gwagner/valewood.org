@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.valewood.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://www.valewood.org/practicing-devops/</loc>
+		<lastmod>2022-09-28T21:38:59-05:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/top-relevant-devops-skills/</loc>
+		<lastmod>2022-09-28T08:16:54-05:00</lastmod>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-onprem-servers.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devsecops-helicopter.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-software-development.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/major-benefits-of-devops/</loc>
 		<lastmod>2022-09-25T11:55:42-05:00</lastmod>
 	</url>
@@ -40,10 +57,6 @@
 		<lastmod>2022-09-16T20:37:00-05:00</lastmod>
 	</url>
 	<url>
-		<loc>https://www.valewood.org/practicing-devops/</loc>
-		<lastmod>2022-09-16T20:15:58-05:00</lastmod>
-	</url>
-	<url>
 		<loc>https://www.valewood.org/devops-deployments-fast-easy-and-fun/</loc>
 		<lastmod>2022-09-16T20:13:28-05:00</lastmod>
 		<image:image>
@@ -64,19 +77,6 @@
 	<url>
 		<loc>https://www.valewood.org/essential-devops-tools/</loc>
 		<lastmod>2022-09-16T20:10:10-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/top-relevant-devops-skills/</loc>
-		<lastmod>2022-09-16T20:09:34-05:00</lastmod>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-onprem-servers.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devsecops-helicopter.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-software-development.jpg</image:loc>
-		</image:image>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/welcome-to-a-devooops/</loc>
