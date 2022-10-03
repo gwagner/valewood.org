@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/development/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Thu, 22 Sep 2022 22:12:05 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 03 Oct 2022 02:27:50 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,7 +28,7 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>Which programming language should I learn as a DevOps engineer?</title>
+		<title>Which Programming Language Should I Learn as a DevOps Engineer?</title>
 		<link>https://www.valewood.org/devops-languages/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -40,17 +40,21 @@
 		<category><![CDATA[tools]]></category>
 		<guid isPermaLink="false">/?p=344</guid>
 
-					<description><![CDATA[DevOps is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&#160; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers&#8230;]]></description>
+					<description><![CDATA[DevOps&#160;is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&#160; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers is&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&nbsp; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers is “Are there languages to learn for DevOps?”</p>
+<p><strong><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a></strong>&nbsp;is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&nbsp; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers is “Are there 4 top programming languages to learn for DevOps?”</p>
 
 
 
-<p>Everyone could use a little bit of development in their life.&nbsp; It could be something as simple as a bash script to take care of a simple task, all the way up to running a blog like this one.&nbsp; Learning about the logical flow that a computer takes to compute everything is an empowering door to open when growing as a technology specialist in whatever field you specialize in.&nbsp; Below are a few of my favorite DevOps languages but this is by no means a definitive list.&nbsp; These are languages that I have used in my workflows and found some great success.</p>
+<p>Everyone could use a little bit of development in their life.&nbsp; It could be something as simple as a bash script to take care of a simple task, all the way up to running a blog like this one.&nbsp; Learning about the logical flow that a computer takes to compute everything is an empowering door to open when growing as a technology specialist in whatever field you specialize in.</p>
 
 
 
-<p>Let’s discuss some of the languages you can learn as someone with little to no experience so you can level up your DevOps game!</p>
+<p>There are numerous programming languages to choose from so it can be a bit daunting to narrow it down when doing research. Luckily, I have done some narrowing down for you!&nbsp; Below are a few of my favorite DevOps languages but this is by no means a definitive list.&nbsp; These are languages that I have used in my workflows and found some great success.</p>
+
+
+
+<p>Let&#8217;s discuss some of the popular programming languages you can learn as someone with little to no experience so you can level up your DevOps game!</p>
 
 
 <p>
@@ -120,11 +124,11 @@
 
 
 
-<p>Python is an interpreted language and was created in the 1980s by Guido van Rossum in the Netherlands.&nbsp; It is widely adopted and widely used across the industry.&nbsp; You can find Python pre-installed on most modern Linux distributions today, though there is still a bit of fracturing between Python 2.x and 3.x communities.</p>
+<p>Python is an interpreted language and was created in the 1980s by Guido van Rossum in the Netherlands.&nbsp; It is widely adopted and widely used across the industry.&nbsp; You can find Python pre-installed on most modern Linux distributions today, though there is still a bit of fracturing between Python 2.x and 3.x communities. Aside from Javascript, you will find that Python is easily one of the most popular programming languages ou there today.</p>
 
 
 
-<h3>Community</h3>
+<h3>How Big is the Python Community?</h3>
 
 
 
@@ -132,7 +136,7 @@
 
 
 
-<h3>Utility</h3>
+<h3>What is the Utility of Python?</h3>
 
 
 
@@ -148,11 +152,67 @@
 
 
 
-<h3>Learning Resources</h3>
+<h3>Python Learning Resources</h3>
 
 
 
 <ul><li><a href="https://www.learnpython.org/" target="_blank" rel="noreferrer noopener">https://www.learnpython.org/</a></li><li><a href="https://www.codecademy.com/learn/learn-python" target="_blank" rel="noreferrer noopener">https://www.codecademy.com/learn/learn-python</a></li><li><a href="https://www.pythontutorial.net/python-basics/python-write-csv-file/" target="_blank" rel="noreferrer noopener">https://www.pythontutorial.net/python-basics/python-write-csv-file/</a></li></ul>
+
+
+
+<h2>DevOps with JavaScript</h2>
+
+
+
+<p>Nevertheless, Javascript may not have a lot of flexibility compared to Python but is still widely available to add value in DevOps. It can be incorporated as client code as well as server code. JavaScript is widely available on the web and has a huge footprint. If your work environments depend on Node.js, the ability to develop Javascript is an advantage. As with Python, JavaScript has an enormous user base. There are many Javascript projects that could benefit from this community.</p>
+
+
+
+<p>Much like Python, is an interpreted language. Unlike Python, Javascript is easily multithreaded (async tasks on a single main thread) directly out of the box with no additional work required. Javascript creates immersive and interactive websites, can be used as a server-side scripting language, can be used for GUI development powering both mobile and desktop applications, and can be utilized to build fully functional server and client-side web-based applications. It really is the swiss army knife of DevOps programming languages.</p>
+
+
+
+<p>If you start to work with Javascript, you will find that it is an extremely versatile language and it could be the right programming language for your specific cases. There is a reason why the community is as large as it is!</p>
+
+
+
+<h3>How big is the Javascript Community?</h3>
+
+
+
+<p>Javascript could probably be considered the most popular programming language at this point. I would not argue that by code volume, but I would argue that just about every single developer that has touched the internet has either developed, debugged, or been confused by Javascript. The community then got bigger with the advent of Node.JS. This moved code from the front end to the backend where it could easily be run on a server. At the time of writing, there are over 1.3 million NPM packages available for consumption.</p>
+
+
+
+<h3>What is the Utility of Javascript?</h3>
+
+
+
+<p>When it comes to DevOps engineers, Javascript is widely used across numerous cloud platforms as a configuration management tool, scripting language, or as traffic routing or traffic modification runtime. <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a> Cloudfront uses Javascript as its primary configuration language in its event-driven Origin or Response systems. <a href="https://pages.cloudflare.com/" data-internallinksmanager029f6b8e52c="10" title="Cloudflare Pages" rel="nofollow noopener" target="_blank">Cloudflare pages</a> will utilize Javascript as its Functions framework for performing request modifications in line with internet requests.</p>
+
+
+
+<p>DevOps engineers are going to need a pile of scripting languages at their disposal as we. If you are working in an environment that already has Node.JS included, then Javascript can be a really good language to use. This Blog uses Node.JS as its delivery pipeline through Cloudflare Pages to do some content manipulation between WordPress and publishing static pages.</p>
+
+
+
+<h4>Additional Utility!</h4>
+
+
+
+<p>Javascript can be utilized as an interactive command language directly from the browser through the Developer tools. An ICL lets you input code into a running environment to get information back. Through Developer Tools consoles, you are able to run code, print variable states, etc.</p>
+
+
+
+<p>Popular tools like VSCode are also written in Javascript (TypeScript) using a tool called Electron. Electron is a cross-platform application framework for running Javascript, HTML, and CSS on desktop.</p>
+
+
+
+<h3>Javascript Learning Resources</h3>
+
+
+
+<ul><li><a target="_blank" rel="noreferrer noopener" href="https://www.codecademy.com/learn/introduction-to-javascript">https://www.codecademy.com/learn/introduction-to-javascript</a></li><li><a target="_blank" rel="noreferrer noopener" href="https://teamtreehouse.com/library/javascript-basics">https://teamtreehouse.com/library/javascript-basics</a></li><li><a target="_blank" rel="noreferrer noopener" href="https://www.learn-js.org/">https://www.learn-js.org/</a></li></ul>
 
 
 
@@ -280,12 +340,82 @@
 <p>The lesson is this: assume that attack vectors are everywhere and ensure that you are scanning everything you can get your hands on for CVEs.&nbsp; The industry has a good focus on this now, and the question is not IF you will get compromised, but when.&nbsp; Keep yourself safe by being proactive.</p>
 
 
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>What Languages do I Use Most Often?</h2>
+
+
+
+<p>When I am sitting down to take care of simple tasks or to write scripts for a problem I am trying to solve; I am most often looking at a language that can help me do data manipulation, develop operational automation, build infrastructure as code, or build a deployment pipeline for my projects.</p>
+
+
+
+<h3>What do I use for Data Manipulation?</h3>
+
+
+
+<p>For me, this is generally a quick and dirty task that i am not going to be releasing to production in any form. This website does a bunch of different data manipulation tasks under the covers as part of its pipeline. I will generally choose PHP (not on this list, but it is a majority of my pure software dev background) or Javascript.</p>
+
+
+
+<p>Javascript is a fairly common language utilized in a multitude of DevOps environments that i would be able to quickly onboard someone with if needed. All of the tasks i am doing here are also fairly simple tasks in need of a simple language. I am not trying to do big data analytics, just mutate some links, move around some HTML, and soon some automated testing.</p>
+
+
+
+<h3>What do I use for Infrastructure Management (or Infrastructure as Code)?</h3>
+
+
+
+<p>I have a Home Lab where the WYSIWG part of this website is hosted. I push all of my changes there as part of a continuous integration pipeline through Ansible. This means that I am living in the Python space.</p>
+
+
+
+<p>It could be easy to argue that i am not really using Python here. I am for sure not a full fledged Python programmer, but I have dug through a fair bit of the source code behind Kubespray to understand the real intentions of what it is trying to accomplish. This has also helped me utilize Ansible as a swiss army knife for any of my infrastructure management needs.</p>
+
+
+
+<h3>What do I use for Deployment Pipelines?</h3>
+
+
+
+<p>I currently utilize a mixture of Javascript and GitHub Actions and GitOps to build deployment pipelines. There are a variety of other languages i could be using, but these work well for me. As stated earlier, i will shift all of my data round with Javascript. From there, GitHub actions will run any builds that i need with any triggered deploys.</p>
+
+
+
+<p>If the end result needs to go on the internet, i dont really need to deal with a fully weight object oriented programming language, or linux servers/linux systems, relational databases, business intelligence or anything like that. It makes more sense for GitOps style triggers to be in place to automagically move my code from repo to the internet without manual intervention.</p>
+
+
+
+<h2>Is there a good General Purpose Programming Language?</h2>
+
+
+
+<p>I think you need to first ask, what is most native to my environment. If Node.JS is not installed on every single one of your servers, but you want to write all your scripts in Javascript, that is going to be tough.</p>
+
+
+
+<p>If you are looking for a one-size fits all answer, then you are not going to find one. I would keep your mind open, try out new things, and see what fits the situation you are in.</p>
+
+
 
 <h2>Conclusion</h2>
 
 
 
-<p>As I stated at the beginning of this article, this is by no means a definitive list.&nbsp; This is a list of some of the tools that I utilized to build effective DevOps workflows and to enable the flow of delivery.&nbsp; I utilize these tools at my job along with utilizing these tools in my homelab.&nbsp; I believe that everyone could use a little bit of software development in their life.&nbsp; Python, Golang, or Ruby are really great places to start with languages because of their utility, communities, and ties to DevOps and DevOps tooling.</p>
+<p>As I stated at the beginning of this article, this is by no means a definitive list. I do not believe there is an answer to the question &#8220;which is the right programming languages to pick up for DevOps&#8221;.&nbsp; This is a list of some of the tools that I utilized to build effective DevOps workflows and to enable the flow of delivery.&nbsp; I utilize these tools at my job along with utilizing these tools in my homelab.&nbsp; I believe that everyone could use a little bit of software development in their life.&nbsp; Python, Javascript, Golang, or Ruby are really great places to start with languages because of their utility, communities, and ties to DevOps and DevOps tooling.</p>
+
+
+
+<p>There are absolutely other programming languages that are not on this list. If you feel like I have left anything out that is very relevant to DevOps technologies and system administration, or are just common languages that are being utilized frequently, don&#8217;t hesitate to contact me and I can update the list.</p>
 ]]></content:encoded>
 					
 		
