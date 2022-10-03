@@ -3,8 +3,9 @@
 mkdir new-site/
 unzip $1 -d ./new-site/
 
-echo "Removing old JS files"
+echo "Removing old JS/css files"
 rm -rf ./wp-content/cache/autoptimize/js/*.js
+rm -rf ./wp-content/cache/autoptimize/css/*.css
 rm -rf ./wp-content/plugins/elementor/assets/js/*.js
 rm -rf ./wp-content/plugins/elementor-pro/assets/js/*.js
 rm -f ./new-site/robots.txt # Local code repo has changes to block indexing of Cloudflare things, Manually merge this file if needed
