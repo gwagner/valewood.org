@@ -265,6 +265,6 @@ for (var i = 0; i < files.length; i++) {
     console.log("Table of contents saved: "+filename);
   }catch(err) {
     console.log(err)
-    return
+    break;
   }
 }

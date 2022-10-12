@@ -124,6 +124,6 @@ for (var i = 0; i < files.length; i++) {
     console.log("FAQ contents saved: "+filename);
   }catch(err) {
     console.log(err)
-    return
+    break;
   }
 }
