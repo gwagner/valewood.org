@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/opinion/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Mon, 19 Sep 2022 21:57:04 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 12 Oct 2022 02:17:37 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,174 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Is DevOps a Skill?</title>
+		<link>https://www.valewood.org/devops-skills/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Wed, 12 Oct 2022 02:17:36 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[delivery]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[opinion]]></category>
+		<guid isPermaLink="false">/?p=1103</guid>
+
+					<description><![CDATA[This is a pretty loaded question. Is cooking a skill? Are home builders skilled or unskilled labor? A skill would denote being able to do something well or having expertise in practice. Skills can be trained! Being in a field&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>This is a pretty loaded question.  Is cooking a skill?  Are home builders skilled or unskilled labor?  A skill would denote being able to do something well or having expertise in practice.  Skills can be trained!  Being in a field of skilled labor like running CNC equipment requires a tremendous amount of skill.</p>
+
+
+
+<p>So, is <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> a skill or is it a logical evolution where technology delivery ends up going regardless of the forces that drive it there?</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Technology Delivery</h2>
+
+
+
+<p>Delivering technology, with any kind of <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/" data-type="page" data-id="1036">quality</a> backing that delivery, will require several different practices.  Depending on your domain; you will probably employ the specialties of software developers, infrastructure/cloud engineers, quality assurance engineers, security engineers, and network engineers, along with a whole host of other roles.  Each of those roles is critical to the successful execution of a project at a very high standard.  </p>
+
+
+
+<p>Once the technology is delivered to the market, someone is going to have to pick up the mantle and run that technology solution.  In some organizations that will be a dedicated operations team, and in others they will adhere to a &#8220;you build it you own it&#8221; strategy.</p>
+
+
+
+<p>One of the biggest misnomers that I run across quite frequently is this; once a project is launched, the skilled labor that developed that project is no longer needed over the lifetime of that technology.  I believe that this could not be further from the truth.</p>
+
+
+
+<h2>Technology Lifecycle > Delivery</h2>
+
+
+
+<p>I prefer to look at technology through the lens of a lifecycle rather than a static point-in-time delivery.  Once a technology product is launched, it needs a tremendous amount of care and feeding to ensure that it remains valuable to its end users.  </p>
+
+
+
+<p>Due to the complex nature of the domains that I generally work in, this means that the skilled labor that helped produce said technology product will continue to have a hand in that technology product for its entire lifecycle.  It does not mean that they will be entirely dedicated to a single effort, but it does mean they will continue to lend their expertise.</p>
+
+
+
+<p>So, how does this answer the question &#8220;Is DevOps a skill?&#8221;.  For me, the answer is a simple one, YES!  But I think that it first takes an understanding of what <a href="https://www.valewood.org/topics/devops/" data-type="page" data-id="505">DevOps</a> is.</p>
+
+
+
+<h2>What is DevOps?</h2>
+
+
+
+<p>DevOps is a series of practices that combine together into a consistent delivery flow for technology.  It is generally misrepresented as purely automation, but that is only a particular skilled practice inside DevOps.  Embracing DevOps fully is a serious commitment to changing how technology delivery is performed, and full adoption means that you will be more interested in the overall lifecycle of technology instead of just finite delivery points in time.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>What Expertise is Needed for DevOps?</h2>
+
+
+
+<p>I believe that most organizations are following a more traditional software delivery methodology.  They have not adopted DevOps or agile in any meaningful way, and if they have at the very least adopted agile they are not using a standardized framework.  This is not true everywhere, but I believe it is more true than false.</p>
+
+
+
+<h3>Advocating for and Leading Change</h3>
+
+
+
+<p>Since most organizations are building and deploying software with some degree of success in whatever way works for them, to build real DevOps adoption, a change agent is going to need to be bravely thrown into the mix to help drive the change they want to see in the world.</p>
+
+
+
+<p>Let&#8217;s face it, Change is hard.  Change brings the unknown right to our doorsteps and forces us to confront aspects of our work that may feel uncomfortable.  Depending on your level in an organization, either being an advocate for change or leading through change is a trainable skill that individuals should look into developing.</p>
+
+
+
+<h3>Agile Project Management</h3>
+
+
+
+<p>Project management is a pretty crowded space.  There are plenty of certifications out there that individuals can go get to skill up in this space as well.  But, agile project management is not just for project managers, everyone should become well versed in this space.</p>
+
+
+
+<p>Learning about risks and risk management, work breakdown structures, timelines, forecasting, Gantt charts, resource management, and all of the rest of the highly skilled practices in agile project management will only enhance a DevOps team&#8217;s ability to deliver effective and high-quality solutions.  If a project manager is left to fully manage a project independently while engineers are heads down in code and poorly communicating, that project is doomed for failure from the very beginning.</p>
+
+
+
+<h3>Transforming Communication</h3>
+
+
+
+<p>In order to adopt effective DevOps practices, a team will need to build effective communication patterns.  </p>
+
+
+
+<p>Some organizations will adopt a pattern of tickets first.  &#8220;If it isn&#8217;t in the ticket, it didn&#8217;t happen&#8221;.  This is a great asynchronous communication pattern that ensures that communication is available more broadly to any consumers that may have questions or need updates.  It is an ineffective communication pattern if nobody ever reads the tickets.</p>
+
+
+
+<p>Other organizations will adopt in-person or remote scrums to talk about what they worked on, will be working on, and challenges.  This can be a really good communication pattern for individuals who like to talk through and collaborate on problems.  This is a terrible pattern when it comes to groups that are spread a little too thin or have a WIP problem.</p>
+
+
+
+<p>Communication must work for the individuals who are producing communication and consuming communication.  I have seen multiple different scenarios fail because members of the team are not willing to adapt to each other and ensure success.  There are a tremendous number of tools on the market, I am confident that any team willing to put in the work to find the right one can become effective communicators.</p>
+
+
+
+<h3>Effective Feedback Loops</h3>
+
+
+
+<p>Along with communication, feedback loops are also incredibly important to a DevOps team.  If automated testing fails, where do notifications go?  If there is a problem with production, where does communication go?  If these two events, or many other different kinds of events, impact delivery; where does that communication go?</p>
+
+
+
+<p>By ensuring that feedback is making its way back to the proper parties, more effective data-driven decision-making can happen.  Without feedback loops from tools, systems, or people; we are all left guessing!</p>
+
+
+
+<h3>Tools Tools Tools</h3>
+
+
+
+<p>10 years ago, the market for DevOps tools (technology tools) was pretty sparse.  You were left with bash scripts on Linux servers, limited API access, and using your legs to walk down to your local data center to pop in the newest RedHat CD.</p>
+
+
+
+<p>Today, the number of tools in the DevOps space is expansive.  I am not going to go too deep into the tooling here because of its depth, but any DevOps team worth its weight will need to have some serious skills with the latest DevOps tools.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>I wrote this post to answer the question, &#8220;Is DevOps a skill?&#8221;.  I believe that the answer to that question is a resounding yes.  It is as much of a skill as sculpting clay into a piece of art or customizing a classic car.  There is a high degree of depth in expertise for a DevOps team to be effective in their delivery processes.  Finally, any organization out there that thinks they are doing DevOps without these skills is not fully realizing the benefits that DevOps has to offer.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Do DevOps engineers need a coding background?</title>
 		<link>https://www.valewood.org/do-devops-engineers-need-a-coding-background/</link>
 		
