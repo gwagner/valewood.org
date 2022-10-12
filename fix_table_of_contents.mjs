@@ -154,6 +154,10 @@ function readHtml(root, file) {
 }
 
 function addReplacement(id, title, step, tag, replacements) {
+  // Skip empty titles
+  if(title.trim() == "" || title.trim() == "&nbsp;") {
+    return
+  }
   var duplicate = 0
   replacements.forEach(function (r) {
     if (r.id == id) {
@@ -229,10 +233,6 @@ for (var i = 0; i < files.length; i++) {
   var depth = 0;
 
   replacements.forEach(function (item) {
-    if(item.title.trim() == "" || item.title.trim() == "&nbsp;"){
-      return
-    }
-    
     if (item.step > depth) {
       depth = item.step
 
