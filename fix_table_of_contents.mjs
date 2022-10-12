@@ -116,6 +116,7 @@ import lunr from 'lunr';
 import cheerio from 'cheerio';
 
 const HTML_FOLDER = ".";  // folder with your HTML files
+const DEPTH = 2;
 
 function findHtml(folder) {
   if (!fs.existsSync(folder)) {
@@ -191,18 +192,23 @@ for (var i = 0; i < files.length; i++) {
 
   console.log("Modifying file: " + filename)
   $('h2').each(function (idx, tag) {
+    if(DEPTH < 1){ return; }
     addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), 0, $(tag), replacements)
 
     $(tag).nextUntil("h2").filter("h3").each(function (idx, tag) {
+      if(DEPTH < 2){ return; }
       addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), 1, $(tag), replacements)
 
       $(tag).nextUntil("h3").filter("h4").each(function (idx, tag) {
+        if(DEPTH < 3){ return; }
         addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), 2, $(tag), replacements)
 
         $(tag).nextUntil("h4").filter("h5").each(function (idx, tag) {
+          if(DEPTH < 4){ return; }
           addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), 3, $(tag), replacements)
 
           $(tag).nextUntil("h5").filter("h6").each(function (idx, tag) {
+            if(DEPTH < 5){ return; }
             addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), 4, $(tag), replacements)
 
           });

@@ -23,4 +23,7 @@ node create_serp_page.mjs
 # Generate table of contents
 node fix_table_of_contents.mjs
 
-rm -rf webp.mjs build_index.mjs create_serp_page.mjs package.json package-lock.json build.sh run.sh update.sh .gitignore
+# Generate table of contents
+node add_faq_structured_data.mjs
+
+rm -rf webp.mjs build_index.mjs create_serp_page.mjs add_faq_structured_data.mjs fix_table_of_contents.mjs package.json package-lock.json build.sh run.sh update.sh .gitignore
