@@ -64,7 +64,7 @@ function addReplacement(id, title, step, tag, replacements) {
 }
 
 function sanitizeHTag(text) {
-  return text.replace(/[^a-zA-Z0-9\s]+/, "").replace(/[\r\n]+/, " ").replace(/[\s]{2,}/, " ").toLowerCase().trim().replace(/\s/g, '-')
+  return text.replace("&nbsp;", " ").replace(/[^a-zA-Z0-9\s]+/, "").replace(/[\r\n]+/, " ").replace(/[\s]{2,}/, " ").toLowerCase().trim().replace(/\s/g, '-')
 }
 
 var files = findHtml(HTML_FOLDER);
@@ -119,10 +119,11 @@ for (var i = 0; i < files.length; i++) {
 
   $("head").append($("<script type=\"application/ld+json\">").text(JSON.stringify(schema)));
 
-  fs.writeFile(filename, $.html(), function(err) {
-    if(err) {
-            return console.log(err);
-    }
-    console.log("FAQ contents saved");
-  });
+  try{
+    fs.writeFileSync(filename, $.html())
+    console.log("FAQ contents saved: "+filename);
+  }catch(err) {
+    console.log(err)
+    return
+  }
 }

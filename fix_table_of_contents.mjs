@@ -260,10 +260,11 @@ for (var i = 0; i < files.length; i++) {
 
   $('.elementor-toc__body').append(ol)
 
-  fs.writeFile(filename, $.html(), function(err) {
-    if(err) {
-            return console.log(err);
-    }
-    console.log("Table of contents saved");
-  });
+  try{
+    fs.writeFileSync(filename, $.html())
+    console.log("Table of contents saved: "+filename);
+  }catch(err) {
+    console.log(err)
+    return
+  }
 }
