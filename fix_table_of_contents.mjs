@@ -229,6 +229,10 @@ for (var i = 0; i < files.length; i++) {
   var depth = 0;
 
   replacements.forEach(function (item) {
+    if(item.title.trim() == "" || item.title.trim() == "&nbsp;"){
+      return
+    }
+    
     if (item.step > depth) {
       depth = item.step
 
