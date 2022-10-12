@@ -260,6 +260,9 @@ for (var i = 0; i < files.length; i++) {
 
   $('.elementor-toc__body').append(ol)
 
+  // Removes the data element to stop the JS from firing off
+  $('[data-widget_type="table-of-contents.default"]').removeAttr("data-widget_type")
+
   try{
     fs.writeFileSync(filename, $.html())
     console.log("Table of contents saved: "+filename);
