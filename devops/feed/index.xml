@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 12 Oct 2022 02:17:37 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 14 Oct 2022 20:19:17 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,230 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Are DevOps Engineers in Demand in 2022?</title>
+		<link>https://www.valewood.org/are-devops-engineers-in-demand/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Fri, 14 Oct 2022 20:17:56 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[delivery]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[jobs]]></category>
+		<guid isPermaLink="false">/?p=1127</guid>
+
+					<description><![CDATA[Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are DevOps Engineers in Demand?&#8221; Simply looking at job boards and reviewing the&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> Engineers in Demand?&#8221;</p>
+
+
+
+<p><strong>Simply looking at job boards and reviewing the numbers does not tell the entire story here. As of the time of writing LinkedIn has roughly 42,000 positions and Indeed has roughly 11,000 positions for the search term DevOps engineer.</strong></p>
+
+
+
+<p>I believe that the honest answer to this question has more to do with market conditions than it does with job openings, though job openings are still a good indicator.</p>
+
+
+
+<p>Let&#8217;s take a look at the market conditions to understand if a DevOps engineering skillset is in demand!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Rising Demand for DevOps Talent</h2>
+
+
+
+<p>Many of us in the technology industry know how DevOps is revolutionizing software development. Companies adopting the DevOps approach are doing more with greater efficiency in the process. DevOps can help a company provide a software solution quickly. It can therefore help prevent production problems if necessary and the result will also be improved customer experience, feedback, and communications.</p>
+
+
+
+<p>Through to pandemic, more and more businesses needed to move to a digital presence to stay competitive in the market. This either means investing more heavily in technology or standing up new technology they may not have been ready for.</p>
+
+
+
+<p>As the dust has settled, businesses are now left with aging technology that is not growing with their business which means future investment. The tech industry is stepping up to respond in this newly opened market.</p>
+
+
+
+<p>If a business is not purely technology focused but utilizes technologies to enable sales, they are going to want to get into the most reliable modes of future delivery. This is where DevOps skills are filling the gap.</p>
+
+
+
+<p>I have seen a new term popping up in the industry recently: &#8220;DevOps As A Service&#8221;. This is born out of the idea that the DevOps methodology can be bolted onto technologies that are becoming more relevant in the market to ensure more reliable modes of delivery.</p>
+
+
+
+<h2>Is DevOps still in Demand?</h2>
+
+
+
+<p>I am a hiring manager running a DevOps group. I have been hiring, training, and converting people from either IT operations teams or software development teams for nearly a decade now. I can confidently say that DevOps engineering roles are hard to fill, they are also very in demand and you need to move quickly when hiring.</p>
+
+
+
+<h2>DevOps Talent is Still Hard to Find</h2>
+
+
+
+<p>Let&#8217;s face it, the industry has done a terrible job of defining what DevOps really is. In most places, my experience has been, DevOps means infrastructure as code and does not account for the overall methodology.</p>
+
+
+
+<p>Because of the incongruency between expectation and implementation, I would argue that a large portion of the talent pool is underdeveloped at this point. With the proper guidance, the talented job seekers out there can transition into a more DevOps-oriented mindset.</p>
+
+
+
+<p>Businesses will need to take this into account when hiring for a DevOps engineer role. The perfect purple unicorn may not be as readily available as more well-defined roles like software engineering. With a little time and patience with a team committed to DevOps transformations, you can develop talent that will deliver high-quality work.</p>
+
+
+
+<h2>Is it hard to get a job in DevOps?</h2>
+
+
+
+<p>Many organizations do not know what DevOps actually means, so it&#8217;s challenging to find the right person for the position.</p>
+
+
+
+<p>I updated my LinkedIn profile in 2015 to illustrate my transition into DevOps Engineering. Since then, I have progressed through an organization to lead teams of DevOps engineers.</p>
+
+
+
+<p>I am not telling you this to brag, but I do want to use it as an example.</p>
+
+
+
+<p>In my previous life, I was a PHP developer. I got bored of putting values into a database and then returning the exact same values to the screen. I started to get interested in configuration management and continuous integration which is when i hit the job market looking for my next gig.</p>
+
+
+
+<p>Since 2015, when i changed by job title on LinkedIn, i still get recruiters reaching out looking to place me in another software engineering role.</p>
+
+
+
+<p>I believe that the cycle of job searching in the technology industry is a bit upside down today. Companies seek talent and job seekers are looking for companies that want their skilled talent. It should be a perfect union, but there are a hoard of recruiters standing in the way of those perfect fits.</p>
+
+
+
+<p>I would recommend spending your time learning about DevOps methodologies, optimizing value, soft skill, interpersonal skills, and automation tools. Form there, i would spend time looking up individuals with existing DevOps roles on LinkedIn (management or engineering) and make some connections. Those connections have a better chance of landing you a DevOps role than the normal recruiting mechanism most of the technology space uses today.</p>
+
+
+
+<h2>Is DevOps Engineer a good career?</h2>
+
+
+
+<p>DevOps is booming with an estimated US $287 billion market size by 2026. There are many roles available to developers in the world&#8217;s marketplace. Let&#8217;s face it, technology is not going away. Businesses that survive over the long haul are going to progressively adopt newer and more modern strategies to optimize their software development life cycle.</p>
+
+
+
+<p>Because of the perpetual adoption of DevOps methodology by businesses, a DevOps engineer is going to have a long and vibrant career path. Silo&#8217;d development and operations teams will become more of an antiquated setup, and the merge of these disciplines together will become more of the norm.</p>
+
+
+
+<p>I think the answer of &#8220;Good&#8221; is probably a bit more nebulous and needs a bit of personal soul-searching to really answer. I won&#8217;t be able to answer what is &#8220;Good&#8221; for you.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="3622503162"></ins>
+</p>
+
+
+
+<h2>Why DevOps is a Good Career in 2022?</h2>
+
+
+
+<p>DevOps has remained a popular role since its inception in 2018. CodinGame released a survey that ranks &#8220;DevOps Engineer&#8221; among the most popular developer job positions for 2021. Additionally, the survey revealed that 43% of hiring professionals are unable to fulfill their DevOps roles.</p>
+
+
+
+<h2>What are Relevant Skills to start a DevOps career?</h2>
+
+
+
+<p>Unlike most careers, DevOps requires basic knowledge and skills. When choosing an employment option, understanding this section can prove very important. If you do this before, then the barriers will be lower. Depending on the skills you have you can try another course.</p>
+
+
+
+<p>I have an entire write-up over here that discusses the <a href="https://www.valewood.org/top-relevant-devops-skills/" data-type="post" data-id="330">Top Relevant DevOps Skills</a>.</p>
+
+
+
+<p>TLDR; Focus on skills that support the DevOps philosophy. These are going to be focused on soft skills such as planning and communication. Also focus on learning some new tools, ci/cd, how to enable automation, and automated testing.</p>
+
+
+
+<p>Don&#8217;t be afraid if you are lacking in any of these areas as well, most of the &#8220;DevOps pros&#8221; that i talk to are not familiar with half of the skills described in either the blog post or TLDR.</p>
+
+
+
+<h2>How do I Progress in my DevOps Career?</h2>
+
+
+
+<p>DevOps engineers with learning mindsets will be able to develop in their respective fields with plenty more to do. It seems obvious that one has to progress from junior engineering engineer to junior engineer eventually becoming a leader. DevOps also offers many career changes that could be made.</p>
+
+
+
+<p>A simple way to think about progression is to focus on anything that helps drive a business forward through growth or hitting new targets. This means that, in general, new technologies will not progress your career path forward.</p>
+
+
+
+<p>Building a DevOps mindset, working with a team to adopt DevOps, training new DevOps engineers, working with teams to develop software in a more streamlined way, bringing in automated testing, breaking down organizational silos, influencing team leaders, and any other non-technology-specific skill you can pick up will help progress your DevOps career.</p>
+
+
+
+<p>Focusing on technologies will help progress from a DevOps engineer role into a DevOps architect role, but note that a pure technology focus does have an upper bound on it. That is not a bad thing because not everybody wants to get into management.</p>
+
+
+
+<p>If you are looking to progress your career into management, work on building a DevOps culture.</p>
+
+
+
+<h2>Will I get paid more as a DevOps Engineer?</h2>
+
+
+
+<p>DevOps professionals are generally paid quite well. This is because the skillset for DevOps jobs demands a broader set of skilled talent. DevOps experts who can work with companies on DevOps transformations will yield an even greater salary. When negotiating, do not sell your talents and skills short.</p>
+
+
+
+<p>If you are just diving into this space, also be realistic about where you are at and sell yourself on your aptitude and ability to learn new skills. Any organization worth sticking around and working for will recognize your growth and give you the bump in compensation that you deserve.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>DevOps is evolving and changing. It is growing in importance for businesses to move forward in the digital age. DevOps engineers are key players in this evolution and have a wide range of skills needed by companies to thrive in the modern economy. They can work within many different industries, from financial services to automotive. DevOps engineers typically work with software teams across multiple departments within organizations, including IT operations and engineering.</p>
+
+
+
+<p>DevOps teams are constantly looking for more talent that can fulfill the vision of smoother and more reliable delivery. That trend is not going away any time soon!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Is DevOps a Skill?</title>
 		<link>https://www.valewood.org/devops-skills/</link>
 		
@@ -98,16 +322,6 @@
 <p>DevOps is a series of practices that combine together into a consistent delivery flow for technology.  It is generally misrepresented as purely automation, but that is only a particular skilled practice inside DevOps.  Embracing DevOps fully is a serious commitment to changing how technology delivery is performed, and full adoption means that you will be more interested in the overall lifecycle of technology instead of just finite delivery points in time.</p>
 
 
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
 
 <h2>What Expertise is Needed for DevOps?</h2>
 
@@ -138,6 +352,16 @@
 
 
 <p>Learning about risks and risk management, work breakdown structures, timelines, forecasting, Gantt charts, resource management, and all of the rest of the highly skilled practices in agile project management will only enhance a DevOps team&#8217;s ability to deliver effective and high-quality solutions.  If a project manager is left to fully manage a project independently while engineers are heads down in code and poorly communicating, that project is doomed for failure from the very beginning.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -1643,124 +1867,6 @@
 <p>As you’ve seen, DevOps is a software development methodology that seeks to automate the software delivery process. The goal of DevOps is to improve the speed, quality, and reliability of software delivery by integrating software development and operations. DevOps has several benefits, including increased speed and agility, increased quality, better collaboration, reduced risk, and more reliable customer experiences. To implement DevOps in your organization, you first need to build a strong culture of trust, invest in automation, and create a single source of truth.</p>
 ]]></content:encoded>
 					
-		
-		
-			</item>
-		<item>
-		<title>DevOps Roll-up: August</title>
-		<link>https://www.valewood.org/devops-roll-up-august/</link>
-					<comments>https://www.valewood.org/devops-roll-up-august/#respond</comments>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Wed, 31 Aug 2022 17:00:00 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[Roll-up]]></category>
-		<category><![CDATA[day2ops]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[kubernetes]]></category>
-		<guid isPermaLink="false">/?p=52</guid>
-
-					<description><![CDATA[Below is a list of DevOps articles/sites that I discovered over the past month and found interesting. DevOps Roadmap First is a link to a DevOps roadmap. This is a more technological than a philosophical view of what kinds of&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Below is a list of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> articles/sites that I discovered over the past month and found interesting.</p>
-
-
-
-<h2>DevOps Roadmap</h2>
-
-
-
-<p>First is a link to a DevOps roadmap.  This is a more technological than a philosophical view of what kinds of skills can be acquired in order to perform DevOps activities when on a team that does delivery via DevOps practices.</p>
-
-
-
-<p><a href="https://roadmap.sh/devops" target="_blank" rel="noreferrer noopener">https://roadmap.sh/devops</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<h2>Diagramming and Documentation</h2>
-
-
-
-<p>Next is a programmatic diagramming tool that allows you to set up diagrams for your implementations via Python.  One of the most difficult parts of any progressive technology implementation is ensuring that your materials remain up to date and available to new and existing team members.  By putting this information into the code repository, and by allowing those artifacts to become part of the build pipeline, you can get much closer to that idealistic view of well-developed and well-run technology by closing this particular </p>
-
-
-
-<p><a href="https://diagrams.mingrammer.com/" target="_blank" rel="noopener">https://diagrams.mingrammer.com/</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<h2>DoorDash Outage</h2>
-
-
-
-<p>Next is an article that describes a postmortem from a <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> outage at DoorDash.  This article helps illustrate the importance of not only reading the docs but also expresses the importance of testing your various failure scenarios to ensure that your entire team understands the various failure mechanisms and their impacts on a normally operating system.</p>
-
-
-
-<p><a href="https://doordash.engineering/2022/08/09/how-to-handle-kubernetes-health-checks/" target="_blank" rel="noopener">https://doordash.engineering/2022/08/09/how-to-handle-kubernetes-health-checks/</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<h2>Kubernetes Storage</h2>
-
-
-
-<p>Sticking with Kubernetes (and any flavor of Kubernetes you may be interested in); dealing with storage as part of your implementation OnPrem is a challenge.  This article does a great job of illustrating that challenge and what i means to anyone who has not yet made it to the cloud.  What I hope you take from this is, it is not impossible to accomplish and there are many solutions to this problem, but the downstream operational impacts of doing this are far broader than the initial implementation.</p>
-
-
-
-<p><a href="https://refaktory.net/blog/posts/self-hosted-kubernetes-solving-the-storage-problem" target="_blank" rel="noopener">https://refaktory.net/blog/posts/self-hosted-kubernetes-solving-the-storage-problem</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<h2>Traffic Visualization</h2>
-
-
-
-<p>Visualizing what is happening in your cluster can be a challenge.  I have taken the strategy of implementing <a href="https://linkerd.io/" data-internallinksmanager029f6b8e52c="3" title="Linkerd" rel="nofollow noopener" target="_blank">Linkerd</a> into my lab cluster to support both mTLS along with traffic visualization, but that is not the only way to accomplish this.  Lots of teams are familiar with <a href="https://grafana.com/" data-internallinksmanager029f6b8e52c="1" title="Grafana" rel="nofollow noopener" target="_blank">Grafana</a> as their source of information, especially with the proliferation of something like <a href="https://prometheus.io/" data-internallinksmanager029f6b8e52c="2" title="Prometheus" rel="nofollow noopener" target="_blank">Prometheus</a>.  k8spacket is a tool that helps bring a version of that visualization directly into Grafana dashboards.</p>
-
-
-
-<p><a href="https://medium.com/@bareckidarek/tcp-packets-traffic-visualization-for-kubernetes-by-k8spacket-and-grafana-bb87cb106f30" target="_blank" rel="noopener">https://medium.com/@bareckidarek/tcp-packets-traffic-visualization-for-kubernetes-by-k8spacket-and-grafana-bb87cb106f30</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://www.valewood.org/devops-roll-up-august/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>

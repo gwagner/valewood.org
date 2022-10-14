@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 12 Oct 2022 02:17:37 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 14 Oct 2022 20:19:17 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,230 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Are DevOps Engineers in Demand in 2022?</title>
+		<link>https://www.valewood.org/are-devops-engineers-in-demand/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Fri, 14 Oct 2022 20:17:56 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[delivery]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[jobs]]></category>
+		<guid isPermaLink="false">/?p=1127</guid>
+
+					<description><![CDATA[Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are DevOps Engineers in Demand?&#8221; Simply looking at job boards and reviewing the&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> Engineers in Demand?&#8221;</p>
+
+
+
+<p><strong>Simply looking at job boards and reviewing the numbers does not tell the entire story here. As of the time of writing LinkedIn has roughly 42,000 positions and Indeed has roughly 11,000 positions for the search term DevOps engineer.</strong></p>
+
+
+
+<p>I believe that the honest answer to this question has more to do with market conditions than it does with job openings, though job openings are still a good indicator.</p>
+
+
+
+<p>Let&#8217;s take a look at the market conditions to understand if a DevOps engineering skillset is in demand!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Rising Demand for DevOps Talent</h2>
+
+
+
+<p>Many of us in the technology industry know how DevOps is revolutionizing software development. Companies adopting the DevOps approach are doing more with greater efficiency in the process. DevOps can help a company provide a software solution quickly. It can therefore help prevent production problems if necessary and the result will also be improved customer experience, feedback, and communications.</p>
+
+
+
+<p>Through to pandemic, more and more businesses needed to move to a digital presence to stay competitive in the market. This either means investing more heavily in technology or standing up new technology they may not have been ready for.</p>
+
+
+
+<p>As the dust has settled, businesses are now left with aging technology that is not growing with their business which means future investment. The tech industry is stepping up to respond in this newly opened market.</p>
+
+
+
+<p>If a business is not purely technology focused but utilizes technologies to enable sales, they are going to want to get into the most reliable modes of future delivery. This is where DevOps skills are filling the gap.</p>
+
+
+
+<p>I have seen a new term popping up in the industry recently: &#8220;DevOps As A Service&#8221;. This is born out of the idea that the DevOps methodology can be bolted onto technologies that are becoming more relevant in the market to ensure more reliable modes of delivery.</p>
+
+
+
+<h2>Is DevOps still in Demand?</h2>
+
+
+
+<p>I am a hiring manager running a DevOps group. I have been hiring, training, and converting people from either IT operations teams or software development teams for nearly a decade now. I can confidently say that DevOps engineering roles are hard to fill, they are also very in demand and you need to move quickly when hiring.</p>
+
+
+
+<h2>DevOps Talent is Still Hard to Find</h2>
+
+
+
+<p>Let&#8217;s face it, the industry has done a terrible job of defining what DevOps really is. In most places, my experience has been, DevOps means infrastructure as code and does not account for the overall methodology.</p>
+
+
+
+<p>Because of the incongruency between expectation and implementation, I would argue that a large portion of the talent pool is underdeveloped at this point. With the proper guidance, the talented job seekers out there can transition into a more DevOps-oriented mindset.</p>
+
+
+
+<p>Businesses will need to take this into account when hiring for a DevOps engineer role. The perfect purple unicorn may not be as readily available as more well-defined roles like software engineering. With a little time and patience with a team committed to DevOps transformations, you can develop talent that will deliver high-quality work.</p>
+
+
+
+<h2>Is it hard to get a job in DevOps?</h2>
+
+
+
+<p>Many organizations do not know what DevOps actually means, so it&#8217;s challenging to find the right person for the position.</p>
+
+
+
+<p>I updated my LinkedIn profile in 2015 to illustrate my transition into DevOps Engineering. Since then, I have progressed through an organization to lead teams of DevOps engineers.</p>
+
+
+
+<p>I am not telling you this to brag, but I do want to use it as an example.</p>
+
+
+
+<p>In my previous life, I was a PHP developer. I got bored of putting values into a database and then returning the exact same values to the screen. I started to get interested in configuration management and continuous integration which is when i hit the job market looking for my next gig.</p>
+
+
+
+<p>Since 2015, when i changed by job title on LinkedIn, i still get recruiters reaching out looking to place me in another software engineering role.</p>
+
+
+
+<p>I believe that the cycle of job searching in the technology industry is a bit upside down today. Companies seek talent and job seekers are looking for companies that want their skilled talent. It should be a perfect union, but there are a hoard of recruiters standing in the way of those perfect fits.</p>
+
+
+
+<p>I would recommend spending your time learning about DevOps methodologies, optimizing value, soft skill, interpersonal skills, and automation tools. Form there, i would spend time looking up individuals with existing DevOps roles on LinkedIn (management or engineering) and make some connections. Those connections have a better chance of landing you a DevOps role than the normal recruiting mechanism most of the technology space uses today.</p>
+
+
+
+<h2>Is DevOps Engineer a good career?</h2>
+
+
+
+<p>DevOps is booming with an estimated US $287 billion market size by 2026. There are many roles available to developers in the world&#8217;s marketplace. Let&#8217;s face it, technology is not going away. Businesses that survive over the long haul are going to progressively adopt newer and more modern strategies to optimize their software development life cycle.</p>
+
+
+
+<p>Because of the perpetual adoption of DevOps methodology by businesses, a DevOps engineer is going to have a long and vibrant career path. Silo&#8217;d development and operations teams will become more of an antiquated setup, and the merge of these disciplines together will become more of the norm.</p>
+
+
+
+<p>I think the answer of &#8220;Good&#8221; is probably a bit more nebulous and needs a bit of personal soul-searching to really answer. I won&#8217;t be able to answer what is &#8220;Good&#8221; for you.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="3622503162"></ins>
+</p>
+
+
+
+<h2>Why DevOps is a Good Career in 2022?</h2>
+
+
+
+<p>DevOps has remained a popular role since its inception in 2018. CodinGame released a survey that ranks &#8220;DevOps Engineer&#8221; among the most popular developer job positions for 2021. Additionally, the survey revealed that 43% of hiring professionals are unable to fulfill their DevOps roles.</p>
+
+
+
+<h2>What are Relevant Skills to start a DevOps career?</h2>
+
+
+
+<p>Unlike most careers, DevOps requires basic knowledge and skills. When choosing an employment option, understanding this section can prove very important. If you do this before, then the barriers will be lower. Depending on the skills you have you can try another course.</p>
+
+
+
+<p>I have an entire write-up over here that discusses the <a href="https://www.valewood.org/top-relevant-devops-skills/" data-type="post" data-id="330">Top Relevant DevOps Skills</a>.</p>
+
+
+
+<p>TLDR; Focus on skills that support the DevOps philosophy. These are going to be focused on soft skills such as planning and communication. Also focus on learning some new tools, ci/cd, how to enable automation, and automated testing.</p>
+
+
+
+<p>Don&#8217;t be afraid if you are lacking in any of these areas as well, most of the &#8220;DevOps pros&#8221; that i talk to are not familiar with half of the skills described in either the blog post or TLDR.</p>
+
+
+
+<h2>How do I Progress in my DevOps Career?</h2>
+
+
+
+<p>DevOps engineers with learning mindsets will be able to develop in their respective fields with plenty more to do. It seems obvious that one has to progress from junior engineering engineer to junior engineer eventually becoming a leader. DevOps also offers many career changes that could be made.</p>
+
+
+
+<p>A simple way to think about progression is to focus on anything that helps drive a business forward through growth or hitting new targets. This means that, in general, new technologies will not progress your career path forward.</p>
+
+
+
+<p>Building a DevOps mindset, working with a team to adopt DevOps, training new DevOps engineers, working with teams to develop software in a more streamlined way, bringing in automated testing, breaking down organizational silos, influencing team leaders, and any other non-technology-specific skill you can pick up will help progress your DevOps career.</p>
+
+
+
+<p>Focusing on technologies will help progress from a DevOps engineer role into a DevOps architect role, but note that a pure technology focus does have an upper bound on it. That is not a bad thing because not everybody wants to get into management.</p>
+
+
+
+<p>If you are looking to progress your career into management, work on building a DevOps culture.</p>
+
+
+
+<h2>Will I get paid more as a DevOps Engineer?</h2>
+
+
+
+<p>DevOps professionals are generally paid quite well. This is because the skillset for DevOps jobs demands a broader set of skilled talent. DevOps experts who can work with companies on DevOps transformations will yield an even greater salary. When negotiating, do not sell your talents and skills short.</p>
+
+
+
+<p>If you are just diving into this space, also be realistic about where you are at and sell yourself on your aptitude and ability to learn new skills. Any organization worth sticking around and working for will recognize your growth and give you the bump in compensation that you deserve.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>DevOps is evolving and changing. It is growing in importance for businesses to move forward in the digital age. DevOps engineers are key players in this evolution and have a wide range of skills needed by companies to thrive in the modern economy. They can work within many different industries, from financial services to automotive. DevOps engineers typically work with software teams across multiple departments within organizations, including IT operations and engineering.</p>
+
+
+
+<p>DevOps teams are constantly looking for more talent that can fulfill the vision of smoother and more reliable delivery. That trend is not going away any time soon!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Is DevOps a Skill?</title>
 		<link>https://www.valewood.org/devops-skills/</link>
 		
@@ -98,16 +322,6 @@
 <p>DevOps is a series of practices that combine together into a consistent delivery flow for technology.  It is generally misrepresented as purely automation, but that is only a particular skilled practice inside DevOps.  Embracing DevOps fully is a serious commitment to changing how technology delivery is performed, and full adoption means that you will be more interested in the overall lifecycle of technology instead of just finite delivery points in time.</p>
 
 
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
 
 <h2>What Expertise is Needed for DevOps?</h2>
 
@@ -138,6 +352,16 @@
 
 
 <p>Learning about risks and risk management, work breakdown structures, timelines, forecasting, Gantt charts, resource management, and all of the rest of the highly skilled practices in agile project management will only enhance a DevOps team&#8217;s ability to deliver effective and high-quality solutions.  If a project manager is left to fully manage a project independently while engineers are heads down in code and poorly communicating, that project is doomed for failure from the very beginning.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -1559,202 +1783,6 @@
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://www.valewood.org/devops-pipeline-geared-for-stability/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>DevOps Deployments: Fast, Easy, and Fun!</title>
-		<link>https://www.valewood.org/devops-deployments-fast-easy-and-fun/</link>
-					<comments>https://www.valewood.org/devops-deployments-fast-easy-and-fun/#respond</comments>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Sun, 21 Aug 2022 19:33:46 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[gitops]]></category>
-		<category><![CDATA[nfr]]></category>
-		<category><![CDATA[sdlc]]></category>
-		<guid isPermaLink="false">/?p=48</guid>
-
-					<description><![CDATA[One of the core fundamentals of DevOps is to ensure that deployments are fully automated. The technology stack that you are supporting should be fully production ready at all times. This means that DevOps does not stop at IaC automation.&#8230;]]></description>
-										<content:encoded><![CDATA[
-<div class="wp-container-1 wp-block-group"><div class="wp-block-group__inner-container">
-<p>One of the core fundamentals of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> is to ensure that deployments are fully automated.  The technology stack that you are supporting should be fully production ready at all times. This means that DevOps does not stop at IaC automation.  The full SDLC needs to be constructed in such a way that it enables more of a GitOps model rather than a series of disconnected pieces.</p>
-
-
-
-<p>Let&#8217;s face it; unless we are heavily invested in FOSS, we work for a company that is trying to bring in revenue to support payroll.  I am not saying that FOSS does not bring in revenue, but I would say many of the most successful FOSS projects are funded through the generosity of the community and businesses which leverage their technology.  This means that any DevOps model that most of us are producing against is centered around some concept of value engineering.  Value engineering is a tough topic to cover holistically, but the general idea is that technology must support some kind of product, service, widget, etc. that brings value to the market.  </p>
-
-
-
-<p>My experience is that the emphasis on value engineering is far too constraining to the internal consumers of your DevOps pipelines.  Sure, we work for a business that needs to make revenue to be successful, but; I believe that the idea of value engineering goes both into the market and inversely into the team producing the technology.  This article will touch more on the idealistic side of what DevOps can do for teams with the idea of ancillary market benefits being gained by a team doing DevOps well.</p>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-</div></div>
-
-
-
-<div class="wp-container-9 wp-block-group"><div class="wp-block-group__inner-container">
-<h2>Primary Considerations for DevOps Deployments</h2>
-
-
-
-<div class="wp-container-2 wp-block-group"><div class="wp-block-group__inner-container">
-<h3>Goals and Values</h3>
-
-
-<div class="wp-block-image">
-<figure class="alignright size-medium"><img src="https://www.valewood.org/cdn-cgi/image/width=300,height=197,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/08/annie-spratt-hCb3lIB8L8E-unsplash.jpg" alt="DevOps Team" class="wp-image-108"/></figure></div>
-
-
-<p>This is probably one of the toughest considerations to grasp and do well.  Goals and values are closely aligned and intertwined yet it is very simple for them to shift directions very quickly.  A business is always going to have some kind of goal that they are trying to reach, and a technology team will also have goals and aspirations that they are reaching for as well.  Let&#8217;s all remember that as technologists, we got into this for the love of technology no matter how jaded we may have become by trying to accomplish a never-ending stream of difficult customer requirements.</p>
-
-
-
-<p>Since DevOps is as much about the team as it is about the business, make sure that goals/values swing in both directions. There may be a business-related goal out there to reduce defects by X% or increase the speed of delivery of a feature by Y timeline, but those goals are only part of the story.  As technologists, we owe each other an awesome experience developing and delivering technology.  Make sure the team takes time to learn and understand each other in a constructive way, and set goals through understanding each other values.</p>
-</div></div>
-
-
-
-<div class="wp-container-3 wp-block-group"><div class="wp-block-group__inner-container">
-<h3>Approachability</h3>
-
-
-
-<p>A DevOps pipeline should be approachable to the consumers of the pipeline.  Not only should a team be able to use it, but a team should also be able to enhance it.  Generally, this is boiled down to technology choice, but I believe that is the second facet of approachability.  A group must first determine what activities their pipelines should be responsible for.  Some tools are good at certain parts of pipeline development and some are not, and by determining the activities; a team can make good technology choices that support the rest of the considerations below. </p>
-
-
-
-<p>To illustrate this point, here is an example of what I mean by approachability.  The gold standard for a complete DevOps pipeline is one that allows you to commit code and it is safely delivered to production.  Starting a journey at its finale is rarely a good idea.  That means a group must determine their jumping-off point which will usually lead a team into some kind of configuration management.  Ensuring 100% of configurations are stored in a code repository can be an extremely daunting task simply due to the vast array of methods and technologies available to accomplish that goal.  Start small by getting the team involved in adding and pushing configuration management.  Listen to the concerns of the team and work your way toward addressing those concerns.  Ensure that the team around you are bought into your ideas and methods.  Do not be afraid to pivot based on feedback to ensure that your methods are well received before moving on to the next phase which may be orchestration, testing, monitoring, etc.</p>
-
-
-
-<p>If the team is struggling to get going with DevOps, I would encourage them to read through <a href="https://www.valewood.org/practicing-devops/" data-type="post" data-id="14" target="_blank" rel="noopener">Practicing DevOps – A Surprising Alternative</a> which may give them some interesting insights on how to get engaged.</p>
-</div></div>
-
-
-
-<div class="wp-container-4 wp-block-group"><div class="wp-block-group__inner-container">
-<h3>Repeatability and Dependability</h3>
-
-
-
-<p>When designing a pipeline, a focus should be on how DevOps can help with the repeatability of known tasks and how dependably can automation take hold to accomplish tasks which used to be in the domain of mere mortals.  This is often harder to quantify than you may think.  Let&#8217;s take something as simple as adding metadata to a build that ties back to a commit hash.  In Golang you will be using an <code>-ldflags</code> param to a <code>go build</code> command which must be able to run a git command to understand the hash of the head commit.  If your build environment has both Windows and Linux build agents, can both of them reliably run your command?</p>
-
-
-
-<p>Another way to think about Dependability is to consider the end consumers of what you are DevOps-ing.  Do they expect your pipeline to fail safe or fail in an unsafe way?  As long as they can rely on specific failure scenarios, then they can at least depend on your pipeline doing the same thing.  If your pipeline is consistently failing in new and unforeseen ways, then the only thing that the teams around you can depend on is that your pipeline is unreliable.</p>
-</div></div>
-
-
-
-<div class="wp-container-5 wp-block-group"><div class="wp-block-group__inner-container">
-<h3>Speed</h3>
-
-
-
-<p>The first thing that a business will talk about is &#8220;Speed of Delivery&#8221;.  If we can ship more products/products faster, then the business will make more revenue.  Companies like <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> and Amazon got it right by fully automating their deployments. In a post from 2012, GitHub was deploying roughly 200 times per day to production. Amazon deploys to production every 11.7 seconds equaling roughly ~7400 deployments per day. This speed to production ensures that code does not sit and languish in a code repository for days or worse, weeks.</p>
-
-
-
-<p>Amazon and Github are actually ensuring updates are reaching other engineers and architects quickly reducing the overall feedback loop and increasing the opportunities for learning.  By ensuring that a higher number of smaller units are going to production either as minor improvements or feature-gated enhancements, the teams that are working on their products are able to shorten their feedback loop which pushes decision-making as close to the individual contributor as possible.  The more we can empower the people around us with information, the better we will all be and the faster rumor mills will be stopped dead in their tracks.</p>
-</div></div>
-
-
-
-<div class="wp-container-6 wp-block-group"><div class="wp-block-group__inner-container">
-<h3>Flexibility</h3>
-
-
-
-<p>More often than not, design choices have been made for you which you can not really walk back to ensure that all technology fits a specific pipeline or delivery flow model.  This is quite alright when you design with flexibility in mind.  In my experience, the general overall steps of a DevOps pipeline will always be the same.  I will cover those steps in a subsequent blog post.  If you take a step back and look at what you are producing and turn them into more of an interface-style design, then the only thing that is really changing is your concrete implementation of functionality.  That is the panacea of flexibility because only a portion of your overall work changes.  You are able to get an economy of scale out of other materials that team members owe each other like validations, documentation, expectation setting, etc.</p>
-</div></div>
-
-
-
-<div class="wp-container-7 wp-block-group"><div class="wp-block-group__inner-container">
-<h3>Feedback Loops</h3>
-
-
-
-<p>Getting feedback into the hands of stakeholders will help aid in good decision-making along with the overall stability of a solution.  The most important consideration here is this: make sure your feedback loops are consumable and actionable.  Spamming your stakeholders, business or technical, can create a TON of churn which doesn&#8217;t do anyone any good.  Ensure that any feedback provided is directly actionable.</p>
-
-
-
-<p>Sometimes this is easier said than done.  Starting out, you will end up with a deluge of information that feels insurmountable.  The most dangerous thing you can do is either silence the information or assume that you are seeing false positives.  False positives can happen, and it is very much worth digging in and understanding why.  On the other hand, silencing information and subsequently ignoring it can lead to mishaps in the future.  Dive in and get to know your tooling and ensure you are doing everything you can to logically keep them clean.</p>
-</div></div>
-
-
-
-<div class="wp-container-8 wp-block-group"><div class="wp-block-group__inner-container">
-<h3>Completeness</h3>
-
-
-
-<p>An incomplete DevOps pipeline with some jank will inevitably lead to issues that erode confidence in the technology stack.  There is no gold standard of 100% complete here, but you can transpose completeness with confidence in most cases.  If your team and business partners feel that the pipeline is doing everything that it should, then you are in great shape.  If your pipeline feels like there is something left to be desired, don&#8217;t ignore that feeling and continue to build confidence through completeness.</p>
-</div></div>
-</div></div>
-
-
-
-<div class="wp-container-11 wp-block-group"><div class="wp-block-group__inner-container">
-<h2>Technology</h2>
-
-
-
-<div class="wp-container-10 wp-block-group"><div class="wp-block-group__inner-container">
-<h3>A GitOps Methodology</h3>
-
-
-
-<p>First, I think we need to define what GitOps is.  GitOps is the idea that on a push to a repository, a full deployment pipeline can take place which deploys code into production.  On top of that, all controls, settings, adjustments, etc. happen from the Git repository rather than a smattering of distributed user interfaces.  This is a developer/technologist first approach which means that all changes will need to be visibly pushed to central source control before electricity is run through them out in the wild.</p>
-
-
-
-<p>GitOps being a developer/technologist first approach is an important consideration to make because not everyone who is normally part of the technology delivery flow is necessarily a technology-minded individual contributor.  When making a change over to GitOps, you will need to consider what barrier to entry this creates for the end users and design your GitOps flow to be inclusive of all contributors, not just the contributors who are in the know.</p>
-</div></div>
-
-
-
-<h3>Tools</h3>
-
-
-<div class="wp-block-image">
-<figure class="alignleft size-medium"><img src="https://www.valewood.org/cdn-cgi/image/width=300,height=244,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2022/08/todd-quackenbush-IClZBVw5W5A-unsplash.jpg" alt="DevOps Tools" class="wp-image-235"/></figure></div>
-
-
-<p>Selection of the right tools to do the job is both a critical juncture in any project and sparks the most religious debates showing where allegiances really lie.  Don&#8217;t fall into that trap.  A tool performs an action through specific syntax.  At it&#8217;s core, my preferred technology stack consists of something which orchestrates actions, something which performs tests, and something which performs configuration management.  This generally means <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>, Inspec, and <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>/<a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a>.  Could you skip the Chef/Puppet and do everything 100% in ansible?  Absolutely.  Could you skip ansible and do everything in Chef/Puppet?  Absolutely!  I think the point is that anyone who argues that there is a right or wrong way to go about tool selection is flat-out wrong.  The tools must work for the team dynamic and then work for the technology.  If you start at technology first, more often than not, that effort will fail.</p>
-</div></div>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>As you can see above, there are a lot of things to consider when putting together a DevOps pipeline, most of which have nothing to do with technology at all.  One of the best things I have learned in my time building and deploying DevOps pipelines is this: If the pipeline does not work for the people, then the pipeline does not work at all.  Consider how you are going to push on the soft skills side of your DevOps practices more than the technological side when starting out.  As you grow in your understanding of what DevOps really is technologically, you will come to appreciate that 90% of the problem is solved before the first line of code is ever put into a repository.</p>
-
-
-
-<div class="wp-container-12 wp-block-group"><div class="wp-block-group__inner-container">
-<h2>References</h2>
-
-
-
-<ul><li><a href="https://icinga.com/blog/2022/05/25/embedding-git-commit-information-in-go-binaries/" target="_blank" rel="noreferrer noopener">Embedding Git Commit Information in Go Binaries</a></li></ul>
-</div></div>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://www.valewood.org/devops-deployments-fast-easy-and-fun/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		

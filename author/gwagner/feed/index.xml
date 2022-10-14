@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 12 Oct 2022 02:17:37 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 14 Oct 2022 20:19:17 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,230 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Are DevOps Engineers in Demand in 2022?</title>
+		<link>https://www.valewood.org/are-devops-engineers-in-demand/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Fri, 14 Oct 2022 20:17:56 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[delivery]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[jobs]]></category>
+		<guid isPermaLink="false">/?p=1127</guid>
+
+					<description><![CDATA[Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are DevOps Engineers in Demand?&#8221; Simply looking at job boards and reviewing the&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> Engineers in Demand?&#8221;</p>
+
+
+
+<p><strong>Simply looking at job boards and reviewing the numbers does not tell the entire story here. As of the time of writing LinkedIn has roughly 42,000 positions and Indeed has roughly 11,000 positions for the search term DevOps engineer.</strong></p>
+
+
+
+<p>I believe that the honest answer to this question has more to do with market conditions than it does with job openings, though job openings are still a good indicator.</p>
+
+
+
+<p>Let&#8217;s take a look at the market conditions to understand if a DevOps engineering skillset is in demand!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Rising Demand for DevOps Talent</h2>
+
+
+
+<p>Many of us in the technology industry know how DevOps is revolutionizing software development. Companies adopting the DevOps approach are doing more with greater efficiency in the process. DevOps can help a company provide a software solution quickly. It can therefore help prevent production problems if necessary and the result will also be improved customer experience, feedback, and communications.</p>
+
+
+
+<p>Through to pandemic, more and more businesses needed to move to a digital presence to stay competitive in the market. This either means investing more heavily in technology or standing up new technology they may not have been ready for.</p>
+
+
+
+<p>As the dust has settled, businesses are now left with aging technology that is not growing with their business which means future investment. The tech industry is stepping up to respond in this newly opened market.</p>
+
+
+
+<p>If a business is not purely technology focused but utilizes technologies to enable sales, they are going to want to get into the most reliable modes of future delivery. This is where DevOps skills are filling the gap.</p>
+
+
+
+<p>I have seen a new term popping up in the industry recently: &#8220;DevOps As A Service&#8221;. This is born out of the idea that the DevOps methodology can be bolted onto technologies that are becoming more relevant in the market to ensure more reliable modes of delivery.</p>
+
+
+
+<h2>Is DevOps still in Demand?</h2>
+
+
+
+<p>I am a hiring manager running a DevOps group. I have been hiring, training, and converting people from either IT operations teams or software development teams for nearly a decade now. I can confidently say that DevOps engineering roles are hard to fill, they are also very in demand and you need to move quickly when hiring.</p>
+
+
+
+<h2>DevOps Talent is Still Hard to Find</h2>
+
+
+
+<p>Let&#8217;s face it, the industry has done a terrible job of defining what DevOps really is. In most places, my experience has been, DevOps means infrastructure as code and does not account for the overall methodology.</p>
+
+
+
+<p>Because of the incongruency between expectation and implementation, I would argue that a large portion of the talent pool is underdeveloped at this point. With the proper guidance, the talented job seekers out there can transition into a more DevOps-oriented mindset.</p>
+
+
+
+<p>Businesses will need to take this into account when hiring for a DevOps engineer role. The perfect purple unicorn may not be as readily available as more well-defined roles like software engineering. With a little time and patience with a team committed to DevOps transformations, you can develop talent that will deliver high-quality work.</p>
+
+
+
+<h2>Is it hard to get a job in DevOps?</h2>
+
+
+
+<p>Many organizations do not know what DevOps actually means, so it&#8217;s challenging to find the right person for the position.</p>
+
+
+
+<p>I updated my LinkedIn profile in 2015 to illustrate my transition into DevOps Engineering. Since then, I have progressed through an organization to lead teams of DevOps engineers.</p>
+
+
+
+<p>I am not telling you this to brag, but I do want to use it as an example.</p>
+
+
+
+<p>In my previous life, I was a PHP developer. I got bored of putting values into a database and then returning the exact same values to the screen. I started to get interested in configuration management and continuous integration which is when i hit the job market looking for my next gig.</p>
+
+
+
+<p>Since 2015, when i changed by job title on LinkedIn, i still get recruiters reaching out looking to place me in another software engineering role.</p>
+
+
+
+<p>I believe that the cycle of job searching in the technology industry is a bit upside down today. Companies seek talent and job seekers are looking for companies that want their skilled talent. It should be a perfect union, but there are a hoard of recruiters standing in the way of those perfect fits.</p>
+
+
+
+<p>I would recommend spending your time learning about DevOps methodologies, optimizing value, soft skill, interpersonal skills, and automation tools. Form there, i would spend time looking up individuals with existing DevOps roles on LinkedIn (management or engineering) and make some connections. Those connections have a better chance of landing you a DevOps role than the normal recruiting mechanism most of the technology space uses today.</p>
+
+
+
+<h2>Is DevOps Engineer a good career?</h2>
+
+
+
+<p>DevOps is booming with an estimated US $287 billion market size by 2026. There are many roles available to developers in the world&#8217;s marketplace. Let&#8217;s face it, technology is not going away. Businesses that survive over the long haul are going to progressively adopt newer and more modern strategies to optimize their software development life cycle.</p>
+
+
+
+<p>Because of the perpetual adoption of DevOps methodology by businesses, a DevOps engineer is going to have a long and vibrant career path. Silo&#8217;d development and operations teams will become more of an antiquated setup, and the merge of these disciplines together will become more of the norm.</p>
+
+
+
+<p>I think the answer of &#8220;Good&#8221; is probably a bit more nebulous and needs a bit of personal soul-searching to really answer. I won&#8217;t be able to answer what is &#8220;Good&#8221; for you.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="3622503162"></ins>
+</p>
+
+
+
+<h2>Why DevOps is a Good Career in 2022?</h2>
+
+
+
+<p>DevOps has remained a popular role since its inception in 2018. CodinGame released a survey that ranks &#8220;DevOps Engineer&#8221; among the most popular developer job positions for 2021. Additionally, the survey revealed that 43% of hiring professionals are unable to fulfill their DevOps roles.</p>
+
+
+
+<h2>What are Relevant Skills to start a DevOps career?</h2>
+
+
+
+<p>Unlike most careers, DevOps requires basic knowledge and skills. When choosing an employment option, understanding this section can prove very important. If you do this before, then the barriers will be lower. Depending on the skills you have you can try another course.</p>
+
+
+
+<p>I have an entire write-up over here that discusses the <a href="https://www.valewood.org/top-relevant-devops-skills/" data-type="post" data-id="330">Top Relevant DevOps Skills</a>.</p>
+
+
+
+<p>TLDR; Focus on skills that support the DevOps philosophy. These are going to be focused on soft skills such as planning and communication. Also focus on learning some new tools, ci/cd, how to enable automation, and automated testing.</p>
+
+
+
+<p>Don&#8217;t be afraid if you are lacking in any of these areas as well, most of the &#8220;DevOps pros&#8221; that i talk to are not familiar with half of the skills described in either the blog post or TLDR.</p>
+
+
+
+<h2>How do I Progress in my DevOps Career?</h2>
+
+
+
+<p>DevOps engineers with learning mindsets will be able to develop in their respective fields with plenty more to do. It seems obvious that one has to progress from junior engineering engineer to junior engineer eventually becoming a leader. DevOps also offers many career changes that could be made.</p>
+
+
+
+<p>A simple way to think about progression is to focus on anything that helps drive a business forward through growth or hitting new targets. This means that, in general, new technologies will not progress your career path forward.</p>
+
+
+
+<p>Building a DevOps mindset, working with a team to adopt DevOps, training new DevOps engineers, working with teams to develop software in a more streamlined way, bringing in automated testing, breaking down organizational silos, influencing team leaders, and any other non-technology-specific skill you can pick up will help progress your DevOps career.</p>
+
+
+
+<p>Focusing on technologies will help progress from a DevOps engineer role into a DevOps architect role, but note that a pure technology focus does have an upper bound on it. That is not a bad thing because not everybody wants to get into management.</p>
+
+
+
+<p>If you are looking to progress your career into management, work on building a DevOps culture.</p>
+
+
+
+<h2>Will I get paid more as a DevOps Engineer?</h2>
+
+
+
+<p>DevOps professionals are generally paid quite well. This is because the skillset for DevOps jobs demands a broader set of skilled talent. DevOps experts who can work with companies on DevOps transformations will yield an even greater salary. When negotiating, do not sell your talents and skills short.</p>
+
+
+
+<p>If you are just diving into this space, also be realistic about where you are at and sell yourself on your aptitude and ability to learn new skills. Any organization worth sticking around and working for will recognize your growth and give you the bump in compensation that you deserve.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>DevOps is evolving and changing. It is growing in importance for businesses to move forward in the digital age. DevOps engineers are key players in this evolution and have a wide range of skills needed by companies to thrive in the modern economy. They can work within many different industries, from financial services to automotive. DevOps engineers typically work with software teams across multiple departments within organizations, including IT operations and engineering.</p>
+
+
+
+<p>DevOps teams are constantly looking for more talent that can fulfill the vision of smoother and more reliable delivery. That trend is not going away any time soon!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Is DevOps a Skill?</title>
 		<link>https://www.valewood.org/devops-skills/</link>
 		
@@ -98,16 +322,6 @@
 <p>DevOps is a series of practices that combine together into a consistent delivery flow for technology.  It is generally misrepresented as purely automation, but that is only a particular skilled practice inside DevOps.  Embracing DevOps fully is a serious commitment to changing how technology delivery is performed, and full adoption means that you will be more interested in the overall lifecycle of technology instead of just finite delivery points in time.</p>
 
 
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
 
 <h2>What Expertise is Needed for DevOps?</h2>
 
@@ -138,6 +352,16 @@
 
 
 <p>Learning about risks and risk management, work breakdown structures, timelines, forecasting, Gantt charts, resource management, and all of the rest of the highly skilled practices in agile project management will only enhance a DevOps team&#8217;s ability to deliver effective and high-quality solutions.  If a project manager is left to fully manage a project independently while engineers are heads down in code and poorly communicating, that project is doomed for failure from the very beginning.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -1544,149 +1768,6 @@
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://www.valewood.org/devops-roll-up-august/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>How to Build a DevOps Pipeline Geared for Stability?</title>
-		<link>https://www.valewood.org/devops-pipeline-geared-for-stability/</link>
-					<comments>https://www.valewood.org/devops-pipeline-geared-for-stability/#respond</comments>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Tue, 30 Aug 2022 02:47:33 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[development]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[sdlc]]></category>
-		<guid isPermaLink="false">/?p=95</guid>
-
-					<description><![CDATA[Building a devops pipeline is easy. Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!! Well&#8230; not exactly. In my experience, this is where things usually start,&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Building a <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">devops</a> pipeline is easy.  Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!!  Well&#8230; not exactly.  In my experience, this is where things usually start, but will quickly lead to new and additional churn in a delivery cycle which was never intended.  Sometimes that churn goes completely unrecognized simply because the thought of doing DevOps is far better than the idea of not doing DevOps.  Either way, do yourself a favor and take a step back to look into how intentional design, intentional component selection, along with care and feeding can get you into a spot where your pipelines work for you instead of you working for your pipelines.</p>
-
-
-
-<p>In case you are wondering, &#8220;what is a pipeline in DevOps&#8221;?  A pipeline in DevOps is centered around the idea of ensuring code is continuously delivered which in turn means the business is seeing a continuous flow of value.  There are many DevOps pipeline tools on the market, but I want to take step back and discuss more of the planning and design side of things before diving directly into tooling.</p>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
-
-<h2>Intentional Design</h2>
-
-
-
-<p>Deploying Jenkins, giving it some keys, giving it a job to do, and then finally pointing at production will yield a short-term win with long-term consequences.  While I believe that most aspiring DevOps engineers will start here, more intentional design should be considered when building a pipeline.</p>
-
-
-
-<h3>Who are the consumers of your DevOps Pipeline?</h3>
-
-
-
-<p>Consider who is going to be consuming the pipeline that is being created.  Some organizations want manual approvals, some want automated approvals, some are a bit more cowboy and approvals are not part of the conversation.  Sometimes a QA team, project/program management, developers, executives, or the lunch lady could be consumers of your pipeline.  Consider them when designing what you will use for delivery.</p>
-
-
-
-<h3>What are the goals of your DevOps Pipeline?</h3>
-
-
-
-<p>Not everyone is going to agree here, but when I am doing a design, I start by conceptualizing my end state much like pointing a ship in the direction that I think I want to go.  This allows me to get more eyes on the concept that I am building toward while pulling in feedback from interested stakeholders.  On the back of that work, I will take a step back and try to understand the strategic themes and goals of the pipeline to get more broad alignment from the consumers and stakeholders.  </p>
-
-
-
-<p>Just because someone tells you that they want something, doesn&#8217;t mean that you heard them correctly or they fully understood what they are asking for.  Try to take time and dissect their request and either align it to your design walking the requestor through how your solution solves their needs, or reframe your specific thinking of the problem to accommodate their request.</p>
-
-
-
-<h3>Is there a logical flow you can follow?</h3>
-
-
-
-<p>I like to map out my process as illustrated below.</p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><img width="1024" height="204" src="https://www.valewood.org/wp-content/uploads/2022/08/devops-pipeline-flowchart-1024x204.png" alt="DevOps Pipeline Flowchart" class="wp-image-273" srcset="/wp-content/uploads/2022/08/devops-pipeline-flowchart-1024x204.png 1024w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-300x60.png 300w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-768x153.png 768w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1536x306.png 1536w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-2048x409.png 2048w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1920x383.png 1920w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1170x233.png 1170w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-585x117.png 585w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
-
-
-<p>By taking the time to understand the ins and outs of your pipeline, the decision tree that gets created, necessary supplemental steps, and points of failure you can design a logical flow that works across many different arenas.  A single logical flow may work well to get code into a development environment, but do you really need to redo each and every step to move code to the next environment or can you adjust your logical flow to be less cumbersome?</p>
-
-
-
-<h2>Intentional Component Selection</h2>
-
-
-
-<p>Normally I am not a fan of Jenkins.  I believe that it is allowing for quick and dirty instances of automation to be put out into the market in a way that does not promote stability.  Don&#8217;t get me wrong, Jenkins is an interesting tool if you look at it as a dumb task runner, but is a pretty poor tool if you are really taking automation seriously.  Intentional component selection is a topic we should spend some time on due to the technology strongholds that are out in the market today.</p>
-
-
-
-<h3>So, who are the consumers of your DevOps Pipeline?</h3>
-
-
-
-<p>No no, this section is not a duplicate.  When choosing your components, you need to consider your consumers.  Luckily, most of your consumers in this space are going to be technology focused so we can hopefully ignore non-technical actors for the most part.  If your team is primarily composed of PHP developers, it is probably not a good idea to try and pull in something which is well outside of the PHP ecosystem.  Stick with tools that are similar to other existing tools in your environment.</p>
-
-
-
-<p>Providing good feedback to your engineers is also something you should pay attention to.  If your pipeline does happen to break for one reason or another, and the error messages are cryptic, you will end up in the &#8220;You built it you own it&#8221; paradigm.  There is no democratization of the pipeline out to consumers to facilitate care and feeding, which we will discuss later.  A good DevOps pipeline should support your engineers, not be an exercise in decoding the enigma machine.</p>
-
-
-
-<h3>Perfection is the enemy of progress!</h3>
-
-
-
-<p>Component selections can be a long drawn-out process.  Spending too much time trying to decide will lead to the projects around you getting too far ahead of your efforts causing a lot of undo stress and rework.  It is better to pick something and prove why it won&#8217;t work over time instead of trying to find the magical purple unicorn which solves 200% of use cases.</p>
-
-
-
-<h3>Clearly defined single responsibilities!</h3>
-
-
-
-<p>To fight perfection shutting down progress, try to limit your components to single responsibilities.  You can really apply <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design" target="_blank" rel="noopener">SOLID OOD</a> can really be applied anywhere in technology.  By limiting your components to a single responsibility, you can set up your components as interfaces with each other.  Component 1 expects this input and provides this output.  The magic between input and output can be as complex as you want it to be as long as the inputs and outputs are consistent.  You can then feed the outputs of component 1 into the inputs of component 2.  Continue this pattern for N components.</p>
-
-
-
-<p>What you end up with is a set of &#8220;jobs&#8221; which facilitate specific tasks.  Each of these jobs is testable, improvable, observable, and most importantly; your jobs are understandable!  If you want to break free from &#8220;you built it, you own it&#8221; then everything in your stack should be something that can be handed off to another flesh and blood human being who can pick up your work and run with it.</p>
-
-
-
-<h2>Care and Feeding</h2>
-
-
-<div class="wp-block-image">
-<figure class="alignright size-medium is-resized"><img src="https://www.valewood.org/wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-200x300.jpg" alt="Care and Feeding (Not a real picture of the Ron Popeil Rotisserie)" class="wp-image-278" width="133" height="198" srcset="/wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-683x1024.jpg 683w, /wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-scaled.jpg 1707w" sizes="(max-width: 133px) 100vw, 133px" /></figure></div>
-
-
-<p>Any technology anywhere will need care and feeding.  There is nothing that can be built and just runs like a perpetual motion machine.  You will need to consider the care and feeding of your DevOps pipeline.  Some of the care and feeding will be simple.  Password rotations, library updates, edge case fixes, etc. can all be accomplished as part of the daily flow of work.  More complex care and feeding such as component replacement, break glass in case of emergency, security hardening, etc. will need to be planned into your delivery lifecycle planning.  </p>
-
-
-
-<p>As a quick side tangent, when the term care and feeding comes up as part of normal conversation, does anyone else hear Ron Popeil and his overly excited audience say &#8220;Set it and forget it&#8221;?</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>As you can see, a stable DevOps pipeline will consist of many steps which all feed off of each other ending up in a GitOps-style deployment pipeline.  I believe that the magic in any well-developed, well-set-up DevOps pipeline has a foundation in having a clear definition of your intentions, and intentional components which provide specific functionality, and each component needs attention + care and feeding like any other technology stack that is being supported.  Not every pipeline needs to be as complex, or overly simplistic depending on your frame of reference since there is no one size fits all solution to robust delivery.  Start small, but be intentional and you too can have a DevOps Pipeline Geared for Stability!</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://www.valewood.org/devops-pipeline-geared-for-stability/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
