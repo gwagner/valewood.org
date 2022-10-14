@@ -23,8 +23,6 @@ node create_serp_page.mjs
 # Generate table of contents
 node add_faq_structured_data.mjs
 
-sleep 2
-
 # Generate table of contents
 node fix_table_of_contents.mjs
 
