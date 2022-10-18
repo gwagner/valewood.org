@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/greer-shepherd/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sun, 25 Sep 2022 16:55:42 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 18 Oct 2022 21:45:39 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,208 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Do DevOps Engineers Write a lot of Scripting Code?</title>
+		<link>https://www.valewood.org/devops-scripting/</link>
+		
+		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
+		<pubDate>Tue, 18 Oct 2022 21:45:38 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[coding]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[software]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=1180</guid>
+
+					<description><![CDATA[Whether it’s Python, JavaScript, or other programming languages, Developers spend a lot of time writing code. More traditional infrastructure engineers are going to spend their time in a user interface configuring their systems and services to work for their organizations.&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Whether it’s Python, JavaScript, or other programming languages, Developers spend a lot of time writing code. More traditional infrastructure engineers are going to spend their time in a user interface configuring their systems and services to work for their organizations. Operations teams are going to be picking up what was developed for them by other groups and determine the right ways to run it efficiently.</p>
+
+
+
+<p><strong><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> engineers are going to be performing configuration management efforts, software development, operations activities, and quality assurance activities. Each of these can be automated by writing code with scripting languages. This means that DevOps engineers write code!</strong></p>
+
+
+
+<p>Let&#8217;s explore what this means to a DevOps engineer who may not be comfortable with code since they are coming from a practice that generally performs their activities inside of a user interface.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Why Scripting Code is Important</h2>
+
+
+
+<p>Automation is important. It’s a key part of the DevOps process, which aims to reduce the time it takes to perform manual processes. Automation also increases the reliability and stability of those processes.</p>
+
+
+
+<p>While a lot of people talk about it, they rarely talk about why. If you don’t have a good reason, there’s a good chance that you won’t see the benefits of automation in your organization. That’s why it helps to understand why you are automating in the first place.</p>
+
+
+
+<p>DevOps organizations have a lot of tools and technologies that need to integrate together. DevOps engineers will spend almost every day automating these integrations utilizing a variety of scripting languages or DevOps tools.</p>
+
+
+
+<p>When you spend your days configuring everything from <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a> keys to the location of a database; it’s easy to understand why organizations want to reduce the amount of time spent doing it manually.</p>
+
+
+
+<h2>DevOps and Scripts</h2>
+
+
+
+<p>Those who work across multiple different technologies to build applications and services spend a ton of time configuring environments, virtual machines, and cloud providers.</p>
+
+
+
+<p>That means developers have to learn how to use every single one of those tools. At first, this might feel like a chore; after all, no one wants to learn how to use Inversion of Control (IoC) or batch files to get something from AWS into their local computer or network.</p>
+
+
+
+<p>When you look at it from the perspective of someone who spends most of his or her day typing in code and reading other people’s scripts—the process can seem more like an abomination than anything else.</p>
+
+
+
+<p>A majority of engineers are writing scripts to make their jobs more efficient. Scripts are the shortcut version of automation. They’re designed to help engineers reduce the amount of time they spend doing system administration, delivering software to servers, monitoring systems, performing configuration management, managing cloud vendors, and many other activities.</p>
+
+
+
+<p>I have always advocated if you perform an activity against a user interface that has an API then you should take the time to implement that activity in code via your scripting language of choice.</p>
+
+
+
+<p>By scripting your changes out, you both get an opportunity to codify a change, but you have an opportunity to introduce that code into version control. This will help shift the responsibility of that code from a single person to an entire team.</p>
+
+
+
+<p>Additionally, scripting gives you the opportunity to add comments to your code. Software developers utilizing high-level programming languages will add comments in their code so that the next person that picks up their work understands the intentions of their work. Changes through scripting should be treated the same way. When someone spends time writing scripts, those should be added to the collective code base and their peers should be able to understand the code and consume their work.</p>
+
+
+
+<p>Contributing to the code base also allows that code to be integrated into CI/CD systems for future automated actions.</p>
+
+
+
+<h2>Which DevOps Engineers Should be Working With Scripts?</h2>
+
+
+
+<p>The first step in automating any process is figuring out who should do the automation. That can be tricky. It’s easy to think that the developers who spend most of their day writing code should be the ones to automate their work.</p>
+
+
+
+<p>After all, they have all of the technical knowledge. But, depending on the organization, that might not be the best idea. In organizations using DevOps practices, developers aren’t soley responsible for creating new end-to-end application solutions.</p>
+
+
+
+<p>Instead, everyone on the team is responsible for creating an entire infrastructure along with the entire DevOps lifecycle.</p>
+
+
+
+<p>DevOps engineers are responsible for automating the deployment and operations process of software applications. They are responsible for automating everything from creating configuration files to configuring software environments.</p>
+
+
+
+<p>Many DevOps engineers work with scripts. There are many reasons why this is the case. One reason is that scripts allow DevOps engineers to automate tasks that are repeatable across multiple environments and application iterations.</p>
+
+
+
+<p>If an automated task must be performed multiple times during the development process, it makes sense to create a script that can be used in each environment. Another reason is that scripts help reduce errors by providing clear instructions on how to perform the task.</p>
+
+
+
+<p>DevOps engineers should be knowledgeable about scripting languages, such as Bash, Python, Ruby, and Javascript. They should also be familiar with automation tools like <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> and <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>.</p>
+
+
+
+<p>They should be able to identify areas where automation can improve their workflow and determine what types of changes are needed to make automation possible in their organization.</p>
+
+
+
+<h2>Why is it So Hard to Transition from Scripting to Automation?</h2>
+
+
+
+<p>It might seem like your engineers would love to transition from scripting to automation. After all, they are spending their day writing code.</p>
+
+
+
+<p>Sometimes a jump from scripting to automation can be difficult. If scripts are not written in a way that they can be parameterized, those scripts will not fit into an overall automation structure natively. Additionally, when you’re used to customizing everything from your local machine to your cloud providers, the thought of learning a new configuration tool can seem like a nightmare.</p>
+
+
+
+<p>All of this confusion can lead engineers to either choose not to automate at all or make bad choices about how to automate. The software development industry has an answer for this.</p>
+
+
+
+<p>Most engineers will take a little bit of time to work through the transition from their previous role into one that is inclusive of DevOps. This is why it is so critical to work with the team on learning DevOps and embracing a full DevOps transition.</p>
+
+
+
+<p>Most software development starts as writing scripts, shell scripting, or learning bash. From there, it will expand into utilizing different popular programming languages. If your background is in Office365 administration, you will not go through this general progression.</p>
+
+
+
+<p>Developers should take new DevOps engineers under their wing and help them utilize tools that may not be ultimately familiar with. DevOps engineering is the combination of many different skill sets breaking down traditional barriers. Helping DevOps engineers write scripts that are able to be integrated into a larger set of automation will be a huge step forward for anyone feeling lost in this adoption.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>How to Get Started With Automation in a DevOps Organization</h2>
+
+
+
+<p>DevOps engineers constantly improve their automation, but there’s a lot to learn. That’s why it’s important to bring on someone to help with the transition to automation.</p>
+
+
+
+<p>There are a few things you can do to get started. First, look at your existing scripts and see if you have any that could be automated. Are there any tasks that are taking more time than they should? If so, you might want to take a closer look at them. Next, look at your existing infrastructure. Do you have a known, consistent state? If so, you might want to take a closer look at your scripts.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>If you’re a DevOps engineer who is coming from a user interface, the idea of writing code that can automate different tasks may seem scary. You may feel overwhelmed by the scope of this responsibility and wonder whether you can actually do it.</p>
+
+
+
+<p>To start, you can check out some resources that are available on <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a>. One of the best ways to get started is to dive right into the world of scripting. The Python programming language is great for beginner developers because it’s very easy to pick up and performs well under the hood. Python has a free online course available that teaches you the basics with a few projects you can complete.</p>
+
+
+
+<p>Once you know your way around Python, you can move on to the next step. As you progress, you can check out some of the other scripting languages in use. There are many options out there, and most of them are open-source and available for use. Your best bet is to choose one that you feel comfortable with, and then get familiar with the basics. You can find plenty of tutorials and documentation on how to get started with any of them.</p>
+
+
+
+<p>When you feel ready, you can start experimenting with the different ways to configure your systems.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>What are the two major benefits of DevOps?</title>
 		<link>https://www.valewood.org/major-benefits-of-devops/</link>
 		

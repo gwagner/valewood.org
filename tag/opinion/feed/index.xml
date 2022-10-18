@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/opinion/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 12 Oct 2022 02:28:18 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 17 Oct 2022 20:49:20 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -209,9 +209,17 @@
 		<category><![CDATA[software]]></category>
 		<guid isPermaLink="false">/?p=326</guid>
 
-					<description><![CDATA[The primary skill sets that DevOps engineers need are either in the system administration or software development space. Those 2 foundational skill sets will help any team build some cool solutions to complex problems. There are fringe cases where the&#8230;]]></description>
+					<description><![CDATA[The primary skill sets that&#160;DevOps engineers need are either in the system administration or software development space. Those 2 foundational skill sets will help any team build some cool solutions to complex problems. There are fringe cases where the skillset&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p>The primary skill sets that <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> engineers need are either in the system administration or software development space.  Those 2 foundational skill sets will help any team build some cool solutions to complex problems.  There are fringe cases where the skillset matures outside of those two primary skill sets. Whichever skillset is lacking when making the transition from traditional delivery patterns over to a more DevOps-focused delivery pattern will need to be picked up to ensure that the team has a complete understanding of the technology stack. A system administrator will not need to become a full software developer, and a software developer will not need to become a veteran system administrator.</p>
+<p>The primary skill sets that&nbsp;<a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> engineers need are either in the system administration or software development space. Those 2 foundational skill sets will help any team build some cool solutions to complex problems.</p>
+
+
+
+<p>There are fringe cases where the skillset matures outside of those two primary skill sets. Whichever skillset is lacking when making the transition from traditional delivery patterns over to a more DevOps-focused delivery pattern will need to be picked up to ensure that the team has a complete understanding of the technology stack.</p>
+
+
+
+<p>A system administrator will not need to become a full software developer, and a software developer will not need to become a veteran system administrator. Bringing the best of these two practices together is what makes for a successful DevOps engineer.</p>
 
 
 <p>
@@ -225,51 +233,139 @@
 
 
 
-<h2>Role Separation</h2>
+<h2>Don&#8217;t let Role Separation Scare you Off!</h2>
 
 
 
-<p>First, let&#8217;s dive into role separation.  I am a firm believer in specialization in job functions.  Someone who is a jack of all trades is also generally not a master at any of them.  Individuals on the team should not be looking to be a master at every part of their delivery pipeline but they should be in a position where they are picking up adjacent skills to help backup their team members when needed.  A software developer does not need to be intimately familiar with every intricate detail of a backup solution but should know how to retrieve and restore backups when necessary.  A system administrator does not need to dive deeply into SQL query optimization, but knowing how to write and retrieve data from the database is a useful skill to help support the team.</p>
+<p>First, let&#8217;s dive into role separation. I am a firm believer in specialization in job functions. Someone who is a jack of all trades is also generally not a master at any of them.</p>
 
 
 
-<h2>Software Development</h2>
+<p>Individuals on the DevOps team should not be looking to be a master at every part of their delivery pipeline but they should be in a position where they are picking up adjacent skills to help back up their team members when needed.</p>
 
 
 
-<p>Now, this is a bit of an unfair section because I believe that the software development side of DevOps does need a coding background.  How are you going to do software development without that?</p>
+<p>A software developer who is familiar with one or more programming languages does not need to be intimately familiar with every intricate detail of a backup solution but should know how to retrieve and restore backups when necessary.</p>
 
 
 
-<p>In all seriousness, I believe the question &#8220;Do DevOps engineers need a coding background?&#8221; can be extended into the Ops and Infrastructure space pretty easily.  Software developers should be familiar with the basic fundamentals of a data center or cloud depending on where your solution(s) is/are hosted.  If you are in a data center, become familiar with fault domains, SANs, LUNs, or anything that may impact the stability or performance of your application.  In the cloud, become familiar with the cloud&#8217;s elastic nature of volumes, instances, and services.</p>
+<p>A system administrator does not need to dive deeply into SQL query optimization, but knowing how to write and retrieve data from the database is a useful skill to help support the team.</p>
 
 
 
-<p>Along with the familiarity with computing platforms, it will be advantageous to also familiarize yourself with solution delivery and system configuration.  Solution delivery and delivery pipelines are essential to a good DevOps background.  In my experience, most developers are really good at utilizing their ecosystems to compile a binary or build out a package.  Aside from SFTPing that package out to a server and bouncing a service the idea of automated blue/green solution delivery flow with configuration management, rollbacks,  database updates, monitoring changes, etc. is not the norm.  </p>
+<p>I firmly believe that everyone should pick up at least one programming language that they can become dangerous with. Utilizing code to quickly evaluate, split, transform, or compare lists is a great place to start off since every company has data that needs something done with it. From there, you can choose to grow your skills organically or strategically depending on your affinity for writing code.</p>
 
 
 
-<p>You SFTPers out there know who you are, don&#8217;t try to deny it.</p>
+<h2>Why do System Administrators Need a Coding Background?</h2>
 
 
 
-<p>The primary driver behind configuration management is trying to hit the gold standard of immutable infrastructure.  While application code is being perpetually updated and changed, servers should be treated like cattle instead of pets.  We should be able to easily destroy and fully rebuild a server and deploy the newest version of the application on top of it.  This helps keep things clean and up to date.</p>
+<p>As system administrators make the transition from the GUI to doing DevOps, they will be faced with many challenges where a coding background can really help out.</p>
 
 
 
-<h2>System Administrators</h2>
+<p>DevOps is all about automating the flow of delivery through resilient pipelines to increase quality. To do this, most of your work is going to be through scripts or tools like&nbsp;<a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>, Terraform, <a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a>, CloudFormation, etc. Composing individual scripts for individual tasks is a good place to start, but will quickly become overwhelming if you are not embracing a more generated approach.</p>
 
 
 
-<p>As system administrators make the transition from the GUI to doing DevOps, they will be faced with many challenges where a coding background can really help out.  </p>
+<p>Now, all teams are going to be set up a bit differently, but a common thread across all of them will be the scale of technology becoming overwhelming at some point. One day you may be looking at fifteen servers/services and the next day your product explodes in popularity and you are dealing with thousands of servers/services. Take a step back and ask yourself how you can use business logic to generate your infrastructure, monitoring, configurations, backups solutions, etc. This approach will make something that feels unmanageable and makes it manageable again.</p>
 
 
 
-<p>DevOps is all about automating the flow of delivery through resilient pipelines to increase quality.  To do this, most of your work is going to be through scripts or tools like <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>, Terraform, <a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a>, CloudFormation, etc.  Composing individual scripts for individual tasks is a good place to start, but will quickly become overwhelming if you are not embracing a more generated approach.  </p>
+<h2>Why do Operations Teams Need a Coding Background?</h2>
 
 
 
-<p>Now, all teams are going to be set up a bit differently, but a common thread across all of them will be the scale of technology becoming overwhelming at some point.  One day you may be looking at fifteen servers/services and the next day your product explodes in popularity and you are dealing with thousands of servers/services.  Take a step back and ask yourself how you can use business logic to generate your infrastructure, monitoring, configurations, backups solutions, etc.  This approach will make something that feels unmanageable and makes it manageable again.</p>
+<p>Let&#8217;s say you are working in a hybrid multi-tenant environment that is changing at a rapid pace. Let&#8217;s also say that you are saddled with several different operating systems or services in this environment. Now let&#8217;s say you are a small team of only a few people with operations tasks piling up by the hour and you are unable to complete them due to the sheer volume of incoming work.</p>
+
+
+
+<p>Sounds pretty standard right? I believe there are a series of DevOps tools that can help. Beyond that, I believe that scripting languages along with some coding knowledge can greatly increase your efficiency.</p>
+
+
+
+<p>In a hybrid environment, you are going to need to really lean on your technical skills to ensure that the right machines or services in the right place are being maintained. On top of that, you are going to need a pretty accurate inventory of information to work from in order to stay efficient. Deploying a scripting language to utilize cloud console tools may be a quick way to pull together something like a bash alias file for quick environment access.</p>
+
+
+
+<p>When faced with the challenge of scripting against any specific operating system, one could keep a series of scripts handy on their computer to run repetitive tasks. Alternatively, they could utilize a tool like <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> and ensure not only is their automation targetable but also ensure that it is composed in a reusable way as well. This could all be contributed to by a DevOps team in a source code management system like <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> ensuring it is accessible by everyone on the team.</p>
+
+
+
+<p>The key to operations teams is to keep work fast and efficient. Spending some time orchestrating complex events into the software development life cycle is a great way to ensure that operations becomes everyone&#8217;s responsibility to contribute to.</p>
+
+
+
+<h2>Why do Quality Assurance Teams Need a Coding Background?</h2>
+
+
+
+<p>Coding skills are becoming more and more relevant to quality assurance teams. I believe that most quality engineering tools focus too much on being able to point and click your way to success.</p>
+
+
+
+<p>By bringing automated testing into your ecosystem, and integrating it directly into your source code management tools, a qa engineer will be able to promote ensuring quality is the responsibility of everyone on the team. People will use what is accessible to them as long as it has a very low barrier to entry.</p>
+
+
+
+<p>Coding knowledge is also very helpful in this space. We have all, at one point or another, filed a bug with a development team but since our programming skills were not up to snuff, we were unable to provide any valuable or additional context to the bug. By being able to utilize development tools to dive into the code and return bug tickets with actionable insight, the DevOps team will be able to move much more quickly to resolution.</p>
+
+
+
+<p>Another area that I have seen quality teams need some assistance with is around tracking code versions after deploying a new version of their application. By tying your test tracking systems together with a code repository tag and running preflight validation checks on the deployed code versions to ensure they are in sync, you can ensure you are not wasting cycles trying to get the next critical release out the door.</p>
+
+
+
+<h2>Why does Software Development Need a Coding Background?</h2>
+
+
+
+<p>Now, this is a bit of an unfair section because I believe that the software development side of DevOps does need a coding background. How are you going to do software development without that?</p>
+
+
+
+<p>In all seriousness, I believe the question “Do DevOps engineers need a coding background?” can be extended into the Ops and Infrastructure space pretty easily. I believe that developers looking to wear the moniker of &#8220;DevOps engineer&#8221; should be looking to extend coding skills into spaces they are less familiar with.</p>
+
+
+
+<p>Software developers should be familiar with the basic fundamentals of a data center or cloud depending on where your solution(s) is/are hosted. If you are in a data center, become familiar with fault domains, SANs, LUNs, monitoring, or anything that may impact the stability or performance of your application. In the cloud, become familiar with the cloud&#8217;s elastic nature of volumes, instances, and services.</p>
+
+
+
+<p>Along with the familiarity with computing platforms, it will be advantageous to also familiarize yourself with DevOps tools that enhance solution delivery and system configuration.</p>
+
+
+
+<p>Solution delivery and delivery pipelines are essential to a good DevOps background. In my experience, most developers are really good at utilizing their ecosystems to compile a binary or build out a package.</p>
+
+
+
+<p>Aside from SFTPing that package out to a server and bouncing a service the idea of automated blue/green solution delivery flow with configuration management, rollbacks, database updates, monitoring changes, etc. is not the norm.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>You SFTPers out there know who you are, don&#8217;t try to deny it.</p></blockquote>
+
+
+
+<p>Developers should be looking for ways to extend their idealized software development process into the infrastructure, operations, and quality assurance spaces. One of the greatest challenges I see from Operations teams or Infrastructure teams is their ability to produce a consistent and reliable build and deploy pipeline that provides good actionable feedback. Those features are consistently available in any sort of software development life cycle.</p>
+
+
+
+<h2>Why is a Coding Background Good For Everyone!</h2>
+
+
+
+<p>The primary driver behind configuration management is trying to hit the gold standard of immutable infrastructure. While application code is being perpetually updated and changed, servers should be treated like cattle instead of pets. We should be able to easily destroy and fully rebuild a server and deploy the newest version of the application on top of it. This helps keep things clean and up to date.</p>
+
+
+
+<p>Taking time to learn software development, or any technical skills on a technology team helps drive better communication and collaboration skills. As the team starts to move into continuous integration and continuous delivery model as part of their agile methodology adoption, DevOps teams will need to find new ways to effectively share information. By putting development front and center, and I don&#8217;t mean just application code here, there is a set of basic knowledge baselines that everyone can agree to communicate under.</p>
+
+
+
+<p>Organizations can also find some common ground to reduce extraneous costs on their products as well. Focusing on a smaller set of software development languages, and configuration management tools, and reducing other such technological diversity; you can build an economy of scale around your skilled workforce that has focused on delivering value to the market more quickly. This is especially true when adopting DevOps by merging development and operations teams together. This first move will generally expose a lot of technological waste.</p>
 
 
 
@@ -277,7 +373,7 @@
 
 
 
-<p>Do DevOps engineers need a coding background?  My perspective is, that it wouldn&#8217;t hurt.  Diving into software development patterns and extending them into the DevOps delivery space allows for greater consistency, along with the ability to scale to meet demand much more quickly without feeling overwhelmed.  I don&#8217;t think that software developers need to become the best systems administrators ever created.  I don&#8217;t think that systems administrators need to become the greatest software developers ever created.  I do think that everyone in technology could benefit from a bit of exposure to spaces outside of their primary responsibilities because it lends itself well to increasing quality and flexibility while delivering solutions.</p>
+<p>Do DevOps engineers need a coding background? My perspective is, that it wouldn&#8217;t hurt. Diving into software development patterns and extending them into the DevOps delivery space allows for greater consistency, along with the ability to scale to meet demand much more quickly without feeling overwhelmed. I don&#8217;t think that software developers need to become the best systems administrators ever created. I don&#8217;t think that systems administrators need to become the greatest software developers ever created. I do think that everyone in technology could benefit from a bit of exposure to spaces outside of their primary responsibilities because it lends itself well to increasing quality and flexibility while delivering solutions.</p>
 ]]></content:encoded>
 					
 		

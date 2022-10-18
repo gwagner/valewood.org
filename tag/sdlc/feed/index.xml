@@ -68,7 +68,7 @@
 
 
 
-<p>If you have spent any time in the software space, or have done any googling around building software, Jenkins is sure to be the first thing that pops up. Jenkins is an open-source automation tool used for continuous integration and continuous delivery (CI/CD). Companies use it to automate the software development process, build and test their code, and deploy their applications. Jenkins is a highly configurable tool that allows you to choose from a large range of plugins. These plugins allow you to integrate Jenkins with other tools such as Docker Hub, JIRA, and others. Jenkins can be used for DevOps to automate the software delivery process, deploy apps, and manage infrastructure.</p>
+<p>If you have spent any time in the software space, or have done any googling around building software, Jenkins is sure to be the first thing that pops up. Jenkins is an open-source automation tool used for continuous integration and continuous delivery (CI/CD). Companies use it to automate the software development process, build and test their code, and deploy their applications. Jenkins is a highly configurable tool that allows you to choose from a large range of plugins. These plugins allow you to integrate Jenkins with other tools such as <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> Hub, JIRA, and others. Jenkins can be used for DevOps to automate the software delivery process, deploy apps, and manage infrastructure.</p>
 
 
 
