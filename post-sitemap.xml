@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.valewood.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://www.valewood.org/devops-scripting/</loc>
+		<lastmod>2022-10-18T16:45:39-05:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/do-devops-engineers-need-a-coding-background/</loc>
+		<lastmod>2022-10-17T15:49:20-05:00</lastmod>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/are-devops-engineers-in-demand/</loc>
 		<lastmod>2022-10-14T15:19:17-05:00</lastmod>
 	</url>
@@ -32,10 +40,6 @@
 	<url>
 		<loc>https://www.valewood.org/major-benefits-of-devops/</loc>
 		<lastmod>2022-09-25T11:55:42-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/do-devops-engineers-need-a-coding-background/</loc>
-		<lastmod>2022-09-19T16:57:04-05:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-pipeline-geared-for-stability/</loc>

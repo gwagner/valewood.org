@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 14 Oct 2022 20:19:17 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 18 Oct 2022 21:45:39 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,208 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Do DevOps Engineers Write a lot of Scripting Code?</title>
+		<link>https://www.valewood.org/devops-scripting/</link>
+		
+		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
+		<pubDate>Tue, 18 Oct 2022 21:45:38 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[coding]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[software]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=1180</guid>
+
+					<description><![CDATA[Whether it’s Python, JavaScript, or other programming languages, Developers spend a lot of time writing code. More traditional infrastructure engineers are going to spend their time in a user interface configuring their systems and services to work for their organizations.&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Whether it’s Python, JavaScript, or other programming languages, Developers spend a lot of time writing code. More traditional infrastructure engineers are going to spend their time in a user interface configuring their systems and services to work for their organizations. Operations teams are going to be picking up what was developed for them by other groups and determine the right ways to run it efficiently.</p>
+
+
+
+<p><strong><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> engineers are going to be performing configuration management efforts, software development, operations activities, and quality assurance activities. Each of these can be automated by writing code with scripting languages. This means that DevOps engineers write code!</strong></p>
+
+
+
+<p>Let&#8217;s explore what this means to a DevOps engineer who may not be comfortable with code since they are coming from a practice that generally performs their activities inside of a user interface.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Why Scripting Code is Important</h2>
+
+
+
+<p>Automation is important. It’s a key part of the DevOps process, which aims to reduce the time it takes to perform manual processes. Automation also increases the reliability and stability of those processes.</p>
+
+
+
+<p>While a lot of people talk about it, they rarely talk about why. If you don’t have a good reason, there’s a good chance that you won’t see the benefits of automation in your organization. That’s why it helps to understand why you are automating in the first place.</p>
+
+
+
+<p>DevOps organizations have a lot of tools and technologies that need to integrate together. DevOps engineers will spend almost every day automating these integrations utilizing a variety of scripting languages or DevOps tools.</p>
+
+
+
+<p>When you spend your days configuring everything from <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a> keys to the location of a database; it’s easy to understand why organizations want to reduce the amount of time spent doing it manually.</p>
+
+
+
+<h2>DevOps and Scripts</h2>
+
+
+
+<p>Those who work across multiple different technologies to build applications and services spend a ton of time configuring environments, virtual machines, and cloud providers.</p>
+
+
+
+<p>That means developers have to learn how to use every single one of those tools. At first, this might feel like a chore; after all, no one wants to learn how to use Inversion of Control (IoC) or batch files to get something from AWS into their local computer or network.</p>
+
+
+
+<p>When you look at it from the perspective of someone who spends most of his or her day typing in code and reading other people’s scripts—the process can seem more like an abomination than anything else.</p>
+
+
+
+<p>A majority of engineers are writing scripts to make their jobs more efficient. Scripts are the shortcut version of automation. They’re designed to help engineers reduce the amount of time they spend doing system administration, delivering software to servers, monitoring systems, performing configuration management, managing cloud vendors, and many other activities.</p>
+
+
+
+<p>I have always advocated if you perform an activity against a user interface that has an API then you should take the time to implement that activity in code via your scripting language of choice.</p>
+
+
+
+<p>By scripting your changes out, you both get an opportunity to codify a change, but you have an opportunity to introduce that code into version control. This will help shift the responsibility of that code from a single person to an entire team.</p>
+
+
+
+<p>Additionally, scripting gives you the opportunity to add comments to your code. Software developers utilizing high-level programming languages will add comments in their code so that the next person that picks up their work understands the intentions of their work. Changes through scripting should be treated the same way. When someone spends time writing scripts, those should be added to the collective code base and their peers should be able to understand the code and consume their work.</p>
+
+
+
+<p>Contributing to the code base also allows that code to be integrated into CI/CD systems for future automated actions.</p>
+
+
+
+<h2>Which DevOps Engineers Should be Working With Scripts?</h2>
+
+
+
+<p>The first step in automating any process is figuring out who should do the automation. That can be tricky. It’s easy to think that the developers who spend most of their day writing code should be the ones to automate their work.</p>
+
+
+
+<p>After all, they have all of the technical knowledge. But, depending on the organization, that might not be the best idea. In organizations using DevOps practices, developers aren’t soley responsible for creating new end-to-end application solutions.</p>
+
+
+
+<p>Instead, everyone on the team is responsible for creating an entire infrastructure along with the entire DevOps lifecycle.</p>
+
+
+
+<p>DevOps engineers are responsible for automating the deployment and operations process of software applications. They are responsible for automating everything from creating configuration files to configuring software environments.</p>
+
+
+
+<p>Many DevOps engineers work with scripts. There are many reasons why this is the case. One reason is that scripts allow DevOps engineers to automate tasks that are repeatable across multiple environments and application iterations.</p>
+
+
+
+<p>If an automated task must be performed multiple times during the development process, it makes sense to create a script that can be used in each environment. Another reason is that scripts help reduce errors by providing clear instructions on how to perform the task.</p>
+
+
+
+<p>DevOps engineers should be knowledgeable about scripting languages, such as Bash, Python, Ruby, and Javascript. They should also be familiar with automation tools like <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> and <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>.</p>
+
+
+
+<p>They should be able to identify areas where automation can improve their workflow and determine what types of changes are needed to make automation possible in their organization.</p>
+
+
+
+<h2>Why is it So Hard to Transition from Scripting to Automation?</h2>
+
+
+
+<p>It might seem like your engineers would love to transition from scripting to automation. After all, they are spending their day writing code.</p>
+
+
+
+<p>Sometimes a jump from scripting to automation can be difficult. If scripts are not written in a way that they can be parameterized, those scripts will not fit into an overall automation structure natively. Additionally, when you’re used to customizing everything from your local machine to your cloud providers, the thought of learning a new configuration tool can seem like a nightmare.</p>
+
+
+
+<p>All of this confusion can lead engineers to either choose not to automate at all or make bad choices about how to automate. The software development industry has an answer for this.</p>
+
+
+
+<p>Most engineers will take a little bit of time to work through the transition from their previous role into one that is inclusive of DevOps. This is why it is so critical to work with the team on learning DevOps and embracing a full DevOps transition.</p>
+
+
+
+<p>Most software development starts as writing scripts, shell scripting, or learning bash. From there, it will expand into utilizing different popular programming languages. If your background is in Office365 administration, you will not go through this general progression.</p>
+
+
+
+<p>Developers should take new DevOps engineers under their wing and help them utilize tools that may not be ultimately familiar with. DevOps engineering is the combination of many different skill sets breaking down traditional barriers. Helping DevOps engineers write scripts that are able to be integrated into a larger set of automation will be a huge step forward for anyone feeling lost in this adoption.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>How to Get Started With Automation in a DevOps Organization</h2>
+
+
+
+<p>DevOps engineers constantly improve their automation, but there’s a lot to learn. That’s why it’s important to bring on someone to help with the transition to automation.</p>
+
+
+
+<p>There are a few things you can do to get started. First, look at your existing scripts and see if you have any that could be automated. Are there any tasks that are taking more time than they should? If so, you might want to take a closer look at them. Next, look at your existing infrastructure. Do you have a known, consistent state? If so, you might want to take a closer look at your scripts.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>If you’re a DevOps engineer who is coming from a user interface, the idea of writing code that can automate different tasks may seem scary. You may feel overwhelmed by the scope of this responsibility and wonder whether you can actually do it.</p>
+
+
+
+<p>To start, you can check out some resources that are available on <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a>. One of the best ways to get started is to dive right into the world of scripting. The Python programming language is great for beginner developers because it’s very easy to pick up and performs well under the hood. Python has a free online course available that teaches you the basics with a few projects you can complete.</p>
+
+
+
+<p>Once you know your way around Python, you can move on to the next step. As you progress, you can check out some of the other scripting languages in use. There are many options out there, and most of them are open-source and available for use. Your best bet is to choose one that you feel comfortable with, and then get familiar with the basics. You can find plenty of tutorials and documentation on how to get started with any of them.</p>
+
+
+
+<p>When you feel ready, you can start experimenting with the different ways to configure your systems.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Are DevOps Engineers in Demand in 2022?</title>
 		<link>https://www.valewood.org/are-devops-engineers-in-demand/</link>
 		
@@ -687,7 +889,7 @@
 
 
 
-<p>Much like the Golang example above, I have also utilized ruby as an API middleware for doing data payload manipulations.&nbsp; Prior to Docker supporting <a href="https://docs.docker.com/config/containers/logging/json-file/" target="_blank" rel="noopener">JSON File Logging</a>, there were very long debates about what separation between log entries means between different programming languages.&nbsp; Ruby was used in an environment where I was working into tail log output from containers and based on its configuration, properly parse and package logs to be sent to centralized logging systems upstream with additional metadata.</p>
+<p>Much like the Golang example above, I have also utilized ruby as an API middleware for doing data payload manipulations.&nbsp; Prior to <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> supporting <a href="https://docs.docker.com/config/containers/logging/json-file/" target="_blank" rel="noopener">JSON File Logging</a>, there were very long debates about what separation between log entries means between different programming languages.&nbsp; Ruby was used in an environment where I was working into tail log output from containers and based on its configuration, properly parse and package logs to be sent to centralized logging systems upstream with additional metadata.</p>
 
 
 
@@ -1043,9 +1245,17 @@
 		<category><![CDATA[software]]></category>
 		<guid isPermaLink="false">/?p=326</guid>
 
-					<description><![CDATA[The primary skill sets that DevOps engineers need are either in the system administration or software development space. Those 2 foundational skill sets will help any team build some cool solutions to complex problems. There are fringe cases where the&#8230;]]></description>
+					<description><![CDATA[The primary skill sets that&#160;DevOps engineers need are either in the system administration or software development space. Those 2 foundational skill sets will help any team build some cool solutions to complex problems. There are fringe cases where the skillset&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p>The primary skill sets that <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> engineers need are either in the system administration or software development space.  Those 2 foundational skill sets will help any team build some cool solutions to complex problems.  There are fringe cases where the skillset matures outside of those two primary skill sets. Whichever skillset is lacking when making the transition from traditional delivery patterns over to a more DevOps-focused delivery pattern will need to be picked up to ensure that the team has a complete understanding of the technology stack. A system administrator will not need to become a full software developer, and a software developer will not need to become a veteran system administrator.</p>
+<p>The primary skill sets that&nbsp;<a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> engineers need are either in the system administration or software development space. Those 2 foundational skill sets will help any team build some cool solutions to complex problems.</p>
+
+
+
+<p>There are fringe cases where the skillset matures outside of those two primary skill sets. Whichever skillset is lacking when making the transition from traditional delivery patterns over to a more DevOps-focused delivery pattern will need to be picked up to ensure that the team has a complete understanding of the technology stack.</p>
+
+
+
+<p>A system administrator will not need to become a full software developer, and a software developer will not need to become a veteran system administrator. Bringing the best of these two practices together is what makes for a successful DevOps engineer.</p>
 
 
 <p>
@@ -1059,51 +1269,139 @@
 
 
 
-<h2>Role Separation</h2>
+<h2>Don&#8217;t let Role Separation Scare you Off!</h2>
 
 
 
-<p>First, let&#8217;s dive into role separation.  I am a firm believer in specialization in job functions.  Someone who is a jack of all trades is also generally not a master at any of them.  Individuals on the team should not be looking to be a master at every part of their delivery pipeline but they should be in a position where they are picking up adjacent skills to help backup their team members when needed.  A software developer does not need to be intimately familiar with every intricate detail of a backup solution but should know how to retrieve and restore backups when necessary.  A system administrator does not need to dive deeply into SQL query optimization, but knowing how to write and retrieve data from the database is a useful skill to help support the team.</p>
+<p>First, let&#8217;s dive into role separation. I am a firm believer in specialization in job functions. Someone who is a jack of all trades is also generally not a master at any of them.</p>
 
 
 
-<h2>Software Development</h2>
+<p>Individuals on the DevOps team should not be looking to be a master at every part of their delivery pipeline but they should be in a position where they are picking up adjacent skills to help back up their team members when needed.</p>
 
 
 
-<p>Now, this is a bit of an unfair section because I believe that the software development side of DevOps does need a coding background.  How are you going to do software development without that?</p>
+<p>A software developer who is familiar with one or more programming languages does not need to be intimately familiar with every intricate detail of a backup solution but should know how to retrieve and restore backups when necessary.</p>
 
 
 
-<p>In all seriousness, I believe the question &#8220;Do DevOps engineers need a coding background?&#8221; can be extended into the Ops and Infrastructure space pretty easily.  Software developers should be familiar with the basic fundamentals of a data center or cloud depending on where your solution(s) is/are hosted.  If you are in a data center, become familiar with fault domains, SANs, LUNs, or anything that may impact the stability or performance of your application.  In the cloud, become familiar with the cloud&#8217;s elastic nature of volumes, instances, and services.</p>
+<p>A system administrator does not need to dive deeply into SQL query optimization, but knowing how to write and retrieve data from the database is a useful skill to help support the team.</p>
 
 
 
-<p>Along with the familiarity with computing platforms, it will be advantageous to also familiarize yourself with solution delivery and system configuration.  Solution delivery and delivery pipelines are essential to a good DevOps background.  In my experience, most developers are really good at utilizing their ecosystems to compile a binary or build out a package.  Aside from SFTPing that package out to a server and bouncing a service the idea of automated blue/green solution delivery flow with configuration management, rollbacks,  database updates, monitoring changes, etc. is not the norm.  </p>
+<p>I firmly believe that everyone should pick up at least one programming language that they can become dangerous with. Utilizing code to quickly evaluate, split, transform, or compare lists is a great place to start off since every company has data that needs something done with it. From there, you can choose to grow your skills organically or strategically depending on your affinity for writing code.</p>
 
 
 
-<p>You SFTPers out there know who you are, don&#8217;t try to deny it.</p>
+<h2>Why do System Administrators Need a Coding Background?</h2>
 
 
 
-<p>The primary driver behind configuration management is trying to hit the gold standard of immutable infrastructure.  While application code is being perpetually updated and changed, servers should be treated like cattle instead of pets.  We should be able to easily destroy and fully rebuild a server and deploy the newest version of the application on top of it.  This helps keep things clean and up to date.</p>
+<p>As system administrators make the transition from the GUI to doing DevOps, they will be faced with many challenges where a coding background can really help out.</p>
 
 
 
-<h2>System Administrators</h2>
+<p>DevOps is all about automating the flow of delivery through resilient pipelines to increase quality. To do this, most of your work is going to be through scripts or tools like&nbsp;<a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>, Terraform, <a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a>, CloudFormation, etc. Composing individual scripts for individual tasks is a good place to start, but will quickly become overwhelming if you are not embracing a more generated approach.</p>
 
 
 
-<p>As system administrators make the transition from the GUI to doing DevOps, they will be faced with many challenges where a coding background can really help out.  </p>
+<p>Now, all teams are going to be set up a bit differently, but a common thread across all of them will be the scale of technology becoming overwhelming at some point. One day you may be looking at fifteen servers/services and the next day your product explodes in popularity and you are dealing with thousands of servers/services. Take a step back and ask yourself how you can use business logic to generate your infrastructure, monitoring, configurations, backups solutions, etc. This approach will make something that feels unmanageable and makes it manageable again.</p>
 
 
 
-<p>DevOps is all about automating the flow of delivery through resilient pipelines to increase quality.  To do this, most of your work is going to be through scripts or tools like <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>, Terraform, <a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a>, CloudFormation, etc.  Composing individual scripts for individual tasks is a good place to start, but will quickly become overwhelming if you are not embracing a more generated approach.  </p>
+<h2>Why do Operations Teams Need a Coding Background?</h2>
 
 
 
-<p>Now, all teams are going to be set up a bit differently, but a common thread across all of them will be the scale of technology becoming overwhelming at some point.  One day you may be looking at fifteen servers/services and the next day your product explodes in popularity and you are dealing with thousands of servers/services.  Take a step back and ask yourself how you can use business logic to generate your infrastructure, monitoring, configurations, backups solutions, etc.  This approach will make something that feels unmanageable and makes it manageable again.</p>
+<p>Let&#8217;s say you are working in a hybrid multi-tenant environment that is changing at a rapid pace. Let&#8217;s also say that you are saddled with several different operating systems or services in this environment. Now let&#8217;s say you are a small team of only a few people with operations tasks piling up by the hour and you are unable to complete them due to the sheer volume of incoming work.</p>
+
+
+
+<p>Sounds pretty standard right? I believe there are a series of DevOps tools that can help. Beyond that, I believe that scripting languages along with some coding knowledge can greatly increase your efficiency.</p>
+
+
+
+<p>In a hybrid environment, you are going to need to really lean on your technical skills to ensure that the right machines or services in the right place are being maintained. On top of that, you are going to need a pretty accurate inventory of information to work from in order to stay efficient. Deploying a scripting language to utilize cloud console tools may be a quick way to pull together something like a bash alias file for quick environment access.</p>
+
+
+
+<p>When faced with the challenge of scripting against any specific operating system, one could keep a series of scripts handy on their computer to run repetitive tasks. Alternatively, they could utilize a tool like <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> and ensure not only is their automation targetable but also ensure that it is composed in a reusable way as well. This could all be contributed to by a DevOps team in a source code management system like <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> ensuring it is accessible by everyone on the team.</p>
+
+
+
+<p>The key to operations teams is to keep work fast and efficient. Spending some time orchestrating complex events into the software development life cycle is a great way to ensure that operations becomes everyone&#8217;s responsibility to contribute to.</p>
+
+
+
+<h2>Why do Quality Assurance Teams Need a Coding Background?</h2>
+
+
+
+<p>Coding skills are becoming more and more relevant to quality assurance teams. I believe that most quality engineering tools focus too much on being able to point and click your way to success.</p>
+
+
+
+<p>By bringing automated testing into your ecosystem, and integrating it directly into your source code management tools, a qa engineer will be able to promote ensuring quality is the responsibility of everyone on the team. People will use what is accessible to them as long as it has a very low barrier to entry.</p>
+
+
+
+<p>Coding knowledge is also very helpful in this space. We have all, at one point or another, filed a bug with a development team but since our programming skills were not up to snuff, we were unable to provide any valuable or additional context to the bug. By being able to utilize development tools to dive into the code and return bug tickets with actionable insight, the DevOps team will be able to move much more quickly to resolution.</p>
+
+
+
+<p>Another area that I have seen quality teams need some assistance with is around tracking code versions after deploying a new version of their application. By tying your test tracking systems together with a code repository tag and running preflight validation checks on the deployed code versions to ensure they are in sync, you can ensure you are not wasting cycles trying to get the next critical release out the door.</p>
+
+
+
+<h2>Why does Software Development Need a Coding Background?</h2>
+
+
+
+<p>Now, this is a bit of an unfair section because I believe that the software development side of DevOps does need a coding background. How are you going to do software development without that?</p>
+
+
+
+<p>In all seriousness, I believe the question “Do DevOps engineers need a coding background?” can be extended into the Ops and Infrastructure space pretty easily. I believe that developers looking to wear the moniker of &#8220;DevOps engineer&#8221; should be looking to extend coding skills into spaces they are less familiar with.</p>
+
+
+
+<p>Software developers should be familiar with the basic fundamentals of a data center or cloud depending on where your solution(s) is/are hosted. If you are in a data center, become familiar with fault domains, SANs, LUNs, monitoring, or anything that may impact the stability or performance of your application. In the cloud, become familiar with the cloud&#8217;s elastic nature of volumes, instances, and services.</p>
+
+
+
+<p>Along with the familiarity with computing platforms, it will be advantageous to also familiarize yourself with DevOps tools that enhance solution delivery and system configuration.</p>
+
+
+
+<p>Solution delivery and delivery pipelines are essential to a good DevOps background. In my experience, most developers are really good at utilizing their ecosystems to compile a binary or build out a package.</p>
+
+
+
+<p>Aside from SFTPing that package out to a server and bouncing a service the idea of automated blue/green solution delivery flow with configuration management, rollbacks, database updates, monitoring changes, etc. is not the norm.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>You SFTPers out there know who you are, don&#8217;t try to deny it.</p></blockquote>
+
+
+
+<p>Developers should be looking for ways to extend their idealized software development process into the infrastructure, operations, and quality assurance spaces. One of the greatest challenges I see from Operations teams or Infrastructure teams is their ability to produce a consistent and reliable build and deploy pipeline that provides good actionable feedback. Those features are consistently available in any sort of software development life cycle.</p>
+
+
+
+<h2>Why is a Coding Background Good For Everyone!</h2>
+
+
+
+<p>The primary driver behind configuration management is trying to hit the gold standard of immutable infrastructure. While application code is being perpetually updated and changed, servers should be treated like cattle instead of pets. We should be able to easily destroy and fully rebuild a server and deploy the newest version of the application on top of it. This helps keep things clean and up to date.</p>
+
+
+
+<p>Taking time to learn software development, or any technical skills on a technology team helps drive better communication and collaboration skills. As the team starts to move into continuous integration and continuous delivery model as part of their agile methodology adoption, DevOps teams will need to find new ways to effectively share information. By putting development front and center, and I don&#8217;t mean just application code here, there is a set of basic knowledge baselines that everyone can agree to communicate under.</p>
+
+
+
+<p>Organizations can also find some common ground to reduce extraneous costs on their products as well. Focusing on a smaller set of software development languages, and configuration management tools, and reducing other such technological diversity; you can build an economy of scale around your skilled workforce that has focused on delivering value to the market more quickly. This is especially true when adopting DevOps by merging development and operations teams together. This first move will generally expose a lot of technological waste.</p>
 
 
 
@@ -1111,7 +1409,7 @@
 
 
 
-<p>Do DevOps engineers need a coding background?  My perspective is, that it wouldn&#8217;t hurt.  Diving into software development patterns and extending them into the DevOps delivery space allows for greater consistency, along with the ability to scale to meet demand much more quickly without feeling overwhelmed.  I don&#8217;t think that software developers need to become the best systems administrators ever created.  I don&#8217;t think that systems administrators need to become the greatest software developers ever created.  I do think that everyone in technology could benefit from a bit of exposure to spaces outside of their primary responsibilities because it lends itself well to increasing quality and flexibility while delivering solutions.</p>
+<p>Do DevOps engineers need a coding background? My perspective is, that it wouldn&#8217;t hurt. Diving into software development patterns and extending them into the DevOps delivery space allows for greater consistency, along with the ability to scale to meet demand much more quickly without feeling overwhelmed. I don&#8217;t think that software developers need to become the best systems administrators ever created. I don&#8217;t think that systems administrators need to become the greatest software developers ever created. I do think that everyone in technology could benefit from a bit of exposure to spaces outside of their primary responsibilities because it lends itself well to increasing quality and flexibility while delivering solutions.</p>
 ]]></content:encoded>
 					
 		
@@ -1158,7 +1456,7 @@
 
 
 
-<p>If you have spent any time in the software space, or have done any googling around building software, Jenkins is sure to be the first thing that pops up. Jenkins is an open-source automation tool used for continuous integration and continuous delivery (CI/CD). Companies use it to automate the software development process, build and test their code, and deploy their applications. Jenkins is a highly configurable tool that allows you to choose from a large range of plugins. These plugins allow you to integrate Jenkins with other tools such as Docker Hub, JIRA, and others. Jenkins can be used for DevOps to automate the software delivery process, deploy apps, and manage infrastructure.</p>
+<p>If you have spent any time in the software space, or have done any googling around building software, Jenkins is sure to be the first thing that pops up. Jenkins is an open-source automation tool used for continuous integration and continuous delivery (CI/CD). Companies use it to automate the software development process, build and test their code, and deploy their applications. Jenkins is a highly configurable tool that allows you to choose from a large range of plugins. These plugins allow you to integrate Jenkins with other tools such as <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> Hub, JIRA, and others. Jenkins can be used for DevOps to automate the software delivery process, deploy apps, and manage infrastructure.</p>
 
 
 
@@ -1640,149 +1938,6 @@
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://www.valewood.org/devops-roll-up-august/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>How to Build a DevOps Pipeline Geared for Stability?</title>
-		<link>https://www.valewood.org/devops-pipeline-geared-for-stability/</link>
-					<comments>https://www.valewood.org/devops-pipeline-geared-for-stability/#respond</comments>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Tue, 30 Aug 2022 02:47:33 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[development]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[sdlc]]></category>
-		<guid isPermaLink="false">/?p=95</guid>
-
-					<description><![CDATA[Building a devops pipeline is easy. Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!! Well&#8230; not exactly. In my experience, this is where things usually start,&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Building a <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">devops</a> pipeline is easy.  Wire up a few components, write some scripts, glue on some tests, and add credentials for production, and voila you are DevOps-ing!!  Well&#8230; not exactly.  In my experience, this is where things usually start, but will quickly lead to new and additional churn in a delivery cycle which was never intended.  Sometimes that churn goes completely unrecognized simply because the thought of doing DevOps is far better than the idea of not doing DevOps.  Either way, do yourself a favor and take a step back to look into how intentional design, intentional component selection, along with care and feeding can get you into a spot where your pipelines work for you instead of you working for your pipelines.</p>
-
-
-
-<p>In case you are wondering, &#8220;what is a pipeline in DevOps&#8221;?  A pipeline in DevOps is centered around the idea of ensuring code is continuously delivered which in turn means the business is seeing a continuous flow of value.  There are many DevOps pipeline tools on the market, but I want to take step back and discuss more of the planning and design side of things before diving directly into tooling.</p>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
-
-<h2>Intentional Design</h2>
-
-
-
-<p>Deploying Jenkins, giving it some keys, giving it a job to do, and then finally pointing at production will yield a short-term win with long-term consequences.  While I believe that most aspiring DevOps engineers will start here, more intentional design should be considered when building a pipeline.</p>
-
-
-
-<h3>Who are the consumers of your DevOps Pipeline?</h3>
-
-
-
-<p>Consider who is going to be consuming the pipeline that is being created.  Some organizations want manual approvals, some want automated approvals, some are a bit more cowboy and approvals are not part of the conversation.  Sometimes a QA team, project/program management, developers, executives, or the lunch lady could be consumers of your pipeline.  Consider them when designing what you will use for delivery.</p>
-
-
-
-<h3>What are the goals of your DevOps Pipeline?</h3>
-
-
-
-<p>Not everyone is going to agree here, but when I am doing a design, I start by conceptualizing my end state much like pointing a ship in the direction that I think I want to go.  This allows me to get more eyes on the concept that I am building toward while pulling in feedback from interested stakeholders.  On the back of that work, I will take a step back and try to understand the strategic themes and goals of the pipeline to get more broad alignment from the consumers and stakeholders.  </p>
-
-
-
-<p>Just because someone tells you that they want something, doesn&#8217;t mean that you heard them correctly or they fully understood what they are asking for.  Try to take time and dissect their request and either align it to your design walking the requestor through how your solution solves their needs, or reframe your specific thinking of the problem to accommodate their request.</p>
-
-
-
-<h3>Is there a logical flow you can follow?</h3>
-
-
-
-<p>I like to map out my process as illustrated below.</p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><img width="1024" height="204" src="https://www.valewood.org/wp-content/uploads/2022/08/devops-pipeline-flowchart-1024x204.png" alt="DevOps Pipeline Flowchart" class="wp-image-273" srcset="/wp-content/uploads/2022/08/devops-pipeline-flowchart-1024x204.png 1024w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-300x60.png 300w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-768x153.png 768w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1536x306.png 1536w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-2048x409.png 2048w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1920x383.png 1920w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-1170x233.png 1170w, /wp-content/uploads/2022/08/devops-pipeline-flowchart-585x117.png 585w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
-
-
-<p>By taking the time to understand the ins and outs of your pipeline, the decision tree that gets created, necessary supplemental steps, and points of failure you can design a logical flow that works across many different arenas.  A single logical flow may work well to get code into a development environment, but do you really need to redo each and every step to move code to the next environment or can you adjust your logical flow to be less cumbersome?</p>
-
-
-
-<h2>Intentional Component Selection</h2>
-
-
-
-<p>Normally I am not a fan of Jenkins.  I believe that it is allowing for quick and dirty instances of automation to be put out into the market in a way that does not promote stability.  Don&#8217;t get me wrong, Jenkins is an interesting tool if you look at it as a dumb task runner, but is a pretty poor tool if you are really taking automation seriously.  Intentional component selection is a topic we should spend some time on due to the technology strongholds that are out in the market today.</p>
-
-
-
-<h3>So, who are the consumers of your DevOps Pipeline?</h3>
-
-
-
-<p>No no, this section is not a duplicate.  When choosing your components, you need to consider your consumers.  Luckily, most of your consumers in this space are going to be technology focused so we can hopefully ignore non-technical actors for the most part.  If your team is primarily composed of PHP developers, it is probably not a good idea to try and pull in something which is well outside of the PHP ecosystem.  Stick with tools that are similar to other existing tools in your environment.</p>
-
-
-
-<p>Providing good feedback to your engineers is also something you should pay attention to.  If your pipeline does happen to break for one reason or another, and the error messages are cryptic, you will end up in the &#8220;You built it you own it&#8221; paradigm.  There is no democratization of the pipeline out to consumers to facilitate care and feeding, which we will discuss later.  A good DevOps pipeline should support your engineers, not be an exercise in decoding the enigma machine.</p>
-
-
-
-<h3>Perfection is the enemy of progress!</h3>
-
-
-
-<p>Component selections can be a long drawn-out process.  Spending too much time trying to decide will lead to the projects around you getting too far ahead of your efforts causing a lot of undo stress and rework.  It is better to pick something and prove why it won&#8217;t work over time instead of trying to find the magical purple unicorn which solves 200% of use cases.</p>
-
-
-
-<h3>Clearly defined single responsibilities!</h3>
-
-
-
-<p>To fight perfection shutting down progress, try to limit your components to single responsibilities.  You can really apply <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design" target="_blank" rel="noopener">SOLID OOD</a> can really be applied anywhere in technology.  By limiting your components to a single responsibility, you can set up your components as interfaces with each other.  Component 1 expects this input and provides this output.  The magic between input and output can be as complex as you want it to be as long as the inputs and outputs are consistent.  You can then feed the outputs of component 1 into the inputs of component 2.  Continue this pattern for N components.</p>
-
-
-
-<p>What you end up with is a set of &#8220;jobs&#8221; which facilitate specific tasks.  Each of these jobs is testable, improvable, observable, and most importantly; your jobs are understandable!  If you want to break free from &#8220;you built it, you own it&#8221; then everything in your stack should be something that can be handed off to another flesh and blood human being who can pick up your work and run with it.</p>
-
-
-
-<h2>Care and Feeding</h2>
-
-
-<div class="wp-block-image">
-<figure class="alignright size-medium is-resized"><img src="https://www.valewood.org/wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-200x300.jpg" alt="Care and Feeding (Not a real picture of the Ron Popeil Rotisserie)" class="wp-image-278" width="133" height="198" srcset="/wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-683x1024.jpg 683w, /wp-content/uploads/2022/08/amanda-lim-n0s7y7Nr2A-unsplash-scaled.jpg 1707w" sizes="(max-width: 133px) 100vw, 133px" /></figure></div>
-
-
-<p>Any technology anywhere will need care and feeding.  There is nothing that can be built and just runs like a perpetual motion machine.  You will need to consider the care and feeding of your DevOps pipeline.  Some of the care and feeding will be simple.  Password rotations, library updates, edge case fixes, etc. can all be accomplished as part of the daily flow of work.  More complex care and feeding such as component replacement, break glass in case of emergency, security hardening, etc. will need to be planned into your delivery lifecycle planning.  </p>
-
-
-
-<p>As a quick side tangent, when the term care and feeding comes up as part of normal conversation, does anyone else hear Ron Popeil and his overly excited audience say &#8220;Set it and forget it&#8221;?</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>As you can see, a stable DevOps pipeline will consist of many steps which all feed off of each other ending up in a GitOps-style deployment pipeline.  I believe that the magic in any well-developed, well-set-up DevOps pipeline has a foundation in having a clear definition of your intentions, and intentional components which provide specific functionality, and each component needs attention + care and feeding like any other technology stack that is being supported.  Not every pipeline needs to be as complex, or overly simplistic depending on your frame of reference since there is no one size fits all solution to robust delivery.  Start small, but be intentional and you too can have a DevOps Pipeline Geared for Stability!</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://www.valewood.org/devops-pipeline-geared-for-stability/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
