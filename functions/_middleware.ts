@@ -11,21 +11,38 @@ export async function onRequest(context) {
 
     const url = new URL(request.url);
 
-    // bail early if we are not looking at a search
-    if(url.searchParams.get('s') == null)
+    // Process if we are dealing with a search
+    if(url.searchParams.get('s') != null) {
+        const assetURL = new URL('/search/', request.url).toString();
+        const assetReq = new Request(assetURL, {
+            cf: request.cf
+        });
+        const asset = await env.ASSETS.fetch(assetReq);
+        if(asset && asset.status === 200){
+
+            // found the asset, so we can serve it
+            return asset;
+        }
+
+        // bail if we did not return an asset
         return next();
-
-    const assetURL = new URL('/search/', request.url).toString();
-    const assetReq = new Request(assetURL, {
-        cf: request.cf
-    });
-    const asset = await env.ASSETS.fetch(assetReq);
-    if(asset && asset.status === 200){
-
-        // found the asset, so we can serve it
-        return asset;
     }
-	
+
+    // Process if we are dealing a feed url
+    if(url.href.includes("/feed/")) {
+        const assetURL = new URL(request.url + 'index.xml').toString();
+        const assetReq = new Request(assetURL, {
+            cf: request.cf
+        });
+        const asset = await env.ASSETS.fetch(assetReq);
+        if(asset && asset.status === 200){
+            // found the asset, so we can serve it
+            return asset;
+        }
+
+        // bail if we did not return an asset
+        return next();
+    }
 
 	// no acceptable formats found, pass-through for original image
 	return next();
