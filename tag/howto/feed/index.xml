@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>howto &#8211; A DevOps Blog</title>
+	<atom:link href="https://www.valewood.org/tag/howto/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.valewood.org/</link>
+	<description>Occasionally a developer makes an Ops!</description>
+	<lastBuildDate>Tue, 25 Oct 2022 01:20:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+
+<image>
+	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
+	<title>howto &#8211; A DevOps Blog</title>
+	<link>https://www.valewood.org/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Convert Text File to JSON with Ansible</title>
+		<link>https://www.valewood.org/ansible-text-to-json/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Mon, 24 Oct 2022 23:00:00 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[Ansible]]></category>
+		<category><![CDATA[ansible]]></category>
+		<category><![CDATA[howto]]></category>
+		<guid isPermaLink="false">/?p=1187</guid>
+
+					<description><![CDATA[I was looking through Reddit today and saw an interesting question about how to manipulate files with Ansible. I took a few minutes to throw together an example of how to convert a relatively simple file, a list of strings&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>I was looking through Reddit today and saw an <a href="https://www.reddit.com/r/ansible/comments/ycgtkg/convert_output_of_file_to_json_using_j2_template/" data-type="URL" data-id="https://www.reddit.com/r/ansible/comments/ycgtkg/convert_output_of_file_to_json_using_j2_template/" target="_blank" rel="noopener">interesting question</a> about how to manipulate files with <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>.  I took a few minutes to throw together <a href="https://github.com/gwagner/ansible-examples/tree/main/read-file-output-json" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/read-file-output-json" target="_blank" rel="noopener">an example </a>of how to convert a relatively simple file, a list of strings broken up by new lines, and output it as JSON.  </p>
+
+
+
+<p>Doing file conversions or data munging is an important skill to learn when growing in a <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> position.  While this is a fairly basic example, utilize this as a stepping stone to understanding more complex data structures.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Simple Text to JSON Conversion with Ansible</h2>
+
+
+
+<p>Below is the Ansible code to read in a file name input.txt delimited by newline characters and then do a simple conversion to JSON writing to output.json.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>- name: Simple Read file and output JSON
+  hosts: localhost
+  connection: local 
+  become: false
+  tasks:
+  - name: Read Data File
+    set_fact:
+      data: "{{lookup('ansible.builtin.file', './input.txt').split('\n')}}"
+
+  - name: Show debug data
+    ansible.builtin.debug: var=data
+
+  - name: Write output json file
+    copy:
+      dest: output.json
+      content: "{{ data | to_json }}" </code></pre>
+
+
+
+<h3>Task By Task Breakdown</h3>
+
+
+
+<p>The first task reads the input.txt file into a data variable that Ansible can use. It also splits the file into a list via the \n (newline) character.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>  - name: Read Data File
+    set_fact:
+      data: "{{lookup('ansible.builtin.file', './input.txt').split('\n')}}"</code></pre>
+
+
+
+<p>set_fact can be one of your best friends in Ansible. It allows you to take either data from what you have available in your playbook run, or lookup data and set it to a useable var for future tasks.  Here I am calling lookup to read an input.txt file and saving it to a data var.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>  - name: Show debug data
+    ansible.builtin.debug: var=data</code></pre>
+
+
+
+<p>ansible.builtin.debug lets you output the values of variables to the terminal during a playbook run.  This code should not be utilized anywhere except for testing.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>  - name: Write output json file
+    copy:
+      dest: output.json
+      content: "{{ data | to_json }}" </code></pre>
+
+
+
+<p>Finally, utilizing the built-in copy module, you can feed it a variable, like data, and then pipe that to a to_json jinja2 function which will then write your file out to dest.</p>
+
+
+
+<p>The result of running this playbook will look something like this:</p>
+
+
+
+<pre class="wp-block-code json"><code>&#091;"/site/foo/", "/site/bar/"]</code></pre>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Complex Text to JSON Conversion with Ansible</h2>
+
+
+
+<p>Below is the Ansible code to read in a file name input.txt delimited by newline characters.  After reading the file, a new variable is initialized name data_elements.  A loop is then run to create new dictionary objects with a key of &#8216;name&#8217; and a value of each line of input.txt.  Finally, a copy is run to write the data to disk under output.json.  </p>
+
+
+
+<pre class="wp-block-code yaml"><code>- name: Complex Read file and output JSON
+  hosts: localhost
+  connection: local 
+  become: false
+  tasks:
+  - name: Read Data File
+    set_fact:
+      data: "{{lookup('ansible.builtin.file', './input.txt').split('\n')}}"
+
+  - name: Show debug data
+    ansible.builtin.debug: var=data
+
+  - name: Create a new array
+    set_fact: 
+      data_elements: &#091;]
+
+  - name: Loop through lines and add data elements to array
+    set_fact:
+      data_elements: "{{ data_elements + &#091;{'name': item}] }}"
+    loop: "{{ data }}"
+
+  - name: Show debug data
+    ansible.builtin.debug: var=data_elements
+
+  - name: Write output json file
+    copy:
+      dest: output.json
+      content: "{{ {'records': data_elements} | to_json }}" 
+</code></pre>
+
+
+
+<h3>Task By Task Breakdown</h3>
+
+
+
+<p>Since most of the code here is the same, I will only focus on breaking out the differences.</p>
+
+
+
+<pre class="wp-block-code yaml"><code> - name: Create a new array
+    set_fact: 
+      data_elements: &#091;]</code></pre>
+
+
+
+<p>The block above sets up the empty data_elements array that we will utilize to map our file lines onto.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>  - name: Loop through lines and add data elements to array
+    set_fact:
+      data_elements: "{{ data_elements + &#091;{'name': item}] }}"
+    loop: "{{ data }}"</code></pre>
+
+
+
+<p>This is setting up a loop to loop over our initial data variable which was read from input.txt.  It is appending new dictionaries into a larger array with a key of &#8216;name&#8217; and a value of the item in a loop.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>  - name: Write output json file
+    copy:
+      dest: output.json
+      content: "{{ {'records': data_elements} | to_json }}" </code></pre>
+
+
+
+<p>Finally, we are doing the same write operation as the simple example, but this time we are creating a dictionary with a key of &#8216;records&#8217; and a value of the data_elements array.</p>
+
+
+
+<p>This will have an output that looks like this:</p>
+
+
+
+<pre class="wp-block-code json"><code>{
+   "records":&#091;
+      {
+         "name":"/site/foo/"
+      },
+      {
+         "name":"/site/bar/"
+      }
+   ]
+}</code></pre>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As I stated at the beginning of the article, data manipulation in DevOps is a key skill to learn.  Hopefully, this helps kickstart someone on their journey into becoming a DevOps engineer!.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

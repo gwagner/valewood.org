@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Tue, 18 Oct 2022 21:45:39 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 25 Oct 2022 01:20:57 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,228 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Convert Text File to JSON with Ansible</title>
+		<link>https://www.valewood.org/ansible-text-to-json/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Mon, 24 Oct 2022 23:00:00 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[Ansible]]></category>
+		<category><![CDATA[ansible]]></category>
+		<category><![CDATA[howto]]></category>
+		<guid isPermaLink="false">/?p=1187</guid>
+
+					<description><![CDATA[I was looking through Reddit today and saw an interesting question about how to manipulate files with Ansible. I took a few minutes to throw together an example of how to convert a relatively simple file, a list of strings&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>I was looking through Reddit today and saw an <a href="https://www.reddit.com/r/ansible/comments/ycgtkg/convert_output_of_file_to_json_using_j2_template/" data-type="URL" data-id="https://www.reddit.com/r/ansible/comments/ycgtkg/convert_output_of_file_to_json_using_j2_template/" target="_blank" rel="noopener">interesting question</a> about how to manipulate files with <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>.  I took a few minutes to throw together <a href="https://github.com/gwagner/ansible-examples/tree/main/read-file-output-json" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/read-file-output-json" target="_blank" rel="noopener">an example </a>of how to convert a relatively simple file, a list of strings broken up by new lines, and output it as JSON.  </p>
+
+
+
+<p>Doing file conversions or data munging is an important skill to learn when growing in a <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> position.  While this is a fairly basic example, utilize this as a stepping stone to understanding more complex data structures.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Simple Text to JSON Conversion with Ansible</h2>
+
+
+
+<p>Below is the Ansible code to read in a file name input.txt delimited by newline characters and then do a simple conversion to JSON writing to output.json.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>- name: Simple Read file and output JSON
+  hosts: localhost
+  connection: local 
+  become: false
+  tasks:
+  - name: Read Data File
+    set_fact:
+      data: "{{lookup('ansible.builtin.file', './input.txt').split('\n')}}"
+
+  - name: Show debug data
+    ansible.builtin.debug: var=data
+
+  - name: Write output json file
+    copy:
+      dest: output.json
+      content: "{{ data | to_json }}" </code></pre>
+
+
+
+<h3>Task By Task Breakdown</h3>
+
+
+
+<p>The first task reads the input.txt file into a data variable that Ansible can use. It also splits the file into a list via the \n (newline) character.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>  - name: Read Data File
+    set_fact:
+      data: "{{lookup('ansible.builtin.file', './input.txt').split('\n')}}"</code></pre>
+
+
+
+<p>set_fact can be one of your best friends in Ansible. It allows you to take either data from what you have available in your playbook run, or lookup data and set it to a useable var for future tasks.  Here I am calling lookup to read an input.txt file and saving it to a data var.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>  - name: Show debug data
+    ansible.builtin.debug: var=data</code></pre>
+
+
+
+<p>ansible.builtin.debug lets you output the values of variables to the terminal during a playbook run.  This code should not be utilized anywhere except for testing.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>  - name: Write output json file
+    copy:
+      dest: output.json
+      content: "{{ data | to_json }}" </code></pre>
+
+
+
+<p>Finally, utilizing the built-in copy module, you can feed it a variable, like data, and then pipe that to a to_json jinja2 function which will then write your file out to dest.</p>
+
+
+
+<p>The result of running this playbook will look something like this:</p>
+
+
+
+<pre class="wp-block-code json"><code>&#091;"/site/foo/", "/site/bar/"]</code></pre>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Complex Text to JSON Conversion with Ansible</h2>
+
+
+
+<p>Below is the Ansible code to read in a file name input.txt delimited by newline characters.  After reading the file, a new variable is initialized name data_elements.  A loop is then run to create new dictionary objects with a key of &#8216;name&#8217; and a value of each line of input.txt.  Finally, a copy is run to write the data to disk under output.json.  </p>
+
+
+
+<pre class="wp-block-code yaml"><code>- name: Complex Read file and output JSON
+  hosts: localhost
+  connection: local 
+  become: false
+  tasks:
+  - name: Read Data File
+    set_fact:
+      data: "{{lookup('ansible.builtin.file', './input.txt').split('\n')}}"
+
+  - name: Show debug data
+    ansible.builtin.debug: var=data
+
+  - name: Create a new array
+    set_fact: 
+      data_elements: &#091;]
+
+  - name: Loop through lines and add data elements to array
+    set_fact:
+      data_elements: "{{ data_elements + &#091;{'name': item}] }}"
+    loop: "{{ data }}"
+
+  - name: Show debug data
+    ansible.builtin.debug: var=data_elements
+
+  - name: Write output json file
+    copy:
+      dest: output.json
+      content: "{{ {'records': data_elements} | to_json }}" 
+</code></pre>
+
+
+
+<h3>Task By Task Breakdown</h3>
+
+
+
+<p>Since most of the code here is the same, I will only focus on breaking out the differences.</p>
+
+
+
+<pre class="wp-block-code yaml"><code> - name: Create a new array
+    set_fact: 
+      data_elements: &#091;]</code></pre>
+
+
+
+<p>The block above sets up the empty data_elements array that we will utilize to map our file lines onto.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>  - name: Loop through lines and add data elements to array
+    set_fact:
+      data_elements: "{{ data_elements + &#091;{'name': item}] }}"
+    loop: "{{ data }}"</code></pre>
+
+
+
+<p>This is setting up a loop to loop over our initial data variable which was read from input.txt.  It is appending new dictionaries into a larger array with a key of &#8216;name&#8217; and a value of the item in a loop.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>  - name: Write output json file
+    copy:
+      dest: output.json
+      content: "{{ {'records': data_elements} | to_json }}" </code></pre>
+
+
+
+<p>Finally, we are doing the same write operation as the simple example, but this time we are creating a dictionary with a key of &#8216;records&#8217; and a value of the data_elements array.</p>
+
+
+
+<p>This will have an output that looks like this:</p>
+
+
+
+<pre class="wp-block-code json"><code>{
+   "records":&#091;
+      {
+         "name":"/site/foo/"
+      },
+      {
+         "name":"/site/bar/"
+      }
+   ]
+}</code></pre>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As I stated at the beginning of the article, data manipulation in DevOps is a key skill to learn.  Hopefully, this helps kickstart someone on their journey into becoming a DevOps engineer!.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Do DevOps Engineers Write a lot of Scripting Code?</title>
 		<link>https://www.valewood.org/devops-scripting/</link>
 		
@@ -1981,113 +2203,6 @@
 					
 					<wfw:commentRss>https://www.valewood.org/essential-devops-tools/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Why are CI/CD Pipelines Part of DevOps?</title>
-		<link>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Mon, 05 Sep 2022 16:47:35 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[development]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[sdlc]]></category>
-		<category><![CDATA[software]]></category>
-		<guid isPermaLink="false">/?p=312</guid>
-
-					<description><![CDATA[CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD. CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>CI/CD pipelines are a key part of the <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> process. They allow you to automate the process of getting your code from development to production through CI/CD.  CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up the process and ensure that your code is always in a ready-to-deploy state. There are a number of different tools that you can use for creating DevOps pipelines. You can think of it like an assembly line where technology components and quality checks and gates are passed on the way to production. A more apt analogy would be the assembly line in the manufacturing industry where physical products are made. Think of a car made of parts going down a conveyor belt to different stations where it is assembled. A DevOps pipeline is kind of like that. But instead of cars, DevOps pipelines are for software and applications. And instead of physical parts, they are for software components like source code and automated scripts.</p>
-
-
-
-<p>There are several key parts of the assembly line that must be considered. The key parts of a successful DevOps pipeline are all continuous; integration, delivery, testing, monitoring, feedback, and operations.</p>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
-
-<h2>The DevOps <s>Assembly Line</s> CI/CD Pipeline</h2>
-
-
-
-<h3>Continuous Integration</h3>
-
-
-
-<p>Integration is the process whereby all developers make their code changes available to other team members. This is often done using a source code repository and an automated build step. Developers, ops, qa, etc. all contribute to the same process which enhances the same product with everybody moving the same automobile down the assembly line together.</p>
-
-
-
-<p>Most organizations have a &#8220;git&#8221; repository that holds all the source code. This can be a private repository, shared publically, or a combination of both. It is commonly referred to as a &#8220;<a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a>&#8221; or &#8220;GitLab&#8221; repository. Utilizing feature branching strategies, build or feature flags, and a myriad of other code organization strategies; the code repository becomes the central hub for all work happening in and around the technology product.</p>
-
-
-
-<h3>Continuous Delivery</h3>
-
-
-
-<p>Delivery is the process whereby the integrated code changes are deployed to a test or production environment. It involves package or container creation, deployment, and feature enablement in a production environment. The overall scope of work is narrowed down from large unwieldy projects to something more complementary to a single bolt being added to a car or truck. In the physical world, those incremental steps are not only performed, but in our modern industrial assembly lines, the impact wrench which is utilized will measure and record the torque applied while the car is being assembled. Continuous delivery is no different. Code should always be ready to be deployed to production because every minor tweak, change, or enhancement is fully tested as it is added to the code repository.</p>
-
-
-
-<h3>Continuous Testing</h3>
-
-
-
-<p>Testing is the stage where the output of delivery is tested to ensure that it performs as expected in a testing environment. The gold standard here is to ensure that 100% of your application is fully tested on every single commit. Full coverage testing is often used when developing in an agile or Scrum environment, where developers will have small, incremental changes to the code. When modernizing an application where automated testing was not done from the start, you may see much lower percentages as you get your application up to spec. This is OK! Make sure testing is a focus and a breakpoint is added where it no longer becomes acceptable to not test changes.</p>
-
-
-
-<h3>Continuous Monitoring and Feedback</h3>
-
-
-
-<p>I am going to let you in on a secret, &#8220;humans are not robots&#8221;. This means that we are going to make mistakes. It is just part of the job. Mistakes should always be an acceptable part of the work done in the technology sector. Here is what should really drive people crazy instead of mistakes, not knowing when mistakes were made or when something fails. So, what can we do about it? Simply put, build some observability!</p>
-
-
-
-<p>Observability, a common NFR in technology, is the concept that not only should your technology have some up/down state monitoring behind it, but you should be able to also get good telemetry around the full set of business processes as well. Looking at some basic observability items such as activity counters, page performance and event timing, errors, failures, success, etc. you can build a set of observability around key metrics which tell you can line up to show the differences between how you expect your application to be performing versus the reality of how it is performing.</p>
-
-
-
-<p>When it comes to Continous Feedback, now that we are in this panacea of speedy and rigorously tested application deployments, we can get this observability feedback into the hands of our DevOps teams to ensure that appropriate changes are put into the application. Without good early feedback supported by a mountain of data, the team will be left guessing. Let’s be honest, everyone on the team needs this feedback. The DevOps team doesn’t need to know everything. They do need to know enough to assess whether or not the changes they make to the application are safe and meet business requirements.</p>
-
-
-
-<p>Regardless of whether you’re building a standalone product or a company, the key takeaway here is that you want to be thinking about observability in terms of the business process as a whole paired directly with technology. A car company is not going to set out to produce the next top-of-the-line pickup truck and end up with a Pontiac Aztec unless something goes very wrong while nobody is looking.</p>
-
-
-
-<h3>Continuous Operations</h3>
-
-
-
-<p>Everyone is responsible for operations. Product Managers, Developers, CEOs, Finance and Accounting, and Operations; everybody shares some role in the responsibility. When it comes to DevOps the role of operations is filtered directly into the central workstreams of the team. When an outage occurs, RCAs and post-mortems do not stop at a ceremonial activity. They are carried through to completion with real changes being put in place. Utilizing all of the aforementioned steps of the assembly line, the DevOps team is able to more quickly remediate issues that either show up due to mistakes or show up due to the growth of a system over time.</p>
-
-
-
-<p>One of the core things to remember about operations is that technology does not age well. The longer something is running in the wild, the frailer it will get. Think about it this way; if you never service your car, the engine will start to overheat, your tires will start to go bald, and you may run out of blinker fluid. As time goes on, the car gets more and more unreliable. This is true of any technology as well. Operations needs to be accessible to everyone, and it needs to be prioritized in a way that allows for a healthy mix of feature functionality and operations to coexist.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>In conclusion, DevOps Pipelines can be easily attributed to an assembly line of technology. Through a set of core principles, like always being ready for production, along with integrated technology which promotes testing, monitoring, feedback, and observability the pipeline approach enables organizations to achieve rapid time-to-market and continuous delivery of software products and services (and they can enjoy the velocity and quality benefits at a fraction of the cost).</p>
-]]></content:encoded>
-					
 		
 		
 			</item>
