@@ -151,7 +151,7 @@ gtag('set','linker',{"domains":["www.valewood.org"]});gtag("js",new Date());gtag
 <p>Below is the full code to deploy a virtual machine from a disk image.</p>
 <p>The general idea is to run <code>ansible-playbook create-vmware-esxi-vm.yaml -i inventory.yaml</code> from your command line. The playbook will then check to see if a machine exists. If set to destructive, it will then delete any machine with the same name, copy an existing disk image, set some machine specifics like IP address, and then power on your machine.</p>
 <p>VMWare vSphere makes this a fairly novel activity via the use of templates. A standalone ESXi node does not have the benefit of templates which is why things get a bit more complex in this space.</p>
-<p>A majority of this playbook is also setup with <code>deletage_to: localhost</code>. This means that the computer running the ansible script will also execute anything with the defined <code>deletage_to: localhost</code>. The remote machine from inventory does not yet exist, which means; if <code>deletage_to: localhost</code> was not set, you would immediately receive an ansible connection error.</p>
+<p>A majority of this playbook is also setup with <code>delegate_to: localhost</code>. This means that the computer running the ansible script will also execute anything with the defined <code>delegate_to: localhost</code>. The remote machine from inventory does not yet exist, which means; if <code>delegate_to: localhost</code> was not set, you would immediately receive an ansible connection error.</p>
 <pre class="wp-block-code yaml"><code>---
 - name: Create VMWare ESXi VM
   hosts: all
