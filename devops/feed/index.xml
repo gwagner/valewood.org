@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Tue, 25 Oct 2022 01:20:57 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 26 Oct 2022 03:28:57 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,471 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>How To Create ESXi VM With Ansible</title>
+		<link>https://www.valewood.org/ansible-create-vmware-esxi-vm/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Wed, 26 Oct 2022 03:28:55 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[Ansible]]></category>
+		<guid isPermaLink="false">/?p=1213</guid>
+
+					<description><![CDATA[This post will help anyone who is attempting to use Ansible to create new VMs with automation when Practicing DevOps. I use this in my home lab to help stay current with new trends in DevOps. Not everyone is going&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>This post will help anyone who is attempting to use <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> to create new VMs with automation when <a href="https://www.valewood.org/practicing-devops/" data-type="post" data-id="14">Practicing DevOps</a>.  I use this in my home lab to help stay current with new trends in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a>.  Not everyone is going to be fortunate enough to have cloud playgrounds to test out new things, and home labs are a great way to make a one-time investment in your future.</p>
+
+
+
+<p>The code for the project can be found <a href="https://github.com/gwagner/ansible-examples/tree/main/create-vmware-esxi-vm" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/create-vmware-esxi-vm" target="_blank" rel="noopener">here</a>!</p>
+
+
+
+<h2>Prerequisites</h2>
+
+
+
+<p>This article is going to assume that you already have VMWare running in a home lab somewhere.  This also assumes that you have some familiarity with VMware and networking.</p>
+
+
+
+<p>This post will also assume that you have already installed a baseline OS.  <a href="https://www.packer.io/" data-internallinksmanager029f6b8e52c="17" title="Packer" target="_blank" rel="noopener">Packer</a> is a good tool to use to automate your baseline operating system installation to create a reusable disk image.</p>
+
+
+
+<h2>The Playbook</h2>
+
+
+
+<p>Below is the full code to deploy a virtual machine from a disk image.  </p>
+
+
+
+<p>The general idea is to run <code>ansible-playbook create-vmware-esxi-vm.yaml -i inventory.yaml</code> from your command line.  The playbook will then check to see if a machine exists.  If set to destructive, it will then delete any machine with the same name, copy an existing disk image, set some machine specifics like IP address, and then power on your machine.</p>
+
+
+
+<p>VMWare vSphere makes this a fairly novel activity via the use of templates.  A standalone ESXi node does not have the benefit of templates which is why things get a bit more complex in this space.</p>
+
+
+
+<p>A majority of this playbook is also setup with <code>deletage_to: localhost</code>.  This means that the computer running the ansible script will also execute anything with the defined <code>deletage_to: localhost</code>.  The remote machine from inventory does not yet exist, which means; if <code>deletage_to: localhost</code> was not set, you would immediately receive an ansible connection error.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>---
+- name: Create VMWare ESXi VM
+  hosts: all
+  gather_facts: false
+  vars:
+    destructive: false
+  tasks:
+    - include_vars: config.yaml
+      delegate_to: localhost
+
+    - include_vars: creds.yaml # Remember, this should be in a vault
+      delegate_to: localhost   # These creds are for example use only
+
+    - name: Check if virtual machine exists
+      community.vmware.vmware_guest_info:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: "ha-datacenter"
+        name: "{{ vmware.name }}"
+      delegate_to: localhost
+      ignore_errors: true
+      throttle: 1
+      register: vmware_validate_guest
+      when: destructive is not defined or not destructive
+
+    - set_fact:
+        destructive: yes
+      when: |
+        vmware_validate_guest is defined and (
+          (vmware_validate_guest.skipped is defined and not vmware_validate_guest.skipped) 
+          or (vmware_validate_guest.failed is defined and vmware_validate_guest.failed == True)
+        )
+
+    - name: Add vmware as a host
+      add_host:
+        hostname: "{{ vmware_host }}"
+        ansible_ssh_host: "{{ vmware_host }}"
+        ansible_user: "{{ vmware_user }}"
+        ansible_ssh_pass: "{{ vmware_password }}"
+      when: destructive
+
+    - set_fact:
+        num_cpu_cores_per_socket: "{{ vmware.num_cpus | int / 2 }}"
+
+    - name: Remove virtual machine from inventory
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        state: absent
+        force: True
+      delegate_to: localhost
+      throttle: 1
+      when: destructive
+
+    - name: Delete VM Folders
+      ansible.builtin.file:
+        path: "{{storage_path}}/{{ vmware.name }}/"
+        state: absent
+      delegate_to: "{{ vmware_host }}"
+      when: destructive
+      throttle: 5
+
+    - name: Create a virtual machine on vmware
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        folder: /vm/
+        name: "{{ vmware.name }}"
+        state: poweredoff
+        guest_id: "{{ vmware.guest_id }}"    
+        disk: "{{ vmware.disks }}"
+        datastore: "{{ datastore_name }}"
+        hardware:
+          boot_firmware: efi
+          memory_mb: "{{ vmware.memory_mb }}"
+          num_cpus: "{{ vmware.num_cpus }}"
+          num_cpu_cores_per_socket: "{{ num_cpu_cores_per_socket | int }}"
+          scsi: paravirtual
+        networks:
+        - name: "{{ vmware.port_group }}"
+          connect: yes
+          mac: "{{ vmware.mac_address  }}"
+          ip: "{{ vmware.ip_address }}"
+          netmask: "{{ vmware.netmask }}"
+          device_type: vmxnet3
+          type: static
+      delegate_to: localhost
+      register: deploy_vm
+      throttle: 5
+      when: destructive
+
+    - name: Copy boot disk VMDK Files
+      ansible.builtin.command: "{{ item }}"
+      delegate_to: "{{ vmware_host }}"
+      loop:
+        - vmkfstools -i "{{storage_path}}/{{ image_name }}/{{ image_name }}.vmdk" "{{storage_path}}/{{ vmware.name }}/{{ image_name }}.vmdk" -d thin
+      when: destructive
+      throttle: 3
+
+    - name: Add boot disks to virtual machine
+      community.vmware.vmware_guest_disk:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        datacenter: ha-datacenter
+        disk:
+          - filename: "&#91;{{datastore_name}}] {{ vmware.name }}/{{ image_name }}.vmdk"
+            scsi_type: 'paravirtual'
+            scsi_controller: 0
+            unit_number: 1
+      delegate_to: localhost
+      register: disk_facts
+      when: destructive
+      throttle: 5
+
+    - name: Power on virtual machine
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        state: poweredon
+        wait_for_ip_address: yes
+      delegate_to: localhost
+      register: deploy_vm
+      when: destructive</code></pre>
+
+
+
+<h3>Task By Task Breakdown</h3>
+
+
+
+<p>First, we should look at the inventory.</p>
+
+
+
+<p>This example has only one example host defined in it under a group called example.  You are able to define as many hosts in inventory that you would like.  </p>
+
+
+
+<p>The structure of the vars defined under example-01.valewood.lab are there to provide everything the playbook needs in order to provision a server in ESXi.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>---
+all:
+  hosts:
+  children:
+    example:
+      hosts:
+        example-01.valewood.lab:
+          ip: 192.168.1.10 
+          ansible_host: 192.168.1.10
+          vmware:
+            ip_address: 192.168.1.10
+            gateway_address: 192.168.1.1
+            dns_address: 192.168.1.1
+            netmask: 255.255.255.0
+            mac_address: "00:16:3E:A0:06:43"
+            memory_mb: 8192
+            name: example-01
+            num_cpus: 4
+            port_group: Example-App
+            guest_id: centos64Guest
+            disks: &#91;]</code></pre>
+
+
+
+<p>Below is the code that reads in configurations and credentials.  These are broken up into 2 different files because credentials should always be encrypted and never stored in plaintext.  </p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - include_vars: config.yaml
+      delegate_to: localhost
+
+    - include_vars: creds.yaml # Remember, this should be in a vault
+      delegate_to: localhost   # These creds are for example use only</code></pre>
+
+
+
+<p>The next step is to check to see if a VM exists in VMWare or not with the same name.  This is a crucial step to ensure that duplicate names are not used in VMWare.  Here are some key notes about additional configurations:</p>
+
+
+
+<ul><li>validate_certs is set to false because most of us are not going to be using trusted 3rd party certs in our VMware environment.  If you are doing this in a professional environment, ensure you have valid certs installed and leave validate_certs set to the default of true.</li><li>validate_certs should also be set to false if you are connecting to your VMWare server via IP address since your cert will not match an IP address.</li><li>vmware_user and vmware_password should be set to a user that has SSH access to your VMWare server.  I would not recommend that you do this in any sort of production environment, but it is perfectly fine for a home lab.</li><li>datacenter is set to ha-datacenter.  This is the default name of a &#8220;datacenter&#8221; in ESXi.  There is no reason to change this.</li><li>throttle is set to 1 to provide time to ctrl+c IF you happen to run your playbook by mistake against many machines at once.</li><li>destructive is a variable that can be set which tells this playbook to not destroy and rebuild machines if they already exist.  By default, the destructive variable it is not defined which means a check will be performed.</li></ul>
+
+
+
+<pre class="wp-block-code"><code>    - name: Check if virtual machine exists
+      community.vmware.vmware_guest_info:
+        validate_certs: false 
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: "ha-datacenter"
+        name: "{{ vmware.name }}"
+      delegate_to: localhost
+      ignore_errors: true
+      throttle: 1
+      register: vmware_validate_guest
+      when: destructive is not defined or not destructive</code></pre>
+
+
+
+<p>The next block of code will set the <code>destructive</code> variable to true IF we did the validation check from the previous block.  The validation check in the previous block will not run if <code>destructive</code> is set to true.  This acts as a one-way gate.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - set_fact:
+        destructive: yes
+      when: |
+        vmware_validate_guest is defined and (
+          (vmware_validate_guest.skipped is defined and not vmware_validate_guest.skipped) 
+          or (vmware_validate_guest.failed is defined and vmware_validate_guest.failed == True)
+        )</code></pre>
+
+
+
+<p>Things get a little bit tricky here, but I will explain the rationale behind this next block.  Your inventory file only has virtual machines defined in it, but for ansible remote connections to work properly, a host must be in inventory.  To get around this, in the middle of this playbook run, we call add_host which has an explicit delegate_to statement so that it runs on localhost.</p>
+
+
+
+<p>The reason this is tricky is because of the way that ansible does variable expansion.  One would think that a single host is being added to the inventory, but what is really happening in a playbook?  Ansible is expanding variable scope out to each individual machine in the inventory.  This means that add_host is actually being added in the context of each host in the inventory.  If you have 10 hosts defined in inventory, add_host adds variables for your VMWare host for each inventory host.</p>
+
+
+
+<p>TLDR; each host in inventory now has the ability to utilize a <code>delegate_to: {{ vmware_host }}</code> statement as part of their tasks.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Add vmware as a host
+      add_host:
+        hostname: "{{ vmware_host }}"
+        ansible_ssh_host: "{{ vmware_host }}"
+        ansible_user: "{{ vmware_user }}"
+        ansible_ssh_pass: "{{ vmware_password }}"
+      when: destructive</code></pre>
+
+
+
+<p>Next, we need to do a little bit of math.  This could be done live through future executions, but I like to split things like this out into separate set_fact tasks to ensure I can easily run any debug tasks in the future.</p>
+
+
+
+<p>Basically, this accomplishes telling VMWare that I want my CPU cores evenly distributed across sockets.  This is not perfect because it does not take care of edge cases of 1 CPU or 3 CPUs being defined in inventory.  For my use cases, I never define anything that way, but this could easily be updated to accommodate.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - set_fact:
+        num_cpu_cores_per_socket: "{{ vmware.num_cpus | int / 2 }}"</code></pre>
+
+
+
+<p>Next, if we are destructive, we need to delete an existing VM.  I am not going to rehash any of the special variables from above.  The only relevant thing to notice here is the state being set to absent which will delete the machine, and force is set to true which will bypass any safety checks VMWare might do.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Remove virtual machine from inventory
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        state: absent
+        force: True
+      delegate_to: localhost
+      throttle: 1
+      when: destructive</code></pre>
+
+
+
+<p>Next is a little bit of cleanliness.  The delete statement above will not actually cleanup the VMWare datastore filesystem.  We are performing a <code>delegate_to: {{ vmware_host }}</code> which means we will be running a direct delete over SSH to your server running vmware.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Delete VM Folders
+      ansible.builtin.file:
+        path: "{{storage_path}}/{{ vmware.name }}/"
+        state: absent
+      delegate_to: "{{ vmware_host }}"
+      when: destructive
+      throttle: 5</code></pre>
+
+
+
+<p>Finally, the meat of the playbook.  This task creates the VM which is defined in the inventory.  I will break down the relevant variables below.</p>
+
+
+
+<ul><li>Folder is neccisary for vShpere.  When only running ESXi, this only requires a default value of /vm/.  Most home labs will not need to change this.</li><li>state is set to poweredoff.  You could set this to poweredon but leaving it poweredoff ensures you can do post-processing after this create task.</li></ul>
+
+
+
+<p>Please note, <code>Create a virtual machine on vmware</code> is not referencing any kind of existing disk image.  This will create a new completely blank VM.  Subsequent tasks will utilize your disk image to ensure it is properly attached to this machine.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Create a virtual machine on vmware
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        folder: /vm/
+        name: "{{ vmware.name }}"
+        state: poweredoff
+        guest_id: "{{ vmware.guest_id }}"    
+        disk: "{{ vmware.disks }}"
+        datastore: "{{ datastore_name }}"
+        hardware:
+          boot_firmware: efi
+          memory_mb: "{{ vmware.memory_mb }}"
+          num_cpus: "{{ vmware.num_cpus }}"
+          num_cpu_cores_per_socket: "{{ num_cpu_cores_per_socket | int }}"
+          scsi: paravirtual
+        networks:
+        - name: "{{ vmware.port_group }}"
+          connect: yes
+          mac: "{{ vmware.mac_address  }}"
+          ip: "{{ vmware.ip_address }}"
+          netmask: "{{ vmware.netmask }}"
+          device_type: vmxnet3
+          type: static
+      delegate_to: localhost
+      register: deploy_vm
+      throttle: 5
+      when: destructive</code></pre>
+
+
+
+<p>Next, perform a copy of an existing disk image into the folder that was just created for this new virtual machine.  This will essentially perform the same action that vSphere performs when cloning templates.</p>
+
+
+
+<p>The key here is to utilize <code>vmkfstools</code> over ssh to ensure that you are able to get a thin provisioned copied disk.  If this is performed directly via ansible modules, you are not able to get a thin disk without vSphere.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Copy boot disk VMDK Files
+      ansible.builtin.command: "{{ item }}"
+      delegate_to: "{{ vmware_host }}"
+      loop:
+        - vmkfstools -i "{{storage_path}}/{{ image_name }}/{{ image_name }}.vmdk" "{{storage_path}}/{{ vmware.name }}/{{ image_name }}.vmdk" -d thin
+      when: destructive
+      throttle: 3</code></pre>
+
+
+
+<p>Next, we need to tell VMWare to mount our cloned disk to the recently created VM.  The new VM will have a scsi_controller so we just need to give it the right controller number of 0, and unit_number 1 to ensure we do not overwrite the new disk created via <code>Create a virtual machine on vmware</code>.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Add boot disks to virtual machine
+      community.vmware.vmware_guest_disk:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        datacenter: ha-datacenter
+        disk:
+          - filename: "&#91;{{datastore_name}}] {{ vmware.name }}/{{ image_name }}.vmdk"
+            scsi_type: 'paravirtual'
+            scsi_controller: 0
+            unit_number: 1
+      delegate_to: localhost
+      register: disk_facts
+      when: destructive
+      throttle: 5</code></pre>
+
+
+
+<p>And finally we tell ESXi to power on the virtual machine.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Power on virtual machine
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        state: poweredon
+        wait_for_ip_address: yes
+      delegate_to: localhost
+      register: deploy_vm
+      when: destructive</code></pre>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you can see, with a fairly concise set of steps, you can level up your DevOps automation game by rapidly creating and tearing down virtual machines in your home lab.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Convert Text File to JSON with Ansible</title>
 		<link>https://www.valewood.org/ansible-text-to-json/</link>
 		
@@ -1978,231 +2443,6 @@
 <p>As you can see above, a wide range of DevOps skills is needed in the automated delivery space.  Teams are composed of many different disciplines to be self-sufficient in their delivery of technology and not every requisite skill exists in all teams.  Do not be afraid to expand your DevOps skillset to cover those gaps.  When someone blurts out &#8220;There has to be a better way!&#8221;, there probably is a better way.  While delivering technology, never stop learning and growing at the same time.</p>
 ]]></content:encoded>
 					
-		
-		
-			</item>
-		<item>
-		<title>What essential DevOps tools should you be using today?</title>
-		<link>https://www.valewood.org/essential-devops-tools/</link>
-					<comments>https://www.valewood.org/essential-devops-tools/#respond</comments>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Sun, 11 Sep 2022 17:03:41 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[sdlc]]></category>
-		<category><![CDATA[tools]]></category>
-		<guid isPermaLink="false">/?p=5</guid>
-
-					<description><![CDATA[The goal of any DevOps tool should be to help your team communicate more effectively, automate manual tasks, and track the progress of your projects. With the right tools, you can significantly speed up your development process and produce better&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>The goal of any <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> tool should be to help your team communicate more effectively, automate manual tasks, and track the progress of your projects. With the right tools, you can significantly speed up your development process and produce better results. In this post, you’ll find a list of the most essential DevOps tools and advice on how to choose the right ones for your team.</p>
-
-
-
-<h2><strong>Build Tools</strong></h2>
-
-
-
-<p>Build tools are an important cornerstone for any kind of DevOps workflow. Just choosing one without doing an evaluation can mean the difference between success and failure in a lot of circumstances. The build tooling must jive with the team and accomplish producing the CI/CD processes which the team expects in the way they expect them to be run. Think of them as task runners with a GUI, but each task runner has its own flare. Below is a list of tools that are widely used and could fit the bill for your next project.</p>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
-
-<h3>Jenkins</h3>
-
-
-
-<p>If you have spent any time in the software space, or have done any googling around building software, Jenkins is sure to be the first thing that pops up. Jenkins is an open-source automation tool used for continuous integration and continuous delivery (CI/CD). Companies use it to automate the software development process, build and test their code, and deploy their applications. Jenkins is a highly configurable tool that allows you to choose from a large range of plugins. These plugins allow you to integrate Jenkins with other tools such as <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> Hub, JIRA, and others. Jenkins can be used for DevOps to automate the software delivery process, deploy apps, and manage infrastructure.</p>
-
-
-
-<h3>Atlassian Bamboo</h3>
-
-
-
-<p>Atlassian Bamboo is a platform for building and managing builds and deployments of software. It is generally utilized due to its tie-ins with other Atlassian products such as Jira and Confluence giving you an entire ecosystem out of the box. It is a great option if you are working in a team and want to set up a standardized process for building your code. Bamboo allows you to set up different stages of your workflow, each with its own set of tasks. This way, you can create a dev stage where your team has access to the latest version of the code and works directly from it, a test stage where your team can run tests on the latest version of the code and a production stage to deploy the code once it has been tested. As a rule of thumb, if you are working in a team that is already entrenched in the Atlassian ecosystem, go for Bamboo.</p>
-
-
-
-<h3>Drone CI</h3>
-
-
-
-<p>Drone bills itself as a &#8220;Self Service Continuous Integration System&#8221;, but I think you can really view any of the tools listed under build as exactly that. If you are looking for the more modern cool kid on the block, Drone CI is probably going to be a pretty good choice. Drone CI is natively built around Docker and the container ecosystem. This makes building modern applications more intuitive for individuals who are accustomed to the container ecosystem already. Drone CI also supports other types of containers, such as rkt. For developers who are not as familiar with Docker, Drone CI does have a user interface that allows you to manually configure a build environment. Drone also has a plug-in architecture, which means that you can also extend Drone’s capabilities with your own plug-ins, allowing you to configure a custom build environment as well.</p>
-
-
-
-<h3>Travis CI</h3>
-
-
-
-<p>Travis CI is a bit of a unique take amongst its competitors listed above. Travis CI is not a service you would normally go and locally install in your data center. Its origins are built under the idea that building environments should be ephemeral, cheap, easy, and defined via software. Their service allows you to create a new build environment by just pushing code to your <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> repository. The great thing about this is that it allows you to create any type of environment you want. In the case of Travis CI, they allow you to build your environment in a way that is open source and completely controlled by you.</p>
-
-
-
-<h3>GitHub Actions</h3>
-
-
-
-<p>GitHub Actions is a new entrant to the build and deploy space, and frankly, the next logical step in GitHub&#8217;s journey of code hosting. GitHub has become the de-facto standard for hosting code, and Actions takes it a step further by allowing you to programmatically trigger a series of actions on your code, such as building, testing, publishing, and deploying it. Actions is a game changer as it allows anyone to create their own automated workflow without the need for any additional software. For example, let’s say you want to deploy your code to your staging environment every time you push a new commit to your master branch. You can now easily set up an action that listens for new commits on the master branch, checks out the code, kicks off a build process, and then deploys the code to your staging environment.</p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<p>In this space, I am a fan of the tool that gets the job done. I don&#8217;t have any particular allegiances because build tools are just dumb task runners. Maybe a UI speaks to you more, or a set of tools plugs into an ecosystem more seamlessly than another tool. Either way, do a bit of evaluation and make sure you are not painting yourself into a corner, and you will be just fine with any of these tools. Sign up for free trials, do a bit of exploring, and if you have questions, there is a vibrant community of people who are happy to help! Stay tuned to blog posts, newsletters and social media to stay up to date on new features and helpful tips and tricks!</p>
-
-
-
-<h2><strong>Server Configuration Management</strong></h2>
-
-
-
-<p>Below, <a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a> and <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>, are the two 5000-pound gorillas in the room when it comes to configuration management DevOps tools. Other competitors exist in the space, but I would argue always live on the fringes and are not really taking any market share away from these two primary options any time soon. Some would argue that <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> should be in this category as well, but I would argue that Ansible is a task orchestrator and NOT a configuration management tool. Give Ansible tasks, it orchestrates tasks, and when it completes someone will need to write more code to determine if the task was executed correctly. In my eyes, DSCM-level validation of completion is a core feature that a configuration management system should have out of the box, otherwise, it is a task orchestrator masquerading around to be something like a configuration management DevOps tool. Don&#8217;t get me wrong, there is still a spot in my heart for Ansible, just not under configuration management.</p>
-
-
-
-<h3>Puppet </h3>
-
-
-
-<p>Puppet is an open-source tool for managing infrastructure as code (IaC). It’s often used for configuration management, service deployment, and continuous delivery. Puppet works by installing agents on different system types and installing the Puppet server on one or more machines. The Puppet server manages the agents to configure the systems based on user-defined policies. It can be used with DevOps to manage configuration policies, provision and configure infrastructure, and automate deployment. When using Puppet myself, I normally do not connect Puppet back to a Puppet master. I run puppet headless so that my idempotent builds can be deployed and triggered at will. This also helps avoid some of the licensing costs of Puppet. As of the writing of this post, their pricing is also hidden behind a contact wall. This generally means: &#8220;If you have to ask, you probably can&#8217;t afford it&#8221;.</p>
-
-
-
-<h3>Chef</h3>
-
-
-
-<p>Chef is an open-source tool for managing infrastructure as code (IaC). It’s often used for configuration management, service deployment, and continuous delivery. Chef works by installing agents on different system types and installing the Chef server on one or more machines. The Chef server manages the agents to configure the systems based on user-defined policies. It can be used with DevOps to manage configuration policies, provision and configure infrastructure, and automate deployment. When using Chef myself, I normally do not connect Chef back to a Chef master. I run puppet headless so that my idempotent builds can be deployed and triggered at will. This also helps avoid some of the licensing costs of Chef.</p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<p>As you can see, the descriptions of the tools are nearly identical. The primary difference between these two tools is going to be the community supporting package availability, price, and their specific DSL. Chef is primarily Ruby driven which gives you a TON of flexibility when you need it by diving into the Ruby space. This is an antipattern so use it sparingly, but it can be helpful in a pinch. I would also argue that the Chef community is currently much stronger than the Puppet community having many more packages developed and maintained by the community. In my career, I started with Puppet and converted to Chef simply for that fact.</p>
-
-
-
-<h2><strong>Infrastucture Configuration Management</strong></h2>
-
-
-
-<p>In this post, I am going to be focusing on <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a> and Azure as the primary examples of IaC CM tools. I am explicitly ignoring GCP, <a href="https://www.digitalocean.com/" data-internallinksmanager029f6b8e52c="5" title="DigialOcean" rel="nofollow noopener" target="_blank">DigitalOcean</a>, etc. because every cloud vendor has its own APIs, its own tool sets, and its own concepts which are really all born from what AWS and Azure have already pioneered.  If you are interested in the most marketable DevOps tools focusing on infrastructure configuration management, then these are the tools I would focus on first.</p>
-
-
-
-<h3>AWS CloudFormation</h3>
-
-
-
-<p>AWS CloudFormation is a native toolset provided by AWS which is utilized to configure their cloud platform. It enables you to configure your cloud infrastructure and also create templates for future usage. These templates can be used to create infrastructure as code, which is a best practice in terms of cloud adoption. CloudFormation provides you with a lot of flexibility as compared to other tools, but it is not easy to start with.</p>
-
-
-
-<h3>Azure ARM Templates</h3>
-
-
-
-<p>Using an ARM template, you can declaratively create and deploy Azure infrastructure, including virtual machines, networks, storage systems, and any other resources you require. The template simply describes what you want to happen, and Azure takes care of the details. You can also use templates to generate code or scripts to create or customize resources. Versioning: You can keep track of changes to your templates by keeping them in source control, just like you would any other code. You can also use templates to generate reports, giving you an easy way to track changes to your infrastructure. Reusability: You can create a library of templates to use in different scenarios.</p>
-
-
-
-<h3>Terraform</h3>
-
-
-
-<p>Terraform is a cross-cloud IaC tool produced by HasiCorp. They take a unique view of IaC where components that span across multiple clouds should be abstracted out for future reuse. Terraform is also a unique tool in that its open source, but has a paid enterprise version with additional features. Terraform is a great fit for enterprise environments where you want to maintain strict version control of your cloud infrastructure, have strict regulatory requirements, or have a dedicated team managing the infrastructure where you want to streamline your process with a tool that can enforce policies across the organization.</p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<p>I really don&#8217;t have a right or wrong answer for this space. I do believe that if you have a need to get into the deepest nooks and crannies of a cloud hosting vendor, using native tooling (CloudFormation and ARM Templates) will always beat what Terraform has to offer. If you are looking to be a bit more functional cross-cloud by providing an interface for your organization to consume, Terraform is probably a better option.</p>
-
-
-
-<h2><strong>Monitoring and Observability</strong></h2>
-
-
-
-<p>I believe that there is no right answer to monitoring and observability as long as the answer doesn&#8217;t work for the team that needs to receive the alerts. If you are using a 24&#215;7 on-call system like OpsGenie, and your technologists refuse to install the application on their devices to get notified, it is probably the wrong way to go about ensuring someone is alerted to issues. The tools listed below range from out-of-the-box to highly customizable tools. Each approach has its advantages and disadvantages. If you are going to go with highly customizable and integrate that directly into your pipelines, then the team must be on board with the idea of additional maintenance in code space rather than the GUI space, and vice-versa for the out-of-the-box tools. As long as you and your team agree on the strong fundamentals of &#8220;99.9% of the time, get an alert that something is wrong before someone else notices and reports it&#8221;, then you at least have a good foundation to start selecting monitoring from.</p>
-
-
-
-<h3>LogicMonitor</h3>
-
-
-
-<p>From physical hardware to software applications, to virtual hosts, to network devices, to cloud infrastructure — LogicMonitor monitors it all. LogicMonitor is able to monitor virtual environments with its application monitoring capabilities. It can also monitor physical environments with its physical monitoring capabilities. With LogicMonitor’s comprehensive monitoring capabilities, it’s no wonder that it’s the monitoring software of choice for thousands of organizations worldwide.</p>
-
-
-
-<h3>Sensu </h3>
-
-
-
-<p>It works with any monitoring tool, like Graphite, Collectd, Elastic, and more. It can also receive data from other loggers, like statsd, in real-time. Sensu Go can collect data from virtually any source, maintain it in a data store for analysis, and send it to any output, including email, mobile push notifications, or synchronous or asynchronous webhooks. It is open source, flexible, and extensible with a wide range of configuration options.</p>
-
-
-
-<h3>Prometheus</h3>
-
-
-
-<p><a href="https://prometheus.io/" data-internallinksmanager029f6b8e52c="2" title="Prometheus" rel="nofollow noopener" target="_blank">Prometheus</a> is a popular open-source monitoring system for metrics, logs, and events. It enables querying, graphing, and alerting on time-series data. It collects metrics from a variety of sources, including systems and applications, and stores the metrics data in a data store. The metrics data is then made available for analysis via a variety of tools. Prometheus has a flexible architecture and can be deployed on-prem or in the cloud. It is highly scalable and can support metrics from any type of application. It is widely used by enterprises to monitor their production systems.</p>
-
-
-
-<h2><strong>Task Runners / Orchestration Tools</strong></h2>
-
-
-
-<p>I am only putting one tool in this section because I believe that there is only one tool worth talking about. That DevOps tool is Ansible.  Ansible is like a swiss army knife of task orchestration and your ability to hop in and out of specific contexts is unparalleled.</p>
-
-
-
-<h3>Ansible</h3>
-
-
-
-<p>Ansible is a tool for automating tasks across multiple devices &#8211; from physical hosts to virtual machines and even cloud providers. It allows you to programmatically automate tasks and workflows, and it’s the most widely adopted open-source automation tool in the world. In fact, according to the 2017 State Of Configuration Management Survey, Ansible is the most widely used configuration management tool in enterprises. Unlike other tools, Ansible requires very little upfront investment — you can get started with a free download. Additionally, there are many ways to scale Ansible beyond a single node, including cloud services like AWS, Microsoft Azure, or Google Cloud Platform.</p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<p>If you are looking to orchestrate events across multiple machines, services, or clouds; I honestly do not know why you would choose anything else.  I have used ansible to manage 1000+ machines in a data center orchestrating events across servers, services, clouds, and physical equipment all while making the intentions of the orchestration very clear to future engineers.</p>
-
-
-
-<h2><strong>Conclusion</strong></h2>
-
-
-
-<p>DevOps is a set of practices that combines software development and operations to shorten the development life cycle and provide continuous delivery and faster time to market. It’s a culture shift that requires collaboration between Development and Operations teams. The tools used in DevOps can be customized to meet the unique needs of your organization. These tools can automate the software delivery process, provision and configure infrastructure, and deploy applications.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://www.valewood.org/essential-devops-tools/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>

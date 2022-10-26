@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Tue, 25 Oct 2022 01:20:57 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 26 Oct 2022 03:28:57 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,471 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>How To Create ESXi VM With Ansible</title>
+		<link>https://www.valewood.org/ansible-create-vmware-esxi-vm/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Wed, 26 Oct 2022 03:28:55 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[Ansible]]></category>
+		<guid isPermaLink="false">/?p=1213</guid>
+
+					<description><![CDATA[This post will help anyone who is attempting to use Ansible to create new VMs with automation when Practicing DevOps. I use this in my home lab to help stay current with new trends in DevOps. Not everyone is going&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>This post will help anyone who is attempting to use <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> to create new VMs with automation when <a href="https://www.valewood.org/practicing-devops/" data-type="post" data-id="14">Practicing DevOps</a>.  I use this in my home lab to help stay current with new trends in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a>.  Not everyone is going to be fortunate enough to have cloud playgrounds to test out new things, and home labs are a great way to make a one-time investment in your future.</p>
+
+
+
+<p>The code for the project can be found <a href="https://github.com/gwagner/ansible-examples/tree/main/create-vmware-esxi-vm" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/create-vmware-esxi-vm" target="_blank" rel="noopener">here</a>!</p>
+
+
+
+<h2>Prerequisites</h2>
+
+
+
+<p>This article is going to assume that you already have VMWare running in a home lab somewhere.  This also assumes that you have some familiarity with VMware and networking.</p>
+
+
+
+<p>This post will also assume that you have already installed a baseline OS.  <a href="https://www.packer.io/" data-internallinksmanager029f6b8e52c="17" title="Packer" target="_blank" rel="noopener">Packer</a> is a good tool to use to automate your baseline operating system installation to create a reusable disk image.</p>
+
+
+
+<h2>The Playbook</h2>
+
+
+
+<p>Below is the full code to deploy a virtual machine from a disk image.  </p>
+
+
+
+<p>The general idea is to run <code>ansible-playbook create-vmware-esxi-vm.yaml -i inventory.yaml</code> from your command line.  The playbook will then check to see if a machine exists.  If set to destructive, it will then delete any machine with the same name, copy an existing disk image, set some machine specifics like IP address, and then power on your machine.</p>
+
+
+
+<p>VMWare vSphere makes this a fairly novel activity via the use of templates.  A standalone ESXi node does not have the benefit of templates which is why things get a bit more complex in this space.</p>
+
+
+
+<p>A majority of this playbook is also setup with <code>deletage_to: localhost</code>.  This means that the computer running the ansible script will also execute anything with the defined <code>deletage_to: localhost</code>.  The remote machine from inventory does not yet exist, which means; if <code>deletage_to: localhost</code> was not set, you would immediately receive an ansible connection error.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>---
+- name: Create VMWare ESXi VM
+  hosts: all
+  gather_facts: false
+  vars:
+    destructive: false
+  tasks:
+    - include_vars: config.yaml
+      delegate_to: localhost
+
+    - include_vars: creds.yaml # Remember, this should be in a vault
+      delegate_to: localhost   # These creds are for example use only
+
+    - name: Check if virtual machine exists
+      community.vmware.vmware_guest_info:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: "ha-datacenter"
+        name: "{{ vmware.name }}"
+      delegate_to: localhost
+      ignore_errors: true
+      throttle: 1
+      register: vmware_validate_guest
+      when: destructive is not defined or not destructive
+
+    - set_fact:
+        destructive: yes
+      when: |
+        vmware_validate_guest is defined and (
+          (vmware_validate_guest.skipped is defined and not vmware_validate_guest.skipped) 
+          or (vmware_validate_guest.failed is defined and vmware_validate_guest.failed == True)
+        )
+
+    - name: Add vmware as a host
+      add_host:
+        hostname: "{{ vmware_host }}"
+        ansible_ssh_host: "{{ vmware_host }}"
+        ansible_user: "{{ vmware_user }}"
+        ansible_ssh_pass: "{{ vmware_password }}"
+      when: destructive
+
+    - set_fact:
+        num_cpu_cores_per_socket: "{{ vmware.num_cpus | int / 2 }}"
+
+    - name: Remove virtual machine from inventory
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        state: absent
+        force: True
+      delegate_to: localhost
+      throttle: 1
+      when: destructive
+
+    - name: Delete VM Folders
+      ansible.builtin.file:
+        path: "{{storage_path}}/{{ vmware.name }}/"
+        state: absent
+      delegate_to: "{{ vmware_host }}"
+      when: destructive
+      throttle: 5
+
+    - name: Create a virtual machine on vmware
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        folder: /vm/
+        name: "{{ vmware.name }}"
+        state: poweredoff
+        guest_id: "{{ vmware.guest_id }}"    
+        disk: "{{ vmware.disks }}"
+        datastore: "{{ datastore_name }}"
+        hardware:
+          boot_firmware: efi
+          memory_mb: "{{ vmware.memory_mb }}"
+          num_cpus: "{{ vmware.num_cpus }}"
+          num_cpu_cores_per_socket: "{{ num_cpu_cores_per_socket | int }}"
+          scsi: paravirtual
+        networks:
+        - name: "{{ vmware.port_group }}"
+          connect: yes
+          mac: "{{ vmware.mac_address  }}"
+          ip: "{{ vmware.ip_address }}"
+          netmask: "{{ vmware.netmask }}"
+          device_type: vmxnet3
+          type: static
+      delegate_to: localhost
+      register: deploy_vm
+      throttle: 5
+      when: destructive
+
+    - name: Copy boot disk VMDK Files
+      ansible.builtin.command: "{{ item }}"
+      delegate_to: "{{ vmware_host }}"
+      loop:
+        - vmkfstools -i "{{storage_path}}/{{ image_name }}/{{ image_name }}.vmdk" "{{storage_path}}/{{ vmware.name }}/{{ image_name }}.vmdk" -d thin
+      when: destructive
+      throttle: 3
+
+    - name: Add boot disks to virtual machine
+      community.vmware.vmware_guest_disk:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        datacenter: ha-datacenter
+        disk:
+          - filename: "&#91;{{datastore_name}}] {{ vmware.name }}/{{ image_name }}.vmdk"
+            scsi_type: 'paravirtual'
+            scsi_controller: 0
+            unit_number: 1
+      delegate_to: localhost
+      register: disk_facts
+      when: destructive
+      throttle: 5
+
+    - name: Power on virtual machine
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        state: poweredon
+        wait_for_ip_address: yes
+      delegate_to: localhost
+      register: deploy_vm
+      when: destructive</code></pre>
+
+
+
+<h3>Task By Task Breakdown</h3>
+
+
+
+<p>First, we should look at the inventory.</p>
+
+
+
+<p>This example has only one example host defined in it under a group called example.  You are able to define as many hosts in inventory that you would like.  </p>
+
+
+
+<p>The structure of the vars defined under example-01.valewood.lab are there to provide everything the playbook needs in order to provision a server in ESXi.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>---
+all:
+  hosts:
+  children:
+    example:
+      hosts:
+        example-01.valewood.lab:
+          ip: 192.168.1.10 
+          ansible_host: 192.168.1.10
+          vmware:
+            ip_address: 192.168.1.10
+            gateway_address: 192.168.1.1
+            dns_address: 192.168.1.1
+            netmask: 255.255.255.0
+            mac_address: "00:16:3E:A0:06:43"
+            memory_mb: 8192
+            name: example-01
+            num_cpus: 4
+            port_group: Example-App
+            guest_id: centos64Guest
+            disks: &#91;]</code></pre>
+
+
+
+<p>Below is the code that reads in configurations and credentials.  These are broken up into 2 different files because credentials should always be encrypted and never stored in plaintext.  </p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - include_vars: config.yaml
+      delegate_to: localhost
+
+    - include_vars: creds.yaml # Remember, this should be in a vault
+      delegate_to: localhost   # These creds are for example use only</code></pre>
+
+
+
+<p>The next step is to check to see if a VM exists in VMWare or not with the same name.  This is a crucial step to ensure that duplicate names are not used in VMWare.  Here are some key notes about additional configurations:</p>
+
+
+
+<ul><li>validate_certs is set to false because most of us are not going to be using trusted 3rd party certs in our VMware environment.  If you are doing this in a professional environment, ensure you have valid certs installed and leave validate_certs set to the default of true.</li><li>validate_certs should also be set to false if you are connecting to your VMWare server via IP address since your cert will not match an IP address.</li><li>vmware_user and vmware_password should be set to a user that has SSH access to your VMWare server.  I would not recommend that you do this in any sort of production environment, but it is perfectly fine for a home lab.</li><li>datacenter is set to ha-datacenter.  This is the default name of a &#8220;datacenter&#8221; in ESXi.  There is no reason to change this.</li><li>throttle is set to 1 to provide time to ctrl+c IF you happen to run your playbook by mistake against many machines at once.</li><li>destructive is a variable that can be set which tells this playbook to not destroy and rebuild machines if they already exist.  By default, the destructive variable it is not defined which means a check will be performed.</li></ul>
+
+
+
+<pre class="wp-block-code"><code>    - name: Check if virtual machine exists
+      community.vmware.vmware_guest_info:
+        validate_certs: false 
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: "ha-datacenter"
+        name: "{{ vmware.name }}"
+      delegate_to: localhost
+      ignore_errors: true
+      throttle: 1
+      register: vmware_validate_guest
+      when: destructive is not defined or not destructive</code></pre>
+
+
+
+<p>The next block of code will set the <code>destructive</code> variable to true IF we did the validation check from the previous block.  The validation check in the previous block will not run if <code>destructive</code> is set to true.  This acts as a one-way gate.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - set_fact:
+        destructive: yes
+      when: |
+        vmware_validate_guest is defined and (
+          (vmware_validate_guest.skipped is defined and not vmware_validate_guest.skipped) 
+          or (vmware_validate_guest.failed is defined and vmware_validate_guest.failed == True)
+        )</code></pre>
+
+
+
+<p>Things get a little bit tricky here, but I will explain the rationale behind this next block.  Your inventory file only has virtual machines defined in it, but for ansible remote connections to work properly, a host must be in inventory.  To get around this, in the middle of this playbook run, we call add_host which has an explicit delegate_to statement so that it runs on localhost.</p>
+
+
+
+<p>The reason this is tricky is because of the way that ansible does variable expansion.  One would think that a single host is being added to the inventory, but what is really happening in a playbook?  Ansible is expanding variable scope out to each individual machine in the inventory.  This means that add_host is actually being added in the context of each host in the inventory.  If you have 10 hosts defined in inventory, add_host adds variables for your VMWare host for each inventory host.</p>
+
+
+
+<p>TLDR; each host in inventory now has the ability to utilize a <code>delegate_to: {{ vmware_host }}</code> statement as part of their tasks.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Add vmware as a host
+      add_host:
+        hostname: "{{ vmware_host }}"
+        ansible_ssh_host: "{{ vmware_host }}"
+        ansible_user: "{{ vmware_user }}"
+        ansible_ssh_pass: "{{ vmware_password }}"
+      when: destructive</code></pre>
+
+
+
+<p>Next, we need to do a little bit of math.  This could be done live through future executions, but I like to split things like this out into separate set_fact tasks to ensure I can easily run any debug tasks in the future.</p>
+
+
+
+<p>Basically, this accomplishes telling VMWare that I want my CPU cores evenly distributed across sockets.  This is not perfect because it does not take care of edge cases of 1 CPU or 3 CPUs being defined in inventory.  For my use cases, I never define anything that way, but this could easily be updated to accommodate.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - set_fact:
+        num_cpu_cores_per_socket: "{{ vmware.num_cpus | int / 2 }}"</code></pre>
+
+
+
+<p>Next, if we are destructive, we need to delete an existing VM.  I am not going to rehash any of the special variables from above.  The only relevant thing to notice here is the state being set to absent which will delete the machine, and force is set to true which will bypass any safety checks VMWare might do.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Remove virtual machine from inventory
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        state: absent
+        force: True
+      delegate_to: localhost
+      throttle: 1
+      when: destructive</code></pre>
+
+
+
+<p>Next is a little bit of cleanliness.  The delete statement above will not actually cleanup the VMWare datastore filesystem.  We are performing a <code>delegate_to: {{ vmware_host }}</code> which means we will be running a direct delete over SSH to your server running vmware.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Delete VM Folders
+      ansible.builtin.file:
+        path: "{{storage_path}}/{{ vmware.name }}/"
+        state: absent
+      delegate_to: "{{ vmware_host }}"
+      when: destructive
+      throttle: 5</code></pre>
+
+
+
+<p>Finally, the meat of the playbook.  This task creates the VM which is defined in the inventory.  I will break down the relevant variables below.</p>
+
+
+
+<ul><li>Folder is neccisary for vShpere.  When only running ESXi, this only requires a default value of /vm/.  Most home labs will not need to change this.</li><li>state is set to poweredoff.  You could set this to poweredon but leaving it poweredoff ensures you can do post-processing after this create task.</li></ul>
+
+
+
+<p>Please note, <code>Create a virtual machine on vmware</code> is not referencing any kind of existing disk image.  This will create a new completely blank VM.  Subsequent tasks will utilize your disk image to ensure it is properly attached to this machine.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Create a virtual machine on vmware
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        folder: /vm/
+        name: "{{ vmware.name }}"
+        state: poweredoff
+        guest_id: "{{ vmware.guest_id }}"    
+        disk: "{{ vmware.disks }}"
+        datastore: "{{ datastore_name }}"
+        hardware:
+          boot_firmware: efi
+          memory_mb: "{{ vmware.memory_mb }}"
+          num_cpus: "{{ vmware.num_cpus }}"
+          num_cpu_cores_per_socket: "{{ num_cpu_cores_per_socket | int }}"
+          scsi: paravirtual
+        networks:
+        - name: "{{ vmware.port_group }}"
+          connect: yes
+          mac: "{{ vmware.mac_address  }}"
+          ip: "{{ vmware.ip_address }}"
+          netmask: "{{ vmware.netmask }}"
+          device_type: vmxnet3
+          type: static
+      delegate_to: localhost
+      register: deploy_vm
+      throttle: 5
+      when: destructive</code></pre>
+
+
+
+<p>Next, perform a copy of an existing disk image into the folder that was just created for this new virtual machine.  This will essentially perform the same action that vSphere performs when cloning templates.</p>
+
+
+
+<p>The key here is to utilize <code>vmkfstools</code> over ssh to ensure that you are able to get a thin provisioned copied disk.  If this is performed directly via ansible modules, you are not able to get a thin disk without vSphere.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Copy boot disk VMDK Files
+      ansible.builtin.command: "{{ item }}"
+      delegate_to: "{{ vmware_host }}"
+      loop:
+        - vmkfstools -i "{{storage_path}}/{{ image_name }}/{{ image_name }}.vmdk" "{{storage_path}}/{{ vmware.name }}/{{ image_name }}.vmdk" -d thin
+      when: destructive
+      throttle: 3</code></pre>
+
+
+
+<p>Next, we need to tell VMWare to mount our cloned disk to the recently created VM.  The new VM will have a scsi_controller so we just need to give it the right controller number of 0, and unit_number 1 to ensure we do not overwrite the new disk created via <code>Create a virtual machine on vmware</code>.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Add boot disks to virtual machine
+      community.vmware.vmware_guest_disk:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        datacenter: ha-datacenter
+        disk:
+          - filename: "&#91;{{datastore_name}}] {{ vmware.name }}/{{ image_name }}.vmdk"
+            scsi_type: 'paravirtual'
+            scsi_controller: 0
+            unit_number: 1
+      delegate_to: localhost
+      register: disk_facts
+      when: destructive
+      throttle: 5</code></pre>
+
+
+
+<p>And finally we tell ESXi to power on the virtual machine.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Power on virtual machine
+      community.vmware.vmware_guest:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        name: "{{ vmware.name }}"
+        state: poweredon
+        wait_for_ip_address: yes
+      delegate_to: localhost
+      register: deploy_vm
+      when: destructive</code></pre>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you can see, with a fairly concise set of steps, you can level up your DevOps automation game by rapidly creating and tearing down virtual machines in your home lab.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Convert Text File to JSON with Ansible</title>
 		<link>https://www.valewood.org/ansible-text-to-json/</link>
 		
@@ -1890,83 +2355,6 @@
 
 
 <p>In conclusion, DevOps Pipelines can be easily attributed to an assembly line of technology. Through a set of core principles, like always being ready for production, along with integrated technology which promotes testing, monitoring, feedback, and observability the pipeline approach enables organizations to achieve rapid time-to-market and continuous delivery of software products and services (and they can enjoy the velocity and quality benefits at a fraction of the cost).</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>How DevOps Can Improve Your Technology Stack</title>
-		<link>https://www.valewood.org/how-devops-can-improve-your-technology-stack/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Sun, 04 Sep 2022 18:50:18 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[software]]></category>
-		<guid isPermaLink="false">/?p=304</guid>
-
-					<description><![CDATA[DevOps is a set of practices that combines software development and operations to improve the speed, quality, and reliability of software delivery. DevOps is about collaboration and communication between development and operations teams. In many instances, these 2 teams are&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> is a set of practices that combines software development and operations to improve the speed, quality, and reliability of software delivery. DevOps is about collaboration and communication between development and operations teams.  In many instances, these 2 teams are combined into one providing a shared focus and shared set of responsibilities.  The team becomes responsible for the entire lifecycle surrounding a set of technology.  The strategic themes for this team center around automating the software delivery process so that software can be delivered faster, with fewer errors. DevOps is a relatively new concept, but it’s quickly gaining popularity because it’s an effective way to improve the technology stack. In this article, we’ll explore how DevOps can improve your technology stack.</p>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
-
-<h2>What is DevOps?</h2>
-
-
-
-<p>DevOps is a software development methodology that seeks to automate the software delivery process. The goal of DevOps is to improve the speed, quality, and reliability of software delivery by integrating software development and operations.  This shared responsibility builds on a set of common goals which may have caused tension in the past.  Development teams have been traditionally focused on shipping new features while handing those features off to the operations team to run them.  The operations team was then responsible for running something they did not build and may have had additional considerations to improve overall quality.</p>
-
-
-
-<p>Combining Development and Operations together nets out a single team that can view the entire landscape of technology improving visibility which improves decision-making.  There is a misnomer out there in the industry which drives me bonkers, and that is the idea of a &#8220;Full Stack Engineer&#8221;.  I don&#8217;t actually know what that is, do you?  My best guess is that a hiring manager needs A LOT of skills and doesn&#8217;t have the budget to pay for them.  Instead, by building a &#8220;Full Stack Team&#8221; someone could yield all of the benefits of a &#8220;Full Stack Engineer&#8221; without overworking any individual contributor. </p>
-
-
-
-<p>By employing a more DevOps-focused delivery methodology, businesses can respond more quickly to new market opportunities, deliver products and services with less downtime, and provide more reliable customer experiences.  Everything you need to move large rocks uphill exists inside of a single team with a singular focus.</p>
-
-
-
-<h2>The Benefits of DevOps</h2>
-
-
-
-<p>If you’re wondering why you should invest time and resources in implementing a DevOps strategy, here are some of the key benefits of DevOps:</p>
-
-
-
-<ul><li>Increased speed and agility &#8211; DevOps can help businesses respond more quickly to new market opportunities.  DevOps enables businesses to adapt and respond to changes quickly, while also meeting their service-level agreements (SLAs). It also enables continuous deployment, which means businesses can release software more often.  By releasing more frequently, you’re able to respond quickly when the market changes.</li><li>Higher quality &#8211; DevOps is often associated with implementing automation. By using automation to build, test, and deploy applications, you can catch bugs and other quality issues before they make their way into production. Automation also allows you to test the quality of your application more frequently, which enhances your ability to identify and fix quality issues as soon as possible.</li><li>Better collaboration &#8211; DevOps is a very collaborative approach to software development. When everyone works together to solve problems, issues are identified and resolved more quickly. Plus, collaboration helps teams solve more complex problems, which leads to higher-quality work and more innovative products.</li><li>Reducing risk &#8211; DevOps helps teams identify and mitigate risks early in the software delivery chain, which reduces overall risk. If you’re able to identify risks related to security, architecture, or other factors, you can address them quickly and effectively. This helps your organization avoid costly problems, such as data breaches or system failures.</li><li>More reliable customer experiences &#8211; When customers use your product or service, they expect it to work. By integrating development and operations, DevOps helps teams identify and resolve issues quickly, which means fewer disruptions and fewer outages.</li></ul>
-
-
-
-<h2>Implementing DevOps in Your Organization</h2>
-
-
-
-<p>If you’re wondering how to get started with DevOps, there are three steps you can take to get your organization on the path toward success.</p>
-
-
-
-<ul><li>Build a strong culture of trust &#8211; Successful DevOps implementations depend heavily on trust. Your organization needs to trust that developers and operations personnel will do what’s best for the company. Operations staff needs to trust that developers have the skills and knowledge to deliver what’s needed. So, when you’re first implementing DevOps, focus on building a culture of trust.</li><li>Invest in automation &#8211; Automation is critical to successful DevOps implementations because it enables organizations to release more frequently without increasing risk. Automating application builds, deployments, and tests allows teams to complete tasks more quickly and with fewer errors. Automating environments, such-as infrastructure and application configuration, also helps you avoid hand-crafted environments.</li><li>Create a single source of truth &#8211; A single source of truth refers to a central location where all critical information is stored. It’s critical that all members of the organization have access to this information. By creating a single source of truth, you can create a culture of collaboration and knowledge sharing that’s crucial to DevOps implementation success.</li></ul>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>As you’ve seen, DevOps is a software development methodology that seeks to automate the software delivery process. The goal of DevOps is to improve the speed, quality, and reliability of software delivery by integrating software development and operations. DevOps has several benefits, including increased speed and agility, increased quality, better collaboration, reduced risk, and more reliable customer experiences. To implement DevOps in your organization, you first need to build a strong culture of trust, invest in automation, and create a single source of truth.</p>
 ]]></content:encoded>
 					
 		
