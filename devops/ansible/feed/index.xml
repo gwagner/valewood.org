@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/ansible/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 26 Oct 2022 03:28:57 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 26 Oct 2022 03:42:06 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -44,6 +44,16 @@
 
 
 <p>The code for the project can be found <a href="https://github.com/gwagner/ansible-examples/tree/main/create-vmware-esxi-vm" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/create-vmware-esxi-vm" target="_blank" rel="noopener">here</a>!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
 
 
 
@@ -194,7 +204,7 @@
         name: "{{ vmware.name }}"
         datacenter: ha-datacenter
         disk:
-          - filename: "&#91;{{datastore_name}}] {{ vmware.name }}/{{ image_name }}.vmdk"
+          - filename: "&#091;{{datastore_name}}] {{ vmware.name }}/{{ image_name }}.vmdk"
             scsi_type: 'paravirtual'
             scsi_controller: 0
             unit_number: 1
@@ -254,7 +264,7 @@ all:
             num_cpus: 4
             port_group: Example-App
             guest_id: centos64Guest
-            disks: &#91;]</code></pre>
+            disks: &#091;]</code></pre>
 
 
 
@@ -375,6 +385,16 @@ all:
       throttle: 5</code></pre>
 
 
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
 
 <p>Finally, the meat of the playbook.  This task creates the VM which is defined in the inventory.  I will break down the relevant variables below.</p>
 
@@ -452,7 +472,7 @@ all:
         name: "{{ vmware.name }}"
         datacenter: ha-datacenter
         disk:
-          - filename: "&#91;{{datastore_name}}] {{ vmware.name }}/{{ image_name }}.vmdk"
+          - filename: "&#091;{{datastore_name}}] {{ vmware.name }}/{{ image_name }}.vmdk"
             scsi_type: 'paravirtual'
             scsi_controller: 0
             unit_number: 1
