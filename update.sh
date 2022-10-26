@@ -20,6 +20,7 @@ rm -rf ./new-site/
 echo "Download missing JS files"
 grep -ohP "\"([a-z0-9A-Z\.\-\_]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor/assets/js/{} -s -S -f -w "%{url_effective}\n" -o wp-content/plugins/elementor/assets/js/{}
 grep -ohP "\"([a-z0-9A-Z\.\-\_]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor-pro/assets/js/{} -s -S -f -w "%{url_effective}\n" -o wp-content/plugins/elementor-pro/assets/js/{}
+curl https://www.lab.valewood.org/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js -o wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js
 
 # Download 404 page
 echo "Download 404 page"
