@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 26 Oct 2022 03:42:06 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 27 Oct 2022 02:31:19 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,140 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>PurpleUrchin Crypto Mining with Free GitHub Actions</title>
+		<link>https://www.valewood.org/purpleurchin-crypto-mining/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Thu, 27 Oct 2022 02:26:10 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<guid isPermaLink="false">/?p=1225</guid>
+
+					<description><![CDATA[Sysdig Threat Research Team has discovered PURPLEURCHIN, an elaborate crypto mining operation taking advantage of automated CI/CD services. Attackers have used millions of free compute cycles through services such as GitHub Actions, Heroku, and others, to run the operation. What&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://sysdig.com/blog/massive-cryptomining-operation-github-actions/" data-type="URL" data-id="https://sysdig.com/blog/massive-cryptomining-operation-github-actions/" target="_blank" rel="noreferrer noopener">Sysdig Threat Research Team</a> has discovered PURPLEURCHIN, an elaborate crypto mining operation taking advantage of automated CI/CD services. Attackers have used millions of free compute cycles through services such as <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> Actions, Heroku, and others, to run the operation.</p>
+
+
+
+<p>What does this mean to the <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> community?</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>A Basic Breakdown of the Attack</h2>
+
+
+
+<p>The attack started with some images on DockerHub being updated and automated scanning catching those images.  From there, it appears that free-tier GitHub accounts were created which allow for 2000 minutes per month of runtime.  Repositories are then created and a <code>github-actions.yaml</code> workflow is created in those repositories.  Containers are then started which run the mining operations.  Ports are also opened up to serve as command and control.</p>
+
+
+
+<p>To get the full details of the attack, which is extremely fascinating, I would look into the article that I have linked at the top of this post.  There is a ton of depth and work around to combat the systems of control that GitHub has in place to protect its infrastructure from attack.</p>
+
+
+
+<h2>What is the Threat of a Poorly Secured Code Repository?</h2>
+
+
+
+<p>Supply chain attacks have become commonplace in software development.  Companies are constantly chasing CVEs from packages that are either not being well maintained by the community or are being maintained but companies are not allocating enough funding to keep their software in line with community updates.  </p>
+
+
+
+<p>The most pronounced threat in recent memory was <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228" data-type="URL" data-id="https://nvd.nist.gov/vuln/detail/CVE-2021-44228" target="_blank" rel="noreferrer noopener">Log4j remote code execution bug</a> found in versions below 2.16.  This allowed attackers to craft a simple attack that was able to quickly run arbitrary code that could have real consequences.</p>
+
+
+
+<p>Companies all over the planet rushed to update their code bases.  You can find massive Reddit threads that were discussing their companies&#8217; responses to the issue.  I would imagine, even with all of the industry hype, this vulnerability still exists in the wild and is still being exploited.</p>
+
+
+
+<p>How can something like this be avoided in the future?  People familiar with DevOps automation will quickly reply by adding more automation to their environments and building systems.  While I completely agree with this response, if automation is added irresponsibly the threat landscape you are looking at will broaden very quickly.</p>
+
+
+
+<p>In high school, I was enrolled in vocational education where I learned how to build a shed.  It was a pretty awesome experience and I learned a lot.  The shop teacher in charge of running the class and keeping the students safe was generally opposed to using power tools to aid in our learning.  When approached as to why his response was simply this; &#8220;power tools are just going to ensure that you kids screw something up faster than with hand tools&#8221;.</p>
+
+
+
+<p>When adding automation to an environment, especially in concert with code repositories and build systems, you are opening yourself up to a lot of risks that need to be mitigated.  If your pipelines are fully automated from commit through production, then all it takes is one simple push before disaster strikes.</p>
+
+
+
+<p>Tom Scott from &#8220;Things You Might Not Know&#8221; does a pretty good theoretical exercise about how quickly things can go wrong in a scenario like this.  I have added the video below.</p>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="Single Point of Failure: The (Fictional) Day Google Forgot To Check Passwords" width="1170" height="658" src="https://www.youtube.com/embed/y4GB_NDU43Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><figcaption>Single Point of Failure: The (Fictional) Day Google Forgot To Check Passwords</figcaption></figure>
+
+
+
+<h2>How Does this Impact the Average Company?</h2>
+
+
+
+<p>PURPLEURCHIN appears to be a fairly sophisticated vehicle to utilize free compute resources to mine cryptocurrency.  On its face, a group is just trying to make a buck.</p>
+
+
+
+<p>On its face, it does not seem very threatening.  This kind of attack really shows not only the creativity of attackers today, but it highlights how complex a company&#8217;s technology stack has gotten, and how easy it is to hide inside of it.  </p>
+
+
+
+<p>Here are some questions that you can ask yourself to understand your level of visibility:</p>
+
+
+
+<ul><li>Would you know if all of the code that made it into production on your next release was intentionally put there by good actors?</li><li>Would you know if your servers are only running what you intended for them to be running?</li><li>Could a sidecar process be spun up by a bad actor and would anybody notice?</li><li>Does your automated testing stack take environmental considerations into account when passing a build?</li><li>Do you know what versions of 3rd party dependencies are running in your environment?</li><li>Would you know if a 3rd party dependency has been compromised?</li><li>Could you quickly replace a compromised dependency to ensure business continuity?</li></ul>
+
+
+
+<p>Now, these questions may seem like a little bit of fear-mongering, and that is intentional.  There are solutions for every single one of these already-solved problems on the market.  In my experience, companies are not always going that extra mile to ensure that they are protected from threat actors.</p>
+
+
+
+<p>The factors that compound all of this are speed and automation.  I don&#8217;t think anybody will dispute the argument that the technology space moves extremely quickly.  On top of that, businesses must ship and release software at the pace of the market to remain competitive.  Because of that speed, automation is generally employed as a stop-gap to maintain a consistent pace.  Businesses have the possibility of leaving themselves exposed if those automated tools are not held to a higher standard than the software they are developing.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>PURPLEURCHIN serves as another reminder about the time and attention we need to pay to our supply chain and automated tool stacks.  While this particular attack does not constitute immediate concern for the technology community holistically like Log4J did, it serves as a great reminder that technology hygiene is as important as shipping valuable technology solutions to the market.</p>
+]]></content:encoded>
+					
+		
+		
+		<media:content url="https://www.youtube.com/embed/y4GB_NDU43Q" medium="video" width="1280" height="720">
+			<media:player url="https://www.youtube.com/embed/y4GB_NDU43Q" />
+			<media:title type="plain">Single Point of Failure: The (Fictional) Day Google Forgot To Check Passwords</media:title>
+			<media:description type="html"><![CDATA[http://tomscott.com/ - @tomscott - I spin a (fictional) tale of the day that Google accidentally opened everything. Performed at GeekyConf, with thanks to Bet...]]></media:description>
+			<media:thumbnail url="/wp-content/uploads/2022/10/devops-purpleurchin.jpg" />
+			<media:rating scheme="urn:simple">nonadult</media:rating>
+		</media:content>
+	</item>
+		<item>
 		<title>How To Create ESXi VM With Ansible</title>
 		<link>https://www.valewood.org/ansible-create-vmware-esxi-vm/</link>
 		
@@ -85,7 +219,7 @@
 
 
 
-<p>A majority of this playbook is also setup with <code>deletage_to: localhost</code>.  This means that the computer running the ansible script will also execute anything with the defined <code>deletage_to: localhost</code>.  The remote machine from inventory does not yet exist, which means; if <code>deletage_to: localhost</code> was not set, you would immediately receive an ansible connection error.</p>
+<p>A majority of this playbook is also setup with <code>delegate_to: localhost</code>.  This means that the computer running the ansible script will also execute anything with the defined <code><code>delegate_to</code>: localhost</code>.  The remote machine from inventory does not yet exist, which means; if <code><code>delegate_to</code>: localhost</code> was not set, you would immediately receive an ansible connection error.</p>
 
 
 
@@ -2270,113 +2404,6 @@ all:
 					
 					<wfw:commentRss>https://www.valewood.org/essential-devops-tools/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Why are CI/CD Pipelines Part of DevOps?</title>
-		<link>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Mon, 05 Sep 2022 16:47:35 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[development]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[sdlc]]></category>
-		<category><![CDATA[software]]></category>
-		<guid isPermaLink="false">/?p=312</guid>
-
-					<description><![CDATA[CI/CD pipelines are a key part of the DevOps process. They allow you to automate the process of getting your code from development to production through CI/CD. CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>CI/CD pipelines are a key part of the <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> process. They allow you to automate the process of getting your code from development to production through CI/CD.  CI/CD stands for Continuous Integration and Continuous Deployment. This helps to speed up the process and ensure that your code is always in a ready-to-deploy state. There are a number of different tools that you can use for creating DevOps pipelines. You can think of it like an assembly line where technology components and quality checks and gates are passed on the way to production. A more apt analogy would be the assembly line in the manufacturing industry where physical products are made. Think of a car made of parts going down a conveyor belt to different stations where it is assembled. A DevOps pipeline is kind of like that. But instead of cars, DevOps pipelines are for software and applications. And instead of physical parts, they are for software components like source code and automated scripts.</p>
-
-
-
-<p>There are several key parts of the assembly line that must be considered. The key parts of a successful DevOps pipeline are all continuous; integration, delivery, testing, monitoring, feedback, and operations.</p>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
-
-<h2>The DevOps <s>Assembly Line</s> CI/CD Pipeline</h2>
-
-
-
-<h3>Continuous Integration</h3>
-
-
-
-<p>Integration is the process whereby all developers make their code changes available to other team members. This is often done using a source code repository and an automated build step. Developers, ops, qa, etc. all contribute to the same process which enhances the same product with everybody moving the same automobile down the assembly line together.</p>
-
-
-
-<p>Most organizations have a &#8220;git&#8221; repository that holds all the source code. This can be a private repository, shared publically, or a combination of both. It is commonly referred to as a &#8220;<a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a>&#8221; or &#8220;GitLab&#8221; repository. Utilizing feature branching strategies, build or feature flags, and a myriad of other code organization strategies; the code repository becomes the central hub for all work happening in and around the technology product.</p>
-
-
-
-<h3>Continuous Delivery</h3>
-
-
-
-<p>Delivery is the process whereby the integrated code changes are deployed to a test or production environment. It involves package or container creation, deployment, and feature enablement in a production environment. The overall scope of work is narrowed down from large unwieldy projects to something more complementary to a single bolt being added to a car or truck. In the physical world, those incremental steps are not only performed, but in our modern industrial assembly lines, the impact wrench which is utilized will measure and record the torque applied while the car is being assembled. Continuous delivery is no different. Code should always be ready to be deployed to production because every minor tweak, change, or enhancement is fully tested as it is added to the code repository.</p>
-
-
-
-<h3>Continuous Testing</h3>
-
-
-
-<p>Testing is the stage where the output of delivery is tested to ensure that it performs as expected in a testing environment. The gold standard here is to ensure that 100% of your application is fully tested on every single commit. Full coverage testing is often used when developing in an agile or Scrum environment, where developers will have small, incremental changes to the code. When modernizing an application where automated testing was not done from the start, you may see much lower percentages as you get your application up to spec. This is OK! Make sure testing is a focus and a breakpoint is added where it no longer becomes acceptable to not test changes.</p>
-
-
-
-<h3>Continuous Monitoring and Feedback</h3>
-
-
-
-<p>I am going to let you in on a secret, &#8220;humans are not robots&#8221;. This means that we are going to make mistakes. It is just part of the job. Mistakes should always be an acceptable part of the work done in the technology sector. Here is what should really drive people crazy instead of mistakes, not knowing when mistakes were made or when something fails. So, what can we do about it? Simply put, build some observability!</p>
-
-
-
-<p>Observability, a common NFR in technology, is the concept that not only should your technology have some up/down state monitoring behind it, but you should be able to also get good telemetry around the full set of business processes as well. Looking at some basic observability items such as activity counters, page performance and event timing, errors, failures, success, etc. you can build a set of observability around key metrics which tell you can line up to show the differences between how you expect your application to be performing versus the reality of how it is performing.</p>
-
-
-
-<p>When it comes to Continous Feedback, now that we are in this panacea of speedy and rigorously tested application deployments, we can get this observability feedback into the hands of our DevOps teams to ensure that appropriate changes are put into the application. Without good early feedback supported by a mountain of data, the team will be left guessing. Let’s be honest, everyone on the team needs this feedback. The DevOps team doesn’t need to know everything. They do need to know enough to assess whether or not the changes they make to the application are safe and meet business requirements.</p>
-
-
-
-<p>Regardless of whether you’re building a standalone product or a company, the key takeaway here is that you want to be thinking about observability in terms of the business process as a whole paired directly with technology. A car company is not going to set out to produce the next top-of-the-line pickup truck and end up with a Pontiac Aztec unless something goes very wrong while nobody is looking.</p>
-
-
-
-<h3>Continuous Operations</h3>
-
-
-
-<p>Everyone is responsible for operations. Product Managers, Developers, CEOs, Finance and Accounting, and Operations; everybody shares some role in the responsibility. When it comes to DevOps the role of operations is filtered directly into the central workstreams of the team. When an outage occurs, RCAs and post-mortems do not stop at a ceremonial activity. They are carried through to completion with real changes being put in place. Utilizing all of the aforementioned steps of the assembly line, the DevOps team is able to more quickly remediate issues that either show up due to mistakes or show up due to the growth of a system over time.</p>
-
-
-
-<p>One of the core things to remember about operations is that technology does not age well. The longer something is running in the wild, the frailer it will get. Think about it this way; if you never service your car, the engine will start to overheat, your tires will start to go bald, and you may run out of blinker fluid. As time goes on, the car gets more and more unreliable. This is true of any technology as well. Operations needs to be accessible to everyone, and it needs to be prioritized in a way that allows for a healthy mix of feature functionality and operations to coexist.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>In conclusion, DevOps Pipelines can be easily attributed to an assembly line of technology. Through a set of core principles, like always being ready for production, along with integrated technology which promotes testing, monitoring, feedback, and observability the pipeline approach enables organizations to achieve rapid time-to-market and continuous delivery of software products and services (and they can enjoy the velocity and quality benefits at a fraction of the cost).</p>
-]]></content:encoded>
-					
 		
 		
 			</item>

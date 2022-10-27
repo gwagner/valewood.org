@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/ansible/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 26 Oct 2022 03:42:06 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 26 Oct 2022 21:06:54 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -85,7 +85,7 @@
 
 
 
-<p>A majority of this playbook is also setup with <code>deletage_to: localhost</code>.  This means that the computer running the ansible script will also execute anything with the defined <code>deletage_to: localhost</code>.  The remote machine from inventory does not yet exist, which means; if <code>deletage_to: localhost</code> was not set, you would immediately receive an ansible connection error.</p>
+<p>A majority of this playbook is also setup with <code>delegate_to: localhost</code>.  This means that the computer running the ansible script will also execute anything with the defined <code><code>delegate_to</code>: localhost</code>.  The remote machine from inventory does not yet exist, which means; if <code><code>delegate_to</code>: localhost</code> was not set, you would immediately receive an ansible connection error.</p>
 
 
 
