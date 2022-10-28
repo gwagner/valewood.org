@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html ⚡ lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<script type="application/ld+json" class="penci-breadcrumb-schema">{"@context":"https:\/\/schema.org\/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.valewood.org\/amp\/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/www.valewood.org\/devops\/amp\/","name":"DevOps"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.valewood.org\/ansible-modify-vmware-esxi-guest-file\/amp\/","name":"How to Modify VMWare ESXi Guest Files with Ansible"}}]}</script><link rel="shortcut icon" href="https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png" type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png">
+	<title>How to Modify VMWare ESXi Guest Files with Ansible - A DevOps Blog</title>
+		<link href="https://fonts.gstatic.com/" rel="dns-prefetch preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/" rel="dns-prefetch preconnect" crossorigin>
+<link as="script" href="https://cdn.ampproject.org/v0.js" rel="preload">
+<link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" crossorigin>
+<script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script><script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script><link rel="stylesheet" id="font-awesome-css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+<script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+	<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script><link rel="canonical" href="https://www.valewood.org/ansible-modify-vmware-esxi-guest-file">
+	<script src="https://cdn.ampproject.org/v0.js" async></script>
+	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","mainEntityOfPage":"https:\/\/www.valewood.org\/ansible-modify-vmware-esxi-guest-file","publisher":{"@type":"Organization","name":"A DevOps Blog","logo":{"@type":"ImageObject","url":"https:\/\/www.valewood.org\/wp-content\/uploads\/2022\/08\/cropped-A-DevOoops-1-e1660773390219-2.png","height":32,"width":32}},"headline":"How to Modify VMWare ESXi Guest Files with Ansible","datePublished":"2022-10-27T20:25:15+00:00","dateModified":"2022-10-27T20:26:41+00:00","author":{"@type":"Person","name":"Geoff Wagner"},"image":{"@type":"ImageObject","url":"https:\/\/www.valewood.org\/wp-content\/uploads\/2022\/10\/devops-copy.jpg","width":1920,"height":1282}}</script>
+		
+<!-- Search Engine Optimization by Rank Math PRO - https://s.rankmath.com/home -->
+<title>How to Modify VMWare ESXi Guest Files with Ansible - A DevOps Blog</title>
+<meta name="description" content="This post will help anyone who is attempting to use ansible to modify files on VMs running on ESXI via automation when Practicing DevOps. This method assumes">
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Modify VMWare ESXi Guest Files with Ansible - A DevOps Blog">
+<meta property="og:description" content="This post will help anyone who is attempting to use ansible to modify files on VMs running on ESXI via automation when Practicing DevOps. This method assumes">
+<meta property="og:site_name" content="A DevOps Blog">
+<meta property="article:tag" content="devops">
+<meta property="article:tag" content="howto">
+<meta property="article:tag" content="tools">
+<meta property="article:section" content="DevOps">
+<meta property="og:updated_time" content="2022-10-27T20:26:41-05:00">
+<meta property="og:image" content="/wp-content/uploads/2022/10/devops-copy.jpg">
+<meta property="og:image:secure_url" content="/wp-content/uploads/2022/10/devops-copy.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1282">
+<meta property="og:image:alt" content="DevOps Copy">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="article:published_time" content="2022-10-27T20:25:15-05:00">
+<meta property="article:modified_time" content="2022-10-27T20:26:41-05:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Modify VMWare ESXi Guest Files with Ansible - A DevOps Blog">
+<meta name="twitter:description" content="This post will help anyone who is attempting to use ansible to modify files on VMs running on ESXI via automation when Practicing DevOps. This method assumes">
+<meta name="twitter:site" content="@adevoops">
+<meta name="twitter:creator" content="@adevoops">
+<meta name="twitter:image" content="/wp-content/uploads/2022/10/devops-copy.jpg">
+<meta name="twitter:label1" content="Written by">
+<meta name="twitter:data1" content="Geoff Wagner">
+<meta name="twitter:label2" content="Time to read">
+<meta name="twitter:data2" content="8 minutes">
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://www.valewood.org/#person","name":"Geoff Wagner","logo":{"@type":"ImageObject","@id":"https://www.valewood.org/#logo","url":"https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219-150x150.png","contentUrl":"https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219-150x150.png","caption":"Geoff Wagner","inLanguage":"en-US"},"image":{"@type":"ImageObject","@id":"https://www.valewood.org/#logo","url":"https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219-150x150.png","contentUrl":"https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219-150x150.png","caption":"Geoff Wagner","inLanguage":"en-US"}},{"@type":"WebSite","@id":"https://www.valewood.org/#website","url":"https://www.valewood.org","name":"Geoff Wagner","publisher":{"@id":"https://www.valewood.org/#person"},"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.valewood.org/wp-content/uploads/2022/10/devops-copy.jpg","url":"https://www.valewood.org/wp-content/uploads/2022/10/devops-copy.jpg","width":"1920","height":"1282","caption":"DevOps Copy","inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"#breadcrumb","itemListElement":[{"@type":"ListItem","position":"1","item":{"@id":"https://www.valewood.org","name":"Home"}},{"@type":"ListItem","position":"2","item":{"@id":"https://www.valewood.org/devops/amp/","name":"DevOps"}},{"@type":"ListItem","position":"3","item":{"@id":"https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/amp/","name":"How to Modify VMWare ESXi Guest Files with Ansible"}}]},{"@type":"WebPage","@id":"#webpage","name":"How to Modify VMWare ESXi Guest Files with Ansible - A DevOps Blog","datePublished":"2022-10-27T20:25:15-05:00","dateModified":"2022-10-27T20:26:41-05:00","isPartOf":{"@id":"https://www.valewood.org/#website"},"primaryImageOfPage":{"@id":"https://www.valewood.org/wp-content/uploads/2022/10/devops-copy.jpg"},"inLanguage":"en-US","breadcrumb":{"@id":"#breadcrumb"}},{"@type":"Person","@id":"https://www.valewood.org/author/gwagner/amp/","name":"Geoff Wagner","url":"https://www.valewood.org/author/gwagner/amp/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/9d04843299ef1deade62e617d5829946?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/9d04843299ef1deade62e617d5829946?s=96&amp;d=mm&amp;r=g","caption":"Geoff Wagner","inLanguage":"en-US"},"sameAs":["http://www.valewood.org","https://twitter.com/adevoops"]},{"@type":"BlogPosting","headline":"How to Modify VMWare ESXi Guest Files with Ansible - A DevOps Blog","datePublished":"2022-10-27T20:25:15-05:00","dateModified":"2022-10-27T20:26:41-05:00","articleSection":"Ansible, DevOps","author":{"@id":"https://www.valewood.org/author/gwagner/amp/"},"publisher":{"@id":"https://www.valewood.org/#person"},"description":"This post will help anyone who is attempting to use ansible to modify files on VMs running on ESXI via automation when Practicing DevOps. This method assumes","name":"How to Modify VMWare ESXi Guest Files with Ansible - A DevOps Blog","@id":"#richSnippet","isPartOf":{"@id":"#webpage"},"image":{"@id":"https://www.valewood.org/wp-content/uploads/2022/10/devops-copy.jpg"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+
+	<style amp-custom>*{ outline: none; text-decoration: none; box-sizing: border-box; }textarea, input[type="text"], input[type="email"], input[type="search"], input[type="button"], input[type="submit"]{ -webkit-appearance: none; border-radius: 0; -webkit-border-radius: 0; }.wrap a,.wrap a:active,.wrap a:visited{ text-decoration: none } .penci-google-adsense { margin: 0 0 30px; text-align: center; overflow: hidden; display: block; width: 100%; } strong, b { font-weight: 700; } h1{ font-size: 24px; } h2{ font-size: 20px; } h3{ font-size: 18px; } h4{ font-size: 16px; } h5{ font-size: 14px; } h6{ font-size: 12px; }.nopost-found{font-size: 15px; margin: 1em 0;text-align: center;}.search-label{margin-bottom: 16px;}.screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute; height: 1px; width: 1px; overflow: hidden; } .screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto; color: #21759b; display: block; font-size: 14px; font-weight: 700; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; }h1, h2, h3, h4, h5, h6 { clear: both; line-height: 1.3; font-family: 'Roboto', sans-serif; font-style: normal; font-weight: 600; } a{ background-color: transparent; transition: color 0.3s; text-decoration: none; vertical-align: baseline; } .byline, .updated:not(.published) { display: none; } .alignright { float: right; } .alignleft { float: left; } .aligncenter { display: block; margin-left: auto; margin-right: auto; }.amp-wp-enforced-sizes { max-width: 100%; margin: 0 auto; } .amp-wp-unknown-size img { object-fit: contain; }.amp-wp-content, .amp-wp-title-bar div { margin: 0 auto; max-width: 1170px; }body { background: #fff; color: #313131; font-size: 15px; line-height: 1.5; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-wrap: break-word; margin: 0; overflow-x: hidden; } body, button, input, select, textarea { font-family: 'Roboto', sans-serif;font-weight: 400;font-size: 14px; } .penci-amp-wrapper { background: #ffffff; max-width: 780px; margin: 0 auto; } .penci-amp-wrapper .amp-slider { background: #ffffff; } p, ol, ul, figure { margin: 0 0 1em; padding: 0; } a,a:visited { color: #6eb48c; } a:hover,a:active,a:focus { color: #313131; } button, .button, input[type="button"], input[type="reset"], input[type="submit"] { border: 1px solid #6eb48c; border-radius: 0; background-color: #6eb48c; color: #ffffff; line-height: 36px; padding: 2px 15px 0; text-align: center; transition: all 0.25s; font-size: 14px; text-transform: uppercase; cursor: pointer; } button:hover, .button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover { opacity: 0.8; border-color: #6eb48c; background-color: #6eb48c; color: #ffffff; } .penci-inline-related-posts .penci-irp-heading { font-size: 16px; font-weight: bold; margin-bottom: 8px; display: block; } .penci-inline-related-posts .penci_post-meta { display: none; } blockquote { color: #313131; background: rgba(127,127,127,.125); border-left: 4px solid #6eb48c; margin: 8px 0 24px 0; padding: 16px; } blockquote p:last-child { margin-bottom: 0; } blockquote.alignleft { margin: 5px 10px 10px 0; } blockquote.alignright { margin: 5px 0 10px 10px; }.amp-wp-meta, .penci-amp-wp-header div, .wp-caption-text, .amp-wp-tax-category, .amp-wp-tax-tag, .amp-wp-comments-link, .penci-amp-footer p, .back-to-top { font-family:'Roboto', sans-serif; } .penci-amp-wp-header { background-color: #ffffff; overflow: hidden; } body.sticky-header { padding-top: 54px; } .sticky-header .penci-amp-wp-header { position: fixed; left: 0; right: 0; top: 0; z-index: 999; display: block; } .site-header .navbar-toggle { font-size: 21px; left: 0; } .penci-amp-wp-header .navbar-search, .penci-amp-wp-header .navbar-toggle, .penci-amp-wp-header .branding { color: #313131; } .penci-amp-wp-header .navbar-search .fa { top: 2px; position: relative; } .penci-amp-wp-header .branding { display: block; text-align: center; font-size: 30px; font-weight: 600; text-decoration: none; font-family: 'Teko', sans-serif; width: 100%; padding: 10px 55px; z-index: 9; height: 54px; line-height: 34px; box-sizing: border-box; } .penci-amp-wp-header .navbar-search, .penci-amp-wp-header .navbar-toggle { font-weight: normal; font-size: 18px; position: absolute; top: 0; z-index: 99; border: none; background: transparent; height: 54px; line-height: 52px; margin: 0; padding: 0; width: 52px; text-align: center; outline: 0; cursor: pointer; -webkit-transition: all .6s ease; -moz-transition: all .6s ease; -o-transition: all .6s ease; transition: all .6s ease; } .penci-amp-wp-header .navbar-toggle { font-size: 21px; left: 0; } .penci-amp-wp-header .navbar-search { font-size: 18px; right: 0; line-height: 48px; } .penci-amp-wp-header div { color: #313131; font-size: 1em; font-weight: 400; margin: 0 auto; padding: 0; position: relative; box-sizing: border-box; height:54px; } .penci-amp-wp-header a { color: #313131; text-decoration: none; } .penci-amp-wp-header .penci-amp-site-icon { padding: 2px 60px; box-sizing: border-box; max-height: 54px; display: flex; align-items: center; justify-content: center; overflow: hidden; } .penci-amp-wp-header .penci-amp-site-icon amp-img{ margin-left: auto; margin-right: auto; display:block; } .wrap { padding: 15px 15px 0; height: 100%; } .img-holder { position: relative; width: 100%; background: #ccc url(/ansible-modify-vmware-esxi-guest-file/amp/images/no-image.jpg); display: inline-block; vertical-align: top; background-repeat: no-repeat; background-position: center center; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; height: 100%; transition: transform .3s ease, opacity .3s; transition-timing-function: cubic-bezier(0.39, 0.76, 0.51, 0.56); } .img-holder:before{ display: block; content: ""; width: 100%; padding-top: 66.6667%; background: none ; box-shadow: none ; }.amp-slider{ background: #eee; direction: ltr; } .amp-slider a{ text-decoration: none; } .homepage-slider{ margin: 0 0 0; width: 100%; position: relative; max-width: 100%; }.rtl .amp-featured-slider .content-holder{ direction: rtl; } .amp-featured-slider .img-holder:after{ content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 1; bottom: 0; right: 0; background: linear-gradient(to bottom, transparent 50%, #000 90%); opacity: 0.9; transition: opacity 0.3s; } .amp-featured-slider .slider-item-not-caption .img-holder:after { content: none; } .gallery-feature-img-single .content-holder span{ color: #fff; } .penci-owl-featured-area .penci-slider__text { text-align: left; position: absolute; bottom: 0; padding: 20px 20px 9px; z-index: 99; } .amp-featured-slider .content-holder{ text-align: center; position: absolute; bottom: 0; padding: 0px 0 15px; z-index: 99; } .amp-featured-slider .content-holder a{ color: #fff; } .amp-featured-slider .content-holder h3{ margin: 20px 0 0; font-size: 22px; }.amp-wp-article { color: #313131; font-weight: 400; margin: 1.5em auto; max-width: 840px; overflow-wrap: break-word; word-wrap: break-word; } .amp-wp-article > p:last-child{ margin-bottom: 0; } .amp-wp-article-header { align-items: center; align-content: stretch; display: flex; flex-wrap: wrap; justify-content: space-between; margin: 1.5em 0 1.5em; } .amp-wp-title { color: #313131; display: block; flex: 1 0 100%; width: 100%; line-height: 1.2; margin-top: 9px; margin-bottom: 6px; } .post-image{ margin-bottom: 20px; } .amp-wp-meta { color: #999999; display: inline-block; flex: 2 1 50%; font-size: .875em; line-height: 1.5em; margin: 0; padding: 0; } .amp-wp-article-header .amp-wp-meta:last-of-type { text-align: right; } .amp-wp-article-header .amp-wp-meta:first-of-type { text-align: left; } .amp-wp-byline amp-img, .amp-wp-byline .amp-wp-author { display: inline-block; vertical-align: middle; } .amp-wp-byline amp-img { border: 1px solid #6eb48c; border-radius: 50%; position: relative; margin-right: 6px; } .amp-wp-posted-on { text-align: right; } .penci-amp-entry-meta{ color: #999999; line-height: 1.6; font-size: 13px; margin-top: 5px; } .penci-amp-entry-meta .entry-meta-item{ margin-right: 15px; display: inline-block; }.penci-amp-entry-meta .penci-amp-pviews{ display: none; }.penci-amp-entry-meta a, .penci-amp-entry-meta span, .penci-amp-entry-meta i { font-size: inherit; color: inherit; text-decoration: none; } .penci-amp-entry-meta i{ margin-right: 3px; }.penci-amp-entry-meta .entry-meta-item:last-child { margin-right: 0; } .amp-wp-article-featured-image { margin: 0 0 1em; } .amp-wp-article-featured-image amp-img { margin: 0 auto; } .amp-wp-article-content { margin: 0; } .amp-wp-article-content ul, .amp-wp-article-content ol { margin-left: 1em; } .amp-wp-article-content amp-img { margin: 0 auto; } .amp-wp-article-content amp-img.alignright, .amp-wp-article-content amp-img.alignleft { margin: 0 0 1em 0; } .amp-wp-article-content amp-img.alignright { display: inline; float: right; margin-left: 1.5em; } .amp-wp-article-content amp-img.alignleft { display: inline; float: left; margin-right: 1.5em; } .wp-caption { padding: 0; } .wp-caption.alignleft { margin-right: 16px; } .wp-caption.alignright { margin-left: 16px; } .wp-caption .wp-caption-text { color: #999999; font-size: 14px; line-height: 1.3; margin: 0; padding: .66em 10px .75em; text-align: center; }amp-iframe, amp-youtube, amp-instagram, amp-vine { background: #dedede; margin: 0 -16px 1.5em; } .amp-wp-iframe-placeholder { background: #dedede url( /wp-content/plugins/penci-soledad-amp/assets/images/placeholder-icon.png) no-repeat center 40%; background-size: 48px 48px; min-height: 48px; } /* Article Footer Meta */ .amp-wp-article-footer { padding-top: 20px; } .amp-wp-article-footer .amp-wp-meta { display: block; } .penci-amp-tags-links { margin: 10px 0 5px; width: 100%; overflow: hidden; display: block; } .penci-amp-tags-links a { float: left; display: inline-block; min-height: 24px; line-height: 24px; font-size: 10px; font-weight: 700; text-align: left; color: #999999; background: #ececec; transition: all 0.3s; margin: 0 2.5px 5px; text-transform: uppercase; padding-left: 10px; padding-right: 10px; } .penci-amp-tags-links a:hover { color: #999999; background: #ececec; } .penci-amp-tax-category { overflow: hidden; } .penci-amp-tax-category a { font-size: 13px; color: #6eb48c; line-height: 1.2; margin: 0 18px 0 0; padding-right: 10px; display: inline-block; vertical-align: top; background: none; transition: all 0.3s; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; font-weight: normal; margin-bottom: 5px; position: relative; text-decoration: none; } .penci-amp-tax-category a:after { content: ""; display: inline-block; border: 1px solid; font-size: 12px; margin-left: 11px; position: absolute; top: 50%; margin-top: -3px; width: 3px; height: 3px; transform: rotate(45deg); -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); } .penci-amp-tax-category a:last-child:after { content: none; } .penci-amp-single .penci-social-buttons { margin-top: 19px; margin-bottom: 35px; display: block; border: 1px solid #dedede; padding: 10px 15px; } .penci-social-buttons .penci-social-share-text { text-transform: uppercase; font-weight: 700; margin-right: 20px; font-size: 14px; } .penci-social-buttons .penci-social-item { display: inline-block; margin: 5px 9px 5px 0; font-size: 14px; font-weight: normal; line-height: 32px; text-align: left; color: #ffffff; text-transform: none; height: 32px; border: 0; background-color: #0d47a1; padding: 0 12px; transition: opacity 0.3s; border-radius: 0; vertical-align: middle; } .penci-social-buttons .penci-social-item:last-child{ margin-right: 0; } .penci-social-buttons .penci-social-item .dt-share { display: none; } .penci-social-buttons .penci-social-item.twitter { background-color: #40c4ff; } .penci-social-buttons .penci-social-item.google_plus { background-color: #eb4026; } .penci-social-buttons .penci-social-item.instagram { background-color: #417096; } .penci-social-buttons .penci-social-item.pinterest { background-color: #C92228; } .penci-social-buttons .penci-social-item.vk{ background-color: #5181b8; } .penci-social-buttons .penci-social-item.ok{ background-color: #F18F00; } .penci-social-buttons .penci-social-item.pocket{ background-color: #ef4056; } .penci-social-buttons .penci-social-item.skype{ background-color: #00aff0; }.penci-social-buttons .penci-social-item.email { background-color: #a7a7a7; } .penci-social-buttons .penci-social-item.linkedin { background-color: #0077B5; } .penci-social-buttons .penci-social-item.tumblr { background-color: #34465d; } .penci-social-buttons .penci-social-item.reddit { background-color: #ff4500; } .penci-social-buttons .penci-social-item.stumbleupon { background-color: #ee4813; } .penci-social-buttons .penci-social-item.whatsapp { background-color: #00c853; } .penci-social-buttons .penci-social-item.telegram { background-color: #179cde; }.penci-post-pagination { width: 100%; margin: 0; overflow: hidden; padding: 0 0 30px; } .penci-post-pagination .prev-post-title { margin-top: -8px; } .penci-post-pagination span { color: #999999; display: inline-block; font-size: 10px; font-weight: bold; line-height: 2.4; text-transform: uppercase; } .penci-post-pagination span i { margin-right: 6px; } .penci-post-pagination span i.fa-angle-right { margin: 0 0 0 6px; } .penci-post-pagination h5 { font-size: 15px; line-height: 1.33; margin: 0; padding: 0 15px 0 0; position: relative; } .penci-post-pagination h5.next-title { padding: 0 0 0 15px; } .penci-post-pagination a { color: #6eb48c; } .penci-post-pagination a:hover { color: #6eb48c; } .pagi-text { margin-top: 6px; } .penci-post-pagination .prev-post, .penci-post-pagination .next-post { width: 100%; padding: 0; text-align: center; } .penci-post-pagination .prev-post + .next-post { padding-top: 20px; margin-top: 20px; padding-left: 0; width: 100%; border-top: 1px solid #dedede; } .penci-ajax-more .penci-block-ajax-more-button { width: 100%; } .penci-post-related{ border-top: 1px solid #dedede; overflow: hidden; margin: 0 0 20px; padding: 22px 0 0px; width: 100%; } .penci-amp-single .post-title-box { margin-bottom: 13px; } .post-title-box .post-box-title { font-size: 18px; text-transform: uppercase; position: relative; z-index: 10; display: inline-block; margin: 0; line-height: 1.67; color: #313131; } .penci-post-related .post-related_content { margin-left: -10px; margin-right: -10px; overflow: hidden; } .penci-post-related .post-related_content:after { content: " "; display: block; clear: both; width:100%; } .penci-post-related .item-related { width: 33.3333%; float: left; padding: 0 10px; } .penci-post-related .item-related h4 { margin: 15px 0 0; font-size: 15px; font-weight: 600; line-height: 1.3; } .penci-post-related .item-related h4 a{ color: #313131; } .amp-wp-comments-link { color: #999999; font-size: .875em; line-height: 1.5em; text-align: center; margin: 2.25em 0 1.5em; } .amp-wp-comments-link a { border-style: solid; border-color: #dedede; border-width: 1px 1px 2px; border-radius: 4px; background-color: transparent; color: #6eb48c; cursor: pointer; display: block; font-size: 14px; font-weight: 600; line-height: 18px; margin: 0 auto; max-width: 200px; padding: 11px 16px; text-decoration: none; width: 50%; -webkit-transition: background-color 0.2s ease; transition: background-color 0.2s ease; } .penci-amp-archive-page-header { padding: 15px 0px 9px; margin: 0 0 15px; font-weight: 500; position: relative; } .penci-amp-taxonomy-description { font-size: 13px; font-weight: normal; line-height: 1.5; margin-top: 10px; color: #777; } .penci-amp-taxonomy-description p{ margin:0; font-size: inherit; font-weight: inherit; color: inherit; } .penci-amp-archive-page-header .pre-title { font-size: 14px; margin-bottom: 3px; font-weight: 400; color: #868686; text-transform: capitalize; } .penci-amp-archive-page-header .archive-title { margin: 0; font-size: 25px; text-transform: capitalize; color: #313131; }.penci-archive__list_posts.listing-1 .article_content, .penci-archive__list_posts.listing-3 .article_content{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; } .penci-archive__list_posts .penci-post-item{ margin-top: 20px; } .penci-archive__list_posts .penci-post-item-1{ margin-top: 0; } .penci-archive__list_posts .entry-media a, .penci-archive__list_posts .entry-media img{ display: block; } .penci-archive__list_posts.listing-1 .entry-media, .penci-archive__list_posts.listing-3 .entry-media{ margin-right: 15px; width: 35%; } .penci-archive__list_posts .penci-post-thumb{ width:100%; height: auto; } .penci-archive__list_posts.listing-1 .entry-text, .penci-archive__list_posts.listing-3 .entry-text{ flex: 1; } .penci-archive__list_posts.listing-1 .penci__post-title, .penci-archive__list_posts.listing-3 .penci__post-title{ font-size: 14px; margin-top: 0; margin-bottom: 0; position: relative; font-weight: 500; font-family: 'Roboto', sans-serif; }.penci-archive__list_posts .penci__post-title a{ color: #313131; text-decoration: none; } .penci-archive__list_posts .penci__post-title a:hover{ color: #6eb48c; } .penci-amp-wrapper .penci-archive__list_posts.listing-1 .post-excerpt, .penci-amp-wrapper .penci-archive__list_posts.listing-3 .post-excerpt{ display: none; } .penci-archive__list_posts .entry-meta{ margin-top: 9px; color: #999999; font-size: 13px; display:block; }.penci-archive__list_posts .entry-meta span{margin-right: 10px;color:inherit;}.penci-archive__list_posts .entry-meta span:last-child{margin-right:0;}.penci-archive__list_posts .entry-meta span a{ color: inherit; }.penci-archive__list_posts .penci-posted-on a{ color: inherit; } .penci-archive__list_posts .entry-meta .fa{ margin-right: 3px; } .penci-archive__list_posts .post-excerpt p:last-child{ margin-bottom:0; } .penci-archive__list_posts.listing-2 a.post-read-more, .penci-archive__list_posts.listing-3 .penci-post-item-1 a.post-read-more { margin-top: 10px; display: block; } .penci-archive__list_posts a.post-read-more { font-family: 'Roboto', sans-serif; font-weight: 600; text-decoration: none; padding: 0; border-radius: 33px; display: inline-block; line-height: 24px; margin-top: 8px; text-transform: uppercase; border: 0; padding: 0; font-size: 13px; line-height: 1; } .penci-archive__list_posts a.post-read-more .fa { margin-left: 3px; font-size: 15px; vertical-align: middle; top: -2px; position: relative; } .penci-archive__list_posts.listing-2 .penci__post-title, .penci-archive__list_posts.listing-3 .penci-post-item-1 .penci__post-title{ font-size: 17px; margin-top: 10px; margin-bottom: 0; position: relative; font-weight: 500; font-family: 'Roboto', sans-serif; } .penci-archive__list_posts.listing-2 .post-excerpt, .penci-archive__list_posts.listing-3 .penci-post-item-1 .post-excerpt{ font-size: 14px; line-height: 1.71; color: #666666; display:block; margin-top: 5px; } .penci-archive__list_posts.listing-2 .post-excerpt .link-more, .penci-archive__list_posts.listing-3 .penci-post-item-1 .post-excerpt .link-more{ display:none; } .penci-archive__list_posts.listing-3 .penci-post-item-1 .article_content { display:block; } .penci-archive__list_posts.listing-3 .penci-post-item-1 .entry-media { margin-right: 0; width: 100%; } .meta-none{ display: none; }.meta-show{ display: inline-block; }.penci-amp-comment { border-top: 1px solid #dedede; padding-top: 21px; margin-top: 26px; } .penci-post-item + .post-comments h3.comment-reply-title { padding-top: 0; } h3.comment-reply-title { padding-top: 32px; } .penci-comments-button { margin-top: 20px; padding-top: 20px; border-top: 1px solid #dedede; } .penci-comments-button a { display: block; width: 50%; margin-right: auto; margin-left: auto; line-height: 38px; padding: 0px 15px 0; font-weight: bold; } .penci-comments-button + .post-comments { display: none; } .penci-comments-button + .post-comments .comment-reply-title, .penci-post-related + .post-comments .comment-reply-title, .penci-post-related + .post-comments .post-title-box { margin-top: 20px; border-top: 1px solid #dedede; } .comments .comment { border-top: 1px solid #dedede; } .comments .comment .comment { border-top: 1px solid #dedede; } .comments > .comment:first-child, .comments .comment > .comment:first-child { border-top: none; } .thecomment { padding-top: 20px; padding-bottom: 0; display: table; width: 100%; } .comments > .comment:first-child > .thecomment { padding-top: 0; } .thecomment .author-img { display: none; } .thecomment .comment-text { margin-left: 0; position: relative; } .thecomment .comment-text span.author, .thecomment .comment-text span.author a { display: block; margin-top: -3px; margin-bottom: 5px; font-family: "Mukta Vaani", sans-serif; font-size: 18px; font-weight: bold; line-height: 1.33; text-align: left; color: #313131; } .thecomment .comment-text span.author a { display: inline-block; margin: 0; } .thecomment .comment-text span.author a:hover { color: #6eb48c; } .thecomment .comment-text span.date { font-size: 12px; color: #999999; display: block; } .thecomment .comment-text span.date i { margin-right: 5px; } .thecomment .comment-text em { font-size: 12px; display: block; color: orange; letter-spacing: 1px; margin: 5px 0 0; } .thecomment .comment-text em i { font-size: 14px; color: #f3bd00; } .thecomment .comment-content { margin: 15px 0; } .thecomment .comment-text span.reply { display: none; } .post-comments span.reply a { font-size: 11px; color: #999999; margin-left: 18px; font-family: "Raleway", sans-serif; font-weight: 500; -o-transition: .3s; -moz-transition: .3s; -webkit-transition: .3s; transition: .3s; text-transform: uppercase; line-height: 1; display: inline-block; text-align: center; } .post-comments span.reply a:hover { color: #6eb48c; } .comments .comment + #respond { margin-bottom: 20px; } #respond { overflow: hidden; position: relative; } .no-comment-yet #respond { padding-top: 0; border-top: 0; } #respond h3 { font-size: 18px; text-transform: uppercase; position: relative; z-index: 10; display: inline-block; margin: 0; width: 100%; font-size: 18px; font-weight: bold; line-height: 1.67; color: #313131; margin-bottom: 13px; } #respond h3 a { color: #000; display: inline-block; } #respond h3 small a { text-transform: uppercase; font-size: 12px; color: #999999; padding: 0; margin-left: 7px; letter-spacing: 0; -o-transition: .3s; -ms-transition: .3s; -moz-transition: .3s; -webkit-transition: .3s; transition: .3s; font-weight: 500; position: absolute; right: 0; } #respond #cancel-comment-reply-link { font-size: 11px; font-family: 'Roboto', sans-serif; font-weight: normal; } #respond h3 small a:hover { color: #313131; } #respond form#commentform, form.wpcf7-form { margin-left: -10px; margin-right: -10px; } .mc4wp-form label { text-align: left; margin-bottom: 10px; } #respond p.comment-form-author, #respond p.comment-form-email, #respond p.comment-form-url, .wpcf7 p.name, .wpcf7 p.email, .wpcf7 p.subject { width: 100%; padding: 0 10px; float: left; display: inline-block; margin: 0; } #respond p.comment-form-comment, .wpcf7 p.message { clear: both; margin: 0 10px; }form.comment-form > p, form.comment-form > div, form.comment-form > input, form.comment-form > textarea, form.comment-form > label, form.comment-form > span, form.wpcf7-form > div, form.wpcf7-form > p, form.wpcf7-form > input, form.wpcf7-form > textarea, form.wpcf7-form > label, form.wpcf7-form > span, form#commentform > p, form#commentform > div, form#commentform > input, form#commentform > textarea, form#commentform > label, form#commentform > span { margin: 0 14px; } form#commentform > input[type="checkbox"] { margin-left: 14px; margin-right: 14px; } .captchaSizeDivLarge { clear: both; } label#captcha_code_label { display: inline-block; } .woocommerce div.product .woocommerce-tabs .panel #respond p.comment-form-author, .woocommerce div.product .woocommerce-tabs .panel #respond p.comment-form-email { padding: 0; } .penci-amp-single-product .entry-meta-hide, .woocommerce .penci-product-item .entry-meta-hide { display: none; } .woocommerce #review_form #respond p { margin: 10px 14px; } .woocommerce #review_form #respond p.stars { margin-left: 0; margin-right: 0; } #respond label, .wpcf7 label { color: #939393; font-size: 12px; display: block; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; margin-bottom: 8px; } #respond p.form-submit, .wpcf7 p.submit { margin: 0 10px; } .button.add-comment, #respond input, .wpcf7 input, .widget_wysija input { padding: 12px 19px 11px; max-width: 100%; border: 1px solid #dedede; margin-bottom: 19px; width: 100%; max-height: 40px; font-size: 12px; line-height: 1.3; color: #999999; } .wpcf7 input[type="checkbox"]{ width: auto; } #respond input:focus, .wpcf7 input:focus { outline: none; } .jetpack_subscription_widget #subscribe-email input { width: 100% ; padding: 12px 19px 11px; margin-top: 10px; } #respond textarea, .wpcf7 textarea { padding: 12px 19px 11px; border: 1px solid #dedede; width: 100%; min-height: 120px; font-size: 12px; margin-bottom: 19px; outline: none; vertical-align: top; font-size: 12px; line-height: 1.3; background: transparent; color: #999999; } #respond textarea:focus, .wpcf7 textarea:focus { outline: none; } .button.add-comment, #respond #submit, .wpcf7 input[type="submit"], .widget_wysija input[type="submit"] {     text-decoration: none;text-transform: uppercase; border-radius: 0; display: inline-block; transition: all .3s; cursor: pointer; width: auto; min-width: 91px; margin: 0; border: none; line-height: 1; font-size: 14px; font-weight: bold; color: #ffffff; } .button.add-comment, #respond #submit:hover, .wpcf7 input[type="submit"]:hover, .widget_wysija input[type="submit"]:hover { color: #fff; } .contact-form input[type=email], .contact-form input[type=text] { max-width: 300px; width: 100%; padding: 10px 15px; }.penci-amp-footer { border-top: 1px solid #dedede; margin: calc(1.5em - 1px) -15px 0; clear: both; } .penci-amp-footer-nav { padding: 7px 15px; } .penci-amp-footer .penci-amp-footer-container { margin: 0 auto; max-width: calc(840px - 32px); padding: 0; position: relative; } .penci-footer-navigation { list-style: none; margin: 0; padding: 0; text-align: center; } .penci-footer-navigation li { display: inline-block; margin: 0 8px 5px; line-height: 1.3; } .penci-footer-navigation ul.sub-menu{ display: none; } .penci-footer-navigation a { color: #313131; font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 14px; } .penci-footer-navigation a:hover { color: #6eb48c; } .penci-footer-navigation li li { display: none; } .penci-footer-navigation .fa { margin-right: 5px; } .penci-amp-footer h2 { font-size: 1em; line-height: 1.375em; margin: 0 0 .5em; } .penci-amp-footer p { color: #999999; font-size: .8em; margin: 0 85px 0 0; } .penci-amp-footer a { text-decoration: none; } .footer__copyright_menu a{ color : #fff; } .footer__copyright_menu a:hover { color: #6eb48c; } .back-to-top { bottom: 1.275em; font-size: .8em; font-weight: 600; line-height: 2em; position: absolute; right: 16px; top:7px; } .back-to-top .fa{ margin-left: 5px; } .penci-amp-main-link { text-align: center; padding: 17px 10px; } .penci-amp-main-link a { color: #ffffff; text-decoration: none; padding: 1px 14px 0; display: inline-block; border: 0; border-radius: 0; line-height: 28px; font-size: 11px; font-weight: 400; transition: all 0.3s; letter-spacing: 0; text-transform: uppercase; background: #6eb48c; } .penci-amp-main-link .fa{ padding-right: 2px; font-size: 10px; } .penci-amp-main-link a:hover { opacity: 0.8; } .footer__copyright_menu {min-height: 36px;clear: both; overflow: hidden; background: #212121; padding-left: 15px; position: relative; padding-top: 11px; padding-bottom: 11px; line-height: 1.3; text-align: left; color: #414141; }.sidebar-nav-social .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute; height: 1px; width: 1px; overflow: hidden; } .mobile-sidebar { padding: 5px 15px 15px; width:270px; max-width: 100%; background :#fff; } .mobile-sidebar::-webkit-scrollbar { width: 6px; background: #848484; } .mobile-sidebar::-webkit-scrollbar-thumb { background-color: #313131; border-radius:0; -webkit-border-radius:0; -moz-border-radius:0; } .mobile-sidebar::-webkit-scrollbar-corner { background-color: #DEDEDE; } #close-sidebar-nav { border: 0; background: transparent; position: absolute; top: 5px; right: 10px; z-index: 100; padding:0; } #close-sidebar-nav i { width: 24px; height: 24px; background-color: #fff; line-height: 24px; text-align: center; border-radius: 12px; font-size: 14px; vertical-align: top; color: #313131; } .mobile-sidebar .mobile-navigation { clear: both; } .mobile-sidebar .primary-menu-mobile { margin: 0; padding: 0; list-style: none; } .mobile-sidebar .primary-menu-mobile li > ul, .mobile-sidebar .primary-menu-mobile li > ol { margin-bottom: 0; } .mobile-sidebar .primary-menu-mobile li { display: block; border-bottom: 1px solid #dedede; } .mobile-sidebar .primary-menu-mobile > li:last-child, .mobile-sidebar .primary-menu-mobile ul > li:last-child { border-bottom: none; } .mobile-sidebar .primary-menu-mobile li.penci-mega-menu .dropdown-toggle, .mobile-sidebar .primary-menu-mobile li.penci-mega-menu .sub-menu{ display: none; } .mobile-sidebar .primary-menu-mobile li. { position: relative; } .mobile-sidebar .primary-menu-mobile li a { font-size: 14px; font-weight: normal; letter-spacing: 0; text-transform: uppercase; color: #212121; margin: 0; position: relative; padding: 12px 0 12px 0; display: block; line-height: 1.3em; text-decoration: none; } .mobile-sidebar .primary-menu-mobile li.menu-item-has-children a { padding-right: 17px; } .mobile-sidebar .primary-menu-mobile li a:hover { color: #6eb48c; } .mobile-sidebar .primary-menu-mobile li a > i { display: none; } .mobile-sidebar ul.sub-menu { border-top: 1px solid #dedede; padding: 10px 0 10px 12px; margin-left: 0; } .mobile-sidebar ul.sub-menu ul.sub-menu { border: none; padding: 5px 0 5px 12px; padding-right: 0; margin-left: 0; } .mobile-sidebar ul.sub-menu li { overflow: hidden; border: none; } .mobile-sidebar ul.sub-menu li a { margin: 0 0 0 0; padding: 10px 0; transition: all 0.3s; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; } .mobile-sidebar .primary-menu-mobile .dropdown-toggle { text-decoration: none; position: absolute; top: 0; right: 0; z-index: 20; font-size: 17px; font-style: normal; text-align: right; padding: 11px 0 11px 5px; line-height: 1; transition: all 0.3s; color: #212121; } .mobile-sidebar .primary-menu-mobile .sub-menu li a .dropdown-toggle { padding: 8px 0 8px 5px; } .mobile-sidebar .primary-menu-mobile .sub-menu li a .dropdown-toggle { padding: 8px 0 8px 5px; } .mobile-sidebar .penci-amphtml-accordion-header { background-color: transparent; border: 0; } .mobile-sidebar .primary-menu-mobile li.toggled-on > a, .mobile-sidebar .primary-menu-mobile li.toggled-on > .dropdown-toggle, .mobile-sidebar .primary-menu-mobile li.current-menu-item > a, .mobile-sidebar .primary-menu-mobile li.current-menu-item > .dropdown-toggle { color: #313131; } .mobile-sidebar #sidebar-nav-logo { max-width: 230px; padding: 20px 0 0; text-align: center; margin: 0; position: relative; overflow: hidden; font-size: 2em; } .mobile-sidebar #sidebar-nav-logo a { font-family: "Teko", sans-serif; font-weight: 700; line-height: 1; color: #313131; padding: 0; margin: 0; text-decoration: none; } .mobile-sidebar .sidebar-nav-social { margin: 0 0 43px 0; padding: 0 10px; text-align: center; } .mobile-sidebar .sidebar-nav-social .inner-header-social { display: inline-block; vertical-align: top; position: relative; } .mobile-sidebar .sidebar-nav-social a { float: left; display: inline-block; vertical-align: top; margin-right: 13px; color: #212121; } .mobile-sidebar .sidebar-nav-social a:hover { color: #6eb48c; }body.penci-amp-body.search-results .penci-search-form.empty { padding: 35px 0; border-bottom: none; min-height: 250px; } .penci-search-form { font-family: 'Roboto', sans-serif; font-size: 16px; padding: 0 0 18px; margin: 0 0 6px; } .penci-search-form label { display: block; padding: 0 0 10px; color: #313131; } .penci-search-form .search-input-submit { position: relative; } .penci-search-form .search-field { -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075); -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075); box-shadow: inset 0 1px 1px rgba(0,0,0,.075); background: transparent; display: block; border: 1px solid #dedede; font-size: 15px; padding: 0 100px 0 18px; line-height: 36px; width: 100%; border-radius: 0; -webkit-appearance: textfield; color: #313131; } .penci-search-form .search-submit { position: absolute; top: 0; right: 0; bottom: 0; width: auto; text-transform: uppercase; border: none; cursor: pointer; line-height: 38px; padding: 0 22px; border-radius: 0; } .penci-search-form + .penci-archive__list_posts { border-top:1px solid #dedede; padding-top: 20px; }.pagination { clear: both; overflow: hidden; text-align: center; padding: 20px 0 9px; width: 100%; font-size: 12px; font-weight: 600; } .pagination .nav-links { display: inline-block; margin: -2px -2px 0; vertical-align: top; text-align: center; margin-left: auto; margin-right: auto; } .pagination a, .pagination span.page-numbers { margin-left: 2px; margin-right: 2px; margin-top: 2px; float: left; display: inline-block; background: transparent; border: solid 1px #dedede; color: #313131; min-width: 30px; height: 30px; line-height: 28px; transition: all 0.3s; text-decoration: none; box-sizing: border-box; } .pagination span.current, .pagination a:hover { background: #6eb48c; border-color: #6eb48c; color: #ffffff; } .penci-amp-error-404 { text-align: center; padding-bottom:10px; } #penci-disable-amp-accordion { display: none; }.post-title-box{margin-bottom: 13px;}.penci-featured-cats-wrap .post-title-box a{ color: #313131; }.penci-featured-cats-wrap:not(.penci-fcats-after){border-bottom: 1px solid #dedede;margin-bottom: 20px; padding-bottom: 20px;}.amp-wp-article-content .blocks-gallery-grid {list-style: none; }.fcatblposts .penci-featured-cats-wrap{margin: 20px 0 0 0; padding: 20px 0 0 0; border-top: 1px solid #dedede; border-bottom: 0;}@media only screen and (max-width : 680px) { .amp-featured-slider .content-holder h3 { font-size: 15px; } }@media only screen and (max-width : 480px){ .penci-search-form .search-submit { padding: 0 15px; } .amp-featured-slider .img-holder:before { padding-top: 80%; } .amp-featured-slider .content-holder{ padding-left: 15px; padding-right:15px; width: 100%; } .penci-archive__list_posts.listing-1 .entry-media, .penci-archive__list_posts.listing-3 .entry-media { width: 108px; } .penci-post-related .item-related { width: 100%; margin-bottom: 20px; } .penci-post-related .item-related:last-child { margin-bottom: 0; } #respond p.comment-form-author, #respond p.comment-form-email, #respond p.comment-form-url, .wpcf7 p.name, .wpcf7 p.email, .wpcf7 p.subject { width:100%; } .penci-archive__list_product .penci-product-item { width: 100%; padding: 20px 10px 0; float: left; } .penci-amp-single-product .product-thumbnails, .penci-amp-single-product .product-thumbnails + .entry-summary { width:100%; padding-left: 0; } }@media only screen and (min-width : 600px){ .amp-featured-slider .content-holder { left: 26px; right: 26px; } }h1, h2, h3, h4, h5, h6, .mobile-sidebar .primary-menu-mobile li a, .penci-archive__list_posts.listing-1 .penci__post-title, .penci-archive__list_posts.listing-3 .penci__post-title, .penci-archive__list_posts.listing-2 .penci__post-title, .penci-archive__list_posts.listing-3 .penci-post-item-1 .penci__post-title, .penci-archive__list_posts a.post-read-more, .penci-footer-navigation a, .penci-search-form, #respond h3, .penci-post-related .item-related h4, #respond #cancel-comment-reply-link { font-family: 'Open Sans', sans-serif;font-weight: 700; }.penci-post-pagination h5, .penci-post-related .item-related h4, .penci-archive__list_posts.listing-1 .penci__post-title, .penci-archive__list_posts.listing-3 .penci__post-title, .penci-archive__list_posts.listing-2 .penci__post-title, .penci-archive__list_posts.listing-3 .penci-post-item-1 .penci__post-title{ font-size:15px; }
+		/* Inline styles */
+.amp-wp-inline-2f0158eb062d1ac553a7edcb8a744628{text-align:center;}</style>
+</head>
+
+<body class="post-template-default single single-post postid-1232 single-format-standard wp-custom-logo penci-amp-body penci-amp-single sticky-header soledad-ver-8-2-5 pclight-mode penci-body-single-style-6 penci-show-pthumb pcmn-drdw-style-slide_down pchds-showup elementor-default">
+<amp-sidebar id="penci_sidebar" class="mobile-sidebar" layout="nodisplay" side="left">
+	<button id="close-sidebar-nav" on="tap:penci_sidebar.close" class="ampstart-btn caps m2"><i class="fa fa-close"></i></button>
+	<div id="sidebar-nav-logo">
+				<a href="/amp" class="sidebar-branding penci-amp-site-icon sidebar-image-logo ">
+			<amp-img src="/wp-content/uploads/2022/08/cropped-A-DevOoops-1-e1660773390219-3.png" alt="A DevOps Blog - Occasionally a developer makes an Ops!" height="150" width="163"></amp-img>		</a>
+	</div>
+			<div class="header-social sidebar-nav-social">
+			<div class="inner-header-social">
+													<a href="https://twitter.com/adevoops" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a>
+																					<a href="https://www.linkedin.com/in/geoffrey-wagner-aba4378/" rel="nofollow" target="_blank"><i class="fa fa-linkedin"></i></a>
+																													<a href="mailto:info@valewood.com"><i class="fa fa-envelope-o"></i></a>
+																																					<a href="https://www.github.com/gwagner" rel="nofollow" target="_blank"><i class="fa fa-github"></i></a>
+																																									<a href="https://www.reddit.com/user/adevooops" rel="nofollow" target="_blank"><i class="fa fa-reddit-alien"></i></a>
+																																							</div>
+		</div>
+	
+	<nav id="primary-menu-mobile" itemscope itemtype="http://schema.org/SiteNavigationElement" class="mobile-navigation primary-menu-mobile penci-amp-menu"><li id="menu-item-179" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home ajax-mega-menu menu-item-179"><a href="/amp/">Home</a></li>
+<li id="menu-item-836" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children ajax-mega-menu menu-item-836">
+<amp-accordion><section><h6 class="penci-amphtml-accordion-header">
+<a href="/topics/devops/amp/">DevOps</a><span class="dropdown-toggle fa fa-angle-down"></span>
+</h6>
+<div>
+
+<ul class="sub-menu">
+	<li id="menu-item-1051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children ajax-mega-menu menu-item-1051">
+<a href="/topics/devops/benefits-of-devops/amp/">Benefits</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1096" class="menu-item menu-item-type-post_type menu-item-object-page ajax-mega-menu menu-item-1096"><a href="/topics/devops/benefits-of-devops/devops-flow/amp/">Flow</a></li>
+		<li id="menu-item-1039" class="menu-item menu-item-type-post_type menu-item-object-page ajax-mega-menu menu-item-1039"><a href="/topics/devops/benefits-of-devops/devops-culture-of-quality/amp/">Quality</a></li>
+	</ul>
+</li>
+	<li id="menu-item-897" class="menu-item menu-item-type-post_type menu-item-object-page ajax-mega-menu menu-item-897"><a href="/topics/devops/faq/amp/">FAQ</a></li>
+	<li id="menu-item-163" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent ajax-mega-menu menu-item-163"><a href="/devops/amp/">Posts</a></li>
+</ul>
+</div>
+</section></amp-accordion>
+</li>
+<li id="menu-item-242" class="menu-item menu-item-type-post_type menu-item-object-page ajax-mega-menu menu-item-242"><a href="/about-me/amp/">About Me</a></li>
+<li id="menu-item-992" class="menu-item menu-item-type-post_type menu-item-object-page ajax-mega-menu menu-item-992"><a href="/contact/amp/">Contact Us</a></li>
+</nav></amp-sidebar>
+
+<div class="penci-amp-wrapper">
+	<header id="#top" itemscope itemtype="https://schema.org/WPHeader" class="site-header penci-amp-wp-header">
+	<div>
+		<button class="fa fa-bars navbar-toggle" on="tap:penci_sidebar.toggle"></button>
+				<a href="/amp" class="branding  penci-amp-site-icon image-logo "><amp-img src="/wp-content/uploads/2022/08/cropped-A-DevOoops-1-e1660773390219-2.png" alt="A DevOps Blog - Occasionally a developer makes an Ops!" height="50" width="53"></amp-img></a>
+				<a href="/amp/?s" class="navbar-search"><i class="fa fa-search" aria-hidden="true"></i></a>
+	</div>
+</header>	<div class="wrap">
+		<article class="amp-wp-article">
+			<header class="amp-wp-article-header">
+									<div class="penci-amp-tax-category amp-wp-meta amp-wp-tax-category">
+		<a href="/devops/amp/" rel="category tag">DevOps</a> <a href="/devops/ansible/amp/" rel="category tag">Ansible</a>	</div>
+				<h1 class="amp-wp-title">How to Modify VMWare ESXi Guest Files with Ansible</h1>
+				<div class="penci-amp-entry-meta">
+					<span class="entry-meta-item penci-amp-author"><i class="fa fa-user"></i> <span class="author vcard author_name post-author">Geoff Wagner</span></span><span class="entry-meta-item penci-posted-on"><i class="fa fa-clock-o"></i><a href="/ansible-modify-vmware-esxi-guest-file/amp/" rel="bookmark"><time class="entry-date post-date published" datetime="2022-10-27T20:25:15-05:00">October 27, 2022</time></a></span><span class="entry-meta-item penci-comment-count"><a href="/ansible-modify-vmware-esxi-guest-file/amp/#respond"><i class="fa fa-comment-o"></i>0</a></span><span class="entry-meta-item meta-none penci-amp-pviews"><i class="fa fa-eye"></i>0 views</span>				</div>
+			</header>
+			
+	<figure class="amp-wp-article-featured-image wp-caption">
+		<amp-img width="1024" height="684" layout="responsive" data-hero src="/wp-content/uploads/2022/10/devops-copy-1024x684.jpg" class="attachment-large size-large wp-post-image amp-wp-enforced-sizes" alt="DevOps Copy" sizes="(min-width: 1024px) 1024px, 100vw"></amp-img>			</figure>
+										<div class="amp-wp-article-content">
+				<div class="penci-toc-container-wrapper sticky-disable"><div id="penci-toc-container" class="penci-toc-container penci-toc-default counter-hierarchy counter-decimal dis-toggle penci-toc-wrapper max-lv-1">
+<div class="penci-toc-head penci-toc-title-container">
+<p class="penci-toc-title">Table of Contents</p>
+<span class="penci-toc-title-toggle"></span>
+</div>
+<nav class="penci-toc"><ul class="penci-toc-list">
+<li class="penci-tocli"><a class="penci-toc-link penci-toc-heading-1" href="#penci-Prerequisites" title="Prerequisites">Prerequisites</a></li>
+<li class="penci-tocli"><a class="penci-toc-link penci-toc-heading-2" href="#penci-The-Playbook" title="The Playbook">The Playbook</a></li>
+<li class="penci-tocli"><a class="penci-toc-link penci-toc-heading-3" href="#penci-Task-By-Task-Breakdown" title="Task By Task Breakdown">Task By Task Breakdown</a></li>
+<li class="penci-tocli"><a class="penci-toc-link penci-toc-heading-4" href="#penci-Conclusion" title="Conclusion">Conclusion</a></li>
+</ul></nav>
+</div></div>
+
+<p>This post will help anyone who is attempting to use <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">ansible</a> to modify files on VMs running on ESXI via automation when <a href="/practicing-devops/amp/">Practicing DevOps</a>.  This method assumes that you have cloned out a machine, but do not yet have network access to that machine meaning you would need to utilize native ESXi methods to get communication setup.  </p>
+
+
+
+<p>I use methods like this in my home lab to help stay current with new trends in <a href="/topics/devops/amp/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> Not everyone is going to be fortunate enough to have cloud playgrounds to test out new things, and home labs are a great way to make a one-time investment in your future.</p>
+
+
+
+<p>The code for the project can be found <a href="https://github.com/gwagner/ansible-examples/tree/main/modify-vmware-esxi-guest-file" target="_blank" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/modify-vmware-esxi-guest-file" rel="noreferrer noopener">here</a>!</p>
+
+
+<p>&#13;
+<ins class="adsbygoogle amp-wp-inline-2f0158eb062d1ac553a7edcb8a744628" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7120242057450442" data-ad-slot="6094810801"></ins>&#13;
+</p>
+
+
+
+<h2><span class="penci-toc-section" id="penci-Prerequisites">Prerequisites</span></h2>
+
+
+
+<p>This article is going to assume that you already have VMWare running in a home lab somewhere. This also assumes that you have some familiarity with VMware and networking.</p>
+
+
+
+<p>This post will also assume that you have already installed a baseline OS running open-vm-tools. <a href="https://www.packer.io/" data-internallinksmanager029f6b8e52c="17" title="Packer" target="_blank" rel="noopener">Packer</a><a href="https://www.packer.io/" target="_blank" rel="noreferrer noopener"></a> is a good tool to use to automate your baseline operating system installation to create a reusable disk image.</p>
+
+
+
+<p>You may also want to read <a href="/ansible-create-vmware-esxi-vm/amp/" data-type="post" data-id="1213">this post</a> to get a good feeling about how to automate cloning images when vSphere or Center are not available solutions.</p>
+
+
+
+<h2><span class="penci-toc-section" id="penci-The-Playbook">The Playbook</span></h2>
+
+
+
+<p>Below is the full code to copy SSH keys to a newly cloned machine, and set an IP address with a NetworkManager restart.</p>
+
+
+
+<p>The general idea is to run <code>ansible-playbook modify-vmware-esxi-guest-file.yaml -i inventory.yaml</code> from your command line.  The playbook will then connect to ESXi and create a .ssh folder on your fresh machine.  It will then copy your local <code>/home/user/.ssh/id_rsa.pub</code> file to the remote machine.  Finally, it will run <code>/bin/nmcli </code>commands to get a static IP address set on the VM.</p>
+
+
+
+<p>A majority of this playbook is also setup with <code>delegate_to: localhost</code>. This means that the computer running the ansible script will also execute anything with the defined <code><code>delegate_to</code>: localhost</code>. Since the remote machine from inventory exists but is not yet able to be connected to <code><code>delegate_to</code>: localhost</code> is necessary of you would immediately receive an ansible connection error.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>---
+- name: Modify VMWare ESXi VM File
+  hosts: all
+  gather_facts: false
+  tasks:
+    - include_vars: config.yaml
+      delegate_to: localhost
+
+    - include_vars: creds.yaml # Remember, this should be in a vault
+      delegate_to: localhost   # These creds are for example use only
+
+    - name: Create .ssh folder
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        directory:
+          path: "/home/user/.ssh/"
+          operation: create
+          recurse: no
+      delegate_to: localhost
+
+    - name: Copy RSA to VM
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        copy:
+          src: "/home/user/.ssh/id_rsa.pub"
+          dest: "/home/user/.ssh/authorized_keys"
+          overwrite: yes
+      delegate_to: localhost
+
+    - name: Run command inside a virtual machine
+      community.vmware.vmware_vm_shell:
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        vm_shell: "{{ item.shell }}"
+        vm_shell_args: "{{ item.args }}"
+      loop:
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.ignore-auto-dns yes" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.address \"{{ vmware.ip_address }}/24\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.gateway \"{{ vmware.gateway_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.dns \"{{ vmware.dns_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.method manual" }
+        - { shell: "/bin/systemctl", args: "NetworkManager restart" }
+      delegate_to: localhost
+
+</code></pre>
+
+
+
+<h2><span class="penci-toc-section" id="penci-Task-By-Task-Breakdown">Task By Task Breakdown</span></h2>
+
+
+
+<p>To not rehash details I have gone through in other articles, you can find a breakdown of the inventory, credentials, and config in <a href="/ansible-create-vmware-esxi-vm/#penci-A-Task-By-Task-Breakdown/amp/" data-type="URL" data-id="https://www.valewood.org/ansible-create-vmware-esxi-vm/#penci-A-Task-By-Task-Breakdown">this post.</a></p>
+
+
+
+<p>The first step of this playbook is to create a users .ssh folder so an authorized_keys file can be created.  The playbook makes an assumption that your user is named… user, but that could be modified and turned into a configuration parameter pretty quickly.  I will break down each of the config parameters below:</p>
+
+
+
+<ul>
+<li>validate_certs is set to false because most of us are not going to be using trusted 3rd party certs in our VMware environment. If you are doing this in a professional environment, ensure you have valid certs installed and leave validate_certs set to the default of true.</li>
+<li>validate_certs should also be set to false if you are connecting to your VMWare server via IP address since your cert will not match an IP address.</li>
+<li>vmware_user and vmware_password should be set to a user that has SSH access to your VMWare server. I would not recommend that you do this in any sort of production environment, but it is perfectly fine for a home lab.</li>
+<li>datacenter is set to ha-datacenter. This is the default name of a “datacenter” in ESXi. There is no reason to change this.</li>
+<li>vm_id is either the exact case-sensitive name of the virtual machine being configured.  If you created your machine using ansible, then make sure you map the name you gave it here via variables.</li>
+<li>vm_username and vm_password is in reference to the user you setup when creating your template or disk image.  ESXi needs this to effectively run an interactive login to the server to perform your commands.</li>
+<li>directory is signifying that our action is going to be taken on a directory.  In the next task you will see that we use the copy key instead of directory but we are utilizing the exact same module.</li>
+<li>directory.path is the path on the ESXi guests that you want to take action on.</li>
+<li>directory.operation denotes what we want to have happen.  In this case, we are going to create a directory.</li>
+<li>directory.recurse tells ansible if it should send a command that recursively creates directories.  If your default user is not named user, you would end up with a /home/user/.ssh directory that will be fairly useless.</li>
+</ul>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Create .ssh folder
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        directory:
+          path: "/home/user/.ssh/"
+          operation: create
+          recurse: no
+      delegate_to: localhost</code></pre>
+
+
+
+<p>This next task does a copy of a file from the machine you executed the ansible playbook from onto the ESXi guest that we are configuring.  In the interest of brevity, I am not going to rehash the duplicate keys from above.  Here are the specific keys of interest in this task:</p>
+
+
+
+<ul>
+<li>copy denotes that we want to copy a file.  The file needs to exist on your source system and will be copied to the ESXi guest.</li>
+<li>copy.src is the path to the source file.  As you can see, we are targeting the public key here.</li>
+<li>copy.dest is the full path to the destination.   As you can see we are targeting an authorized_keys file as the destination.  This could be dangerous if that file already exists as it will be overwritten.</li>
+<li>copy.overwrite ensures that we will clobber whatever exists on the destination system with the file from our source system.</li>
+</ul>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Copy RSA to VM
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        copy:
+          src: "/home/user/.ssh/id_rsa.pub"
+          dest: "/home/user/.ssh/authorized_keys"
+          overwrite: yes
+      delegate_to: localhost</code></pre>
+
+
+<p>&#13;
+<ins class="adsbygoogle amp-wp-inline-2f0158eb062d1ac553a7edcb8a744628" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-7120242057450442" data-ad-slot="6094810801"></ins>&#13;
+</p>
+
+
+
+<p>This last task is composed a bit differently.  Effectively it is being used to run a series of nmcli commands along with a single systemctl command to set a static IP address for this machine.  I have this task composed this way to clean up ansible code.  This could be written as six fully independent tasks in ansible, but remember to stay DRY and don’t repeat yourself.  Here is a breakdown of the specific keys of interest:</p>
+
+
+
+<ul>
+<li>vm_shell represents the exact path to the command that is going to be run on the ESXi guest.  Do not include command arguments in this field, the documentation specifically states that it wants a full path to an executable.</li>
+<li>vm_shell_args represents the arguments to the vm_shell command.  </li>
+<li>loop controls how the task will loop through the data defined underneath.  I have the keys setup as dictionary objects so that we get both shell executables and arguments from the loop.</li>
+</ul>
+
+
+
+<pre class="wp-block-code"><code>    - name: Run command inside a virtual machine
+      community.vmware.vmware_vm_shell:
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        vm_shell: "{{ item.shell }}"
+        vm_shell_args: "{{ item.args }}"
+      loop:
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.ignore-auto-dns yes" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.address \"{{ vmware.ip_address }}/24\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.gateway \"{{ vmware.gateway_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.dns \"{{ vmware.dns_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.method manual" }
+        - { shell: "/bin/systemctl", args: "NetworkManager restart" }
+      delegate_to: localhost</code></pre>
+
+
+
+<h2><span class="penci-toc-section" id="penci-Conclusion">Conclusion</span></h2>
+
+
+
+<p>As you can see, with a fairly concise set of steps, you can level up your DevOps automation game by rapidly configuring virtual machines in your home lab.</p>
+			</div>
+						<footer class="amp-wp-article-footer">
+				<span class="tags-links penci-amp-tags-links"><a href="/tag/devops/amp/" rel="tag">devops</a> <a href="/tag/howto/amp/" rel="tag">howto</a> <a href="/tag/tools/amp/" rel="tag">tools</a></span><span class="penci-social-buttons penci-social-share-footer"><span class="penci-social-share-text">Share</span><a class="penci-social-item facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/amp/"><i class="fa fa-facebook"></i><span class="dt-share">Facebook</span></a><a class="penci-social-item twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20article:%20How%20to%20Modify%20VMWare%20ESXi%20Guest%20Files%20with%20Ansible%20-%20https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/amp/"><i class="fa fa-twitter"></i><span class="dt-share">Twitter</span></a><a class="penci-social-item pinterest" data-pin-do="none" target="_blank" href="https://pinterest.com/pin/create/button/?url=https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/amp/&#038;media=https://www.valewood.org/wp-content/uploads/2022/10/devops-copy.jpg&#038;description=How%20to%20Modify%20VMWare%20ESXi%20Guest%20Files%20with%20Ansible"><i class="fa fa-pinterest"></i><span class="dt-share">Pinterest</span></a><a class="penci-social-item email" target="_blank" href="mailto:/?subject=How%20to%20Modify%20VMWare%20ESXi%20Guest%20Files%20with%20Ansible&#038;BODY=https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/amp/"><i class="fa fa-envelope"></i><span class="dt-share">Email</span></a></span>			</footer>
+
+		</article>
+
+			<div class="penci-post-pagination">
+					<div class="prev-post">
+				<div class="prev-post-inner">
+					<div class="prev-post-title">
+						<span><i class="fa fa-angle-left"></i>previous post</span>
+					</div>
+					<a href="/purpleurchin-crypto-mining/amp/">
+						<div class="pagi-text">
+							<h5 class="prev-title">PurpleUrchin Crypto Mining with Free GitHub Actions</h5>
+						</div>
+					</a>
+				</div>
+			</div>
+		
+			</div>
+<div class="penci-post-related">
+<div class="post-title-box"><h4 class="post-box-title">Related posts</h4></div>
+<div class="post-related_content">
+<div class="item-related post-1225 post type-post status-publish format-standard has-post-thumbnail hentry category-devops">
+<a class="related-thumb" href="/purpleurchin-crypto-mining/amp/"><amp-img data-hero class="penci-post-thumb" src="/wp-content/uploads/2022/10/devops-purpleurchin-585x390.jpg" alt="DevOps PurpleUrchin" width="585" height="390" layout="responsive"></amp-img></a><h4><a href="/purpleurchin-crypto-mining/amp/">PurpleUrchin Crypto Mining with Free GitHub Actions</a></h4>
+</div>
+<div class="item-related post-1213 post type-post status-publish format-standard has-post-thumbnail hentry category-devops category-ansible">
+<a class="related-thumb" href="/ansible-create-vmware-esxi-vm/amp/"><amp-img data-hero class="penci-post-thumb" src="/wp-content/uploads/2022/10/devops-home-lab-585x390.jpg" alt="DevOps Home Lab" width="585" height="390" layout="responsive"></amp-img></a><h4><a href="/ansible-create-vmware-esxi-vm/amp/">How To Create ESXi VM With Ansible</a></h4>
+</div>
+<div class="item-related post-1187 post type-post status-publish format-standard has-post-thumbnail hentry category-devops category-ansible tag-ansible tag-howto">
+<a class="related-thumb" href="/ansible-text-to-json/amp/"><amp-img data-hero class="penci-post-thumb" src="/wp-content/uploads/2022/10/devops-json-585x390.jpg" alt="DevOps JSON" width="585" height="390" layout="responsive"></amp-img></a><h4><a href="/ansible-text-to-json/amp/">Convert Text File to JSON with Ansible</a></h4>
+</div>
+</div>
+</div>		<div class="penci-amp-comment">
+</div>
+		<footer class="penci-amp-footer">
+	<div class="penci-amp-footer-container">
+		<div class="penci-amp-main-link">
+						<a href="/">
+				<i class="fa fa-desktop"></i> View Desktop Version			</a>
+		</div>
+	</div>
+	<div class="footer__copyright_menu">
+		<p>
+			@2022 - Geoff Wagner - All Right Reserved.<br>
+<a href="https://www.valewood.org/privacy-policy/">Privacy Policy</a> | <a href="https://www.valewood.org/terms-of-use/">Terms of Use</a>		</p>
+		<a href="#top" class="back-to-top">Back To Top<i class="fa  fa-long-arrow-up"></i></a>
+	</div>
+</footer>
+	<amp-analytics type="googleanalytics">
+		<script type="application/json">
+			{
+				"vars": {
+					"account": "UA-237075643-1"
+				},
+				"triggers": {
+					"trackPageview": {
+						"on": "visible",
+						"request": "pageview"
+					}
+				}
+			}
+		</script>
+	</amp-analytics>
+	</div>
+	</div>
+</body>
+</html>

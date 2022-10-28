@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Thu, 27 Oct 2022 02:31:19 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 28 Oct 2022 01:26:41 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,252 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>How to Modify VMWare ESXi Guest Files with Ansible</title>
+		<link>https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Fri, 28 Oct 2022 01:25:15 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[Ansible]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=1232</guid>
+
+					<description><![CDATA[This post will help anyone who is attempting to use ansible to modify files on VMs running on ESXI via automation when Practicing DevOps. This method assumes that you have cloned out a machine, but do not yet have network&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>This post will help anyone who is attempting to use <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">ansible</a> to modify files on VMs running on ESXI via automation when <a href="https://www.valewood.org/practicing-devops/">Practicing DevOps</a>.  This method assumes that you have cloned out a machine, but do not yet have network access to that machine meaning you would need to utilize native ESXi methods to get communication setup.  </p>
+
+
+
+<p>I use methods like this in my home lab to help stay current with new trends in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> Not everyone is going to be fortunate enough to have cloud playgrounds to test out new things, and home labs are a great way to make a one-time investment in your future.</p>
+
+
+
+<p>The code for the project can be found <a href="https://github.com/gwagner/ansible-examples/tree/main/modify-vmware-esxi-guest-file" target="_blank" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/modify-vmware-esxi-guest-file" rel="noreferrer noopener">here</a>!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Prerequisites</h2>
+
+
+
+<p>This article is going to assume that you already have VMWare running in a home lab somewhere. This also assumes that you have some familiarity with VMware and networking.</p>
+
+
+
+<p>This post will also assume that you have already installed a baseline OS running open-vm-tools. <a href="https://www.packer.io/" data-internallinksmanager029f6b8e52c="17" title="Packer" target="_blank" rel="noopener">Packer</a><a href="https://www.packer.io/" target="_blank" rel="noreferrer noopener"></a> is a good tool to use to automate your baseline operating system installation to create a reusable disk image.</p>
+
+
+
+<p>You may also want to read <a href="https://www.valewood.org/ansible-create-vmware-esxi-vm/" data-type="post" data-id="1213">this post</a> to get a good feeling about how to automate cloning images when vSphere or Center are not available solutions.</p>
+
+
+
+<h2>The Playbook</h2>
+
+
+
+<p>Below is the full code to copy SSH keys to a newly cloned machine, and set an IP address with a NetworkManager restart.</p>
+
+
+
+<p>The general idea is to run <code>ansible-playbook modify-vmware-esxi-guest-file.yaml -i inventory.yaml</code> from your command line.  The playbook will then connect to ESXi and create a .ssh folder on your fresh machine.  It will then copy your local <code>/home/user/.ssh/id_rsa.pub</code> file to the remote machine.  Finally, it will run <code>/bin/nmcli </code>commands to get a static IP address set on the VM.</p>
+
+
+
+<p>A majority of this playbook is also setup with <code>delegate_to: localhost</code>. This means that the computer running the ansible script will also execute anything with the defined <code><code>delegate_to</code>: localhost</code>. Since the remote machine from inventory exists but is not yet able to be connected to <code><code>delegate_to</code>: localhost</code> is necessary of you would immediately receive an ansible connection error.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>---
+- name: Modify VMWare ESXi VM File
+  hosts: all
+  gather_facts: false
+  tasks:
+    - include_vars: config.yaml
+      delegate_to: localhost
+
+    - include_vars: creds.yaml # Remember, this should be in a vault
+      delegate_to: localhost   # These creds are for example use only
+
+    - name: Create .ssh folder
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        directory:
+          path: "/home/user/.ssh/"
+          operation: create
+          recurse: no
+      delegate_to: localhost
+
+    - name: Copy RSA to VM
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        copy:
+          src: "/home/user/.ssh/id_rsa.pub"
+          dest: "/home/user/.ssh/authorized_keys"
+          overwrite: yes
+      delegate_to: localhost
+
+    - name: Run command inside a virtual machine
+      community.vmware.vmware_vm_shell:
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        vm_shell: "{{ item.shell }}"
+        vm_shell_args: "{{ item.args }}"
+      loop:
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.ignore-auto-dns yes" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.address \"{{ vmware.ip_address }}/24\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.gateway \"{{ vmware.gateway_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.dns \"{{ vmware.dns_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.method manual" }
+        - { shell: "/bin/systemctl", args: "NetworkManager restart" }
+      delegate_to: localhost
+
+</code></pre>
+
+
+
+<h2>Task By Task Breakdown</h2>
+
+
+
+<p>To not rehash details I have gone through in other articles, you can find a breakdown of the inventory, credentials, and config in <a href="https://www.valewood.org/ansible-create-vmware-esxi-vm/#penci-A-Task-By-Task-Breakdown" data-type="URL" data-id="/ansible-create-vmware-esxi-vm/#penci-A-Task-By-Task-Breakdown">this post.</a></p>
+
+
+
+<p>The first step of this playbook is to create a users .ssh folder so an authorized_keys file can be created.  The playbook makes an assumption that your user is named&#8230; user, but that could be modified and turned into a configuration parameter pretty quickly.  I will break down each of the config parameters below:</p>
+
+
+
+<ul><li>validate_certs is set to false because most of us are not going to be using trusted 3rd party certs in our VMware environment. If you are doing this in a professional environment, ensure you have valid certs installed and leave validate_certs set to the default of true.</li><li>validate_certs should also be set to false if you are connecting to your VMWare server via IP address since your cert will not match an IP address.</li><li>vmware_user and vmware_password should be set to a user that has SSH access to your VMWare server. I would not recommend that you do this in any sort of production environment, but it is perfectly fine for a home lab.</li><li>datacenter is set to ha-datacenter. This is the default name of a “datacenter” in ESXi. There is no reason to change this.</li><li>vm_id is either the exact case-sensitive name of the virtual machine being configured.  If you created your machine using ansible, then make sure you map the name you gave it here via variables.</li><li>vm_username and vm_password is in reference to the user you setup when creating your template or disk image.  ESXi needs this to effectively run an interactive login to the server to perform your commands.</li><li>directory is signifying that our action is going to be taken on a directory.  In the next task you will see that we use the copy key instead of directory but we are utilizing the exact same module.</li><li>directory.path is the path on the ESXi guests that you want to take action on.</li><li>directory.operation denotes what we want to have happen.  In this case, we are going to create a directory.</li><li>directory.recurse tells ansible if it should send a command that recursively creates directories.  If your default user is not named user, you would end up with a /home/user/.ssh directory that will be fairly useless.</li></ul>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Create .ssh folder
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        directory:
+          path: "/home/user/.ssh/"
+          operation: create
+          recurse: no
+      delegate_to: localhost</code></pre>
+
+
+
+<p>This next task does a copy of a file from the machine you executed the ansible playbook from onto the ESXi guest that we are configuring.  In the interest of brevity, I am not going to rehash the duplicate keys from above.  Here are the specific keys of interest in this task:</p>
+
+
+
+<ul><li>copy denotes that we want to copy a file.  The file needs to exist on your source system and will be copied to the ESXi guest.</li><li>copy.src is the path to the source file.  As you can see, we are targeting the public key here.</li><li>copy.dest is the full path to the destination.   As you can see we are targeting an authorized_keys file as the destination.  This could be dangerous if that file already exists as it will be overwritten.</li><li>copy.overwrite ensures that we will clobber whatever exists on the destination system with the file from our source system.</li></ul>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Copy RSA to VM
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        copy:
+          src: "/home/user/.ssh/id_rsa.pub"
+          dest: "/home/user/.ssh/authorized_keys"
+          overwrite: yes
+      delegate_to: localhost</code></pre>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<p>This last task is composed a bit differently.  Effectively it is being used to run a series of nmcli commands along with a single systemctl command to set a static IP address for this machine.  I have this task composed this way to clean up ansible code.  This could be written as six fully independent tasks in ansible, but remember to stay DRY and don&#8217;t repeat yourself.  Here is a breakdown of the specific keys of interest:</p>
+
+
+
+<ul><li>vm_shell represents the exact path to the command that is going to be run on the ESXi guest.  Do not include command arguments in this field, the documentation specifically states that it wants a full path to an executable.</li><li>vm_shell_args represents the arguments to the vm_shell command.  </li><li>loop controls how the task will loop through the data defined underneath.  I have the keys setup as dictionary objects so that we get both shell executables and arguments from the loop.</li></ul>
+
+
+
+<pre class="wp-block-code"><code>    - name: Run command inside a virtual machine
+      community.vmware.vmware_vm_shell:
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        vm_shell: "{{ item.shell }}"
+        vm_shell_args: "{{ item.args }}"
+      loop:
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.ignore-auto-dns yes" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.address \"{{ vmware.ip_address }}/24\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.gateway \"{{ vmware.gateway_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.dns \"{{ vmware.dns_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.method manual" }
+        - { shell: "/bin/systemctl", args: "NetworkManager restart" }
+      delegate_to: localhost</code></pre>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you can see, with a fairly concise set of steps, you can level up your DevOps automation game by rapidly configuring virtual machines in your home lab.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>PurpleUrchin Crypto Mining with Free GitHub Actions</title>
 		<link>https://www.valewood.org/purpleurchin-crypto-mining/</link>
 		
@@ -362,7 +608,7 @@
 
 
 
-<h3>Task By Task Breakdown</h3>
+<h2>A Task By Task Breakdown</h2>
 
 
 
@@ -2251,146 +2497,6 @@ all:
 
 
 <p>Do DevOps engineers need a coding background? My perspective is, that it wouldn&#8217;t hurt. Diving into software development patterns and extending them into the DevOps delivery space allows for greater consistency, along with the ability to scale to meet demand much more quickly without feeling overwhelmed. I don&#8217;t think that software developers need to become the best systems administrators ever created. I don&#8217;t think that systems administrators need to become the greatest software developers ever created. I do think that everyone in technology could benefit from a bit of exposure to spaces outside of their primary responsibilities because it lends itself well to increasing quality and flexibility while delivering solutions.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>What is DevOps Automation?</title>
-		<link>https://www.valewood.org/what-is-devops-automation/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Sat, 17 Sep 2022 15:19:44 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<guid isPermaLink="false">/?p=450</guid>
-
-					<description><![CDATA[Automation is a cornerstone of DevOps. If you are not doing DevOps Automation, I am not entirely sure what you are doing? Building robust automation helps drive the consistency and quality that the DevOps methodology is known for. In a&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Automation is a cornerstone of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a>.  If you are not doing DevOps Automation, I am not entirely sure what you are doing?  Building robust automation helps drive the consistency and quality that the DevOps methodology is known for.  In a lot of ways, we can look towards manufacturing to understand why DevOps automation is so important.  Unless you are looking at a niche hand-made luxury item car a Pagani Utopia, anything that is being produced at scale is done in a factory with automation.  Let&#8217;s dive in and understand the manufacturing benefits of automation and see if we can apply them to DevOps automation!</p>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
-
-<h2>DevOps Automation through the lens of Manufacturing</h2>
-
-
-
-<p>In the intro of this article, I used a car analogy to highlight something that is a one of a kind hand made luxury item.  Cars are a bit overdone, so let&#8217;s actually walk down analogy road with prefabricated houses.  I actually think houses are a better fit here because it is hard to change up an automated manufacturing line to put a nice casement window into your Pagani, but prefabricated homes have that all figured out!</p>
-
-
-
-<h2>Process</h2>
-
-
-
-<p>Much like any work in any industry, someone is going to be requesting something and there is someone out there that is going to produce that request.  That is what keeps the world moving.</p>
-
-
-
-<p>The process for buying a prefab house is generally as follows.</p>
-
-
-
-<ul><li>Do some research on prefabricated housing companies</li><li>Meet with their sales department</li><li>Pick a base model from a design catalog</li><li>Design the building with an architect</li><li>Review and make adjustments</li><li>Sign off on the design</li><li>Generate cut lists from detailed plans</li><li>Send to manufacturing</li><li>Boom, House!</li></ul>
-
-
-
-<p>The biggest caveat here is that the architects will generally start off from base plans that they know the manufacturing department can build rather than starting from scratch.  Because this is being designed from a prebuilt manufacturing process, you don&#8217;t want to start from a blank slate because quality will suffer assuming that your primary considerations are cost and time.</p>
-
-
-
-<p>The process for building technology with DevOps automation does not need to really be all that different.</p>
-
-
-
-<ul><li>Pick a baseline technology stack that is recognized as a pattern</li><li>Design your technology requirements with an architect</li><li>Review and make adjustments</li><li>Sign off on the design</li><li>Generate epics and stories from detailed plans</li><li>Send to engineering teams</li><li>Boom, Technology!</li></ul>
-
-
-
-<p>When building stacks with DevOps automation, going from the ground up can be expensive and take a lot of additional time.  Working with defined technology stacks and reusing existing investments can really speed up the process and reinforce quality delivery.</p>
-
-
-
-<h2>What do you do?</h2>
-
-
-<div class="wp-block-image">
-<figure class="alignright size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-questions-300x200.jpg" alt="DevOps Automation Questions" class="wp-image-462" srcset="/wp-content/uploads/2022/09/devops-automation-questions-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-questions-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-questions-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-questions-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-questions-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-questions-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-questions-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-questions-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-questions-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
-
-
-<p>Buildings are going to have a few main components to them.  You are generally going to have a foundation, walls, roof, doors, windows, bathroom, kitchen, and bedrooms.  Those are the known knowns.  When a prefab housing company goes out to try and build a new house, they are not trying to bolt on a rocket ship launch pad.  Prefab companies are trying to build the BEST walls, and the BEST roof because they are putting these components together in a controlled environment utilizing their specialized processes and methods.</p>
-
-
-
-<p>DevOps automation is really trying to achieve the same goal here.  If the bathrooms are servers and the roof is a firewall, DevOps engineers are trying to build the BEST bathrooms and roofs possible in their controlled environments utilizing their specialized processes to get the job done.  </p>
-
-
-
-<p>Now imagine a customer showing up to a prefab housing company and asking them to build out the aforementioned rocket ship launch pad.  Since this company is a group of builders, giving infinite time and money, I am sure they could build a serviceable launch pad that could send someone&#8217;s rocket to the moon.  A DevOps engineer is going to face a similar challenge when someone asks them to build out a mainframe, our analogous rocket launch pad when they are used to building something in <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a>.  </p>
-
-
-
-<p>A business should be in a position to provide its DevOps engineers with reliable processes that they can lean back on.  Part of that is tool selection, but part of that is having a definition of WHAT you are building.  A term that I end up using a lot in the office is &#8220;Selling the cars that we have on the lot&#8221;.  Under this analogy, I should probably change that to houses in the yard.  If we are constantly asking our people to context shift and come up with new and creative ways to build out the next diverse set of infrastructure without any processes to lean back on, they are never going to be able to do their best work.</p>
-
-
-
-<h2>Tool Selection</h2>
-
-
-<div class="wp-block-image">
-<figure class="alignleft size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-300x200.jpg" alt="DevOps Automation" class="wp-image-452" srcset="/wp-content/uploads/2022/09/devops-automation-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
-
-
-<p>This is generally a very spicy topic.  There are some individuals who have STRONG allegiances to specific tool stacks, and others that don&#8217;t really care what the tool is as long as they get to learn something new.</p>
-
-
-
-<p>We can equate this topic to fixtures in a house like windows, doors, faucets, toilets, showers, and other such finishings.  We know we need them and we know that we are going to have to live with them for a long time.  Windows and doors are very hard to change over time.  Changing them out essential means you are cutting stuff out of your house which keeps out bugs and burglars.  If new windows and doors are not installed correctly, you may end up with a creak or a jammed window, or you may end up with bugs and burglars inside of your house.</p>
-
-
-
-<p>In a prefab manufacturing space, they are going to be really good at hanging windows and doors in their fixtures from a specific set of manufacturers.  If you ask for double-hung windows, sliding windows, awning windows, or a bay window; the company that you are working with probably has something to offer you.  If you show up asking for a highly energy-efficient stained glass window that is UV resistant with a 100-year warranty, they probably are not going to be able to help.</p>
-
-
-
-<p>DevOps automation tooling is very similar in nature to windows.  If your engineers and architects are very used to using something like Jenkins and someone shows up with TravisCI then you are probably not going to make a lot of progress delivering your project.  Now, luckily, unlike the stained glass windows analogy; tooling in the DevOps space is trainable if the team is interested in learning something new.  Please take note, just because we are really good at computers does not mean that we know everything about computers.  We all need time and space to learn.</p>
-
-
-
-<h2>Specs and Standards</h2>
-
-
-<div class="wp-block-image">
-<figure class="alignright size-medium"><img width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-process-300x200.jpg" alt="DevOps Automation Specs and Standards" class="wp-image-463" srcset="/wp-content/uploads/2022/09/devops-automation-process-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-process-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-process-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-process-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-process-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-process-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-process-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-process-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-process-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
-
-
-<p>Every industry has some kind of standards or &#8220;code&#8221; that they must meet to be &#8220;compliant&#8221;.  The housing industry has varying standards across the country and is even broader when you look at the world holistically.  The building industry is going to be governed by regulatory compliance through Building Codes.  Your foundation must be below the frost line in many places where it is cold, but on-grade foundations are common where it is warmer.</p>
-
-
-
-<p>Technology may not have as many specific codes written into law as buildings do, but we are governed by certain specifications, certifications, and expectations.  A company building prefab homes will need to read up and study exactly what their service areas expect them to be producing to ensure that their buildings will pass inspections.  Businesses producing technology need to do the same thing except it is going to be more focused on the industries that they serve.  </p>
-
-
-
-<p>DevOps automation can help provide baselines that define those standards and make them reusable across projects which serve the same industries.  If you are developing technology for the medical space, there are many stringent controls that need to be put in place.  If you are building those stacks out in a more traditional way, it can be costly to re-engineer many solutions over and over again.  Employing DevOps automation is analogous to a prefab housing company utilizing jigs to repeat similar work while adhering to a 16-inch on-center standard.  You won&#8217;t see prefab housing companies constantly pulling out the tape measure, they will throw lumber into a preset jig and start nailing off a wall with speed and precision.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>There are a lot of lessons we can draw from the manufacturing space when developing technology.  There is a reason why Toyota and its <a href="https://global.toyota/en/company/vision-and-philosophy/production-system/" data-internallinksmanager029f6b8e52c="13" title="Toyota Production System" rel="nofollow noopener" target="_blank">Toyota Production System</a> are highly regarded for their lean manufacturing processes.  Technology expectations should not really be any different than expectations that we have around how things are produced outside of cyberspace.  Embrace DevOps automation in a similar way that manufacturing has embraced automation and you will see quality increases immediately!</p>
 ]]></content:encoded>
 					
 		

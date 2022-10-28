@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Tue, 18 Oct 2022 21:45:39 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 28 Oct 2022 01:26:41 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,252 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>How to Modify VMWare ESXi Guest Files with Ansible</title>
+		<link>https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Fri, 28 Oct 2022 01:25:15 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[Ansible]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=1232</guid>
+
+					<description><![CDATA[This post will help anyone who is attempting to use ansible to modify files on VMs running on ESXI via automation when Practicing DevOps. This method assumes that you have cloned out a machine, but do not yet have network&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>This post will help anyone who is attempting to use <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">ansible</a> to modify files on VMs running on ESXI via automation when <a href="https://www.valewood.org/practicing-devops/">Practicing DevOps</a>.  This method assumes that you have cloned out a machine, but do not yet have network access to that machine meaning you would need to utilize native ESXi methods to get communication setup.  </p>
+
+
+
+<p>I use methods like this in my home lab to help stay current with new trends in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> Not everyone is going to be fortunate enough to have cloud playgrounds to test out new things, and home labs are a great way to make a one-time investment in your future.</p>
+
+
+
+<p>The code for the project can be found <a href="https://github.com/gwagner/ansible-examples/tree/main/modify-vmware-esxi-guest-file" target="_blank" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/modify-vmware-esxi-guest-file" rel="noreferrer noopener">here</a>!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Prerequisites</h2>
+
+
+
+<p>This article is going to assume that you already have VMWare running in a home lab somewhere. This also assumes that you have some familiarity with VMware and networking.</p>
+
+
+
+<p>This post will also assume that you have already installed a baseline OS running open-vm-tools. <a href="https://www.packer.io/" data-internallinksmanager029f6b8e52c="17" title="Packer" target="_blank" rel="noopener">Packer</a><a href="https://www.packer.io/" target="_blank" rel="noreferrer noopener"></a> is a good tool to use to automate your baseline operating system installation to create a reusable disk image.</p>
+
+
+
+<p>You may also want to read <a href="https://www.valewood.org/ansible-create-vmware-esxi-vm/" data-type="post" data-id="1213">this post</a> to get a good feeling about how to automate cloning images when vSphere or Center are not available solutions.</p>
+
+
+
+<h2>The Playbook</h2>
+
+
+
+<p>Below is the full code to copy SSH keys to a newly cloned machine, and set an IP address with a NetworkManager restart.</p>
+
+
+
+<p>The general idea is to run <code>ansible-playbook modify-vmware-esxi-guest-file.yaml -i inventory.yaml</code> from your command line.  The playbook will then connect to ESXi and create a .ssh folder on your fresh machine.  It will then copy your local <code>/home/user/.ssh/id_rsa.pub</code> file to the remote machine.  Finally, it will run <code>/bin/nmcli </code>commands to get a static IP address set on the VM.</p>
+
+
+
+<p>A majority of this playbook is also setup with <code>delegate_to: localhost</code>. This means that the computer running the ansible script will also execute anything with the defined <code><code>delegate_to</code>: localhost</code>. Since the remote machine from inventory exists but is not yet able to be connected to <code><code>delegate_to</code>: localhost</code> is necessary of you would immediately receive an ansible connection error.</p>
+
+
+
+<pre class="wp-block-code yaml"><code>---
+- name: Modify VMWare ESXi VM File
+  hosts: all
+  gather_facts: false
+  tasks:
+    - include_vars: config.yaml
+      delegate_to: localhost
+
+    - include_vars: creds.yaml # Remember, this should be in a vault
+      delegate_to: localhost   # These creds are for example use only
+
+    - name: Create .ssh folder
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        directory:
+          path: "/home/user/.ssh/"
+          operation: create
+          recurse: no
+      delegate_to: localhost
+
+    - name: Copy RSA to VM
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        copy:
+          src: "/home/user/.ssh/id_rsa.pub"
+          dest: "/home/user/.ssh/authorized_keys"
+          overwrite: yes
+      delegate_to: localhost
+
+    - name: Run command inside a virtual machine
+      community.vmware.vmware_vm_shell:
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        vm_shell: "{{ item.shell }}"
+        vm_shell_args: "{{ item.args }}"
+      loop:
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.ignore-auto-dns yes" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.address \"{{ vmware.ip_address }}/24\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.gateway \"{{ vmware.gateway_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.dns \"{{ vmware.dns_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.method manual" }
+        - { shell: "/bin/systemctl", args: "NetworkManager restart" }
+      delegate_to: localhost
+
+</code></pre>
+
+
+
+<h2>Task By Task Breakdown</h2>
+
+
+
+<p>To not rehash details I have gone through in other articles, you can find a breakdown of the inventory, credentials, and config in <a href="https://www.valewood.org/ansible-create-vmware-esxi-vm/#penci-A-Task-By-Task-Breakdown" data-type="URL" data-id="/ansible-create-vmware-esxi-vm/#penci-A-Task-By-Task-Breakdown">this post.</a></p>
+
+
+
+<p>The first step of this playbook is to create a users .ssh folder so an authorized_keys file can be created.  The playbook makes an assumption that your user is named&#8230; user, but that could be modified and turned into a configuration parameter pretty quickly.  I will break down each of the config parameters below:</p>
+
+
+
+<ul><li>validate_certs is set to false because most of us are not going to be using trusted 3rd party certs in our VMware environment. If you are doing this in a professional environment, ensure you have valid certs installed and leave validate_certs set to the default of true.</li><li>validate_certs should also be set to false if you are connecting to your VMWare server via IP address since your cert will not match an IP address.</li><li>vmware_user and vmware_password should be set to a user that has SSH access to your VMWare server. I would not recommend that you do this in any sort of production environment, but it is perfectly fine for a home lab.</li><li>datacenter is set to ha-datacenter. This is the default name of a “datacenter” in ESXi. There is no reason to change this.</li><li>vm_id is either the exact case-sensitive name of the virtual machine being configured.  If you created your machine using ansible, then make sure you map the name you gave it here via variables.</li><li>vm_username and vm_password is in reference to the user you setup when creating your template or disk image.  ESXi needs this to effectively run an interactive login to the server to perform your commands.</li><li>directory is signifying that our action is going to be taken on a directory.  In the next task you will see that we use the copy key instead of directory but we are utilizing the exact same module.</li><li>directory.path is the path on the ESXi guests that you want to take action on.</li><li>directory.operation denotes what we want to have happen.  In this case, we are going to create a directory.</li><li>directory.recurse tells ansible if it should send a command that recursively creates directories.  If your default user is not named user, you would end up with a /home/user/.ssh directory that will be fairly useless.</li></ul>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Create .ssh folder
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        directory:
+          path: "/home/user/.ssh/"
+          operation: create
+          recurse: no
+      delegate_to: localhost</code></pre>
+
+
+
+<p>This next task does a copy of a file from the machine you executed the ansible playbook from onto the ESXi guest that we are configuring.  In the interest of brevity, I am not going to rehash the duplicate keys from above.  Here are the specific keys of interest in this task:</p>
+
+
+
+<ul><li>copy denotes that we want to copy a file.  The file needs to exist on your source system and will be copied to the ESXi guest.</li><li>copy.src is the path to the source file.  As you can see, we are targeting the public key here.</li><li>copy.dest is the full path to the destination.   As you can see we are targeting an authorized_keys file as the destination.  This could be dangerous if that file already exists as it will be overwritten.</li><li>copy.overwrite ensures that we will clobber whatever exists on the destination system with the file from our source system.</li></ul>
+
+
+
+<pre class="wp-block-code yaml"><code>    - name: Copy RSA to VM
+      community.vmware.vmware_guest_file_operation:
+        validate_certs: false
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        copy:
+          src: "/home/user/.ssh/id_rsa.pub"
+          dest: "/home/user/.ssh/authorized_keys"
+          overwrite: yes
+      delegate_to: localhost</code></pre>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<p>This last task is composed a bit differently.  Effectively it is being used to run a series of nmcli commands along with a single systemctl command to set a static IP address for this machine.  I have this task composed this way to clean up ansible code.  This could be written as six fully independent tasks in ansible, but remember to stay DRY and don&#8217;t repeat yourself.  Here is a breakdown of the specific keys of interest:</p>
+
+
+
+<ul><li>vm_shell represents the exact path to the command that is going to be run on the ESXi guest.  Do not include command arguments in this field, the documentation specifically states that it wants a full path to an executable.</li><li>vm_shell_args represents the arguments to the vm_shell command.  </li><li>loop controls how the task will loop through the data defined underneath.  I have the keys setup as dictionary objects so that we get both shell executables and arguments from the loop.</li></ul>
+
+
+
+<pre class="wp-block-code"><code>    - name: Run command inside a virtual machine
+      community.vmware.vmware_vm_shell:
+        hostname: "{{ vmware_host }}"
+        username: "{{ vmware_user }}"
+        password: "{{ vmware_password }}"
+        datacenter: ha-datacenter
+        vm_id: "{{ vmware.name }}"
+        vm_username: "{{ centos_template_user }}"
+        vm_password: "{{ centos_template_password }}"
+        vm_shell: "{{ item.shell }}"
+        vm_shell_args: "{{ item.args }}"
+      loop:
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.ignore-auto-dns yes" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.address \"{{ vmware.ip_address }}/24\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.gateway \"{{ vmware.gateway_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.dns \"{{ vmware.dns_address }}\"" }
+        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.method manual" }
+        - { shell: "/bin/systemctl", args: "NetworkManager restart" }
+      delegate_to: localhost</code></pre>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you can see, with a fairly concise set of steps, you can level up your DevOps automation game by rapidly configuring virtual machines in your home lab.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Do DevOps Engineers Write a lot of Scripting Code?</title>
 		<link>https://www.valewood.org/devops-scripting/</link>
 		
@@ -1821,124 +2067,6 @@
 <p>As you’ve seen, DevOps is a software development methodology that seeks to automate the software delivery process. The goal of DevOps is to improve the speed, quality, and reliability of software delivery by integrating software development and operations. DevOps has several benefits, including increased speed and agility, increased quality, better collaboration, reduced risk, and more reliable customer experiences. To implement DevOps in your organization, you first need to build a strong culture of trust, invest in automation, and create a single source of truth.</p>
 ]]></content:encoded>
 					
-		
-		
-			</item>
-		<item>
-		<title>DevOps Roll-up: August</title>
-		<link>https://www.valewood.org/devops-roll-up-august/</link>
-					<comments>https://www.valewood.org/devops-roll-up-august/#respond</comments>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Wed, 31 Aug 2022 17:00:00 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[Roll-up]]></category>
-		<category><![CDATA[day2ops]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[kubernetes]]></category>
-		<guid isPermaLink="false">/?p=52</guid>
-
-					<description><![CDATA[Below is a list of DevOps articles/sites that I discovered over the past month and found interesting. DevOps Roadmap First is a link to a DevOps roadmap. This is a more technological than a philosophical view of what kinds of&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Below is a list of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> articles/sites that I discovered over the past month and found interesting.</p>
-
-
-
-<h2>DevOps Roadmap</h2>
-
-
-
-<p>First is a link to a DevOps roadmap.  This is a more technological than a philosophical view of what kinds of skills can be acquired in order to perform DevOps activities when on a team that does delivery via DevOps practices.</p>
-
-
-
-<p><a href="https://roadmap.sh/devops" target="_blank" rel="noreferrer noopener">https://roadmap.sh/devops</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<h2>Diagramming and Documentation</h2>
-
-
-
-<p>Next is a programmatic diagramming tool that allows you to set up diagrams for your implementations via Python.  One of the most difficult parts of any progressive technology implementation is ensuring that your materials remain up to date and available to new and existing team members.  By putting this information into the code repository, and by allowing those artifacts to become part of the build pipeline, you can get much closer to that idealistic view of well-developed and well-run technology by closing this particular </p>
-
-
-
-<p><a href="https://diagrams.mingrammer.com/" target="_blank" rel="noopener">https://diagrams.mingrammer.com/</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<h2>DoorDash Outage</h2>
-
-
-
-<p>Next is an article that describes a postmortem from a <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> outage at DoorDash.  This article helps illustrate the importance of not only reading the docs but also expresses the importance of testing your various failure scenarios to ensure that your entire team understands the various failure mechanisms and their impacts on a normally operating system.</p>
-
-
-
-<p><a href="https://doordash.engineering/2022/08/09/how-to-handle-kubernetes-health-checks/" target="_blank" rel="noopener">https://doordash.engineering/2022/08/09/how-to-handle-kubernetes-health-checks/</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<h2>Kubernetes Storage</h2>
-
-
-
-<p>Sticking with Kubernetes (and any flavor of Kubernetes you may be interested in); dealing with storage as part of your implementation OnPrem is a challenge.  This article does a great job of illustrating that challenge and what i means to anyone who has not yet made it to the cloud.  What I hope you take from this is, it is not impossible to accomplish and there are many solutions to this problem, but the downstream operational impacts of doing this are far broader than the initial implementation.</p>
-
-
-
-<p><a href="https://refaktory.net/blog/posts/self-hosted-kubernetes-solving-the-storage-problem" target="_blank" rel="noopener">https://refaktory.net/blog/posts/self-hosted-kubernetes-solving-the-storage-problem</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-
-
-<h2>Traffic Visualization</h2>
-
-
-
-<p>Visualizing what is happening in your cluster can be a challenge.  I have taken the strategy of implementing <a href="https://linkerd.io/" data-internallinksmanager029f6b8e52c="3" title="Linkerd" rel="nofollow noopener" target="_blank">Linkerd</a> into my lab cluster to support both mTLS along with traffic visualization, but that is not the only way to accomplish this.  Lots of teams are familiar with <a href="https://grafana.com/" data-internallinksmanager029f6b8e52c="1" title="Grafana" rel="nofollow noopener" target="_blank">Grafana</a> as their source of information, especially with the proliferation of something like <a href="https://prometheus.io/" data-internallinksmanager029f6b8e52c="2" title="Prometheus" rel="nofollow noopener" target="_blank">Prometheus</a>.  k8spacket is a tool that helps bring a version of that visualization directly into Grafana dashboards.</p>
-
-
-
-<p><a href="https://medium.com/@bareckidarek/tcp-packets-traffic-visualization-for-kubernetes-by-k8spacket-and-grafana-bb87cb106f30" target="_blank" rel="noopener">https://medium.com/@bareckidarek/tcp-packets-traffic-visualization-for-kubernetes-by-k8spacket-and-grafana-bb87cb106f30</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://www.valewood.org/devops-roll-up-august/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
