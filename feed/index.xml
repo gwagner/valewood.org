@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 28 Oct 2022 01:26:41 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 28 Oct 2022 19:40:11 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,254 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>What is Automation Testing in DevOps</title>
+		<link>https://www.valewood.org/devops-testing/</link>
+		
+		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
+		<pubDate>Fri, 28 Oct 2022 19:39:07 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[testing]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=1239</guid>
+
+					<description><![CDATA[Automation Testing in DevOps is generally relegated to the software being released to production. Environmental testing is performed by manual testing practices or high-level smoke tests. Test automation should cover the full CI/CD pipeline including infrastructure, delivery tools, software, UI,&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Automation Testing in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> is generally relegated to the software being released to production. Environmental testing is performed by manual testing practices or high-level smoke tests.</p>
+
+
+
+<p><strong>Test automation should cover the full CI/CD pipeline including infrastructure, delivery tools, software, UI, and any other technology that is included in the pipeline. Automated tests should not be relegated to the land of software development.</strong></p>
+
+
+
+<p>Let&#8217;s explore what automation testing in DevOps really means when you are looking to stabilize your delivery process and accelerate your business!</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Automated Testing in DevOps</h2>
+
+
+
+<p>Generally, developers tend toward coding unit tests to validate that the code is running the way they expected. At the same time, quality practitioners create automated user tests that validate the end-to-end user experience.</p>
+
+
+
+<p>Quality practitioners can arrange explorative testing sessions in which teams manually look at various application area issues.</p>
+
+
+
+<p>DevOps&#8217; best practice for the automation of CI/CD pipelines is to run automatic testing whenever possible. This means deploying automatic test UIs to production to detect and proactively address user experience concerns.</p>
+
+
+
+<p>I generally like to take this a step further when looking at environmental conditions. Tests for environments can also be thought about in the context of monitoring and observability. A pipeline should be qualified through the use of testing tools in an automated test process. The tests should also be composed in a way that they are usable as part of your monitoring system.</p>
+
+
+
+<p>For example, if you are willing to validate that a certificate is valid as part of your testing framework, you should also be willing to run continuous testing to validate that the certificate does not expire between releases.</p>
+
+
+
+<h2>The Importance of Test Automation</h2>
+
+
+
+<p>Test automation improves reliability, continuity, and productivity within teams of developers and products. DevOps teams have a better chance of staying within budget without disrupting crucial debugging or problem-shooting processes.</p>
+
+
+
+<p>Test automation can be quicker than manual testing. It helps to avoid costly errors by eliminating communication barriers and saves money in teams by eliminating unnecessary work. Testing automation provides new forms of flexibility that enable the development team to reuse test scripts across the testing software.</p>
+
+
+
+<p>As a business leader, do not be fooled by the short-term investment cost of introducing automated testing into your environment. Testing automation is not new and sexy functionality that you can provide to the market which is why I believe it is skipped by many businesses. Automated testing, continuous integration, and continuous delivery are critical investments to the longevity of your products.</p>
+
+
+
+<p>Each release is always going to end up being more complex than the previous release. Employing a good testing process ensures that your products are being introduced to the market in a reliable and expected way. Because of the increased complexity, any manual testing process will need to scale to meet that complexity. Automated testing does not scale in cost the same way that manual testing does.</p>
+
+
+
+<h2>What is test automation?</h2>
+
+
+
+<p>Test Automation enables users to automate their software testing to ensure that they meet specified quality standards. Different types of testing are often depicted in pyramids. As you ascend the pyramid, the number of testing types decreases, and the costs of creating and operating the test increase. The most traditional tests were conducted using manual methods in the Pyramids in the past. It was a slow and costly procedure until automated testing tooling came into effect.</p>
+
+
+
+<figure class="wp-block-image"><a href="https://www.headspin.io/blog/the-testing-pyramid-simplified-for-one-and-all" target="_blank" rel="noopener"><img src="https://global-uploads.webflow.com/619e15d781b21202de206fb5/6316d9e765cd53d9937e2b6a_The-Testing-Pyramid-Simplified-for-One-and-All.webp" alt="The Testing Pyramid"/></a><figcaption>Headspin: The Testing Pyramid: Simplified for One and All</figcaption></figure>
+
+
+
+<h2>Common Test Automation Pitfalls</h2>
+
+
+
+<p>Below are some of the most common issues when adding automated testing to your technology products:</p>
+
+
+
+<ul><li>Developers not participating in testing</li><li>Unit tests not being written with code</li><li>Testing tools are not being used to their fullest potential</li><li>No standard for code coverage</li><li>Best practices not being employed for a specific technology stack</li><li>Tests are not being run in the proper places of a pipeline.</li></ul>
+
+
+
+<h2>How Automated Testing Powers DevOps?</h2>
+
+
+
+<p>One of the core goals of DevOps is to improve delivery flow. Test automation is one of the core strategies used to help smooth out both flow and quality expectations. A cultural pillar of DevOps is continuous improvement.</p>
+
+
+
+<p>Due to the shortened feedback loop of your continuous delivery pipeline, smaller and more nimble software testing and release cycles can be achieved by the development team. This means that your applications will be less prone to errors due to robust testing.</p>
+
+
+
+<p>When issues are discovered in production they are not turned into a grandiose response event. A DevOps team is able to get adjustments made to both code and tests and re-release the software quickly back into production.</p>
+
+
+
+<p>Without automating releases and tests, teams will scramble to recertify software before being ready to push it back to production with bug fixes. Worse, if your software teams do not employ any testing, you may never know about critical issues before customers bring them up.</p>
+
+
+
+<h2>How Can I Improve Continuous Testing?</h2>
+
+
+
+<p>Continuous testing is one of the most important things you can do to improve your success rates. If you’re doing it right, continuous testing will help you catch bugs at the earliest stages of development and make sure that problems don’t creep up in production.</p>
+
+
+
+<p>Continuous testing helps to keep projects on track and ensure that they stay on schedule, which means that your customers get their products sooner.</p>
+
+
+
+<p>A good way to start building a continuous test strategy is by creating an automated integration test pipeline. It should consist of a series of tests that are run automatically when new code is added to your application.</p>
+
+
+
+<p>Automated integration tests can be especially useful when you have a large team developing multiple applications that share common code libraries or frameworks. They can also be useful for large-scale applications with many users and complex data models.</p>
+
+
+
+<p>Continuous testing also allows developers to build trust with their customers by letting them know that their products are being continuously tested and improved. This can help to increase customer confidence in your product and boost retention rates.</p>
+
+
+
+<h2>How Does Automated Testing Change the Role of Quality Assurance?</h2>
+
+
+
+<p>Automated testing is a way to evaluate the quality of software. The basic idea is that you write automated tests, or scripts, to check for unexpected behaviors or errors in the code.</p>
+
+
+
+<p>Automated testers can run these scripts automatically, which saves time and effort for both developers and QA staff. When you have automated testing in place, you can focus on other tasks, like exploring new features or fixing bugs, without worrying about whether your application is running correctly.</p>
+
+
+
+<p>There are two types of automated testing: static and dynamic. Static testing checks for basic issues like syntax errors, security holes, and database integrity. Dynamic testing checks for unexpected behaviors such as out-of-order execution, race conditions, and timeout issues.</p>
+
+
+
+<p>QA teams use automated testing to maintain high standards of quality throughout the development process. They can catch issues early on in the development cycle and communicate findings effectively with developers and stakeholders.</p>
+
+
+
+<p>By reducing bugs and improving overall quality, automated testing can help organizations achieve their goals more quickly and cost-effectively.</p>
+
+
+
+<p>A Quality Assurance Engineers&#8217; role changes when embracing test automation testing. Their role will now be to enable the entire team to contribute tests to the automation pipeline. Test cases should be developed and run as part of the normal delivery process.</p>
+
+
+
+<p>By making this transition, Quality Assurance Engineers can now focus on higher value work like covering edge cases, improving testing tools and methodology, and leveling up team members&#8217; skills in testing.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
+
+
+
+<h2>Test Automation Stages</h2>
+
+
+
+<p>Test Automation includes several fundamental automation techniques that should be followed for quality testing. Testing automation systems are presented in stages atop test pyramids based on their hierarchy.</p>
+
+
+
+<h3>Integration testing</h3>
+
+
+
+<p>Integration tests measure whether logical integration is effective across all systems and can be achieved without unavoidable errors in integration. Incorporated testing is designed to test compliance with systems to determine how different modules interact.</p>
+
+
+
+<h3>Unit testing</h3>
+
+
+
+<p>Unit Testing means isolating your Application into unit testing and then checking its behavior independently of external parties or database configuration. Unit tests are often conducted throughout the build period and are considered the primary test phase.</p>
+
+
+
+<h3>End-to-end testing</h3>
+
+
+
+<p>Test frameworks for the testing of applications simulate user requirements to ensure they meet the needs of users at all levels. The final purpose is to ensure the application can be validated and checked by all the users.</p>
+
+
+
+<h3>Exploratory testing</h3>
+
+
+
+<p>Exploration testing can be regarded as a more advanced software testing strategy that involves learning, checking, and reviewing functional and visual components for users.</p>
+
+
+
+<h3>Environmental Testing</h3>
+
+
+
+<p>Building tests to validate the consistency that your software will be running in after deployment.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you can see, automated testing is a cornerstone to DevOps. Most focus is generally put on running automated testing against software being developed. There are a lot of advantages to developing automated testing which also looks at environmental conditions as well. Accelerate your business by introducing automated testing tools today!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>How to Modify VMWare ESXi Guest Files with Ansible</title>
 		<link>https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/</link>
 		
@@ -2313,190 +2561,6 @@ all:
 
 
 <p>By focusing on the whole value chain of software delivery, DevOps is the logical next step after Agile. Additionally, the DevOps model helps businesses find their footing so they can effectively and efficiently adapt to changing market conditions and capitalize on emerging possibilities.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Do DevOps engineers need a coding background?</title>
-		<link>https://www.valewood.org/do-devops-engineers-need-a-coding-background/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Mon, 19 Sep 2022 21:55:03 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[coding]]></category>
-		<category><![CDATA[development]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[opinion]]></category>
-		<category><![CDATA[software]]></category>
-		<guid isPermaLink="false">/?p=326</guid>
-
-					<description><![CDATA[The primary skill sets that&#160;DevOps engineers need are either in the system administration or software development space. Those 2 foundational skill sets will help any team build some cool solutions to complex problems. There are fringe cases where the skillset&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>The primary skill sets that&nbsp;<a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> engineers need are either in the system administration or software development space. Those 2 foundational skill sets will help any team build some cool solutions to complex problems.</p>
-
-
-
-<p>There are fringe cases where the skillset matures outside of those two primary skill sets. Whichever skillset is lacking when making the transition from traditional delivery patterns over to a more DevOps-focused delivery pattern will need to be picked up to ensure that the team has a complete understanding of the technology stack.</p>
-
-
-
-<p>A system administrator will not need to become a full software developer, and a software developer will not need to become a veteran system administrator. Bringing the best of these two practices together is what makes for a successful DevOps engineer.</p>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
-
-<h2>Don&#8217;t let Role Separation Scare you Off!</h2>
-
-
-
-<p>First, let&#8217;s dive into role separation. I am a firm believer in specialization in job functions. Someone who is a jack of all trades is also generally not a master at any of them.</p>
-
-
-
-<p>Individuals on the DevOps team should not be looking to be a master at every part of their delivery pipeline but they should be in a position where they are picking up adjacent skills to help back up their team members when needed.</p>
-
-
-
-<p>A software developer who is familiar with one or more programming languages does not need to be intimately familiar with every intricate detail of a backup solution but should know how to retrieve and restore backups when necessary.</p>
-
-
-
-<p>A system administrator does not need to dive deeply into SQL query optimization, but knowing how to write and retrieve data from the database is a useful skill to help support the team.</p>
-
-
-
-<p>I firmly believe that everyone should pick up at least one programming language that they can become dangerous with. Utilizing code to quickly evaluate, split, transform, or compare lists is a great place to start off since every company has data that needs something done with it. From there, you can choose to grow your skills organically or strategically depending on your affinity for writing code.</p>
-
-
-
-<h2>Why do System Administrators Need a Coding Background?</h2>
-
-
-
-<p>As system administrators make the transition from the GUI to doing DevOps, they will be faced with many challenges where a coding background can really help out.</p>
-
-
-
-<p>DevOps is all about automating the flow of delivery through resilient pipelines to increase quality. To do this, most of your work is going to be through scripts or tools like&nbsp;<a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>, Terraform, <a href="https://puppet.com/" data-internallinksmanager029f6b8e52c="9" title="Puppet">Puppet</a>, CloudFormation, etc. Composing individual scripts for individual tasks is a good place to start, but will quickly become overwhelming if you are not embracing a more generated approach.</p>
-
-
-
-<p>Now, all teams are going to be set up a bit differently, but a common thread across all of them will be the scale of technology becoming overwhelming at some point. One day you may be looking at fifteen servers/services and the next day your product explodes in popularity and you are dealing with thousands of servers/services. Take a step back and ask yourself how you can use business logic to generate your infrastructure, monitoring, configurations, backups solutions, etc. This approach will make something that feels unmanageable and makes it manageable again.</p>
-
-
-
-<h2>Why do Operations Teams Need a Coding Background?</h2>
-
-
-
-<p>Let&#8217;s say you are working in a hybrid multi-tenant environment that is changing at a rapid pace. Let&#8217;s also say that you are saddled with several different operating systems or services in this environment. Now let&#8217;s say you are a small team of only a few people with operations tasks piling up by the hour and you are unable to complete them due to the sheer volume of incoming work.</p>
-
-
-
-<p>Sounds pretty standard right? I believe there are a series of DevOps tools that can help. Beyond that, I believe that scripting languages along with some coding knowledge can greatly increase your efficiency.</p>
-
-
-
-<p>In a hybrid environment, you are going to need to really lean on your technical skills to ensure that the right machines or services in the right place are being maintained. On top of that, you are going to need a pretty accurate inventory of information to work from in order to stay efficient. Deploying a scripting language to utilize cloud console tools may be a quick way to pull together something like a bash alias file for quick environment access.</p>
-
-
-
-<p>When faced with the challenge of scripting against any specific operating system, one could keep a series of scripts handy on their computer to run repetitive tasks. Alternatively, they could utilize a tool like <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> and ensure not only is their automation targetable but also ensure that it is composed in a reusable way as well. This could all be contributed to by a DevOps team in a source code management system like <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> ensuring it is accessible by everyone on the team.</p>
-
-
-
-<p>The key to operations teams is to keep work fast and efficient. Spending some time orchestrating complex events into the software development life cycle is a great way to ensure that operations becomes everyone&#8217;s responsibility to contribute to.</p>
-
-
-
-<h2>Why do Quality Assurance Teams Need a Coding Background?</h2>
-
-
-
-<p>Coding skills are becoming more and more relevant to quality assurance teams. I believe that most quality engineering tools focus too much on being able to point and click your way to success.</p>
-
-
-
-<p>By bringing automated testing into your ecosystem, and integrating it directly into your source code management tools, a qa engineer will be able to promote ensuring quality is the responsibility of everyone on the team. People will use what is accessible to them as long as it has a very low barrier to entry.</p>
-
-
-
-<p>Coding knowledge is also very helpful in this space. We have all, at one point or another, filed a bug with a development team but since our programming skills were not up to snuff, we were unable to provide any valuable or additional context to the bug. By being able to utilize development tools to dive into the code and return bug tickets with actionable insight, the DevOps team will be able to move much more quickly to resolution.</p>
-
-
-
-<p>Another area that I have seen quality teams need some assistance with is around tracking code versions after deploying a new version of their application. By tying your test tracking systems together with a code repository tag and running preflight validation checks on the deployed code versions to ensure they are in sync, you can ensure you are not wasting cycles trying to get the next critical release out the door.</p>
-
-
-
-<h2>Why does Software Development Need a Coding Background?</h2>
-
-
-
-<p>Now, this is a bit of an unfair section because I believe that the software development side of DevOps does need a coding background. How are you going to do software development without that?</p>
-
-
-
-<p>In all seriousness, I believe the question “Do DevOps engineers need a coding background?” can be extended into the Ops and Infrastructure space pretty easily. I believe that developers looking to wear the moniker of &#8220;DevOps engineer&#8221; should be looking to extend coding skills into spaces they are less familiar with.</p>
-
-
-
-<p>Software developers should be familiar with the basic fundamentals of a data center or cloud depending on where your solution(s) is/are hosted. If you are in a data center, become familiar with fault domains, SANs, LUNs, monitoring, or anything that may impact the stability or performance of your application. In the cloud, become familiar with the cloud&#8217;s elastic nature of volumes, instances, and services.</p>
-
-
-
-<p>Along with the familiarity with computing platforms, it will be advantageous to also familiarize yourself with DevOps tools that enhance solution delivery and system configuration.</p>
-
-
-
-<p>Solution delivery and delivery pipelines are essential to a good DevOps background. In my experience, most developers are really good at utilizing their ecosystems to compile a binary or build out a package.</p>
-
-
-
-<p>Aside from SFTPing that package out to a server and bouncing a service the idea of automated blue/green solution delivery flow with configuration management, rollbacks, database updates, monitoring changes, etc. is not the norm.</p>
-
-
-
-<blockquote class="wp-block-quote"><p>You SFTPers out there know who you are, don&#8217;t try to deny it.</p></blockquote>
-
-
-
-<p>Developers should be looking for ways to extend their idealized software development process into the infrastructure, operations, and quality assurance spaces. One of the greatest challenges I see from Operations teams or Infrastructure teams is their ability to produce a consistent and reliable build and deploy pipeline that provides good actionable feedback. Those features are consistently available in any sort of software development life cycle.</p>
-
-
-
-<h2>Why is a Coding Background Good For Everyone!</h2>
-
-
-
-<p>The primary driver behind configuration management is trying to hit the gold standard of immutable infrastructure. While application code is being perpetually updated and changed, servers should be treated like cattle instead of pets. We should be able to easily destroy and fully rebuild a server and deploy the newest version of the application on top of it. This helps keep things clean and up to date.</p>
-
-
-
-<p>Taking time to learn software development, or any technical skills on a technology team helps drive better communication and collaboration skills. As the team starts to move into continuous integration and continuous delivery model as part of their agile methodology adoption, DevOps teams will need to find new ways to effectively share information. By putting development front and center, and I don&#8217;t mean just application code here, there is a set of basic knowledge baselines that everyone can agree to communicate under.</p>
-
-
-
-<p>Organizations can also find some common ground to reduce extraneous costs on their products as well. Focusing on a smaller set of software development languages, and configuration management tools, and reducing other such technological diversity; you can build an economy of scale around your skilled workforce that has focused on delivering value to the market more quickly. This is especially true when adopting DevOps by merging development and operations teams together. This first move will generally expose a lot of technological waste.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>Do DevOps engineers need a coding background? My perspective is, that it wouldn&#8217;t hurt. Diving into software development patterns and extending them into the DevOps delivery space allows for greater consistency, along with the ability to scale to meet demand much more quickly without feeling overwhelmed. I don&#8217;t think that software developers need to become the best systems administrators ever created. I don&#8217;t think that systems administrators need to become the greatest software developers ever created. I do think that everyone in technology could benefit from a bit of exposure to spaces outside of their primary responsibilities because it lends itself well to increasing quality and flexibility while delivering solutions.</p>
 ]]></content:encoded>
 					
 		
