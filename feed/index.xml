@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 28 Oct 2022 19:40:11 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 31 Oct 2022 13:21:20 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -41,7 +41,7 @@
 
 					<description><![CDATA[Automation Testing in DevOps is generally relegated to the software being released to production. Environmental testing is performed by manual testing practices or high-level smoke tests. Test automation should cover the full CI/CD pipeline including infrastructure, delivery tools, software, UI,&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p>Automation Testing in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> is generally relegated to the software being released to production. Environmental testing is performed by manual testing practices or high-level smoke tests.</p>
+<p>Automation Testing in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is generally relegated to the software being released to production. Environmental testing is performed by manual testing practices or high-level smoke tests.</p>
 
 
 
@@ -294,7 +294,7 @@
 
 
 
-<p>I use methods like this in my home lab to help stay current with new trends in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> Not everyone is going to be fortunate enough to have cloud playgrounds to test out new things, and home labs are a great way to make a one-time investment in your future.</p>
+<p>I use methods like this in my home lab to help stay current with new trends in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> Not everyone is going to be fortunate enough to have cloud playgrounds to test out new things, and home labs are a great way to make a one-time investment in your future.</p>
 
 
 
@@ -536,7 +536,7 @@
 
 
 
-<p>What does this mean to the <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> community?</p>
+<p>What does this mean to the <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> community?</p>
 
 
 <p>
@@ -554,11 +554,11 @@
 
 
 
-<p>The attack started with some images on DockerHub being updated and automated scanning catching those images.  From there, it appears that free-tier GitHub accounts were created which allow for 2000 minutes per month of runtime.  Repositories are then created and a <code>github-actions.yaml</code> workflow is created in those repositories.  Containers are then started which run the mining operations.  Ports are also opened up to serve as command and control.</p>
+<p>The attack was first identified when automated scanning identified some obscurely named images on DockerHub were being updated through automated patterns that did not match any kind of heuristic pattern.  From there, it appears that free-tier GitHub accounts were being created and each account allows for 2000 minutes per month of free GitHub Actions runtime.  Repositories were then created and a specially crafted <code>github-actions.yaml</code> workflow was created in those repositories.  Containers were then started which kick off crypto mining operations.  Ports are also opened up to serve as command and control for the distributed attack.</p>
 
 
 
-<p>To get the full details of the attack, which is extremely fascinating, I would look into the article that I have linked at the top of this post.  There is a ton of depth and work around to combat the systems of control that GitHub has in place to protect its infrastructure from attack.</p>
+<p>To get the full details of the attack, which are extremely fascinating, I would look into the article linked at the top of this post.  There are a ton of depth and built-in workarounds to combat the systems of control that GitHub has in place to protect its infrastructure from attack.</p>
 
 
 
@@ -600,11 +600,11 @@
 
 
 
-<h2>How Does this Impact the Average Company?</h2>
+<h2>What Does PurpleUchin mean for DevOps and Automation?</h2>
 
 
 
-<p>PURPLEURCHIN appears to be a fairly sophisticated vehicle to utilize free compute resources to mine cryptocurrency.  On its face, a group is just trying to make a buck.</p>
+<p>PURPLEURCHIN appears to be a fairly sophisticated vehicle to utilize free computing resources to mine cryptocurrency.  On its face, a group is just trying to make a buck.</p>
 
 
 
@@ -616,7 +616,7 @@
 
 
 
-<ul><li>Would you know if all of the code that made it into production on your next release was intentionally put there by good actors?</li><li>Would you know if your servers are only running what you intended for them to be running?</li><li>Could a sidecar process be spun up by a bad actor and would anybody notice?</li><li>Does your automated testing stack take environmental considerations into account when passing a build?</li><li>Do you know what versions of 3rd party dependencies are running in your environment?</li><li>Would you know if a 3rd party dependency has been compromised?</li><li>Could you quickly replace a compromised dependency to ensure business continuity?</li></ul>
+<ul><li>Would you know if all of the code that made it into production on your next release was intentionally put there by good actors?</li><li>Would you know if your servers are only running what you intended for them to be running?</li><li>Could a sidecar process be spun up by a bad actor and would anybody notice?</li><li>Does your automated testing stack take environmental considerations into account when passing a build?</li><li>Do you know what versions of 3rd party dependencies are running in your environment?</li><li>Would you know if a 3rd party dependency has been compromised?</li><li>Could you quickly replace a compromised dependency to ensure business continuity?</li><li>Do you know if your organization is utilizing GitHub Actions workflows that have been vetted by the security community?</li></ul>
 
 
 
@@ -667,7 +667,7 @@
 
 					<description><![CDATA[This post will help anyone who is attempting to use Ansible to create new VMs with automation when Practicing DevOps. I use this in my home lab to help stay current with new trends in DevOps. Not everyone is going&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p>This post will help anyone who is attempting to use <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> to create new VMs with automation when <a href="https://www.valewood.org/practicing-devops/" data-type="post" data-id="14">Practicing DevOps</a>.  I use this in my home lab to help stay current with new trends in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a>.  Not everyone is going to be fortunate enough to have cloud playgrounds to test out new things, and home labs are a great way to make a one-time investment in your future.</p>
+<p>This post will help anyone who is attempting to use <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> to create new VMs with automation when <a href="https://www.valewood.org/practicing-devops/" data-type="post" data-id="14">Practicing DevOps</a>.  I use this in my home lab to help stay current with new trends in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a>.  Not everyone is going to be fortunate enough to have cloud playgrounds to test out new things, and home labs are a great way to make a one-time investment in your future.</p>
 
 
 
@@ -1158,7 +1158,7 @@ all:
 
 
 
-<p>Doing file conversions or data munging is an important skill to learn when growing in a <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> position.  While this is a fairly basic example, utilize this as a stepping stone to understanding more complex data structures.</p>
+<p>Doing file conversions or data munging is an important skill to learn when growing in a <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> position.  While this is a fairly basic example, utilize this as a stepping stone to understanding more complex data structures.</p>
 
 
 <p>
@@ -1382,7 +1382,7 @@ all:
 
 
 
-<p><strong><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> engineers are going to be performing configuration management efforts, software development, operations activities, and quality assurance activities. Each of these can be automated by writing code with scripting languages. This means that DevOps engineers write code!</strong></p>
+<p><strong><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> engineers are going to be performing configuration management efforts, software development, operations activities, and quality assurance activities. Each of these can be automated by writing code with scripting languages. This means that DevOps engineers write code!</strong></p>
 
 
 
@@ -1578,7 +1578,7 @@ all:
 
 					<description><![CDATA[Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are DevOps Engineers in Demand?&#8221; Simply looking at job boards and reviewing the&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p>Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> Engineers in Demand?&#8221;</p>
+<p>Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> Engineers in Demand?&#8221;</p>
 
 
 
@@ -1806,7 +1806,7 @@ all:
 
 
 
-<p>So, is <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> a skill or is it a logical evolution where technology delivery ends up going regardless of the forces that drive it there?</p>
+<p>So, is <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> a skill or is it a logical evolution where technology delivery ends up going regardless of the forces that drive it there?</p>
 
 
 <p>
@@ -1971,7 +1971,7 @@ all:
 
 					<description><![CDATA[DevOps&#160;is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&#160; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers is&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p><strong><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a></strong>&nbsp;is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&nbsp; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers is “Are there 4 top programming languages to learn for DevOps?”</p>
+<p><strong><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a></strong>&nbsp;is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&nbsp; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers is “Are there 4 top programming languages to learn for DevOps?”</p>
 
 
 
@@ -2364,7 +2364,7 @@ all:
 
 					<description><![CDATA[The first benefit of DevOps is that it enables organizations to release software faster, more reliably, and with higher quality. By breaking down the barriers between development and operations, DevOps allows teams to work together more effectively and efficiently. This&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p>The first benefit of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="Demystifying the DevOps Methodology and How You Can Leverage it for Success!​" target="_blank" rel="noopener">DevOps</a> is that it enables organizations to release software faster, more reliably, and with higher quality. By breaking down the barriers between development and operations, DevOps allows teams to work together more effectively and efficiently. This helps companies get new features and updates into the hands of their customers more quickly.</p>
+<p>The first benefit of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is that it enables organizations to release software faster, more reliably, and with higher quality. By breaking down the barriers between development and operations, DevOps allows teams to work together more effectively and efficiently. This helps companies get new features and updates into the hands of their customers more quickly.</p>
 
 
 
