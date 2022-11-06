@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/tag/software/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sat, 05 Nov 2022 20:49:29 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 06 Nov 2022 01:21:07 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -529,7 +529,7 @@
 
 
 
-<p>Let&#8217;s discuss some of the popular programming languages you can learn as someone with little to no experience so you can level up your DevOps game!</p>
+<p>Let&#8217;s discuss some of the best programming languages for DevOps that can learn as someone with little to no experience so you can level up your DevOps game!</p>
 
 
 <p>
@@ -543,7 +543,7 @@
 
 
 
-<h2>Interpreted vs Compiled Languages</h2>
+<h2>What is the difference between Interpreted vs Compiled Languages?</h2>
 
 
 
@@ -563,7 +563,11 @@
 
 
 
-<p>There is some practical utility to this.&nbsp; Your systems require a dependency like Python, PHP, Ruby, Bash, etc. to be installed on the remote system, but you get a pretty good guarantee that you can write code once and use it in many places across many architectures.&nbsp; The architecture (x86, ARM, SPARC, etc) has the runtime binaries installed (Python) and Just In Time “compile” (interprets) your code to be run on that architecture.&nbsp; Pretty neat right?</p>
+<p>There is some practical utility to this.  Your systems require a dependency like Python, PHP, Ruby, Bash, etc. to be installed on the remote system, but you get a pretty good guarantee that you can write code once and use it in many places across many architectures.  The architecture (x86, ARM, SPARC, etc) has the runtime binaries installed (Python) and Just In Time “compile” (interprets) your code to be run on that architecture.  Pretty neat right?</p>
+
+
+
+<p>In my opinion, interpreted languages are going to be some of the best programming languages for DevOps.  As long as the server or host you are going to run your code on has the interpreter installed, the process is as simple as copy > paste > run!</p>
 
 
 
@@ -579,7 +583,11 @@
 
 
 
-<p>Generally, a compiled language will be statically linked which means that there are zero additional dependencies that need to live on a remote system, unlike an interpreted language.&nbsp; You do need to have a more detailed understanding of the remote system you will be deploying to so that your pre-compiled binary has a much better shot of being able to run on the destination.</p>
+<p>Generally, a compiled language will be statically linked which means that there are zero additional dependencies that need to live on a remote system, unlike an interpreted language.  You do need to have a more detailed understanding of the remote system you will be deploying to so that your pre-compiled binary has a much better shot of being able to run on the destination.</p>
+
+
+
+<p>Compiled languages are generally not the best languages for DevOps, at least not for beginners.  When starting out, you are going to go through a lot of trial and error.  This means a lot of wasted time also fighting compilers.  I would recommend waiting on compiled languages until you have a bit of experience under your belt.</p>
 
 
 
@@ -599,7 +607,7 @@
 
 
 
-<p>Python is an interpreted language and was created in the 1980s by Guido van Rossum in the Netherlands.&nbsp; It is widely adopted and widely used across the industry.&nbsp; You can find Python pre-installed on most modern Linux distributions today, though there is still a bit of fracturing between Python 2.x and 3.x communities. Aside from Javascript, you will find that Python is easily one of the most popular programming languages ou there today.</p>
+<p>Python is an interpreted language and was created in the 1980s by Guido van Rossum in the Netherlands.  It is widely adopted and widely used across the industry.  You can find Python pre-installed on most modern Linux distributions today, though there is still a bit of fracturing between Python 2.x and 3.x communities. Aside from Javascript, you will find that Python is easily one of the most popular programming languages out there today.</p>
 
 
 
@@ -643,7 +651,7 @@
 
 
 
-<p>Much like Python, is an interpreted language. Unlike Python, Javascript is easily multithreaded (async tasks on a single main thread) directly out of the box with no additional work required. Javascript creates immersive and interactive websites, can be used as a server-side scripting language, can be used for GUI development powering both mobile and desktop applications, and can be utilized to build fully functional server and client-side web-based applications. It really is the swiss army knife of DevOps programming languages.</p>
+<p>Much like Python, is an interpreted language. Unlike Python, Javascript is easily multithreaded (async tasks on a single main thread) directly out of the box with no additional work required. Javascript creates immersive and interactive websites, can be used as a server-side scripting language, can be used for GUI development powering both mobile and desktop applications, and can be utilized to build fully functional server and client-side web-based applications. It really is the swiss army knife in this list of the best programming languages for DevOps.</p>
 
 
 
@@ -815,16 +823,6 @@
 <p>The lesson is this: assume that attack vectors are everywhere and ensure that you are scanning everything you can get your hands on for CVEs.&nbsp; The industry has a good focus on this now, and the question is not IF you will get compromised, but when.&nbsp; Keep yourself safe by being proactive.</p>
 
 
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-</p>
-
-
 
 <h2>What Languages do I Use Most Often?</h2>
 
@@ -838,11 +836,11 @@
 
 
 
-<p>For me, this is generally a quick and dirty task that i am not going to be releasing to production in any form. This website does a bunch of different data manipulation tasks under the covers as part of its pipeline. I will generally choose PHP (not on this list, but it is a majority of my pure software dev background) or Javascript.</p>
+<p>For me, this is generally a quick and dirty task that I am not going to be releasing to production in any form. This website does a bunch of different data manipulation tasks under the covers as part of its pipeline. I will generally choose PHP (not on this list, but it is a majority of my pure software dev background) or Javascript.</p>
 
 
 
-<p>Javascript is a fairly common language utilized in a multitude of DevOps environments that i would be able to quickly onboard someone with if needed. All of the tasks i am doing here are also fairly simple tasks in need of a simple language. I am not trying to do big data analytics, just mutate some links, move around some HTML, and soon some automated testing.</p>
+<p>Javascript is a fairly common language utilized in a multitude of DevOps environments that I would be able to quickly onboard someone with if needed. All of the tasks I am doing here are also fairly simple tasks in need of a simple language. I am not trying to do big data analytics, just mutate some links, move around some HTML, and soon do some automated testing.</p>
 
 
 
@@ -854,7 +852,7 @@
 
 
 
-<p>It could be easy to argue that i am not really using Python here. I am for sure not a full fledged Python programmer, but I have dug through a fair bit of the source code behind Kubespray to understand the real intentions of what it is trying to accomplish. This has also helped me utilize Ansible as a swiss army knife for any of my infrastructure management needs.</p>
+<p>It could be easy to argue that I am not really using Python here. I am for sure not a full-fledged Python programmer, but I have dug through a fair bit of the source code behind Kubespray to understand the real intentions of what it is trying to accomplish. This has also helped me utilize Ansible as a swiss army knife for any of my infrastructure management needs.</p>
 
 
 
@@ -862,15 +860,25 @@
 
 
 
-<p>I currently utilize a mixture of Javascript and GitHub Actions and GitOps to build deployment pipelines. There are a variety of other languages i could be using, but these work well for me. As stated earlier, i will shift all of my data round with Javascript. From there, GitHub actions will run any builds that i need with any triggered deploys.</p>
+<p>I currently utilize a mixture of Javascript and GitHub Actions and GitOps to build deployment pipelines. There are a variety of other languages I could be using, but these work well for me. As stated earlier, I will shift all of my data around with Javascript. From there, GitHub actions will run any builds that I need with any triggered deploys.</p>
 
 
 
-<p>If the end result needs to go on the internet, i dont really need to deal with a fully weight object oriented programming language, or linux servers/linux systems, relational databases, business intelligence or anything like that. It makes more sense for GitOps style triggers to be in place to automagically move my code from repo to the internet without manual intervention.</p>
+<p>If the end result needs to go on the internet, I don&#8217;t really need to deal with a full-weight object-oriented programming language, Linux servers/Linux systems, relational databases, business intelligence, or anything like that. It makes more sense for GitOps-style triggers to be in place to automagically move my code from the repo to the internet without manual intervention.</p>
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+</p>
 
 
 
-<h2>Is there a good General Purpose Programming Language?</h2>
+<h2>What is the Best General Purpose Programming Language?</h2>
 
 
 
@@ -882,11 +890,19 @@
 
 
 
+<h2>What is the Best Language for DevOps?</h2>
+
+
+
+<p>In my opinion, the best general-purpose programming language (and the best language for DevOps) is going to be Python.  While I am a fan of GoLang for numerous reasons, python has been battle-tested in this space since before DevOps was a coined methodology in the technology space.  Other languages absolutely have some specific utility in the space, but i would consider Python to easily be the reigning champion of the best language for DevOps.</p>
+
+
+
 <h2>Conclusion</h2>
 
 
 
-<p>As I stated at the beginning of this article, this is by no means a definitive list. I do not believe there is an answer to the question &#8220;which is the right programming languages to pick up for DevOps&#8221;.&nbsp; This is a list of some of the tools that I utilized to build effective DevOps workflows and to enable the flow of delivery.&nbsp; I utilize these tools at my job along with utilizing these tools in my homelab.&nbsp; I believe that everyone could use a little bit of software development in their life.&nbsp; Python, Javascript, Golang, or Ruby are really great places to start with languages because of their utility, communities, and ties to DevOps and DevOps tooling.</p>
+<p>As I stated at the beginning of this article, this is by no means a definitive list. I do not believe there is an answer to the question &#8220;Which Programming Language Should I Learn as a DevOps Engineer?&#8221;.  This is a list of some of the tools that I utilized to build effective DevOps workflows and to enable the flow of delivery.  I utilize these tools at my job along with utilizing these tools in my homelab.  I believe that everyone could use a little bit of software development in their life.  Python, Javascript, Golang, or Ruby are really great places to start with languages because of their utility, communities, and ties to DevOps and DevOps tooling.</p>
 
 
 
