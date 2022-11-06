@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.valewood.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://www.valewood.org/top-relevant-devops-skills/</loc>
+		<lastmod>2022-11-05T20:28:03-05:00</lastmod>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-onprem-servers.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devsecops-helicopter.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-software-development.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-languages/</loc>
+		<lastmod>2022-11-05T20:21:07-05:00</lastmod>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/devops-and-agile/</loc>
 		<lastmod>2022-11-05T15:49:29-05:00</lastmod>
 	</url>
@@ -43,23 +60,6 @@
 	<url>
 		<loc>https://www.valewood.org/practicing-devops/</loc>
 		<lastmod>2022-10-03T20:46:49-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/devops-languages/</loc>
-		<lastmod>2022-10-02T21:27:50-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/top-relevant-devops-skills/</loc>
-		<lastmod>2022-09-28T08:16:54-05:00</lastmod>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-onprem-servers.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devsecops-helicopter.png</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-software-development.jpg</image:loc>
-		</image:image>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/major-benefits-of-devops/</loc>
