@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sun, 06 Nov 2022 01:21:07 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 06 Nov 2022 01:39:31 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,7 +28,7 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>How are Agile and DevOps Interrelated</title>
+		<title>How are Agile and DevOps Interrelated?</title>
 		<link>https://www.valewood.org/devops-and-agile/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
