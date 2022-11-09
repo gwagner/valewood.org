@@ -39,6 +39,9 @@ grep -rl www.lab.valewood.org . --exclude='update.sh' | xargs sed -i 's/www.lab.
 echo "Replacing loc>/ with www.valewood.org"
 grep -rl "loc>/" . --exclude='update.sh' | xargs sed -i 's/\(loc>\)\//\1https:\/\/www.valewood.org\//g'
 
+echo "Replacing src=\"/ with https://www.valewood.org"
+grep -rlE "content=\"/[^\"]+\.[jpegn]{3,4}" . --exclude='update.sh' | xargs sed -i 's/\(content="\)\/\(wp-content\)/\1https:\/\/www.valewood.org\/\2/g'
+
 echo "Fix og:url property"
 grep -rl "<meta property=\"og:url\" content=\"/" . --exclude='update.sh' | xargs sed -i 's/\(<meta property="og:url" content="\)\//\1https:\/\/www.valewood.org\//g'
 
