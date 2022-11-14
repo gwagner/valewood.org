@@ -1174,7 +1174,7 @@
 
 
 
-<p>If you have spent any time in the software space, or have done any googling around building software, Jenkins is sure to be the first thing that pops up. Jenkins is an open-source automation tool used for continuous integration and continuous delivery (CI/CD). Companies use it to automate the software development process, build and test their code, and deploy their applications. Jenkins is a highly configurable tool that allows you to choose from a large range of plugins. These plugins allow you to integrate Jenkins with other tools such as <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> Hub, JIRA, and others. Jenkins can be used for DevOps to automate the software delivery process, deploy apps, and manage infrastructure.</p>
+<p>If you have spent any time in the software space, or have done any googling around building software, Jenkins is sure to be the first thing that pops up. Jenkins is an open-source automation tool used for continuous integration and continuous delivery (CI/CD). Companies use it to automate the software development process, build and test their code, and deploy their applications. Jenkins is a highly configurable tool that allows you to choose from a large range of plugins. These plugins allow you to integrate Jenkins with other tools such as <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> Hub, <a href="https://www.atlassian.com/software/jira" data-internallinksmanager029f6b8e52c="21" title="Jira" rel="nofollow noopener" target="_blank">JIRA</a>, and others. Jenkins can be used for DevOps to automate the software delivery process, deploy apps, and manage infrastructure.</p>
 
 
 
@@ -1254,7 +1254,7 @@
 
 
 
-<p>In this post, I am going to be focusing on <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a> and Azure as the primary examples of IaC CM tools. I am explicitly ignoring GCP, <a href="https://www.digitalocean.com/" data-internallinksmanager029f6b8e52c="5" title="DigialOcean" rel="nofollow noopener" target="_blank">DigitalOcean</a>, etc. because every cloud vendor has its own APIs, its own tool sets, and its own concepts which are really all born from what AWS and Azure have already pioneered.  If you are interested in the most marketable DevOps tools focusing on infrastructure configuration management, then these are the tools I would focus on first.</p>
+<p>In this post, I am going to be focusing on <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a> and <a href="https://azure.microsoft.com/en-us/get-started/azure-portal" data-internallinksmanager029f6b8e52c="20" title="Azure" rel="nofollow noopener" target="_blank">Azure</a> as the primary examples of IaC CM tools. I am explicitly ignoring GCP, <a href="https://www.digitalocean.com/" data-internallinksmanager029f6b8e52c="5" title="DigialOcean" rel="nofollow noopener" target="_blank">DigitalOcean</a>, etc. because every cloud vendor has its own APIs, its own tool sets, and its own concepts which are really all born from what AWS and Azure have already pioneered.  If you are interested in the most marketable DevOps tools focusing on infrastructure configuration management, then these are the tools I would focus on first.</p>
 
 
 
