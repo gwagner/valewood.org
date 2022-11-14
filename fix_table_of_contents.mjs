@@ -117,6 +117,13 @@ import cheerio from 'cheerio';
 
 const HTML_FOLDER = ".";  // folder with your HTML files
 const DEPTH = 2;
+const levelMatrix = [
+  'H2',
+  'H3',
+  'H4',
+  'H5',
+  'H6'
+]
 
 function findHtml(folder) {
   if (!fs.existsSync(folder)) {
@@ -155,7 +162,7 @@ function readHtml(root, file) {
 
 function addReplacement(id, title, step, tag, replacements) {
   // Skip empty titles
-  if(title.trim() == "" || title.trim() == "&nbsp;") {
+  if (title.trim() == "" || title.trim() == "&nbsp;") {
     return
   }
   var duplicate = 0
@@ -194,33 +201,15 @@ for (var i = 0; i < files.length; i++) {
 
   var replacements = [];
 
-  console.log("Modifying file: " + filename)
-  $('h2').each(function (idx, tag) {
-    if(DEPTH < 1){ return; }
-    addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), 0, $(tag), replacements)
+  console.log(filename);
+  $('[data-widget_type="text-editor.default"]').each(function (idx, section) {
+    $(section).find('h2,h3,h4,h5,h6').each(function (idx, tag) {
+      var d = levelMatrix.indexOf($(tag).prop('nodeName'))
+      if (d >= DEPTH || d === 'undefined') { return; }
 
-    $(tag).nextUntil("h2").filter("h3").each(function (idx, tag) {
-      if(DEPTH < 2){ return; }
-      addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), 1, $(tag), replacements)
-
-      $(tag).nextUntil("h3").filter("h4").each(function (idx, tag) {
-        if(DEPTH < 3){ return; }
-        addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), 2, $(tag), replacements)
-
-        $(tag).nextUntil("h4").filter("h5").each(function (idx, tag) {
-          if(DEPTH < 4){ return; }
-          addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), 3, $(tag), replacements)
-
-          $(tag).nextUntil("h5").filter("h6").each(function (idx, tag) {
-            if(DEPTH < 5){ return; }
-            addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), 4, $(tag), replacements)
-
-          });
-        });
-      });
+      addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), d, $(tag), replacements)
     });
   })
-  //  console.log(replacements)
 
   $('.elementor-toc__spinner-container').remove()
   var currentOrderedList = $("<ol>").attr("class", 'elementor-toc__list-wrapper');
@@ -263,10 +252,10 @@ for (var i = 0; i < files.length; i++) {
   // Removes the data element to stop the JS from firing off
   $('[data-widget_type="table-of-contents.default"]').removeAttr("data-widget_type")
 
-  try{
+  try {
     fs.writeFileSync(filename, $.html())
-    console.log("Table of contents saved: "+filename);
-  }catch(err) {
+    console.log("Table of contents saved: " + filename);
+  } catch (err) {
     console.log(err)
     break;
   }
