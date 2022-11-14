@@ -205,7 +205,7 @@ for (var i = 0; i < files.length; i++) {
   $('[data-widget_type="text-editor.default"]').each(function (idx, section) {
     $(section).find('h2,h3,h4,h5,h6').each(function (idx, tag) {
       var d = levelMatrix.indexOf($(tag).prop('nodeName'))
-      if (d > DEPTH || d === 'undefined') { return; }
+      if (d >= DEPTH || d === 'undefined') { return; }
 
       addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), d, $(tag), replacements)
     });
