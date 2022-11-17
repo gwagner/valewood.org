@@ -3,6 +3,7 @@
 /devops-faq/ /topics/devops/faq 301
 /devops-faq/amp/ /topics/devops/faq/amp/ 301
 /privacy-policy-2/ /privacy-policy/ 301
+/*/amp/ /:splat/ 301
 
 /2022/08/07/practicing-devops/ /practicing-devops/ 301
 /2022/08/07/practicing-devops/feed/ /practicing-devops/feed/ 301
