@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sun, 06 Nov 2022 01:39:31 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 17 Nov 2022 22:48:31 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,300 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>7 Tips for Landing a DevOps Position Without a Degree</title>
+		<link>https://www.valewood.org/devops-without-education/</link>
+		
+		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
+		<pubDate>Thu, 17 Nov 2022 21:28:06 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<guid isPermaLink="false">/?p=1645</guid>
+
+					<description><![CDATA[DevOps is hot right now. The demand for professionals with the skills to bridge the gap between software development and information technology operations is growing significantly. It’s not difficult to understand why. DevOps is a methodology that optimizes processes, removes&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is hot right now. The demand for professionals with the skills to bridge the gap between software development and information technology operations is growing significantly.</p>
+
+
+
+<p>It’s not difficult to understand why. DevOps is a methodology that optimizes processes, removes barriers, and improves collaboration between software developers and information technology (IT) operations teams. Because of its benefits, it’s becoming an increasingly attractive option for IT professionals who want to stand out from the crowd.</p>
+
+
+
+<p>In this blog post, you will learn about the types of roles available in DevOps, how you can land your first DevOps job, and what you need to succeed in your new role as a DevOps engineer or specialist.</p>
+
+
+
+<h2>What Is DevOps?</h2>
+
+
+
+<p>DevOps is short for &#8220;software development operations.&#8221; It describes a set of best practices related to transforming the relationship between software developers and information technology (IT) operations personnel.</p>
+
+
+
+<p>DevOps aims to improve collaboration, increase efficiency, and reduce waste. This organizational transformation is commonly referred to as cultural transformation.</p>
+
+
+
+<p>Achieving cultural transformation requires employees in both departments to change their perspectives and expectations of each other. This is why DevOps is often seen as an ongoing journey, not a destination. DevOps is often associated with agile software development methodologies, such as Kanban, Scrum, and others.</p>
+
+
+
+<h2>Types of Jobs in DevOps</h2>
+
+
+
+<p>DevOps is a methodology that requires several different disciplines to fully adopt and become proficient in. Let&#8217;s look at a few different roles in DevOps to see how the market is segmenting labor in this space.</p>
+
+
+
+<ul>
+<li>Software Engineer &#8211; Software engineers are responsible for building software products and services against a set of requirements.</li>
+
+
+
+<li>Operations Engineer &#8211; Responsible for managing the lifecycle of technology ensuring the stability and reliability of systems.</li>
+
+
+
+<li>Quality Assurance &#8211; Responsible for validating the quality of software being developed through automated testing. Also responsible for making testing available to an entire devops team.</li>
+
+
+
+<li>DevOps Engineer &#8211; Let’s start with the basics. If you’re looking to work as a DevOps engineer, you’ll need to be able to understand and work with code, have an excellent knowledge of server environments, and be able to think on the fly and find solutions to new problems.</li>
+
+
+
+<li>DevOps Engineer Manager &#8211; In this capacity, you’ll need to be able to work with both technical and non-technical staff. You’ll be responsible for ensuring that the team is working effectively and efficiently. So, it goes without saying that you’ll need strong communication skills.</li>
+
+
+
+<li>DevOps Architect &#8211; A DevOps architect is responsible for designing and implementing the organization’s software delivery system. This is often a challenging role that requires a great deal of experience, knowledge and a strong understanding of organizational needs.</li>
+
+
+
+<li>DevOps Manager &#8211; As a DevOps manager, you’ll be responsible for overseeing the entire DevOps process, including hiring, training, and managing staff. You’ll need to be able to understand and communicate the needs of multiple stakeholders. You’ll also need to be able to manage the entire lifecycle of products, from development to delivery and ongoing maintenance.</li>
+</ul>
+
+
+
+<p>As you can see, normal everyday engineering roles can join a DevOps team. Don&#8217;t immediately exclude yourself because you have not been a DevOps engineer in the past. Most of us have started out in software engineering or system operations roles anyway.</p>
+
+
+
+<h2>Tips for Landing a DevOps Job Without a Degree</h2>
+
+
+
+<p>In today’s job market, it is not enough to just have a good education and experience from your previous job. You must also know how to write a resume that highlights your skills and experience in a way that shows you as the best candidate for the job.</p>
+
+
+
+<p>This can be done by taking some time to research and learn about the particular industry you are interested in working in, as well as the company and the specific role you want to apply for.</p>
+
+
+
+<p>When you have this information in hand, you can then create a resume that places your skills, experience, and values at the top of the list. This will make it easy for hiring managers to see what makes you different than other candidates and more likely to be hired.</p>
+
+
+
+<p>With these things in mind, it is important to keep your resume updated as new jobs become available. You should also stay on top of employment trends so that you are ready when opportunities arise. By doing this, you will increase your chances of landing an interview and ultimately getting hired.</p>
+
+
+
+<p>Here are a few additional steps you can take to increase your odds of landing a DevOps Engineering position:</p>
+
+
+
+<ol>
+<li>Research the role you want &#8211; Blindly showing up to a job interview for a DevOps position is not going to go well. Take some time to learn and understand the DevOps methodology and what it is trying to accomplish. Any of the technical skills needed can be acquired on the job so do let that be a limiting factor.</li>
+
+
+
+<li>Network &#8211; The single best way to land a job in DevOps without a degree is to network, network, network. It’s one of the most effective ways to find out about new opportunities, learn about the industry, and connect with people who can help you advance your career.</li>
+
+
+
+<li>Identify Your Skills &#8211; Before you can network effectively, you need to know what your skills are. Doing this will help you identify which organizations are best for you, as well as identify skill gaps. Furthermore, it will help you understand how to position yourself as the best candidate for a given role.</li>
+
+
+
+<li>Join a DevOps Community &#8211; DevOps communities, like meetup groups and online forums, are excellent ways to find out about new opportunities and connect with people who can help you advance your career.</li>
+
+
+
+<li>Create an Online Portfolio &#8211; Online portfolios can be incredibly powerful tools for job seekers without a degree. You should include examples of your work and information about your projects and roles.</li>
+
+
+
+<li>Phone a Friend &#8211; Look through Linkedin, Facebook, Twitter, or other free resources for peers who are already working in the DevOps space to find out what they think is important and work towards developing similar skills.</li>
+
+
+
+<li>Network with Employers &#8211; When you’re networking with employers, don’t sell yourself short. Be sure to highlight your skills, background, and experience.</li>
+</ol>
+
+
+
+<h2>3 Steps to Landing Any Job You Want</h2>
+
+
+
+<p>If you’re looking to find a job, landing any kind of position is a big deal. You can start by proactively searching for the positions you want, or by going through a recruiter or headhunter if they have a specific role you’re interested in.</p>
+
+
+
+<p>When you land a new job, you have to be prepared for all kinds of situations. You might have to move across the country if the company has an office there, and you may also have to learn new skills or take on new responsibilities.</p>
+
+
+
+<p>Making yourself ready for these situations can help you land any kind of job. For example, you could build up your résumé and online presence by completing online courses or volunteering at local organizations. This will show that you are ready for a new position and will also make it easier to find work once you are ready.</p>
+
+
+
+<p>Another option is to join professional organizations like Toastmasters or other networking groups where you can meet people who can help you land a new job. Just remember: Landing any kind of job takes time, so be prepared by taking steps now that will make it easier in the future!</p>
+
+
+
+<ul>
+<li>Define What You Want &#8211; Before you embark on your job search, you need to make an honest assessment of what you want. Do you want a full-time position, or will a contract position work for you? How many hours do you want to work per week? What is your salary range? These are just a few of the questions you’ll need to answer.</li>
+
+
+
+<li>Identify Your Strengths &#8211; Once you’ve identified what you want, you need to assess what you have to offer. What are your strengths? What are your weaknesses? This will help you identify which employers will be best for you.</li>
+
+
+
+<li>Write a Great Resume &#8211; Once you’ve assessed your skills and talents, you need to translate them into action for your resume. This is your first opportunity to impress a prospective employer.</li>
+</ul>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>If you want a job in DevOps, you’ll need to be prepared to show what you have to offer and sell yourself to prospective employers. Remember, though, that there are many different types of jobs in DevOps.</p>
+
+
+
+<p>So, before you start your search, it’s important to understand what you are looking for and how to stand out in a competitive hiring landscape. If you want a job in DevOps, you’ll need to be prepared to show what you have to offer and sell yourself to prospective employers.</p>
+
+
+
+<p>Remember, though, that there are many different types of jobs in DevOps: DevOps engineer, architect, engineer manager, and manager. Target what you want to be doing, and start applying. You are probably more qualified than you initially thought!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Why You Need to Build A Culture of Trust and Respect in DevOps</title>
+		<link>https://www.valewood.org/devops-trust/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sat, 12 Nov 2022 22:45:48 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[devops trust]]></category>
+		<guid isPermaLink="false">/?p=1657</guid>
+
+					<description><![CDATA[Trust and respect are essential ingredients in any healthy working environment. When trust and respect are present, team members feel safe to give their best, collaborate openly, and challenge one another constructively. When trust and respect are absent, team members&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Trust and respect are essential ingredients in any healthy working environment. When trust and respect are present, team members feel safe to give their best, collaborate openly, and challenge one another constructively.</p>
+
+
+
+<p>When trust and respect are absent, team members feel insecure about their performance, withhold ideas for fear of judgement or worry about repercussions if they speak up.</p>
+
+
+
+<p>There is an inherent risk in bringing together people from different backgrounds with different skill sets. And in the context of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a>, you’re also putting together people who likely have very different roles within your organization as well. The potential for discord is high.</p>
+
+
+
+<p>So how do you create a culture of trust and respect when working with so many new and different people? Here’s why you need to build a culture of trust and respect in your DevOps initiative.</p>
+
+
+
+<h2>It’s the Foundation for Good Communication</h2>
+
+
+
+<p>Communication is the foundation for everything in DevOps. You have to be able to openly share what’s working, what isn’t, and why without judgement, without fear of repercussions, and without ego getting in the way.</p>
+
+
+
+<p>What happens when, in a meeting, someone says they aren’t getting the information they need from a team member? Or that they feel rushed to get their job done? Or that they aren’t seeing the value in the continuous integration process?</p>
+
+
+
+<p>Without a culture of trust and respect, communication will be strained. Team members will be hesitant to speak up, and afraid of judgement. They’ll feel anxious like they don’t have permission to be honest with the team.</p>
+
+
+
+<p>And if they don’t feel safe speaking up, the communication breaks down, and the DevOps initiative will suffer as a result.</p>
+
+
+
+<h2>It Builds Confidence for Everyone</h2>
+
+
+
+<p>One of the biggest challenges in DevOps is building trust between different people, and different parts of the organization. But if you lack the confidence to speak up, you’ll never be able to build that trust missing out on the opportunity to learn from your colleagues and grow yourself as a result.</p>
+
+
+
+<p>In a culture where trust and respect are absent, people are less likely to share their ideas, and more likely to either shut down and not try at all, speak up in ways that create discord, and don’t encourage others to respond.</p>
+
+
+
+<p>You need to feel confident to share your ideas, challenge others, and learn from both your successes and your mistakes. Without trust and respect, you won’t feel confident enough to do any of these things, and again, the DevOps initiative will suffer as a result.</p>
+
+
+
+<h2>It Creates a Safe Environment For Learning</h2>
+
+
+
+<p>A healthy DevOps culture needs to create a safe environment for learning. This means not only being transparent about what’s working and what isn’t, but also being open to feedback without fear of judgement.</p>
+
+
+
+<p>This is the best way to identify pain points and areas where improvement is needed. When team members feel safe to share their feedback, they can do so in a way that doesn’t create any sense of judgement, but rather, encourages the team to look at the information objectively and decide how to act on it.</p>
+
+
+
+<p>But when a team is operating in a culture where trust and respect aren’t present, this kind of feedback is very tricky to navigate. Because team members are likely to feel anxious about sharing their true feelings and experiences, and will likely speak up in ways that are designed to minimise judgement. This can lead to misunderstood feedback, and squashing the open and objective dialogue that is needed for improvement.</p>
+
+
+
+<h2>DevOps is About People and Culture</h2>
+
+
+
+<p>All of the above leads us to one important conclusion: building a healthy DevOps culture is about people and trust. Building trust and respect is never a one-time thing, and it requires a sustained effort from all members of the team, regardless of their backgrounds.</p>
+
+
+
+<p>When you see a team member struggling to find their footing, or growing frustrated at their role, you have to be willing to lend a helping hand. And to do this, you must first be aware of your own behaviour and how you’re modelling the behaviour you want to see.</p>
+
+
+
+<p>You must be willing to confront your own behaviours that are likely to be creating a culture that is lacking in trust and respect. And you must be willing to take ownership of your own feelings and be open about how they are impacting your work and the team as a whole.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>DevOps is all about collaboration, communication and cooperation. When everyone on the team trusts and respects each other, they are much more likely to collaborate effectively. This can only happen when everyone feels safe to give their opinion and be open about their needs. Building a culture of trust and respect will take time and effort. However, it is well worth the effort as it will lead to better communication, a healthier team, and ultimately better results for your organization.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>How are Agile and DevOps Interrelated?</title>
 		<link>https://www.valewood.org/devops-and-agile/</link>
 		
@@ -37,6 +331,7 @@
 		<category><![CDATA[delivery]]></category>
 		<category><![CDATA[development]]></category>
 		<category><![CDATA[devops]]></category>
+		<category><![CDATA[devops and agile]]></category>
 		<category><![CDATA[software]]></category>
 		<guid isPermaLink="false">/?p=1264</guid>
 
@@ -2087,594 +2382,6 @@ all:
 
 
 <p>DevOps teams are constantly looking for more talent that can fulfill the vision of smoother and more reliable delivery. That trend is not going away any time soon!</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Is DevOps a Skill?</title>
-		<link>https://www.valewood.org/devops-skills/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Wed, 12 Oct 2022 02:17:36 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[delivery]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[opinion]]></category>
-		<guid isPermaLink="false">/?p=1103</guid>
-
-					<description><![CDATA[This is a pretty loaded question. Is cooking a skill? Are home builders skilled or unskilled labor? A skill would denote being able to do something well or having expertise in practice. Skills can be trained! Being in a field&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>This is a pretty loaded question.  Is cooking a skill?  Are home builders skilled or unskilled labor?  A skill would denote being able to do something well or having expertise in practice.  Skills can be trained!  Being in a field of skilled labor like running CNC equipment requires a tremendous amount of skill.</p>
-
-
-
-<p>So, is <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> a skill or is it a logical evolution where technology delivery ends up going regardless of the forces that drive it there?</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Technology Delivery</h2>
-
-
-
-<p>Delivering technology, with any kind of <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/" data-type="page" data-id="1036">quality</a> backing that delivery, will require several different practices.  Depending on your domain; you will probably employ the specialties of software developers, infrastructure/cloud engineers, quality assurance engineers, security engineers, and network engineers, along with a whole host of other roles.  Each of those roles is critical to the successful execution of a project at a very high standard.  </p>
-
-
-
-<p>Once the technology is delivered to the market, someone is going to have to pick up the mantle and run that technology solution.  In some organizations that will be a dedicated operations team, and in others they will adhere to a &#8220;you build it you own it&#8221; strategy.</p>
-
-
-
-<p>One of the biggest misnomers that I run across quite frequently is this; once a project is launched, the skilled labor that developed that project is no longer needed over the lifetime of that technology.  I believe that this could not be further from the truth.</p>
-
-
-
-<h2>Technology Lifecycle > Delivery</h2>
-
-
-
-<p>I prefer to look at technology through the lens of a lifecycle rather than a static point-in-time delivery.  Once a technology product is launched, it needs a tremendous amount of care and feeding to ensure that it remains valuable to its end users.  </p>
-
-
-
-<p>Due to the complex nature of the domains that I generally work in, this means that the skilled labor that helped produce said technology product will continue to have a hand in that technology product for its entire lifecycle.  It does not mean that they will be entirely dedicated to a single effort, but it does mean they will continue to lend their expertise.</p>
-
-
-
-<p>So, how does this answer the question &#8220;Is DevOps a skill?&#8221;.  For me, the answer is a simple one, YES!  But I think that it first takes an understanding of what <a href="https://www.valewood.org/topics/devops/" data-type="page" data-id="505">DevOps</a> is.</p>
-
-
-
-<h2>What is DevOps?</h2>
-
-
-
-<p>DevOps is a series of practices that combine together into a consistent delivery flow for technology.  It is generally misrepresented as purely automation, but that is only a particular skilled practice inside DevOps.  Embracing DevOps fully is a serious commitment to changing how technology delivery is performed, and full adoption means that you will be more interested in the overall lifecycle of technology instead of just finite delivery points in time.</p>
-
-
-
-<h2>What Expertise is Needed for DevOps?</h2>
-
-
-
-<p>I believe that most organizations are following a more traditional software delivery methodology.  They have not adopted DevOps or agile in any meaningful way, and if they have at the very least adopted agile they are not using a standardized framework.  This is not true everywhere, but I believe it is more true than false.</p>
-
-
-
-<h3>Advocating for and Leading Change</h3>
-
-
-
-<p>Since most organizations are building and deploying software with some degree of success in whatever way works for them, to build real DevOps adoption, a change agent is going to need to be bravely thrown into the mix to help drive the change they want to see in the world.</p>
-
-
-
-<p>Let&#8217;s face it, Change is hard.  Change brings the unknown right to our doorsteps and forces us to confront aspects of our work that may feel uncomfortable.  Depending on your level in an organization, either being an advocate for change or leading through change is a trainable skill that individuals should look into developing.</p>
-
-
-
-<h3>Agile Project Management</h3>
-
-
-
-<p>Project management is a pretty crowded space.  There are plenty of certifications out there that individuals can go get to skill up in this space as well.  But, agile project management is not just for project managers, everyone should become well versed in this space.</p>
-
-
-
-<p>Learning about risks and risk management, work breakdown structures, timelines, forecasting, Gantt charts, resource management, and all of the rest of the highly skilled practices in agile project management will only enhance a DevOps team&#8217;s ability to deliver effective and high-quality solutions.  If a project manager is left to fully manage a project independently while engineers are heads down in code and poorly communicating, that project is doomed for failure from the very beginning.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h3>Transforming Communication</h3>
-
-
-
-<p>In order to adopt effective DevOps practices, a team will need to build effective communication patterns.  </p>
-
-
-
-<p>Some organizations will adopt a pattern of tickets first.  &#8220;If it isn&#8217;t in the ticket, it didn&#8217;t happen&#8221;.  This is a great asynchronous communication pattern that ensures that communication is available more broadly to any consumers that may have questions or need updates.  It is an ineffective communication pattern if nobody ever reads the tickets.</p>
-
-
-
-<p>Other organizations will adopt in-person or remote scrums to talk about what they worked on, will be working on, and challenges.  This can be a really good communication pattern for individuals who like to talk through and collaborate on problems.  This is a terrible pattern when it comes to groups that are spread a little too thin or have a WIP problem.</p>
-
-
-
-<p>Communication must work for the individuals who are producing communication and consuming communication.  I have seen multiple different scenarios fail because members of the team are not willing to adapt to each other and ensure success.  There are a tremendous number of tools on the market, I am confident that any team willing to put in the work to find the right one can become effective communicators.</p>
-
-
-
-<h3>Effective Feedback Loops</h3>
-
-
-
-<p>Along with communication, feedback loops are also incredibly important to a DevOps team.  If automated testing fails, where do notifications go?  If there is a problem with production, where does communication go?  If these two events, or many other different kinds of events, impact delivery; where does that communication go?</p>
-
-
-
-<p>By ensuring that feedback is making its way back to the proper parties, more effective data-driven decision-making can happen.  Without feedback loops from tools, systems, or people; we are all left guessing!</p>
-
-
-
-<h3>Tools Tools Tools</h3>
-
-
-
-<p>10 years ago, the market for DevOps tools (technology tools) was pretty sparse.  You were left with bash scripts on Linux servers, limited API access, and using your legs to walk down to your local data center to pop in the newest RedHat CD.</p>
-
-
-
-<p>Today, the number of tools in the DevOps space is expansive.  I am not going to go too deep into the tooling here because of its depth, but any DevOps team worth its weight will need to have some serious skills with the latest DevOps tools.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>I wrote this post to answer the question, &#8220;Is DevOps a skill?&#8221;.  I believe that the answer to that question is a resounding yes.  It is as much of a skill as sculpting clay into a piece of art or customizing a classic car.  There is a high degree of depth in expertise for a DevOps team to be effective in their delivery processes.  Finally, any organization out there that thinks they are doing DevOps without these skills is not fully realizing the benefits that DevOps has to offer.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Which Programming Language Should I Learn as a DevOps Engineer?</title>
-		<link>https://www.valewood.org/devops-languages/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Wed, 21 Sep 2022 22:11:50 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[development]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[software]]></category>
-		<category><![CDATA[tools]]></category>
-		<guid isPermaLink="false">/?p=344</guid>
-
-					<description><![CDATA[DevOps&#160;is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&#160; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers is&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p><strong><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a></strong>&nbsp;is all about bringing software development and operations together under a single functional team to increase quality, communication, collaboration, and efficiency.&nbsp; Developers already have a background in development (duh), but a question I get asked frequently by operations engineers is “Are there 4 top programming languages to learn for DevOps?”</p>
-
-
-
-<p>Everyone could use a little bit of development in their life.&nbsp; It could be something as simple as a bash script to take care of a simple task, all the way up to running a blog like this one.&nbsp; Learning about the logical flow that a computer takes to compute everything is an empowering door to open when growing as a technology specialist in whatever field you specialize in.</p>
-
-
-
-<p>There are numerous programming languages to choose from so it can be a bit daunting to narrow it down when doing research. Luckily, I have done some narrowing down for you!&nbsp; Below are a few of my favorite DevOps languages but this is by no means a definitive list.&nbsp; These are languages that I have used in my workflows and found some great success.</p>
-
-
-
-<p>Let&#8217;s discuss some of the best programming languages for DevOps that can learn as someone with little to no experience so you can level up your DevOps game!</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>What is the difference between Interpreted vs Compiled Languages?</h2>
-
-
-
-<p>The first concept that we should tackle is the difference between an interpreted language vs a compiled language.&nbsp; There are some specific semantics to get under your belt as part of your language selection process.&nbsp; In the world of DevOps, I would say that there really is not an incorrect choice here, but; DevOps is all about flow and your choices here can have an impact on your desired technology flow.</p>
-
-
-
-<h3>Interpreted Langauge</h3>
-
-
-
-<p>An interpreted language requires that a separate runtime be installed on your system which will generally perform a JIT runtime on the code you have written.&nbsp;&nbsp;</p>
-
-
-
-<p>If I am writing code in Python, and I want that python to run on a remote Linux system, I need to have both the Python runtime installed on the remote system along with ensuring my code also exists on that system.</p>
-
-
-
-<p>There is some practical utility to this.  Your systems require a dependency like Python, PHP, Ruby, Bash, etc. to be installed on the remote system, but you get a pretty good guarantee that you can write code once and use it in many places across many architectures.  The architecture (x86, ARM, SPARC, etc) has the runtime binaries installed (Python) and Just In Time “compile” (interprets) your code to be run on that architecture.  Pretty neat right?</p>
-
-
-
-<p>In my opinion, interpreted languages are going to be some of the best programming languages for DevOps.  As long as the server or host you are going to run your code on has the interpreter installed, the process is as simple as copy > paste > run!</p>
-
-
-
-<h3>Compiled Languages</h3>
-
-
-
-<p>A compiled language requires that a full compilation happens prior to the code being runnable.&nbsp; In Windows land, think about this like a .exe file, or on Linux, this would be a binary.&nbsp;&nbsp;</p>
-
-
-
-<p>If I am writing code in C++, and I want to run by C++ on a remote Linux system, I have 2 options.&nbsp; I can install C++ on the remote system, add my code to that system, run a compile step, and finally run my binary.&nbsp; Alternatively, I could compile my binary locally (ensuring I match the OS and CPU architecture as part of the compile step) and then distribute that binary to the remote system for execution.</p>
-
-
-
-<p>Generally, a compiled language will be statically linked which means that there are zero additional dependencies that need to live on a remote system, unlike an interpreted language.  You do need to have a more detailed understanding of the remote system you will be deploying to so that your pre-compiled binary has a much better shot of being able to run on the destination.</p>
-
-
-
-<p>Compiled languages are generally not the best languages for DevOps, at least not for beginners.  When starting out, you are going to go through a lot of trial and error.  This means a lot of wasted time also fighting compilers.  I would recommend waiting on compiled languages until you have a bit of experience under your belt.</p>
-
-
-
-<h3>Need for Speed?</h3>
-
-
-
-<p>Compiled languages are generally going to be faster than interpreted languages.&nbsp; A compiled application or script does not need to get converted from human-readable text into a binary that the CPU will understand.&nbsp; That compilation was done when the application was built.&nbsp; An interpreted language is going to need some kind of JIT compilation in order to be executed through the language&#8217;s runtime.&nbsp; In the PHP world, this JIT compilation is transforming human-readable text into OpCode.&nbsp; Once that OpCode is created then the PHP runtime can just execute what the OpCode tells it to execute.</p>
-
-
-
-<p>When trying to do tool selection, there is generally an argument about the speed an application runs and whether the right tool is the fastest tool.&nbsp; When doing DevOps where you are generally trying to get a machine or environment into a specific state, the speed of the language itself is generally not your biggest impediment.&nbsp; Your biggest bottleneck will be remote resources like packages, downloads, etc.&nbsp; I would rather choose the right tool for the job inside of the ecosystem that I work in instead of trying to make my tool selection for DevOps based solely on performance.</p>
-
-
-
-<h2>DevOps with Python</h2>
-
-
-
-<p>Python is an interpreted language and was created in the 1980s by Guido van Rossum in the Netherlands.  It is widely adopted and widely used across the industry.  You can find Python pre-installed on most modern Linux distributions today, though there is still a bit of fracturing between Python 2.x and 3.x communities. Aside from Javascript, you will find that Python is easily one of the most popular programming languages out there today.</p>
-
-
-
-<h3>How Big is the Python Community?</h3>
-
-
-
-<p>Python has a strong community backing it.&nbsp; At the time of writing this, PyPI has ~391,000 packages with nearly 660,000,000 package downloads per day.&nbsp; PyPI is a package repository for Python where you can download community or vendor-developed code and add it directly to your project.&nbsp; There are a lot of pre-solved problems out there like connecting to a database.&nbsp; PyPI enables users to download packages like those database connectors automatically.</p>
-
-
-
-<h3>What is the Utility of Python?</h3>
-
-
-
-<p>Python has a lot of utility in the DevOps space.&nbsp; Since it is born out of the Linux and Unix ecosystem, it has some very strong ties to the Linux operating system for performing common tasks.&nbsp; It is so well suited for this task that <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>-Core is written in Python.&nbsp; Python is also runnable on Windows!</p>
-
-
-
-<p>Python is clearly a good choice when it comes to writing automation code for DevOps, but it has a lot of other utilities as well.&nbsp; Much of the Big-Data space is using python for number crunching and machine learning specifically because the language lends itself well to that kind of computation.&nbsp; Being a dynamically typed language instead of a statically typed one, data transformations can be done quickly without a lot of overhead by the end user.</p>
-
-
-
-<p>Being an interpreted language gives it a lot of power as well when it comes to distributing and running the code.&nbsp; Aside from activities like automated testing, packaging Python consists of compressing your directory structure, moving it to where you want, decompressing, and finally running the code.&nbsp; If there is a bug, you can also fix it in place, though I would recommend ensuring that you have centralized code repositories and follow a good process of version control and pushing new versions out.</p>
-
-
-
-<h3>Python Learning Resources</h3>
-
-
-
-<ul><li><a href="https://www.learnpython.org/" target="_blank" rel="noreferrer noopener">https://www.learnpython.org/</a></li><li><a href="https://www.codecademy.com/learn/learn-python" target="_blank" rel="noreferrer noopener">https://www.codecademy.com/learn/learn-python</a></li><li><a href="https://www.pythontutorial.net/python-basics/python-write-csv-file/" target="_blank" rel="noreferrer noopener">https://www.pythontutorial.net/python-basics/python-write-csv-file/</a></li></ul>
-
-
-
-<h2>DevOps with JavaScript</h2>
-
-
-
-<p>Nevertheless, Javascript may not have a lot of flexibility compared to Python but is still widely available to add value in DevOps. It can be incorporated as client code as well as server code. JavaScript is widely available on the web and has a huge footprint. If your work environments depend on Node.js, the ability to develop Javascript is an advantage. As with Python, JavaScript has an enormous user base. There are many Javascript projects that could benefit from this community.</p>
-
-
-
-<p>Much like Python, is an interpreted language. Unlike Python, Javascript is easily multithreaded (async tasks on a single main thread) directly out of the box with no additional work required. Javascript creates immersive and interactive websites, can be used as a server-side scripting language, can be used for GUI development powering both mobile and desktop applications, and can be utilized to build fully functional server and client-side web-based applications. It really is the swiss army knife in this list of the best programming languages for DevOps.</p>
-
-
-
-<p>If you start to work with Javascript, you will find that it is an extremely versatile language and it could be the right programming language for your specific cases. There is a reason why the community is as large as it is!</p>
-
-
-
-<h3>How big is the Javascript Community?</h3>
-
-
-
-<p>Javascript could probably be considered the most popular programming language at this point. I would not argue that by code volume, but I would argue that just about every single developer that has touched the internet has either developed, debugged, or been confused by Javascript. The community then got bigger with the advent of Node.JS. This moved code from the front end to the backend where it could easily be run on a server. At the time of writing, there are over 1.3 million NPM packages available for consumption.</p>
-
-
-
-<h3>What is the Utility of Javascript?</h3>
-
-
-
-<p>When it comes to DevOps engineers, Javascript is widely used across numerous cloud platforms as a configuration management tool, scripting language, or as traffic routing or traffic modification runtime. <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a> Cloudfront uses Javascript as its primary configuration language in its event-driven Origin or Response systems. <a href="https://pages.cloudflare.com/" data-internallinksmanager029f6b8e52c="10" title="Cloudflare Pages" rel="nofollow noopener" target="_blank">Cloudflare pages</a> will utilize Javascript as its Functions framework for performing request modifications in line with internet requests.</p>
-
-
-
-<p>DevOps engineers are going to need a pile of scripting languages at their disposal as we. If you are working in an environment that already has Node.JS included, then Javascript can be a really good language to use. This Blog uses Node.JS as its delivery pipeline through Cloudflare Pages to do some content manipulation between WordPress and publishing static pages.</p>
-
-
-
-<h4>Additional Utility!</h4>
-
-
-
-<p>Javascript can be utilized as an interactive command language directly from the browser through the Developer tools. An ICL lets you input code into a running environment to get information back. Through Developer Tools consoles, you are able to run code, print variable states, etc.</p>
-
-
-
-<p>Popular tools like VSCode are also written in Javascript (TypeScript) using a tool called Electron. Electron is a cross-platform application framework for running Javascript, HTML, and CSS on desktop.</p>
-
-
-
-<h3>Javascript Learning Resources</h3>
-
-
-
-<ul><li><a target="_blank" rel="noreferrer noopener" href="https://www.codecademy.com/learn/introduction-to-javascript">https://www.codecademy.com/learn/introduction-to-javascript</a></li><li><a target="_blank" rel="noreferrer noopener" href="https://teamtreehouse.com/library/javascript-basics">https://teamtreehouse.com/library/javascript-basics</a></li><li><a target="_blank" rel="noreferrer noopener" href="https://www.learn-js.org/">https://www.learn-js.org/</a></li></ul>
-
-
-
-<h2>DevOps with Golang</h2>
-
-
-
-<p>Golang was originally designed at Google in 2007 as a replacement for C and C++.&nbsp; Go foregoes some of the more tedious facets of C and C++ like header files for type definitions.&nbsp; Go is also a compiled language instead of an interpreted language meaning that the result of something in Golang is going to be a binary.&nbsp; Golant has quickly grown in popularity and is the core language behind the very popular container orchestration framework <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>.</p>
-
-
-
-<h3>Community</h3>
-
-
-
-<p>The size of the Golang community is tough to nail down because of the way that Go mod works.&nbsp; Go mod can be any git URL that has a go.mod and go.sum file in its repository.&nbsp; From there, go mod will check out the code, and check out the code&#8217;s dependencies all while doing dependency resolution in the background.&nbsp; Since git can be hosted anywhere, nailing down how many downloads a day without some kind of body providing central registration of packages like PyPI does, the best we can do is look at something like google trends for a baseline of activity.</p>
-
-
-
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3045_RC01/embed_loader.js"></script>
-  <script type="text/javascript">
-    trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/09gbxjr","geo":"US","time":"today 12-m"},{"keyword":"/m/06ff5","geo":"US","time":"today 12-m"},{"keyword":"/m/05z1_","geo":"US","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"geo=US&q=%2Fm%2F09gbxjr,%2Fm%2F06ff5,%2Fm%2F05z1_&date=today 12-m,today 12-m,today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"});
-  </script>
-
-
-
-<p>As you can see by the graphic above, at the time of writing, Python is the dominant search in Google Trends compared to something like Golang.&nbsp; I would consider Golang a strong and growing community with projects like Kubernetes and CockroachDB along with large technology groups moving into using the stack like <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> and Uber.</p>
-
-
-
-<h3>Utility</h3>
-
-
-
-<p>In my workflow, I am generally using Golang for 2 things; microservice apps and API middleware.</p>
-
-
-
-<p>When I say microservice apps, I am generally not talking about something which is composed of a larger ecosystem.&nbsp; My microservice-type apps are usually tied into a Kubernetes stack.&nbsp; I had a particular challenge with <a href="https://linkerd.io/" data-internallinksmanager029f6b8e52c="3" title="Linkerd" rel="nofollow noopener" target="_blank">LinkerD</a> where I need to create a MutatingAdmissionWebhook to rewrite my HTTP(s) probes as in pod curl probes after setting my namespace to deny all.&nbsp; This was a good workaround to wrapping and rewriting many different helm charts to use curl probes instead of using standard HTTP(s) probes.</p>
-
-
-
-<p>You can find that code <a href="https://github.com/gwagner/linkerd-convert-http-to-curl" target="_blank" rel="noopener">here</a>.&nbsp;&nbsp;</p>
-
-
-
-<p>When doing API orchestration, I have written a few applications which will pull data from one API (or have data pushed via a webhook) into an application that may amend or transform the data before pushing it into another receiving API.&nbsp; This is particularly useful when trying to normalize data from system A to system B.&nbsp; This was particularly useful when moving from a Graphite-based metric TSDB system over to InfluxDB.&nbsp; We did not need to rewrite all of our metric collectors, we just needed to tap into the metric stream, do an on-the-fly conversion, and then output metrics to InfluxDB.</p>
-
-
-
-<h3>Learning Resources</h3>
-
-
-
-<ul><li><a href="https://www.udemy.com/course/go-building-devops-tools/" target="_blank" rel="noreferrer noopener">https://www.udemy.com/course/go-building-devops-tools/</a></li><li><a href="https://go.dev/learn/" target="_blank" rel="noreferrer noopener">https://go.dev/learn/</a></li><li><a href="https://www.codecademy.com/learn/learn-go" target="_blank" rel="noreferrer noopener">https://www.codecademy.com/learn/learn-go</a></li></ul>
-
-
-
-<h2>DevOps with Ruby</h2>
-
-
-
-<p>Because of its efficiency in DevOps, Ruby is a preferred scripting language for automating IT environments&#8217; repetitive tasks. In addition to web development, data science, and unit testing, this dynamic, interpreted programming language is used for DevOps. Ruby is also fairly simple to learn. As a result, the language has a fast-growing community of DevOps engineers. With no prior programming experience, beginners can get started with Ruby pretty quickly.&nbsp;</p>
-
-
-
-<h3>Community</h3>
-
-
-
-<p>Ruby is a difficult community to quantify fully simply because of how spread out it is.&nbsp; Ruby Gem can be a good baseline metric with roughly ~174,000 gems available from RubyGems.org and 111B+ (yeah, billion) downloads.&nbsp; If you look past ruby gems, the second most popular place that ruby is being utilized is with <a href="https://www.chef.io/" data-internallinksmanager029f6b8e52c="8" title="Chef">Chef</a>.&nbsp; The marketplace has roughly 4,000 cookbooks with roughly ~80,0000 maintainers</p>
-
-
-
-<h3>Utility</h3>
-
-
-
-<p>Ruby has some great utility when it comes to DevOps automation.&nbsp; When building out an early DevOps-focused monitoring stack, we chose Sensu Core due to its configuration-driven and scalable design.&nbsp; Most of the community-produced checks at that point were written in ruby which lent itself very well to building reusable consistent libraries that were well-tested.</p>
-
-
-
-<p>Much like the Golang example above, I have also utilized ruby as an API middleware for doing data payload manipulations.&nbsp; Prior to <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> supporting <a href="https://docs.docker.com/config/containers/logging/json-file/" target="_blank" rel="noopener">JSON File Logging</a>, there were very long debates about what separation between log entries means between different programming languages.&nbsp; Ruby was used in an environment where I was working into tail log output from containers and based on its configuration, properly parse and package logs to be sent to centralized logging systems upstream with additional metadata.</p>
-
-
-
-<h3>Learning Resources</h3>
-
-
-
-<ul><li><a href="https://gorails.com/" target="_blank" rel="noreferrer noopener">https://gorails.com/</a></li><li><a href="https://www.chef.io/" target="_blank" rel="noreferrer noopener">https://www.chef.io/</a></li></ul>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Security Considerations</h2>
-
-
-
-<p>When utilizing any code for any function whether it be DevOps or software development, you should always be concerned about security.&nbsp; Let’s say you have a 3-year-old server sitting around and its original automation code has not had any electricity run through it in the same time frame.&nbsp; That server&#8217;s automation code is probably outdated enough that there is at least some kind of CVE attached to it.&nbsp; This will be particularly easy to find if you are doing robust infrastructure scanning but will be much more obscure if you are running compiled binaries where the source code is not under some kind of routine scrutiny.&nbsp; Regardless of how you are building and running code, please make sure to clean up after yourself and avoid getting attacked by leaving a trail of outdated technology behind you.</p>
-
-
-
-<h3>Supply Chain Attacks</h3>
-
-
-
-<p>Supply chain attacks are all the rage these days.&nbsp; Consider the supply chain of your code dependency management system.&nbsp; Are you routinely scanning it for CVEs?&nbsp; Are you doing any kind of dynamic automated or manual testing of the code looking for vulnerabilities?&nbsp; Are you sure you can trust the source of your code dependencies?</p>
-
-
-
-<p>DevOps code can be commonly overlooked in a supply chain attack scenario.&nbsp; Maybe you are writing a console tool to help make your life a little bit easier.&nbsp; You go ahead and pull in a few libraries from the internet to help aid in the creation of that tool like colored output.&nbsp; You also want to be really good and write automated tests as a best practice and you need help generating some data for those tests.&nbsp; Without a persistent review of code dependencies, the OSS developer/contributor of one of the dependencies that you are utilizing is tired of their <a href="https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/" target="_blank" rel="noopener">work being used for free without any recognition or compensation</a> and deliberately destroys the project.&nbsp; There are also less directly malicious scenarios where the developer of a <a href="https://blog.sonatype.com/npm-project-used-by-millions-hijacked-in-supply-chain-attack" target="_blank" rel="noopener">popular package gets targeted and code is unknowingly slipped into their project</a>.</p>
-
-
-
-<p>The lesson is this: assume that attack vectors are everywhere and ensure that you are scanning everything you can get your hands on for CVEs.&nbsp; The industry has a good focus on this now, and the question is not IF you will get compromised, but when.&nbsp; Keep yourself safe by being proactive.</p>
-
-
-
-<h2>What Languages do I Use Most Often?</h2>
-
-
-
-<p>When I am sitting down to take care of simple tasks or to write scripts for a problem I am trying to solve; I am most often looking at a language that can help me do data manipulation, develop operational automation, build infrastructure as code, or build a deployment pipeline for my projects.</p>
-
-
-
-<h3>What do I use for Data Manipulation?</h3>
-
-
-
-<p>For me, this is generally a quick and dirty task that I am not going to be releasing to production in any form. This website does a bunch of different data manipulation tasks under the covers as part of its pipeline. I will generally choose PHP (not on this list, but it is a majority of my pure software dev background) or Javascript.</p>
-
-
-
-<p>Javascript is a fairly common language utilized in a multitude of DevOps environments that I would be able to quickly onboard someone with if needed. All of the tasks I am doing here are also fairly simple tasks in need of a simple language. I am not trying to do big data analytics, just mutate some links, move around some HTML, and soon do some automated testing.</p>
-
-
-
-<h3>What do I use for Infrastructure Management (or Infrastructure as Code)?</h3>
-
-
-
-<p>I have a Home Lab where the WYSIWG part of this website is hosted. I push all of my changes there as part of a continuous integration pipeline through Ansible. This means that I am living in the Python space.</p>
-
-
-
-<p>It could be easy to argue that I am not really using Python here. I am for sure not a full-fledged Python programmer, but I have dug through a fair bit of the source code behind Kubespray to understand the real intentions of what it is trying to accomplish. This has also helped me utilize Ansible as a swiss army knife for any of my infrastructure management needs.</p>
-
-
-
-<h3>What do I use for Deployment Pipelines?</h3>
-
-
-
-<p>I currently utilize a mixture of Javascript and GitHub Actions and GitOps to build deployment pipelines. There are a variety of other languages I could be using, but these work well for me. As stated earlier, I will shift all of my data around with Javascript. From there, GitHub actions will run any builds that I need with any triggered deploys.</p>
-
-
-
-<p>If the end result needs to go on the internet, I don&#8217;t really need to deal with a full-weight object-oriented programming language, Linux servers/Linux systems, relational databases, business intelligence, or anything like that. It makes more sense for GitOps-style triggers to be in place to automagically move my code from the repo to the internet without manual intervention.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>What is the Best General Purpose Programming Language?</h2>
-
-
-
-<p>I think you need to first ask, what is most native to my environment. If Node.JS is not installed on every single one of your servers, but you want to write all your scripts in Javascript, that is going to be tough.</p>
-
-
-
-<p>If you are looking for a one-size fits all answer, then you are not going to find one. I would keep your mind open, try out new things, and see what fits the situation you are in.</p>
-
-
-
-<h2>What is the Best Language for DevOps?</h2>
-
-
-
-<p>In my opinion, the best general-purpose programming language (and the best language for DevOps) is going to be Python.  While I am a fan of GoLang for numerous reasons, python has been battle-tested in this space since before DevOps was a coined methodology in the technology space.  Other languages absolutely have some specific utility in the space, but i would consider Python to easily be the reigning champion of the best language for DevOps.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>As I stated at the beginning of this article, this is by no means a definitive list. I do not believe there is an answer to the question &#8220;Which Programming Language Should I Learn as a DevOps Engineer?&#8221;.  This is a list of some of the tools that I utilized to build effective DevOps workflows and to enable the flow of delivery.  I utilize these tools at my job along with utilizing these tools in my homelab.  I believe that everyone could use a little bit of software development in their life.  Python, Javascript, Golang, or Ruby are really great places to start with languages because of their utility, communities, and ties to DevOps and DevOps tooling.</p>
-
-
-
-<p>There are absolutely other programming languages that are not on this list. If you feel like I have left anything out that is very relevant to DevOps technologies and system administration, or are just common languages that are being utilized frequently, don&#8217;t hesitate to contact me and I can update the list.</p>
 ]]></content:encoded>
 					
 		

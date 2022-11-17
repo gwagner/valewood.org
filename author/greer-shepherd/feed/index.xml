@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/greer-shepherd/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 28 Oct 2022 19:40:11 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 17 Nov 2022 21:35:10 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,193 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>7 Tips for Landing a DevOps Position Without a Degree</title>
+		<link>https://www.valewood.org/devops-without-education/</link>
+		
+		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
+		<pubDate>Thu, 17 Nov 2022 21:28:06 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<guid isPermaLink="false">/?p=1645</guid>
+
+					<description><![CDATA[DevOps is hot right now. The demand for professionals with the skills to bridge the gap between software development and information technology operations is growing significantly. It’s not difficult to understand why. DevOps is a methodology that optimizes processes, removes&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is hot right now. The demand for professionals with the skills to bridge the gap between software development and information technology operations is growing significantly.</p>
+
+
+
+<p>It’s not difficult to understand why. DevOps is a methodology that optimizes processes, removes barriers, and improves collaboration between software developers and information technology (IT) operations teams. Because of its benefits, it’s becoming an increasingly attractive option for IT professionals who want to stand out from the crowd.</p>
+
+
+
+<p>In this blog post, you will learn about the types of roles available in DevOps, how you can land your first DevOps job, and what you need to succeed in your new role as a DevOps engineer or specialist.</p>
+
+
+
+<h2>What Is DevOps?</h2>
+
+
+
+<p>DevOps is short for &#8220;software development operations.&#8221; It describes a set of best practices related to transforming the relationship between software developers and information technology (IT) operations personnel.</p>
+
+
+
+<p>DevOps aims to improve collaboration, increase efficiency, and reduce waste. This organizational transformation is commonly referred to as cultural transformation.</p>
+
+
+
+<p>Achieving cultural transformation requires employees in both departments to change their perspectives and expectations of each other. This is why DevOps is often seen as an ongoing journey, not a destination. DevOps is often associated with agile software development methodologies, such as Kanban, Scrum, and others.</p>
+
+
+
+<h2>Types of Jobs in DevOps</h2>
+
+
+
+<p>DevOps is a methodology that requires several different disciplines to fully adopt and become proficient in. Let&#8217;s look at a few different roles in DevOps to see how the market is segmenting labor in this space.</p>
+
+
+
+<ul>
+<li>Software Engineer &#8211; Software engineers are responsible for building software products and services against a set of requirements.</li>
+
+
+
+<li>Operations Engineer &#8211; Responsible for managing the lifecycle of technology ensuring the stability and reliability of systems.</li>
+
+
+
+<li>Quality Assurance &#8211; Responsible for validating the quality of software being developed through automated testing. Also responsible for making testing available to an entire devops team.</li>
+
+
+
+<li>DevOps Engineer &#8211; Let’s start with the basics. If you’re looking to work as a DevOps engineer, you’ll need to be able to understand and work with code, have an excellent knowledge of server environments, and be able to think on the fly and find solutions to new problems.</li>
+
+
+
+<li>DevOps Engineer Manager &#8211; In this capacity, you’ll need to be able to work with both technical and non-technical staff. You’ll be responsible for ensuring that the team is working effectively and efficiently. So, it goes without saying that you’ll need strong communication skills.</li>
+
+
+
+<li>DevOps Architect &#8211; A DevOps architect is responsible for designing and implementing the organization’s software delivery system. This is often a challenging role that requires a great deal of experience, knowledge and a strong understanding of organizational needs.</li>
+
+
+
+<li>DevOps Manager &#8211; As a DevOps manager, you’ll be responsible for overseeing the entire DevOps process, including hiring, training, and managing staff. You’ll need to be able to understand and communicate the needs of multiple stakeholders. You’ll also need to be able to manage the entire lifecycle of products, from development to delivery and ongoing maintenance.</li>
+</ul>
+
+
+
+<p>As you can see, normal everyday engineering roles can join a DevOps team. Don&#8217;t immediately exclude yourself because you have not been a DevOps engineer in the past. Most of us have started out in software engineering or system operations roles anyway.</p>
+
+
+
+<h2>Tips for Landing a DevOps Job Without a Degree</h2>
+
+
+
+<p>In today’s job market, it is not enough to just have a good education and experience from your previous job. You must also know how to write a resume that highlights your skills and experience in a way that shows you as the best candidate for the job.</p>
+
+
+
+<p>This can be done by taking some time to research and learn about the particular industry you are interested in working in, as well as the company and the specific role you want to apply for.</p>
+
+
+
+<p>When you have this information in hand, you can then create a resume that places your skills, experience, and values at the top of the list. This will make it easy for hiring managers to see what makes you different than other candidates and more likely to be hired.</p>
+
+
+
+<p>With these things in mind, it is important to keep your resume updated as new jobs become available. You should also stay on top of employment trends so that you are ready when opportunities arise. By doing this, you will increase your chances of landing an interview and ultimately getting hired.</p>
+
+
+
+<p>Here are a few additional steps you can take to increase your odds of landing a DevOps Engineering position:</p>
+
+
+
+<ol>
+<li>Research the role you want &#8211; Blindly showing up to a job interview for a DevOps position is not going to go well. Take some time to learn and understand the DevOps methodology and what it is trying to accomplish. Any of the technical skills needed can be acquired on the job so do let that be a limiting factor.</li>
+
+
+
+<li>Network &#8211; The single best way to land a job in DevOps without a degree is to network, network, network. It’s one of the most effective ways to find out about new opportunities, learn about the industry, and connect with people who can help you advance your career.</li>
+
+
+
+<li>Identify Your Skills &#8211; Before you can network effectively, you need to know what your skills are. Doing this will help you identify which organizations are best for you, as well as identify skill gaps. Furthermore, it will help you understand how to position yourself as the best candidate for a given role.</li>
+
+
+
+<li>Join a DevOps Community &#8211; DevOps communities, like meetup groups and online forums, are excellent ways to find out about new opportunities and connect with people who can help you advance your career.</li>
+
+
+
+<li>Create an Online Portfolio &#8211; Online portfolios can be incredibly powerful tools for job seekers without a degree. You should include examples of your work and information about your projects and roles.</li>
+
+
+
+<li>Phone a Friend &#8211; Look through Linkedin, Facebook, Twitter, or other free resources for peers who are already working in the DevOps space to find out what they think is important and work towards developing similar skills.</li>
+
+
+
+<li>Network with Employers &#8211; When you’re networking with employers, don’t sell yourself short. Be sure to highlight your skills, background, and experience.</li>
+</ol>
+
+
+
+<h2>3 Steps to Landing Any Job You Want</h2>
+
+
+
+<p>If you’re looking to find a job, landing any kind of position is a big deal. You can start by proactively searching for the positions you want, or by going through a recruiter or headhunter if they have a specific role you’re interested in.</p>
+
+
+
+<p>When you land a new job, you have to be prepared for all kinds of situations. You might have to move across the country if the company has an office there, and you may also have to learn new skills or take on new responsibilities.</p>
+
+
+
+<p>Making yourself ready for these situations can help you land any kind of job. For example, you could build up your résumé and online presence by completing online courses or volunteering at local organizations. This will show that you are ready for a new position and will also make it easier to find work once you are ready.</p>
+
+
+
+<p>Another option is to join professional organizations like Toastmasters or other networking groups where you can meet people who can help you land a new job. Just remember: Landing any kind of job takes time, so be prepared by taking steps now that will make it easier in the future!</p>
+
+
+
+<ul>
+<li>Define What You Want &#8211; Before you embark on your job search, you need to make an honest assessment of what you want. Do you want a full-time position, or will a contract position work for you? How many hours do you want to work per week? What is your salary range? These are just a few of the questions you’ll need to answer.</li>
+
+
+
+<li>Identify Your Strengths &#8211; Once you’ve identified what you want, you need to assess what you have to offer. What are your strengths? What are your weaknesses? This will help you identify which employers will be best for you.</li>
+
+
+
+<li>Write a Great Resume &#8211; Once you’ve assessed your skills and talents, you need to translate them into action for your resume. This is your first opportunity to impress a prospective employer.</li>
+</ul>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>If you want a job in DevOps, you’ll need to be prepared to show what you have to offer and sell yourself to prospective employers. Remember, though, that there are many different types of jobs in DevOps.</p>
+
+
+
+<p>So, before you start your search, it’s important to understand what you are looking for and how to stand out in a competitive hiring landscape. If you want a job in DevOps, you’ll need to be prepared to show what you have to offer and sell yourself to prospective employers.</p>
+
+
+
+<p>Remember, though, that there are many different types of jobs in DevOps: DevOps engineer, architect, engineer manager, and manager. Target what you want to be doing, and start applying. You are probably more qualified than you initially thought!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>What is Automation Testing in DevOps</title>
 		<link>https://www.valewood.org/devops-testing/</link>
 		
