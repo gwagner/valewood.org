@@ -53,6 +53,7 @@
 <p>The code for the project can be found <a href="https://github.com/gwagner/ansible-examples/tree/main/modify-vmware-esxi-guest-file" target="_blank" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/modify-vmware-esxi-guest-file" rel="noreferrer noopener">here</a>!</p>
 
 
+
 <p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -60,6 +61,7 @@
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </p>
 
 
@@ -222,6 +224,7 @@
       delegate_to: localhost</code></pre>
 
 
+
 <p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -229,6 +232,7 @@
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </p>
 
 
@@ -292,6 +296,7 @@
 <p>The code for the project can be found <a href="https://github.com/gwagner/ansible-examples/tree/main/create-vmware-esxi-vm" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/create-vmware-esxi-vm" target="_blank" rel="noopener">here</a>!</p>
 
 
+
 <p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -299,6 +304,7 @@
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </p>
 
 
@@ -631,6 +637,7 @@ all:
       throttle: 5</code></pre>
 
 
+
 <p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -638,6 +645,7 @@ all:
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </p>
 
 
@@ -779,6 +787,7 @@ all:
 <p>Doing file conversions or data munging is an important skill to learn when growing in a <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> position.  While this is a fairly basic example, utilize this as a stepping stone to understanding more complex data structures.</p>
 
 
+
 <p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -786,6 +795,7 @@ all:
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </p>
 
 
@@ -862,6 +872,7 @@ all:
 <pre class="wp-block-code json"><code>&#091;"/site/foo/", "/site/bar/"]</code></pre>
 
 
+
 <p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -869,6 +880,7 @@ all:
      data-ad-format="fluid"
      data-ad-client="ca-pub-7120242057450442"
      data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </p>
 
 
