@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sun, 06 Nov 2022 01:39:31 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 17 Nov 2022 22:48:31 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,113 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Why You Need to Build A Culture of Trust and Respect in DevOps</title>
+		<link>https://www.valewood.org/devops-trust/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sat, 12 Nov 2022 22:45:48 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[devops trust]]></category>
+		<guid isPermaLink="false">/?p=1657</guid>
+
+					<description><![CDATA[Trust and respect are essential ingredients in any healthy working environment. When trust and respect are present, team members feel safe to give their best, collaborate openly, and challenge one another constructively. When trust and respect are absent, team members&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Trust and respect are essential ingredients in any healthy working environment. When trust and respect are present, team members feel safe to give their best, collaborate openly, and challenge one another constructively.</p>
+
+
+
+<p>When trust and respect are absent, team members feel insecure about their performance, withhold ideas for fear of judgement or worry about repercussions if they speak up.</p>
+
+
+
+<p>There is an inherent risk in bringing together people from different backgrounds with different skill sets. And in the context of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a>, you’re also putting together people who likely have very different roles within your organization as well. The potential for discord is high.</p>
+
+
+
+<p>So how do you create a culture of trust and respect when working with so many new and different people? Here’s why you need to build a culture of trust and respect in your DevOps initiative.</p>
+
+
+
+<h2>It’s the Foundation for Good Communication</h2>
+
+
+
+<p>Communication is the foundation for everything in DevOps. You have to be able to openly share what’s working, what isn’t, and why without judgement, without fear of repercussions, and without ego getting in the way.</p>
+
+
+
+<p>What happens when, in a meeting, someone says they aren’t getting the information they need from a team member? Or that they feel rushed to get their job done? Or that they aren’t seeing the value in the continuous integration process?</p>
+
+
+
+<p>Without a culture of trust and respect, communication will be strained. Team members will be hesitant to speak up, and afraid of judgement. They’ll feel anxious like they don’t have permission to be honest with the team.</p>
+
+
+
+<p>And if they don’t feel safe speaking up, the communication breaks down, and the DevOps initiative will suffer as a result.</p>
+
+
+
+<h2>It Builds Confidence for Everyone</h2>
+
+
+
+<p>One of the biggest challenges in DevOps is building trust between different people, and different parts of the organization. But if you lack the confidence to speak up, you’ll never be able to build that trust missing out on the opportunity to learn from your colleagues and grow yourself as a result.</p>
+
+
+
+<p>In a culture where trust and respect are absent, people are less likely to share their ideas, and more likely to either shut down and not try at all, speak up in ways that create discord, and don’t encourage others to respond.</p>
+
+
+
+<p>You need to feel confident to share your ideas, challenge others, and learn from both your successes and your mistakes. Without trust and respect, you won’t feel confident enough to do any of these things, and again, the DevOps initiative will suffer as a result.</p>
+
+
+
+<h2>It Creates a Safe Environment For Learning</h2>
+
+
+
+<p>A healthy DevOps culture needs to create a safe environment for learning. This means not only being transparent about what’s working and what isn’t, but also being open to feedback without fear of judgement.</p>
+
+
+
+<p>This is the best way to identify pain points and areas where improvement is needed. When team members feel safe to share their feedback, they can do so in a way that doesn’t create any sense of judgement, but rather, encourages the team to look at the information objectively and decide how to act on it.</p>
+
+
+
+<p>But when a team is operating in a culture where trust and respect aren’t present, this kind of feedback is very tricky to navigate. Because team members are likely to feel anxious about sharing their true feelings and experiences, and will likely speak up in ways that are designed to minimise judgement. This can lead to misunderstood feedback, and squashing the open and objective dialogue that is needed for improvement.</p>
+
+
+
+<h2>DevOps is About People and Culture</h2>
+
+
+
+<p>All of the above leads us to one important conclusion: building a healthy DevOps culture is about people and trust. Building trust and respect is never a one-time thing, and it requires a sustained effort from all members of the team, regardless of their backgrounds.</p>
+
+
+
+<p>When you see a team member struggling to find their footing, or growing frustrated at their role, you have to be willing to lend a helping hand. And to do this, you must first be aware of your own behaviour and how you’re modelling the behaviour you want to see.</p>
+
+
+
+<p>You must be willing to confront your own behaviours that are likely to be creating a culture that is lacking in trust and respect. And you must be willing to take ownership of your own feelings and be open about how they are impacting your work and the team as a whole.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>DevOps is all about collaboration, communication and cooperation. When everyone on the team trusts and respects each other, they are much more likely to collaborate effectively. This can only happen when everyone feels safe to give their opinion and be open about their needs. Building a culture of trust and respect will take time and effort. However, it is well worth the effort as it will lead to better communication, a healthier team, and ultimately better results for your organization.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>How are Agile and DevOps Interrelated?</title>
 		<link>https://www.valewood.org/devops-and-agile/</link>
 		
@@ -37,6 +144,7 @@
 		<category><![CDATA[delivery]]></category>
 		<category><![CDATA[development]]></category>
 		<category><![CDATA[devops]]></category>
+		<category><![CDATA[devops and agile]]></category>
 		<category><![CDATA[software]]></category>
 		<guid isPermaLink="false">/?p=1264</guid>
 
@@ -2403,148 +2511,6 @@ all:
 
 
 <p>Do DevOps engineers need a coding background? My perspective is, that it wouldn&#8217;t hurt. Diving into software development patterns and extending them into the DevOps delivery space allows for greater consistency, along with the ability to scale to meet demand much more quickly without feeling overwhelmed. I don&#8217;t think that software developers need to become the best systems administrators ever created. I don&#8217;t think that systems administrators need to become the greatest software developers ever created. I do think that everyone in technology could benefit from a bit of exposure to spaces outside of their primary responsibilities because it lends itself well to increasing quality and flexibility while delivering solutions.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>What is DevOps Automation?</title>
-		<link>https://www.valewood.org/what-is-devops-automation/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Sat, 17 Sep 2022 15:19:44 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<guid isPermaLink="false">/?p=450</guid>
-
-					<description><![CDATA[Automation is a cornerstone of DevOps. If you are not doing DevOps Automation, I am not entirely sure what you are doing? Building robust automation helps drive the consistency and quality that the DevOps methodology is known for. In a&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Automation is a cornerstone of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a>.  If you are not doing DevOps Automation, I am not entirely sure what you are doing?  Building robust automation helps drive the consistency and quality that the DevOps methodology is known for.  In a lot of ways, we can look towards manufacturing to understand why DevOps automation is so important.  Unless you are looking at a niche hand-made luxury item car a Pagani Utopia, anything that is being produced at scale is done in a factory with automation.  Let&#8217;s dive in and understand the manufacturing benefits of automation and see if we can apply them to DevOps automation!</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>DevOps Automation through the lens of Manufacturing</h2>
-
-
-
-<p>In the intro of this article, I used a car analogy to highlight something that is a one of a kind hand made luxury item.  Cars are a bit overdone, so let&#8217;s actually walk down analogy road with prefabricated houses.  I actually think houses are a better fit here because it is hard to change up an automated manufacturing line to put a nice casement window into your Pagani, but prefabricated homes have that all figured out!</p>
-
-
-
-<h2>Process</h2>
-
-
-
-<p>Much like any work in any industry, someone is going to be requesting something and there is someone out there that is going to produce that request.  That is what keeps the world moving.</p>
-
-
-
-<p>The process for buying a prefab house is generally as follows.</p>
-
-
-
-<ul><li>Do some research on prefabricated housing companies</li><li>Meet with their sales department</li><li>Pick a base model from a design catalog</li><li>Design the building with an architect</li><li>Review and make adjustments</li><li>Sign off on the design</li><li>Generate cut lists from detailed plans</li><li>Send to manufacturing</li><li>Boom, House!</li></ul>
-
-
-
-<p>The biggest caveat here is that the architects will generally start off from base plans that they know the manufacturing department can build rather than starting from scratch.  Because this is being designed from a prebuilt manufacturing process, you don&#8217;t want to start from a blank slate because quality will suffer assuming that your primary considerations are cost and time.</p>
-
-
-
-<p>The process for building technology with DevOps automation does not need to really be all that different.</p>
-
-
-
-<ul><li>Pick a baseline technology stack that is recognized as a pattern</li><li>Design your technology requirements with an architect</li><li>Review and make adjustments</li><li>Sign off on the design</li><li>Generate epics and stories from detailed plans</li><li>Send to engineering teams</li><li>Boom, Technology!</li></ul>
-
-
-
-<p>When building stacks with DevOps automation, going from the ground up can be expensive and take a lot of additional time.  Working with defined technology stacks and reusing existing investments can really speed up the process and reinforce quality delivery.</p>
-
-
-
-<h2>What do you do?</h2>
-
-
-<div class="wp-block-image">
-<figure class="alignright size-medium"><img decoding="async" width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-questions-300x200.jpg" alt="DevOps Automation Questions" class="wp-image-462" srcset="/wp-content/uploads/2022/09/devops-automation-questions-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-questions-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-questions-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-questions-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-questions-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-questions-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-questions-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-questions-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-questions-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
-
-
-<p>Buildings are going to have a few main components to them.  You are generally going to have a foundation, walls, roof, doors, windows, bathroom, kitchen, and bedrooms.  Those are the known knowns.  When a prefab housing company goes out to try and build a new house, they are not trying to bolt on a rocket ship launch pad.  Prefab companies are trying to build the BEST walls, and the BEST roof because they are putting these components together in a controlled environment utilizing their specialized processes and methods.</p>
-
-
-
-<p>DevOps automation is really trying to achieve the same goal here.  If the bathrooms are servers and the roof is a firewall, DevOps engineers are trying to build the BEST bathrooms and roofs possible in their controlled environments utilizing their specialized processes to get the job done.  </p>
-
-
-
-<p>Now imagine a customer showing up to a prefab housing company and asking them to build out the aforementioned rocket ship launch pad.  Since this company is a group of builders, giving infinite time and money, I am sure they could build a serviceable launch pad that could send someone&#8217;s rocket to the moon.  A DevOps engineer is going to face a similar challenge when someone asks them to build out a mainframe, our analogous rocket launch pad when they are used to building something in <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a>.  </p>
-
-
-
-<p>A business should be in a position to provide its DevOps engineers with reliable processes that they can lean back on.  Part of that is tool selection, but part of that is having a definition of WHAT you are building.  A term that I end up using a lot in the office is &#8220;Selling the cars that we have on the lot&#8221;.  Under this analogy, I should probably change that to houses in the yard.  If we are constantly asking our people to context shift and come up with new and creative ways to build out the next diverse set of infrastructure without any processes to lean back on, they are never going to be able to do their best work.</p>
-
-
-
-<h2>Tool Selection</h2>
-
-
-<div class="wp-block-image">
-<figure class="alignleft size-medium"><img decoding="async" width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-300x200.jpg" alt="DevOps Automation" class="wp-image-452" srcset="/wp-content/uploads/2022/09/devops-automation-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
-
-
-<p>This is generally a very spicy topic.  There are some individuals who have STRONG allegiances to specific tool stacks, and others that don&#8217;t really care what the tool is as long as they get to learn something new.</p>
-
-
-
-<p>We can equate this topic to fixtures in a house like windows, doors, faucets, toilets, showers, and other such finishings.  We know we need them and we know that we are going to have to live with them for a long time.  Windows and doors are very hard to change over time.  Changing them out essential means you are cutting stuff out of your house which keeps out bugs and burglars.  If new windows and doors are not installed correctly, you may end up with a creak or a jammed window, or you may end up with bugs and burglars inside of your house.</p>
-
-
-
-<p>In a prefab manufacturing space, they are going to be really good at hanging windows and doors in their fixtures from a specific set of manufacturers.  If you ask for double-hung windows, sliding windows, awning windows, or a bay window; the company that you are working with probably has something to offer you.  If you show up asking for a highly energy-efficient stained glass window that is UV resistant with a 100-year warranty, they probably are not going to be able to help.</p>
-
-
-
-<p>DevOps automation tooling is very similar in nature to windows.  If your engineers and architects are very used to using something like Jenkins and someone shows up with TravisCI then you are probably not going to make a lot of progress delivering your project.  Now, luckily, unlike the stained glass windows analogy; tooling in the DevOps space is trainable if the team is interested in learning something new.  Please take note, just because we are really good at computers does not mean that we know everything about computers.  We all need time and space to learn.</p>
-
-
-
-<h2>Specs and Standards</h2>
-
-
-<div class="wp-block-image">
-<figure class="alignright size-medium"><img decoding="async" width="300" height="200" src="/wp-content/uploads/2022/09/devops-automation-process-300x200.jpg" alt="DevOps Automation Specs and Standards" class="wp-image-463" srcset="/wp-content/uploads/2022/09/devops-automation-process-300x200.jpg 300w, /wp-content/uploads/2022/09/devops-automation-process-1024x683.jpg 1024w, /wp-content/uploads/2022/09/devops-automation-process-768x512.jpg 768w, /wp-content/uploads/2022/09/devops-automation-process-1536x1024.jpg 1536w, /wp-content/uploads/2022/09/devops-automation-process-2048x1365.jpg 2048w, /wp-content/uploads/2022/09/devops-automation-process-1920x1280.jpg 1920w, /wp-content/uploads/2022/09/devops-automation-process-1170x780.jpg 1170w, /wp-content/uploads/2022/09/devops-automation-process-585x390.jpg 585w, /wp-content/uploads/2022/09/devops-automation-process-263x175.jpg 263w" sizes="(max-width: 300px) 100vw, 300px" /></figure></div>
-
-
-<p>Every industry has some kind of standards or &#8220;code&#8221; that they must meet to be &#8220;compliant&#8221;.  The housing industry has varying standards across the country and is even broader when you look at the world holistically.  The building industry is going to be governed by regulatory compliance through Building Codes.  Your foundation must be below the frost line in many places where it is cold, but on-grade foundations are common where it is warmer.</p>
-
-
-
-<p>Technology may not have as many specific codes written into law as buildings do, but we are governed by certain specifications, certifications, and expectations.  A company building prefab homes will need to read up and study exactly what their service areas expect them to be producing to ensure that their buildings will pass inspections.  Businesses producing technology need to do the same thing except it is going to be more focused on the industries that they serve.  </p>
-
-
-
-<p>DevOps automation can help provide baselines that define those standards and make them reusable across projects which serve the same industries.  If you are developing technology for the medical space, there are many stringent controls that need to be put in place.  If you are building those stacks out in a more traditional way, it can be costly to re-engineer many solutions over and over again.  Employing DevOps automation is analogous to a prefab housing company utilizing jigs to repeat similar work while adhering to a 16-inch on-center standard.  You won&#8217;t see prefab housing companies constantly pulling out the tape measure, they will throw lumber into a preset jig and start nailing off a wall with speed and precision.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>There are a lot of lessons we can draw from the manufacturing space when developing technology.  There is a reason why Toyota and its <a href="https://global.toyota/en/company/vision-and-philosophy/production-system/" data-internallinksmanager029f6b8e52c="13" title="Toyota Production System" rel="nofollow noopener" target="_blank">Toyota Production System</a> are highly regarded for their lean manufacturing processes.  Technology expectations should not really be any different than expectations that we have around how things are produced outside of cyberspace.  Embrace DevOps automation in a similar way that manufacturing has embraced automation and you will see quality increases immediately!</p>
 ]]></content:encoded>
 					
 		
