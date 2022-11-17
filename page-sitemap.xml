@@ -2,30 +2,30 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://www.valewood.org/</loc>
-		<lastmod>2022-11-11T22:23:07-06:00</lastmod>
+		<lastmod>2022-11-16T18:55:23-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/</loc>
+		<lastmod>2022-11-16T19:15:42-06:00</lastmod>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/11/DevOps-Process-Flow-Image-1024x503.png</image:loc>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/topics/devops/</loc>
-		<lastmod>2022-11-13T21:37:57-06:00</lastmod>
+		<lastmod>2022-11-16T19:15:06-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/topics/devops/faq/</loc>
+		<lastmod>2022-11-16T19:13:32-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/</loc>
+		<lastmod>2022-11-16T19:11:43-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/topics/devops/resources/dictionary/</loc>
 		<lastmod>2022-11-13T15:35:25-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/topics/devops/faq/</loc>
-		<lastmod>2022-11-11T22:13:21-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/</loc>
-		<lastmod>2022-11-11T22:12:45-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/</loc>
-		<lastmod>2022-11-11T22:11:54-06:00</lastmod>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/11/DevOps-Process-Flow-Image-1024x503.png</image:loc>
-		</image:image>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/about-me/</loc>

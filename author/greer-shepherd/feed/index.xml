@@ -18,7 +18,7 @@
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
 
 <image>
 	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
@@ -115,7 +115,7 @@
 
 
 
-<figure class="wp-block-image"><a href="https://www.headspin.io/blog/the-testing-pyramid-simplified-for-one-and-all" target="_blank" rel="noopener"><img src="https://global-uploads.webflow.com/619e15d781b21202de206fb5/6316d9e765cd53d9937e2b6a_The-Testing-Pyramid-Simplified-for-One-and-All.webp" alt="The Testing Pyramid"/></a><figcaption>Headspin: The Testing Pyramid: Simplified for One and All</figcaption></figure>
+<figure class="wp-block-image"><a href="https://www.headspin.io/blog/the-testing-pyramid-simplified-for-one-and-all" target="_blank" rel="noopener"><img decoding="async" src="https://global-uploads.webflow.com/619e15d781b21202de206fb5/6316d9e765cd53d9937e2b6a_The-Testing-Pyramid-Simplified-for-One-and-All.webp" alt="The Testing Pyramid"/></a><figcaption>Headspin: The Testing Pyramid: Simplified for One and All</figcaption></figure>
 
 
 
