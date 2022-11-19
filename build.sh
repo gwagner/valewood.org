@@ -7,6 +7,8 @@ npm install glob
 npm install lunr
 npm install cheerio
 npm install --save-dev pages-plugin-asset-negotiation
+#npm install @ampproject/toolbox-optimizer
+
 
 # Generate WebP Images
 node webp.mjs

@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.valewood.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://www.valewood.org/devops-monitoring/</loc>
+		<lastmod>2022-11-19T14:40:38-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-rapid-delivery/</loc>
+		<lastmod>2022-11-19T14:40:22-06:00</lastmod>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/devops-trust/</loc>
-		<lastmod>2022-11-17T16:48:31-06:00</lastmod>
+		<lastmod>2022-11-19T14:23:03-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-without-education/</loc>
+		<lastmod>2022-11-19T14:22:27-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-and-agile/</loc>
 		<lastmod>2022-11-17T16:31:14-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/devops-without-education/</loc>
-		<lastmod>2022-11-17T15:35:10-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/top-relevant-devops-skills/</loc>
