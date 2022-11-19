@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/greer-shepherd/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Thu, 17 Nov 2022 21:35:10 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 19 Nov 2022 20:40:22 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,193 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>How to Achieve Rapid Application Delivery with DevOps</title>
+		<link>https://www.valewood.org/devops-rapid-delivery/</link>
+		
+		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
+		<pubDate>Sat, 19 Nov 2022 20:19:20 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<guid isPermaLink="false">/?p=1668</guid>
+
+					<description><![CDATA[DevOps has become a powerful set of tools, processes, and cultural norms for improving the deployment and operation of the software. As businesses grow more reliant on software applications, DevOps becomes even more important as it aids in accelerating the&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> has become a powerful set of tools, processes, and cultural norms for improving the deployment and operation of the software. As businesses grow more reliant on software applications, DevOps becomes even more important as it aids in accelerating the delivery of new features to production.</p>
+
+
+
+<p>Instead of relying on lengthy manual processes or testing stages to release updates, DevOps helps you streamline your QA process so you can get new features out faster than ever before.</p>
+
+
+
+<p>The success of any organization relies on its ability to scale quickly and efficiently react to market demands. The demand for fast-paced change has forced many companies to reevaluate their current operational strategies. In response, organizations are now adopting a new culture for developing software and continuous integration processes that support rapid application development and application delivery cycles.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>The Benefits of DevOps in Software Development</h2>
+
+
+
+<p>DevOps is often used to describe the relationship between software development and operations that have evolved over the last couple of years. The term was first used in The Phoenix Project, a novel about bringing together IT and business leaders to fix a failing production system. It’s an abbreviation of “software development” and “operations”.</p>
+
+
+
+<p>Its main goal is to get better collaboration between IT departments and software development teams. The DevOps movement gained momentum in the 2010s, as organizations looked for ways to improve application deployment and management while meeting growing customer demands.</p>
+
+
+
+<p>The software development process includes several stages, like planning, designing, and testing the product. In an Agile project, these stages happen in very short iterations, and organizations work in a continuous flow. DevOps is the way of organizing work at scale and is about breaking down silos between teams and finding ways for them to work more closely together.</p>
+
+
+
+<p>Rapid application development is also an early cornerstone in any kind of digital transformation.</p>
+
+
+
+<h2>Continuous Integration in DevOps</h2>
+
+
+
+<p>The ability to test new code is a key component for DevOps to work effectively. Continuous integration (CI) is the practice of integrating new code with existing code on a frequent basis. CI triggers the creation of new versions of software after every new code deployment.</p>
+
+
+
+<p>Modules are integrated with other modules based on their dependency relationships. By using automated CI tools, developers can continuously test code against a production-like environment while they are responsible for writing code.</p>
+
+
+
+<h2>Continuous Delivery in DevOps</h2>
+
+
+
+<p>Organizations that have embraced CI are now looking to accelerate the deployment process further by implementing continuous delivery (CD). CD can be described as the automation of the entire delivery process. It includes automating the build and test process, setting up the necessary infrastructure, and using a deployment tool to deploy new application versions to production.</p>
+
+
+
+<h2>Continuous Testing in DevOps</h2>
+
+
+
+<p>Finally, continuous testing is the practice of the entire software development and testing team executing automated tests together. It is achieved through the use of CI tools that allow the team to run tests against the code and infrastructure in a single console.</p>
+
+
+
+<p>By adopting CI/CD and embracing a DevOps culture, companies can reduce the time it takes to deliver new features to customers by 50 percent, according to research by CA Technologies.</p>
+
+
+
+<h2>What is Rapid Application Delivery?</h2>
+
+
+
+<p>Rapid application delivery is the practice of producing, testing, and deploying applications quickly from ideation to implementation — usually within days or even hours, rather than months or even years.</p>
+
+
+
+<p>The point of it all is to speed up the entire software development process, with the ultimate goal of helping businesses bring their products or services to market faster. Organizations that are able to rapidly deliver new applications can respond more quickly to market conditions and customer needs, and therefore retain a competitive advantage.</p>
+
+
+
+<h2>Why is Application Delivery Speed Important?</h2>
+
+
+
+<p>Fast delivery of new applications is critical to keeping up with customer expectations and staying ahead of competitors. In today&#8217;s business environment, customers want goods and services faster than ever before. Consumers expect to be able to click a button and have their goods delivered to their doorsteps in just a few days.</p>
+
+
+
+<p>Rapid application development means you can meet these expectations of speed and customer service. If you’re able to bring a new product or service to market quickly, you can generate greater revenue than if your offerings are delayed by months or even longer.</p>
+
+
+
+<p>Speed is a major factor in customer decision-making. Moreover, if you’re behind the curve, you’ll most likely be out-competed by other companies that are able to get products or services to market quicker than you. If you’re slower than your competitors, you could lose market share and customers, which could damage your brand and profitability.</p>
+
+
+
+<h2>Benefits of Rapid Delivery</h2>
+
+
+
+<p>If you’re able to deliver apps quickly, you’ll see benefits in many areas, including the following:</p>
+
+
+
+<ul>
+<li><strong>Higher Revenue:</strong> If you’re able to get products or services to market faster, you’ll be able to generate more revenue than if your offerings are delayed by months or years.</li>
+
+
+
+<li><strong>Increased Brand Awareness: </strong>If you’re able to get products or services to market faster, you’ll be able to increase brand awareness, which can help you to grow your customer base.</li>
+
+
+
+<li><strong>Improved Customer Engagement:</strong> More rapid app delivery means increased customer engagement, which leads to greater customer retention.</li>
+
+
+
+<li><strong>Reduced Costs:</strong> By accelerating the software development process and cutting out unnecessary steps, you can reduce costs.</li>
+</ul>
+
+
+
+<h2>How to Achieve Rapid Application Delivery in the Enterprise</h2>
+
+
+
+<p>There are many steps you can take to achieve rapid application delivery in your organization, including the following:</p>
+
+
+
+<ul>
+<li><strong>Identify the Business Problem:</strong> Before you do anything else, you have to identify the business problem that you’re trying to solve. What is the company trying to accomplish? Once you know what business problem you’re trying to solve, you can create an application backlog.</li>
+
+
+
+<li><strong>Create an Effective Solution: </strong>You must then create an effective solution that will meet the needs of the business problem you’re trying to solve. You can achieve this by using a collaborative approach to software development in order to build an application with input from all stakeholders.</li>
+
+
+
+<li><strong>Test the Solution:</strong> The next step is to test the solution to ensure that it will solve the business problem in the way that you intended. You can do this by using automated testing and continuous integration/continuous delivery (CI/CD) to maximize quality control and minimize the time to release.</li>
+</ul>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As businesses grow more reliant on software applications, DevOps becomes even more important as it aids in accelerating the delivery of new features to production. The adoption of DevOps can significantly reduce the time it takes to deliver new features to customers by automating the build, test, and deployment processes. By accelerating the deployment process, DevOps helps organizations meet growing customer demands while reducing risk.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>7 Tips for Landing a DevOps Position Without a Degree</title>
 		<link>https://www.valewood.org/devops-without-education/</link>
 		
@@ -47,6 +234,18 @@
 
 
 <p>In this blog post, you will learn about the types of roles available in DevOps, how you can land your first DevOps job, and what you need to succeed in your new role as a DevOps engineer or specialist.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -159,6 +358,18 @@
 
 <li>Network with Employers &#8211; When you’re networking with employers, don’t sell yourself short. Be sure to highlight your skills, background, and experience.</li>
 </ol>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 

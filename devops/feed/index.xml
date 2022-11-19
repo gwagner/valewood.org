@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Thu, 17 Nov 2022 22:48:31 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 19 Nov 2022 20:40:38 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,395 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>The Importance of Constant Monitoring and Feedback</title>
+		<link>https://www.valewood.org/devops-monitoring/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sat, 19 Nov 2022 20:39:50 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[day2ops]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=1674</guid>
+
+					<description><![CDATA[DevOps is an approach to software development and operation, where teams are able to collaborate more effectively and accelerate software releases from development to production. As a result, organizations can release new features faster and with higher quality. The need&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is an approach to software development and operation, where teams are able to collaborate more effectively and accelerate software releases from development to production. As a result, organizations can release new features faster and with higher quality.</p>
+
+
+
+<p>The need for speed and collaboration across departments is what’s driving many organizations toward DevOps. But it’s not just about faster software releases; it’s about releasing better software faster by enabling the people who build and support applications (known as operators) to react to changing conditions quickly, proactively, and directly.</p>
+
+
+
+<p>In this blog post, we will discuss why monitoring and feedback are critical in accelerating your path toward DevOps while maintaining your company’s high standards for quality.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>What is DevOps?</h2>
+
+
+
+<p>DevOps is a set of principles and practices that promotes collaboration between software developers and Operations engineers/IT professionals. It is a cultural change that advocates for a focus on automation, continuous testing, and bringing software development and IT operations together so that you create a more stable application environment.</p>
+
+
+
+<p>Because the application lifecycle is shorter, it makes the need for monitoring even more important. Monitoring provides visibility into the application environment and alerts when things are not running as expected. Achieving the right balance between operational efficiency and customer experience is key in the DevOps world. DevOps is a journey and not a destination.</p>
+
+
+
+<p>You are always improving and tweaking. The organizations that truly embrace DevOps culture are the ones that see the most benefits. Companies that have a strong engineering culture, a high bar for quality, and a strong set of values are the organizations that have the best chance of succeeding in the DevOps world.</p>
+
+
+
+<h2>The Importance of Monitoring in a DevOps Environment</h2>
+
+
+
+<p>As we’ve discussed, there are many benefits to implementing a DevOps model versus a traditional software development lifecycle. But what exactly does monitoring have to do with DevOps? It’s no coincidence that monitoring is one of the core components of DevOps.</p>
+
+
+
+<p>The mere act of monitoring software, infrastructure, and network performance is the important first step in taking advantage of the benefits of DevOps. And when you’re monitoring, you’re also able to analyze and gain insight into your current state based on real-time data.</p>
+
+
+
+<p>While companies are in the process of implementing a DevOps approach, monitoring becomes even more important as it can help you identify potential bottlenecks in your software delivery pipeline.</p>
+
+
+
+<h2>Why is Monitoring so Important in a DevOps Environment?</h2>
+
+
+
+<p>All organizations should be monitoring their software and the underlying infrastructure on which their applications run. But when you’re implementing a DevOps approach, monitoring becomes even more important because it provides visibility into the application environment and alerts when things are not running as expected.</p>
+
+
+
+<p>With a traditional software development lifecycle, engineers would build the application, test it, and then push it out to a staging server environment where operations professionals would monitor it to make sure it’s up and running. When the app was determined to be good to go, the operations team would then push it out to production.</p>
+
+
+
+<p>In a DevOps environment, the handoff between development and operations happens much more frequently. In some cases, developers may be responsible for deploying to production or at the very least, testing their code on staging servers before operations engineers deploy it to production.</p>
+
+
+
+<h2>Benefits of monitoring in a DevOps environment</h2>
+
+
+
+<ul>
+<li><strong>Increased insight into the current state: </strong>Monitoring gives you the ability to see and understand the current state of your applications, network, and infrastructure. Without monitoring, you would have no visibility into the current state, which makes it more difficult to identify issues and resolve them.</li>
+
+
+
+<li><strong>Sensitivity to application issues: </strong>When you’re monitoring, you’re able to quickly detect issues, both big and small, that disrupt the flow of your business. This includes issues such as a website or app outage, poor performance, increased latency, security issues, and more.</li>
+
+
+
+<li><strong>Ability to resolve issues quickly: </strong>When monitoring is part of your software delivery pipeline and you’re able to recognize and resolve issues quickly, you’re able to decrease the amount of time it takes to restore normal operations.</li>
+
+
+
+<li><strong>Predictability: </strong>Monitoring also gives you the ability to predict what will happen next, which can be helpful when planning for upcoming events such as conferences or holidays. By understanding the current state, you can predict what might happen next and prepare for it.</li>
+</ul>
+
+
+
+<h2>Monitor constantly to understand the current state continuously</h2>
+
+
+
+<h3>Machine Data</h3>
+
+
+
+<p>Data points that are generated and collected by application and infrastructure monitoring tools are known as machine data. Machine data is a fantastic source of data to understand the current state of your applications. Machine data is generated and collected at the application level, which gives you an accurate representation of what is happening in your environment.</p>
+
+
+
+<h3>Human-Generated Data</h3>
+
+
+
+<p>As you’re monitoring, you also capture human-generated data, which is data that is entered into the system manually. For example, if you receive a ticket about a performance issue, this would be recorded as human-generated data. Although human-generated data is not as accurate as machine data, it gives insight into what is happening in the application environment.</p>
+
+
+
+<h2>Monitor constantly to understand why something happened</h2>
+
+
+
+<p>Monitoring gives you the ability to understand why something happened, which can be beneficial when it comes to debugging issues and resolving them quickly.</p>
+
+
+
+<h3>Application Logs</h3>
+
+
+
+<p>Application logs are a fantastic source of why something happened because they show a timeline of events. This can help you identify bottlenecks in your application, when various events occur, when errors are thrown, and much more.</p>
+
+
+
+<h3>Tracing</h3>
+
+
+
+<p>Tracing is another source of why something happened. Tracing is a way to visualize the path that packets take as they move through the network. This can be helpful if you notice something in the application logs, but you’re not sure where the problem is.</p>
+
+
+
+<h2>Monitor Constantly to Predict What Will Happen Next</h2>
+
+
+
+<p>Monitoring gives you the ability to predict what will happen next by giving you insight into the current state as well as why certain things happened. This can be helpful when planning for upcoming events such as conferences or holidays.</p>
+
+
+
+<h3>Application Performance</h3>
+
+
+
+<p>By understanding the current state, you can predict what will happen next with application performance. This can help you proactively prepare for upcoming events that require a heavier lift, such as sales or Black Friday events.</p>
+
+
+
+<h3>Network Performance</h3>
+
+
+
+<p>Monitoring also allows you to understand the current state of network performance. This can help you predict what will happen next by allowing you to proactively prepare for higher levels of network traffic.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>Monitoring is one of the core components of DevOps and is the important first step in taking advantage of the benefits of DevOps. By implementing a DevOps approach, monitoring becomes even more important because it provides visibility into the application environment and alerts when things are not running as expected.</p>
+
+
+
+<p>Machine data is a fantastic source of data to understand the current state of your applications. Monitoring also gives you the ability to understand why something happened, which can help you debug issues and predict what will happen next.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>How to Achieve Rapid Application Delivery with DevOps</title>
+		<link>https://www.valewood.org/devops-rapid-delivery/</link>
+		
+		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
+		<pubDate>Sat, 19 Nov 2022 20:19:20 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<guid isPermaLink="false">/?p=1668</guid>
+
+					<description><![CDATA[DevOps has become a powerful set of tools, processes, and cultural norms for improving the deployment and operation of the software. As businesses grow more reliant on software applications, DevOps becomes even more important as it aids in accelerating the&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> has become a powerful set of tools, processes, and cultural norms for improving the deployment and operation of the software. As businesses grow more reliant on software applications, DevOps becomes even more important as it aids in accelerating the delivery of new features to production.</p>
+
+
+
+<p>Instead of relying on lengthy manual processes or testing stages to release updates, DevOps helps you streamline your QA process so you can get new features out faster than ever before.</p>
+
+
+
+<p>The success of any organization relies on its ability to scale quickly and efficiently react to market demands. The demand for fast-paced change has forced many companies to reevaluate their current operational strategies. In response, organizations are now adopting a new culture for developing software and continuous integration processes that support rapid application development and application delivery cycles.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>The Benefits of DevOps in Software Development</h2>
+
+
+
+<p>DevOps is often used to describe the relationship between software development and operations that have evolved over the last couple of years. The term was first used in The Phoenix Project, a novel about bringing together IT and business leaders to fix a failing production system. It’s an abbreviation of “software development” and “operations”.</p>
+
+
+
+<p>Its main goal is to get better collaboration between IT departments and software development teams. The DevOps movement gained momentum in the 2010s, as organizations looked for ways to improve application deployment and management while meeting growing customer demands.</p>
+
+
+
+<p>The software development process includes several stages, like planning, designing, and testing the product. In an Agile project, these stages happen in very short iterations, and organizations work in a continuous flow. DevOps is the way of organizing work at scale and is about breaking down silos between teams and finding ways for them to work more closely together.</p>
+
+
+
+<p>Rapid application development is also an early cornerstone in any kind of digital transformation.</p>
+
+
+
+<h2>Continuous Integration in DevOps</h2>
+
+
+
+<p>The ability to test new code is a key component for DevOps to work effectively. Continuous integration (CI) is the practice of integrating new code with existing code on a frequent basis. CI triggers the creation of new versions of software after every new code deployment.</p>
+
+
+
+<p>Modules are integrated with other modules based on their dependency relationships. By using automated CI tools, developers can continuously test code against a production-like environment while they are responsible for writing code.</p>
+
+
+
+<h2>Continuous Delivery in DevOps</h2>
+
+
+
+<p>Organizations that have embraced CI are now looking to accelerate the deployment process further by implementing continuous delivery (CD). CD can be described as the automation of the entire delivery process. It includes automating the build and test process, setting up the necessary infrastructure, and using a deployment tool to deploy new application versions to production.</p>
+
+
+
+<h2>Continuous Testing in DevOps</h2>
+
+
+
+<p>Finally, continuous testing is the practice of the entire software development and testing team executing automated tests together. It is achieved through the use of CI tools that allow the team to run tests against the code and infrastructure in a single console.</p>
+
+
+
+<p>By adopting CI/CD and embracing a DevOps culture, companies can reduce the time it takes to deliver new features to customers by 50 percent, according to research by CA Technologies.</p>
+
+
+
+<h2>What is Rapid Application Delivery?</h2>
+
+
+
+<p>Rapid application delivery is the practice of producing, testing, and deploying applications quickly from ideation to implementation — usually within days or even hours, rather than months or even years.</p>
+
+
+
+<p>The point of it all is to speed up the entire software development process, with the ultimate goal of helping businesses bring their products or services to market faster. Organizations that are able to rapidly deliver new applications can respond more quickly to market conditions and customer needs, and therefore retain a competitive advantage.</p>
+
+
+
+<h2>Why is Application Delivery Speed Important?</h2>
+
+
+
+<p>Fast delivery of new applications is critical to keeping up with customer expectations and staying ahead of competitors. In today&#8217;s business environment, customers want goods and services faster than ever before. Consumers expect to be able to click a button and have their goods delivered to their doorsteps in just a few days.</p>
+
+
+
+<p>Rapid application development means you can meet these expectations of speed and customer service. If you’re able to bring a new product or service to market quickly, you can generate greater revenue than if your offerings are delayed by months or even longer.</p>
+
+
+
+<p>Speed is a major factor in customer decision-making. Moreover, if you’re behind the curve, you’ll most likely be out-competed by other companies that are able to get products or services to market quicker than you. If you’re slower than your competitors, you could lose market share and customers, which could damage your brand and profitability.</p>
+
+
+
+<h2>Benefits of Rapid Delivery</h2>
+
+
+
+<p>If you’re able to deliver apps quickly, you’ll see benefits in many areas, including the following:</p>
+
+
+
+<ul>
+<li><strong>Higher Revenue:</strong> If you’re able to get products or services to market faster, you’ll be able to generate more revenue than if your offerings are delayed by months or years.</li>
+
+
+
+<li><strong>Increased Brand Awareness: </strong>If you’re able to get products or services to market faster, you’ll be able to increase brand awareness, which can help you to grow your customer base.</li>
+
+
+
+<li><strong>Improved Customer Engagement:</strong> More rapid app delivery means increased customer engagement, which leads to greater customer retention.</li>
+
+
+
+<li><strong>Reduced Costs:</strong> By accelerating the software development process and cutting out unnecessary steps, you can reduce costs.</li>
+</ul>
+
+
+
+<h2>How to Achieve Rapid Application Delivery in the Enterprise</h2>
+
+
+
+<p>There are many steps you can take to achieve rapid application delivery in your organization, including the following:</p>
+
+
+
+<ul>
+<li><strong>Identify the Business Problem:</strong> Before you do anything else, you have to identify the business problem that you’re trying to solve. What is the company trying to accomplish? Once you know what business problem you’re trying to solve, you can create an application backlog.</li>
+
+
+
+<li><strong>Create an Effective Solution: </strong>You must then create an effective solution that will meet the needs of the business problem you’re trying to solve. You can achieve this by using a collaborative approach to software development in order to build an application with input from all stakeholders.</li>
+
+
+
+<li><strong>Test the Solution:</strong> The next step is to test the solution to ensure that it will solve the business problem in the way that you intended. You can do this by using automated testing and continuous integration/continuous delivery (CI/CD) to maximize quality control and minimize the time to release.</li>
+</ul>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As businesses grow more reliant on software applications, DevOps becomes even more important as it aids in accelerating the delivery of new features to production. The adoption of DevOps can significantly reduce the time it takes to deliver new features to customers by automating the build, test, and deployment processes. By accelerating the deployment process, DevOps helps organizations meet growing customer demands while reducing risk.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>7 Tips for Landing a DevOps Position Without a Degree</title>
 		<link>https://www.valewood.org/devops-without-education/</link>
 		
@@ -47,6 +436,18 @@
 
 
 <p>In this blog post, you will learn about the types of roles available in DevOps, how you can land your first DevOps job, and what you need to succeed in your new role as a DevOps engineer or specialist.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -162,6 +563,18 @@
 
 
 
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
 <h2>3 Steps to Landing Any Job You Want</h2>
 
 
@@ -243,6 +656,18 @@
 
 
 
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
 <h2>It’s the Foundation for Good Communication</h2>
 
 
@@ -308,6 +733,18 @@
 
 
 <p>You must be willing to confront your own behaviours that are likely to be creating a culture that is lacking in trust and respect. And you must be willing to take ownership of your own feelings and be open about how they are impacting your work and the team as a whole.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -1949,439 +2386,6 @@ all:
 
 
 <p>As I stated at the beginning of the article, data manipulation in DevOps is a key skill to learn.  Hopefully, this helps kickstart someone on their journey into becoming a DevOps engineer!.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Do DevOps Engineers Write a lot of Scripting Code?</title>
-		<link>https://www.valewood.org/devops-scripting/</link>
-		
-		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
-		<pubDate>Tue, 18 Oct 2022 21:45:38 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[coding]]></category>
-		<category><![CDATA[development]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[software]]></category>
-		<category><![CDATA[tools]]></category>
-		<guid isPermaLink="false">/?p=1180</guid>
-
-					<description><![CDATA[Whether it’s Python, JavaScript, or other programming languages, Developers spend a lot of time writing code. More traditional infrastructure engineers are going to spend their time in a user interface configuring their systems and services to work for their organizations.&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Whether it’s Python, JavaScript, or other programming languages, Developers spend a lot of time writing code. More traditional infrastructure engineers are going to spend their time in a user interface configuring their systems and services to work for their organizations. Operations teams are going to be picking up what was developed for them by other groups and determine the right ways to run it efficiently.</p>
-
-
-
-<p><strong><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> engineers are going to be performing configuration management efforts, software development, operations activities, and quality assurance activities. Each of these can be automated by writing code with scripting languages. This means that DevOps engineers write code!</strong></p>
-
-
-
-<p>Let&#8217;s explore what this means to a DevOps engineer who may not be comfortable with code since they are coming from a practice that generally performs their activities inside of a user interface.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Why Scripting Code is Important</h2>
-
-
-
-<p>Automation is important. It’s a key part of the DevOps process, which aims to reduce the time it takes to perform manual processes. Automation also increases the reliability and stability of those processes.</p>
-
-
-
-<p>While a lot of people talk about it, they rarely talk about why. If you don’t have a good reason, there’s a good chance that you won’t see the benefits of automation in your organization. That’s why it helps to understand why you are automating in the first place.</p>
-
-
-
-<p>DevOps organizations have a lot of tools and technologies that need to integrate together. DevOps engineers will spend almost every day automating these integrations utilizing a variety of scripting languages or DevOps tools.</p>
-
-
-
-<p>When you spend your days configuring everything from <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a> keys to the location of a database; it’s easy to understand why organizations want to reduce the amount of time spent doing it manually.</p>
-
-
-
-<h2>DevOps and Scripts</h2>
-
-
-
-<p>Those who work across multiple different technologies to build applications and services spend a ton of time configuring environments, virtual machines, and cloud providers.</p>
-
-
-
-<p>That means developers have to learn how to use every single one of those tools. At first, this might feel like a chore; after all, no one wants to learn how to use Inversion of Control (IoC) or batch files to get something from AWS into their local computer or network.</p>
-
-
-
-<p>When you look at it from the perspective of someone who spends most of his or her day typing in code and reading other people’s scripts—the process can seem more like an abomination than anything else.</p>
-
-
-
-<p>A majority of engineers are writing scripts to make their jobs more efficient. Scripts are the shortcut version of automation. They’re designed to help engineers reduce the amount of time they spend doing system administration, delivering software to servers, monitoring systems, performing configuration management, managing cloud vendors, and many other activities.</p>
-
-
-
-<p>I have always advocated if you perform an activity against a user interface that has an API then you should take the time to implement that activity in code via your scripting language of choice.</p>
-
-
-
-<p>By scripting your changes out, you both get an opportunity to codify a change, but you have an opportunity to introduce that code into version control. This will help shift the responsibility of that code from a single person to an entire team.</p>
-
-
-
-<p>Additionally, scripting gives you the opportunity to add comments to your code. Software developers utilizing high-level programming languages will add comments in their code so that the next person that picks up their work understands the intentions of their work. Changes through scripting should be treated the same way. When someone spends time writing scripts, those should be added to the collective code base and their peers should be able to understand the code and consume their work.</p>
-
-
-
-<p>Contributing to the code base also allows that code to be integrated into CI/CD systems for future automated actions.</p>
-
-
-
-<h2>Which DevOps Engineers Should be Working With Scripts?</h2>
-
-
-
-<p>The first step in automating any process is figuring out who should do the automation. That can be tricky. It’s easy to think that the developers who spend most of their day writing code should be the ones to automate their work.</p>
-
-
-
-<p>After all, they have all of the technical knowledge. But, depending on the organization, that might not be the best idea. In organizations using DevOps practices, developers aren’t soley responsible for creating new end-to-end application solutions.</p>
-
-
-
-<p>Instead, everyone on the team is responsible for creating an entire infrastructure along with the entire DevOps lifecycle.</p>
-
-
-
-<p>DevOps engineers are responsible for automating the deployment and operations process of software applications. They are responsible for automating everything from creating configuration files to configuring software environments.</p>
-
-
-
-<p>Many DevOps engineers work with scripts. There are many reasons why this is the case. One reason is that scripts allow DevOps engineers to automate tasks that are repeatable across multiple environments and application iterations.</p>
-
-
-
-<p>If an automated task must be performed multiple times during the development process, it makes sense to create a script that can be used in each environment. Another reason is that scripts help reduce errors by providing clear instructions on how to perform the task.</p>
-
-
-
-<p>DevOps engineers should be knowledgeable about scripting languages, such as Bash, Python, Ruby, and Javascript. They should also be familiar with automation tools like <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> and <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>.</p>
-
-
-
-<p>They should be able to identify areas where automation can improve their workflow and determine what types of changes are needed to make automation possible in their organization.</p>
-
-
-
-<h2>Why is it So Hard to Transition from Scripting to Automation?</h2>
-
-
-
-<p>It might seem like your engineers would love to transition from scripting to automation. After all, they are spending their day writing code.</p>
-
-
-
-<p>Sometimes a jump from scripting to automation can be difficult. If scripts are not written in a way that they can be parameterized, those scripts will not fit into an overall automation structure natively. Additionally, when you’re used to customizing everything from your local machine to your cloud providers, the thought of learning a new configuration tool can seem like a nightmare.</p>
-
-
-
-<p>All of this confusion can lead engineers to either choose not to automate at all or make bad choices about how to automate. The software development industry has an answer for this.</p>
-
-
-
-<p>Most engineers will take a little bit of time to work through the transition from their previous role into one that is inclusive of DevOps. This is why it is so critical to work with the team on learning DevOps and embracing a full DevOps transition.</p>
-
-
-
-<p>Most software development starts as writing scripts, shell scripting, or learning bash. From there, it will expand into utilizing different popular programming languages. If your background is in Office365 administration, you will not go through this general progression.</p>
-
-
-
-<p>Developers should take new DevOps engineers under their wing and help them utilize tools that may not be ultimately familiar with. DevOps engineering is the combination of many different skill sets breaking down traditional barriers. Helping DevOps engineers write scripts that are able to be integrated into a larger set of automation will be a huge step forward for anyone feeling lost in this adoption.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>How to Get Started With Automation in a DevOps Organization</h2>
-
-
-
-<p>DevOps engineers constantly improve their automation, but there’s a lot to learn. That’s why it’s important to bring on someone to help with the transition to automation.</p>
-
-
-
-<p>There are a few things you can do to get started. First, look at your existing scripts and see if you have any that could be automated. Are there any tasks that are taking more time than they should? If so, you might want to take a closer look at them. Next, look at your existing infrastructure. Do you have a known, consistent state? If so, you might want to take a closer look at your scripts.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>If you’re a DevOps engineer who is coming from a user interface, the idea of writing code that can automate different tasks may seem scary. You may feel overwhelmed by the scope of this responsibility and wonder whether you can actually do it.</p>
-
-
-
-<p>To start, you can check out some resources that are available on <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a>. One of the best ways to get started is to dive right into the world of scripting. The Python programming language is great for beginner developers because it’s very easy to pick up and performs well under the hood. Python has a free online course available that teaches you the basics with a few projects you can complete.</p>
-
-
-
-<p>Once you know your way around Python, you can move on to the next step. As you progress, you can check out some of the other scripting languages in use. There are many options out there, and most of them are open-source and available for use. Your best bet is to choose one that you feel comfortable with, and then get familiar with the basics. You can find plenty of tutorials and documentation on how to get started with any of them.</p>
-
-
-
-<p>When you feel ready, you can start experimenting with the different ways to configure your systems.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Are DevOps Engineers in Demand in 2022?</title>
-		<link>https://www.valewood.org/are-devops-engineers-in-demand/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Fri, 14 Oct 2022 20:17:56 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[delivery]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[jobs]]></category>
-		<guid isPermaLink="false">/?p=1127</guid>
-
-					<description><![CDATA[Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are DevOps Engineers in Demand?&#8221; Simply looking at job boards and reviewing the&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> Engineers in Demand?&#8221;</p>
-
-
-
-<p><strong>Simply looking at job boards and reviewing the numbers does not tell the entire story here. As of the time of writing LinkedIn has roughly 42,000 positions and Indeed has roughly 11,000 positions for the search term DevOps engineer.</strong></p>
-
-
-
-<p>I believe that the honest answer to this question has more to do with market conditions than it does with job openings, though job openings are still a good indicator.</p>
-
-
-
-<p>Let&#8217;s take a look at the market conditions to understand if a DevOps engineering skillset is in demand!</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Rising Demand for DevOps Talent</h2>
-
-
-
-<p>Many of us in the technology industry know how DevOps is revolutionizing software development. Companies adopting the DevOps approach are doing more with greater efficiency in the process. DevOps can help a company provide a software solution quickly. It can therefore help prevent production problems if necessary and the result will also be improved customer experience, feedback, and communications.</p>
-
-
-
-<p>Through to pandemic, more and more businesses needed to move to a digital presence to stay competitive in the market. This either means investing more heavily in technology or standing up new technology they may not have been ready for.</p>
-
-
-
-<p>As the dust has settled, businesses are now left with aging technology that is not growing with their business which means future investment. The tech industry is stepping up to respond in this newly opened market.</p>
-
-
-
-<p>If a business is not purely technology focused but utilizes technologies to enable sales, they are going to want to get into the most reliable modes of future delivery. This is where DevOps skills are filling the gap.</p>
-
-
-
-<p>I have seen a new term popping up in the industry recently: &#8220;DevOps As A Service&#8221;. This is born out of the idea that the DevOps methodology can be bolted onto technologies that are becoming more relevant in the market to ensure more reliable modes of delivery.</p>
-
-
-
-<h2>Is DevOps still in Demand?</h2>
-
-
-
-<p>I am a hiring manager running a DevOps group. I have been hiring, training, and converting people from either IT operations teams or software development teams for nearly a decade now. I can confidently say that DevOps engineering roles are hard to fill, they are also very in demand and you need to move quickly when hiring.</p>
-
-
-
-<h2>DevOps Talent is Still Hard to Find</h2>
-
-
-
-<p>Let&#8217;s face it, the industry has done a terrible job of defining what DevOps really is. In most places, my experience has been, DevOps means infrastructure as code and does not account for the overall methodology.</p>
-
-
-
-<p>Because of the incongruency between expectation and implementation, I would argue that a large portion of the talent pool is underdeveloped at this point. With the proper guidance, the talented job seekers out there can transition into a more DevOps-oriented mindset.</p>
-
-
-
-<p>Businesses will need to take this into account when hiring for a DevOps engineer role. The perfect purple unicorn may not be as readily available as more well-defined roles like software engineering. With a little time and patience with a team committed to DevOps transformations, you can develop talent that will deliver high-quality work.</p>
-
-
-
-<h2>Is it hard to get a job in DevOps?</h2>
-
-
-
-<p>Many organizations do not know what DevOps actually means, so it&#8217;s challenging to find the right person for the position.</p>
-
-
-
-<p>I updated my LinkedIn profile in 2015 to illustrate my transition into DevOps Engineering. Since then, I have progressed through an organization to lead teams of DevOps engineers.</p>
-
-
-
-<p>I am not telling you this to brag, but I do want to use it as an example.</p>
-
-
-
-<p>In my previous life, I was a PHP developer. I got bored of putting values into a database and then returning the exact same values to the screen. I started to get interested in configuration management and continuous integration which is when i hit the job market looking for my next gig.</p>
-
-
-
-<p>Since 2015, when i changed by job title on LinkedIn, i still get recruiters reaching out looking to place me in another software engineering role.</p>
-
-
-
-<p>I believe that the cycle of job searching in the technology industry is a bit upside down today. Companies seek talent and job seekers are looking for companies that want their skilled talent. It should be a perfect union, but there are a hoard of recruiters standing in the way of those perfect fits.</p>
-
-
-
-<p>I would recommend spending your time learning about DevOps methodologies, optimizing value, soft skill, interpersonal skills, and automation tools. Form there, i would spend time looking up individuals with existing DevOps roles on LinkedIn (management or engineering) and make some connections. Those connections have a better chance of landing you a DevOps role than the normal recruiting mechanism most of the technology space uses today.</p>
-
-
-
-<h2>Is DevOps Engineer a good career?</h2>
-
-
-
-<p>DevOps is booming with an estimated US $287 billion market size by 2026. There are many roles available to developers in the world&#8217;s marketplace. Let&#8217;s face it, technology is not going away. Businesses that survive over the long haul are going to progressively adopt newer and more modern strategies to optimize their software development life cycle.</p>
-
-
-
-<p>Because of the perpetual adoption of DevOps methodology by businesses, a DevOps engineer is going to have a long and vibrant career path. Silo&#8217;d development and operations teams will become more of an antiquated setup, and the merge of these disciplines together will become more of the norm.</p>
-
-
-
-<p>I think the answer of &#8220;Good&#8221; is probably a bit more nebulous and needs a bit of personal soul-searching to really answer. I won&#8217;t be able to answer what is &#8220;Good&#8221; for you.</p>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="3622503162"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Why DevOps is a Good Career in 2022?</h2>
-
-
-
-<p>DevOps has remained a popular role since its inception in 2018. CodinGame released a survey that ranks &#8220;DevOps Engineer&#8221; among the most popular developer job positions for 2021. Additionally, the survey revealed that 43% of hiring professionals are unable to fulfill their DevOps roles.</p>
-
-
-
-<h2>What are Relevant Skills to start a DevOps career?</h2>
-
-
-
-<p>Unlike most careers, DevOps requires basic knowledge and skills. When choosing an employment option, understanding this section can prove very important. If you do this before, then the barriers will be lower. Depending on the skills you have you can try another course.</p>
-
-
-
-<p>I have an entire write-up over here that discusses the <a href="https://www.valewood.org/top-relevant-devops-skills/" data-type="post" data-id="330">Top Relevant DevOps Skills</a>.</p>
-
-
-
-<p>TLDR; Focus on skills that support the DevOps philosophy. These are going to be focused on soft skills such as planning and communication. Also focus on learning some new tools, ci/cd, how to enable automation, and automated testing.</p>
-
-
-
-<p>Don&#8217;t be afraid if you are lacking in any of these areas as well, most of the &#8220;DevOps pros&#8221; that i talk to are not familiar with half of the skills described in either the blog post or TLDR.</p>
-
-
-
-<h2>How do I Progress in my DevOps Career?</h2>
-
-
-
-<p>DevOps engineers with learning mindsets will be able to develop in their respective fields with plenty more to do. It seems obvious that one has to progress from junior engineering engineer to junior engineer eventually becoming a leader. DevOps also offers many career changes that could be made.</p>
-
-
-
-<p>A simple way to think about progression is to focus on anything that helps drive a business forward through growth or hitting new targets. This means that, in general, new technologies will not progress your career path forward.</p>
-
-
-
-<p>Building a DevOps mindset, working with a team to adopt DevOps, training new DevOps engineers, working with teams to develop software in a more streamlined way, bringing in automated testing, breaking down organizational silos, influencing team leaders, and any other non-technology-specific skill you can pick up will help progress your DevOps career.</p>
-
-
-
-<p>Focusing on technologies will help progress from a DevOps engineer role into a DevOps architect role, but note that a pure technology focus does have an upper bound on it. That is not a bad thing because not everybody wants to get into management.</p>
-
-
-
-<p>If you are looking to progress your career into management, work on building a DevOps culture.</p>
-
-
-
-<h2>Will I get paid more as a DevOps Engineer?</h2>
-
-
-
-<p>DevOps professionals are generally paid quite well. This is because the skillset for DevOps jobs demands a broader set of skilled talent. DevOps experts who can work with companies on DevOps transformations will yield an even greater salary. When negotiating, do not sell your talents and skills short.</p>
-
-
-
-<p>If you are just diving into this space, also be realistic about where you are at and sell yourself on your aptitude and ability to learn new skills. Any organization worth sticking around and working for will recognize your growth and give you the bump in compensation that you deserve.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>DevOps is evolving and changing. It is growing in importance for businesses to move forward in the digital age. DevOps engineers are key players in this evolution and have a wide range of skills needed by companies to thrive in the modern economy. They can work within many different industries, from financial services to automotive. DevOps engineers typically work with software teams across multiple departments within organizations, including IT operations and engineering.</p>
-
-
-
-<p>DevOps teams are constantly looking for more talent that can fulfill the vision of smoother and more reliable delivery. That trend is not going away any time soon!</p>
 ]]></content:encoded>
 					
 		
