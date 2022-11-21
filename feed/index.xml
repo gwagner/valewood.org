@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sat, 19 Nov 2022 20:40:38 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 21 Nov 2022 14:19:21 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,148 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>The DevOps Cycle Time: The Difference Between Good and Bad Performance</title>
+		<link>https://www.valewood.org/devops-cycle-time/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Mon, 21 Nov 2022 14:12:25 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[devops cycle time]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<guid isPermaLink="false">/?p=1700</guid>
+
+					<description><![CDATA[The performance of the DevOps cycle is a crucial measure of your success. If it’s good, you are on track to meet your objectives; if it’s bad, you need to make some changes. The DevOps cycle performance has three main&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>The performance of the <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> cycle is a crucial measure of your success. If it’s good, you are on track to meet your objectives; if it’s bad, you need to make some changes. The DevOps cycle performance has three main factors: lead time, cycle time, and throughput.</p>
+
+
+
+<p>You can use these metrics to inform your team about where there may be issues in your process that need addressing. Each of these factors indicates a different part of the DevOps cycle:</p>
+
+
+
+<ul>
+<li><strong>Lead time</strong> refers to the total length of time from when an order is placed until it is sent out for delivery.</li>
+
+
+
+<li><strong>Cycle time</strong> is how long it takes from when a new version of code is checked in to when it becomes available for production users. It measures how much time elapses between every phase of production and points out potential bottlenecks in your process.</li>
+
+
+
+<li><strong>Throughput</strong> measures how many units are produced within a specific timeframe (e.g., the number of orders per hour).</li>
+</ul>
+
+
+
+<p>When monitoring the performance of these metrics, it is important to keep them balanced across all three categories; if one value falls too low or high, adjustments may need to be made.</p>
+
+
+
+<h2>Lead Time</h2>
+
+
+
+<p>The lead time is the length of time it takes from when an order is placed until it is sent out for delivery. To improve this, you can look at two aspects of your process: Shipping and Demand management.</p>
+
+
+
+<p>If shipping is taking a long time, check that your team is following a strict process for shipping that is as streamlined as possible. This way, it will be much easier to track and make improvements. If demand management is the issue, you might need to review your sales strategy.</p>
+
+
+
+<p>How many orders are being placed per day is the first thing to look at. If demand is low, you can consider ways to increase it, such as marketing campaigns. If orders are high, you might have trouble meeting them due to the length of time it takes to process them. If it is taking a long time to fulfill orders, you can use a kanban board to track them and make sure they don’t get stuck in the process.</p>
+
+
+
+<h2>Cycle Time</h2>
+
+
+
+<p>Cycle time is the time it takes from when a new version of code is checked in to when that code becomes available for production users. It measures how much time elapses between every phase of production and points out potential bottlenecks in your process.</p>
+
+
+
+<p>To improve this, you can look at two aspects of your process: Code deployment and Testing. If it is taking a long time to deploy code, check the tools you are using; they may not be working as efficiently as they could. If testing is taking too long, you might need to add more resources to your testing team.</p>
+
+
+
+<h2>Throughput</h2>
+
+
+
+<p>Throughput is the number of units produced within a specific timeframe. If throughput is low, you may have too high a lead time for your cycle time. This can be corrected by improving your shipping process or by reducing the time it takes to produce the product.</p>
+
+
+
+<p>If throughput is high, you may have too low a cycle time for your lead time. This can be corrected by reducing the time it takes to produce the product or by increasing the time it takes to send it out.</p>
+
+
+
+<h2>Continuous Improvement Strategies</h2>
+
+
+
+<p>There are several strategies you can employ to improve the efficiency of your DevOps cycle, including:</p>
+
+
+
+<ul>
+<li>Reducing the time it takes to complete all processes, such as testing and deployment.</li>
+
+
+
+<li>Reallocating employees to where they are needed most, such as adding more people to your testing team if testing is taking too long.</li>
+
+
+
+<li>Streamlining processes, such as using a kanban board to improve visibility and reduce bottlenecks.</li>
+
+
+
+<li>Improving software quality, such as using automated tests and code reviews to catch issues early.</li>
+
+
+
+<li>Improving your customer experience, such as tracking customer complaints and addressing them promptly.</li>
+</ul>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>The performance of the DevOps cycle is a crucial measure of your success. If it’s good, you are on track to meet your objectives; if it’s bad, you need to make some changes. The DevOps cycle performance has three main factors: lead time, cycle time, and throughput.</p>
+
+
+
+<p>You can use these metrics to inform your team about where there may be issues in your process that need addressing. Each of these factors indicates a different part of the DevOps cycle:</p>
+
+
+
+<ul>
+<li><strong>Lead time </strong>refers to the total length of time from when an order is placed until it is sent out for delivery.</li>
+
+
+
+<li><strong>Cycle time</strong> is how long it takes from when a new version of code is checked in to when it becomes available for production users. It measures how much time elapses between every phase of production and points out potential bottlenecks in your process.</li>
+
+
+
+<li><strong>Throughput</strong> measures how many units are produced within a specific timeframe (e.g., the number of orders per hour).</li>
+</ul>
+
+
+
+<p>When monitoring the performance of these metrics, it is important to keep them balanced across all three categories; if one value falls too low or high, adjustments may need to be made.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>The Importance of Constant Monitoring and Feedback</title>
 		<link>https://www.valewood.org/devops-monitoring/</link>
 		
@@ -2160,232 +2302,6 @@ all:
 
 
 <p>As you can see, with a fairly concise set of steps, you can level up your DevOps automation game by rapidly creating and tearing down virtual machines in your home lab.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Convert Text File to JSON with Ansible</title>
-		<link>https://www.valewood.org/ansible-text-to-json/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Mon, 24 Oct 2022 23:00:00 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[Ansible]]></category>
-		<category><![CDATA[ansible]]></category>
-		<category><![CDATA[howto]]></category>
-		<guid isPermaLink="false">/?p=1187</guid>
-
-					<description><![CDATA[I was looking through Reddit today and saw an interesting question about how to manipulate files with Ansible. I took a few minutes to throw together an example of how to convert a relatively simple file, a list of strings&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>I was looking through Reddit today and saw an <a href="https://www.reddit.com/r/ansible/comments/ycgtkg/convert_output_of_file_to_json_using_j2_template/" data-type="URL" data-id="https://www.reddit.com/r/ansible/comments/ycgtkg/convert_output_of_file_to_json_using_j2_template/" target="_blank" rel="noopener">interesting question</a> about how to manipulate files with <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>.  I took a few minutes to throw together <a href="https://github.com/gwagner/ansible-examples/tree/main/read-file-output-json" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/read-file-output-json" target="_blank" rel="noopener">an example </a>of how to convert a relatively simple file, a list of strings broken up by new lines, and output it as JSON.  </p>
-
-
-
-<p>Doing file conversions or data munging is an important skill to learn when growing in a <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> position.  While this is a fairly basic example, utilize this as a stepping stone to understanding more complex data structures.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Simple Text to JSON Conversion with Ansible</h2>
-
-
-
-<p>Below is the Ansible code to read in a file name input.txt delimited by newline characters and then do a simple conversion to JSON writing to output.json.</p>
-
-
-
-<pre class="wp-block-code yaml"><code>- name: Simple Read file and output JSON
-  hosts: localhost
-  connection: local 
-  become: false
-  tasks:
-  - name: Read Data File
-    set_fact:
-      data: "{{lookup('ansible.builtin.file', './input.txt').split('\n')}}"
-
-  - name: Show debug data
-    ansible.builtin.debug: var=data
-
-  - name: Write output json file
-    copy:
-      dest: output.json
-      content: "{{ data | to_json }}" </code></pre>
-
-
-
-<h3>Task By Task Breakdown</h3>
-
-
-
-<p>The first task reads the input.txt file into a data variable that Ansible can use. It also splits the file into a list via the \n (newline) character.</p>
-
-
-
-<pre class="wp-block-code yaml"><code>  - name: Read Data File
-    set_fact:
-      data: "{{lookup('ansible.builtin.file', './input.txt').split('\n')}}"</code></pre>
-
-
-
-<p>set_fact can be one of your best friends in Ansible. It allows you to take either data from what you have available in your playbook run, or lookup data and set it to a useable var for future tasks.  Here I am calling lookup to read an input.txt file and saving it to a data var.</p>
-
-
-
-<pre class="wp-block-code yaml"><code>  - name: Show debug data
-    ansible.builtin.debug: var=data</code></pre>
-
-
-
-<p>ansible.builtin.debug lets you output the values of variables to the terminal during a playbook run.  This code should not be utilized anywhere except for testing.</p>
-
-
-
-<pre class="wp-block-code yaml"><code>  - name: Write output json file
-    copy:
-      dest: output.json
-      content: "{{ data | to_json }}" </code></pre>
-
-
-
-<p>Finally, utilizing the built-in copy module, you can feed it a variable, like data, and then pipe that to a to_json jinja2 function which will then write your file out to dest.</p>
-
-
-
-<p>The result of running this playbook will look something like this:</p>
-
-
-
-<pre class="wp-block-code json"><code>&#091;"/site/foo/", "/site/bar/"]</code></pre>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Complex Text to JSON Conversion with Ansible</h2>
-
-
-
-<p>Below is the Ansible code to read in a file name input.txt delimited by newline characters.  After reading the file, a new variable is initialized name data_elements.  A loop is then run to create new dictionary objects with a key of &#8216;name&#8217; and a value of each line of input.txt.  Finally, a copy is run to write the data to disk under output.json.  </p>
-
-
-
-<pre class="wp-block-code yaml"><code>- name: Complex Read file and output JSON
-  hosts: localhost
-  connection: local 
-  become: false
-  tasks:
-  - name: Read Data File
-    set_fact:
-      data: "{{lookup('ansible.builtin.file', './input.txt').split('\n')}}"
-
-  - name: Show debug data
-    ansible.builtin.debug: var=data
-
-  - name: Create a new array
-    set_fact: 
-      data_elements: &#091;]
-
-  - name: Loop through lines and add data elements to array
-    set_fact:
-      data_elements: "{{ data_elements + &#091;{'name': item}] }}"
-    loop: "{{ data }}"
-
-  - name: Show debug data
-    ansible.builtin.debug: var=data_elements
-
-  - name: Write output json file
-    copy:
-      dest: output.json
-      content: "{{ {'records': data_elements} | to_json }}" 
-</code></pre>
-
-
-
-<h3>Task By Task Breakdown</h3>
-
-
-
-<p>Since most of the code here is the same, I will only focus on breaking out the differences.</p>
-
-
-
-<pre class="wp-block-code yaml"><code> - name: Create a new array
-    set_fact: 
-      data_elements: &#091;]</code></pre>
-
-
-
-<p>The block above sets up the empty data_elements array that we will utilize to map our file lines onto.</p>
-
-
-
-<pre class="wp-block-code yaml"><code>  - name: Loop through lines and add data elements to array
-    set_fact:
-      data_elements: "{{ data_elements + &#091;{'name': item}] }}"
-    loop: "{{ data }}"</code></pre>
-
-
-
-<p>This is setting up a loop to loop over our initial data variable which was read from input.txt.  It is appending new dictionaries into a larger array with a key of &#8216;name&#8217; and a value of the item in a loop.</p>
-
-
-
-<pre class="wp-block-code yaml"><code>  - name: Write output json file
-    copy:
-      dest: output.json
-      content: "{{ {'records': data_elements} | to_json }}" </code></pre>
-
-
-
-<p>Finally, we are doing the same write operation as the simple example, but this time we are creating a dictionary with a key of &#8216;records&#8217; and a value of the data_elements array.</p>
-
-
-
-<p>This will have an output that looks like this:</p>
-
-
-
-<pre class="wp-block-code json"><code>{
-   "records":&#091;
-      {
-         "name":"/site/foo/"
-      },
-      {
-         "name":"/site/bar/"
-      }
-   ]
-}</code></pre>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>As I stated at the beginning of the article, data manipulation in DevOps is a key skill to learn.  Hopefully, this helps kickstart someone on their journey into becoming a DevOps engineer!.</p>
 ]]></content:encoded>
 					
 		
