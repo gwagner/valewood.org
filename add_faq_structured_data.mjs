@@ -84,11 +84,11 @@ for (var i = 0; i < files.length; i++) {
   var replacements = [];
 
   console.log("Modifying file: " + filename)
-  $('h2').each(function (idx, tag) {
+  $('.elementor-widget-text-editor').find('h2').each(function (idx, tag) {
     addReplacement(sanitizeHTag($(tag).html()), $(tag).html(), 0, $(tag), replacements)
   })
-  // console.log(replacements)
-  // continue;
+  //console.log(replacements)
+  //continue;
 
   /**
  * 

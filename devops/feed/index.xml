@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Mon, 21 Nov 2022 14:19:21 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 22 Nov 2022 18:09:11 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,7 +28,7 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>The DevOps Cycle Time: The Difference Between Good and Bad Performance</title>
+		<title>DevOps Cycle Times: The Difference Between Good and Bad Performance</title>
 		<link>https://www.valewood.org/devops-cycle-time/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -178,6 +178,7 @@
 				<category><![CDATA[DevOps]]></category>
 		<category><![CDATA[day2ops]]></category>
 		<category><![CDATA[devops]]></category>
+		<category><![CDATA[devops monitoring and feedback]]></category>
 		<category><![CDATA[tools]]></category>
 		<guid isPermaLink="false">/?p=1674</guid>
 
@@ -1185,6 +1186,7 @@
 		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
 		<pubDate>Fri, 28 Oct 2022 19:39:07 +0000</pubDate>
 				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[automated devops testing]]></category>
 		<category><![CDATA[devops]]></category>
 		<category><![CDATA[testing]]></category>
 		<category><![CDATA[tools]]></category>
