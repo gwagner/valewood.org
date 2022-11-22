@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.valewood.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://www.valewood.org/devops-cycle-time/</loc>
-		<lastmod>2022-11-21T08:19:21-06:00</lastmod>
+		<loc>https://www.valewood.org/devops-monitoring/</loc>
+		<lastmod>2022-11-22T12:09:11-06:00</lastmod>
 	</url>
 	<url>
-		<loc>https://www.valewood.org/devops-monitoring/</loc>
-		<lastmod>2022-11-19T14:40:38-06:00</lastmod>
+		<loc>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</loc>
+		<lastmod>2022-11-22T11:57:08-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-testing/</loc>
+		<lastmod>2022-11-22T11:49:22-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-cycle-time/</loc>
+		<lastmod>2022-11-21T17:09:52-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-rapid-delivery/</loc>
@@ -44,10 +52,6 @@
 	<url>
 		<loc>https://www.valewood.org/purpleurchin-crypto-mining/</loc>
 		<lastmod>2022-10-31T08:21:20-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/devops-testing/</loc>
-		<lastmod>2022-10-28T14:40:11-05:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/</loc>
@@ -107,10 +111,6 @@
 		<image:image>
 			<image:loc>https://www.valewood.org/wp-content/uploads/2022/09/devops-automation-process.jpg</image:loc>
 		</image:image>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</loc>
-		<lastmod>2022-09-16T20:37:00-05:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-deployments-fast-easy-and-fun/</loc>
