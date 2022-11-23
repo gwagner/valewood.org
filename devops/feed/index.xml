@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Tue, 22 Nov 2022 18:09:11 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 23 Nov 2022 21:58:02 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -64,6 +64,18 @@
 
 
 <p>When monitoring the performance of these metrics, it is important to keep them balanced across all three categories; if one value falls too low or high, adjustments may need to be made.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -134,6 +146,18 @@
 
 <li>Improving your customer experience, such as tracking customer complaints and addressing them promptly.</li>
 </ul>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -610,40 +634,94 @@
 
 
 
-<h2>Types of Jobs in DevOps</h2>
+<h2>What do DevOps Engineers do Day to Day?</h2>
 
 
 
-<p>DevOps is a methodology that requires several different disciplines to fully adopt and become proficient in. Let&#8217;s look at a few different roles in DevOps to see how the market is segmenting labor in this space.</p>
+<p>A day in the life of DevOps engineers is not all that different than a day in any other technology career. A DevOps Engineer&#8217;s primary responsibility is centered around the health of the systems under their supervision. Those activities will include:</p>
 
 
 
 <ul>
-<li>Software Engineer &#8211; Software engineers are responsible for building software products and services against a set of requirements.</li>
+<li><strong>Look for anomalies:</strong> Despite our best efforts trying to completely cover a system in monitoring and visibility, sometimes things go bump in the night. These things could be reported by end users or other business units. Anytime something like that shows up, a DevOps Engineer should chase those anomalies down to something actionable.</li>
 
 
 
-<li>Operations Engineer &#8211; Responsible for managing the lifecycle of technology ensuring the stability and reliability of systems.</li>
+<li><strong>Review new releases:</strong> Just because you have an awesome pipeline that utilizes GitOps to move code directly from commit to production does not mean that you should trust your technology stack. Take time daily to review what has been making its way out to production to both understand the changes, but also suggest improvements.</li>
 
 
 
-<li>Quality Assurance &#8211; Responsible for validating the quality of software being developed through automated testing. Also responsible for making testing available to an entire devops team.</li>
+<li><strong>Review observability:</strong> Metrics and monitoring don&#8217;t do any good if nobody is looking at them. Anyone from systems administration through product owners should be reviewing these frequently looking for trends. Real-world usage of a system will always be different than what we thought it was going to be in the engineering phase and we should be validating, disproving, or augmenting our base assertions through data-driven decision-making.</li>
 
 
 
-<li>DevOps Engineer &#8211; Let’s start with the basics. If you’re looking to work as a DevOps engineer, you’ll need to be able to understand and work with code, have an excellent knowledge of server environments, and be able to think on the fly and find solutions to new problems.</li>
+<li><strong>Manage risks:</strong> Successful systems grow over time. DevOps engineers should be looking at a complete ecosystem to help promote long-term health and manage risk. There is no free lunch and growing capacity means that costs will also be going up. Helping the team understand this relationship and educating the product owners of the business on investment opportunities is a critical activity that cannot be overlooked.</li>
 
 
 
-<li>DevOps Engineer Manager &#8211; In this capacity, you’ll need to be able to work with both technical and non-technical staff. You’ll be responsible for ensuring that the team is working effectively and efficiently. So, it goes without saying that you’ll need strong communication skills.</li>
+<li><strong>Communicate with the team: </strong>Being in constant communication with your team is one of the core principles of DevOps. Since work units are broken down much farther than normal, rapid change is constantly being introduced. By promoting good synchronous and asynchronous communication patterns, teams will stay informed about what is important and urgent along with ensuring everyone is able to consume less urgent current events at their leisure.</li>
 
 
 
-<li>DevOps Architect &#8211; A DevOps architect is responsible for designing and implementing the organization’s software delivery system. This is often a challenging role that requires a great deal of experience, knowledge and a strong understanding of organizational needs.</li>
+<li><strong>Watch industry trends:</strong> Because of the speed that a DevOps team brings to the industry, trends and patterns are changing faster than ever. When looking to become a DevOps engineer, you should be ready to keep your RSS feeds hot and ready to consume.</li>
 
 
 
-<li>DevOps Manager &#8211; As a DevOps manager, you’ll be responsible for overseeing the entire DevOps process, including hiring, training, and managing staff. You’ll need to be able to understand and communicate the needs of multiple stakeholders. You’ll also need to be able to manage the entire lifecycle of products, from development to delivery and ongoing maintenance.</li>
+<li><strong>Log new tickets: </strong>As you are doing your daily surveys of systems, undoubtedly you will run across either existing issues or issues that are sure to crop up in the near future. To help promote good planning, ensure that you are logging tickets into your ticket management system to ensure those issues do not get lost.</li>
+
+
+
+<li><strong>Develop the skills you need:</strong> DevOps engineers are lifelong learners. The specific practices of cloud, data, coding, Linux, programming, <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a>, culture, web, <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>, tools, etc. are constantly being changed to promote more fluid delivery models. Take time to sit back and absorb new concepts and techniques to help level up your career and your team.</li>
+
+
+
+<li><strong>Promote continuous improvement:</strong> Any tech company that is not embracing a culture of continuous improvement will quickly be outperformed by companies that do. By taking a little bit of time out of your day to focus on improving something that needs attention, you are contributing to a cleaner and safer technology product!</li>
+
+
+
+<li><strong>Have some fun:</strong> DevOps doesn&#8217;t need to be a grind. Make it a point to leave work behind and have some fun with your team.</li>
+</ul>
+
+
+
+<p>As you can see, DevOps Engineers have a lot of responsibility for running and maintaining technology.</p>
+
+
+
+<h2>Types of Jobs in DevOps</h2>
+
+
+
+<p>DevOps is a methodology that requires several different disciplines to fully adopt and become proficient in. In my opinion, I don&#8217;t think anyone technical should be asking &#8220;Can I become a DevOps Engineer?&#8221; because you are more than likely already qualified to be one! Let&#8217;s look at a few different roles in DevOps to see how the market is segmenting labor in this space.</p>
+
+
+
+<ul>
+<li><strong>Software Engineer:</strong> Software engineers are responsible for building software products and services against a set of requirements. This role usually has some kind of computer science background, but some of the best developers and engineers I have met started their careers with no formal degree.</li>
+
+
+
+<li><strong>Operations Engineer:</strong> Responsible for managing the lifecycle of technology ensuring the stability and reliability of systems. Anyone with a passion for learning technology and growing in the tech space should be searching the job market for entry-level operations jobs.</li>
+
+
+
+<li><strong>Quality Assurance:</strong> Responsible for validating the quality of software being developed through automated testing. Also responsible for making testing available to an entire DevOps team.</li>
+
+
+
+<li><strong>DevOps Engineer:</strong> Let’s start with the basics. If you’re looking to work as a DevOps engineer, you’ll need to be able to understand and work with code, have an excellent knowledge of server environments, and be able to think on the fly and find solutions to new problems.</li>
+
+
+
+<li><strong>DevOps Engineer Manager:</strong> In this capacity, you’ll need to be able to work with both technical and non-technical staff. You’ll be responsible for ensuring that the team is working effectively and efficiently. So, it goes without saying that you’ll need strong communication skills.</li>
+
+
+
+<li><strong>DevOps Architect:</strong> A DevOps architect is responsible for designing and implementing the organization’s software delivery system. This is often a challenging role that requires a great deal of experience, knowledge and a strong understanding of organizational needs.</li>
+
+
+
+<li><strong>DevOps Manager:</strong> As a DevOps manager, you’ll be responsible for overseeing the entire DevOps process, including hiring, training, and managing staff. You’ll need to be able to understand and communicate the needs of multiple stakeholders. You’ll also need to be able to manage the entire lifecycle of products, from development to delivery and ongoing maintenance.</li>
 </ul>
 
 
@@ -652,7 +730,7 @@
 
 
 
-<h2>Tips for Landing a DevOps Job Without a Degree</h2>
+<h2>How to Land a DevOps Job Without a Degree</h2>
 
 
 
@@ -676,33 +754,33 @@
 
 
 
-<ol>
-<li>Research the role you want &#8211; Blindly showing up to a job interview for a DevOps position is not going to go well. Take some time to learn and understand the DevOps methodology and what it is trying to accomplish. Any of the technical skills needed can be acquired on the job so do let that be a limiting factor.</li>
+<ul>
+<li><strong>Research the role you want</strong>: Blindly showing up to a job interview for a DevOps position is not going to go well. Take some time to learn and understand the DevOps methodology and what it is trying to accomplish. Any of the technical skills needed can be acquired on the job so do let that be a limiting factor.</li>
 
 
 
-<li>Network &#8211; The single best way to land a job in DevOps without a degree is to network, network, network. It’s one of the most effective ways to find out about new opportunities, learn about the industry, and connect with people who can help you advance your career.</li>
+<li><strong>Network</strong>: The single best way to land a job in DevOps without a degree is to network, network, network. It’s one of the most effective ways to find out about new opportunities, learn about the industry, and connect with people who can help you advance your career.</li>
 
 
 
-<li>Identify Your Skills &#8211; Before you can network effectively, you need to know what your skills are. Doing this will help you identify which organizations are best for you, as well as identify skill gaps. Furthermore, it will help you understand how to position yourself as the best candidate for a given role.</li>
+<li><strong>Identify Your Skills</strong>: Before you can network effectively, you need to know what your skills are. Doing this will help you identify which organizations are best for you, as well as identify skill gaps. Furthermore, it will help you understand how to position yourself as the best candidate for a given role.</li>
 
 
 
-<li>Join a DevOps Community &#8211; DevOps communities, like meetup groups and online forums, are excellent ways to find out about new opportunities and connect with people who can help you advance your career.</li>
+<li><strong>Join a DevOps Community:</strong> DevOps communities, like meetup groups and online forums, are excellent ways to find out about new opportunities and connect with people who can help you advance your career.</li>
 
 
 
-<li>Create an Online Portfolio &#8211; Online portfolios can be incredibly powerful tools for job seekers without a degree. You should include examples of your work and information about your projects and roles.</li>
+<li><strong>Create an Online Portfolio:</strong> Online portfolios can be incredibly powerful tools for job seekers without a degree. You should include examples of your work and information about your projects and roles.</li>
 
 
 
-<li>Phone a Friend &#8211; Look through Linkedin, Facebook, Twitter, or other free resources for peers who are already working in the DevOps space to find out what they think is important and work towards developing similar skills.</li>
+<li><strong>Network with Employers</strong>: When you’re networking with employers, don’t sell yourself short. Be sure to highlight your skills, background, and experience.</li>
+</ul>
 
 
 
-<li>Network with Employers &#8211; When you’re networking with employers, don’t sell yourself short. Be sure to highlight your skills, background, and experience.</li>
-</ol>
+<p>Regardless of your experience in development and operations, if you have any kind of tech experience, you should be looking to land a job in the DevOps engineering space. Entry-level positions are generally going to be a bit more focused on operations.</p>
 
 
 
@@ -739,16 +817,48 @@
 
 
 <ul>
-<li>Define What You Want &#8211; Before you embark on your job search, you need to make an honest assessment of what you want. Do you want a full-time position, or will a contract position work for you? How many hours do you want to work per week? What is your salary range? These are just a few of the questions you’ll need to answer.</li>
+<li><strong>Define What You Want</strong>: Before you embark on your job search, you need to make an honest assessment of what you want. Do you want a full-time position, or will a contract position work for you? How many hours do you want to work per week? What is your salary range? These are just a few of the questions you’ll need to answer.</li>
 
 
 
-<li>Identify Your Strengths &#8211; Once you’ve identified what you want, you need to assess what you have to offer. What are your strengths? What are your weaknesses? This will help you identify which employers will be best for you.</li>
+<li><strong>Identify Your Strengths: </strong>Once you’ve identified what you want, you need to assess what you have to offer. What are your strengths? What are your weaknesses? This will help you identify which employers will be best for you.</li>
 
 
 
-<li>Write a Great Resume &#8211; Once you’ve assessed your skills and talents, you need to translate them into action for your resume. This is your first opportunity to impress a prospective employer.</li>
+<li><strong>Write a Great Resume</strong>: Once you’ve assessed your skills and talents, you need to translate them into action for your resume. This is your first opportunity to impress a prospective employer.</li>
 </ul>
+
+
+
+<h2>Why do Employers Value Degrees?</h2>
+
+
+
+<p>In the job market, it is no secret that you will very frequently see X level of degree or equivalent experience. I have noticed that this will generally disenfranchise individuals who are in the tech space from searching for a job at a particular company.</p>
+
+
+
+<p>As a hiring manager, I am generally looking for individuals who have an aptitude and are lifelong learners for any of the jobs I am looking to fill. People who are passionate about quality delivery, consistency, and passionate about personal development are always great candidates. When looking for a new job, make sure you focus on those key areas about yourself to really wow a future employer.</p>
+
+
+
+<p>Employers are also interested in standardized skills in software development, computer science, cloud, systems administration, etc. When someone graduates from higher education in the United States, there is a general sense that those individuals have learned and developed themselves enough to be effective from day 1, which is rarely the case in my experience.</p>
+
+
+
+<p>A Junior DevOps engineer position can be filled by anyone who is passionate about automation, CI/CD, cloud, programming, Linux, AWS, and other technical spaces regardless of their background. The key is to do your research and understand the goals of what DevOps is trying to accomplish and make sure you are ready for interview questions about the DevOps Methodology.</p>
+
+
+
+<p>When I am evaluating candidates, I bank on people first, not their skills. Even someone who may appear weak in a particular technology may be an incredible person that I want to work with. Some companies take the far more brutal leger-based approach on this. By only interviewing candidates who have a college degree, they are able to defer some of the cost of training. I would argue that is not a company that I want to work for.</p>
+
+
+
+<p>There is an old saying, &#8220;Nobody ever gets fired for choosing IBM&#8221;. This translates into, if you are choosing the best, there is no reason for anyone to second guess your decisions. A degree has a similar stigma behind it. If a hiring manager is betting on someone with a degree, they probably won&#8217;t regret their decision. As a candidate, you just need to make sure you give a prospective employer a reason to bet on you.</p>
+
+
+
+<p><strong>TLDR;</strong> Standardized skills, training, problem-solving, and risk mitigation.</p>
 
 
 
@@ -756,7 +866,7 @@
 
 
 
-<p>If you want a job in DevOps, you’ll need to be prepared to show what you have to offer and sell yourself to prospective employers. Remember, though, that there are many different types of jobs in DevOps.</p>
+<p>If you want a job as a DevOps Engineer, you’ll need to be prepared to show what you have to offer and sell yourself to prospective employers. Remember, though, that there are many different types of jobs in DevOps.</p>
 
 
 
