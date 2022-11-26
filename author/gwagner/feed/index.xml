@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Tue, 22 Nov 2022 23:08:20 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 26 Nov 2022 18:07:03 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,289 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Why DevOps is Boring in 2022</title>
+		<link>https://www.valewood.org/more-like-boringops/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sat, 26 Nov 2022 18:04:10 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[coding]]></category>
+		<category><![CDATA[delivery]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[software]]></category>
+		<guid isPermaLink="false">/?p=1786</guid>
+
+					<description><![CDATA[DevOps has become a hot topic in the technology world. It’s no longer just an isolated set of tools and processes — it’s an entire culture that’s infiltrating every facet of software development. This article will explore why some people&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> has become a hot topic in the technology world. It’s no longer just an isolated set of tools and processes — it’s an entire culture that’s infiltrating every facet of software development.</p>
+
+
+
+<p>This article will explore why some people may feel “DevOps is boring”. We think it’s because they are looking at it from the wrong angle.</p>
+
+
+
+<p>The article will explain why DevOps is not boring, but rather a collection of processes and tools that can be made boring when not implemented correctly. We also dive into exactly how you can make DevOps more interesting while keeping your sanity intact.</p>
+
+
+
+<p>Let’s get started&#8230;</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>What Does DevOps Mean?</h2>
+
+
+
+<p>The term DevOps, or “development operations,” first appeared in the tech world in the early 2000s. It was a term used to describe a certain type of organization that was responsible for the entire application and software development lifecycle, from ideation to production.</p>
+
+
+
+<p>Teams would be responsible for both the development and operations workflows, providing a more efficient way of working. As DevOps has grown in popularity, it has expanded beyond just operations teams.</p>
+
+
+
+<p>Now, people are interested in speeding up their software development process using the term DevOps to describe the combined usage of infrastructure automation tools and best practices for team collaboration and communication.</p>
+
+
+
+<p>There are two main components within DevOps that drive the culture. They are infrastructure as code and automated delivery. IaC is really just a way of organizing your code and infrastructure so that it is easily reproducible and shareable. Automated delivery is a method for automatically deploying applications and configurations without human intervention.</p>
+
+
+
+<p>With the increase in automation, engineers may find themselves wondering when the next exciting change event may present itself. They may also wonder if they are automating themselves out of a job.</p>
+
+
+
+<p>As a basis for understanding DevOps, you must understand that this practice exists to remove the excitement of a chaotic technology delivery process. DevOps is meant to be boring by nature.</p>
+
+
+
+<p>As a side effect of DevOps being stable and consistent, organizations must look for other ways to keep their software engineers and DevOps engineers engaged through other means of excitement.</p>
+
+
+
+<h2>Why is DevOps Becoming Boring?</h2>
+
+
+
+<p>As companies begin implementing modern DevOps practices, some people may notice a lull in excitement. The tools, processes, and overall culture of DevOps may feel exciting at first but quickly turn into monotony. Why?</p>
+
+
+
+<p>DevOps becomes boring because people approach it as a checklist. They focus on the tools and processes and completely ignore the culture and mindset that lies behind the methodology.</p>
+
+
+
+<p>These people don’t understand why they are implementing certain tools or why they are following specific processes. They are just doing it because they read an article that said their company should be adopting DevOps, or they read a book that talked about the “predictable flow of value”.</p>
+
+
+
+<p>What makes DevOps exciting is the culture behind it. The practices and tools are just the means of achieving a certain culture. If you try to implement DevOps but don’t adopt the correct mindset and culture behind it, then you are going to end up with a boring and ineffective implementation.</p>
+
+
+
+<h3>Lower Number of Natural Learning and Growth Opportunities</h3>
+
+
+
+<p>A stable DevOps lifecycle will inherently bring a lower number of emerging technologies and opportunities to integrate emerging technologies. Sure, early on in DevOps adoption, the emerging tech will be all the rage, but that will subside as stability and consistency are driven into the pipeline.</p>
+
+
+
+<p>Since continuous improvement is a fundamental principle of devops, teams should be encouraged to do some data-driven analysis looking for opportunities to become more efficient in their delivery cycles.</p>
+
+
+
+<p>Pivots can also be made within the team. Someone who is primarily focused on ops should be put in a position to both share what they are doing and also be presented with opportunities to look at other fields like coding or security. This is true for all specialties that make up a function DevOps team.</p>
+
+
+
+<h3>Comfort in Previous Success</h3>
+
+
+
+<p>All too often, I see companies in the industry falling back on the comfort of their successes as an excuse to not rapidly evolve. DevOps should be putting companies in a position where pivots are much easier to pull off. Secondarily keeping a DNA of being lean and nimble should be a focus of any company.</p>
+
+
+
+<p>Any company sitting back on its heels thinking it can keep doing what they are doing forever is going to be consumed by its competitors operating at a different level. Break that cycle by listening to the opportunities being presented by your DevOps Engineers and your Software Engineers to keep DevOps from becoming boring and your company from stagnating.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Make DevOps Exciting Again!</h2>
+
+
+
+<p>We’ve covered why DevOps can become boring, but what can you do about it? If you want to make DevOps exciting again, then you have to understand why it is exciting in the first place!</p>
+
+
+
+<p>The reason DevOps is exciting for most companies is because of the focus on drastically improving your software development process. It’s a way of improving communication, collaboration, and the overall quality of your software. It’s a way of adopting a culture of automation.</p>
+
+
+
+<p>Automation is important in DevOps because it directly impacts the speed of your software release cycles. It can also help improve the overall quality of your software as well as your organization.</p>
+
+
+
+<p>Automation is a core component of DevOps. When you make automation a core part of your development process, you are able to reduce the number of repetitive tasks your organization has to perform. This means you can put less focus on manual tasks, and more focus on things that actually improve your software and the company as a whole.</p>
+
+
+
+<h3>Provide Growth Opportunities</h3>
+
+
+
+<p>Some companies confuse growth with &#8220;opportunities to become a manager&#8221;. Most of the really good engineers and architects that I have met will &#8220;manage&#8221; a project because they want to see it succeed not because they want to be a manager.</p>
+
+
+
+<p>Providing opportunities for growth in knowledge, automation, systems, development, operations, platforms, consulting, or any other area that your services or products may not be fully taking advantage of today.</p>
+
+
+
+<p>As an example, if you have an awesome set of pipelines that obfuscate some of the complexities of doing automated delivery, challenge your team to package that up and white-label it. Have them use those packages to consult with other teams in your organization to level their automation skills up.</p>
+
+
+
+<h3>Inject Failures</h3>
+
+
+
+<p>We are always focused on delivering key projects, functionality, or needs of the business. With a narrow view of the world being delivered first, that does not leave a lot of room to poke at the softer edges of your products.</p>
+
+
+
+<p>Introduce automated failure models like a chaos monkey. Start with planned times and have your chaos monkey start to take down some low criticality services and review the characteristics of what that means. There may be impacts in areas that you were not expecting.</p>
+
+
+
+<p>This provides an opportunity to add some advanced troubleshooting to an area that the DevOps methodology took away through its inherent consistency and stability.</p>
+
+
+
+<h2>A Culture of Automation and Continuous Improvement</h2>
+
+
+
+<p>The two main components of DevOps – automation and continuous improvement – are closely related. Both are part of the core values of DevOps and are critical to the success of the culture overall.</p>
+
+
+
+<p>If you want to truly adopt a culture of continuous improvement, you need to make sure that your team is constantly learning and improving their knowledge. This means your team should be continually looking for new books, podcasts, and ways that they can expand their skill set, improve their knowledge, and learn new things.</p>
+
+
+
+<p>You should encourage your team to read books, attend conferences, and listen to podcasts so they can keep up with the latest trends in technology. This can also help them discover new topics they are interested in and allow them to find new ways of applying their skills to different areas of business.</p>
+
+
+
+<h2>Continuously Test Features and New Releases</h2>
+
+
+
+<p>As you work to improve your software, you will eventually want to release new features and functionality to your customers. But before you do, you need to ensure that the new features work exactly as they should.</p>
+
+
+
+<p>Therefore, you need to implement a strategy for continuously testing new releases and features. You need to do this across multiple stages in your software development lifecycle.</p>
+
+
+
+<p>The first stage is called continuous integration, where you build and test new features as soon as developers create them.</p>
+
+
+
+<p>The second stage is continuous delivery, where you get the OK to release the new features to internal users and then finally to customers.</p>
+
+
+
+<p>You want to make sure you are using the same automated tools and processes across every stage so you don’t have to start from scratch when you get to the next stage.</p>
+
+
+
+<h2>Incorporate User Feedback Into DevOps Processes</h2>
+
+
+
+<p>User feedback is important to any business because it allows you to understand your customers and discover ways to improve your product. However, user feedback is hard to come by because customers don’t usually interact with businesses on a consistent basis.</p>
+
+
+
+<p>In order to incorporate user feedback into your software development lifecycle, you need to be able to get consistent feedback from customers. There are two main ways to do this:</p>
+
+
+
+<ul>
+<li>Use survey tools to let customers provide feedback on your product, team, and company.</li>
+
+
+
+<li>Let customers interact with your team using live chat tools.</li>
+</ul>
+
+
+
+<p>Both of these tools are easy to implement and can help you get useful and consistent feedback from customers.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>DevOps is not boring. It is an exciting change in the way that organizations approach software development. However, it is only exciting if you fully commit to the culture of DevOps and all the benefits it has to offer.</p>
+
+
+
+<p>If you just implement the tools and processes without the culture and mindset, then you are only doing half the work and missing out on the benefits of the fully implemented DevOps culture.</p>
+
+
+
+<p>If you want to make DevOps exciting again, you must ensure that you are fully committed to the culture. Only then will you be able to make the most of everything that DevOps has to offer.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>DevOps Cycle Times: The Difference Between Good and Bad Performance</title>
 		<link>https://www.valewood.org/devops-cycle-time/</link>
 		
@@ -528,7 +811,7 @@
 		
 			</item>
 		<item>
-		<title>How are Agile and DevOps Interrelated?</title>
+		<title>How do Agile and DevOps Interrelate?</title>
 		<link>https://www.valewood.org/devops-and-agile/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -671,7 +954,17 @@
 
 
 
-<ul><li>What information does each team need from the other?</li><li>What do they do with that information?</li><li>What are their roles and responsibilities?</li></ul>
+<ul>
+<li>What information does each team need from the other?</li>
+
+
+
+<li>What do they do with that information?</li>
+
+
+
+<li>What are their roles and responsibilities?</li>
+</ul>
 
 
 
@@ -2130,178 +2423,6 @@ all:
 
 
 <p>DevOps teams are constantly looking for more talent that can fulfill the vision of smoother and more reliable delivery. That trend is not going away any time soon!</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Is DevOps a Skill?</title>
-		<link>https://www.valewood.org/devops-skills/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Wed, 12 Oct 2022 02:17:36 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[delivery]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[opinion]]></category>
-		<guid isPermaLink="false">/?p=1103</guid>
-
-					<description><![CDATA[This is a pretty loaded question. Is cooking a skill? Are home builders skilled or unskilled labor? A skill would denote being able to do something well or having expertise in practice. Skills can be trained! Being in a field&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>This is a pretty loaded question.  Is cooking a skill?  Are home builders skilled or unskilled labor?  A skill would denote being able to do something well or having expertise in practice.  Skills can be trained!  Being in a field of skilled labor like running CNC equipment requires a tremendous amount of skill.</p>
-
-
-
-<p>So, is <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> a skill or is it a logical evolution where technology delivery ends up going regardless of the forces that drive it there?</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Technology Delivery</h2>
-
-
-
-<p>Delivering technology, with any kind of <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/" data-type="page" data-id="1036">quality</a> backing that delivery, will require several different practices.  Depending on your domain; you will probably employ the specialties of software developers, infrastructure/cloud engineers, quality assurance engineers, security engineers, and network engineers, along with a whole host of other roles.  Each of those roles is critical to the successful execution of a project at a very high standard.  </p>
-
-
-
-<p>Once the technology is delivered to the market, someone is going to have to pick up the mantle and run that technology solution.  In some organizations that will be a dedicated operations team, and in others they will adhere to a &#8220;you build it you own it&#8221; strategy.</p>
-
-
-
-<p>One of the biggest misnomers that I run across quite frequently is this; once a project is launched, the skilled labor that developed that project is no longer needed over the lifetime of that technology.  I believe that this could not be further from the truth.</p>
-
-
-
-<h2>Technology Lifecycle > Delivery</h2>
-
-
-
-<p>I prefer to look at technology through the lens of a lifecycle rather than a static point-in-time delivery.  Once a technology product is launched, it needs a tremendous amount of care and feeding to ensure that it remains valuable to its end users.  </p>
-
-
-
-<p>Due to the complex nature of the domains that I generally work in, this means that the skilled labor that helped produce said technology product will continue to have a hand in that technology product for its entire lifecycle.  It does not mean that they will be entirely dedicated to a single effort, but it does mean they will continue to lend their expertise.</p>
-
-
-
-<p>So, how does this answer the question &#8220;Is DevOps a skill?&#8221;.  For me, the answer is a simple one, YES!  But I think that it first takes an understanding of what <a href="https://www.valewood.org/topics/devops/" data-type="page" data-id="505">DevOps</a> is.</p>
-
-
-
-<h2>What is DevOps?</h2>
-
-
-
-<p>DevOps is a series of practices that combine together into a consistent delivery flow for technology.  It is generally misrepresented as purely automation, but that is only a particular skilled practice inside DevOps.  Embracing DevOps fully is a serious commitment to changing how technology delivery is performed, and full adoption means that you will be more interested in the overall lifecycle of technology instead of just finite delivery points in time.</p>
-
-
-
-<h2>What Expertise is Needed for DevOps?</h2>
-
-
-
-<p>I believe that most organizations are following a more traditional software delivery methodology.  They have not adopted DevOps or agile in any meaningful way, and if they have at the very least adopted agile they are not using a standardized framework.  This is not true everywhere, but I believe it is more true than false.</p>
-
-
-
-<h3>Advocating for and Leading Change</h3>
-
-
-
-<p>Since most organizations are building and deploying software with some degree of success in whatever way works for them, to build real DevOps adoption, a change agent is going to need to be bravely thrown into the mix to help drive the change they want to see in the world.</p>
-
-
-
-<p>Let&#8217;s face it, Change is hard.  Change brings the unknown right to our doorsteps and forces us to confront aspects of our work that may feel uncomfortable.  Depending on your level in an organization, either being an advocate for change or leading through change is a trainable skill that individuals should look into developing.</p>
-
-
-
-<h3>Agile Project Management</h3>
-
-
-
-<p>Project management is a pretty crowded space.  There are plenty of certifications out there that individuals can go get to skill up in this space as well.  But, agile project management is not just for project managers, everyone should become well versed in this space.</p>
-
-
-
-<p>Learning about risks and risk management, work breakdown structures, timelines, forecasting, Gantt charts, resource management, and all of the rest of the highly skilled practices in agile project management will only enhance a DevOps team&#8217;s ability to deliver effective and high-quality solutions.  If a project manager is left to fully manage a project independently while engineers are heads down in code and poorly communicating, that project is doomed for failure from the very beginning.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h3>Transforming Communication</h3>
-
-
-
-<p>In order to adopt effective DevOps practices, a team will need to build effective communication patterns.  </p>
-
-
-
-<p>Some organizations will adopt a pattern of tickets first.  &#8220;If it isn&#8217;t in the ticket, it didn&#8217;t happen&#8221;.  This is a great asynchronous communication pattern that ensures that communication is available more broadly to any consumers that may have questions or need updates.  It is an ineffective communication pattern if nobody ever reads the tickets.</p>
-
-
-
-<p>Other organizations will adopt in-person or remote scrums to talk about what they worked on, will be working on, and challenges.  This can be a really good communication pattern for individuals who like to talk through and collaborate on problems.  This is a terrible pattern when it comes to groups that are spread a little too thin or have a WIP problem.</p>
-
-
-
-<p>Communication must work for the individuals who are producing communication and consuming communication.  I have seen multiple different scenarios fail because members of the team are not willing to adapt to each other and ensure success.  There are a tremendous number of tools on the market, I am confident that any team willing to put in the work to find the right one can become effective communicators.</p>
-
-
-
-<h3>Effective Feedback Loops</h3>
-
-
-
-<p>Along with communication, feedback loops are also incredibly important to a DevOps team.  If automated testing fails, where do notifications go?  If there is a problem with production, where does communication go?  If these two events, or many other different kinds of events, impact delivery; where does that communication go?</p>
-
-
-
-<p>By ensuring that feedback is making its way back to the proper parties, more effective data-driven decision-making can happen.  Without feedback loops from tools, systems, or people; we are all left guessing!</p>
-
-
-
-<h3>Tools Tools Tools</h3>
-
-
-
-<p>10 years ago, the market for DevOps tools (technology tools) was pretty sparse.  You were left with bash scripts on Linux servers, limited API access, and using your legs to walk down to your local data center to pop in the newest RedHat CD.</p>
-
-
-
-<p>Today, the number of tools in the DevOps space is expansive.  I am not going to go too deep into the tooling here because of its depth, but any DevOps team worth its weight will need to have some serious skills with the latest DevOps tools.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>I wrote this post to answer the question, &#8220;Is DevOps a skill?&#8221;.  I believe that the answer to that question is a resounding yes.  It is as much of a skill as sculpting clay into a piece of art or customizing a classic car.  There is a high degree of depth in expertise for a DevOps team to be effective in their delivery processes.  Finally, any organization out there that thinks they are doing DevOps without these skills is not fully realizing the benefits that DevOps has to offer.</p>
 ]]></content:encoded>
 					
 		
