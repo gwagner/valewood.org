@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/greer-shepherd/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 23 Nov 2022 21:58:02 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 26 Nov 2022 18:41:00 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -221,6 +221,7 @@
 		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
 		<pubDate>Thu, 17 Nov 2022 21:28:06 +0000</pubDate>
 				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops resource]]></category>
 		<guid isPermaLink="false">/?p=1645</guid>
 
 					<description><![CDATA[DevOps is hot right now. The demand for professionals with the skills to bridge the gap between software development and information technology operations is growing significantly. It’s not difficult to understand why. DevOps is a methodology that optimizes processes, removes&#8230;]]></description>
