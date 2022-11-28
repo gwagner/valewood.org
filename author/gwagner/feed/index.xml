@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sat, 26 Nov 2022 18:07:03 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 28 Nov 2022 01:17:21 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,7 +28,118 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>Why DevOps is Boring in 2022</title>
+		<title>Which Term Accurately Describes Agile and DevOps?</title>
+		<link>https://www.valewood.org/which-term-describes-devops-and-agile/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sat, 26 Nov 2022 22:20:38 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[opinion]]></category>
+		<guid isPermaLink="false">/?p=1796</guid>
+
+					<description><![CDATA[DevOps is a culture and methodology that an organization can prescribe to aid in velocity, consistency, stability, and flow of value to the market. Often confused with &#8220;automation&#8221; being the only benefit of DevOps, the core principles behind DevOps offer&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is a culture and methodology that an organization can prescribe to aid in velocity, consistency, stability, and flow of value to the market.  Often confused with &#8220;automation&#8221; being the only benefit of DevOps, the core principles behind DevOps offer a common set of ideals that a team can align under and strive to achieve.</p>
+
+
+
+<p>Big A Agile is a project management methodology that pairs well with DevOps to aid in rationalizing work delivery against a set of guardrails.  Agile also provides prescriptive visibility to work being performed ensuring engineers are not being overloaded by overwhelming business priorities.</p>
+
+
+
+<p>With those descriptions out of the way, what term best describes both Agile and DevOps?</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Consistency</h2>
+
+
+
+<p>The goal of any organization going through change is to drive consistency in delivery.  Without consistency, a technology group cannot adapt to change and a business cannot meet the market where it is at.  </p>
+
+
+
+<p>By driving consistency, a business gets predictability which is powerful when scoping and planning new work.  By understanding real velocity, not aspirational velocity, a business can invest in its people and products to grow at a more sustainable rate.</p>
+
+
+
+<p>By driving consistency, technologists get the predictability that they need to make sound and rational decisions about how to approach work.  When working against an unpredictable cycle, technology groups will quickly get overwhelmed by the rate of change and produce solutions that do not meet the demands of the market.</p>
+
+
+
+<h3>Real Velocity vs Aspirational Velocity</h3>
+
+
+
+<p>Aspirational velocity is when a leader says &#8220;We need this product to launch by X date!&#8221;.  We have either all been in that position or will be in that position sometime in our careers.</p>
+
+
+
+<p>Without proper support, investment, and foresight in planning; aspirational velocity will almost always end with sub-standard products that greatly increase the future cost to the business.  Leaning harder on anyone in the delivery space always leads to decisions that are short-sighted toward a narrow goal.</p>
+
+
+
+<p>I believe aspirational velocity is firmly rooted in the idea of needing to &#8220;take a shot&#8221;.  Checks are constantly being written that others are expected to cash.  Sometimes this works out and I would say can be necessary for a startup or green field project.  Any organization looking to grow over time should be looking for its tipping point when aspirational velocity needs to transition into real velocity to offer a more reliable work environment for their employees.</p>
+
+
+
+<p>Real velocity is based on the idea that you are going to make hard choices about which work is important to feed into a model where delivery is consistent.  When more work needs to be done than can be achieved by the current velocity, hard choices will be made to cut work, increase staff, defer work, or invest in current technology to increase velocity.  </p>
+
+
+
+<p>Any business should have a firm goal of understanding its real velocity and do everything in its power to tamp down or extinguish aspirational velocity.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>DevOps and Agile are Closely Related</h2>
+
+
+
+<p>I have another article that describes how DevOps and Agile are related to each other.  Primarily, Agile is about lean work being performed against targets and goals with frequent demos of the work being completed to influence pivots.  Agile was in need of a technology delivery methodology that could help realize the fundamental mission of Agile. </p>
+
+
+
+<p>You can read more about how <a href="https://www.valewood.org/devops-and-agile/" data-type="post" data-id="1264">DevOps and Agile are related here!</a></p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>The key to any technology product&#8217;s success is consistency.  DevOps and Agile offer that consistency while remaining flexible and focused on common non-functional requirements like reliability and stability.  How would you boil DevOps and Agile down to a single term?  <a href="https://www.valewood.org/contact/" data-type="page" data-id="984">Contact me</a> and let me know!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Why DevOps is Boring in 2022?</title>
 		<link>https://www.valewood.org/more-like-boringops/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -40,21 +151,39 @@
 		<category><![CDATA[software]]></category>
 		<guid isPermaLink="false">/?p=1786</guid>
 
-					<description><![CDATA[DevOps has become a hot topic in the technology world. It’s no longer just an isolated set of tools and processes — it’s an entire culture that’s infiltrating every facet of software development. This article will explore why some people&#8230;]]></description>
+					<description><![CDATA[DevOps is a hot topic in the technology world. It&#8217;s no longer just an isolated set of tools and processes which promise an automated future, it’s an entire culture that’s infiltrating every facet of software development. This post will try&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> has become a hot topic in the technology world. It’s no longer just an isolated set of tools and processes — it’s an entire culture that’s infiltrating every facet of software development.</p>
+<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is a hot topic in the technology world. It&#8217;s no longer just an isolated set of tools and processes which promise an automated future, it’s an entire culture that’s infiltrating every facet of software development.</p>
 
 
 
-<p>This article will explore why some people may feel “DevOps is boring”. We think it’s because they are looking at it from the wrong angle.</p>
+<p>This post will try to explain why the DevOps methodology itself is not boring.  We will also try to explain why a feeling of boredom stems from properly implemented tools and processes. We also dive into how you can make DevOps more exciting while keeping your sanity intact.</p>
 
 
 
-<p>The article will explain why DevOps is not boring, but rather a collection of processes and tools that can be made boring when not implemented correctly. We also dive into exactly how you can make DevOps more interesting while keeping your sanity intact.</p>
+<p>There are plenty of posts out there already which try to tackle this question:</p>
 
 
 
-<p>Let’s get started&#8230;</p>
+<ul>
+<li><a href="https://www.reddit.com/r/cscareerquestions/comments/9zn25a/after_a_few_years_devops_gets_super_boring/" data-type="URL" data-id="https://www.reddit.com/r/cscareerquestions/comments/9zn25a/after_a_few_years_devops_gets_super_boring/" target="_blank" rel="noopener">Reddit</a></li>
+
+
+
+<li><a href="https://www.quora.com/Do-you-like-DevOps-work-Is-it-boring-or-interesting" data-type="URL" data-id="https://www.quora.com/Do-you-like-DevOps-work-Is-it-boring-or-interesting" target="_blank" rel="noopener">Quora</a></li>
+
+
+
+<li><a href="https://www.zippia.com/answers/is-devops-a-boring-job/" data-type="URL" data-id="https://www.zippia.com/answers/is-devops-a-boring-job/" target="_blank" rel="noopener">Zippa</a></li>
+
+
+
+<li><a href="https://www.fishbowlapp.com/post/is-devops-a-boring-job-what-are-the-pros-and-cons" data-type="URL" data-id="https://www.fishbowlapp.com/post/is-devops-a-boring-job-what-are-the-pros-and-cons" target="_blank" rel="noopener">Fishbowl</a></li>
+</ul>
+
+
+
+<p>I don&#8217;t think any of these links have gotten it right.  DevOps, if adopted completely, is meant to be boring due to the <a href="https://www.valewood.org/topics/devops/benefits-of-devops/consistency/" data-type="page" data-id="1734">stability and consistency</a> that DevOps brings.  Let&#8217;s explore why this happens and what you can do about it below!</p>
 
 
 
@@ -102,7 +231,7 @@
 
 
 
-<h2>Why is DevOps Becoming Boring?</h2>
+<h2>Why is DevOps Boring?</h2>
 
 
 
@@ -122,7 +251,7 @@
 
 
 
-<h3>Lower Number of Natural Learning and Growth Opportunities</h3>
+<h3>Fewer Natural Learning and Growth Opportunities</h3>
 
 
 
@@ -130,7 +259,7 @@
 
 
 
-<p>Since continuous improvement is a fundamental principle of devops, teams should be encouraged to do some data-driven analysis looking for opportunities to become more efficient in their delivery cycles.</p>
+<p>Since continuous improvement is a fundamental principle of DevOps, teams should be encouraged to do some data-driven analysis looking for opportunities to become more efficient in their delivery cycles.</p>
 
 
 
@@ -218,7 +347,7 @@
 
 
 
-<p>The two main components of DevOps – automation and continuous improvement – are closely related. Both are part of the core values of DevOps and are critical to the success of the culture overall.</p>
+<p>The two main components of DevOps &#8211; automation and continuous improvement &#8211; are closely related. Both are part of the core values of DevOps and are critical to the success of the culture overall.</p>
 
 
 
@@ -2196,233 +2325,6 @@ all:
 
 
 <p>As I stated at the beginning of the article, data manipulation in DevOps is a key skill to learn.  Hopefully, this helps kickstart someone on their journey into becoming a DevOps engineer!.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Are DevOps Engineers in Demand in 2022?</title>
-		<link>https://www.valewood.org/are-devops-engineers-in-demand/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Fri, 14 Oct 2022 20:17:56 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[delivery]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[jobs]]></category>
-		<guid isPermaLink="false">/?p=1127</guid>
-
-					<description><![CDATA[Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are DevOps Engineers in Demand?&#8221; Simply looking at job boards and reviewing the&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Whether you are looking to make a shift in your career path, or you are looking to change companies a common question job seekers will have is &#8220;Are <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> Engineers in Demand?&#8221;</p>
-
-
-
-<p><strong>Simply looking at job boards and reviewing the numbers does not tell the entire story here. As of the time of writing LinkedIn has roughly 42,000 positions and Indeed has roughly 11,000 positions for the search term DevOps engineer.</strong></p>
-
-
-
-<p>I believe that the honest answer to this question has more to do with market conditions than it does with job openings, though job openings are still a good indicator.</p>
-
-
-
-<p>Let&#8217;s take a look at the market conditions to understand if a DevOps engineering skillset is in demand!</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Rising Demand for DevOps Talent</h2>
-
-
-
-<p>Many of us in the technology industry know how DevOps is revolutionizing software development. Companies adopting the DevOps approach are doing more with greater efficiency in the process. DevOps can help a company provide a software solution quickly. It can therefore help prevent production problems if necessary and the result will also be improved customer experience, feedback, and communications.</p>
-
-
-
-<p>Through to pandemic, more and more businesses needed to move to a digital presence to stay competitive in the market. This either means investing more heavily in technology or standing up new technology they may not have been ready for.</p>
-
-
-
-<p>As the dust has settled, businesses are now left with aging technology that is not growing with their business which means future investment. The tech industry is stepping up to respond in this newly opened market.</p>
-
-
-
-<p>If a business is not purely technology focused but utilizes technologies to enable sales, they are going to want to get into the most reliable modes of future delivery. This is where DevOps skills are filling the gap.</p>
-
-
-
-<p>I have seen a new term popping up in the industry recently: &#8220;DevOps As A Service&#8221;. This is born out of the idea that the DevOps methodology can be bolted onto technologies that are becoming more relevant in the market to ensure more reliable modes of delivery.</p>
-
-
-
-<h2>Is DevOps still in Demand?</h2>
-
-
-
-<p>I am a hiring manager running a DevOps group. I have been hiring, training, and converting people from either IT operations teams or software development teams for nearly a decade now. I can confidently say that DevOps engineering roles are hard to fill, they are also very in demand and you need to move quickly when hiring.</p>
-
-
-
-<h2>DevOps Talent is Still Hard to Find</h2>
-
-
-
-<p>Let&#8217;s face it, the industry has done a terrible job of defining what DevOps really is. In most places, my experience has been, DevOps means infrastructure as code and does not account for the overall methodology.</p>
-
-
-
-<p>Because of the incongruency between expectation and implementation, I would argue that a large portion of the talent pool is underdeveloped at this point. With the proper guidance, the talented job seekers out there can transition into a more DevOps-oriented mindset.</p>
-
-
-
-<p>Businesses will need to take this into account when hiring for a DevOps engineer role. The perfect purple unicorn may not be as readily available as more well-defined roles like software engineering. With a little time and patience with a team committed to DevOps transformations, you can develop talent that will deliver high-quality work.</p>
-
-
-
-<h2>Is it hard to get a job in DevOps?</h2>
-
-
-
-<p>Many organizations do not know what DevOps actually means, so it&#8217;s challenging to find the right person for the position.</p>
-
-
-
-<p>I updated my LinkedIn profile in 2015 to illustrate my transition into DevOps Engineering. Since then, I have progressed through an organization to lead teams of DevOps engineers.</p>
-
-
-
-<p>I am not telling you this to brag, but I do want to use it as an example.</p>
-
-
-
-<p>In my previous life, I was a PHP developer. I got bored of putting values into a database and then returning the exact same values to the screen. I started to get interested in configuration management and continuous integration which is when i hit the job market looking for my next gig.</p>
-
-
-
-<p>Since 2015, when i changed by job title on LinkedIn, i still get recruiters reaching out looking to place me in another software engineering role.</p>
-
-
-
-<p>I believe that the cycle of job searching in the technology industry is a bit upside down today. Companies seek talent and job seekers are looking for companies that want their skilled talent. It should be a perfect union, but there are a hoard of recruiters standing in the way of those perfect fits.</p>
-
-
-
-<p>I would recommend spending your time learning about DevOps methodologies, optimizing value, soft skill, interpersonal skills, and automation tools. Form there, i would spend time looking up individuals with existing DevOps roles on LinkedIn (management or engineering) and make some connections. Those connections have a better chance of landing you a DevOps role than the normal recruiting mechanism most of the technology space uses today.</p>
-
-
-
-<h2>Is DevOps Engineer a good career?</h2>
-
-
-
-<p>DevOps is booming with an estimated US $287 billion market size by 2026. There are many roles available to developers in the world&#8217;s marketplace. Let&#8217;s face it, technology is not going away. Businesses that survive over the long haul are going to progressively adopt newer and more modern strategies to optimize their software development life cycle.</p>
-
-
-
-<p>Because of the perpetual adoption of DevOps methodology by businesses, a DevOps engineer is going to have a long and vibrant career path. Silo&#8217;d development and operations teams will become more of an antiquated setup, and the merge of these disciplines together will become more of the norm.</p>
-
-
-
-<p>I think the answer of &#8220;Good&#8221; is probably a bit more nebulous and needs a bit of personal soul-searching to really answer. I won&#8217;t be able to answer what is &#8220;Good&#8221; for you.</p>
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="3622503162"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Why DevOps is a Good Career in 2022?</h2>
-
-
-
-<p>DevOps has remained a popular role since its inception in 2018. CodinGame released a survey that ranks &#8220;DevOps Engineer&#8221; among the most popular developer job positions for 2021. Additionally, the survey revealed that 43% of hiring professionals are unable to fulfill their DevOps roles.</p>
-
-
-
-<h2>What are Relevant Skills to start a DevOps career?</h2>
-
-
-
-<p>Unlike most careers, DevOps requires basic knowledge and skills. When choosing an employment option, understanding this section can prove very important. If you do this before, then the barriers will be lower. Depending on the skills you have you can try another course.</p>
-
-
-
-<p>I have an entire write-up over here that discusses the <a href="https://www.valewood.org/top-relevant-devops-skills/" data-type="post" data-id="330">Top Relevant DevOps Skills</a>.</p>
-
-
-
-<p>TLDR; Focus on skills that support the DevOps philosophy. These are going to be focused on soft skills such as planning and communication. Also focus on learning some new tools, ci/cd, how to enable automation, and automated testing.</p>
-
-
-
-<p>Don&#8217;t be afraid if you are lacking in any of these areas as well, most of the &#8220;DevOps pros&#8221; that i talk to are not familiar with half of the skills described in either the blog post or TLDR.</p>
-
-
-
-<h2>How do I Progress in my DevOps Career?</h2>
-
-
-
-<p>DevOps engineers with learning mindsets will be able to develop in their respective fields with plenty more to do. It seems obvious that one has to progress from junior engineering engineer to junior engineer eventually becoming a leader. DevOps also offers many career changes that could be made.</p>
-
-
-
-<p>A simple way to think about progression is to focus on anything that helps drive a business forward through growth or hitting new targets. This means that, in general, new technologies will not progress your career path forward.</p>
-
-
-
-<p>Building a DevOps mindset, working with a team to adopt DevOps, training new DevOps engineers, working with teams to develop software in a more streamlined way, bringing in automated testing, breaking down organizational silos, influencing team leaders, and any other non-technology-specific skill you can pick up will help progress your DevOps career.</p>
-
-
-
-<p>Focusing on technologies will help progress from a DevOps engineer role into a DevOps architect role, but note that a pure technology focus does have an upper bound on it. That is not a bad thing because not everybody wants to get into management.</p>
-
-
-
-<p>If you are looking to progress your career into management, work on building a DevOps culture.</p>
-
-
-
-<h2>Will I get paid more as a DevOps Engineer?</h2>
-
-
-
-<p>DevOps professionals are generally paid quite well. This is because the skillset for DevOps jobs demands a broader set of skilled talent. DevOps experts who can work with companies on DevOps transformations will yield an even greater salary. When negotiating, do not sell your talents and skills short.</p>
-
-
-
-<p>If you are just diving into this space, also be realistic about where you are at and sell yourself on your aptitude and ability to learn new skills. Any organization worth sticking around and working for will recognize your growth and give you the bump in compensation that you deserve.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>DevOps is evolving and changing. It is growing in importance for businesses to move forward in the digital age. DevOps engineers are key players in this evolution and have a wide range of skills needed by companies to thrive in the modern economy. They can work within many different industries, from financial services to automotive. DevOps engineers typically work with software teams across multiple departments within organizations, including IT operations and engineering.</p>
-
-
-
-<p>DevOps teams are constantly looking for more talent that can fulfill the vision of smoother and more reliable delivery. That trend is not going away any time soon!</p>
 ]]></content:encoded>
 					
 		
