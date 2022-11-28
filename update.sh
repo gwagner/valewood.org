@@ -16,6 +16,10 @@ rsync -cvr ./new-site/ ./
 echo "Remove ./new-site/ dir"
 rm -rf ./new-site/
 
+# Archives is only used to get the index pages for dates, it is not a real URL for the site....  yet
+echo "Remove ./archives/ dir"
+rm -rf ./archives/
+
 # Add missing JS
 echo "Download missing JS files"
 grep -ohP "\"([a-z0-9A-Z\.\-\_]+\.bundle\.min\.js)\"" wp-content/cache/autoptimize/js/*.js | sort -u | xargs -I{} curl https://www.lab.valewood.org/wp-content/plugins/elementor/assets/js/{} -s -S -f -w "%{url_effective}\n" -o wp-content/plugins/elementor/assets/js/{}

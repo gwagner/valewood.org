@@ -1,8 +1,22 @@
+/about-me/amp/2/ /about-me/2/ 302
+/amp/page/* / 302
+/amp/Uncategorized / 302
 /archives/ / 302
 /archives/amp/ /amp/ 302
+/author/gwagner/amp/page/3/ /author/gwagner/page/3/ 302
+/author/gwagner/amp/page/2/ /author/gwagner/page/2/ 302
+/category/fluff/ / 302
+/category/patreon/ / 302
+/comments/ / 302
+/comments/feed/ / 302
 /devops-faq/ /topics/devops/faq 301
 /devops-faq/amp/ /topics/devops/faq/amp/ 301
+/fluff/ / 302
+/my-first-blog-article/ / 302
+/patreon/ / 302
 /privacy-policy-2/ /privacy-policy/ 301
+/tag/* / 302
+
 
 /2022/08/07/practicing-devops/ /practicing-devops/ 301
 /2022/08/07/practicing-devops/feed/ /practicing-devops/feed/ 301
@@ -12,3 +26,5 @@
 /2022/08/07/welcome-to-a-devooops/feed/ /welcome-to-a-devooops/feed/ 301
 /2022/08/09/my-first-blog-article/ /welcome-to-a-devooops/ 301
 /2022/08/09/my-first-blog-article/feed/ /welcome-to-a-devooops/feed/ 301
+/wp-content/uploads/2022/08/elena-kloppenburg-gnhvIGlFwds-unsplash-scaled / 301
+/wp-content/uploads/2022/08/toine-g-iRnUeA04kUY-unsplash-585x390 / 301
