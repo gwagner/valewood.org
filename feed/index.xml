@@ -12,13 +12,13 @@
 	<atom:link href="https://www.valewood.org/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Mon, 28 Nov 2022 22:09:27 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 29 Nov 2022 19:02:21 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
 
 <image>
 	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
@@ -81,6 +81,30 @@
 
 
 
+<h2>Why Consistency Matters and How it Influences Velocity</h2>
+
+
+
+<p>Consistency is important for a couple of factors.  First, individual contributors like their jobs and are not really interested in consistent interruptions or unplanned requests.  While some people may look at those facets as an everyday part of doing business, they can be avoided if mitigation steps are put in place.</p>
+
+
+
+<p>When people are constantly interrupted quality suffers.  There is no way around that.  Technology is complex and people need time to focus and go through their problem-solving routines.</p>
+
+
+
+<p>Second, inconsistency in delivery has impacts on customers and their delivery.  In technology, you are generally not just working on your system.  There are consumers of your systems who have expectations of either utilization or integration.  By being inconsistent in delivery, you cannot manage the expectations of your consumers.</p>
+
+
+
+<p>Lastly, a lack of consistency means that you will never really understand your velocity.  Velocity is important because it tells you how much of X you can get by spending Y.  Think about it like auto manufacturing, they could turn the manufacturing dials up to 11 in their facilities but then you will end up with cars with 3 wheels or loose nuts and bolts.</p>
+
+
+
+<p>A trap that we fall into frequently is confusing aspirational velocity with real velocity.  Aspirational velocity is the speed that someone thinks something should get delivered.  Real velocity is a measurement of what can be delivered at a given speed.</p>
+
+
+
 <h3>Real Velocity vs Aspirational Velocity</h3>
 
 
@@ -129,11 +153,89 @@
 
 
 
+<h2>Runners Up</h2>
+
+
+
+<p>This question is also asked on a few official exams.  I want to make sure that my perspective on DevOps does not overshadow exams that do not have as much wiggle room in their answers.</p>
+
+
+
+<h3>Brainly.in</h3>
+
+
+
+<p><a href="https://brainly.in/" data-type="URL" data-id="https://brainly.in/question/36271184" target="_blank" rel="noopener">Brainly</a> answers the question like this:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>Agile is refers to an interative approuch which focuses on collaboration, costumer feedback,and small rapid releases,DevOps is considered a practice bringing development and operations teams together.</p>
+<cite>https://brainly.in/question/36271184</cite></blockquote>
+
+
+
+<p>The problem is, I don&#8217;t think this answer refers to a specific term.  We can look at this and assume that they are looking at Agile and DevOps as two holistically different approaches which are getting merged together instead of looking for commonality between the project management methodology and the technology delivery methodology.</p>
+
+
+
+<p>While this may sound really good on a test, there are real business influences that come from each of the facets that they list in their answer.</p>
+
+
+
+<ul>
+<li><strong>Collaboration</strong>: Greater collaboration brings more of a hive-mind approach to problem-solving.  Too much collaboration on very large problems can bring analysis paralysis.  By breaking problems down into tiny and lean releases, everyone can stay more focused on achieving goals instead of trying to eat an entire elephant all at once.</li>
+
+
+
+<li><strong>Customer Feedback</strong>: Agile focused on getting valuable work products out to the market quickly to reduce investment risk.  Getting feedback from customers is a great way to manage risk and pivot quickly if needed. </li>
+
+
+
+<li><strong>Small Rapid Releases</strong>: To further the idea of managing risk, lessening the size of your releases helps you containerize risk into much smaller units.  If something isn&#8217;t working as expected, or the market shifts drastically, it is far less painful to throw that work out and pivot to something more palatable.  Additionally, the risk is lowered on incremental improvements to new features for existing functionality since the introduced change should not pose as great of an impact on an already healthy ecosystem.  This is something <a href="https://blog.cloudflare.com/october-2021-facebook-outage/" target="_blank" rel="noopener">Facebook</a> could learn a thing or two about.</li>
+
+
+
+<li><strong>Bringing DevOps and Operations Teams Together</strong>: This is the typical textbook definition of DevOps.  The reality is, DevOps and Agile are about breaking down silos and creating fully cross-functional teams who are able to fully deliver work in a highly efficient and lean way.  DevOps and Agile help drive decision-making down as close to the work being performed as possible while offering up a management framework to transparently keep other interested parties informed while work is being completed and shipped.</li>
+</ul>
+
+
+
+<p>As you can see, there are a lot of nuances packed into each one of those bullet points.</p>
+
+
+
+<h3>Intellipaat.com </h3>
+
+
+
+<p><a href="https://intellipaat.com/" data-type="URL" data-id="https://intellipaat.com/" target="_blank" rel="noopener">Intellipatt</a> answers the question like this</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>A set of values and principles. Because both follow a set of principles and offer the value that is similar.</p>
+<cite>https://intellipaat.com/community/74027/which-term-accurately-describes-agile-and-devops</cite></blockquote>
+
+
+
+<p>I believe that this answer is a primarily business-focused answer looking to understand the idea of value in the market.  While it is not an incorrect way to look at things, I do not believe it is the most important way to look at DevOps and Agile.  </p>
+
+
+
+<p>Value is a byproduct of DevOps and Agile.  The real benefit to DevOps and Agile is the consistent way that said value gets delivered to the market.  This means that you can calculate and quantify value through data-driven decision-making.  You are also able to manage market expectations and take potentially larger leaps to satisfy your customers.</p>
+
+
+
 <h2>Conclusion</h2>
 
 
 
-<p>The key to any technology product&#8217;s success is consistency.  DevOps and Agile offer that consistency while remaining flexible and focused on common non-functional requirements like reliability and stability.  How would you boil DevOps and Agile down to a single term?  <a href="https://www.valewood.org/contact/" data-type="page" data-id="984">Contact me</a> and let me know!</p>
+<p>The key to any technology product&#8217;s success is consistency.  DevOps and Agile offer consistency while remaining flexible and focused on common non-functional requirements like reliability and stability.  Other facets of Agile and DevOps like value are byproducts of a team or teams of teams who fully embrace the complementary delivery methodologies.</p>
+
+
+
+<p>How would you boil DevOps and Agile down to a single term?  <a href="https://www.valewood.org/contact/" data-type="page" data-id="984">Contact me</a> and let me know!</p>
 ]]></content:encoded>
 					
 		
@@ -1824,7 +1926,7 @@
 
 
 
-<figure class="wp-block-image"><a href="https://www.headspin.io/blog/the-testing-pyramid-simplified-for-one-and-all" target="_blank" rel="noopener"><img src="https://global-uploads.webflow.com/619e15d781b21202de206fb5/6316d9e765cd53d9937e2b6a_The-Testing-Pyramid-Simplified-for-One-and-All.webp" alt="The Testing Pyramid"/></a><figcaption>Headspin: The Testing Pyramid: Simplified for One and All</figcaption></figure>
+<figure class="wp-block-image"><a href="https://www.headspin.io/blog/the-testing-pyramid-simplified-for-one-and-all" target="_blank" rel="noopener"><img decoding="async" src="https://global-uploads.webflow.com/619e15d781b21202de206fb5/6316d9e765cd53d9937e2b6a_The-Testing-Pyramid-Simplified-for-One-and-All.webp" alt="The Testing Pyramid"/></a><figcaption>Headspin: The Testing Pyramid: Simplified for One and All</figcaption></figure>
 
 
 
