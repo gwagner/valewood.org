@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Tue, 29 Nov 2022 19:02:21 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 30 Nov 2022 23:08:55 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -224,6 +224,64 @@
 
 
 <p>Value is a byproduct of DevOps and Agile.  The real benefit to DevOps and Agile is the consistent way that said value gets delivered to the market.  This means that you can calculate and quantify value through data-driven decision-making.  You are also able to manage market expectations and take potentially larger leaps to satisfy your customers.</p>
+
+
+
+<h2>What is a Common Misconception about Agile and DevOps?</h2>
+
+
+
+<p>DevOps and Agile are commonly viewed as a tool to fill a gap in delivery.  If delivery cycles are variable in length, inconsistent, and filled with twists and turns; companies will look for some quick outs to patch up their delivery to ship something.  The problem with this approach is generally <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/" data-type="page" data-id="1036">quality</a>.</p>
+
+
+
+<p>While borrowing from DevOps and Agile might work in the short term, it does not work over the long term.  Companies or projects that are looking to step up their delivery processes really need to look at things holistically and make some choices about how they want to engage in the market with their customers.</p>
+
+
+
+<p>By fully adopting Agile and DevOps, a lot of doors are opened up for delivery.</p>
+
+
+
+<ul>
+<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" target="_blank" rel="noopener">Flow</a>:</strong>  Instead of moving from task to task, or project to project, work can be put onto a conveyor belt of delivery.  Agile and DevOps offer more of an assembly line-type flow to technology delivery.</li>
+
+
+
+<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/" target="_blank" rel="noopener">Quality</a>: </strong> Context switching impacts quality.  By offering more stability in work coming down the pipeline, engineers in various disciplines can focus on quality first.</li>
+
+
+
+<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/flexibility/" target="_blank" rel="noopener">Flexibility</a>:</strong>  Companies need to meet the market where it is at.  Sometimes this means quickly pivoting from products that are not working to products that do well in the market.</li>
+
+
+
+<li><a href="https://www.valewood.org/devops-cycle-time/" data-type="post" data-id="1700"><strong>Release faster and work smarter</strong>:</a>  By reducing the size and scope of deliverables, the team can focus on shipping more often.</li>
+
+
+
+<li><strong><a href="https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/" data-type="post" data-id="312">Simplifies Software Development and Operations Focus</a></strong>:  Day-to-day operations can seem like a burden that interrupts delivery frequently.  By adopting DevOps, operations are a normal part of everyday life.</li>
+
+
+
+<li><strong><a href="https://www.valewood.org/devops-trust/" data-type="post" data-id="1657">Responsibility</a>:</strong>  Agile helps individual contributors feel like they are part of something bigger by influencing the overall planning and delivery processes.  They are not just taking orders from the tower, they are actively delivering value against their vision of great outcomes.</li>
+
+
+
+<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/consistency/" target="_blank" rel="noopener">Consistency</a>: </strong> Consistency brings predictability and reliability to products and planning</li>
+
+
+
+<li><strong>Measurement:</strong>  Promote data-driven decision-making into your day-to-day workflows through predictability and consistency in the flow of work.</li>
+
+
+
+<li><strong>Security:</strong>  Security is no longer a secondary burdensome process that detracts from delivering work to the market.  Security is built right into DevOps through automated delivery pipelines.</li>
+</ul>
+
+
+
+<p>Any of these benefits could be achieved on their own in their own ways.  By fully embracing Agile and DevOps, each of these ideals comes with the methodology.  There is no need to solve an already-solved problem.</p>
 
 
 
