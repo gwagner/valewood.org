@@ -5,8 +5,10 @@ if [ ! -f $1 ]; then
     exit 1
 fi
 
+SOURCE_FILE=$1
+
 mkdir new-site/
-unzip $1 -d ./new-site/
+unzip $SOURCE_FILE -d ./new-site/
 
 echo "Removing old JS/CSS files"
 rm -rf ./wp-content/cache/autoptimize/js/*.js
