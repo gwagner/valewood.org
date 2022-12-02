@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 02 Dec 2022 00:11:48 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 02 Dec 2022 04:01:27 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -812,7 +812,7 @@
 
 
 
-<p>The need for speed and collaboration across departments is what’s driving many organizations toward DevOps. But it’s not just about faster software releases; it’s about releasing better software faster by enabling the people who build and support applications (known as operators) to react to changing conditions quickly, proactively, and directly.</p>
+<p>The need for speed and collaboration across departments is what’s driving many organizations toward DevOps. But it’s not just about faster software releases; it’s about releasing higher quality software faster by enabling the people who build and support applications (known as operators) to react to changing conditions quickly, proactively, and directly.</p>
 
 
 
@@ -832,38 +832,6 @@
 
 
 
-<h2>What is DevOps?</h2>
-
-
-
-<p>DevOps is a set of principles and practices that promotes collaboration between software developers and Operations engineers/IT professionals. It is a cultural change that advocates for a focus on automation, continuous testing, and bringing software development and IT operations together so that you create a more stable application environment.</p>
-
-
-
-<p>Because the application lifecycle is shorter, it makes the need for monitoring even more important. Monitoring provides visibility into the application environment and alerts when things are not running as expected. Achieving the right balance between operational efficiency and customer experience is key in the DevOps world. DevOps is a journey and not a destination.</p>
-
-
-
-<p>You are always improving and tweaking. The organizations that truly embrace DevOps culture are the ones that see the most benefits. Companies that have a strong engineering culture, a high bar for quality, and a strong set of values are the organizations that have the best chance of succeeding in the DevOps world.</p>
-
-
-
-<h2>The Importance of Monitoring in a DevOps Environment</h2>
-
-
-
-<p>As we’ve discussed, there are many benefits to implementing a DevOps model versus a traditional software development lifecycle. But what exactly does monitoring have to do with DevOps? It’s no coincidence that monitoring is one of the core components of DevOps.</p>
-
-
-
-<p>The mere act of monitoring software, infrastructure, and network performance is the important first step in taking advantage of the benefits of DevOps. And when you’re monitoring, you’re also able to analyze and gain insight into your current state based on real-time data.</p>
-
-
-
-<p>While companies are in the process of implementing a DevOps approach, monitoring becomes even more important as it can help you identify potential bottlenecks in your software delivery pipeline.</p>
-
-
-
 <h2>Why is Monitoring so Important in a DevOps Environment?</h2>
 
 
@@ -880,7 +848,31 @@
 
 
 
-<h2>Benefits of monitoring in a DevOps environment</h2>
+<p>With the rapid releases that happen to production in a DevOps environment, small changes can have large impacts on the reliability and stability of applications.  By building monitoring and observability directly into a delivery pipeline, the parties responsible for shipping code are the same parties responsible for making sure that the code is operating as expected.  </p>
+
+
+
+<p> DevOps advocates for smaller more frequent releases meaning drift can happen over time.  Features that performed well several months ago may have gotten incrementally worse over time.  Observability helps identify these issues and ensures that future work is scheduled to adequately remediate issues from organic growth before they turn into production outages.</p>
+
+
+
+<h3>The Importance of Monitoring in a DevOps Environment</h3>
+
+
+
+<p>As we’ve discussed, there are many benefits to implementing a DevOps model versus a traditional software development lifecycle. But what exactly does monitoring have to do with DevOps? It’s no coincidence that monitoring is one of the core components of DevOps.</p>
+
+
+
+<p>The mere act of monitoring software, infrastructure, and network performance is the important first step in taking advantage of the benefits of DevOps. And when you’re monitoring, you’re also able to analyze and gain insight into your current state based on real-time data.</p>
+
+
+
+<p>While companies are in the process of implementing a DevOps approach, monitoring becomes even more important as it can help you identify potential bottlenecks in your software delivery pipeline.</p>
+
+
+
+<h2>Benefits of Monitoring in a DevOps Environment</h2>
 
 
 
@@ -902,7 +894,7 @@
 
 
 
-<h2>Monitor constantly to understand the current state continuously</h2>
+<h2>Monitor Constantly to Understand the Current State Continuously</h2>
 
 
 
@@ -922,7 +914,7 @@
 
 
 
-<h2>Monitor constantly to understand why something happened</h2>
+<h2>Monitor Constantly to Understand Why Something Happened</h2>
 
 
 
@@ -959,6 +951,44 @@
 
 
 <p>By understanding the current state, you can predict what will happen next with application performance. This can help you proactively prepare for upcoming events that require a heavier lift, such as sales or Black Friday events.</p>
+
+
+
+<h3>System Performance</h3>
+
+
+
+<p>There are several cardinal sins when it comes to system monitoring.</p>
+
+
+
+<ul>
+<li>Running out of disk space</li>
+
+
+
+<li>Memory swapping to disk</li>
+
+
+
+<li>Connectivity issues</li>
+
+
+
+<li>CPU being pegged at 100% constantly</li>
+</ul>
+
+
+
+<p>Any of these issues (along with dozens of other cardinal sins) are the types of issues that don&#8217;t get forgiven often when they show up in an RCA.  By doing trend analysis on systems, capacity can more readily be predicted and proper measures can be taken before the only corrective action is to buy more hardware.</p>
+
+
+
+<h3>Storage Performance</h3>
+
+
+
+<p>Systems like databases, email servers, or any system which is trying to serve up real-time data in milliseconds are going to be sensitive to storage anomalies.  Disk fails, redundant paths are taken offline for maintenance, patching happens, and each of these events has the possibility of drastically changing the operating state of an application.  Consistently monitoring to ensure you are staying well away from your upper bounds will keep the focus off one of the most integral and sensitive parts of any ecosystem.</p>
 
 
 
