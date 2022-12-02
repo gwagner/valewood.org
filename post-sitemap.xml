@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.valewood.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://www.valewood.org/devops-roll-up-novembers-2022/</loc>
+		<lastmod>2022-12-02T16:34:52-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-roll-up-august/</loc>
+		<lastmod>2022-12-02T16:00:34-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/ansible-create-vmware-esxi-vm/</loc>
+		<lastmod>2022-12-02T15:55:26-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/</loc>
+		<lastmod>2022-12-02T15:53:04-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/more-like-boringops/</loc>
+		<lastmod>2022-12-02T15:38:03-06:00</lastmod>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/devops-monitoring/</loc>
 		<lastmod>2022-12-01T22:01:27-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-rapid-delivery/</loc>
 		<lastmod>2022-12-01T21:48:43-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/more-like-boringops/</loc>
-		<lastmod>2022-12-01T18:11:48-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/which-term-describes-devops-and-agile/</loc>
@@ -60,14 +76,6 @@
 	<url>
 		<loc>https://www.valewood.org/purpleurchin-crypto-mining/</loc>
 		<lastmod>2022-10-31T08:21:20-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/</loc>
-		<lastmod>2022-10-27T20:26:41-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/ansible-create-vmware-esxi-vm/</loc>
-		<lastmod>2022-10-27T20:03:19-05:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/ansible-text-to-json/</loc>
@@ -129,10 +137,6 @@
 		<image:image>
 			<image:loc>https://www.valewood.org/wp-content/uploads/2022/08/todd-quackenbush-IClZBVw5W5A-unsplash-scaled.jpg</image:loc>
 		</image:image>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/devops-roll-up-august/</loc>
-		<lastmod>2022-09-16T20:11:44-05:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/how-devops-can-improve-your-technology-stack/</loc>

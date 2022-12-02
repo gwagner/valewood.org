@@ -5,8 +5,10 @@ if [ ! -f $1 ]; then
     exit 1
 fi
 
+SOURCE_FILE=$1
+
 mkdir new-site/
-unzip $1 -d ./new-site/
+unzip $SOURCE_FILE -d ./new-site/
 
 echo "Removing old JS/CSS files"
 rm -rf ./wp-content/cache/autoptimize/js/*.js
@@ -78,4 +80,4 @@ grep -rl '<link rel="canonical" href="/' . --exclude='update.sh' | xargs sed -i 
 #echo "Add push javascript to ins"
 #grep -rl "</ins>" . --exclude='update.sh' | xargs sed -i 's/\(<\/ins>\)\(\s*\)<\//\1<script>\(adsbygoogle = window.adsbygoogle || []\).push\({}\);<\/script>\s<\//g'
 
-echo "Removing source files from $SOURCE_FILE\n";rm -rf $SOURCE_FILE; break;;
+echo "Removing source files from $SOURCE_FILE\n";rm -rf $SOURCE_FILE;
