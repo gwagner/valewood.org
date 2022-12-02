@@ -78,4 +78,4 @@ grep -rl '<link rel="canonical" href="/' . --exclude='update.sh' | xargs sed -i 
 #echo "Add push javascript to ins"
 #grep -rl "</ins>" . --exclude='update.sh' | xargs sed -i 's/\(<\/ins>\)\(\s*\)<\//\1<script>\(adsbygoogle = window.adsbygoogle || []\).push\({}\);<\/script>\s<\//g'
 
-echo "Removing source files from $SOURCE_FILE\n";rm -rf $SOURCE_FILE; break;;
+echo "Removing source files from $SOURCE_FILE\n";rm -rf $SOURCE_FILE;

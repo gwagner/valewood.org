@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/ansible/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 28 Oct 2022 01:26:41 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 02 Dec 2022 21:55:26 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -82,6 +82,36 @@
 
 
 
+<h2>Terms</h2>
+
+
+
+<ul>
+<li><strong>ansible_host:</strong> A subkey of an invnetory definition that sets an alternative way to target a server in inventory.</li>
+
+
+
+<li><strong>Connection local: </strong>At the playbook level, you can set <code>connection: local</code> to ensure that all connections are being sent to localhost (much like <code>delegate_to</code>).  I almost never use this simply because i generally want control over my connections at the task level, not the playbook level.</li>
+
+
+
+<li><strong>delegate_to:</strong> A majority of this playbook is setup with <code>delegate_to: localhost</code>. This means that the delegated host running the Ansible script will also execute anything with the defined <code><code>delegate_to</code>: localhost</code>.</li>
+
+
+
+<li><strong>Delegated host:</strong> If ServerA is the machine with a terminal you are running Ansible from, and your target is ServerB; if you also set <code>delegate_to: ServerB</code>, Then ServerB is also the delegated host which is running the ansible code.  Ansible is passing the action off from the server where ansible was initiated from to a different remote host.</li>
+
+
+
+<li><strong>Inventory hostname:</strong> Ansible-playbooks requires that inventory be setup for group targeting.  Each host is defined with a hostname as a top level key.  This term is a bit of misnomer since you can give Ansible any hostname you want and configure <code>ansible_host</code> as an alternative targeting mechanic, like IP address.</li>
+
+
+
+<li><strong>Remote Host / Remote Machine:</strong> The server you are targeting remotely with Ansible</li>
+</ul>
+
+
+
 <h2>The Playbook</h2>
 
 
@@ -94,7 +124,7 @@
 
 
 
-<p>A majority of this playbook is also setup with <code>delegate_to: localhost</code>. This means that the computer running the ansible script will also execute anything with the defined <code><code>delegate_to</code>: localhost</code>. Since the remote machine from inventory exists but is not yet able to be connected to <code><code>delegate_to</code>: localhost</code> is necessary of you would immediately receive an ansible connection error.</p>
+<p>Since the remote machine from inventory exists but is not yet able to be connected to <code><code>delegate_to</code>: localhost</code> is necessary of you would immediately receive an ansible connection error.</p>
 
 
 
@@ -177,7 +207,45 @@
 
 
 
-<ul><li>validate_certs is set to false because most of us are not going to be using trusted 3rd party certs in our VMware environment. If you are doing this in a professional environment, ensure you have valid certs installed and leave validate_certs set to the default of true.</li><li>validate_certs should also be set to false if you are connecting to your VMWare server via IP address since your cert will not match an IP address.</li><li>vmware_user and vmware_password should be set to a user that has SSH access to your VMWare server. I would not recommend that you do this in any sort of production environment, but it is perfectly fine for a home lab.</li><li>datacenter is set to ha-datacenter. This is the default name of a “datacenter” in ESXi. There is no reason to change this.</li><li>vm_id is either the exact case-sensitive name of the virtual machine being configured.  If you created your machine using ansible, then make sure you map the name you gave it here via variables.</li><li>vm_username and vm_password is in reference to the user you setup when creating your template or disk image.  ESXi needs this to effectively run an interactive login to the server to perform your commands.</li><li>directory is signifying that our action is going to be taken on a directory.  In the next task you will see that we use the copy key instead of directory but we are utilizing the exact same module.</li><li>directory.path is the path on the ESXi guests that you want to take action on.</li><li>directory.operation denotes what we want to have happen.  In this case, we are going to create a directory.</li><li>directory.recurse tells ansible if it should send a command that recursively creates directories.  If your default user is not named user, you would end up with a /home/user/.ssh directory that will be fairly useless.</li></ul>
+<ul>
+<li><strong>validate_certs</strong> is set to false because most of us are not going to be using trusted 3rd party certs in our VMware environment. If you are doing this in a professional environment, ensure you have valid certs installed and leave validate_certs set to the default of true.</li>
+
+
+
+<li><strong>validate_certs</strong> should also be set to false if you are connecting to your VMWare server via IP address since your cert will not match an IP address.</li>
+
+
+
+<li><strong>vmware_user</strong> and vmware_password should be set to a user that has SSH access to your VMWare server. I would not recommend that you do this in any sort of production environment, but it is perfectly fine for a home lab.</li>
+
+
+
+<li><strong>datacenter</strong> is set to ha-datacenter. This is the default name of a “datacenter” in ESXi. There is no reason to change this.</li>
+
+
+
+<li><strong>vm_id</strong> is either the exact case-sensitive name of the virtual machine being configured.  If you created your machine using ansible, then make sure you map the name you gave it here via variables.</li>
+
+
+
+<li><strong>vm_username</strong> and vm_password is in reference to the user you setup when creating your template or disk image.  ESXi needs this to effectively run an interactive login to the server to perform your commands.</li>
+
+
+
+<li><strong>directory</strong> is signifying that our action is going to be taken on a directory.  In the next task you will see that we use the copy key instead of directory but we are utilizing the exact same module.</li>
+
+
+
+<li><strong>directory.path</strong> is the path on the ESXi guests that you want to take action on.</li>
+
+
+
+<li>directory.operation denotes what we want to have happen.  In this case, we are going to create a directory.</li>
+
+
+
+<li><strong>directory.recurse </strong>tells ansible if it should send a command that recursively creates directories.  If your default user is not named user, you would end up with a /home/user/.ssh directory that will be fairly useless.</li>
+</ul>
 
 
 
@@ -203,7 +271,21 @@
 
 
 
-<ul><li>copy denotes that we want to copy a file.  The file needs to exist on your source system and will be copied to the ESXi guest.</li><li>copy.src is the path to the source file.  As you can see, we are targeting the public key here.</li><li>copy.dest is the full path to the destination.   As you can see we are targeting an authorized_keys file as the destination.  This could be dangerous if that file already exists as it will be overwritten.</li><li>copy.overwrite ensures that we will clobber whatever exists on the destination system with the file from our source system.</li></ul>
+<ul>
+<li><strong>copy</strong> denotes that we want to copy a file.  The file needs to exist on your source system and will be copied to the ESXi guest.</li>
+
+
+
+<li><strong>copy.src</strong> is the path to the source file.  As you can see, we are targeting the public key here.</li>
+
+
+
+<li><strong>copy.dest</strong> is the full path to the destination.   As you can see we are targeting an authorized_keys file as the destination.  This could be dangerous if that file already exists as it will be overwritten.</li>
+
+
+
+<li><strong>copy.overwrite</strong> ensures that we will clobber whatever exists on the destination system with the file from our source system.</li>
+</ul>
 
 
 
@@ -241,7 +323,17 @@
 
 
 
-<ul><li>vm_shell represents the exact path to the command that is going to be run on the ESXi guest.  Do not include command arguments in this field, the documentation specifically states that it wants a full path to an executable.</li><li>vm_shell_args represents the arguments to the vm_shell command.  </li><li>loop controls how the task will loop through the data defined underneath.  I have the keys setup as dictionary objects so that we get both shell executables and arguments from the loop.</li></ul>
+<ul>
+<li><strong>vm_shell</strong> represents the exact path to the command that is going to be run on the ESXi guest.  Do not include command arguments in this field, the documentation specifically states that it wants a full path to an executable.</li>
+
+
+
+<li><strong>vm_shell_args</strong> represents the arguments to the vm_shell command.  </li>
+
+
+
+<li><strong>loop</strong> controls how the task will loop through the data defined underneath.  I have the keys setup as dictionary objects so that we get both shell executables and arguments from the loop.</li>
+</ul>
 
 
 
@@ -536,7 +628,29 @@ all:
 
 
 
-<ul><li>validate_certs is set to false because most of us are not going to be using trusted 3rd party certs in our VMware environment.  If you are doing this in a professional environment, ensure you have valid certs installed and leave validate_certs set to the default of true.</li><li>validate_certs should also be set to false if you are connecting to your VMWare server via IP address since your cert will not match an IP address.</li><li>vmware_user and vmware_password should be set to a user that has SSH access to your VMWare server.  I would not recommend that you do this in any sort of production environment, but it is perfectly fine for a home lab.</li><li>datacenter is set to ha-datacenter.  This is the default name of a &#8220;datacenter&#8221; in ESXi.  There is no reason to change this.</li><li>throttle is set to 1 to provide time to ctrl+c IF you happen to run your playbook by mistake against many machines at once.</li><li>destructive is a variable that can be set which tells this playbook to not destroy and rebuild machines if they already exist.  By default, the destructive variable it is not defined which means a check will be performed.</li></ul>
+<ul>
+<li><strong>validate_certs</strong> is set to false because most of us are not going to be using trusted 3rd party certs in our VMware environment.  If you are doing this in a professional environment, ensure you have valid certs installed and leave validate_certs set to the default of true.</li>
+
+
+
+<li><strong>validate_certs</strong> should also be set to false if you are connecting to your VMWare server via IP address since your cert will not match an IP address.</li>
+
+
+
+<li><strong>vmware_user</strong> and vmware_password should be set to a user that has SSH access to your VMWare server.  I would not recommend that you do this in any sort of production environment, but it is perfectly fine for a home lab.</li>
+
+
+
+<li><strong>datacenter</strong> is set to ha-datacenter.  This is the default name of a &#8220;datacenter&#8221; in ESXi.  There is no reason to change this.</li>
+
+
+
+<li><strong>throttle</strong> is set to 1 to provide time to ctrl+c IF you happen to run your playbook by mistake against many machines at once.</li>
+
+
+
+<li><strong>destructive</strong> is a variable that can be set which tells this playbook to not destroy and rebuild machines if they already exist.  By default, the destructive variable it is not defined which means a check will be performed.</li>
+</ul>
 
 
 
@@ -654,7 +768,13 @@ all:
 
 
 
-<ul><li>Folder is neccisary for vShpere.  When only running ESXi, this only requires a default value of /vm/.  Most home labs will not need to change this.</li><li>state is set to poweredoff.  You could set this to poweredon but leaving it poweredoff ensures you can do post-processing after this create task.</li></ul>
+<ul>
+<li><strong>folder</strong> is neccisary for vShpere.  When only running ESXi, this only requires a default value of /vm/.  Most home labs will not need to change this.</li>
+
+
+
+<li><strong>state</strong> is set to poweredoff.  You could set this to poweredon but leaving it poweredoff ensures you can do post-processing after this <code>create</code> task.</li>
+</ul>
 
 
 
@@ -753,6 +873,18 @@ all:
       delegate_to: localhost
       register: deploy_vm
       when: destructive</code></pre>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
