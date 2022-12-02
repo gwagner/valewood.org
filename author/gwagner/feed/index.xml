@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 30 Nov 2022 23:08:55 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 02 Dec 2022 00:11:48 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -322,18 +322,6 @@
 
 
 
-<p>There are plenty of posts out there already which try to tackle this question:</p>
-
-
-
-<ul><li><a href="https://www.reddit.com/r/cscareerquestions/comments/9zn25a/after_a_few_years_devops_gets_super_boring/" target="_blank" rel="noreferrer noopener">Reddit</a></li><li><a href="https://www.quora.com/Do-you-like-DevOps-work-Is-it-boring-or-interesting" target="_blank" rel="noreferrer noopener">Quora</a></li><li><a href="https://www.zippia.com/answers/is-devops-a-boring-job/" target="_blank" rel="noreferrer noopener">Zippa</a></li><li><a href="https://www.fishbowlapp.com/post/is-devops-a-boring-job-what-are-the-pros-and-cons" target="_blank" rel="noreferrer noopener">Fishbowl</a></li></ul>
-
-
-
-<p>I don&#8217;t think any of these links have gotten it right.  DevOps, if adopted completely, is meant to be boring due to the <a href="https://www.valewood.org/topics/devops/benefits-of-devops/consistency/" data-type="page" data-id="1734">stability and consistency</a> that DevOps brings.  Let&#8217;s explore why this happens and what you can do about it below!</p>
-
-
-
 <p>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -379,6 +367,12 @@
 
 
 <h2>Why is DevOps Boring?</h2>
+
+
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="Why DevOps is Boring in 2022" width="1170" height="658" src="https://www.youtube.com/embed/bP5nWWFV2gg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></figure>
 
 
 
@@ -562,7 +556,13 @@
 
 
 
-<ul><li>Use survey tools to let customers provide feedback on your product, team, and company.</li><li>Let customers interact with your team using live chat tools.</li></ul>
+<ul>
+<li>Use survey tools to let customers provide feedback on your product, team, and company.</li>
+
+
+
+<li>Let customers interact with your team using live chat tools.</li>
+</ul>
 
 
 
@@ -619,7 +619,14 @@
 					
 		
 		
-			</item>
+		<media:content url="https://www.youtube.com/embed/bP5nWWFV2gg" medium="video" width="1280" height="720">
+			<media:player url="https://www.youtube.com/embed/bP5nWWFV2gg" />
+			<media:title type="plain">Why DevOps is Boring in 2022</media:title>
+			<media:description type="html"><![CDATA[DevOps is a hot topic in the technology world. It’s no longer just an isolated set of tools and processes which promise an automated future, it’s an entire c...]]></media:description>
+			<media:thumbnail url="/wp-content/uploads/2022/11/devops-boring.jpg" />
+			<media:rating scheme="urn:simple">nonadult</media:rating>
+		</media:content>
+	</item>
 		<item>
 		<title>DevOps Cycle Times: The Difference Between Good and Bad Performance</title>
 		<link>https://www.valewood.org/devops-cycle-time/</link>
