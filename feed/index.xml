@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 02 Dec 2022 00:11:48 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 02 Dec 2022 04:01:27 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -812,7 +812,7 @@
 
 
 
-<p>The need for speed and collaboration across departments is what’s driving many organizations toward DevOps. But it’s not just about faster software releases; it’s about releasing better software faster by enabling the people who build and support applications (known as operators) to react to changing conditions quickly, proactively, and directly.</p>
+<p>The need for speed and collaboration across departments is what’s driving many organizations toward DevOps. But it’s not just about faster software releases; it’s about releasing higher quality software faster by enabling the people who build and support applications (known as operators) to react to changing conditions quickly, proactively, and directly.</p>
 
 
 
@@ -832,38 +832,6 @@
 
 
 
-<h2>What is DevOps?</h2>
-
-
-
-<p>DevOps is a set of principles and practices that promotes collaboration between software developers and Operations engineers/IT professionals. It is a cultural change that advocates for a focus on automation, continuous testing, and bringing software development and IT operations together so that you create a more stable application environment.</p>
-
-
-
-<p>Because the application lifecycle is shorter, it makes the need for monitoring even more important. Monitoring provides visibility into the application environment and alerts when things are not running as expected. Achieving the right balance between operational efficiency and customer experience is key in the DevOps world. DevOps is a journey and not a destination.</p>
-
-
-
-<p>You are always improving and tweaking. The organizations that truly embrace DevOps culture are the ones that see the most benefits. Companies that have a strong engineering culture, a high bar for quality, and a strong set of values are the organizations that have the best chance of succeeding in the DevOps world.</p>
-
-
-
-<h2>The Importance of Monitoring in a DevOps Environment</h2>
-
-
-
-<p>As we’ve discussed, there are many benefits to implementing a DevOps model versus a traditional software development lifecycle. But what exactly does monitoring have to do with DevOps? It’s no coincidence that monitoring is one of the core components of DevOps.</p>
-
-
-
-<p>The mere act of monitoring software, infrastructure, and network performance is the important first step in taking advantage of the benefits of DevOps. And when you’re monitoring, you’re also able to analyze and gain insight into your current state based on real-time data.</p>
-
-
-
-<p>While companies are in the process of implementing a DevOps approach, monitoring becomes even more important as it can help you identify potential bottlenecks in your software delivery pipeline.</p>
-
-
-
 <h2>Why is Monitoring so Important in a DevOps Environment?</h2>
 
 
@@ -880,7 +848,31 @@
 
 
 
-<h2>Benefits of monitoring in a DevOps environment</h2>
+<p>With the rapid releases that happen to production in a DevOps environment, small changes can have large impacts on the reliability and stability of applications.  By building monitoring and observability directly into a delivery pipeline, the parties responsible for shipping code are the same parties responsible for making sure that the code is operating as expected.  </p>
+
+
+
+<p> DevOps advocates for smaller more frequent releases meaning drift can happen over time.  Features that performed well several months ago may have gotten incrementally worse over time.  Observability helps identify these issues and ensures that future work is scheduled to adequately remediate issues from organic growth before they turn into production outages.</p>
+
+
+
+<h3>The Importance of Monitoring in a DevOps Environment</h3>
+
+
+
+<p>As we’ve discussed, there are many benefits to implementing a DevOps model versus a traditional software development lifecycle. But what exactly does monitoring have to do with DevOps? It’s no coincidence that monitoring is one of the core components of DevOps.</p>
+
+
+
+<p>The mere act of monitoring software, infrastructure, and network performance is the important first step in taking advantage of the benefits of DevOps. And when you’re monitoring, you’re also able to analyze and gain insight into your current state based on real-time data.</p>
+
+
+
+<p>While companies are in the process of implementing a DevOps approach, monitoring becomes even more important as it can help you identify potential bottlenecks in your software delivery pipeline.</p>
+
+
+
+<h2>Benefits of Monitoring in a DevOps Environment</h2>
 
 
 
@@ -902,7 +894,7 @@
 
 
 
-<h2>Monitor constantly to understand the current state continuously</h2>
+<h2>Monitor Constantly to Understand the Current State Continuously</h2>
 
 
 
@@ -922,7 +914,7 @@
 
 
 
-<h2>Monitor constantly to understand why something happened</h2>
+<h2>Monitor Constantly to Understand Why Something Happened</h2>
 
 
 
@@ -959,6 +951,44 @@
 
 
 <p>By understanding the current state, you can predict what will happen next with application performance. This can help you proactively prepare for upcoming events that require a heavier lift, such as sales or Black Friday events.</p>
+
+
+
+<h3>System Performance</h3>
+
+
+
+<p>There are several cardinal sins when it comes to system monitoring.</p>
+
+
+
+<ul>
+<li>Running out of disk space</li>
+
+
+
+<li>Memory swapping to disk</li>
+
+
+
+<li>Connectivity issues</li>
+
+
+
+<li>CPU being pegged at 100% constantly</li>
+</ul>
+
+
+
+<p>Any of these issues (along with dozens of other cardinal sins) are the types of issues that don&#8217;t get forgiven often when they show up in an RCA.  By doing trend analysis on systems, capacity can more readily be predicted and proper measures can be taken before the only corrective action is to buy more hardware.</p>
+
+
+
+<h3>Storage Performance</h3>
+
+
+
+<p>Systems like databases, email servers, or any system which is trying to serve up real-time data in milliseconds are going to be sensitive to storage anomalies.  Disk fails, redundant paths are taken offline for maintenance, patching happens, and each of these events has the possibility of drastically changing the operating state of an application.  Consistently monitoring to ensure you are staying well away from your upper bounds will keep the focus off one of the most integral and sensitive parts of any ecosystem.</p>
 
 
 
@@ -1013,11 +1043,181 @@
 
 
 
-<p>Instead of relying on lengthy manual processes or testing stages to release updates, DevOps helps you streamline your QA process so you can get new features out faster than ever before.</p>
+<p>Instead of relying on lengthy manual processes and manual testing stages to release updates, DevOps helps you streamline your release process so you can get new features out faster with higher quality and consistency.</p>
 
 
 
 <p>The success of any organization relies on its ability to scale quickly and efficiently react to market demands. The demand for fast-paced change has forced many companies to reevaluate their current operational strategies. In response, organizations are now adopting a new culture for developing software and continuous integration processes that support rapid application development and application delivery cycles.</p>
+
+
+
+<p>Let&#8217;s explore rapid application delivery and how it can have a meaningful impact on your business!</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>What is Rapid Application Delivery?</h2>
+
+
+
+<p>Rapid application delivery is the practice of producing, testing, and deploying applications quickly from ideation to implementation &#8211; usually within days or even hours, rather than months or even years.</p>
+
+
+
+<p>To stay competitive in the market, businesses need to get valuable technology into the market more quickly than their competitors.  Your business may be amazing at executing quality deliverables with an amazing user experience.  If those products are shipped to the market slowly, your competitors have an edge to capture the market faster if they are delivering products with the same quality and amazing user experience more quickly.</p>
+
+
+
+<p>Organizations that are able to rapidly deliver new applications can respond more quickly to market conditions and customer needs, and therefore retain a competitive advantage.</p>
+
+
+
+<p>I also believe that the barriers to entry on delivery have gotten far more complex over the past several years.  With major incidents like Log4J still looming in the shadows, end users and B2B relationships are requiring more scrutiny over deliverables than they ever have in the past.  </p>
+
+
+
+<p>Some individuals may look at this increased scrutiny as a speed bump in the release process but I always encourage companies to embrace this increased scrutiny as a marketable way to show their products have a leg up on their competition.  The reality of the situation is, it can only be a competitive advantage if it is rolled directly into a rapid application delivery cycle.</p>
+
+
+
+<h2>Why is Application Delivery Speed Important?</h2>
+
+
+
+<p>Fast delivery of new applications is critical to keeping up with customer expectations and staying ahead of competitors. In today&#8217;s business environment, customers want goods and services faster than ever before. Consumers expect to be able to click a button and have their goods delivered to their doorsteps in just a few days.</p>
+
+
+
+<p>Rapid application delivery means you can meet these expectations of speed and customer service in a highly competitive environment. If you’re able to bring a new product or service to market quickly, you can generate greater revenue and market share than if your offerings are delayed by months or even longer.</p>
+
+
+
+<p>Speed is a major factor in customer decision-making. Moreover, if you’re behind the curve, you’ll most likely be out-competed by other companies that are able to get products or services to market quicker than you. If you’re slower than your competitors, you could lose market share and customers, which could damage your brand and profitability.</p>
+
+
+
+<h2>Benefits of Rapid Delivery</h2>
+
+
+
+<p>If you’re able to deliver apps quickly, you’ll see benefits in many areas, including the following:</p>
+
+
+
+<ul>
+<li><strong>Higher Revenue:</strong> If you’re able to get products or services to market faster, you’ll be able to generate more revenue than if your offerings are delayed by months or years.</li>
+
+
+
+<li><strong>Increased Brand Awareness: </strong>If you’re able to get products or services to market faster, you’ll be able to increase brand awareness, which can help you to grow your customer base.</li>
+
+
+
+<li><strong>Improved Customer Engagement:</strong> More rapid app delivery means increased customer engagement, which leads to greater customer retention.</li>
+
+
+
+<li><strong>Reduced Costs:</strong> By accelerating the software development process and cutting out unnecessary steps, you can reduce costs.</li>
+</ul>
+
+
+
+<h2>How to Achieve Rapid Application Delivery in the Enterprise</h2>
+
+
+
+<p>There are many steps you can take to achieve rapid application delivery in your organization, including the following:</p>
+
+
+
+<ul>
+<li><strong>Identify the Business Problem:</strong> Before you do anything else, you have to identify the business problem that you’re trying to solve. What is the company trying to accomplish? Once you know what business problem you’re trying to solve, you can create an application backlog.</li>
+
+
+
+<li><strong>Create an Effective Solution: </strong>You must then create an effective solution that will meet the needs of the business problem you’re trying to solve. You can achieve this by using a collaborative approach to software development in order to build an application with input from all stakeholders.</li>
+
+
+
+<li><strong>Test the Solution:</strong> The next step is to test the solution to ensure that it will solve the business problem in the way that you intended. You can do this by using automated testing and continuous integration/continuous delivery (CI/CD) to maximize quality control and minimize the time to release.</li>
+</ul>
+
+
+
+<p>Adopting DevOps and Agile delivery methodologies account for each of the rapid application delivery considerations holistically.  These two concepts are wrapped up in a clever industry buzzword: <a href="https://www.techtarget.com/searchcio/definition/IT-transformation" rel="nofollow noopener" target="_blank">IT Transformation</a>.</p>
+
+
+
+<p>IT Transformation is a full assessment of information technology systems with the intent of increasing efficiency, delivery speed to market, stability, and cost to remain competitive in a digital market.  IT Transformation is not only for Exchange and document storage servers.</p>
+
+
+
+<p>While it might be a tough pill to swallow, taking a step back and fully reassessing delivery and emulating organizations that do it very well is the key to success.  Some of these problems are solved problems that are not looking for the next creative solution.</p>
+
+
+
+<h2>Why is my Application Delivery Slow?</h2>
+
+
+
+<p>Naturally, over time, businesses will add process after process to application delivery cycles as a result of incidents or outages.  While well-intentioned at the time, the organic growth of these processes can lead to a dramatic downturn in both productivity and delivery of valuable products.  </p>
+
+
+
+<ul>
+<li>Manual Testing</li>
+
+
+
+<li>Dependency Management Hell</li>
+
+
+
+<li>Custom vs 3rd Party Integrations</li>
+
+
+
+<li>Lack of Visibility</li>
+
+
+
+<li>Overbearing Visibility</li>
+
+
+
+<li>The work environment does not meet the needs of employees</li>
+
+
+
+<li>Poor Communication</li>
+
+
+
+<li>Misaligned Expectations</li>
+
+
+
+<li>Outdated Technology</li>
+
+
+
+<li>Too Much Parallel Work In-Progress</li>
+</ul>
+
+
+
+<p>I believe that the first step is always a recognition that there must be a better way to deliver.  After that, any changes made to this space are going to vary company by company depending on their appetite for risk.</p>
 
 
 
@@ -1082,82 +1282,6 @@
 
 
 <p>By adopting CI/CD and embracing a DevOps culture, companies can reduce the time it takes to deliver new features to customers by 50 percent, according to research by CA Technologies.</p>
-
-
-
-<h2>What is Rapid Application Delivery?</h2>
-
-
-
-<p>Rapid application delivery is the practice of producing, testing, and deploying applications quickly from ideation to implementation — usually within days or even hours, rather than months or even years.</p>
-
-
-
-<p>The point of it all is to speed up the entire software development process, with the ultimate goal of helping businesses bring their products or services to market faster. Organizations that are able to rapidly deliver new applications can respond more quickly to market conditions and customer needs, and therefore retain a competitive advantage.</p>
-
-
-
-<h2>Why is Application Delivery Speed Important?</h2>
-
-
-
-<p>Fast delivery of new applications is critical to keeping up with customer expectations and staying ahead of competitors. In today&#8217;s business environment, customers want goods and services faster than ever before. Consumers expect to be able to click a button and have their goods delivered to their doorsteps in just a few days.</p>
-
-
-
-<p>Rapid application development means you can meet these expectations of speed and customer service. If you’re able to bring a new product or service to market quickly, you can generate greater revenue than if your offerings are delayed by months or even longer.</p>
-
-
-
-<p>Speed is a major factor in customer decision-making. Moreover, if you’re behind the curve, you’ll most likely be out-competed by other companies that are able to get products or services to market quicker than you. If you’re slower than your competitors, you could lose market share and customers, which could damage your brand and profitability.</p>
-
-
-
-<h2>Benefits of Rapid Delivery</h2>
-
-
-
-<p>If you’re able to deliver apps quickly, you’ll see benefits in many areas, including the following:</p>
-
-
-
-<ul>
-<li><strong>Higher Revenue:</strong> If you’re able to get products or services to market faster, you’ll be able to generate more revenue than if your offerings are delayed by months or years.</li>
-
-
-
-<li><strong>Increased Brand Awareness: </strong>If you’re able to get products or services to market faster, you’ll be able to increase brand awareness, which can help you to grow your customer base.</li>
-
-
-
-<li><strong>Improved Customer Engagement:</strong> More rapid app delivery means increased customer engagement, which leads to greater customer retention.</li>
-
-
-
-<li><strong>Reduced Costs:</strong> By accelerating the software development process and cutting out unnecessary steps, you can reduce costs.</li>
-</ul>
-
-
-
-<h2>How to Achieve Rapid Application Delivery in the Enterprise</h2>
-
-
-
-<p>There are many steps you can take to achieve rapid application delivery in your organization, including the following:</p>
-
-
-
-<ul>
-<li><strong>Identify the Business Problem:</strong> Before you do anything else, you have to identify the business problem that you’re trying to solve. What is the company trying to accomplish? Once you know what business problem you’re trying to solve, you can create an application backlog.</li>
-
-
-
-<li><strong>Create an Effective Solution: </strong>You must then create an effective solution that will meet the needs of the business problem you’re trying to solve. You can achieve this by using a collaborative approach to software development in order to build an application with input from all stakeholders.</li>
-
-
-
-<li><strong>Test the Solution:</strong> The next step is to test the solution to ensure that it will solve the business problem in the way that you intended. You can do this by using automated testing and continuous integration/continuous delivery (CI/CD) to maximize quality control and minimize the time to release.</li>
-</ul>
 
 
 
