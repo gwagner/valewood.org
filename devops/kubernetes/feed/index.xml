@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	 xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Kubernetes &#8211; A DevOps Blog</title>
+	<atom:link href="https://www.valewood.org/devops/kubernetes/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.valewood.org/</link>
+	<description>Occasionally a developer makes an Ops!</description>
+	<lastBuildDate>Sat, 03 Dec 2022 02:58:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png</url>
+	<title>Kubernetes &#8211; A DevOps Blog</title>
+	<link>https://www.valewood.org/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Helm: Kubernetes Cluster Unreachable </title>
+		<link>https://www.valewood.org/helm-kubernetes-cluster-unreachable/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sat, 03 Dec 2022 02:51:59 +0000</pubDate>
+				<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[kubernetes]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=1924</guid>
+
+					<description><![CDATA[Kubernetes, while fairly mature as a platform, is still considered an emerging technology in the business space. Due to this, lots of engineers are spending their free time trying to learn about Helm which can lead to some pretty frustrating&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>, while fairly mature as a platform, is still considered an emerging technology in the business space.  Due to this, lots of engineers are spending their free time trying to learn about Helm which can lead to some pretty frustrating errors.  </p>
+
+
+
+<p>Let&#8217;s discuss why you might be receiving <code>Error: Kubernetes cluster unreachable</code> when trying to connect to your cluster for the first time.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Kubernetes Install</h2>
+
+
+
+<p> There are a lot of different mechanisms on the market today to get Kubernetes up and running depending on your environment.</p>
+
+
+
+<h3>Local Environment</h3>
+
+
+
+<p>Local Kubernetes is going to use <a href="https://k3s.io/" target="_blank" rel="noopener">k3s</a> or <a href="https://minikube.sigs.k8s.io/docs/start/" target="_blank" rel="noopener">minikube</a> to run install a local version on a standard workstation.  This is a great way to get familiar with Kubernetes because these products will download and install all the requisite dependencies to bootstrap anyone regardless of their skill level.</p>
+
+
+
+<h3>On-Prem Environment</h3>
+
+
+
+<p>I am differentiating local and on-prem simply from the viewpoint of servers vs desktops.  In a more server-focused environment, many people will use <a href="https://github.com/kubernetes-sigs/kubespray" target="_blank" rel="noopener">kubespray</a> or <a href="https://github.com/kubernetes/kops" target="_blank" rel="noopener">kops</a> to deploy their Kubernetes clusters.  Kubespray will ensure that servers are properly configured through IaC while downloading and installing baseline Kubernetes.  By the time you are done, a fully functional cluster should be available.</p>
+
+
+
+<p>Kubespray does come with a lot more knobs and dials since it makes fewer opinionated decisions about what your cluster setup should look like.  In a local environment, ingress is going to be handled in a very specific way.  In an on-prem environment, you may have network appliances that want to handle ingress in a very specific way.  Kubespray should be able to get most of your configurations taken care of for your special circumstances.</p>
+
+
+
+<h3>Cloud Environment</h3>
+
+
+
+<p>Cloud environments can be configured the same way on-prem environments are through kubespray and kops.  Cloud-based VM instances would be spun up on management networks and tools would be run against them to achieve a functioning cluster.</p>
+
+
+
+<p>Most cloud providers will have their own managed Kubernetes to be used as well.  Those are probably a much safer way to get started when just starting to dabble in the Kubernetes space.  </p>
+
+
+
+<ul>
+<li><a href="https://aws.amazon.com/eks/" target="_blank" rel="noopener">Amazon EKS</a></li>
+
+
+
+<li><a href="https://azure.microsoft.com/en-us/products/kubernetes-service/" target="_blank" rel="noopener">Azure AKS</a></li>
+
+
+
+<li><a href="https://www.digitalocean.com/products/kubernetes" target="_blank" rel="noopener">DigitalOcean</a></li>
+
+
+
+<li><a href="https://www.vultr.com/kubernetes/" target="_blank" rel="noopener">Vultr</a></li>
+</ul>
+
+
+
+<p>These solutions generally are only a few clicks away from a full-stack deployment.  Once you get a bit more comfortable, it would be a good idea to toss out your test cluster and start to move into Terraform, CloudFormation, or <a href="https://azure.microsoft.com/en-us/get-started/azure-portal" data-internallinksmanager029f6b8e52c="20" title="Azure" rel="nofollow noopener" target="_blank">Azure</a> Resource Manager automation to ensure your clusters are codified for future upgrades.</p>
+
+
+
+<h2>Error: Kubernetes cluster unreachable</h2>
+
+
+
+<p>There are going to be a few troubleshooting steps you should take to diagnose this issue.  Each of them is going to be a little bit different depending on your deployment setup.</p>
+
+
+
+<h3>Check Your Kubeconfig</h3>
+
+
+
+<p>The first thing to check is your <code>$HOME/.kube/config</code> file.  This file contains all of the relevant information for connecting to your Kubernetes cluster.  It is also very important you keep this file safe and secret since it holds credentials for that connection as well.</p>
+
+
+
+<h4>My Kubeconfig is Missing!</h4>
+
+
+
+<p>If your kubeconfig file is missing, review your Kubernetes installation instructions for anything specific about copying a kubeconfig to the proper folder on your local machine.  The instructions may also walk you through how to create one.  Helm will not work without this file being created and in the proper location.</p>
+
+
+
+<h4>My Kubeconfig Exists!</h4>
+
+
+
+<p>If you open that file to read it, you will find that it is YAML formatted with connection parameters in it.  These parameters should include some certificate information, which are credentials and cluster identification verification, and a hostname for the cluster management API address.</p>
+
+
+
+<p>If you have kubectl installed on the same machine as your kubeconfig, a simple test would be to run <code>kubectl get nodes</code> to see if you get a list of servers back from the kubernetes API.  If you get an error, then either you do not have the right level of access, or your kubeconfig is not properly configured.  See above <strong>&#8220;My Kubeconfig is Missing&#8221;</strong>.</p>
+
+
+
+<p>If this works as intended, and you see a list of servers the next step is to ensure that your kubeconfig is on the same computer that you would like to run helm from.  If you are running helm from a local workstation, make sure you have a proper kubeconfig on that work station.  If you are running helm from a different server, ensure a kubeconfig is provided for that server.  Make sure to re-test.</p>
+
+
+
+<h4>Check Networking</h4>
+
+
+
+<p>Helm communicates with the Kubernetes API over port 6443.  Using NMap to check ports, ensure that the machine you are intending to run helm from has clear line of sight communication with the Kubernetes cluster over port 6443.  This can be achieved on Linux via this command: nmap –p 6443 {{cluster address/master hostname}}.  You can find the cluster address/master hostname inside of a validated kubeconfig.</p>
+
+
+
+<p>If you are using Windows and looking for an example of how to do port scans, I would suggest switching to Linux or Mac.</p>
+
+
+
+<p>If ports show closed or filtered, network communication will not be established with the cluster and Helm will not be able to run configurations.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Additional Resources</h2>
+
+
+
+<p>The steps outlined above should get you pointed in the right direction when you receive Helm errors when trying to contact your cluster for the first time.</p>
+
+
+
+<p>If you did not find the answers you needed via this article, I have added a few additional resources below that may be able to help get you sorted out.  If you have additional information to share on this topic, please <a href="https://www.valewood.org/contact/" data-type="page" data-id="984">contact me</a> and I will update this post to reflect any changes.</p>
+
+
+
+<ul>
+<li><a href="https://github.com/k3s-io/k3s/issues/1126" target="_blank" rel="noopener">GitHub</a></li>
+
+
+
+<li><a href="https://stackoverflow.com/questions/63066604/error-kubernetes-cluster-unreachable-get-http-localhost8080-versiontimeou" target="_blank" rel="noopener">StackOverflow</a></li>
+
+
+
+<li><a href="https://pet2cattle.com/2022/07/install-helm-k3s" data-type="URL" data-id="https://pet2cattle.com/2022/07/install-helm-k3s" target="_blank" rel="noopener">Pet2Cattle</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
