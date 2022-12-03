@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 02 Dec 2022 22:34:52 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 03 Dec 2022 02:58:18 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,200 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Helm: Kubernetes Cluster Unreachable </title>
+		<link>https://www.valewood.org/helm-kubernetes-cluster-unreachable/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Sat, 03 Dec 2022 02:51:59 +0000</pubDate>
+				<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[kubernetes]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=1924</guid>
+
+					<description><![CDATA[Kubernetes, while fairly mature as a platform, is still considered an emerging technology in the business space. Due to this, lots of engineers are spending their free time trying to learn about Helm which can lead to some pretty frustrating&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>, while fairly mature as a platform, is still considered an emerging technology in the business space.  Due to this, lots of engineers are spending their free time trying to learn about Helm which can lead to some pretty frustrating errors.  </p>
+
+
+
+<p>Let&#8217;s discuss why you might be receiving <code>Error: Kubernetes cluster unreachable</code> when trying to connect to your cluster for the first time.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Kubernetes Install</h2>
+
+
+
+<p> There are a lot of different mechanisms on the market today to get Kubernetes up and running depending on your environment.</p>
+
+
+
+<h3>Local Environment</h3>
+
+
+
+<p>Local Kubernetes is going to use <a href="https://k3s.io/" target="_blank" rel="noopener">k3s</a> or <a href="https://minikube.sigs.k8s.io/docs/start/" target="_blank" rel="noopener">minikube</a> to run install a local version on a standard workstation.  This is a great way to get familiar with Kubernetes because these products will download and install all the requisite dependencies to bootstrap anyone regardless of their skill level.</p>
+
+
+
+<h3>On-Prem Environment</h3>
+
+
+
+<p>I am differentiating local and on-prem simply from the viewpoint of servers vs desktops.  In a more server-focused environment, many people will use <a href="https://github.com/kubernetes-sigs/kubespray" target="_blank" rel="noopener">kubespray</a> or <a href="https://github.com/kubernetes/kops" target="_blank" rel="noopener">kops</a> to deploy their Kubernetes clusters.  Kubespray will ensure that servers are properly configured through IaC while downloading and installing baseline Kubernetes.  By the time you are done, a fully functional cluster should be available.</p>
+
+
+
+<p>Kubespray does come with a lot more knobs and dials since it makes fewer opinionated decisions about what your cluster setup should look like.  In a local environment, ingress is going to be handled in a very specific way.  In an on-prem environment, you may have network appliances that want to handle ingress in a very specific way.  Kubespray should be able to get most of your configurations taken care of for your special circumstances.</p>
+
+
+
+<h3>Cloud Environment</h3>
+
+
+
+<p>Cloud environments can be configured the same way on-prem environments are through kubespray and kops.  Cloud-based VM instances would be spun up on management networks and tools would be run against them to achieve a functioning cluster.</p>
+
+
+
+<p>Most cloud providers will have their own managed Kubernetes to be used as well.  Those are probably a much safer way to get started when just starting to dabble in the Kubernetes space.  </p>
+
+
+
+<ul>
+<li><a href="https://aws.amazon.com/eks/" target="_blank" rel="noopener">Amazon EKS</a></li>
+
+
+
+<li><a href="https://azure.microsoft.com/en-us/products/kubernetes-service/" target="_blank" rel="noopener">Azure AKS</a></li>
+
+
+
+<li><a href="https://www.digitalocean.com/products/kubernetes" target="_blank" rel="noopener">DigitalOcean</a></li>
+
+
+
+<li><a href="https://www.vultr.com/kubernetes/" target="_blank" rel="noopener">Vultr</a></li>
+</ul>
+
+
+
+<p>These solutions generally are only a few clicks away from a full-stack deployment.  Once you get a bit more comfortable, it would be a good idea to toss out your test cluster and start to move into Terraform, CloudFormation, or <a href="https://azure.microsoft.com/en-us/get-started/azure-portal" data-internallinksmanager029f6b8e52c="20" title="Azure" rel="nofollow noopener" target="_blank">Azure</a> Resource Manager automation to ensure your clusters are codified for future upgrades.</p>
+
+
+
+<h2>Error: Kubernetes cluster unreachable</h2>
+
+
+
+<p>There are going to be a few troubleshooting steps you should take to diagnose this issue.  Each of them is going to be a little bit different depending on your deployment setup.</p>
+
+
+
+<h3>Check Your Kubeconfig</h3>
+
+
+
+<p>The first thing to check is your <code>$HOME/.kube/config</code> file.  This file contains all of the relevant information for connecting to your Kubernetes cluster.  It is also very important you keep this file safe and secret since it holds credentials for that connection as well.</p>
+
+
+
+<h4>My Kubeconfig is Missing!</h4>
+
+
+
+<p>If your kubeconfig file is missing, review your Kubernetes installation instructions for anything specific about copying a kubeconfig to the proper folder on your local machine.  The instructions may also walk you through how to create one.  Helm will not work without this file being created and in the proper location.</p>
+
+
+
+<h4>My Kubeconfig Exists!</h4>
+
+
+
+<p>If you open that file to read it, you will find that it is YAML formatted with connection parameters in it.  These parameters should include some certificate information, which are credentials and cluster identification verification, and a hostname for the cluster management API address.</p>
+
+
+
+<p>If you have kubectl installed on the same machine as your kubeconfig, a simple test would be to run <code>kubectl get nodes</code> to see if you get a list of servers back from the kubernetes API.  If you get an error, then either you do not have the right level of access, or your kubeconfig is not properly configured.  See above <strong>&#8220;My Kubeconfig is Missing&#8221;</strong>.</p>
+
+
+
+<p>If this works as intended, and you see a list of servers the next step is to ensure that your kubeconfig is on the same computer that you would like to run helm from.  If you are running helm from a local workstation, make sure you have a proper kubeconfig on that work station.  If you are running helm from a different server, ensure a kubeconfig is provided for that server.  Make sure to re-test.</p>
+
+
+
+<h4>Check Networking</h4>
+
+
+
+<p>Helm communicates with the Kubernetes API over port 6443.  Using NMap to check ports, ensure that the machine you are intending to run helm from has clear line of sight communication with the Kubernetes cluster over port 6443.  This can be achieved on Linux via this command: nmap –p 6443 {{cluster address/master hostname}}.  You can find the cluster address/master hostname inside of a validated kubeconfig.</p>
+
+
+
+<p>If you are using Windows and looking for an example of how to do port scans, I would suggest switching to Linux or Mac.</p>
+
+
+
+<p>If ports show closed or filtered, network communication will not be established with the cluster and Helm will not be able to run configurations.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Additional Resources</h2>
+
+
+
+<p>The steps outlined above should get you pointed in the right direction when you receive Helm errors when trying to contact your cluster for the first time.</p>
+
+
+
+<p>If you did not find the answers you needed via this article, I have added a few additional resources below that may be able to help get you sorted out.  If you have additional information to share on this topic, please <a href="https://www.valewood.org/contact/" data-type="page" data-id="984">contact me</a> and I will update this post to reflect any changes.</p>
+
+
+
+<ul>
+<li><a href="https://github.com/k3s-io/k3s/issues/1126" target="_blank" rel="noopener">GitHub</a></li>
+
+
+
+<li><a href="https://stackoverflow.com/questions/63066604/error-kubernetes-cluster-unreachable-get-http-localhost8080-versiontimeou" target="_blank" rel="noopener">StackOverflow</a></li>
+
+
+
+<li><a href="https://pet2cattle.com/2022/07/install-helm-k3s" data-type="URL" data-id="https://pet2cattle.com/2022/07/install-helm-k3s" target="_blank" rel="noopener">Pet2Cattle</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>DevOps Roll-up: November 2022</title>
 		<link>https://www.valewood.org/devops-roll-up-novembers-2022/</link>
 		
@@ -2291,259 +2485,6 @@
 
 
 <p>DevOps is a transformation aimed at bringing together the disciplines of development and operations to produce high-quality software. It’s a marriage between the teams involved, and it needs to be built on communication and collaboration. DevOps is key to transforming operations and allowing everyone to create high-quality, reliable software. And collaboration between teams is what allows for this. DevOps is the marriage between software engineers and IT professionals.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>What is Automation Testing in DevOps</title>
-		<link>https://www.valewood.org/devops-testing/</link>
-		
-		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
-		<pubDate>Fri, 28 Oct 2022 19:39:07 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[automated devops testing]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[testing]]></category>
-		<category><![CDATA[tools]]></category>
-		<guid isPermaLink="false">/?p=1239</guid>
-
-					<description><![CDATA[Automation Testing in DevOps is generally relegated to the software being released to production. Environmental testing is performed by manual testing practices or high-level smoke tests. Test automation should cover the full CI/CD pipeline including infrastructure, delivery tools, software, UI,&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Automation Testing in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is generally relegated to the software being released to production. Environmental testing is performed by manual testing practices or high-level smoke tests.</p>
-
-
-
-<p><strong>Test automation should cover the full CI/CD pipeline including infrastructure, delivery tools, software, UI, and any other technology that is included in the pipeline. Automated tests should not be relegated to the land of software development.</strong></p>
-
-
-
-<p>Let&#8217;s explore what automation testing in DevOps really means when you are looking to stabilize your delivery process and accelerate your business!</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Automated Testing in DevOps</h2>
-
-
-
-<p>Generally, developers tend toward coding unit tests to validate that the code is running the way they expected. At the same time, quality practitioners create automated user tests that validate the end-to-end user experience.</p>
-
-
-
-<p>Quality practitioners can arrange explorative testing sessions in which teams manually look at various application area issues.</p>
-
-
-
-<p>DevOps&#8217; best practice for the automation of CI/CD pipelines is to run automatic testing whenever possible. This means deploying automatic test UIs to production to detect and proactively address user experience concerns.</p>
-
-
-
-<p>I generally like to take this a step further when looking at environmental conditions. Tests for environments can also be thought about in the context of monitoring and observability. A pipeline should be qualified through the use of testing tools in an automated test process. The tests should also be composed in a way that they are usable as part of your monitoring system.</p>
-
-
-
-<p>For example, if you are willing to validate that a certificate is valid as part of your testing framework, you should also be willing to run continuous testing to validate that the certificate does not expire between releases.</p>
-
-
-
-<h2>The Importance of Test Automation</h2>
-
-
-
-<p>Test automation improves reliability, continuity, and productivity within teams of developers and products. DevOps teams have a better chance of staying within budget without disrupting crucial debugging or problem-shooting processes.</p>
-
-
-
-<p>Test automation can be quicker than manual testing. It helps to avoid costly errors by eliminating communication barriers and saves money in teams by eliminating unnecessary work. Testing automation provides new forms of flexibility that enable the development team to reuse test scripts across the testing software.</p>
-
-
-
-<p>As a business leader, do not be fooled by the short-term investment cost of introducing automated testing into your environment. Testing automation is not new and sexy functionality that you can provide to the market which is why I believe it is skipped by many businesses. Automated testing, continuous integration, and continuous delivery are critical investments to the longevity of your products.</p>
-
-
-
-<p>Each release is always going to end up being more complex than the previous release. Employing a good testing process ensures that your products are being introduced to the market in a reliable and expected way. Because of the increased complexity, any manual testing process will need to scale to meet that complexity. Automated testing does not scale in cost the same way that manual testing does.</p>
-
-
-
-<h2>What is test automation?</h2>
-
-
-
-<p>Test Automation enables users to automate their software testing to ensure that they meet specified quality standards. Different types of testing are often depicted in pyramids. As you ascend the pyramid, the number of testing types decreases, and the costs of creating and operating the test increase. The most traditional tests were conducted using manual methods in the Pyramids in the past. It was a slow and costly procedure until automated testing tooling came into effect.</p>
-
-
-
-<figure class="wp-block-image"><a href="https://www.headspin.io/blog/the-testing-pyramid-simplified-for-one-and-all" target="_blank" rel="noopener"><img decoding="async" src="https://global-uploads.webflow.com/619e15d781b21202de206fb5/6316d9e765cd53d9937e2b6a_The-Testing-Pyramid-Simplified-for-One-and-All.webp" alt="The Testing Pyramid"/></a><figcaption>Headspin: The Testing Pyramid: Simplified for One and All</figcaption></figure>
-
-
-
-<h2>Common Test Automation Pitfalls</h2>
-
-
-
-<p>Below are some of the most common issues when adding automated testing to your technology products:</p>
-
-
-
-<ul><li>Developers not participating in testing</li><li>Unit tests not being written with code</li><li>Testing tools are not being used to their fullest potential</li><li>No standard for code coverage</li><li>Best practices not being employed for a specific technology stack</li><li>Tests are not being run in the proper places of a pipeline.</li></ul>
-
-
-
-<h2>How Automated Testing Powers DevOps?</h2>
-
-
-
-<p>One of the core goals of DevOps is to improve delivery flow. Test automation is one of the core strategies used to help smooth out both flow and quality expectations. A cultural pillar of DevOps is continuous improvement.</p>
-
-
-
-<p>Due to the shortened feedback loop of your continuous delivery pipeline, smaller and more nimble software testing and release cycles can be achieved by the development team. This means that your applications will be less prone to errors due to robust testing.</p>
-
-
-
-<p>When issues are discovered in production they are not turned into a grandiose response event. A DevOps team is able to get adjustments made to both code and tests and re-release the software quickly back into production.</p>
-
-
-
-<p>Without automating releases and tests, teams will scramble to recertify software before being ready to push it back to production with bug fixes. Worse, if your software teams do not employ any testing, you may never know about critical issues before customers bring them up.</p>
-
-
-
-<h2>How Can I Improve Continuous Testing?</h2>
-
-
-
-<p>Continuous testing is one of the most important things you can do to improve your success rates. If you’re doing it right, continuous testing will help you catch bugs at the earliest stages of development and make sure that problems don’t creep up in production.</p>
-
-
-
-<p>Continuous testing helps to keep projects on track and ensure that they stay on schedule, which means that your customers get their products sooner.</p>
-
-
-
-<p>A good way to start building a continuous test strategy is by creating an automated integration test pipeline. It should consist of a series of tests that are run automatically when new code is added to your application.</p>
-
-
-
-<p>Automated integration tests can be especially useful when you have a large team developing multiple applications that share common code libraries or frameworks. They can also be useful for large-scale applications with many users and complex data models.</p>
-
-
-
-<p>Continuous testing also allows developers to build trust with their customers by letting them know that their products are being continuously tested and improved. This can help to increase customer confidence in your product and boost retention rates.</p>
-
-
-
-<h2>How Does Automated Testing Change the Role of Quality Assurance?</h2>
-
-
-
-<p>Automated testing is a way to evaluate the quality of software. The basic idea is that you write automated tests, or scripts, to check for unexpected behaviors or errors in the code.</p>
-
-
-
-<p>Automated testers can run these scripts automatically, which saves time and effort for both developers and QA staff. When you have automated testing in place, you can focus on other tasks, like exploring new features or fixing bugs, without worrying about whether your application is running correctly.</p>
-
-
-
-<p>There are two types of automated testing: static and dynamic. Static testing checks for basic issues like syntax errors, security holes, and database integrity. Dynamic testing checks for unexpected behaviors such as out-of-order execution, race conditions, and timeout issues.</p>
-
-
-
-<p>QA teams use automated testing to maintain high standards of quality throughout the development process. They can catch issues early on in the development cycle and communicate findings effectively with developers and stakeholders.</p>
-
-
-
-<p>By reducing bugs and improving overall quality, automated testing can help organizations achieve their goals more quickly and cost-effectively.</p>
-
-
-
-<p>A Quality Assurance Engineers&#8217; role changes when embracing test automation testing. Their role will now be to enable the entire team to contribute tests to the automation pipeline. Test cases should be developed and run as part of the normal delivery process.</p>
-
-
-
-<p>By making this transition, Quality Assurance Engineers can now focus on higher value work like covering edge cases, improving testing tools and methodology, and leveling up team members&#8217; skills in testing.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Test Automation Stages</h2>
-
-
-
-<p>Test Automation includes several fundamental automation techniques that should be followed for quality testing. Testing automation systems are presented in stages atop test pyramids based on their hierarchy.</p>
-
-
-
-<h3>Integration testing</h3>
-
-
-
-<p>Integration tests measure whether logical integration is effective across all systems and can be achieved without unavoidable errors in integration. Incorporated testing is designed to test compliance with systems to determine how different modules interact.</p>
-
-
-
-<h3>Unit testing</h3>
-
-
-
-<p>Unit Testing means isolating your Application into unit testing and then checking its behavior independently of external parties or database configuration. Unit tests are often conducted throughout the build period and are considered the primary test phase.</p>
-
-
-
-<h3>End-to-end testing</h3>
-
-
-
-<p>Test frameworks for the testing of applications simulate user requirements to ensure they meet the needs of users at all levels. The final purpose is to ensure the application can be validated and checked by all the users.</p>
-
-
-
-<h3>Exploratory testing</h3>
-
-
-
-<p>Exploration testing can be regarded as a more advanced software testing strategy that involves learning, checking, and reviewing functional and visual components for users.</p>
-
-
-
-<h3>Environmental Testing</h3>
-
-
-
-<p>Building tests to validate the consistency that your software will be running in after deployment.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>As you can see, automated testing is a cornerstone to DevOps. Most focus is generally put on running automated testing against software being developed. There are a lot of advantages to developing automated testing which also looks at environmental conditions as well. Accelerate your business by introducing automated testing tools today!</p>
 ]]></content:encoded>
 					
 		
