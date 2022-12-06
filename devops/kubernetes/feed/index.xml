@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/kubernetes/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sat, 03 Dec 2022 02:58:18 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 03 Dec 2022 03:19:18 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -67,7 +67,7 @@
 
 
 
-<p> There are a lot of different mechanisms on the market today to get Kubernetes up and running depending on your environment.</p>
+<p>There are a lot of different mechanisms on the market today to get Kubernetes up and running depending on your environment.  How you installed Kubernetes is important for troubleshooting later.  Review the install methods and make sure you align underneath one of them in some fashion.</p>
 
 
 
@@ -75,7 +75,7 @@
 
 
 
-<p>Local Kubernetes is going to use <a href="https://k3s.io/" target="_blank" rel="noopener">k3s</a> or <a href="https://minikube.sigs.k8s.io/docs/start/" target="_blank" rel="noopener">minikube</a> to run install a local version on a standard workstation.  This is a great way to get familiar with Kubernetes because these products will download and install all the requisite dependencies to bootstrap anyone regardless of their skill level.</p>
+<p>Local Kubernetes is going to use <a href="https://k3s.io/" target="_blank" rel="noopener">k3s</a> or <a href="https://minikube.sigs.k8s.io/docs/start/" target="_blank" rel="noopener">minikube</a> to run and install a local version on a standard workstation.  This is a great way to get familiar with Kubernetes because these products will download and install all the requisite dependencies to bootstrap anyone regardless of their skill level.</p>
 
 
 
@@ -161,7 +161,7 @@
 
 
 
-<p>If this works as intended, and you see a list of servers the next step is to ensure that your kubeconfig is on the same computer that you would like to run helm from.  If you are running helm from a local workstation, make sure you have a proper kubeconfig on that work station.  If you are running helm from a different server, ensure a kubeconfig is provided for that server.  Make sure to re-test.</p>
+<p>If this works as intended, and you see a list of servers the next step is to ensure that your kubeconfig is on the same computer that you would like to run helm from.  If you are running helm from a local workstation, make sure you have a proper kubeconfig on that workstation.  If you are running helm from a different server, ensure a kubeconfig is provided for that server.  Make sure to re-test.</p>
 
 
 

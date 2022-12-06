@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sat, 03 Dec 2022 02:58:18 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 06 Dec 2022 18:16:09 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,141 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>What is a Common Misconception about Agile and DevOps?</title>
+		<link>https://www.valewood.org/devops-and-agile-misconceptions/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Tue, 06 Dec 2022 14:20:33 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[agile]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[opinion]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<guid isPermaLink="false">/?p=1966</guid>
+
+					<description><![CDATA[In this blog, we discuss DevOps and Agile at great length. DevOps is a methodology for technology delivery while Agile is a methodology for project management. The two pair together quite well to increase the flow of value to the&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>In this blog, we discuss <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> and Agile at great length.  DevOps is a methodology for technology delivery while Agile is a methodology for project management.  The two pair together quite well to increase the <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2022" target="_blank" rel="noopener">flow of value</a> to the market.</p>
+
+
+
+<p>They can also be intertwined and confusing leading to misconceptions if one isn&#8217;t careful in their adoption journey.  Let&#8217;s dive in and discuss the most common misconception about DevOps and Agile!</p>
+
+
+
+<h2>What is the most Common Misconception about Agile and DevOps?</h2>
+
+
+
+<p>There are several misconceptions that surface quickly when businesses are evaluating DevOps and Agile either independently or together.  Below are a few of those misconceptions.</p>
+
+
+
+<h3>Common Misconception #1</h3>
+
+
+
+<p>DevOps and Agile are commonly viewed as a tool to fill a gap in delivery. If delivery cycles are variable in length, inconsistent, and filled with twists and turns; companies will look for some quick outs to patch up their delivery to ship something. The problem with this approach is generally <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/">quality</a>.</p>
+
+
+
+<p>While borrowing from DevOps and Agile might work in the short term, it does not work over the long term. Companies or projects that are looking to step up their delivery processes really need to look at things holistically and make some choices about how they want to engage in the market with their customers.</p>
+
+
+
+<h3>Common Misconception #2</h3>
+
+
+
+<p>A common misconception is that DevOps and/or Agile can be purchased off the shelf and implemented.</p>
+
+
+
+<p>DevOps and/or Agile cannot be purchased.  There is no singular toolset, workbook, or process that can be purchased and put in place to shortcut the adoption of these methodologies.  Both of these methodologies are a fundamental transformation of delivery and need to be adopted fully in order to be effective.</p>
+
+
+
+<p>This transformation is also cross-cutting throughout all technical and non-technical roles.  A sales team cannot assume that groups delivering technology are delivering in a different way than they are selling.  Account management cannot build plans with customers on their future technology state and expect that planning to look different than the overall delivery workflows.  Technology groups cannot adopt a different way of delivering if it is at odds with business expectations.</p>
+
+
+
+<h3>Common Misconception #3</h3>
+
+
+
+<p>A common misconception is that DevOps can be implemented without Agile</p>
+
+
+
+<p>Now, that statement is a little clickbaity.  You can indeed implement DevOps inside of other project management frameworks.  I would make the argument that you cannot fully realize the benefits of delivery transformation unless you adopt both DevOps and Agile.  DevOps practices do not lend themselves well to Waterfall, but it can be done.  You really lose out on all of the continuous improvement facets of DevOps which really means you are adopting some automation and calling it &#8220;DevOps&#8221;.</p>
+
+
+
+<h2>How Should I view DevOps and Agile?</h2>
+
+
+
+<p>By fully adopting Agile and DevOps, a lot of doors are opened up for delivery.</p>
+
+
+
+<ul>
+<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" target="_blank" rel="noreferrer noopener">Flow</a>:</strong> Instead of moving from task to task, or project to project, work can be put onto a conveyor belt of delivery. Agile and DevOps offer more of an assembly line-type flow to technology delivery.</li>
+
+
+
+<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/" target="_blank" rel="noreferrer noopener">Quality</a>:</strong> Context switching impacts quality. By offering more stability in work coming down the pipeline, engineers in various disciplines can focus on quality first.</li>
+
+
+
+<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/flexibility/" target="_blank" rel="noreferrer noopener">Flexibility</a>:</strong> Companies need to meet the market where it is at. Sometimes this means quickly pivoting from products that are not working to products that do well in the market.</li>
+
+
+
+<li><a href="https://www.valewood.org/devops-cycle-time/"><strong>Release faster and work smarter</strong>:</a> By reducing the size and scope of deliverables, the team can focus on shipping more often.</li>
+
+
+
+<li><strong><a href="https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/">Simplifies Software Development and Operations Focus</a></strong>: Day-to-day operations can seem like a burden that interrupts delivery frequently. By adopting DevOps, operations are a normal part of everyday life.</li>
+
+
+
+<li><strong><a href="https://www.valewood.org/devops-trust/">Responsibility</a>:</strong> Agile helps individual contributors feel like they are part of something bigger by influencing the overall planning and delivery processes. They are not just taking orders from the tower, they are actively delivering value against their vision of great outcomes.</li>
+
+
+
+<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/consistency/" target="_blank" rel="noreferrer noopener">Consistency</a>:</strong> Consistency brings predictability and reliability to products and planning</li>
+
+
+
+<li><strong>Measurement:</strong> Promote data-driven decision-making into your day-to-day workflows through predictability and consistency in the flow of work.</li>
+
+
+
+<li><strong>Security:</strong> Security is no longer a secondary burdensome process that detracts from delivering work to the market. Security is built right into DevOps through automated delivery pipelines.</li>
+</ul>
+
+
+
+<p>Any of these benefits could be achieved on their own in their own ways. By fully embracing Agile and DevOps, each of these ideals comes with the methodology. There is no need to solve an already-solved problem.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>When first hearing about DevOps and Agile, it is easy to build some initial blinders and misconceptions about what they really mean when utilized as a symbiotic relationship.  It takes a mindset change, and a full perspective shift to realize the benefits of DevOps and Agile together.  </p>
+
+
+
+<p>I would encourage anyone out there to go get some training, watch some YouTube videos, and read as much as you can about the methodologies and what they have to offer.  DevOps and Agile together can really open up a lot of new benefits for your business and your customers.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Helm: Kubernetes Cluster Unreachable </title>
 		<link>https://www.valewood.org/helm-kubernetes-cluster-unreachable/</link>
 		
@@ -67,7 +202,7 @@
 
 
 
-<p> There are a lot of different mechanisms on the market today to get Kubernetes up and running depending on your environment.</p>
+<p>There are a lot of different mechanisms on the market today to get Kubernetes up and running depending on your environment.  How you installed Kubernetes is important for troubleshooting later.  Review the install methods and make sure you align underneath one of them in some fashion.</p>
 
 
 
@@ -75,7 +210,7 @@
 
 
 
-<p>Local Kubernetes is going to use <a href="https://k3s.io/" target="_blank" rel="noopener">k3s</a> or <a href="https://minikube.sigs.k8s.io/docs/start/" target="_blank" rel="noopener">minikube</a> to run install a local version on a standard workstation.  This is a great way to get familiar with Kubernetes because these products will download and install all the requisite dependencies to bootstrap anyone regardless of their skill level.</p>
+<p>Local Kubernetes is going to use <a href="https://k3s.io/" target="_blank" rel="noopener">k3s</a> or <a href="https://minikube.sigs.k8s.io/docs/start/" target="_blank" rel="noopener">minikube</a> to run and install a local version on a standard workstation.  This is a great way to get familiar with Kubernetes because these products will download and install all the requisite dependencies to bootstrap anyone regardless of their skill level.</p>
 
 
 
@@ -161,7 +296,7 @@
 
 
 
-<p>If this works as intended, and you see a list of servers the next step is to ensure that your kubeconfig is on the same computer that you would like to run helm from.  If you are running helm from a local workstation, make sure you have a proper kubeconfig on that work station.  If you are running helm from a different server, ensure a kubeconfig is provided for that server.  Make sure to re-test.</p>
+<p>If this works as intended, and you see a list of servers the next step is to ensure that your kubeconfig is on the same computer that you would like to run helm from.  If you are running helm from a local workstation, make sure you have a proper kubeconfig on that workstation.  If you are running helm from a different server, ensure a kubeconfig is provided for that server.  Make sure to re-test.</p>
 
 
 
@@ -419,7 +554,7 @@
 
 					<description><![CDATA[DevOps is a culture and methodology that an organization can prescribe to aid in velocity, consistency, stability, and flow of value to the market. Often confused with &#8220;automation&#8221; being the only benefit of DevOps, the core principles behind DevOps offer&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is a culture and methodology that an organization can prescribe to aid in velocity, consistency, stability, and flow of value to the market.  Often confused with &#8220;automation&#8221; being the only benefit of DevOps, the core principles behind DevOps offer a common set of ideals that a team can align under and strive to achieve.</p>
+<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is a culture and methodology that an organization can prescribe to aid in velocity, consistency, stability, and <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2022" target="_blank" rel="noopener">flow of value</a> to the market.  Often confused with &#8220;automation&#8221; being the only benefit of DevOps, the core principles behind DevOps offer a common set of ideals that a team can align under and strive to achieve.</p>
 
 
 
@@ -428,18 +563,6 @@
 
 
 <p>With those descriptions out of the way, what term best describes both Agile and DevOps?</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
 
 
 
@@ -456,6 +579,18 @@
 
 
 <p>By driving consistency, technologists get the predictability that they need to make sound and rational decisions about how to approach work.  When working against an unpredictable cycle, technology groups will quickly get overwhelmed by the rate of change and produce solutions that do not meet the demands of the market.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -507,18 +642,6 @@
 
 
 
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
 <h2>DevOps and Agile are Closely Related</h2>
 
 
@@ -528,6 +651,18 @@
 
 
 <p>You can read more about how <a href="https://www.valewood.org/devops-and-agile/" data-type="post" data-id="1264">DevOps and Agile are related here!</a></p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -602,64 +737,6 @@
 
 
 <p>Value is a byproduct of DevOps and Agile.  The real benefit to DevOps and Agile is the consistent way that said value gets delivered to the market.  This means that you can calculate and quantify value through data-driven decision-making.  You are also able to manage market expectations and take potentially larger leaps to satisfy your customers.</p>
-
-
-
-<h2>What is a Common Misconception about Agile and DevOps?</h2>
-
-
-
-<p>DevOps and Agile are commonly viewed as a tool to fill a gap in delivery.  If delivery cycles are variable in length, inconsistent, and filled with twists and turns; companies will look for some quick outs to patch up their delivery to ship something.  The problem with this approach is generally <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/" data-type="page" data-id="1036">quality</a>.</p>
-
-
-
-<p>While borrowing from DevOps and Agile might work in the short term, it does not work over the long term.  Companies or projects that are looking to step up their delivery processes really need to look at things holistically and make some choices about how they want to engage in the market with their customers.</p>
-
-
-
-<p>By fully adopting Agile and DevOps, a lot of doors are opened up for delivery.</p>
-
-
-
-<ul>
-<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" target="_blank" rel="noopener">Flow</a>:</strong>  Instead of moving from task to task, or project to project, work can be put onto a conveyor belt of delivery.  Agile and DevOps offer more of an assembly line-type flow to technology delivery.</li>
-
-
-
-<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/" target="_blank" rel="noopener">Quality</a>: </strong> Context switching impacts quality.  By offering more stability in work coming down the pipeline, engineers in various disciplines can focus on quality first.</li>
-
-
-
-<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/flexibility/" target="_blank" rel="noopener">Flexibility</a>:</strong>  Companies need to meet the market where it is at.  Sometimes this means quickly pivoting from products that are not working to products that do well in the market.</li>
-
-
-
-<li><a href="https://www.valewood.org/devops-cycle-time/" data-type="post" data-id="1700"><strong>Release faster and work smarter</strong>:</a>  By reducing the size and scope of deliverables, the team can focus on shipping more often.</li>
-
-
-
-<li><strong><a href="https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/" data-type="post" data-id="312">Simplifies Software Development and Operations Focus</a></strong>:  Day-to-day operations can seem like a burden that interrupts delivery frequently.  By adopting DevOps, operations are a normal part of everyday life.</li>
-
-
-
-<li><strong><a href="https://www.valewood.org/devops-trust/" data-type="post" data-id="1657">Responsibility</a>:</strong>  Agile helps individual contributors feel like they are part of something bigger by influencing the overall planning and delivery processes.  They are not just taking orders from the tower, they are actively delivering value against their vision of great outcomes.</li>
-
-
-
-<li><strong><a href="https://www.valewood.org/topics/devops/benefits-of-devops/consistency/" target="_blank" rel="noopener">Consistency</a>: </strong> Consistency brings predictability and reliability to products and planning</li>
-
-
-
-<li><strong>Measurement:</strong>  Promote data-driven decision-making into your day-to-day workflows through predictability and consistency in the flow of work.</li>
-
-
-
-<li><strong>Security:</strong>  Security is no longer a secondary burdensome process that detracts from delivering work to the market.  Security is built right into DevOps through automated delivery pipelines.</li>
-</ul>
-
-
-
-<p>Any of these benefits could be achieved on their own in their own ways.  By fully embracing Agile and DevOps, each of these ideals comes with the methodology.  There is no need to solve an already-solved problem.</p>
 
 
 
@@ -762,7 +839,7 @@
 
 
 
-<p>These people don’t understand why they are implementing certain tools or why they are following specific processes. They are just doing it because they read an article that said their company should be adopting DevOps, or they read a book that talked about the “predictable flow of value”.</p>
+<p>These people don’t understand why they are implementing certain tools or why they are following specific processes. They are just doing it because they read an article that said their company should be adopting DevOps, or they read a book that talked about the “predictable <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2022" target="_blank" rel="noopener">flow of value</a>”.</p>
 
 
 
@@ -2253,143 +2330,5 @@
 		
 		
 			</item>
-		<item>
-		<title>PurpleUrchin Crypto Mining with Free GitHub Actions</title>
-		<link>https://www.valewood.org/purpleurchin-crypto-mining/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Thu, 27 Oct 2022 02:26:10 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<guid isPermaLink="false">/?p=1225</guid>
-
-					<description><![CDATA[Sysdig Threat Research Team has discovered PURPLEURCHIN, an elaborate crypto mining operation taking advantage of automated CI/CD services. Attackers have used millions of free compute cycles through services such as GitHub Actions, Heroku, and others, to run the operation. What&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p><a href="https://sysdig.com/blog/massive-cryptomining-operation-github-actions/" data-type="URL" data-id="https://sysdig.com/blog/massive-cryptomining-operation-github-actions/" target="_blank" rel="noreferrer noopener">Sysdig Threat Research Team</a> has discovered PURPLEURCHIN, an elaborate crypto mining operation taking advantage of automated CI/CD services. Attackers have used millions of free compute cycles through services such as <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> Actions, Heroku, and others, to run the operation.</p>
-
-
-
-<p>What does this mean to the <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> community?</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>A Basic Breakdown of the Attack</h2>
-
-
-
-<p>The attack was first identified when automated scanning identified some obscurely named images on DockerHub were being updated through automated patterns that did not match any kind of heuristic pattern.  From there, it appears that free-tier GitHub accounts were being created and each account allows for 2000 minutes per month of free GitHub Actions runtime.  Repositories were then created and a specially crafted <code>github-actions.yaml</code> workflow was created in those repositories.  Containers were then started which kick off crypto mining operations.  Ports are also opened up to serve as command and control for the distributed attack.</p>
-
-
-
-<p>To get the full details of the attack, which are extremely fascinating, I would look into the article linked at the top of this post.  There are a ton of depth and built-in workarounds to combat the systems of control that GitHub has in place to protect its infrastructure from attack.</p>
-
-
-
-<h2>What is the Threat of a Poorly Secured Code Repository?</h2>
-
-
-
-<p>Supply chain attacks have become commonplace in software development.  Companies are constantly chasing CVEs from packages that are either not being well maintained by the community or are being maintained but companies are not allocating enough funding to keep their software in line with community updates.  </p>
-
-
-
-<p>The most pronounced threat in recent memory was <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228" data-type="URL" data-id="https://nvd.nist.gov/vuln/detail/CVE-2021-44228" target="_blank" rel="noreferrer noopener">Log4j remote code execution bug</a> found in versions below 2.16.  This allowed attackers to craft a simple attack that was able to quickly run arbitrary code that could have real consequences.</p>
-
-
-
-<p>Companies all over the planet rushed to update their code bases.  You can find massive Reddit threads that were discussing their companies&#8217; responses to the issue.  I would imagine, even with all of the industry hype, this vulnerability still exists in the wild and is still being exploited.</p>
-
-
-
-<p>How can something like this be avoided in the future?  People familiar with DevOps automation will quickly reply by adding more automation to their environments and building systems.  While I completely agree with this response, if automation is added irresponsibly the threat landscape you are looking at will broaden very quickly.</p>
-
-
-
-<p>In high school, I was enrolled in vocational education where I learned how to build a shed.  It was a pretty awesome experience and I learned a lot.  The shop teacher in charge of running the class and keeping the students safe was generally opposed to using power tools to aid in our learning.  When approached as to why his response was simply this; &#8220;power tools are just going to ensure that you kids screw something up faster than with hand tools&#8221;.</p>
-
-
-
-<p>When adding automation to an environment, especially in concert with code repositories and build systems, you are opening yourself up to a lot of risks that need to be mitigated.  If your pipelines are fully automated from commit through production, then all it takes is one simple push before disaster strikes.</p>
-
-
-
-<p>Tom Scott from &#8220;Things You Might Not Know&#8221; does a pretty good theoretical exercise about how quickly things can go wrong in a scenario like this.  I have added the video below.</p>
-
-
-
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe title="Single Point of Failure: The (Fictional) Day Google Forgot To Check Passwords" width="1170" height="658" src="https://www.youtube.com/embed/y4GB_NDU43Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div><figcaption>Single Point of Failure: The (Fictional) Day Google Forgot To Check Passwords</figcaption></figure>
-
-
-
-<h2>What Does PurpleUchin mean for DevOps and Automation?</h2>
-
-
-
-<p>PURPLEURCHIN appears to be a fairly sophisticated vehicle to utilize free computing resources to mine cryptocurrency.  On its face, a group is just trying to make a buck.</p>
-
-
-
-<p>On its face, it does not seem very threatening.  This kind of attack really shows not only the creativity of attackers today, but it highlights how complex a company&#8217;s technology stack has gotten, and how easy it is to hide inside of it.  </p>
-
-
-
-<p>Here are some questions that you can ask yourself to understand your level of visibility:</p>
-
-
-
-<ul><li>Would you know if all of the code that made it into production on your next release was intentionally put there by good actors?</li><li>Would you know if your servers are only running what you intended for them to be running?</li><li>Could a sidecar process be spun up by a bad actor and would anybody notice?</li><li>Does your automated testing stack take environmental considerations into account when passing a build?</li><li>Do you know what versions of 3rd party dependencies are running in your environment?</li><li>Would you know if a 3rd party dependency has been compromised?</li><li>Could you quickly replace a compromised dependency to ensure business continuity?</li><li>Do you know if your organization is utilizing GitHub Actions workflows that have been vetted by the security community?</li></ul>
-
-
-
-<p>Now, these questions may seem like a little bit of fear-mongering, and that is intentional.  There are solutions for every single one of these already-solved problems on the market.  In my experience, companies are not always going that extra mile to ensure that they are protected from threat actors.</p>
-
-
-
-<p>The factors that compound all of this are speed and automation.  I don&#8217;t think anybody will dispute the argument that the technology space moves extremely quickly.  On top of that, businesses must ship and release software at the pace of the market to remain competitive.  Because of that speed, automation is generally employed as a stop-gap to maintain a consistent pace.  Businesses have the possibility of leaving themselves exposed if those automated tools are not held to a higher standard than the software they are developing.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>PURPLEURCHIN serves as another reminder about the time and attention we need to pay to our supply chain and automated tool stacks.  While this particular attack does not constitute immediate concern for the technology community holistically like Log4J did, it serves as a great reminder that technology hygiene is as important as shipping valuable technology solutions to the market.</p>
-]]></content:encoded>
-					
-		
-		
-		<media:content url="https://www.youtube.com/embed/y4GB_NDU43Q" medium="video" width="1280" height="720">
-			<media:player url="https://www.youtube.com/embed/y4GB_NDU43Q" />
-			<media:title type="plain">Single Point of Failure: The (Fictional) Day Google Forgot To Check Passwords</media:title>
-			<media:description type="html"><![CDATA[http://tomscott.com/ - @tomscott - I spin a (fictional) tale of the day that Google accidentally opened everything. Performed at GeekyConf, with thanks to Bet...]]></media:description>
-			<media:thumbnail url="/wp-content/uploads/2022/10/devops-purpleurchin.jpg" />
-			<media:rating scheme="urn:simple">nonadult</media:rating>
-		</media:content>
-	</item>
 	</channel>
 </rss>

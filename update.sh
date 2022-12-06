@@ -64,7 +64,7 @@ grep -rl "link>/" . --exclude='update.sh' | xargs sed -i 's/\(link>\)\//\1https:
 echo "Replacing comments>/ with www.valewood.org"
 grep -rl "comments>/" . --exclude='update.sh' | xargs sed -i 's/\(comments>\)\//\1https:\/\/www.valewood.org\//g'
 
-echo "Replacing comments>/ with www.valewood.org"
+echo "Replacing commentRss>/ with www.valewood.org"
 grep -rl "commentRss>/" . --exclude='update.sh' | xargs sed -i 's/\(commentRss>\)\//\1https:\/\/www.valewood.org\//g'
 
 echo "Replacing href=\"/ with www.valewood.org"
