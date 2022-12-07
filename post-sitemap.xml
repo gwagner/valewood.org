@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.valewood.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://www.valewood.org/devops-shift-left-testing/</loc>
+		<lastmod>2022-12-07T16:30:05-06:00</lastmod>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/devops-without-education/</loc>
 		<lastmod>2022-12-07T16:16:43-06:00</lastmod>
 	</url>
@@ -19,10 +23,6 @@
 	<url>
 		<loc>https://www.valewood.org/practicing-devops/</loc>
 		<lastmod>2022-12-07T16:09:27-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/devops-shift-left-testing/</loc>
-		<lastmod>2022-12-07T16:08:34-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-and-agile-misconceptions/</loc>
