@@ -1,11 +1,20 @@
 #!/bin/zsh -
 
-if [ ! -f $1 ]; then
-    echo "File $1 does not exist"
-    exit 1
+rm -rf ./temp/
+mkdir ./temp/
+
+rcode=$(curl -L --silent --write-out '%{response_code}' --output ./temp/simply-static.zip $1)
+echo $rcode
+if [[ "$rcode" -ne 200 ]]; then
+    echo "Failed to download file"
+    exit -1
 fi
 
-SOURCE_FILE=$1
+SOURCE_FILE=./temp/simply-static.zip
+if [ ! -f $SOURCE_FILE ]; then
+    echo "File SOURCE_FILE does not exist"
+    exit 1
+fi
 
 mkdir new-site/
 unzip $SOURCE_FILE -d ./new-site/
@@ -23,6 +32,9 @@ rsync -cvr ./new-site/ ./
 
 echo "Remove ./new-site/ dir"
 rm -rf ./new-site/
+
+echo "Remove ./temp/ dir"
+rm -rf ./temp/
 
 # Archives is only used to get the index pages for dates, it is not a real URL for the site....  yet
 echo "Remove ./archives/ dir"
