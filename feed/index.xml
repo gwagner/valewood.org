@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Tue, 06 Dec 2022 22:51:45 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 07 Dec 2022 02:49:34 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,7 +28,7 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>What is a Common Misconception about Agile and DevOps?</title>
+		<title>6 Common Misconceptions about Agile and DevOps</title>
 		<link>https://www.valewood.org/devops-and-agile-misconceptions/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -40,21 +40,25 @@
 		<category><![CDATA[sdlc]]></category>
 		<guid isPermaLink="false">/?p=1966</guid>
 
-					<description><![CDATA[In this blog, we discuss DevOps and Agile at great length. DevOps is a methodology for technology delivery while Agile is a methodology for project management. The two pair together quite well to increase the flow of value to the&#8230;]]></description>
+					<description><![CDATA[In this blog, we discuss&#160;DevOps and Agile at great length. DevOps is a methodology for technology delivery while Agile is a methodology for project management. The two pair together quite well to increase the&#160;flow of value&#160;to the market. They can&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p>In this blog, we discuss <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> and Agile at great length.  DevOps is a methodology for technology delivery while Agile is a methodology for project management.  The two pair together quite well to increase the <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2022" target="_blank" rel="noopener">flow of value</a> to the market.</p>
+<p>In this blog, we discuss&nbsp;<a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> and Agile at great length. DevOps is a methodology for technology delivery while Agile is a methodology for project management. The two pair together quite well to increase the&nbsp;<a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2022" target="_blank" rel="noopener">flow of value</a>&nbsp;to the market.</p>
 
 
 
-<p>They can also be intertwined and confusing leading to misconceptions if one isn&#8217;t careful in their adoption journey.  Let&#8217;s dive in and discuss the most common misconception about DevOps and Agile!</p>
+<p>They can also be intertwined and confusing leading to misconceptions if one isn&#8217;t careful in their adoption journey. Let&#8217;s dive in and discuss the most common misconception about DevOps and Agile!</p>
 
 
 
-<h2>What is the most Common Misconception about Agile and DevOps?</h2>
+<h2>What are the most Common Misconceptions about Agile and DevOps?</h2>
 
 
 
-<p>There are several misconceptions that surface quickly when businesses are evaluating DevOps and Agile either independently or together.  Below are a few of those misconceptions.</p>
+<p>There are several common misconceptions that surface quickly when businesses are evaluating DevOps and Agile either independently or together. It is not entirely unreasonable to assume that anyone in the software development space could quickly make the jump from hearing about how awesome DevOps and Agile are into these misconceptions.</p>
+
+
+
+<p>Below are a few of those misconceptions.</p>
 
 
 
@@ -66,7 +70,7 @@
 
 
 
-<figure class="wp-block-pullquote has-border-color has-background has-small-font-size" style="border-color:#abb7c266;border-width:1px;border-radius:8px;background-color:#abb7c20d;font-style:normal;font-weight:500"><blockquote><p>Misconception:<br>DevOps and Agile can fill gaps in my poorly running delivery process</p></blockquote></figure>
+<figure class="wp-block-pullquote has-border-color has-background has-small-font-size" style="border-color:#abb7c266;border-width:1px;border-radius:8px;background-color:#abb7c20d;font-style:normal;font-weight:500"><blockquote><p>DevOps and Agile can fill gaps in my poorly running delivery process</p></blockquote></figure>
 
 
 
@@ -74,11 +78,15 @@
 
 
 
-<p>DevOps and Agile are commonly viewed as a tool to fill a gap in delivery. If delivery cycles are variable in length, inconsistent, and filled with twists and turns; companies will look for some quick outs to patch up their delivery to ship something. The problem with this approach is generally <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality/">quality</a>.</p>
+<p>DevOps and Agile are commonly viewed as a tool to fill a gap in software development delivery activities. If delivery cycles are variable in length, inconsistent, and filled with twists and turns; companies will look for some quick outs to patch up their delivery to ship something.</p>
 
 
 
-<p>While borrowing from DevOps and Agile might work in the short term, it does not work over the long term. Companies or projects that are looking to step up their delivery processes really need to look at things holistically and make some choices about how they want to engage in the market with their customers.</p>
+<p>The problem with this approach is low <a href="https://valewood.org/topics/devops/benefits-of-devops/devops-culture-of-quality" target="_blank" rel="noreferrer noopener"><strong>quality</strong></a>.</p>
+
+
+
+<p>While borrowing from DevOps and Agile might work in the short term, it does not work over the long term. Companies or projects looking to step up their delivery processes need to look at things holistically and make some choices about how they want to engage in the market with their customers.</p>
 
 
 
@@ -90,7 +98,7 @@
 
 
 
-<figure class="wp-block-pullquote has-border-color has-background has-small-font-size" style="border-color:#abb7c266;border-width:1px;border-radius:8px;background-color:#abb7c20d;font-style:normal;font-weight:500"><blockquote><p>Misconception:<br>DevOps and/or Agile can be purchased off the shelf and implemented</p></blockquote></figure>
+<figure class="wp-block-pullquote has-border-color has-background has-small-font-size" style="border-color:#abb7c266;border-width:1px;border-radius:8px;background-color:#abb7c20d;font-style:normal;font-weight:500"><blockquote><p>DevOps and/or Agile can be purchased off the shelf and implemented</p></blockquote></figure>
 
 
 
@@ -98,11 +106,15 @@
 
 
 
-<p>DevOps and/or Agile cannot be purchased.  There is no singular toolset, workbook, or process that can be purchased and put in place to shortcut the adoption of these methodologies.  Both of these methodologies are a fundamental transformation of delivery and need to be adopted fully in order to be effective.</p>
+<p>DevOps and/or Agile cannot be purchased. There is no singular toolset, workbook, or process that can be purchased and put in place to shortcut the adoption of these methodologies. Both of these methodologies are a fundamental transformation of delivery and need to be adopted fully in order to be effective.</p>
 
 
 
-<p>This transformation is also cross-cutting throughout all technical and non-technical roles.  A sales team cannot assume that groups delivering technology are delivering in a different way than they are selling.  Account management cannot build plans with customers on their future technology state and expect that planning to look different than the overall delivery workflows.  Technology groups cannot adopt a different way of delivering if it is at odds with business expectations.</p>
+<p>This transformation is also cross-cutting throughout all technical and non-technical roles. A sales team cannot assume that groups delivering technology are delivering in a different way than they are selling.</p>
+
+
+
+<p>Account management cannot build plans with customers on their future technology state and expect that planning to look different than the overall delivery workflows. Technology groups cannot adopt a different way of delivering if it is at odds with business expectations.</p>
 
 
 
@@ -114,7 +126,7 @@
 
 
 
-<figure class="wp-block-pullquote has-border-color has-background has-small-font-size" style="border-color:#abb7c266;border-width:1px;border-radius:8px;background-color:#abb7c20d;font-style:normal;font-weight:500"><blockquote><p>Misconception:<br>DevOps can be implemented without Agile</p></blockquote></figure>
+<figure class="wp-block-pullquote has-border-color has-background has-small-font-size" style="border-color:#abb7c266;border-width:1px;border-radius:8px;background-color:#abb7c20d;font-style:normal;font-weight:500"><blockquote><p>DevOps can be implemented without Agile</p></blockquote></figure>
 
 
 
@@ -122,7 +134,107 @@
 
 
 
-<p>Now, that statement is a little clickbaity.  You can indeed implement DevOps inside of other project management frameworks.  I would make the argument that you cannot fully realize the benefits of delivery transformation unless you adopt both DevOps and Agile.  DevOps practices do not lend themselves well to Waterfall, but it can be done.  You really lose out on all of the continuous improvement facets of DevOps which really means you are adopting some automation and calling it &#8220;DevOps&#8221;.</p>
+<p>Now, that statement is a little clickbaity. You can indeed implement DevOps inside of other project management frameworks.</p>
+
+
+
+<p>I would make the argument that you cannot fully realize the benefits of delivery transformation unless you adopt both DevOps and Agile. DevOps practices do not lend themselves well to Waterfall, but it can be done. You really lose out on all of the continuous improvement facets of DevOps which really means you are adopting some automation and calling it “DevOps”.</p>
+
+
+
+<h3>Common Misconception #4</h3>
+
+
+
+<div style="height:12px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-pullquote has-border-color has-background has-small-font-size" style="border-color:#abb7c266;border-width:1px;border-radius:8px;background-color:#abb7c20d;font-style:normal;font-weight:500"><blockquote><p>When DevOps and Agile are combined, you can foregoe planning</p></blockquote></figure>
+
+
+
+<div style="height:28px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Software development always needs a great deal of planning. DevOps and agile do not let you get away without planning.</p>
+
+
+
+<p>Agile in this case is formal agile delivery which I would argue consists of more planning, market research, feedback, and pivots than any other project management framework.</p>
+
+
+
+<p>DevOps focuses on continuous improvement and automation which need a significant amount of planning to ensure the right areas of focus are being worked on.</p>
+
+
+
+<p>The truth is this; development teams, operations teams, infrastructure teams, quality assurance teams, account management teams, and members of any other team benefit from having a good plan that is backed up by principles, culture, and a centralized philosophy.</p>
+
+
+
+<h3>Common Misconception #5</h3>
+
+
+
+<div style="height:12px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-pullquote has-border-color has-background has-small-font-size" style="border-color:#abb7c266;border-width:1px;border-radius:8px;background-color:#abb7c20d;font-style:normal;font-weight:500"><blockquote><p>DevOps and Agile are only for small teams</p></blockquote></figure>
+
+
+
+<div style="height:28px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Teams of all sizes can benefit from these delivery methodologies. Software delivery is a complex problem that requires good communication, tools, talent, and principles to drive consistency and quality.</p>
+
+
+
+<p>While there are an infinite number of methods that could be used to deliver technology, Agile and DevOps are formalized and prescriptive platforms to solve these complex challenges.</p>
+
+
+
+<p>By adopting DevOps and Agile together and bringing a core set of delivery principles to an organization&#8217;s approach to delivering technology, one can actually achieve a much larger scale of delivery more quickly.</p>
+
+
+
+<p>All of your teams are on the same page, utilizing the same tools, communicating about the same processes, and driving agile development and operations together as a unified front.</p>
+
+
+
+<h3>Common Misconception #6</h3>
+
+
+
+<div style="height:12px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-pullquote has-border-color has-background has-small-font-size" style="border-color:#abb7c266;border-width:1px;border-radius:8px;background-color:#abb7c20d;font-style:normal;font-weight:500"><blockquote><p>DevOps and Agile are focused on controlling software development</p></blockquote></figure>
+
+
+
+<div style="height:28px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>I would argue that this is the farthest idea from the truth. DevOps and Agile aim to democratize the delivery process across an organization&#8217;s many different value streams.</p>
+
+
+
+<p>One of the core principles of the Scaled Agile Framework for Enterprises is to get decision-making as close to the work being performed as possible. This means that teams must work together on their high-level planning initiatives to get stories in the hands of implementers leaving them the freedom to deliver those stories any way they want to.</p>
+
+
+
+<p>This does not mean that the business does not have a say in what is getting delivered, but how it is delivered is determined by the individuals that know best.</p>
+
+
+
+<p>Early on in the adoption of these methodologies, it is not uncommon for a pendulum of decisions making to swing back and forth between IT and the business as everyone tries to figure out this new dynamic. Everyone&#8217;s goal should be to find a new center where everyone is heard and all concerns, no matter their size, are given room to breathe in a conversation about delivery.</p>
 
 
 

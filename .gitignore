@@ -1,4 +1,5 @@
 new-site/**
+temp/**
 docker.sh
 run.sh
 *.webp
