@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/greer-shepherd/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 02 Dec 2022 03:48:43 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 07 Dec 2022 22:16:43 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -151,7 +151,7 @@
 
 
 
-<li><strong>Test the Solution:</strong> The next step is to test the solution to ensure that it will solve the business problem in the way that you intended. You can do this by using automated testing and continuous integration/continuous delivery (CI/CD) to maximize quality control and minimize the time to release.</li>
+<li><strong>Test the Solution:</strong> The next step is to test the solution to ensure that it will solve the business problem in the way that you intended. You can do this by using <a href="https://www.valewood.org/devops-testing/" data-type="post" data-id="1239">automated testing</a> and continuous integration/continuous delivery (CI/CD) to maximize quality control and minimize the time to release.</li>
 </ul>
 
 
@@ -397,7 +397,7 @@
 
 
 
-<li><strong>Develop the skills you need:</strong> DevOps engineers are lifelong learners. The specific practices of cloud, data, coding, Linux, programming, <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a>, culture, web, <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>, tools, etc. are constantly being changed to promote more fluid delivery models. Take time to sit back and absorb new concepts and techniques to help level up your career and your team.</li>
+<li><strong>Develop the skills you need:</strong> DevOps engineers are lifelong learners. The specific practices of cloud, data, <a href="https://www.valewood.org/do-devops-engineers-need-a-coding-background/" data-type="post" data-id="326">coding</a>, Linux, programming, <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a>, culture, web, <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>, tools, etc. are constantly being changed to promote more fluid delivery models. Take time to sit back and absorb new concepts and techniques to help level up your career and your team.</li>
 
 
 
@@ -1143,7 +1143,7 @@
 
 
 
-<p>Continuous testing or automated testing is something that DevOps encourages. Testing that is automated enables engineers to provide test results that are more accurate, offer fast feedback on the build, and monitor the completion of all operations. When the team searches for results, the DevOps methodology provides time savings by accelerating the availability and the entire body of work related to results in analysis on each CI/CT cycle.&nbsp;</p>
+<p>Continuous testing or <a href="https://www.valewood.org/devops-testing/" data-type="post" data-id="1239">automated testing</a> is something that DevOps encourages. Testing that is automated enables engineers to provide test results that are more accurate, offer fast feedback on the build, and monitor the completion of all operations. When the team searches for results, the DevOps methodology provides time savings by accelerating the availability and the entire body of work related to results in analysis on each CI/CT cycle.&nbsp;</p>
 
 
 
@@ -1239,7 +1239,7 @@
 
 
 
-<p>Agility in DevOps is achieved by bringing together the principles of rapid development, high throughput, and careful scheduling to improve dependability and minimize disturbance.&nbsp;</p>
+<p>Agility in DevOps is achieved by bringing together the principles of <a href="https://www.valewood.org/devops-rapid-delivery/" data-type="post" data-id="1668">rapid development</a>, high throughput, and careful scheduling to improve dependability and minimize disturbance. </p>
 
 
 

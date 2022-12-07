@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 07 Dec 2022 03:04:54 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 07 Dec 2022 22:16:43 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,307 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Unlock the Power of DevOps Shift-Left Testing</title>
+		<link>https://www.valewood.org/devops-shift-left-testing/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Wed, 07 Dec 2022 21:56:32 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[coding]]></category>
+		<category><![CDATA[delivery]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<guid isPermaLink="false">/?p=2014</guid>
+
+					<description><![CDATA[Are you looking for ways to accelerate the development process and reduce costs? Shifting testing to the left should be on your radar. Automated testing is a practice that helps accelerate your flow of value to the market, and if&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Are you looking for ways to accelerate the development process and reduce costs? Shifting testing to the left should be on your radar.  <a href="https://www.valewood.org/devops-testing/" data-type="post" data-id="1239">Automated testing </a>is a practice that helps accelerate your <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2022" target="_blank" rel="noopener">flow of value</a> to the market, and if you haven&#8217;t started building automated testing yet, you should start ASAP!</p>
+
+
+
+<p>Shift-left testing is a practice of testing earlier in the development lifecycle, allowing teams to catch bugs before they become costly and time-consuming issues.</p>
+
+
+
+<p>In this blog, I&#8217;ll explain what <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> shift-left testing is, the benefits and challenges of the practice, and how to implement it. I&#8217;ll also provide tips for effective shift-left testing, best practices for automation, and advice on monitoring and analyzing this type of testing.</p>
+
+
+
+<h2>Introduction to DevOps Shift-Left Testing</h2>
+
+
+
+<p>DevOps shift-left testing is the practice of shifting testing activities to the left in the software development process. It involves testing at each stage of the software development lifecycle (SDLC) instead of waiting until the end. This shift-left approach enables teams to catch and address any issues much earlier in the process, saving time and money.</p>
+
+
+
+<p>To give some context on the difference between shifting testing to the left and a more traditional testing process, think about a Waterfall project flow. In the waterfall, delivery steps are completed and moved down the assembly line to the next station to get validated or integrated. If there is an issue, it can bring the entire assembly line to a halt.</p>
+
+
+
+<p>By moving testing activities earlier in the development cycle, aka shifting left on a delivery timeline, your quality engineering staff are proactively defining the conditions for success through automation. This turns the tables around where quality issues are discovered and remediated causing fewer impacting blockages in your pipelines.</p>
+
+
+
+<p>By moving testing activities to the left, teams can find and fix bugs and other issues before they become costly and time-consuming problems. This is crucial for any organization that wants to succeed in the ever-changing world of technology. With DevOps shift-left testing, organizations can reduce the time and cost associated with testing, speed up the development process, and improve the overall quality of their products.</p>
+
+
+
+<h2>What is Shift-Left Testing?</h2>
+
+
+
+<p>Shift-left testing is the practice of testing earlier in the software development process and shifting activities to the left on a product delivery timeline. It involves testing at each stage of the SDLC, rather than waiting until the end. This shift-left approach enables teams to catch and address any issues much earlier in the process, saving time and money.</p>
+
+
+
+<p>Organizations that do proactive planning and discovery on requirements, architecture, and design should also be conceptualizing their quality controls early and often.</p>
+
+
+
+<p>Through years of continuous improvement, auto manufacturers have made huge strides to integrate test automation into every stage of their delivery processes. They have done this to reduce their time to market and increase their overall quality.</p>
+
+
+
+<p>Shift-left testing helps technology organizations reduce the time and cost associated with testing, speed up the development process, and improve the overall quality of their products. It also allows teams to gain better visibility into their development process, identify potential issues before they become costly problems, and ensure that the quality of their product meets customer expectations.</p>
+
+
+
+<p>Shifting Left with testing is also a core tenant of practicing Agile DevOps. Complex systems become easier to manage over the long term when automated testing is integrated early in the development lifecycle.</p>
+
+
+
+<h2>Benefits of Shift-Left Testing</h2>
+
+
+
+<p>Shift-left testing offers many benefits for organizations that are looking to accelerate the development process and reduce costs. Here are some of the key benefits of this practice:</p>
+
+
+
+<ol>
+<li>It reduces the time and cost associated with testing. By shifting testing activities to the left, teams can catch and address issues much earlier in the process, saving time and money.</li>
+
+
+
+<li>It speeds up the development process. With shift-left testing, teams can quickly identify and address any issues, reducing the amount of time it takes to develop a product.</li>
+
+
+
+<li>It improves the overall quality of the product. By testing earlier in the process, teams can ensure that the product meets customer expectations and has fewer bugs.</li>
+
+
+
+<li>It allows teams to gain better visibility into their development process. With shift-left testing, teams can identify potential issues before they become costly problems.</li>
+
+
+
+<li>It increases customer satisfaction. By testing earlier in the process and ensuring that the quality of the product meets customer expectations, organizations can improve customer satisfaction.</li>
+</ol>
+
+
+
+<h2>Challenges of Shift-Left Testing</h2>
+
+
+
+<p>Although shift-left testing offers many benefits, it also comes with certain challenges. Here are some of the key challenges of this practice:</p>
+
+
+
+<ol>
+<li>It requires a change in mindset. Organizations must shift their mindset from testing at the end of the development process to testing at each stage of the SDLC.</li>
+
+
+
+<li>It requires a shift in resource allocation. Organizations must allocate more resources to testing activities earlier in the process.</li>
+
+
+
+<li>It requires more collaboration between teams. Organizations must ensure that all teams involved in the development process are collaborating effectively to ensure that shift-left testing is effective.</li>
+
+
+
+<li>It requires a shift in tools and technologies. Organizations must ensure that they have the right tools and technologies in place to support shift-left testing.</li>
+
+
+
+<li>It requires more communication. Organizations must ensure that all stakeholders are kept informed of any changes or issues related to shift-left testing.</li>
+</ol>
+
+
+
+<h2>How to Implement Shift-Left Testing</h2>
+
+
+
+<p>If you&#8217;re looking to implement shift-left testing, there are several steps you can take to ensure success. Here are some tips to help you get started:</p>
+
+
+
+<ol>
+<li>Align your goals. Before you begin, make sure that all stakeholders have a clear understanding of the goals of shift-left testing and how it will benefit the organization.</li>
+
+
+
+<li>Develop a plan. Develop a plan that outlines how you will implement shift-left testing, including which tools and technologies you will use and how you will measure success.</li>
+
+
+
+<li>Train your teams. Ensure that all teams involved in the development process are trained on the principles of shift-left testing and how to use the tools and technologies.</li>
+
+
+
+<li>Monitor progress. Monitor the progress of shift-left testing and identify any issues that need to be addressed.</li>
+
+
+
+<li>Adjust as needed. Adjust the plan as needed to ensure that the process of shift-left testing is effective and efficient.</li>
+</ol>
+
+
+
+<h2>Best Practices for Shift-Left Testing</h2>
+
+
+
+<p>When it comes to shift-left testing, there are several best practices that organizations should follow to ensure success. Here are some of the key best practices:</p>
+
+
+
+<ol>
+<li>Automate whenever possible. Automation can help reduce the time and cost associated with shift-left testing, so it should be used whenever possible.</li>
+
+
+
+<li>Set clear goals and timelines. Make sure that all stakeholders have a clear understanding of the goals of shift-left testing and how long it will take to implement.</li>
+
+
+
+<li>Focus on quality. Shift-left testing should be used to ensure that the product meets customer expectations and has fewer bugs.</li>
+
+
+
+<li>Monitor performance. Monitor the performance of shift-left testing and adjust the plan as needed to ensure that it is effective and efficient.</li>
+
+
+
+<li>Communicate with stakeholders. Make sure that all stakeholders are kept informed of any changes or issues related to shift-left testing.</li>
+</ol>
+
+
+
+<h2>Automation of Shift-Left Testing</h2>
+
+
+
+<p>Automation is a key component of shift-left testing. Automation can help reduce the time and cost associated with testing, and it can also help teams identify and address any issues much earlier in the process. Here are some tips for automating shift-left testing:</p>
+
+
+
+<ol>
+<li>Use the right tools and technologies. Make sure that you have the right tools and technologies in place to support shift-left testing.</li>
+
+
+
+<li>Identify which tasks to automate. Identify which tasks can be automated and which tasks require manual testing.</li>
+
+
+
+<li>Monitor progress. Monitor the progress of automation and adjust the plan as needed to ensure that it is effective and efficient.</li>
+
+
+
+<li>Test the automation. Make sure to test the automation to ensure that it is working as expected.</li>
+
+
+
+<li>Communicate with stakeholders. Make sure that all stakeholders are kept informed of any changes or issues related to automation.</li>
+</ol>
+
+
+
+<h2>Tips for Effective Shift-Left Testing</h2>
+
+
+
+<p>If you&#8217;re looking to make shift-left testing effective, here are some tips to help you:</p>
+
+
+
+<ol>
+<li>Prioritize testing activities. Make sure that testing activities are prioritized and that they are aligned with the goals of the organization.</li>
+
+
+
+<li>Automate whenever possible. Automation can help reduce the time and cost associated with shift-left testing, so it should be used whenever possible.</li>
+
+
+
+<li>Monitor performance. Monitor the performance of shift-left testing and adjust the plan as needed to ensure that it is effective and efficient.</li>
+
+
+
+<li>Communicate with stakeholders. Make sure that all stakeholders are kept informed of any changes or issues related to shift-left testing.</li>
+
+
+
+<li>Measure success. Ensure that you have a way to measure the success of shift-left testing so that you can make adjustments if needed.</li>
+</ol>
+
+
+
+<h2>Monitoring and Analyzing Shift-Left Testing</h2>
+
+
+
+<p>Once you&#8217;ve implemented shift-left testing, it&#8217;s important to monitor and analyze the results. Here are some tips for monitoring and analyzing shift-left testing:</p>
+
+
+
+<ol>
+<li>Track progress. Track the progress of shift-left testing to identify any issues that need to be addressed.</li>
+
+
+
+<li>Analyze results. Analyze the results of shift-left testing to determine if it is effective and efficient.</li>
+
+
+
+<li>Make adjustments. Make adjustments to the plan as needed to ensure that shift-left testing is effective and efficient.</li>
+
+
+
+<li>Measure success. Ensure that you have a way to measure the success of shift-left testing so that you can make adjustments if needed.</li>
+
+
+
+<li>Communicate with stakeholders. Make sure that all stakeholders are kept informed of any changes or issues related to shift-left testing.</li>
+</ol>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>Shift-left testing is a powerful practice that can help organizations accelerate the development process and reduce costs. By shifting testing activities to the left, teams can catch and address any issues much earlier in the process, saving time and money. However, shift-left testing is not without its challenges. Organizations must shift their mindset, allocate more resources to testing activities, and ensure that all teams involved in the development process are collaborating effectively.</p>
+
+
+
+<p>If you&#8217;re looking to make the move to shift-left testing, there are several steps you can take to ensure success. You should align your goals, develop a plan, train your teams, monitor progress, and adjust as needed. You should also prioritize testing activities, automate whenever possible, and measure success. Finally, you should monitor and analyze the results of shift-left testing to determine if it is effective and efficient.</p>
+
+
+
+<p>So, if you&#8217;re looking to accelerate the development process and reduce costs, shift-left testing is the way to go. With shift-left testing, you can reduce the time and cost associated with testing, speed up the development process, and improve the overall quality of your products. So, what are you waiting for? Take the plunge and make the move to shift-left testing today!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>6 Common Misconceptions about Agile and DevOps</title>
 		<link>https://www.valewood.org/devops-and-agile-misconceptions/</link>
 		
@@ -47,6 +348,18 @@
 
 
 <p>They can also be intertwined and confusing leading to misconceptions if one isn&#8217;t careful in their adoption journey. Let&#8217;s dive in and discuss the most common misconception about DevOps and Agile!</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -118,6 +431,18 @@
 
 
 
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
 <h3>Common Misconception #3</h3>
 
 
@@ -171,6 +496,18 @@
 
 
 <p>The truth is this; development teams, operations teams, infrastructure teams, quality assurance teams, account management teams, and members of any other team benefit from having a good plan that is backed up by principles, culture, and a centralized philosophy.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -235,6 +572,18 @@
 
 
 <p>Early on in the adoption of these methodologies, it is not uncommon for a pendulum of decisions making to swing back and forth between IT and the business as everyone tries to figure out this new dynamic. Everyone&#8217;s goal should be to find a new center where everyone is heard and all concerns, no matter their size, are given room to breathe in a conversation about delivery.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -1833,7 +2182,7 @@
 
 
 
-<li><strong>Test the Solution:</strong> The next step is to test the solution to ensure that it will solve the business problem in the way that you intended. You can do this by using automated testing and continuous integration/continuous delivery (CI/CD) to maximize quality control and minimize the time to release.</li>
+<li><strong>Test the Solution:</strong> The next step is to test the solution to ensure that it will solve the business problem in the way that you intended. You can do this by using <a href="https://www.valewood.org/devops-testing/" data-type="post" data-id="1239">automated testing</a> and continuous integration/continuous delivery (CI/CD) to maximize quality control and minimize the time to release.</li>
 </ul>
 
 
@@ -2079,7 +2428,7 @@
 
 
 
-<li><strong>Develop the skills you need:</strong> DevOps engineers are lifelong learners. The specific practices of cloud, data, coding, Linux, programming, <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a>, culture, web, <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>, tools, etc. are constantly being changed to promote more fluid delivery models. Take time to sit back and absorb new concepts and techniques to help level up your career and your team.</li>
+<li><strong>Develop the skills you need:</strong> DevOps engineers are lifelong learners. The specific practices of cloud, data, <a href="https://www.valewood.org/do-devops-engineers-need-a-coding-background/" data-type="post" data-id="326">coding</a>, Linux, programming, <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a>, culture, web, <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>, tools, etc. are constantly being changed to promote more fluid delivery models. Take time to sit back and absorb new concepts and techniques to help level up your career and your team.</li>
 
 
 
@@ -2283,137 +2632,6 @@
 
 
 <p>Remember, though, that there are many different types of jobs in DevOps: DevOps engineer, architect, engineer manager, and manager. Target what you want to be doing, and start applying. You are probably more qualified than you initially thought!</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Why You Need to Build A Culture of Trust and Respect in DevOps</title>
-		<link>https://www.valewood.org/devops-trust/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Sat, 12 Nov 2022 22:45:48 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[devops trust]]></category>
-		<guid isPermaLink="false">/?p=1657</guid>
-
-					<description><![CDATA[Trust and respect are essential ingredients in any healthy working environment. When trust and respect are present, team members feel safe to give their best, collaborate openly, and challenge one another constructively. When trust and respect are absent, team members&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Trust and respect are essential ingredients in any healthy working environment. When trust and respect are present, team members feel safe to give their best, collaborate openly, and challenge one another constructively.</p>
-
-
-
-<p>When trust and respect are absent, team members feel insecure about their performance, withhold ideas for fear of judgement or worry about repercussions if they speak up.</p>
-
-
-
-<p>There is an inherent risk in bringing together people from different backgrounds with different skill sets. And in the context of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a>, you’re also putting together people who likely have very different roles within your organization as well. The potential for discord is high.</p>
-
-
-
-<p>So how do you create a culture of trust and respect when working with so many new and different people? Here’s why you need to build a culture of trust and respect in your DevOps initiative.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>It’s the Foundation for Good Communication</h2>
-
-
-
-<p>Communication is the foundation for everything in DevOps. You have to be able to openly share what’s working, what isn’t, and why without judgement, without fear of repercussions, and without ego getting in the way.</p>
-
-
-
-<p>What happens when, in a meeting, someone says they aren’t getting the information they need from a team member? Or that they feel rushed to get their job done? Or that they aren’t seeing the value in the continuous integration process?</p>
-
-
-
-<p>Without a culture of trust and respect, communication will be strained. Team members will be hesitant to speak up, and afraid of judgement. They’ll feel anxious like they don’t have permission to be honest with the team.</p>
-
-
-
-<p>And if they don’t feel safe speaking up, the communication breaks down, and the DevOps initiative will suffer as a result.</p>
-
-
-
-<h2>It Builds Confidence for Everyone</h2>
-
-
-
-<p>One of the biggest challenges in DevOps is building trust between different people, and different parts of the organization. But if you lack the confidence to speak up, you’ll never be able to build that trust missing out on the opportunity to learn from your colleagues and grow yourself as a result.</p>
-
-
-
-<p>In a culture where trust and respect are absent, people are less likely to share their ideas, and more likely to either shut down and not try at all, speak up in ways that create discord, and don’t encourage others to respond.</p>
-
-
-
-<p>You need to feel confident to share your ideas, challenge others, and learn from both your successes and your mistakes. Without trust and respect, you won’t feel confident enough to do any of these things, and again, the DevOps initiative will suffer as a result.</p>
-
-
-
-<h2>It Creates a Safe Environment For Learning</h2>
-
-
-
-<p>A healthy DevOps culture needs to create a safe environment for learning. This means not only being transparent about what’s working and what isn’t, but also being open to feedback without fear of judgement.</p>
-
-
-
-<p>This is the best way to identify pain points and areas where improvement is needed. When team members feel safe to share their feedback, they can do so in a way that doesn’t create any sense of judgement, but rather, encourages the team to look at the information objectively and decide how to act on it.</p>
-
-
-
-<p>But when a team is operating in a culture where trust and respect aren’t present, this kind of feedback is very tricky to navigate. Because team members are likely to feel anxious about sharing their true feelings and experiences, and will likely speak up in ways that are designed to minimise judgement. This can lead to misunderstood feedback, and squashing the open and objective dialogue that is needed for improvement.</p>
-
-
-
-<h2>DevOps is About People and Culture</h2>
-
-
-
-<p>All of the above leads us to one important conclusion: building a healthy DevOps culture is about people and trust. Building trust and respect is never a one-time thing, and it requires a sustained effort from all members of the team, regardless of their backgrounds.</p>
-
-
-
-<p>When you see a team member struggling to find their footing, or growing frustrated at their role, you have to be willing to lend a helping hand. And to do this, you must first be aware of your own behaviour and how you’re modelling the behaviour you want to see.</p>
-
-
-
-<p>You must be willing to confront your own behaviours that are likely to be creating a culture that is lacking in trust and respect. And you must be willing to take ownership of your own feelings and be open about how they are impacting your work and the team as a whole.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>DevOps is all about collaboration, communication and cooperation. When everyone on the team trusts and respects each other, they are much more likely to collaborate effectively. This can only happen when everyone feels safe to give their opinion and be open about their needs. Building a culture of trust and respect will take time and effort. However, it is well worth the effort as it will lead to better communication, a healthier team, and ultimately better results for your organization.</p>
 ]]></content:encoded>
 					
 		

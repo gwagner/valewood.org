@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 07 Dec 2022 03:04:54 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 07 Dec 2022 22:08:34 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,307 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Unlock the Power of DevOps Shift-Left Testing</title>
+		<link>https://www.valewood.org/devops-shift-left-testing/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Wed, 07 Dec 2022 21:56:32 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[coding]]></category>
+		<category><![CDATA[delivery]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[sdlc]]></category>
+		<guid isPermaLink="false">/?p=2014</guid>
+
+					<description><![CDATA[Are you looking for ways to accelerate the development process and reduce costs? Shifting testing to the left should be on your radar. Automated testing is a practice that helps accelerate your flow of value to the market, and if&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Are you looking for ways to accelerate the development process and reduce costs? Shifting testing to the left should be on your radar.  <a href="https://www.valewood.org/devops-testing/" data-type="post" data-id="1239">Automated testing </a>is a practice that helps accelerate your <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2022" target="_blank" rel="noopener">flow of value</a> to the market, and if you haven&#8217;t started building automated testing yet, you should start ASAP!</p>
+
+
+
+<p>Shift-left testing is a practice of testing earlier in the development lifecycle, allowing teams to catch bugs before they become costly and time-consuming issues.</p>
+
+
+
+<p>In this blog, I&#8217;ll explain what <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> shift-left testing is, the benefits and challenges of the practice, and how to implement it. I&#8217;ll also provide tips for effective shift-left testing, best practices for automation, and advice on monitoring and analyzing this type of testing.</p>
+
+
+
+<h2>Introduction to DevOps Shift-Left Testing</h2>
+
+
+
+<p>DevOps shift-left testing is the practice of shifting testing activities to the left in the software development process. It involves testing at each stage of the software development lifecycle (SDLC) instead of waiting until the end. This shift-left approach enables teams to catch and address any issues much earlier in the process, saving time and money.</p>
+
+
+
+<p>To give some context on the difference between shifting testing to the left and a more traditional testing process, think about a Waterfall project flow. In the waterfall, delivery steps are completed and moved down the assembly line to the next station to get validated or integrated. If there is an issue, it can bring the entire assembly line to a halt.</p>
+
+
+
+<p>By moving testing activities earlier in the development cycle, aka shifting left on a delivery timeline, your quality engineering staff are proactively defining the conditions for success through automation. This turns the tables around where quality issues are discovered and remediated causing fewer impacting blockages in your pipelines.</p>
+
+
+
+<p>By moving testing activities to the left, teams can find and fix bugs and other issues before they become costly and time-consuming problems. This is crucial for any organization that wants to succeed in the ever-changing world of technology. With DevOps shift-left testing, organizations can reduce the time and cost associated with testing, speed up the development process, and improve the overall quality of their products.</p>
+
+
+
+<h2>What is Shift-Left Testing?</h2>
+
+
+
+<p>Shift-left testing is the practice of testing earlier in the software development process and shifting activities to the left on a product delivery timeline. It involves testing at each stage of the SDLC, rather than waiting until the end. This shift-left approach enables teams to catch and address any issues much earlier in the process, saving time and money.</p>
+
+
+
+<p>Organizations that do proactive planning and discovery on requirements, architecture, and design should also be conceptualizing their quality controls early and often.</p>
+
+
+
+<p>Through years of continuous improvement, auto manufacturers have made huge strides to integrate test automation into every stage of their delivery processes. They have done this to reduce their time to market and increase their overall quality.</p>
+
+
+
+<p>Shift-left testing helps technology organizations reduce the time and cost associated with testing, speed up the development process, and improve the overall quality of their products. It also allows teams to gain better visibility into their development process, identify potential issues before they become costly problems, and ensure that the quality of their product meets customer expectations.</p>
+
+
+
+<p>Shifting Left with testing is also a core tenant of practicing Agile DevOps. Complex systems become easier to manage over the long term when automated testing is integrated early in the development lifecycle.</p>
+
+
+
+<h2>Benefits of Shift-Left Testing</h2>
+
+
+
+<p>Shift-left testing offers many benefits for organizations that are looking to accelerate the development process and reduce costs. Here are some of the key benefits of this practice:</p>
+
+
+
+<ol>
+<li>It reduces the time and cost associated with testing. By shifting testing activities to the left, teams can catch and address issues much earlier in the process, saving time and money.</li>
+
+
+
+<li>It speeds up the development process. With shift-left testing, teams can quickly identify and address any issues, reducing the amount of time it takes to develop a product.</li>
+
+
+
+<li>It improves the overall quality of the product. By testing earlier in the process, teams can ensure that the product meets customer expectations and has fewer bugs.</li>
+
+
+
+<li>It allows teams to gain better visibility into their development process. With shift-left testing, teams can identify potential issues before they become costly problems.</li>
+
+
+
+<li>It increases customer satisfaction. By testing earlier in the process and ensuring that the quality of the product meets customer expectations, organizations can improve customer satisfaction.</li>
+</ol>
+
+
+
+<h2>Challenges of Shift-Left Testing</h2>
+
+
+
+<p>Although shift-left testing offers many benefits, it also comes with certain challenges. Here are some of the key challenges of this practice:</p>
+
+
+
+<ol>
+<li>It requires a change in mindset. Organizations must shift their mindset from testing at the end of the development process to testing at each stage of the SDLC.</li>
+
+
+
+<li>It requires a shift in resource allocation. Organizations must allocate more resources to testing activities earlier in the process.</li>
+
+
+
+<li>It requires more collaboration between teams. Organizations must ensure that all teams involved in the development process are collaborating effectively to ensure that shift-left testing is effective.</li>
+
+
+
+<li>It requires a shift in tools and technologies. Organizations must ensure that they have the right tools and technologies in place to support shift-left testing.</li>
+
+
+
+<li>It requires more communication. Organizations must ensure that all stakeholders are kept informed of any changes or issues related to shift-left testing.</li>
+</ol>
+
+
+
+<h2>How to Implement Shift-Left Testing</h2>
+
+
+
+<p>If you&#8217;re looking to implement shift-left testing, there are several steps you can take to ensure success. Here are some tips to help you get started:</p>
+
+
+
+<ol>
+<li>Align your goals. Before you begin, make sure that all stakeholders have a clear understanding of the goals of shift-left testing and how it will benefit the organization.</li>
+
+
+
+<li>Develop a plan. Develop a plan that outlines how you will implement shift-left testing, including which tools and technologies you will use and how you will measure success.</li>
+
+
+
+<li>Train your teams. Ensure that all teams involved in the development process are trained on the principles of shift-left testing and how to use the tools and technologies.</li>
+
+
+
+<li>Monitor progress. Monitor the progress of shift-left testing and identify any issues that need to be addressed.</li>
+
+
+
+<li>Adjust as needed. Adjust the plan as needed to ensure that the process of shift-left testing is effective and efficient.</li>
+</ol>
+
+
+
+<h2>Best Practices for Shift-Left Testing</h2>
+
+
+
+<p>When it comes to shift-left testing, there are several best practices that organizations should follow to ensure success. Here are some of the key best practices:</p>
+
+
+
+<ol>
+<li>Automate whenever possible. Automation can help reduce the time and cost associated with shift-left testing, so it should be used whenever possible.</li>
+
+
+
+<li>Set clear goals and timelines. Make sure that all stakeholders have a clear understanding of the goals of shift-left testing and how long it will take to implement.</li>
+
+
+
+<li>Focus on quality. Shift-left testing should be used to ensure that the product meets customer expectations and has fewer bugs.</li>
+
+
+
+<li>Monitor performance. Monitor the performance of shift-left testing and adjust the plan as needed to ensure that it is effective and efficient.</li>
+
+
+
+<li>Communicate with stakeholders. Make sure that all stakeholders are kept informed of any changes or issues related to shift-left testing.</li>
+</ol>
+
+
+
+<h2>Automation of Shift-Left Testing</h2>
+
+
+
+<p>Automation is a key component of shift-left testing. Automation can help reduce the time and cost associated with testing, and it can also help teams identify and address any issues much earlier in the process. Here are some tips for automating shift-left testing:</p>
+
+
+
+<ol>
+<li>Use the right tools and technologies. Make sure that you have the right tools and technologies in place to support shift-left testing.</li>
+
+
+
+<li>Identify which tasks to automate. Identify which tasks can be automated and which tasks require manual testing.</li>
+
+
+
+<li>Monitor progress. Monitor the progress of automation and adjust the plan as needed to ensure that it is effective and efficient.</li>
+
+
+
+<li>Test the automation. Make sure to test the automation to ensure that it is working as expected.</li>
+
+
+
+<li>Communicate with stakeholders. Make sure that all stakeholders are kept informed of any changes or issues related to automation.</li>
+</ol>
+
+
+
+<h2>Tips for Effective Shift-Left Testing</h2>
+
+
+
+<p>If you&#8217;re looking to make shift-left testing effective, here are some tips to help you:</p>
+
+
+
+<ol>
+<li>Prioritize testing activities. Make sure that testing activities are prioritized and that they are aligned with the goals of the organization.</li>
+
+
+
+<li>Automate whenever possible. Automation can help reduce the time and cost associated with shift-left testing, so it should be used whenever possible.</li>
+
+
+
+<li>Monitor performance. Monitor the performance of shift-left testing and adjust the plan as needed to ensure that it is effective and efficient.</li>
+
+
+
+<li>Communicate with stakeholders. Make sure that all stakeholders are kept informed of any changes or issues related to shift-left testing.</li>
+
+
+
+<li>Measure success. Ensure that you have a way to measure the success of shift-left testing so that you can make adjustments if needed.</li>
+</ol>
+
+
+
+<h2>Monitoring and Analyzing Shift-Left Testing</h2>
+
+
+
+<p>Once you&#8217;ve implemented shift-left testing, it&#8217;s important to monitor and analyze the results. Here are some tips for monitoring and analyzing shift-left testing:</p>
+
+
+
+<ol>
+<li>Track progress. Track the progress of shift-left testing to identify any issues that need to be addressed.</li>
+
+
+
+<li>Analyze results. Analyze the results of shift-left testing to determine if it is effective and efficient.</li>
+
+
+
+<li>Make adjustments. Make adjustments to the plan as needed to ensure that shift-left testing is effective and efficient.</li>
+
+
+
+<li>Measure success. Ensure that you have a way to measure the success of shift-left testing so that you can make adjustments if needed.</li>
+
+
+
+<li>Communicate with stakeholders. Make sure that all stakeholders are kept informed of any changes or issues related to shift-left testing.</li>
+</ol>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>Shift-left testing is a powerful practice that can help organizations accelerate the development process and reduce costs. By shifting testing activities to the left, teams can catch and address any issues much earlier in the process, saving time and money. However, shift-left testing is not without its challenges. Organizations must shift their mindset, allocate more resources to testing activities, and ensure that all teams involved in the development process are collaborating effectively.</p>
+
+
+
+<p>If you&#8217;re looking to make the move to shift-left testing, there are several steps you can take to ensure success. You should align your goals, develop a plan, train your teams, monitor progress, and adjust as needed. You should also prioritize testing activities, automate whenever possible, and measure success. Finally, you should monitor and analyze the results of shift-left testing to determine if it is effective and efficient.</p>
+
+
+
+<p>So, if you&#8217;re looking to accelerate the development process and reduce costs, shift-left testing is the way to go. With shift-left testing, you can reduce the time and cost associated with testing, speed up the development process, and improve the overall quality of your products. So, what are you waiting for? Take the plunge and make the move to shift-left testing today!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>6 Common Misconceptions about Agile and DevOps</title>
 		<link>https://www.valewood.org/devops-and-agile-misconceptions/</link>
 		
@@ -47,6 +348,18 @@
 
 
 <p>They can also be intertwined and confusing leading to misconceptions if one isn&#8217;t careful in their adoption journey. Let&#8217;s dive in and discuss the most common misconception about DevOps and Agile!</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -118,6 +431,18 @@
 
 
 
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
 <h3>Common Misconception #3</h3>
 
 
@@ -171,6 +496,18 @@
 
 
 <p>The truth is this; development teams, operations teams, infrastructure teams, quality assurance teams, account management teams, and members of any other team benefit from having a good plan that is backed up by principles, culture, and a centralized philosophy.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -235,6 +572,18 @@
 
 
 <p>Early on in the adoption of these methodologies, it is not uncommon for a pendulum of decisions making to swing back and forth between IT and the business as everyone tries to figure out this new dynamic. Everyone&#8217;s goal should be to find a new center where everyone is heard and all concerns, no matter their size, are given room to breathe in a conversation about delivery.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
 
 
 
@@ -2123,348 +2472,6 @@
 
 
 <p>DevOps is a transformation aimed at bringing together the disciplines of development and operations to produce high-quality software. It’s a marriage between the teams involved, and it needs to be built on communication and collaboration. DevOps is key to transforming operations and allowing everyone to create high-quality, reliable software. And collaboration between teams is what allows for this. DevOps is the marriage between software engineers and IT professionals.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>How to Modify VMWare ESXi Guest Files with Ansible</title>
-		<link>https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Fri, 28 Oct 2022 01:25:15 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[Ansible]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[howto]]></category>
-		<category><![CDATA[tools]]></category>
-		<guid isPermaLink="false">/?p=1232</guid>
-
-					<description><![CDATA[This post will help anyone who is attempting to use ansible to modify files on VMs running on ESXI via automation when Practicing DevOps. This method assumes that you have cloned out a machine, but do not yet have network&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>This post will help anyone who is attempting to use <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">ansible</a> to modify files on VMs running on ESXI via automation when <a href="https://www.valewood.org/practicing-devops/">Practicing DevOps</a>.  This method assumes that you have cloned out a machine, but do not yet have network access to that machine meaning you would need to utilize native ESXi methods to get communication setup.  </p>
-
-
-
-<p>I use methods like this in my home lab to help stay current with new trends in <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> Not everyone is going to be fortunate enough to have cloud playgrounds to test out new things, and home labs are a great way to make a one-time investment in your future.</p>
-
-
-
-<p>The code for the project can be found <a href="https://github.com/gwagner/ansible-examples/tree/main/modify-vmware-esxi-guest-file" target="_blank" data-type="URL" data-id="https://github.com/gwagner/ansible-examples/tree/main/modify-vmware-esxi-guest-file" rel="noreferrer noopener">here</a>!</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Prerequisites</h2>
-
-
-
-<p>This article is going to assume that you already have VMWare running in a home lab somewhere. This also assumes that you have some familiarity with VMware and networking.</p>
-
-
-
-<p>This post will also assume that you have already installed a baseline OS running open-vm-tools. <a href="https://www.packer.io/" data-internallinksmanager029f6b8e52c="17" title="Packer" target="_blank" rel="noopener">Packer</a><a href="https://www.packer.io/" target="_blank" rel="noreferrer noopener"></a> is a good tool to use to automate your baseline operating system installation to create a reusable disk image.</p>
-
-
-
-<p>You may also want to read <a href="https://www.valewood.org/ansible-create-vmware-esxi-vm/" data-type="post" data-id="1213">this post</a> to get a good feeling about how to automate cloning images when vSphere or Center are not available solutions.</p>
-
-
-
-<h2>Terms</h2>
-
-
-
-<ul>
-<li><strong>ansible_host:</strong> A subkey of an invnetory definition that sets an alternative way to target a server in inventory.</li>
-
-
-
-<li><strong>Connection local: </strong>At the playbook level, you can set <code>connection: local</code> to ensure that all connections are being sent to localhost (much like <code>delegate_to</code>).  I almost never use this simply because i generally want control over my connections at the task level, not the playbook level.</li>
-
-
-
-<li><strong>delegate_to:</strong> A majority of this playbook is setup with <code>delegate_to: localhost</code>. This means that the delegated host running the Ansible script will also execute anything with the defined <code><code>delegate_to</code>: localhost</code>.</li>
-
-
-
-<li><strong>Delegated host:</strong> If ServerA is the machine with a terminal you are running Ansible from, and your target is ServerB; if you also set <code>delegate_to: ServerB</code>, Then ServerB is also the delegated host which is running the ansible code.  Ansible is passing the action off from the server where ansible was initiated from to a different remote host.</li>
-
-
-
-<li><strong>Inventory hostname:</strong> Ansible-playbooks requires that inventory be setup for group targeting.  Each host is defined with a hostname as a top level key.  This term is a bit of misnomer since you can give Ansible any hostname you want and configure <code>ansible_host</code> as an alternative targeting mechanic, like IP address.</li>
-
-
-
-<li><strong>Remote Host / Remote Machine:</strong> The server you are targeting remotely with Ansible</li>
-</ul>
-
-
-
-<h2>The Playbook</h2>
-
-
-
-<p>Below is the full code to copy SSH keys to a newly cloned machine, and set an IP address with a NetworkManager restart.</p>
-
-
-
-<p>The general idea is to run <code>ansible-playbook modify-vmware-esxi-guest-file.yaml -i inventory.yaml</code> from your command line.  The playbook will then connect to ESXi and create a .ssh folder on your fresh machine.  It will then copy your local <code>/home/user/.ssh/id_rsa.pub</code> file to the remote machine.  Finally, it will run <code>/bin/nmcli </code>commands to get a static IP address set on the VM.</p>
-
-
-
-<p>Since the remote machine from inventory exists but is not yet able to be connected to <code><code>delegate_to</code>: localhost</code> is necessary of you would immediately receive an ansible connection error.</p>
-
-
-
-<pre class="wp-block-code yaml"><code>---
-- name: Modify VMWare ESXi VM File
-  hosts: all
-  gather_facts: false
-  tasks:
-    - include_vars: config.yaml
-      delegate_to: localhost
-
-    - include_vars: creds.yaml # Remember, this should be in a vault
-      delegate_to: localhost   # These creds are for example use only
-
-    - name: Create .ssh folder
-      community.vmware.vmware_guest_file_operation:
-        validate_certs: false
-        hostname: "{{ vmware_host }}"
-        username: "{{ vmware_user }}"
-        password: "{{ vmware_password }}"
-        datacenter: ha-datacenter
-        vm_id: "{{ vmware.name }}"
-        vm_username: "{{ centos_template_user }}"
-        vm_password: "{{ centos_template_password }}"
-        directory:
-          path: "/home/user/.ssh/"
-          operation: create
-          recurse: no
-      delegate_to: localhost
-
-    - name: Copy RSA to VM
-      community.vmware.vmware_guest_file_operation:
-        validate_certs: false
-        hostname: "{{ vmware_host }}"
-        username: "{{ vmware_user }}"
-        password: "{{ vmware_password }}"
-        datacenter: ha-datacenter
-        vm_id: "{{ vmware.name }}"
-        vm_username: "{{ centos_template_user }}"
-        vm_password: "{{ centos_template_password }}"
-        copy:
-          src: "/home/user/.ssh/id_rsa.pub"
-          dest: "/home/user/.ssh/authorized_keys"
-          overwrite: yes
-      delegate_to: localhost
-
-    - name: Run command inside a virtual machine
-      community.vmware.vmware_vm_shell:
-        hostname: "{{ vmware_host }}"
-        username: "{{ vmware_user }}"
-        password: "{{ vmware_password }}"
-        datacenter: ha-datacenter
-        vm_id: "{{ vmware.name }}"
-        vm_username: "{{ centos_template_user }}"
-        vm_password: "{{ centos_template_password }}"
-        vm_shell: "{{ item.shell }}"
-        vm_shell_args: "{{ item.args }}"
-      loop:
-        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.ignore-auto-dns yes" }
-        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.address \"{{ vmware.ip_address }}/24\"" }
-        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.gateway \"{{ vmware.gateway_address }}\"" }
-        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.dns \"{{ vmware.dns_address }}\"" }
-        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.method manual" }
-        - { shell: "/bin/systemctl", args: "NetworkManager restart" }
-      delegate_to: localhost
-
-</code></pre>
-
-
-
-<h2>Task By Task Breakdown</h2>
-
-
-
-<p>To not rehash details I have gone through in other articles, you can find a breakdown of the inventory, credentials, and config in <a href="https://www.valewood.org/ansible-create-vmware-esxi-vm/#penci-A-Task-By-Task-Breakdown" data-type="URL" data-id="/ansible-create-vmware-esxi-vm/#penci-A-Task-By-Task-Breakdown">this post.</a></p>
-
-
-
-<p>The first step of this playbook is to create a users .ssh folder so an authorized_keys file can be created.  The playbook makes an assumption that your user is named&#8230; user, but that could be modified and turned into a configuration parameter pretty quickly.  I will break down each of the config parameters below:</p>
-
-
-
-<ul>
-<li><strong>validate_certs</strong> is set to false because most of us are not going to be using trusted 3rd party certs in our VMware environment. If you are doing this in a professional environment, ensure you have valid certs installed and leave validate_certs set to the default of true.</li>
-
-
-
-<li><strong>validate_certs</strong> should also be set to false if you are connecting to your VMWare server via IP address since your cert will not match an IP address.</li>
-
-
-
-<li><strong>vmware_user</strong> and vmware_password should be set to a user that has SSH access to your VMWare server. I would not recommend that you do this in any sort of production environment, but it is perfectly fine for a home lab.</li>
-
-
-
-<li><strong>datacenter</strong> is set to ha-datacenter. This is the default name of a “datacenter” in ESXi. There is no reason to change this.</li>
-
-
-
-<li><strong>vm_id</strong> is either the exact case-sensitive name of the virtual machine being configured.  If you created your machine using ansible, then make sure you map the name you gave it here via variables.</li>
-
-
-
-<li><strong>vm_username</strong> and vm_password is in reference to the user you setup when creating your template or disk image.  ESXi needs this to effectively run an interactive login to the server to perform your commands.</li>
-
-
-
-<li><strong>directory</strong> is signifying that our action is going to be taken on a directory.  In the next task you will see that we use the copy key instead of directory but we are utilizing the exact same module.</li>
-
-
-
-<li><strong>directory.path</strong> is the path on the ESXi guests that you want to take action on.</li>
-
-
-
-<li>directory.operation denotes what we want to have happen.  In this case, we are going to create a directory.</li>
-
-
-
-<li><strong>directory.recurse </strong>tells ansible if it should send a command that recursively creates directories.  If your default user is not named user, you would end up with a /home/user/.ssh directory that will be fairly useless.</li>
-</ul>
-
-
-
-<pre class="wp-block-code yaml"><code>    - name: Create .ssh folder
-      community.vmware.vmware_guest_file_operation:
-        validate_certs: false
-        hostname: "{{ vmware_host }}"
-        username: "{{ vmware_user }}"
-        password: "{{ vmware_password }}"
-        datacenter: ha-datacenter
-        vm_id: "{{ vmware.name }}"
-        vm_username: "{{ centos_template_user }}"
-        vm_password: "{{ centos_template_password }}"
-        directory:
-          path: "/home/user/.ssh/"
-          operation: create
-          recurse: no
-      delegate_to: localhost</code></pre>
-
-
-
-<p>This next task does a copy of a file from the machine you executed the ansible playbook from onto the ESXi guest that we are configuring.  In the interest of brevity, I am not going to rehash the duplicate keys from above.  Here are the specific keys of interest in this task:</p>
-
-
-
-<ul>
-<li><strong>copy</strong> denotes that we want to copy a file.  The file needs to exist on your source system and will be copied to the ESXi guest.</li>
-
-
-
-<li><strong>copy.src</strong> is the path to the source file.  As you can see, we are targeting the public key here.</li>
-
-
-
-<li><strong>copy.dest</strong> is the full path to the destination.   As you can see we are targeting an authorized_keys file as the destination.  This could be dangerous if that file already exists as it will be overwritten.</li>
-
-
-
-<li><strong>copy.overwrite</strong> ensures that we will clobber whatever exists on the destination system with the file from our source system.</li>
-</ul>
-
-
-
-<pre class="wp-block-code yaml"><code>    - name: Copy RSA to VM
-      community.vmware.vmware_guest_file_operation:
-        validate_certs: false
-        hostname: "{{ vmware_host }}"
-        username: "{{ vmware_user }}"
-        password: "{{ vmware_password }}"
-        datacenter: ha-datacenter
-        vm_id: "{{ vmware.name }}"
-        vm_username: "{{ centos_template_user }}"
-        vm_password: "{{ centos_template_password }}"
-        copy:
-          src: "/home/user/.ssh/id_rsa.pub"
-          dest: "/home/user/.ssh/authorized_keys"
-          overwrite: yes
-      delegate_to: localhost</code></pre>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<p>This last task is composed a bit differently.  Effectively it is being used to run a series of nmcli commands along with a single systemctl command to set a static IP address for this machine.  I have this task composed this way to clean up ansible code.  This could be written as six fully independent tasks in ansible, but remember to stay DRY and don&#8217;t repeat yourself.  Here is a breakdown of the specific keys of interest:</p>
-
-
-
-<ul>
-<li><strong>vm_shell</strong> represents the exact path to the command that is going to be run on the ESXi guest.  Do not include command arguments in this field, the documentation specifically states that it wants a full path to an executable.</li>
-
-
-
-<li><strong>vm_shell_args</strong> represents the arguments to the vm_shell command.  </li>
-
-
-
-<li><strong>loop</strong> controls how the task will loop through the data defined underneath.  I have the keys setup as dictionary objects so that we get both shell executables and arguments from the loop.</li>
-</ul>
-
-
-
-<pre class="wp-block-code"><code>    - name: Run command inside a virtual machine
-      community.vmware.vmware_vm_shell:
-        hostname: "{{ vmware_host }}"
-        username: "{{ vmware_user }}"
-        password: "{{ vmware_password }}"
-        datacenter: ha-datacenter
-        vm_id: "{{ vmware.name }}"
-        vm_username: "{{ centos_template_user }}"
-        vm_password: "{{ centos_template_password }}"
-        vm_shell: "{{ item.shell }}"
-        vm_shell_args: "{{ item.args }}"
-      loop:
-        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.ignore-auto-dns yes" }
-        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.address \"{{ vmware.ip_address }}/24\"" }
-        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.gateway \"{{ vmware.gateway_address }}\"" }
-        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.dns \"{{ vmware.dns_address }}\"" }
-        - { shell: "/bin/nmcli", args: "connection modify ens192 IPv4.method manual" }
-        - { shell: "/bin/systemctl", args: "NetworkManager restart" }
-      delegate_to: localhost</code></pre>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>As you can see, with a fairly concise set of steps, you can level up your DevOps automation game by rapidly configuring virtual machines in your home lab.</p>
 ]]></content:encoded>
 					
 		
