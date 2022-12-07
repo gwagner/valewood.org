@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.valewood.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://www.valewood.org/devops-shift-left-testing/</loc>
+		<lastmod>2022-12-07T16:30:05-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-without-education/</loc>
+		<lastmod>2022-12-07T16:16:43-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</loc>
+		<lastmod>2022-12-07T16:13:57-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/major-benefits-of-devops/</loc>
+		<lastmod>2022-12-07T16:13:13-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-rapid-delivery/</loc>
+		<lastmod>2022-12-07T16:11:58-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/practicing-devops/</loc>
+		<lastmod>2022-12-07T16:09:27-06:00</lastmod>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/devops-and-agile-misconceptions/</loc>
-		<lastmod>2022-12-06T21:04:54-06:00</lastmod>
+		<lastmod>2022-12-06T21:56:36-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/which-term-describes-devops-and-agile/</loc>
@@ -37,24 +61,12 @@
 		<lastmod>2022-12-01T22:01:27-06:00</lastmod>
 	</url>
 	<url>
-		<loc>https://www.valewood.org/devops-rapid-delivery/</loc>
-		<lastmod>2022-12-01T21:48:43-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/devops-without-education/</loc>
-		<lastmod>2022-11-26T12:41:00-06:00</lastmod>
-	</url>
-	<url>
 		<loc>https://www.valewood.org/devops-and-agile/</loc>
 		<lastmod>2022-11-24T16:39:52-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-cycle-time/</loc>
 		<lastmod>2022-11-22T17:08:20-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</loc>
-		<lastmod>2022-11-22T11:57:08-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-testing/</loc>
@@ -104,14 +116,6 @@
 	<url>
 		<loc>https://www.valewood.org/devops-skills/</loc>
 		<lastmod>2022-10-11T21:28:18-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/practicing-devops/</loc>
-		<lastmod>2022-10-03T20:46:49-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/major-benefits-of-devops/</loc>
-		<lastmod>2022-09-25T11:55:42-05:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-pipeline-geared-for-stability/</loc>
