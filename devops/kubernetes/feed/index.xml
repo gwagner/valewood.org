@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/kubernetes/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Sat, 03 Dec 2022 03:19:18 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 08 Dec 2022 02:19:57 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,395 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Kubernetes &#8211; Pod Stuck in Terminating Status</title>
+		<link>https://www.valewood.org/kubernetes-pod-stuck-terminating/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Thu, 08 Dec 2022 02:17:17 +0000</pubDate>
+				<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[day2ops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=2031</guid>
+
+					<description><![CDATA[Kubernetes is a powerful tool for managing complex containerized applications. It helps developers quickly deploy, scale, and manage their applications. However, with great power comes great responsibility and Kubernetes has its share of issues that can cause headaches for developers.&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> is a powerful tool for managing complex containerized applications. It helps developers quickly deploy, scale, and manage their applications.</p>
+
+
+
+<p>However, with great power comes great responsibility and Kubernetes has its share of issues that can cause headaches for developers. One of the most dreaded issues is the Kubernetes &#8220;pod stuck terminating&#8221; issue.</p>
+
+
+
+<p>In this article, we’ll discuss what this issue is, the common causes, how to diagnose a stuck pod, strategies for solving the issue, a step-by-step guide to solving the issue, best practices for avoiding the issue in the future, troubleshooting tips for Kubernetes pods, useful tools for monitoring and managing Kubernetes pods, courses and tutorials on Kubernetes pod management, and more.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>What is the Kubernetes pod stuck terminating issue?</h2>
+
+
+
+<p>The Kubernetes pod stuck terminating issue occurs when a pod remains in the “Terminating” state for an extended period of time. This can be caused by a number of different issues and can be quite frustrating for developers.</p>
+
+
+
+<p>The issue can manifest itself in a number of ways. For example, you may see that your pod is stuck in the “Terminating” state and never fully terminates and continues to consume resources. You may check the host to which the pod was assigned, and the <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> container and underlying PID have been terminated, but Kubernetes is reporting it as stuck in a terminating state.</p>
+
+
+
+<p>Regardless of the issue, the Kubernetes pod stuck terminating issue can be a major headache for developers and can cause serious delays in deploying applications.</p>
+
+
+
+<h2>Common causes of the issue</h2>
+
+
+
+<p>The Kubernetes pod stuck terminating issue can be caused by a number of different issues. The most common causes include:</p>
+
+
+
+<ul>
+<li><strong>Not enough resources:</strong> Kubernetes pods require sufficient resources in order to function properly. If there aren’t enough resources available, the pod may get stuck in the “Terminating” state. It is important to look at the state of your worker node at the time the pod went unresponsive. If all system resources were consumed, like a disk filling up, then Kubernetes may not actually be the core issue to diagnose.</li>
+
+
+
+<li><strong>Contention for resources:</strong> If there are multiple pods competing for resources, one of the pods may get stuck in the “Terminating” state as it waits for resources to become available.</li>
+
+
+
+<li><strong>Problems with the pod: </strong>If there is something wrong with the pod itself, it may get stuck in the “Terminating” state. This could be due to an issue with the code, configuration, or other problems.</li>
+
+
+
+<li><strong>Issues with the Kubernetes cluster:</strong> If there is something wrong with the Kubernetes cluster itself, it may cause the pod to get stuck in the “Terminating” state. This can happen when cluster communications become disconnected from a blip or network partition. The worker node may be functioning as expected, but cannot tell the Kubernetes API that it is working properly.</li>
+</ul>
+
+
+
+<h2>How to diagnose a stuck pod</h2>
+
+
+
+<p>If you find that your Kubernetes pod is stuck in the “Terminating” state, there are a few steps you can take to diagnose the issue.</p>
+
+
+
+<p>The first thing you should do is check the logs. Check the logs for the pod to see if there are any error messages or warnings that could indicate the cause of the issue.</p>
+
+
+
+<p>Next, you should check the resource utilization of the pod. If the pod is consuming too many resources, it could be causing issues.</p>
+
+
+
+<p>After that, you should check the resource utilization on the server at the time the pod became stuck in a terminating state. If the server ran out of disk, the pod became stuck, but now system resources look fine; the reality is that the processes on the server itself may be in an unknown or unrecoverable state without a reboot.</p>
+
+
+
+<p>Finally, you should check the status of the node from kubectl. If the node is not reporting itself as healthy via `kubectl get nodes` then that node should be drained, which may not be possible, and subsequently rebooted and its health re-reviewed.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Strategies for solving the issue</h2>
+
+
+
+<p>Once you’ve identified the cause of the issue, there are a few strategies you can use to solve the issue.</p>
+
+
+
+<h3>Check the Worker Node</h3>
+
+
+
+<p>First, check the worker node that was running the pod to see what state the underlying container is in via `ctr`. If the container is no longer running, the next thing to check is for running PIDs on the system that matches the process being run by the container. If there are no relevant PIDs, then you can run `kubectl delete pod &#8211;force=true &#8211;grace-period=0 -n &lt;NAMESPACE&gt; &lt;STUCK POD NAME&gt; ` to forcibly remove the pod from the Kubernetes API.</p>
+
+
+
+<p>In this scenario, a pod was successfully terminated on the worker system, but the Kubernetes worker or the API is out of sync with each other and neither of them really knows the state of the pod.</p>
+
+
+
+<p>Signs may point to the issue being fixed after this, but in my experience, you should go ahead and do a full health check of your cluster as this is an edge case caused by some underlying issue somewhere else.</p>
+
+
+
+<h3>Keep Checking the Worker Node</h3>
+
+
+
+<p>I am cheating here slightly. This is an extension of &#8220;Check the Worker Node&#8221;, but we will assume that the pod is actually still running and has not terminated.</p>
+
+
+
+<p>When a pod is stuck in a terminating state this way, the PID that the pod was managing may not be terminating properly. Checking logs here should be the first step. I have run into issues in the past where applications are not properly listening to system signals like SIGHUP to know it is time to terminate.</p>
+
+
+
+<p>If you are running internally developed software, check with your development teams to see how the application responds to system signals.</p>
+
+
+
+<h3>Rolling Reboots</h3>
+
+
+
+<p>The worker node may be perfectly healthy in some instances. Working backward, there could be a problem with either the Kubernetes API receiving update information from worker nodes, a network partition / other network issues, or the ETCd cluster may not be synchronizing properly across all nodes and refusing new write operations.</p>
+
+
+
+<p>If you are in a highly resilient state in your Kubernetes cluster, load-balanced masters with multiple ETCd nodes, then a rolling reboot should not hurt anything. Your rolling reboot at that layer should be properly communicated to any parties that could be impacted.</p>
+
+
+
+<p>In my experience, this may fix a multitude of issues that may not even be presenting themselves. This is why communication is important. There may be resources that are suddenly rebooted or changed in a way that your business partners were not expecting.</p>
+
+
+
+<h2>A step-by-step guide to solving the issue</h2>
+
+
+
+<p>If you find that your Kubernetes pod is stuck in the “Terminating” state, here’s a step-by-step guide to solving the issue:</p>
+
+
+
+<ol>
+<li>Check the worker node for signs of stuck PIDs or stuck containers through `ctr`</li>
+</ol>
+
+
+
+<p>If the node has stuck PIDs or a stuck container, the process running inside of the container is not properly listening to system signals like SIGHUP. File a bug report with the application developers for guidance or bug fixes.</p>
+
+
+
+<ol>
+<li>Check the worker kubelet process logs for signs errors</li>
+
+
+
+<li>Check the master&#8217;s kubelet process logs for signs of errors</li>
+
+
+
+<li>Check the master&#8217;s kube-scheduler process logs for signs of errors</li>
+
+
+
+<li>Check the master&#8217;s kube-controller-manager process logs for signs of errors</li>
+
+
+
+<li>Check the master&#8217;s kube-apiserver process logs for signs of errors</li>
+</ol>
+
+
+
+<p>If any of these checks present an issue, it is time to start rolling reboots of nodes in your cluster. Start with the impacted worker and move your way back to the masters. Other workers in the cluster probably do not need a reboot.</p>
+
+
+
+<ol>
+<li>Check server resources at the time the pod became stuck in terminating state.</li>
+</ol>
+
+
+
+<p>If this is the case, look for both a root cause on why the server filled up, and perform a reboot on the server. Servers become very unhappy when resources like disk become inaccessible due to capacity issues.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Best practices for avoiding the issue in the future</h2>
+
+
+
+<p>Once you’ve solved the Kubernetes pod stuck terminating issue, it’s important to take steps to avoid the issue in the future. Here are some best practices for avoiding the issue:</p>
+
+
+
+<ul>
+<li>Monitor your pods: Monitor your pods to make sure they’re not consuming too many resources.</li>
+
+
+
+<li>Set limits on resources: Set limits on the resources that your pods can consume to avoid resource contention.</li>
+
+
+
+<li>Check your code: Make sure your code is correct and that your pods are properly configured.</li>
+
+
+
+<li>Test your pods: Test your pods before deploying them to make sure they’re functioning properly.</li>
+
+
+
+<li>Upgrade your cluster: Make sure your Kubernetes cluster is up-to-date to avoid issues.</li>
+</ul>
+
+
+
+<h2>Troubleshooting tips for Kubernetes pods</h2>
+
+
+
+<p>If you’re having issues with your Kubernetes pods, here are some troubleshooting tips to help you identify and solve the issue:</p>
+
+
+
+<ul>
+<li><strong>Check the logs:</strong> Check the logs for your pod to see if there are any error messages or warnings.</li>
+
+
+
+<li><strong>Check the resource utilization:</strong> Check the resource utilization of your pod to make sure it’s not consuming too many resources.</li>
+
+
+
+<li><strong>Check the status of the pod:</strong> Check the status of the pod to make sure it’s not stuck in the “Terminating” state.</li>
+
+
+
+<li><strong>Try scaling up the resources: </strong>Try scaling up the resources for the pod to see if that helps to resolve the issue.</li>
+
+
+
+<li><strong>Try restarting the pod:</strong> Try restarting the pod to see if that helps to resolve the issue.</li>
+
+
+
+<li><strong>Try deleting the pod:</strong> Try deleting the pod and recreating it to see if that helps to resolve the issue.</li>
+</ul>
+
+
+
+<h2>Useful tools for monitoring and managing Kubernetes pods</h2>
+
+
+
+<p>There are a number of useful tools that can help you monitor and manage your Kubernetes pods. These tools can help you identify and solve issues with your pods.</p>
+
+
+
+<p>Some of the most popular tools include:</p>
+
+
+
+<ul>
+<li><a href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" data-type="URL" data-id="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" rel="noreferrer noopener nofollow">Kubernetes Dashboard</a>: This open-source dashboard allows you to monitor and manage your Kubernetes pods.</li>
+
+
+
+<li><a href="https://prometheus.io/" data-internallinksmanager029f6b8e52c="2" title="Prometheus" rel="nofollow noopener" target="_blank">Prometheus</a>: This open-source monitoring tool allows you to monitor your Kubernetes clusters and pods.</li>
+
+
+
+<li><a href="https://aquasecurity.github.io/kube-hunter/" target="_blank" data-type="URL" data-id="https://aquasecurity.github.io/kube-hunter/" rel="noreferrer noopener nofollow">Kube-Hunter</a>: This open-source security tool allows you to scan your Kubernetes clusters for security issues.</li>
+
+
+
+<li><a href="https://helm.sh/" target="_blank" data-type="URL" data-id="https://helm.sh/" rel="noreferrer noopener nofollow">Helm</a>: This open-source package manager allows you to easily install and manage applications on your Kubernetes cluster.</li>
+</ul>
+
+
+
+<h2>Courses and tutorials on Kubernetes pod management</h2>
+
+
+
+<p>If you’re looking to learn more about managing Kubernetes pods, there are a number of courses and tutorials available. Here are some of the best courses and tutorials:</p>
+
+
+
+<ul>
+<li><a href="https://www.udemy.com/course/the-complete-guide-to-kubernetes-3-course-bundle/" target="_blank" data-type="URL" data-id="https://www.udemy.com/course/the-complete-guide-to-kubernetes-3-course-bundle/" rel="noreferrer noopener nofollow">Kubernetes The Complete Guide</a>: This course covers everything you need to know about managing Kubernetes pods.</li>
+
+
+
+<li><a href="https://training.linuxfoundation.org/training/kubernetes-fundamentals/" target="_blank" data-type="URL" data-id="https://training.linuxfoundation.org/training/kubernetes-fundamentals/" rel="noreferrer noopener nofollow">Kubernetes Fundamentals</a>: This tutorial covers the basics of managing Kubernetes pods.</li>
+
+
+
+<li><a href="https://kubernetesbootcamp.github.io/kubernetes-bootcamp/" target="_blank" data-type="URL" data-id="https://kubernetesbootcamp.github.io/kubernetes-bootcamp/" rel="noreferrer noopener nofollow">Kubernetes Bootcamp</a>: This course covers the fundamentals of managing Kubernetes clusters and pods.</li>
+
+
+
+<li><a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/" target="_blank" data-type="URL" data-id="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/" rel="noreferrer noopener nofollow">Kubernetes Pod Management</a>: This tutorial covers the basics of managing Kubernetes pods.</li>
+</ul>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>The dreaded Kubernetes &#8220;pod stuck terminating&#8221; issue can be a major headache for developers and systems administration teams.</p>
+
+
+
+<p>In this article, we’ve discussed what this issue is, the common causes, how to diagnose a stuck pod, strategies for solving the issue, a step-by-step guide to solving the issue, best practices for avoiding the issue in the future, troubleshooting tips for Kubernetes pods, useful tools for monitoring and managing Kubernetes pods, courses and tutorials on Kubernetes pod management, and more.</p>
+
+
+
+<p>If you’re having issues with your Kubernetes pods, try following the steps outlined in this article. And remember, if you’re looking to learn more about managing Kubernetes pods, there are a number of courses and tutorials available to help you.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Helm: Kubernetes Cluster Unreachable </title>
 		<link>https://www.valewood.org/helm-kubernetes-cluster-unreachable/</link>
 		
