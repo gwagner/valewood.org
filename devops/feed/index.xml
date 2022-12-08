@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Thu, 08 Dec 2022 02:19:57 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 08 Dec 2022 02:32:32 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -66,7 +66,7 @@
 
 
 
-<h2>What is the Kubernetes pod stuck terminating issue?</h2>
+<h2>What is the Kubernetes &#8220;Pod Stuck Terminating&#8221; Issue?</h2>
 
 
 
@@ -82,7 +82,7 @@
 
 
 
-<h2>Common causes of the issue</h2>
+<h2>Common Causes of Pods Becoming Stuck</h2>
 
 
 
@@ -108,7 +108,7 @@
 
 
 
-<h2>How to diagnose a stuck pod</h2>
+<h2>How to Diagnose a Stuck Pod</h2>
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-<h2>Strategies for solving the issue</h2>
+<h2>Strategies for Solving the Issue</h2>
 
 
 
@@ -156,7 +156,13 @@
 
 
 
-<p>First, check the worker node that was running the pod to see what state the underlying container is in via `ctr`. If the container is no longer running, the next thing to check is for running PIDs on the system that matches the process being run by the container. If there are no relevant PIDs, then you can run `kubectl delete pod &#8211;force=true &#8211;grace-period=0 -n &lt;NAMESPACE&gt; &lt;STUCK POD NAME&gt; ` to forcibly remove the pod from the Kubernetes API.</p>
+<p>First, check the worker node that was running the pod to see what state the underlying container is in via <code>ctr</code>. If the container is no longer running, the next thing to check is for running PIDs on the system that matches the process being run by the container. If there are no relevant PIDs, then you can run <code>kubectl delete pod --force=true --grace-period=0 -n &lt;NAMESPACE> &lt;STUCK POD NAME></code> to forcibly remove the pod from the Kubernetes API.</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/2139.png" alt="ℹ" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Depending on your version of Kubernetes, you may have Docker or Container.io as a container runtime.  If you have docker, use <code>docker ps</code> to check container status.  If you have Container.io you will use <code>runc</code> or <code>ctr</code> to check the status of your pods.</p>
+</blockquote>
 
 
 
@@ -200,7 +206,7 @@
 
 
 
-<h2>A step-by-step guide to solving the issue</h2>
+<h2>A Step-By-Step Guide to Solving the Issue</h2>
 
 
 
@@ -245,12 +251,12 @@
 
 
 <ol>
-<li>Check server resources at the time the pod became stuck in terminating state.</li>
+<li>Check server resources at the time the pod became stuck in a terminating state.</li>
 </ol>
 
 
 
-<p>If this is the case, look for both a root cause on why the server filled up, and perform a reboot on the server. Servers become very unhappy when resources like disk become inaccessible due to capacity issues.</p>
+<p>If this is the case, look for both a root cause of why the server filled up, and perform a reboot on the server. Servers become very unhappy when resources like disks become inaccessible due to capacity issues.</p>
 
 
 
@@ -266,7 +272,7 @@
 
 
 
-<h2>Best practices for avoiding the issue in the future</h2>
+<h2>Best Practices for Avoiding the Issue in the Future</h2>
 
 
 
@@ -296,7 +302,7 @@
 
 
 
-<h2>Troubleshooting tips for Kubernetes pods</h2>
+<h2>Troubleshooting Tips for Kubernetes Pods</h2>
 
 
 
@@ -330,7 +336,7 @@
 
 
 
-<h2>Useful tools for monitoring and managing Kubernetes pods</h2>
+<h2>Useful Tools for Monitoring and Managing Kubernetes Pods</h2>
 
 
 
@@ -360,7 +366,7 @@
 
 
 
-<h2>Courses and tutorials on Kubernetes pod management</h2>
+<h2>Courses and Tutorials on Kubernetes Pod Management</h2>
 
 
 
