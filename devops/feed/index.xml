@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 07 Dec 2022 22:30:05 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 08 Dec 2022 02:32:32 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,401 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Kubernetes &#8211; Pod Stuck in Terminating Status</title>
+		<link>https://www.valewood.org/kubernetes-pod-stuck-terminating/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Thu, 08 Dec 2022 02:17:17 +0000</pubDate>
+				<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[day2ops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=2031</guid>
+
+					<description><![CDATA[Kubernetes is a powerful tool for managing complex containerized applications. It helps developers quickly deploy, scale, and manage their applications. However, with great power comes great responsibility and Kubernetes has its share of issues that can cause headaches for developers.&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> is a powerful tool for managing complex containerized applications. It helps developers quickly deploy, scale, and manage their applications.</p>
+
+
+
+<p>However, with great power comes great responsibility and Kubernetes has its share of issues that can cause headaches for developers. One of the most dreaded issues is the Kubernetes &#8220;pod stuck terminating&#8221; issue.</p>
+
+
+
+<p>In this article, we’ll discuss what this issue is, the common causes, how to diagnose a stuck pod, strategies for solving the issue, a step-by-step guide to solving the issue, best practices for avoiding the issue in the future, troubleshooting tips for Kubernetes pods, useful tools for monitoring and managing Kubernetes pods, courses and tutorials on Kubernetes pod management, and more.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>What is the Kubernetes &#8220;Pod Stuck Terminating&#8221; Issue?</h2>
+
+
+
+<p>The Kubernetes pod stuck terminating issue occurs when a pod remains in the “Terminating” state for an extended period of time. This can be caused by a number of different issues and can be quite frustrating for developers.</p>
+
+
+
+<p>The issue can manifest itself in a number of ways. For example, you may see that your pod is stuck in the “Terminating” state and never fully terminates and continues to consume resources. You may check the host to which the pod was assigned, and the <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> container and underlying PID have been terminated, but Kubernetes is reporting it as stuck in a terminating state.</p>
+
+
+
+<p>Regardless of the issue, the Kubernetes pod stuck terminating issue can be a major headache for developers and can cause serious delays in deploying applications.</p>
+
+
+
+<h2>Common Causes of Pods Becoming Stuck</h2>
+
+
+
+<p>The Kubernetes pod stuck terminating issue can be caused by a number of different issues. The most common causes include:</p>
+
+
+
+<ul>
+<li><strong>Not enough resources:</strong> Kubernetes pods require sufficient resources in order to function properly. If there aren’t enough resources available, the pod may get stuck in the “Terminating” state. It is important to look at the state of your worker node at the time the pod went unresponsive. If all system resources were consumed, like a disk filling up, then Kubernetes may not actually be the core issue to diagnose.</li>
+
+
+
+<li><strong>Contention for resources:</strong> If there are multiple pods competing for resources, one of the pods may get stuck in the “Terminating” state as it waits for resources to become available.</li>
+
+
+
+<li><strong>Problems with the pod: </strong>If there is something wrong with the pod itself, it may get stuck in the “Terminating” state. This could be due to an issue with the code, configuration, or other problems.</li>
+
+
+
+<li><strong>Issues with the Kubernetes cluster:</strong> If there is something wrong with the Kubernetes cluster itself, it may cause the pod to get stuck in the “Terminating” state. This can happen when cluster communications become disconnected from a blip or network partition. The worker node may be functioning as expected, but cannot tell the Kubernetes API that it is working properly.</li>
+</ul>
+
+
+
+<h2>How to Diagnose a Stuck Pod</h2>
+
+
+
+<p>If you find that your Kubernetes pod is stuck in the “Terminating” state, there are a few steps you can take to diagnose the issue.</p>
+
+
+
+<p>The first thing you should do is check the logs. Check the logs for the pod to see if there are any error messages or warnings that could indicate the cause of the issue.</p>
+
+
+
+<p>Next, you should check the resource utilization of the pod. If the pod is consuming too many resources, it could be causing issues.</p>
+
+
+
+<p>After that, you should check the resource utilization on the server at the time the pod became stuck in a terminating state. If the server ran out of disk, the pod became stuck, but now system resources look fine; the reality is that the processes on the server itself may be in an unknown or unrecoverable state without a reboot.</p>
+
+
+
+<p>Finally, you should check the status of the node from kubectl. If the node is not reporting itself as healthy via `kubectl get nodes` then that node should be drained, which may not be possible, and subsequently rebooted and its health re-reviewed.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Strategies for Solving the Issue</h2>
+
+
+
+<p>Once you’ve identified the cause of the issue, there are a few strategies you can use to solve the issue.</p>
+
+
+
+<h3>Check the Worker Node</h3>
+
+
+
+<p>First, check the worker node that was running the pod to see what state the underlying container is in via <code>ctr</code>. If the container is no longer running, the next thing to check is for running PIDs on the system that matches the process being run by the container. If there are no relevant PIDs, then you can run <code>kubectl delete pod --force=true --grace-period=0 -n &lt;NAMESPACE> &lt;STUCK POD NAME></code> to forcibly remove the pod from the Kubernetes API.</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/2139.png" alt="ℹ" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Depending on your version of Kubernetes, you may have Docker or Container.io as a container runtime.  If you have docker, use <code>docker ps</code> to check container status.  If you have Container.io you will use <code>runc</code> or <code>ctr</code> to check the status of your pods.</p>
+</blockquote>
+
+
+
+<p>In this scenario, a pod was successfully terminated on the worker system, but the Kubernetes worker or the API is out of sync with each other and neither of them really knows the state of the pod.</p>
+
+
+
+<p>Signs may point to the issue being fixed after this, but in my experience, you should go ahead and do a full health check of your cluster as this is an edge case caused by some underlying issue somewhere else.</p>
+
+
+
+<h3>Keep Checking the Worker Node</h3>
+
+
+
+<p>I am cheating here slightly. This is an extension of &#8220;Check the Worker Node&#8221;, but we will assume that the pod is actually still running and has not terminated.</p>
+
+
+
+<p>When a pod is stuck in a terminating state this way, the PID that the pod was managing may not be terminating properly. Checking logs here should be the first step. I have run into issues in the past where applications are not properly listening to system signals like SIGHUP to know it is time to terminate.</p>
+
+
+
+<p>If you are running internally developed software, check with your development teams to see how the application responds to system signals.</p>
+
+
+
+<h3>Rolling Reboots</h3>
+
+
+
+<p>The worker node may be perfectly healthy in some instances. Working backward, there could be a problem with either the Kubernetes API receiving update information from worker nodes, a network partition / other network issues, or the ETCd cluster may not be synchronizing properly across all nodes and refusing new write operations.</p>
+
+
+
+<p>If you are in a highly resilient state in your Kubernetes cluster, load-balanced masters with multiple ETCd nodes, then a rolling reboot should not hurt anything. Your rolling reboot at that layer should be properly communicated to any parties that could be impacted.</p>
+
+
+
+<p>In my experience, this may fix a multitude of issues that may not even be presenting themselves. This is why communication is important. There may be resources that are suddenly rebooted or changed in a way that your business partners were not expecting.</p>
+
+
+
+<h2>A Step-By-Step Guide to Solving the Issue</h2>
+
+
+
+<p>If you find that your Kubernetes pod is stuck in the “Terminating” state, here’s a step-by-step guide to solving the issue:</p>
+
+
+
+<ol>
+<li>Check the worker node for signs of stuck PIDs or stuck containers through `ctr`</li>
+</ol>
+
+
+
+<p>If the node has stuck PIDs or a stuck container, the process running inside of the container is not properly listening to system signals like SIGHUP. File a bug report with the application developers for guidance or bug fixes.</p>
+
+
+
+<ol>
+<li>Check the worker kubelet process logs for signs errors</li>
+
+
+
+<li>Check the master&#8217;s kubelet process logs for signs of errors</li>
+
+
+
+<li>Check the master&#8217;s kube-scheduler process logs for signs of errors</li>
+
+
+
+<li>Check the master&#8217;s kube-controller-manager process logs for signs of errors</li>
+
+
+
+<li>Check the master&#8217;s kube-apiserver process logs for signs of errors</li>
+</ol>
+
+
+
+<p>If any of these checks present an issue, it is time to start rolling reboots of nodes in your cluster. Start with the impacted worker and move your way back to the masters. Other workers in the cluster probably do not need a reboot.</p>
+
+
+
+<ol>
+<li>Check server resources at the time the pod became stuck in a terminating state.</li>
+</ol>
+
+
+
+<p>If this is the case, look for both a root cause of why the server filled up, and perform a reboot on the server. Servers become very unhappy when resources like disks become inaccessible due to capacity issues.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Best Practices for Avoiding the Issue in the Future</h2>
+
+
+
+<p>Once you’ve solved the Kubernetes pod stuck terminating issue, it’s important to take steps to avoid the issue in the future. Here are some best practices for avoiding the issue:</p>
+
+
+
+<ul>
+<li>Monitor your pods: Monitor your pods to make sure they’re not consuming too many resources.</li>
+
+
+
+<li>Set limits on resources: Set limits on the resources that your pods can consume to avoid resource contention.</li>
+
+
+
+<li>Check your code: Make sure your code is correct and that your pods are properly configured.</li>
+
+
+
+<li>Test your pods: Test your pods before deploying them to make sure they’re functioning properly.</li>
+
+
+
+<li>Upgrade your cluster: Make sure your Kubernetes cluster is up-to-date to avoid issues.</li>
+</ul>
+
+
+
+<h2>Troubleshooting Tips for Kubernetes Pods</h2>
+
+
+
+<p>If you’re having issues with your Kubernetes pods, here are some troubleshooting tips to help you identify and solve the issue:</p>
+
+
+
+<ul>
+<li><strong>Check the logs:</strong> Check the logs for your pod to see if there are any error messages or warnings.</li>
+
+
+
+<li><strong>Check the resource utilization:</strong> Check the resource utilization of your pod to make sure it’s not consuming too many resources.</li>
+
+
+
+<li><strong>Check the status of the pod:</strong> Check the status of the pod to make sure it’s not stuck in the “Terminating” state.</li>
+
+
+
+<li><strong>Try scaling up the resources: </strong>Try scaling up the resources for the pod to see if that helps to resolve the issue.</li>
+
+
+
+<li><strong>Try restarting the pod:</strong> Try restarting the pod to see if that helps to resolve the issue.</li>
+
+
+
+<li><strong>Try deleting the pod:</strong> Try deleting the pod and recreating it to see if that helps to resolve the issue.</li>
+</ul>
+
+
+
+<h2>Useful Tools for Monitoring and Managing Kubernetes Pods</h2>
+
+
+
+<p>There are a number of useful tools that can help you monitor and manage your Kubernetes pods. These tools can help you identify and solve issues with your pods.</p>
+
+
+
+<p>Some of the most popular tools include:</p>
+
+
+
+<ul>
+<li><a href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" data-type="URL" data-id="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" rel="noreferrer noopener nofollow">Kubernetes Dashboard</a>: This open-source dashboard allows you to monitor and manage your Kubernetes pods.</li>
+
+
+
+<li><a href="https://prometheus.io/" data-internallinksmanager029f6b8e52c="2" title="Prometheus" rel="nofollow noopener" target="_blank">Prometheus</a>: This open-source monitoring tool allows you to monitor your Kubernetes clusters and pods.</li>
+
+
+
+<li><a href="https://aquasecurity.github.io/kube-hunter/" target="_blank" data-type="URL" data-id="https://aquasecurity.github.io/kube-hunter/" rel="noreferrer noopener nofollow">Kube-Hunter</a>: This open-source security tool allows you to scan your Kubernetes clusters for security issues.</li>
+
+
+
+<li><a href="https://helm.sh/" target="_blank" data-type="URL" data-id="https://helm.sh/" rel="noreferrer noopener nofollow">Helm</a>: This open-source package manager allows you to easily install and manage applications on your Kubernetes cluster.</li>
+</ul>
+
+
+
+<h2>Courses and Tutorials on Kubernetes Pod Management</h2>
+
+
+
+<p>If you’re looking to learn more about managing Kubernetes pods, there are a number of courses and tutorials available. Here are some of the best courses and tutorials:</p>
+
+
+
+<ul>
+<li><a href="https://www.udemy.com/course/the-complete-guide-to-kubernetes-3-course-bundle/" target="_blank" data-type="URL" data-id="https://www.udemy.com/course/the-complete-guide-to-kubernetes-3-course-bundle/" rel="noreferrer noopener nofollow">Kubernetes The Complete Guide</a>: This course covers everything you need to know about managing Kubernetes pods.</li>
+
+
+
+<li><a href="https://training.linuxfoundation.org/training/kubernetes-fundamentals/" target="_blank" data-type="URL" data-id="https://training.linuxfoundation.org/training/kubernetes-fundamentals/" rel="noreferrer noopener nofollow">Kubernetes Fundamentals</a>: This tutorial covers the basics of managing Kubernetes pods.</li>
+
+
+
+<li><a href="https://kubernetesbootcamp.github.io/kubernetes-bootcamp/" target="_blank" data-type="URL" data-id="https://kubernetesbootcamp.github.io/kubernetes-bootcamp/" rel="noreferrer noopener nofollow">Kubernetes Bootcamp</a>: This course covers the fundamentals of managing Kubernetes clusters and pods.</li>
+
+
+
+<li><a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/" target="_blank" data-type="URL" data-id="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/" rel="noreferrer noopener nofollow">Kubernetes Pod Management</a>: This tutorial covers the basics of managing Kubernetes pods.</li>
+</ul>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>The dreaded Kubernetes &#8220;pod stuck terminating&#8221; issue can be a major headache for developers and systems administration teams.</p>
+
+
+
+<p>In this article, we’ve discussed what this issue is, the common causes, how to diagnose a stuck pod, strategies for solving the issue, a step-by-step guide to solving the issue, best practices for avoiding the issue in the future, troubleshooting tips for Kubernetes pods, useful tools for monitoring and managing Kubernetes pods, courses and tutorials on Kubernetes pod management, and more.</p>
+
+
+
+<p>If you’re having issues with your Kubernetes pods, try following the steps outlined in this article. And remember, if you’re looking to learn more about managing Kubernetes pods, there are a number of courses and tutorials available to help you.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Unlock the Power of DevOps Shift-Left Testing</title>
 		<link>https://www.valewood.org/devops-shift-left-testing/</link>
 		
@@ -2382,304 +2777,6 @@
 
 
 <p>As businesses grow more reliant on software applications, DevOps becomes even more important as it aids in accelerating the delivery of new features to production. The adoption of DevOps can significantly reduce the time it takes to deliver new features to customers by automating the build, test, and deployment processes. By accelerating the deployment process, DevOps helps organizations meet growing customer demands while reducing risk.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>7 Tips for Landing a DevOps Position Without a Degree</title>
-		<link>https://www.valewood.org/devops-without-education/</link>
-		
-		<dc:creator><![CDATA[Greer Shepherd]]></dc:creator>
-		<pubDate>Thu, 17 Nov 2022 21:28:06 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[devops resource]]></category>
-		<guid isPermaLink="false">/?p=1645</guid>
-
-					<description><![CDATA[DevOps is hot right now. The demand for professionals with the skills to bridge the gap between software development and information technology operations is growing significantly. It’s not difficult to understand why. DevOps is a methodology that optimizes processes, removes&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is hot right now. The demand for professionals with the skills to bridge the gap between software development and information technology operations is growing significantly.</p>
-
-
-
-<p>It’s not difficult to understand why. DevOps is a methodology that optimizes processes, removes barriers, and improves collaboration between software developers and information technology (IT) operations teams. Because of its benefits, it’s becoming an increasingly attractive option for IT professionals who want to stand out from the crowd.</p>
-
-
-
-<p>In this blog post, you will learn about the types of roles available in DevOps, how you can land your first DevOps job, and what you need to succeed in your new role as a DevOps engineer or specialist.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>What Is DevOps?</h2>
-
-
-
-<p>DevOps is short for &#8220;software development operations.&#8221; It describes a set of best practices related to transforming the relationship between software developers and information technology (IT) operations personnel.</p>
-
-
-
-<p>DevOps aims to improve collaboration, increase efficiency, and reduce waste. This organizational transformation is commonly referred to as cultural transformation.</p>
-
-
-
-<p>Achieving cultural transformation requires employees in both departments to change their perspectives and expectations of each other. This is why DevOps is often seen as an ongoing journey, not a destination. DevOps is often associated with agile software development methodologies, such as Kanban, Scrum, and others.</p>
-
-
-
-<h2>What do DevOps Engineers do Day to Day?</h2>
-
-
-
-<p>A day in the life of DevOps engineers is not all that different than a day in any other technology career. A DevOps Engineer&#8217;s primary responsibility is centered around the health of the systems under their supervision. Those activities will include:</p>
-
-
-
-<ul>
-<li><strong>Look for anomalies:</strong> Despite our best efforts trying to completely cover a system in monitoring and visibility, sometimes things go bump in the night. These things could be reported by end users or other business units. Anytime something like that shows up, a DevOps Engineer should chase those anomalies down to something actionable.</li>
-
-
-
-<li><strong>Review new releases:</strong> Just because you have an awesome pipeline that utilizes GitOps to move code directly from commit to production does not mean that you should trust your technology stack. Take time daily to review what has been making its way out to production to both understand the changes, but also suggest improvements.</li>
-
-
-
-<li><strong>Review observability:</strong> Metrics and monitoring don&#8217;t do any good if nobody is looking at them. Anyone from systems administration through product owners should be reviewing these frequently looking for trends. Real-world usage of a system will always be different than what we thought it was going to be in the engineering phase and we should be validating, disproving, or augmenting our base assertions through data-driven decision-making.</li>
-
-
-
-<li><strong>Manage risks:</strong> Successful systems grow over time. DevOps engineers should be looking at a complete ecosystem to help promote long-term health and manage risk. There is no free lunch and growing capacity means that costs will also be going up. Helping the team understand this relationship and educating the product owners of the business on investment opportunities is a critical activity that cannot be overlooked.</li>
-
-
-
-<li><strong>Communicate with the team: </strong>Being in constant communication with your team is one of the core principles of DevOps. Since work units are broken down much farther than normal, rapid change is constantly being introduced. By promoting good synchronous and asynchronous communication patterns, teams will stay informed about what is important and urgent along with ensuring everyone is able to consume less urgent current events at their leisure.</li>
-
-
-
-<li><strong>Watch industry trends:</strong> Because of the speed that a DevOps team brings to the industry, trends and patterns are changing faster than ever. When looking to become a DevOps engineer, you should be ready to keep your RSS feeds hot and ready to consume.</li>
-
-
-
-<li><strong>Log new tickets: </strong>As you are doing your daily surveys of systems, undoubtedly you will run across either existing issues or issues that are sure to crop up in the near future. To help promote good planning, ensure that you are logging tickets into your ticket management system to ensure those issues do not get lost.</li>
-
-
-
-<li><strong>Develop the skills you need:</strong> DevOps engineers are lifelong learners. The specific practices of cloud, data, <a href="https://www.valewood.org/do-devops-engineers-need-a-coding-background/" data-type="post" data-id="326">coding</a>, Linux, programming, <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a>, culture, web, <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>, tools, etc. are constantly being changed to promote more fluid delivery models. Take time to sit back and absorb new concepts and techniques to help level up your career and your team.</li>
-
-
-
-<li><strong>Promote continuous improvement:</strong> Any tech company that is not embracing a culture of continuous improvement will quickly be outperformed by companies that do. By taking a little bit of time out of your day to focus on improving something that needs attention, you are contributing to a cleaner and safer technology product!</li>
-
-
-
-<li><strong>Have some fun:</strong> DevOps doesn&#8217;t need to be a grind. Make it a point to leave work behind and have some fun with your team.</li>
-</ul>
-
-
-
-<p>As you can see, DevOps Engineers have a lot of responsibility for running and maintaining technology.</p>
-
-
-
-<h2>Types of Jobs in DevOps</h2>
-
-
-
-<p>DevOps is a methodology that requires several different disciplines to fully adopt and become proficient in. In my opinion, I don&#8217;t think anyone technical should be asking &#8220;Can I become a DevOps Engineer?&#8221; because you are more than likely already qualified to be one! Let&#8217;s look at a few different roles in DevOps to see how the market is segmenting labor in this space.</p>
-
-
-
-<ul>
-<li><strong>Software Engineer:</strong> Software engineers are responsible for building software products and services against a set of requirements. This role usually has some kind of computer science background, but some of the best developers and engineers I have met started their careers with no formal degree.</li>
-
-
-
-<li><strong>Operations Engineer:</strong> Responsible for managing the lifecycle of technology ensuring the stability and reliability of systems. Anyone with a passion for learning technology and growing in the tech space should be searching the job market for entry-level operations jobs.</li>
-
-
-
-<li><strong>Quality Assurance:</strong> Responsible for validating the quality of software being developed through automated testing. Also responsible for making testing available to an entire DevOps team.</li>
-
-
-
-<li><strong>DevOps Engineer:</strong> Let’s start with the basics. If you’re looking to work as a DevOps engineer, you’ll need to be able to understand and work with code, have an excellent knowledge of server environments, and be able to think on the fly and find solutions to new problems.</li>
-
-
-
-<li><strong>DevOps Engineer Manager:</strong> In this capacity, you’ll need to be able to work with both technical and non-technical staff. You’ll be responsible for ensuring that the team is working effectively and efficiently. So, it goes without saying that you’ll need strong communication skills.</li>
-
-
-
-<li><strong>DevOps Architect:</strong> A DevOps architect is responsible for designing and implementing the organization’s software delivery system. This is often a challenging role that requires a great deal of experience, knowledge and a strong understanding of organizational needs.</li>
-
-
-
-<li><strong>DevOps Manager:</strong> As a DevOps manager, you’ll be responsible for overseeing the entire DevOps process, including hiring, training, and managing staff. You’ll need to be able to understand and communicate the needs of multiple stakeholders. You’ll also need to be able to manage the entire lifecycle of products, from development to delivery and ongoing maintenance.</li>
-</ul>
-
-
-
-<p>As you can see, normal everyday engineering roles can join a DevOps team. Don&#8217;t immediately exclude yourself because you have not been a DevOps engineer in the past. Most of us have started out in software engineering or system operations roles anyway.</p>
-
-
-
-<h2>How to Land a DevOps Job Without a Degree</h2>
-
-
-
-<p>In today’s job market, it is not enough to just have a good education and experience from your previous job. You must also know how to write a resume that highlights your skills and experience in a way that shows you as the best candidate for the job.</p>
-
-
-
-<p>This can be done by taking some time to research and learn about the particular industry you are interested in working in, as well as the company and the specific role you want to apply for.</p>
-
-
-
-<p>When you have this information in hand, you can then create a resume that places your skills, experience, and values at the top of the list. This will make it easy for hiring managers to see what makes you different than other candidates and more likely to be hired.</p>
-
-
-
-<p>With these things in mind, it is important to keep your resume updated as new jobs become available. You should also stay on top of employment trends so that you are ready when opportunities arise. By doing this, you will increase your chances of landing an interview and ultimately getting hired.</p>
-
-
-
-<p>Here are a few additional steps you can take to increase your odds of landing a DevOps Engineering position:</p>
-
-
-
-<ul>
-<li><strong>Research the role you want</strong>: Blindly showing up to a job interview for a DevOps position is not going to go well. Take some time to learn and understand the DevOps methodology and what it is trying to accomplish. Any of the technical skills needed can be acquired on the job so do let that be a limiting factor.</li>
-
-
-
-<li><strong>Network</strong>: The single best way to land a job in DevOps without a degree is to network, network, network. It’s one of the most effective ways to find out about new opportunities, learn about the industry, and connect with people who can help you advance your career.</li>
-
-
-
-<li><strong>Identify Your Skills</strong>: Before you can network effectively, you need to know what your skills are. Doing this will help you identify which organizations are best for you, as well as identify skill gaps. Furthermore, it will help you understand how to position yourself as the best candidate for a given role.</li>
-
-
-
-<li><strong>Join a DevOps Community:</strong> DevOps communities, like meetup groups and online forums, are excellent ways to find out about new opportunities and connect with people who can help you advance your career.</li>
-
-
-
-<li><strong>Create an Online Portfolio:</strong> Online portfolios can be incredibly powerful tools for job seekers without a degree. You should include examples of your work and information about your projects and roles.</li>
-
-
-
-<li><strong>Network with Employers</strong>: When you’re networking with employers, don’t sell yourself short. Be sure to highlight your skills, background, and experience.</li>
-</ul>
-
-
-
-<p>Regardless of your experience in development and operations, if you have any kind of tech experience, you should be looking to land a job in the DevOps engineering space. Entry-level positions are generally going to be a bit more focused on operations.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>3 Steps to Landing Any Job You Want</h2>
-
-
-
-<p>If you’re looking to find a job, landing any kind of position is a big deal. You can start by proactively searching for the positions you want, or by going through a recruiter or headhunter if they have a specific role you’re interested in.</p>
-
-
-
-<p>When you land a new job, you have to be prepared for all kinds of situations. You might have to move across the country if the company has an office there, and you may also have to learn new skills or take on new responsibilities.</p>
-
-
-
-<p>Making yourself ready for these situations can help you land any kind of job. For example, you could build up your résumé and online presence by completing online courses or volunteering at local organizations. This will show that you are ready for a new position and will also make it easier to find work once you are ready.</p>
-
-
-
-<p>Another option is to join professional organizations like Toastmasters or other networking groups where you can meet people who can help you land a new job. Just remember: Landing any kind of job takes time, so be prepared by taking steps now that will make it easier in the future!</p>
-
-
-
-<ul>
-<li><strong>Define What You Want</strong>: Before you embark on your job search, you need to make an honest assessment of what you want. Do you want a full-time position, or will a contract position work for you? How many hours do you want to work per week? What is your salary range? These are just a few of the questions you’ll need to answer.</li>
-
-
-
-<li><strong>Identify Your Strengths: </strong>Once you’ve identified what you want, you need to assess what you have to offer. What are your strengths? What are your weaknesses? This will help you identify which employers will be best for you.</li>
-
-
-
-<li><strong>Write a Great Resume</strong>: Once you’ve assessed your skills and talents, you need to translate them into action for your resume. This is your first opportunity to impress a prospective employer.</li>
-</ul>
-
-
-
-<h2>Why do Employers Value Degrees?</h2>
-
-
-
-<p>In the job market, it is no secret that you will very frequently see X level of degree or equivalent experience. I have noticed that this will generally disenfranchise individuals who are in the tech space from searching for a job at a particular company.</p>
-
-
-
-<p>As a hiring manager, I am generally looking for individuals who have an aptitude and are lifelong learners for any of the jobs I am looking to fill. People who are passionate about quality delivery, consistency, and passionate about personal development are always great candidates. When looking for a new job, make sure you focus on those key areas about yourself to really wow a future employer.</p>
-
-
-
-<p>Employers are also interested in standardized skills in software development, computer science, cloud, systems administration, etc. When someone graduates from higher education in the United States, there is a general sense that those individuals have learned and developed themselves enough to be effective from day 1, which is rarely the case in my experience.</p>
-
-
-
-<p>A Junior DevOps engineer position can be filled by anyone who is passionate about automation, CI/CD, cloud, programming, Linux, AWS, and other technical spaces regardless of their background. The key is to do your research and understand the goals of what DevOps is trying to accomplish and make sure you are ready for interview questions about the DevOps Methodology.</p>
-
-
-
-<p>When I am evaluating candidates, I bank on people first, not their skills. Even someone who may appear weak in a particular technology may be an incredible person that I want to work with. Some companies take the far more brutal leger-based approach on this. By only interviewing candidates who have a college degree, they are able to defer some of the cost of training. I would argue that is not a company that I want to work for.</p>
-
-
-
-<p>There is an old saying, &#8220;Nobody ever gets fired for choosing IBM&#8221;. This translates into, if you are choosing the best, there is no reason for anyone to second guess your decisions. A degree has a similar stigma behind it. If a hiring manager is betting on someone with a degree, they probably won&#8217;t regret their decision. As a candidate, you just need to make sure you give a prospective employer a reason to bet on you.</p>
-
-
-
-<p><strong>TLDR;</strong> Standardized skills, training, problem-solving, and risk mitigation.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>If you want a job as a DevOps Engineer, you’ll need to be prepared to show what you have to offer and sell yourself to prospective employers. Remember, though, that there are many different types of jobs in DevOps.</p>
-
-
-
-<p>So, before you start your search, it’s important to understand what you are looking for and how to stand out in a competitive hiring landscape. If you want a job in DevOps, you’ll need to be prepared to show what you have to offer and sell yourself to prospective employers.</p>
-
-
-
-<p>Remember, though, that there are many different types of jobs in DevOps: DevOps engineer, architect, engineer manager, and manager. Target what you want to be doing, and start applying. You are probably more qualified than you initially thought!</p>
 ]]></content:encoded>
 					
 		

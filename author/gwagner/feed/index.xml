@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 07 Dec 2022 22:30:05 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 08 Dec 2022 02:32:32 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,401 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>Kubernetes &#8211; Pod Stuck in Terminating Status</title>
+		<link>https://www.valewood.org/kubernetes-pod-stuck-terminating/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Thu, 08 Dec 2022 02:17:17 +0000</pubDate>
+				<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[day2ops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=2031</guid>
+
+					<description><![CDATA[Kubernetes is a powerful tool for managing complex containerized applications. It helps developers quickly deploy, scale, and manage their applications. However, with great power comes great responsibility and Kubernetes has its share of issues that can cause headaches for developers.&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> is a powerful tool for managing complex containerized applications. It helps developers quickly deploy, scale, and manage their applications.</p>
+
+
+
+<p>However, with great power comes great responsibility and Kubernetes has its share of issues that can cause headaches for developers. One of the most dreaded issues is the Kubernetes &#8220;pod stuck terminating&#8221; issue.</p>
+
+
+
+<p>In this article, we’ll discuss what this issue is, the common causes, how to diagnose a stuck pod, strategies for solving the issue, a step-by-step guide to solving the issue, best practices for avoiding the issue in the future, troubleshooting tips for Kubernetes pods, useful tools for monitoring and managing Kubernetes pods, courses and tutorials on Kubernetes pod management, and more.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>What is the Kubernetes &#8220;Pod Stuck Terminating&#8221; Issue?</h2>
+
+
+
+<p>The Kubernetes pod stuck terminating issue occurs when a pod remains in the “Terminating” state for an extended period of time. This can be caused by a number of different issues and can be quite frustrating for developers.</p>
+
+
+
+<p>The issue can manifest itself in a number of ways. For example, you may see that your pod is stuck in the “Terminating” state and never fully terminates and continues to consume resources. You may check the host to which the pod was assigned, and the <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> container and underlying PID have been terminated, but Kubernetes is reporting it as stuck in a terminating state.</p>
+
+
+
+<p>Regardless of the issue, the Kubernetes pod stuck terminating issue can be a major headache for developers and can cause serious delays in deploying applications.</p>
+
+
+
+<h2>Common Causes of Pods Becoming Stuck</h2>
+
+
+
+<p>The Kubernetes pod stuck terminating issue can be caused by a number of different issues. The most common causes include:</p>
+
+
+
+<ul>
+<li><strong>Not enough resources:</strong> Kubernetes pods require sufficient resources in order to function properly. If there aren’t enough resources available, the pod may get stuck in the “Terminating” state. It is important to look at the state of your worker node at the time the pod went unresponsive. If all system resources were consumed, like a disk filling up, then Kubernetes may not actually be the core issue to diagnose.</li>
+
+
+
+<li><strong>Contention for resources:</strong> If there are multiple pods competing for resources, one of the pods may get stuck in the “Terminating” state as it waits for resources to become available.</li>
+
+
+
+<li><strong>Problems with the pod: </strong>If there is something wrong with the pod itself, it may get stuck in the “Terminating” state. This could be due to an issue with the code, configuration, or other problems.</li>
+
+
+
+<li><strong>Issues with the Kubernetes cluster:</strong> If there is something wrong with the Kubernetes cluster itself, it may cause the pod to get stuck in the “Terminating” state. This can happen when cluster communications become disconnected from a blip or network partition. The worker node may be functioning as expected, but cannot tell the Kubernetes API that it is working properly.</li>
+</ul>
+
+
+
+<h2>How to Diagnose a Stuck Pod</h2>
+
+
+
+<p>If you find that your Kubernetes pod is stuck in the “Terminating” state, there are a few steps you can take to diagnose the issue.</p>
+
+
+
+<p>The first thing you should do is check the logs. Check the logs for the pod to see if there are any error messages or warnings that could indicate the cause of the issue.</p>
+
+
+
+<p>Next, you should check the resource utilization of the pod. If the pod is consuming too many resources, it could be causing issues.</p>
+
+
+
+<p>After that, you should check the resource utilization on the server at the time the pod became stuck in a terminating state. If the server ran out of disk, the pod became stuck, but now system resources look fine; the reality is that the processes on the server itself may be in an unknown or unrecoverable state without a reboot.</p>
+
+
+
+<p>Finally, you should check the status of the node from kubectl. If the node is not reporting itself as healthy via `kubectl get nodes` then that node should be drained, which may not be possible, and subsequently rebooted and its health re-reviewed.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Strategies for Solving the Issue</h2>
+
+
+
+<p>Once you’ve identified the cause of the issue, there are a few strategies you can use to solve the issue.</p>
+
+
+
+<h3>Check the Worker Node</h3>
+
+
+
+<p>First, check the worker node that was running the pod to see what state the underlying container is in via <code>ctr</code>. If the container is no longer running, the next thing to check is for running PIDs on the system that matches the process being run by the container. If there are no relevant PIDs, then you can run <code>kubectl delete pod --force=true --grace-period=0 -n &lt;NAMESPACE> &lt;STUCK POD NAME></code> to forcibly remove the pod from the Kubernetes API.</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/2139.png" alt="ℹ" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Depending on your version of Kubernetes, you may have Docker or Container.io as a container runtime.  If you have docker, use <code>docker ps</code> to check container status.  If you have Container.io you will use <code>runc</code> or <code>ctr</code> to check the status of your pods.</p>
+</blockquote>
+
+
+
+<p>In this scenario, a pod was successfully terminated on the worker system, but the Kubernetes worker or the API is out of sync with each other and neither of them really knows the state of the pod.</p>
+
+
+
+<p>Signs may point to the issue being fixed after this, but in my experience, you should go ahead and do a full health check of your cluster as this is an edge case caused by some underlying issue somewhere else.</p>
+
+
+
+<h3>Keep Checking the Worker Node</h3>
+
+
+
+<p>I am cheating here slightly. This is an extension of &#8220;Check the Worker Node&#8221;, but we will assume that the pod is actually still running and has not terminated.</p>
+
+
+
+<p>When a pod is stuck in a terminating state this way, the PID that the pod was managing may not be terminating properly. Checking logs here should be the first step. I have run into issues in the past where applications are not properly listening to system signals like SIGHUP to know it is time to terminate.</p>
+
+
+
+<p>If you are running internally developed software, check with your development teams to see how the application responds to system signals.</p>
+
+
+
+<h3>Rolling Reboots</h3>
+
+
+
+<p>The worker node may be perfectly healthy in some instances. Working backward, there could be a problem with either the Kubernetes API receiving update information from worker nodes, a network partition / other network issues, or the ETCd cluster may not be synchronizing properly across all nodes and refusing new write operations.</p>
+
+
+
+<p>If you are in a highly resilient state in your Kubernetes cluster, load-balanced masters with multiple ETCd nodes, then a rolling reboot should not hurt anything. Your rolling reboot at that layer should be properly communicated to any parties that could be impacted.</p>
+
+
+
+<p>In my experience, this may fix a multitude of issues that may not even be presenting themselves. This is why communication is important. There may be resources that are suddenly rebooted or changed in a way that your business partners were not expecting.</p>
+
+
+
+<h2>A Step-By-Step Guide to Solving the Issue</h2>
+
+
+
+<p>If you find that your Kubernetes pod is stuck in the “Terminating” state, here’s a step-by-step guide to solving the issue:</p>
+
+
+
+<ol>
+<li>Check the worker node for signs of stuck PIDs or stuck containers through `ctr`</li>
+</ol>
+
+
+
+<p>If the node has stuck PIDs or a stuck container, the process running inside of the container is not properly listening to system signals like SIGHUP. File a bug report with the application developers for guidance or bug fixes.</p>
+
+
+
+<ol>
+<li>Check the worker kubelet process logs for signs errors</li>
+
+
+
+<li>Check the master&#8217;s kubelet process logs for signs of errors</li>
+
+
+
+<li>Check the master&#8217;s kube-scheduler process logs for signs of errors</li>
+
+
+
+<li>Check the master&#8217;s kube-controller-manager process logs for signs of errors</li>
+
+
+
+<li>Check the master&#8217;s kube-apiserver process logs for signs of errors</li>
+</ol>
+
+
+
+<p>If any of these checks present an issue, it is time to start rolling reboots of nodes in your cluster. Start with the impacted worker and move your way back to the masters. Other workers in the cluster probably do not need a reboot.</p>
+
+
+
+<ol>
+<li>Check server resources at the time the pod became stuck in a terminating state.</li>
+</ol>
+
+
+
+<p>If this is the case, look for both a root cause of why the server filled up, and perform a reboot on the server. Servers become very unhappy when resources like disks become inaccessible due to capacity issues.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Best Practices for Avoiding the Issue in the Future</h2>
+
+
+
+<p>Once you’ve solved the Kubernetes pod stuck terminating issue, it’s important to take steps to avoid the issue in the future. Here are some best practices for avoiding the issue:</p>
+
+
+
+<ul>
+<li>Monitor your pods: Monitor your pods to make sure they’re not consuming too many resources.</li>
+
+
+
+<li>Set limits on resources: Set limits on the resources that your pods can consume to avoid resource contention.</li>
+
+
+
+<li>Check your code: Make sure your code is correct and that your pods are properly configured.</li>
+
+
+
+<li>Test your pods: Test your pods before deploying them to make sure they’re functioning properly.</li>
+
+
+
+<li>Upgrade your cluster: Make sure your Kubernetes cluster is up-to-date to avoid issues.</li>
+</ul>
+
+
+
+<h2>Troubleshooting Tips for Kubernetes Pods</h2>
+
+
+
+<p>If you’re having issues with your Kubernetes pods, here are some troubleshooting tips to help you identify and solve the issue:</p>
+
+
+
+<ul>
+<li><strong>Check the logs:</strong> Check the logs for your pod to see if there are any error messages or warnings.</li>
+
+
+
+<li><strong>Check the resource utilization:</strong> Check the resource utilization of your pod to make sure it’s not consuming too many resources.</li>
+
+
+
+<li><strong>Check the status of the pod:</strong> Check the status of the pod to make sure it’s not stuck in the “Terminating” state.</li>
+
+
+
+<li><strong>Try scaling up the resources: </strong>Try scaling up the resources for the pod to see if that helps to resolve the issue.</li>
+
+
+
+<li><strong>Try restarting the pod:</strong> Try restarting the pod to see if that helps to resolve the issue.</li>
+
+
+
+<li><strong>Try deleting the pod:</strong> Try deleting the pod and recreating it to see if that helps to resolve the issue.</li>
+</ul>
+
+
+
+<h2>Useful Tools for Monitoring and Managing Kubernetes Pods</h2>
+
+
+
+<p>There are a number of useful tools that can help you monitor and manage your Kubernetes pods. These tools can help you identify and solve issues with your pods.</p>
+
+
+
+<p>Some of the most popular tools include:</p>
+
+
+
+<ul>
+<li><a href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" data-type="URL" data-id="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" rel="noreferrer noopener nofollow">Kubernetes Dashboard</a>: This open-source dashboard allows you to monitor and manage your Kubernetes pods.</li>
+
+
+
+<li><a href="https://prometheus.io/" data-internallinksmanager029f6b8e52c="2" title="Prometheus" rel="nofollow noopener" target="_blank">Prometheus</a>: This open-source monitoring tool allows you to monitor your Kubernetes clusters and pods.</li>
+
+
+
+<li><a href="https://aquasecurity.github.io/kube-hunter/" target="_blank" data-type="URL" data-id="https://aquasecurity.github.io/kube-hunter/" rel="noreferrer noopener nofollow">Kube-Hunter</a>: This open-source security tool allows you to scan your Kubernetes clusters for security issues.</li>
+
+
+
+<li><a href="https://helm.sh/" target="_blank" data-type="URL" data-id="https://helm.sh/" rel="noreferrer noopener nofollow">Helm</a>: This open-source package manager allows you to easily install and manage applications on your Kubernetes cluster.</li>
+</ul>
+
+
+
+<h2>Courses and Tutorials on Kubernetes Pod Management</h2>
+
+
+
+<p>If you’re looking to learn more about managing Kubernetes pods, there are a number of courses and tutorials available. Here are some of the best courses and tutorials:</p>
+
+
+
+<ul>
+<li><a href="https://www.udemy.com/course/the-complete-guide-to-kubernetes-3-course-bundle/" target="_blank" data-type="URL" data-id="https://www.udemy.com/course/the-complete-guide-to-kubernetes-3-course-bundle/" rel="noreferrer noopener nofollow">Kubernetes The Complete Guide</a>: This course covers everything you need to know about managing Kubernetes pods.</li>
+
+
+
+<li><a href="https://training.linuxfoundation.org/training/kubernetes-fundamentals/" target="_blank" data-type="URL" data-id="https://training.linuxfoundation.org/training/kubernetes-fundamentals/" rel="noreferrer noopener nofollow">Kubernetes Fundamentals</a>: This tutorial covers the basics of managing Kubernetes pods.</li>
+
+
+
+<li><a href="https://kubernetesbootcamp.github.io/kubernetes-bootcamp/" target="_blank" data-type="URL" data-id="https://kubernetesbootcamp.github.io/kubernetes-bootcamp/" rel="noreferrer noopener nofollow">Kubernetes Bootcamp</a>: This course covers the fundamentals of managing Kubernetes clusters and pods.</li>
+
+
+
+<li><a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/" target="_blank" data-type="URL" data-id="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/" rel="noreferrer noopener nofollow">Kubernetes Pod Management</a>: This tutorial covers the basics of managing Kubernetes pods.</li>
+</ul>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>The dreaded Kubernetes &#8220;pod stuck terminating&#8221; issue can be a major headache for developers and systems administration teams.</p>
+
+
+
+<p>In this article, we’ve discussed what this issue is, the common causes, how to diagnose a stuck pod, strategies for solving the issue, a step-by-step guide to solving the issue, best practices for avoiding the issue in the future, troubleshooting tips for Kubernetes pods, useful tools for monitoring and managing Kubernetes pods, courses and tutorials on Kubernetes pod management, and more.</p>
+
+
+
+<p>If you’re having issues with your Kubernetes pods, try following the steps outlined in this article. And remember, if you’re looking to learn more about managing Kubernetes pods, there are a number of courses and tutorials available to help you.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Unlock the Power of DevOps Shift-Left Testing</title>
 		<link>https://www.valewood.org/devops-shift-left-testing/</link>
 		
@@ -2232,294 +2627,6 @@
 
 
 <p>DevOps is all about collaboration, communication and cooperation. When everyone on the team trusts and respects each other, they are much more likely to collaborate effectively. This can only happen when everyone feels safe to give their opinion and be open about their needs. Building a culture of trust and respect will take time and effort. However, it is well worth the effort as it will lead to better communication, a healthier team, and ultimately better results for your organization.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>How do Agile and DevOps Interrelate?</title>
-		<link>https://www.valewood.org/devops-and-agile/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Sat, 05 Nov 2022 20:49:28 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[delivery]]></category>
-		<category><![CDATA[development]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[devops and agile]]></category>
-		<category><![CDATA[software]]></category>
-		<guid isPermaLink="false">/?p=1264</guid>
-
-					<description><![CDATA[DevOps (an abbreviation of developer operations) is the marriage between software development and IT operation. It’s a term used to describe practices and technologies aimed at bringing together software engineers and IT professionals to produce software more efficiently. In this&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> (an abbreviation of developer operations) is the marriage between software development and IT operation. It’s a term used to describe practices and technologies aimed at bringing together software engineers and IT professionals to produce software more efficiently.</p>
-
-
-
-<p>In this blog post, we’ll cover the main principles of DevOps and its interrelation with Agile. It can be challenging for teams that are new to both concepts at the same time, but they really make sense when taken in their entirety. In other words, by following these steps, you’ll be able to create an effective DevOps culture within your organization.</p>
-
-
-
-<p>So, how do agile and DevOps interrelate?</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>What is DevOps?</h2>
-
-
-
-<p>DevOps is a transformation aimed at integrating the software development and operations teams from a business perspective. It’s a combination of techniques found in Lean and Agile methodologies, and it’s used to transform the way organizations produce software.</p>
-
-
-
-<p>DevOps merges the disciplines of development and operations to create a more efficient process that successfully addresses the challenges faced by businesses today. DevOps is an umbrella term that describes a set of processes aimed at bridging the gap between software development and IT operations.</p>
-
-
-
-<p>I think this is the first key to explaining how agile and DevOps interrelate. In a more traditional approach, there are generally a series of handoffs between different responsibilities in an organization. When trying to understand how agile and DevOps work together, start by visualizing a world where handoffs do not happen anymore. This will immediately produce savings over the life cycle of your products.</p>
-
-
-
-<p>Agile teams are also unique in their own right when compared to a more traditional organizational structure. An agile team is going to consistently be reviewing their development processes for areas of improvement. This is going to allow for meaningful growth and promote a model focused on continuous integration and continuous delivery.</p>
-
-
-
-<h2>What Makes DevOps Different from Other Methodologies?</h2>
-
-
-
-<p>DevOps integrates the development and operations teams into a single functional delivery team. From a business perspective, it focuses on creating product delivery cycles that solve real problems instead of just churning out code for the sake of producing code.</p>
-
-
-
-<p>By combining these disciplines developers can spend less time dealing with the complexities of big bang releases and more time creating new rapidly developed incremental features. This is because the process is automated.</p>
-
-
-
-<p>This helps organizations achieve high software quality, fast delivery, and easier adaptation to the market. To end-users, DevOps looks like this: When a team of developers wants to create a new feature, they can rapidly plan, prototype, adjust, and release that feature to start realizing the value of that work.</p>
-
-
-
-<p>Agile development methodologies are usually found with any functional DevOps team. When looking at a more traditional project management methodology like Waterfall, anyone trying to implement DevOps will generally stop short at automating infrastructure as code. A project utilizing the Agile DevOps methodology will take that several steps further.</p>
-
-
-
-<p>An Agile DevOps team will focus on automating the entire process. Continuous integration will be utilized as a cornerstone to build a robust framework to test and deploy their software. The end goal is to transition into a model of continuous delivery to enable many releases to production in a single day.</p>
-
-
-
-<p>Day 2 operations will be integrated into their technology pipelines as well. Tools and automation will be built to take care of more routine tasks such as certificate renewals or auto-remediation. Because DevOps pipelines are test-driven, future unexpected changes are also quickly identified and fixed much more easily.</p>
-
-
-
-<h2>What Makes a More Traditional SDLC Risky?</h2>
-
-
-
-<p>When working in a more traditional software methodology software moves down an assembly line with bigger changes leading to larger risk.</p>
-
-
-
-<p>New features are approved and then tested, followed by regression, and finally deployed to production. This is the most traditional way to work with code. However, it is not always the most efficient way to work with code.</p>
-
-
-
-<p>Changes to the code base should be approached from the perspective of the risk involved with any change. When working with big changes in the code base, it is important to look at the big picture of the software. If you are only focused on one aspect of the software, even though it might be the most crucial aspect, you risk overlooking something else that is just as important.</p>
-
-
-
-<p>Big-picture thinking is achieved by working with the whole software. If you are building a new feature, you need to start with a new branch of the code base. Without testing the new code, you risk breaking something else in the software. Once you are sure there are no errors in the new code, you can start the testing process. After you are certain the new code has no bugs, you can release it to your production environment.</p>
-
-
-
-<p>When the process relies on larger changes, with more complex processes, and more opinions about quality in every decision being made down the assembly line there is a higher likelihood that project timelines will slip or never be delivered at all.</p>
-
-
-
-<h2>The Importance of Collaboration in DevOps</h2>
-
-
-
-<p>DevOps is the marriage between software development and IT operations. It’s a term used to describe practices and technologies aimed at bringing together software engineers and IT professionals to produce software more efficiently.</p>
-
-
-
-<p>In this marriage, there must be a collaboration between the teams involved. This collaboration allows for a better understanding of each other’s roles, and for the shared goal of creating better software with minimal time and effort.</p>
-
-
-
-<p>DevOps is key to transforming the operations side of an organization and allowing everyone involved to create high-quality, reliable software. And collaboration between the teams is what allows for this.</p>
-
-
-
-<h2>Establishing a Culture of Collaboration for Success in DevOps</h2>
-
-
-
-<p>Before you can start implementing DevOps in your organization, you need to establish a culture of collaboration between the teams involved. DevOps is a marriage between teams, and successful marriages are built on communication and a mutual understanding of what both parties bring to the table.</p>
-
-
-
-<p>To create this culture, you’ll want to start by determining which members of your organization are involved in the transformation. You can do this by identifying the individuals who are responsible for bringing the different teams together (such as product managers, architects, developers, and operations staff).</p>
-
-
-
-<p>You can also do a deeper dive into how the teams interact with each other. Ask yourself:</p>
-
-
-
-<ul>
-<li>What information does each team need from the other?</li>
-
-
-
-<li>What do they do with that information?</li>
-
-
-
-<li>What are their roles and responsibilities?</li>
-</ul>
-
-
-
-<p>This will help you determine where the gaps are between the teams and what needs to change.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>What is Agile?</h2>
-
-
-
-<p>Agile has been used in the software development community for a long time, but DevOps has brought it to the forefront.</p>
-
-
-
-<p>Agile is a collection of methodologies based on rapid, evolutionary development. It’s about understanding your business needs and developing products and services to meet them.</p>
-
-
-
-<p>This type of development is often referred to as evolutionary development, and it’s meant to be a continuous process. This means that in order to adjust to changes in your business, you’ll need to adjust your processes accordingly.</p>
-
-
-
-<p>Evolutionary development has many advantages over traditional methods of development, such as waterfall. Waterfall is a method that focuses on a single target release date, and it’s often used in traditional methodologies.</p>
-
-
-
-<h2>The Importance of Agility in Digital Development</h2>
-
-
-
-<p>Agile development emphasizes the need for constant communication and collaboration between the teams responsible for product development. This communication is key to the success of the transformation, and it’s achieved by bringing together architects, product managers, developers, and operations staff.</p>
-
-
-
-<p>By bringing everyone together, you’ll be able to understand their roles and responsibilities and make adjustments as necessary. And, most importantly, you’ll be able to communicate better and collaborate.</p>
-
-
-
-<p>By developing products and services that respond to the needs of your customers, you’ll be able to create better software with minimal effort.</p>
-
-
-
-<p>When you develop products that your customers actually want, they’re going to be much happier with your software. It’s important to remember that creating customer value is the goal of every business process. Finding ways to make your own business process more efficient is important, but it’s even more critical to focus on customer value.</p>
-
-
-
-<h2>Interaction Between Agile and DevOps Principles</h2>
-
-
-
-<p>Many people are under the assumption that DevOps and Agile are two different methods, when, in fact, they’re both about rapid, continuous improvement. There are some differences between them, but both focus on bringing the best out of their team members.</p>
-
-
-
-<p>Both DevOps and Agile are about collaboration between teams, and both aim to create high-quality, reliable software. But clearly, there are differences between the two. Let’s take a look at some of the similarities between the two methodologies.</p>
-
-
-
-<p>Both DevOps and Agile work best when they are integrated. The goal of an integrated approach is to produce high-quality software as quickly as possible. Through the collaboration between developers, testers, operations staff, and other members of the team, you can achieve a faster turnaround time for your software.</p>
-
-
-
-<p>To make this collaboration possible, teams must adhere to certain principles such as communication, consistency, and agility.</p>
-
-
-
-<p>Additionally, an integrated DevOps and Agile approach can help to reduce the risk of software defects. To accomplish this, you must work with your team to create automated tests for your software.</p>
-
-
-
-<p>By integrating DevOps and Agile development processes, you can increase your team’s overall quality. Through testing, you can catch problems before they are shipped to customers. Operations can also be integrated into the process, reducing bottlenecks and increasing the speed of software releases.</p>
-
-
-
-<p>These principles aren’t rigid rules; rather, they’re guidelines for implementing good practices for developing software and delivering it more efficiently. They aren’t meant to replace traditional methods of doing business or IT operations; rather, they complement them in order to achieve greater results as quickly as possible.</p>
-
-
-
-<h3>Being Agile with DevOps</h3>
-
-
-
-<p>DevOps is based on an Agile mindset. It’s an approach to agile software development and software delivery. This means developers and operations professionals must collaborate closely to create a better product in the shortest amount of time possible.</p>
-
-
-
-<h3>Being Lean with DevOps</h3>
-
-
-
-<p>Lean principles are also important in DevOps, but they are used differently than they are in traditional lean methodologies. These principles focus on continuous improvement, continuous learning, and continuous feedback. The overall goal is to make the process more efficient by minimizing waste and increasing quality.</p>
-
-
-
-<h2>Limitations of Traditional Methods of Software Development</h2>
-
-
-
-<p>Traditional methodologies are focused on creating a single version of the truth, which can be a limitation if you want to adapt to changing business needs. DevOps, on the other hand, is all about continuous change, so it can be challenging to adapt to that. While related, the need to be agile is a significant difference between DevOps and traditional methodologies.</p>
-
-
-
-<h2>Advantages of DevOps over Traditionally practiced methodologies</h2>
-
-
-
-<p>The main advantage of DevOps over traditional methodologies is that it helps organizations create better software with minimal effort. With traditional methodologies, such as Waterfall, there is a high probability that the software will not be delivered on time and within budget, and that can be a significant problem. With DevOps, on the other hand, it’s important to note that there’s a difference between creating better software and just producing more of it.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>DevOps is a transformation aimed at bringing together the disciplines of development and operations to produce high-quality software. It’s a marriage between the teams involved, and it needs to be built on communication and collaboration. DevOps is key to transforming operations and allowing everyone to create high-quality, reliable software. And collaboration between teams is what allows for this. DevOps is the marriage between software engineers and IT professionals.</p>
 ]]></content:encoded>
 					
 		
