@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/kubernetes/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Thu, 08 Dec 2022 02:32:32 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 10 Dec 2022 17:36:40 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,7 +28,7 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>Kubernetes &#8211; Pod Stuck in Terminating Status</title>
+		<title>Solve Your Kubernetes Pod Stuck in Terminating Status Woes in no Time</title>
 		<link>https://www.valewood.org/kubernetes-pod-stuck-terminating/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -156,7 +156,7 @@
 
 
 
-<p>First, check the worker node that was running the pod to see what state the underlying container is in via <code>ctr</code>. If the container is no longer running, the next thing to check is for running PIDs on the system that matches the process being run by the container. If there are no relevant PIDs, then you can run <code>kubectl delete pod --force=true --grace-period=0 -n &lt;NAMESPACE> &lt;STUCK POD NAME></code> to forcibly remove the pod from the Kubernetes API.</p>
+<p>First, check the worker node that was running the pod to see what state the underlying container is in via <code>ctr</code>. If the container is no longer running, the next thing to check is for running PIDs on the system that matches the process being run by the container. If there are no relevant PIDs, then you can run <code>kubectl delete pod --force=true --grace-period=0 -n &lt;NAMESPACE&gt; &lt;STUCK POD NAME&gt;</code> to forcibly remove the pod from the Kubernetes API.</p>
 
 
 
