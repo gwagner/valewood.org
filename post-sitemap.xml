@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.valewood.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://www.valewood.org/kubernetes-pod-stuck-terminating/</loc>
-		<lastmod>2022-12-10T11:36:40-06:00</lastmod>
+		<loc>https://www.valewood.org/ansible-text-to-json/</loc>
+		<lastmod>2022-12-14T11:44:34-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/how-chatgpt-can-speed-up-devops-by-writing-ansible/</loc>
+		<lastmod>2022-12-14T11:43:35-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/ansible-create-vmware-esxi-vm/</loc>
+		<lastmod>2022-12-14T11:42:43-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/</loc>
+		<lastmod>2022-12-14T11:41:25-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-interview-with-chatgpt/</loc>
-		<lastmod>2022-12-10T11:35:37-06:00</lastmod>
+		<lastmod>2022-12-14T08:54:58-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/kubernetes-pod-stuck-terminating/</loc>
+		<lastmod>2022-12-10T11:36:40-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/kubernetes-crashloopbackoff-error/</loc>
@@ -57,14 +73,6 @@
 		<lastmod>2022-12-02T16:00:34-06:00</lastmod>
 	</url>
 	<url>
-		<loc>https://www.valewood.org/ansible-create-vmware-esxi-vm/</loc>
-		<lastmod>2022-12-02T15:55:26-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/ansible-modify-vmware-esxi-guest-file/</loc>
-		<lastmod>2022-12-02T15:53:04-06:00</lastmod>
-	</url>
-	<url>
 		<loc>https://www.valewood.org/more-like-boringops/</loc>
 		<lastmod>2022-12-02T15:38:03-06:00</lastmod>
 	</url>
@@ -108,10 +116,6 @@
 	<url>
 		<loc>https://www.valewood.org/purpleurchin-crypto-mining/</loc>
 		<lastmod>2022-10-31T08:21:20-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/ansible-text-to-json/</loc>
-		<lastmod>2022-10-24T20:20:57-05:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-scripting/</loc>
