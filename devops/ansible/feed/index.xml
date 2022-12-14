@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/ansible/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 02 Dec 2022 21:55:26 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 14 Dec 2022 17:44:34 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -37,6 +37,7 @@
 		<category><![CDATA[Ansible]]></category>
 		<category><![CDATA[devops]]></category>
 		<category><![CDATA[howto]]></category>
+		<category><![CDATA[syntax-highlight]]></category>
 		<category><![CDATA[tools]]></category>
 		<guid isPermaLink="false">/?p=1232</guid>
 
@@ -128,7 +129,7 @@
 
 
 
-<pre class="wp-block-code yaml"><code>---
+<pre class="wp-block-code language-yaml"><code>---
 - name: Modify VMWare ESXi VM File
   hosts: all
   gather_facts: false
@@ -249,7 +250,7 @@
 
 
 
-<pre class="wp-block-code yaml"><code>    - name: Create .ssh folder
+<pre class="wp-block-code language-yaml"><code>    - name: Create .ssh folder
       community.vmware.vmware_guest_file_operation:
         validate_certs: false
         hostname: "{{ vmware_host }}"
@@ -289,7 +290,7 @@
 
 
 
-<pre class="wp-block-code yaml"><code>    - name: Copy RSA to VM
+<pre class="wp-block-code language-yaml"><code>    - name: Copy RSA to VM
       community.vmware.vmware_guest_file_operation:
         validate_certs: false
         hostname: "{{ vmware_host }}"
@@ -337,7 +338,7 @@
 
 
 
-<pre class="wp-block-code"><code>    - name: Run command inside a virtual machine
+<pre class="wp-block-code language-yaml"><code>    - name: Run command inside a virtual machine
       community.vmware.vmware_vm_shell:
         hostname: "{{ vmware_host }}"
         username: "{{ vmware_user }}"
@@ -377,6 +378,11 @@
 		<pubDate>Wed, 26 Oct 2022 03:28:55 +0000</pubDate>
 				<category><![CDATA[DevOps]]></category>
 		<category><![CDATA[Ansible]]></category>
+		<category><![CDATA[coding]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[syntax-highlight]]></category>
+		<category><![CDATA[tools]]></category>
 		<guid isPermaLink="false">/?p=1213</guid>
 
 					<description><![CDATA[This post will help anyone who is attempting to use Ansible to create new VMs with automation when Practicing DevOps. I use this in my home lab to help stay current with new trends in DevOps. Not everyone is going&#8230;]]></description>
@@ -433,7 +439,7 @@
 
 
 
-<pre class="wp-block-code yaml"><code>---
+<pre class="wp-block-code language-yaml"><code>---
 - name: Create VMWare ESXi VM
   hosts: all
   gather_facts: false
@@ -588,7 +594,7 @@
 
 
 
-<pre class="wp-block-code yaml"><code>---
+<pre class="wp-block-code language-yaml"><code>---
 all:
   hosts:
   children:
@@ -616,7 +622,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>    - include_vars: config.yaml
+<pre class="wp-block-code language-yaml"><code>    - include_vars: config.yaml
       delegate_to: localhost
 
     - include_vars: creds.yaml # Remember, this should be in a vault
@@ -654,7 +660,7 @@ all:
 
 
 
-<pre class="wp-block-code"><code>    - name: Check if virtual machine exists
+<pre class="wp-block-code language-yaml"><code>    - name: Check if virtual machine exists
       community.vmware.vmware_guest_info:
         validate_certs: false 
         hostname: "{{ vmware_host }}"
@@ -674,7 +680,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>    - set_fact:
+<pre class="wp-block-code language-yaml"><code>    - set_fact:
         destructive: yes
       when: |
         vmware_validate_guest is defined and (
@@ -696,7 +702,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>    - name: Add vmware as a host
+<pre class="wp-block-code language-yaml"><code>    - name: Add vmware as a host
       add_host:
         hostname: "{{ vmware_host }}"
         ansible_ssh_host: "{{ vmware_host }}"
@@ -714,7 +720,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>    - set_fact:
+<pre class="wp-block-code language-yaml"><code>    - set_fact:
         num_cpu_cores_per_socket: "{{ vmware.num_cpus | int / 2 }}"</code></pre>
 
 
@@ -723,7 +729,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>    - name: Remove virtual machine from inventory
+<pre class="wp-block-code language-yaml"><code>    - name: Remove virtual machine from inventory
       community.vmware.vmware_guest:
         validate_certs: false
         hostname: "{{ vmware_host }}"
@@ -742,7 +748,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>    - name: Delete VM Folders
+<pre class="wp-block-code language-yaml"><code>    - name: Delete VM Folders
       ansible.builtin.file:
         path: "{{storage_path}}/{{ vmware.name }}/"
         state: absent
@@ -782,7 +788,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>    - name: Create a virtual machine on vmware
+<pre class="wp-block-code language-yaml"><code>    - name: Create a virtual machine on vmware
       community.vmware.vmware_guest:
         validate_certs: false
         hostname: "{{ vmware_host }}"
@@ -823,7 +829,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>    - name: Copy boot disk VMDK Files
+<pre class="wp-block-code language-yaml"><code>    - name: Copy boot disk VMDK Files
       ansible.builtin.command: "{{ item }}"
       delegate_to: "{{ vmware_host }}"
       loop:
@@ -837,7 +843,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>    - name: Add boot disks to virtual machine
+<pre class="wp-block-code language-yaml"><code>    - name: Add boot disks to virtual machine
       community.vmware.vmware_guest_disk:
         validate_certs: false
         hostname: "{{ vmware_host }}"
@@ -861,7 +867,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>    - name: Power on virtual machine
+<pre class="wp-block-code language-yaml"><code>    - name: Power on virtual machine
       community.vmware.vmware_guest:
         validate_certs: false
         hostname: "{{ vmware_host }}"
@@ -908,6 +914,7 @@ all:
 		<category><![CDATA[Ansible]]></category>
 		<category><![CDATA[ansible]]></category>
 		<category><![CDATA[howto]]></category>
+		<category><![CDATA[syntax-highlight]]></category>
 		<guid isPermaLink="false">/?p=1187</guid>
 
 					<description><![CDATA[I was looking through Reddit today and saw an interesting question about how to manipulate files with Ansible. I took a few minutes to throw together an example of how to convert a relatively simple file, a list of strings&#8230;]]></description>
@@ -940,7 +947,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>- name: Simple Read file and output JSON
+<pre class="wp-block-code language-yaml"><code>- name: Simple Read file and output JSON
   hosts: localhost
   connection: local 
   become: false
@@ -967,7 +974,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>  - name: Read Data File
+<pre class="wp-block-code language-yaml"><code>  - name: Read Data File
     set_fact:
       data: "{{lookup('ansible.builtin.file', './input.txt').split('\n')}}"</code></pre>
 
@@ -977,7 +984,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>  - name: Show debug data
+<pre class="wp-block-code language-yaml"><code>  - name: Show debug data
     ansible.builtin.debug: var=data</code></pre>
 
 
@@ -986,7 +993,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>  - name: Write output json file
+<pre class="wp-block-code language-yaml"><code>  - name: Write output json file
     copy:
       dest: output.json
       content: "{{ data | to_json }}" </code></pre>
@@ -1001,7 +1008,7 @@ all:
 
 
 
-<pre class="wp-block-code json"><code>&#091;"/site/foo/", "/site/bar/"]</code></pre>
+<pre class="wp-block-code language-json"><code>&#091;"/site/foo/", "/site/bar/"]</code></pre>
 
 
 
@@ -1025,7 +1032,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>- name: Complex Read file and output JSON
+<pre class="wp-block-code language-yaml"><code>- name: Complex Read file and output JSON
   hosts: localhost
   connection: local 
   become: false
@@ -1065,7 +1072,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code> - name: Create a new array
+<pre class="wp-block-code language-yaml"><code> - name: Create a new array
     set_fact: 
       data_elements: &#091;]</code></pre>
 
@@ -1075,7 +1082,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>  - name: Loop through lines and add data elements to array
+<pre class="wp-block-code language-yaml"><code>  - name: Loop through lines and add data elements to array
     set_fact:
       data_elements: "{{ data_elements + &#091;{'name': item}] }}"
     loop: "{{ data }}"</code></pre>
@@ -1086,7 +1093,7 @@ all:
 
 
 
-<pre class="wp-block-code yaml"><code>  - name: Write output json file
+<pre class="wp-block-code language-yaml"><code>  - name: Write output json file
     copy:
       dest: output.json
       content: "{{ {'records': data_elements} | to_json }}" </code></pre>
@@ -1101,7 +1108,7 @@ all:
 
 
 
-<pre class="wp-block-code json"><code>{
+<pre class="wp-block-code language-json"><code>{
    "records":&#091;
       {
          "name":"/site/foo/"
