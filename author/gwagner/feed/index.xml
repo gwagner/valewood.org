@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 14 Dec 2022 17:43:35 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 14 Dec 2022 18:57:29 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -298,7 +298,7 @@ if err != nil {
 
 
 
-<h2>The Bad: Asking ChatGPT to Write Some Ansible</h2>
+<h2>The Bad: Asking ChatGPT to Convert Text to JSON with Ansible</h2>
 
 
 
