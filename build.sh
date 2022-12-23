@@ -7,6 +7,7 @@ npm install glob
 npm install lunr
 npm install cheerio
 npm install --save-dev pages-plugin-asset-negotiation
+npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react
 #npm install @ampproject/toolbox-optimizer
 
 
@@ -28,4 +29,9 @@ node add_faq_structured_data.mjs
 # Generate table of contents
 node fix_table_of_contents.mjs
 
-rm -rf webp.mjs build_index.mjs create_serp_page.mjs add_faq_structured_data.mjs fix_table_of_contents.mjs package.json package-lock.json build.sh run.sh update.sh .gitignore
+# Convert babel over to js
+node convert_babel.mjs
+
+npx babel ./topics/devops/resources/readiness-assessment/index.html --out-file ./topics/devops/resources/readiness-assessment/index.html --minified
+
+rm -rf webp.mjs build_index.mjs convert_babel.mjs create_serp_page.mjs add_faq_structured_data.mjs fix_table_of_contents.mjs package.json package-lock.json build.sh run.sh update.sh .gitignore
