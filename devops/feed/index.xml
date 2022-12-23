@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 23 Dec 2022 17:22:54 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 23 Dec 2022 20:24:30 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,11 +28,281 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>How to SSH into pod K8s</title>
+		<link>https://www.valewood.org/how-to-ssh-into-pod-k8s/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Fri, 23 Dec 2022 20:24:12 +0000</pubDate>
+				<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=2314</guid>
+
+					<description><![CDATA[Taking the paradigm shift from running applications on servers to running them in containers is quite the mental jump. The technology industry has spent the last 50 years creating technology to accelerate on top of servers whether they are physical&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Taking the paradigm shift from running applications on servers to running them in containers is quite the mental jump. The technology industry has spent the last 50 years creating technology to accelerate on top of servers whether they are physical or virtual.</p>
+
+
+
+<p>Containers showed up on the scene in 2013, though the mechanics for containers had been showing up in the Linux kernel earlier than that. The adoption of containers has been steady but has also been slow over time.</p>
+
+
+
+<p><a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> was released in 2015 and has greatly accelerated container adoption in the industry. Because of Kubernetes&#8217; close ties with <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a>, and the rapid adoption of DevOps, nearly everyone in the technology space has had to rapidly pick up and try to make sense of this paradigm shift.</p>
+
+
+
+<p>An activity that any systems administrator has performed is the remote administration of a server. On Linux, there will be an exchange of key files, and an SSH connection is established to an internal or external IP address, and boom you are in!</p>
+
+
+
+<p>How do you remotely administer a container running in a Kubernetes cluster? Let&#8217;s explore that question below!</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>What is a Container Runtime?</h2>
+
+
+
+<p>A container runtime is a software component that is responsible for executing and managing containers on a host. It provides the necessary infrastructure to launch and manage containers, including creating and destroying containers, allocating resources to containers, and providing networking and storage services to containers.</p>
+
+
+
+<p>There are several different container runtime implementations available, including <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a>, ContainerD, and CRI-O. These runtime implementations are typically used in conjunction with a container orchestration platform, such as Kubernetes, to manage the deployment and scaling of containers in a distributed environment.</p>
+
+
+
+<p>In general, a container runtime is responsible for the low-level management of containers, including tasks such as starting and stopping containers, providing isolation between containers, and managing resource allocation for containers. The container orchestration platform, on the other hand, is responsible for higher-level tasks such as scheduling containers across multiple hosts, ensuring that the desired number of replicas of a container is running, and providing load balancing and networking services for containers.</p>
+
+
+
+<h2>How Does a Container Work?</h2>
+
+
+
+<p>Containers are a way to package and distribute applications and their dependencies in a lightweight and portable way. They allow developers to build and deploy applications that can run consistently across different environments, such as developer laptops, staging servers, and production environments.</p>
+
+
+
+<p>Containers work by using the operating system&#8217;s kernel to allow multiple isolated user-space instances, or containers, to run on a single host. Each container shares the host&#8217;s kernel but has its own user space, which includes the libraries, system tools, and application code needed to run the application.</p>
+
+
+
+<p>When a container is created, it is based on a container image, which is a lightweight, stand-alone, and executable package that includes everything needed to run the application, including the application code, libraries, system tools, and runtime. The container image is built from a set of instructions called a Dockerfile, which specifies the steps needed to create the image.</p>
+
+
+
+<p>To run a container, you can use a container runtime, such as Docker, to start the container based on the container image. The container runtime creates a new container instance and allocates the necessary resources, such as CPU, memory, and storage, to the container. The container runtime then launches the application inside the container and provides it with the necessary networking and storage services.</p>
+
+
+
+<h2>How Do I SSH Into a Running Container?</h2>
+
+
+
+<p>The short answer is this; unless the container is running an SSH server with a port mapped to a service, you don&#8217;t. The right question to ask is &#8220;How do I access a running Container or Pod&#8217;s Shell?&#8221; That question is answered in another section down below.</p>
+
+
+
+<p>A container is essentially carved out of user space from the operating system&#8217;s kernel which is running one or more processes in isolation. When you SSH into a server, that server is running a process like OpenSSH to facilitate your connection and login. If your containers are not running an OpenSSH server as a process, then SSHing is not the answer.</p>
+
+
+
+<p>What you are really trying to do is start up a new process inside of the container which provides you with a running TTY Shell.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>How Do I access a running Container or Pod&#8217;s Shell?</h2>
+
+
+
+<p>To SSH into a pod, or more correctly stated &#8220;gain terminal access into a pod&#8221;, in Kubernetes, you can use the kubectl exec command. This command allows you to execute a command in a specific container within a pod.</p>
+
+
+
+<p>Here is an example of how to use kubectl exec to SSH into a pod:</p>
+
+
+
+<pre class="wp-block-code language-bash"><code>kubectl exec -it -n &lt;namespace&gt; &lt;pod-name&gt; -- /bin/bash</code></pre>
+
+
+
+<p>This will open a shell inside the container of the pod. You can then use the ssh command to connect to another server from within the container. If your pods do not have /bin/bash on them, then you can try something like /bin/sh or /bin/zsh.</p>
+
+
+
+<p>Keep in mind that the pod must be running in order for you to be able to exec into it. If the pod is not running, you will need to start it before you can exec into it.</p>
+
+
+
+<p>You can also use the kubectl exec command to execute other commands in the container, such as running scripts or checking the status of processes.</p>
+
+
+
+<h2>Caveats for accessing Container or Pod&#8217;s Shell</h2>
+
+
+
+<h3>Scratch Container</h3>
+
+
+
+<p>A scratch container is a special type of container image that is built from scratch, without any base image. It is used as a starting point for building other container images, and typically includes only the bare minimum required to run a container, such as the operating system kernel and the init process.</p>
+
+
+
+<p>Scratch containers are useful when you need to build a container image that is as lightweight as possible, or when you want to start with a completely blank slate and build up your container image from the ground up. They can also be useful when you want to build a container image that includes only the specific tools and dependencies that your application requires, rather than relying on a larger base image that might include unnecessary packages.</p>
+
+
+
+<p>To use a scratch container, you can specify it as the base image when building your container image using a tool such as Docker. For example, the following Dockerfile uses a scratch container as the base image:</p>
+
+
+
+<pre class="wp-block-code language-dockerfile"><code>FROM scratch
+COPY my-app /
+CMD &#091;"/my-app"]</code></pre>
+
+
+
+<p>This Dockerfile will build a container image that includes only the my-app binary, without any other packages or dependencies.</p>
+
+
+
+<p>If the base of the container you are running is &#8220;scratch&#8221; then you will not have a shell installed on that container unless you explicitly add one as part of the build process.</p>
+
+
+
+<h3>Missing Shell or Command Language Interpreter</h3>
+
+
+
+<p>A shell, or command language interpreter, is a software program that provides a command-line interface for interacting with an operating system. It allows users to execute commands and run programs by typing them into a terminal window or console.</p>
+
+
+
+<p>The shell acts as an intermediary between the user and the operating system, taking input from the user, executing the requested commands, and displaying the results. It also provides a set of built-in commands and functions for performing common tasks, such as navigating the file system, managing files and directories, and launching programs.</p>
+
+
+
+<p>There are many different shells available for different operating systems, each with its own unique syntax and features. Some common shells include the Bourne shell (sh), the C shell (csh), the Korn shell (ksh), and the Bourne-Again shell (bash).</p>
+
+
+
+<p>In addition to providing a command-line interface, shells can also be used to write scripts that automate tasks and processes. These scripts, called shell scripts, are written in the syntax of the shell and can be executed from the command line or triggered by certain events.</p>
+
+
+
+<p>If the base of the container you are running is &#8220;scratch&#8221; then you will not have a shell installed on that container unless you explicitly add one as part of the build process. The container you are running may also be limited to something like /bin/sh and may not have your favorite shell such as fish installed.</p>
+
+
+
+<h3>The Container is not Running</h3>
+
+
+
+<p>If your container is not running, you may not be able to exec in to get a shell. You may need to spin up an out-of-band pod that does not fail so that you can get in and review things like env vars or connection params. Below is how Kubernetes recommends you do this with their DNS debug container.</p>
+
+
+
+<p>The DNS debug container is a tool that can be used to troubleshoot issues with DNS resolution in a Kubernetes cluster. It is a special container image that includes a number of utilities for diagnosing DNS problems, such as dig, nslookup, and host.</p>
+
+
+
+<p>To use the DNS debug container in Kubernetes, you will need to create a pod that runs the container. You can do this using the kubectl command-line tool and a manifest file that specifies the pod&#8217;s configuration.</p>
+
+
+
+<p>Here is an example manifest file that creates a pod with the DNS debug container:</p>
+
+
+
+<pre class="wp-block-code language-yaml"><code>apiVersion: v1
+kind: Pod
+metadata:
+  name: dns-debug
+spec:
+  containers:
+  - name: dns-debug
+    image: k8s.gcr.io/dns-debug:1.16.7</code></pre>
+
+
+
+<p>To create the pod, save the manifest file and then run the following command:</p>
+
+
+
+<pre class="wp-block-code language-bash"><code>kubectl apply -f manifest.yaml</code></pre>
+
+
+
+<p>Once the pod is created, you can use kubectl exec to connect to the pod and run the DNS debugging utilities. For example, to run dig, you can use the following command:</p>
+
+
+
+<pre class="wp-block-code language-bash"><code>kubectl exec dns-debug -it -- dig example.com</code></pre>
+
+
+
+<p>This will execute the dig command inside the DNS debug container, allowing you to troubleshoot DNS issues in your cluster.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>The answer to the question &#8216;How to SSH into pod K8s&#8217; is simply, you don&#8217;t. What you are really looking to do is exec a Command Language Interpreter, or shell, inside of a running container.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>A Beginner&#8217;s Guide to Unlocking the Power of ImagePullPolicy</title>
 		<link>https://www.valewood.org/kubernetes-imagepullpolicy/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Fri, 23 Dec 2022 17:22:53 +0000</pubDate>
+		<pubDate>Thu, 22 Dec 2022 17:22:53 +0000</pubDate>
 				<category><![CDATA[Kubernetes]]></category>
 		<category><![CDATA[DevOps]]></category>
 		<category><![CDATA[devops]]></category>
@@ -388,7 +658,7 @@ spec:
 		<link>https://www.valewood.org/kubernetes-port-requires-tls/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Fri, 23 Dec 2022 17:15:28 +0000</pubDate>
+		<pubDate>Wed, 21 Dec 2022 17:15:28 +0000</pubDate>
 				<category><![CDATA[Kubernetes]]></category>
 		<category><![CDATA[DevOps]]></category>
 		<category><![CDATA[devops]]></category>
@@ -3104,189 +3374,5 @@ if err != nil {
 		
 		
 			</item>
-		<item>
-		<title>DevOps Roll-up: November 2022</title>
-		<link>https://www.valewood.org/devops-roll-up-novembers-2022/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Wed, 30 Nov 2022 22:08:32 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[roll-up]]></category>
-		<guid isPermaLink="false">/?p=1909</guid>
-
-					<description><![CDATA[Below is a list of DevOps articles/sites that I discovered over the past month and found interesting. Linux Troubleshooting This is an interesting tool that people can use to test out their Linux troubleshooting skills in a capture-the-flag-style event. Here&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p>Below is a list of <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> articles/sites that I discovered over the past month and found interesting.</p>
-
-
-
-<h2>Linux Troubleshooting</h2>
-
-
-
-<p>This is an interesting tool that people can use to test out their Linux troubleshooting skills in a capture-the-flag-style event.</p>
-
-
-
-<p>Here is what the developer has to say about their SadServers:</p>
-
-
-
-<blockquote class="wp-block-quote">
-<p>There is a collection of scenarios, a description of what&#8217;s wrong, and a test to check if the issue has been solved. Servers are spun up on the spot, users get an &#8220;SSH&#8221; shell via a browser window to an ephemeral server (destroyed after the allotted time for solving the challenge) and then they can try and solve the problem.</p>
-</blockquote>
-
-
-
-<p>Check it out with the link below if you are looking to up your server administration game!</p>
-
-
-
-<p><a href="https://github.com/fduran/sadservers" target="_blank" rel="noopener">https://github.com/fduran/sadservers</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
-
-
-
-<p></p>
-
-
-
-<h2>DevOps and Software Engineering Job Board</h2>
-
-
-
-<p>This is a job board that is centralizing DevOps and Software Engineering jobs on a single board.  I am a big fan of boards like this because they are more targeted and promote more realistic expectations for jobs you might be looking for.</p>
-
-
-
-<p><a href="https://software-engineer-jobs.com/" target="_blank" rel="noopener">https://software-engineer-jobs.com/</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
-
-
-
-<p></p>
-
-
-
-<h2>Golang Network Bus</h2>
-
-
-
-<p>An event bus is a core component in a microservices-based architecture.  Application A (in control of Domain A) will register an event on the event bus every time a data change needs to be synchronized by downstream systems.  Application B (which needs to reference data from Domain A) will then be able to store its own local copy of Domain A&#8217;s data to reduce dependencies on an external system.</p>
-
-
-
-<p>I love seeing projects like this get introduced into the ecosystem.  Many times, we are relying on highly scaleable systems with a massive amount of configurable knobs and dials to achieve relatively simple tasks.  Tools like this are a great way to get your feet wet and dive into a new architecture without all of the extensive overhead of enterprise tools.</p>
-
-
-
-<p><a href="https://github.com/kamalshkeir/kbus" target="_blank" rel="noopener">https://github.com/kamalshkeir/kbus</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
-
-
-
-<p></p>
-
-
-
-<h2>Searchable Asset Directory</h2>
-
-
-
-<p>Resmo bills itself as:</p>
-
-
-
-<blockquote class="wp-block-quote">
-<p>Complete visibility and security for modern teams</p>
-</blockquote>
-
-
-
-<p>Centralized asset inventory management is a huge deal in DevOps.  By scanning your assets, you can understand what is out of compliance and subsequently investigate where errors may be happening in automation to allow for that noncompliance.  Without this kind of visibility, changes will go unchecked which makes quality suffer.</p>
-
-
-
-<p>Another nice feature of a CAIM product like this is; they are a great Single Point of Truth system.  I have utilized these in the past as an API-driven data repository to feed other downstream automation systems with data they need to accomplish their tasks.</p>
-
-
-
-<p>Check them out below!</p>
-
-
-
-<p><a href="https://www.resmo.com/" target="_blank" rel="noopener">https://www.resmo.com/</a></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
-
-
-
-<p></p>
-
-
-
-<h2>Kustomize</h2>
-
-
-
-<p>Kustomize is a great way to keep your configuration files declarative and free of messy variables and if statements.  Configure your application how you would like and then provide specific override files for different environments.  The video below will teach you how to make production ready <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> manifests.</p>
-
-
-
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe title="Kustomize: The Best Way to Manage Your Kubernetes Configs" width="1170" height="658" src="https://www.youtube.com/embed/spCdNeNCuFU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div></figure>
-
-
-
-<p></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
-
-
-
-<p></p>
-
-
-
-<h2>Steampunk Spotter</h2>
-
-
-
-<p>Steampunk Spotter is an <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a> tool for Development, Quality Assurance, and Operations teams purpose-built to cut down on the management burden of keeping playbooks current.  With built-in upgrade assistance, syntax checking, module assistance, vulnerability identification, and much more!  </p>
-
-
-
-<p>If you are interested in super charging your Ansible automation, check them out below!</p>
-
-
-
-<p><a href="https://steampunk.si/spotter/" target="_blank" rel="noopener">https://steampunk.si/spotter/</a></p>
-]]></content:encoded>
-					
-		
-		
-		<media:content url="https://www.youtube.com/embed/spCdNeNCuFU" medium="video" width="1280" height="720">
-			<media:player url="https://www.youtube.com/embed/spCdNeNCuFU" />
-			<media:title type="plain">Kustomize: The Best Way to Manage Your Kubernetes Configs</media:title>
-			<media:description type="html"><![CDATA[Kustomize is a way to customize your Kubernetes manifests files.  In this video I go over everything you you need to know about the theory of Kustomize as we...]]></media:description>
-			<media:thumbnail url="/wp-content/uploads/2022/12/devops-rollup-november.jpg" />
-			<media:rating scheme="urn:simple">nonadult</media:rating>
-		</media:content>
-	</item>
 	</channel>
 </rss>
