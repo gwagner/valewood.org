@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Wed, 14 Dec 2022 18:57:29 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 23 Dec 2022 17:22:54 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,650 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>A Beginner&#8217;s Guide to Unlocking the Power of ImagePullPolicy</title>
+		<link>https://www.valewood.org/kubernetes-imagepullpolicy/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Fri, 23 Dec 2022 17:22:53 +0000</pubDate>
+				<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=2300</guid>
+
+					<description><![CDATA[Are you looking to unlock the full potential of ImagePullPolicy? If yes, then you’ve come to the right place! In this guide, we will discuss everything you need to know about ImagePullPolicy – from understanding what it is, to the&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Are you looking to unlock the full potential of ImagePullPolicy? If yes, then you’ve come to the right place! In this guide, we will discuss everything you need to know about ImagePullPolicy – from understanding what it is, to the benefits of using it, getting started, setting it up, and more.</p>
+
+
+
+<p>By the end of this guide, you will have all the knowledge you need to make the most of ImagePullPolicy. Let’s get started!</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>What Is The ImagePullPolicy?</h2>
+
+
+
+<p>ImagePullPolicy is a set of rules used to control how images are pulled from container registries. It allows users to specify which images can be pulled when they can be pulled, and where they can be pulled from. This allows users to have greater control over their images and how they are used.</p>
+
+
+
+<p>ImagePullPolicy is also a great way to ensure that images are kept up to date. By setting rules that limit when images can be pulled, users can ensure that their images are always up-to-date and that they are not using outdated versions of their images. This can help to reduce the risk of security vulnerabilities and ensure that their applications are running the latest versions of their images.</p>
+
+
+
+<p>The ImagePullPolicy field in a <a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> Pod spec does not directly enhance security, but it can be used as part of a security strategy by controlling when and how container images are pulled.</p>
+
+
+
+<p>For example, you can set the ImagePullPolicy to IfNotPresent to ensure that the container image is only pulled from the registry if it is not already present on the node. This can help prevent unauthorized images from being deployed to your cluster.</p>
+
+
+
+<p>You can also use the ImagePullPolicy to control when container images are updated. For example, you can set the policy to Always to ensure that the latest version of the image is always used, or you can set it to Never to prevent the image from being updated. This can be useful for ensuring that your deployments are consistent and that you are using known, stable versions of container images.</p>
+
+
+
+<p>Overall, while the ImagePullPolicy is not directly related to security, it can be used as part of a security strategy by controlling when and how container images are pulled and updated.</p>
+
+
+
+<h2>Benefits of Using ImagePullPolicy</h2>
+
+
+
+<p>There are many benefits to using ImagePullPolicy, including improved security, increased control, and better efficiency. Let’s look at each of these in more detail:</p>
+
+
+
+<h3>Improved Security</h3>
+
+
+
+<p>By setting rules that limit which images can be pulled, when they can be pulled, and where they can be pulled from, users can be confident that their images are pulled from a secure location. This can help to reduce the risk of security vulnerabilities and ensure that their applications are running the latest versions of their images.</p>
+
+
+
+<h3>Increased Control</h3>
+
+
+
+<p>ImagePullPolicy also allows users to have greater control over their images and how they are used. By setting rules that limit when images can be pulled, users can ensure that their images are always up-to-date and that they are not using outdated versions of their images. This can help to ensure that their applications are running the most recent versions of their images and that any security vulnerabilities are addressed as quickly as possible.</p>
+
+
+
+<h3>Better Efficiency</h3>
+
+
+
+<p>Finally, ImagePullPolicy can also help to improve the efficiency of the image pull process. By setting rules that limit when images can be pulled, users can ensure that their images are pulled only when necessary. This can help to reduce the time and resources spent on pulling images and ensure that their applications are running the most up-to-date versions of their images.</p>
+
+
+
+<h2>ImagePullPolicy Configuration Facets</h2>
+
+
+
+<p>An image pull policy in Kubernetes specifies how a container should handle image updates. The relevant information configured in an image pull policy includes the following:</p>
+
+
+
+<ol>
+<li><strong>The image repository:</strong> This is the location from which the container should pull the image. The repository can be a public registry like <a href="https://www.docker.com/" data-internallinksmanager029f6b8e52c="16" title="Docker" rel="nofollow noopener" target="_blank">Docker</a> Hub or a private registry. If the image is hosted on Docker Hub then this can be specified by image name shorthand instead of the fully qualified repository URL.</li>
+
+
+
+<li><strong>The image tag:</strong> The image tag specifies the version of the image that should be used. If no tag is specified, the default latest tag is used.</li>
+
+
+
+<li><strong>The policy: </strong>The policy specifies whether the container should always attempt to pull the latest version of the image (Always) or only pull the image if it is not already present on the host machine (IfNotPresent).</li>
+</ol>
+
+
+
+<p>These details are typically specified in the container configuration file, which is used to create the container in a Kubernetes deployment. The image pull policy is just one aspect of the container configuration, and other details such as the container name, resources, and environment variables may also be specified.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Getting started with ImagePullPolicy</h2>
+
+
+
+<p>Now that we’ve discussed the benefits of using ImagePullPolicy, let’s look at how to get started. The first step is to set up an ImagePullPolicy. This is a simple process that involves creating a set of rules that define how images are pulled from your registries. Once your rules are set up, you can start to apply them to your images.</p>
+
+
+
+<p>To set up ImagePullPolicy, you will need to create a set of rules that define which images can be pulled, when they can be pulled, and where they can be pulled from. This can be done using the ImagePullPolicy configuration file. This file is written in the YAML format and contains all the necessary information about your images and how they should be pulled.</p>
+
+
+
+<p>Once your ImagePullPolicy configuration file is complete, you will need to apply it to your images. This can be done by adding a “pull policy” label to your images. This label will include the rules that you set in your ImagePullPolicy configuration file. Once your images are labeled, they will be subject to the rules you set in the configuration file and will only be pulled when the rules are met.</p>
+
+
+
+<h3>Examples ImagePullPolicy Configurations</h3>
+
+
+
+<p>Here is an example of a Kubernetes Pod specification that includes an ImagePullPolicy:</p>
+
+
+
+<pre class="wp-block-code language-yaml"><code>apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: nginx:1.19
+    imagePullPolicy: IfNotPresent
+  ...</code></pre>
+
+
+
+<p>In this example, the ImagePullPolicy field is set to IfNotPresent, which means that the container image will only be pulled from the specified registry if it is not already present on the node.</p>
+
+
+
+<p>You can also set the ImagePullPolicy field to Always or Never, depending on your specific requirements. For example:</p>
+
+
+
+<pre class="wp-block-code language-yaml"><code>apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: nginx:1.19
+    imagePullPolicy: Always
+  ...</code></pre>
+
+
+
+<p>This would cause the container image to be pulled from the registry every time the Pod is started, ensuring that the latest version of the image is always used.</p>
+
+
+
+<pre class="wp-block-code language-yaml"><code>apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: nginx:1.19
+    imagePullPolicy: Never
+  ...</code></pre>
+
+
+
+<p>This would prevent the container image from being pulled from the registry, and the existing image on the node would be used even if it is out of date.</p>
+
+
+
+<h2>Setting up ImagePullPolicy</h2>
+
+
+
+<p>Now that you know how to get started with ImagePullPolicy, let’s look at how to set it up correctly. Setting up ImagePullPolicy can be a bit tricky, so it’s important to follow the steps carefully.</p>
+
+
+
+<p>The first step is to create an ImagePullPolicy configuration file. This file is written in the YAML format and contains all the necessary information about your images and how they should be pulled. This includes the specified image that can be pulled, when they can be pulled, and where they can be pulled from.</p>
+
+
+
+<p>Once your ImagePullPolicy configuration file is complete, the next step is to apply it to your images. This can be done by adding a “pull policy” label to your images. This label will include the rules that you set in your ImagePullPolicy configuration file. Once your images are labeled, they will be subject to the rules you set in the configuration file and will only be pulled when the rules are met.</p>
+
+
+
+<p>Finally, you will need to set up the ImagePullPolicy workflow. This workflow will define the steps that need to be taken when an image is pulled. This includes verifying that the image is authorized, ensuring that it is up-to-date, and pulling it from the correct registry.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Understanding the ImagePullPolicy workflow</h2>
+
+
+
+<p>Now that you know how to set up ImagePullPolicy, let’s look at how the workflow works. The ImagePullPolicy workflow is made up of several steps that must be completed in order for an image to be pulled. These steps include verifying that the image is authorized, ensuring that it is up-to-date, and pulling it from the correct registry.</p>
+
+
+
+<p>The image pull policy for a container in a Kubernetes deployment specifies how the container should handle image updates. There are two options for the image pull policy:</p>
+
+
+
+<ol>
+<li><strong>Always:</strong> This policy means that the container will always attempt to pull the latest version of the image from the specified container image registry.</li>
+
+
+
+<li><strong>IfNotPresent:</strong> This policy means that the container will only pull the image from the repository if it is not already present on the host machine. If the image is present on the host, the container will use the local version of the image.</li>
+</ol>
+
+
+
+<p>The logical flow for the image pull policy would depend on the specific deployment and configuration, but generally, the container would check the specified image repository for updates based on the specified policy, and then either pull the updated image or use the local version as appropriate.</p>
+
+
+
+<h2>Troubleshooting ImagePullPolicy</h2>
+
+
+
+<p>There are a few steps you can take to troubleshoot issues with the image pull policy for a container in a Kubernetes deployment:</p>
+
+
+
+<ol>
+<li>Check the status of the container to see if it is running or has failed. You can use the kubectl describe command to get more information about the status of the container.</li>
+
+
+
+<li>Check the container logs for any error messages or other clues about what might be causing the issue. You can use the kubectl logs command to view the container logs.</li>
+
+
+
+<li>Check the image repository to ensure that the image is available and can be pulled. You can use the docker pull command to manually pull the image and see if there are any issues.</li>
+
+
+
+<li>Check the container configuration to ensure that the ImagePullPolicy is set correctly and that the image repository and tag are correct.</li>
+
+
+
+<li>If the issue persists, you may want to try redeploying the container or rolling back to a previous version of the image to see if that resolves the issue.</li>
+</ol>
+
+
+
+<p>It may also be helpful to consult the documentation or seek guidance from the maintainers of the image or the deployment if you are unable to resolve the issue on your own.</p>
+
+
+
+<h2>Best Practices for using ImagePullPolicy</h2>
+
+
+
+<p>Here are some best practices for using the image pull policy in Kubernetes deployments:</p>
+
+
+
+<ol>
+<li><strong>Use the IfNotPresent policy whenever possible:</strong> This policy allows you to use a local copy of the image if it exists locally, which can be faster and more reliable than pulling the image from a remote repository every time.</li>
+
+
+
+<li><strong>Use version tags for your images:</strong> By using version tags, you can easily roll back to a previous version of an image if needed.</li>
+
+
+
+<li><strong>Regularly check for updates to your images:</strong> It&#8217;s a good idea to regularly check for updates to your images and deploy the latest versions to ensure that you are using the most up-to-date and secure versions of your software.</li>
+
+
+
+<li><strong>Use a private image repository:</strong> If you are using proprietary or sensitive images, it is recommended to use a private image repository to ensure that the images are secure and only accessible to authorized users.</li>
+
+
+
+<li><strong>Use a container registry that is close to your deployment:</strong> To minimize the time it takes to pull images, it is recommended to use a container registry that is physically close to your deployment. This can be especially important for large images or deployments with many containers.</li>
+</ol>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>In conclusion, ImagePullPolicy is a powerful tool that can help to improve security, increase control, and improve efficiency. By setting up ImagePullPolicy correctly, following the best practices for using it, and troubleshooting any issues, you can ensure that your images are secure and that they are pulled correctly and efficiently.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Solving the &#8216;This Combination of Host and Port Requires TLS&#8217; Error in Kubernetes</title>
+		<link>https://www.valewood.org/kubernetes-port-requires-tls/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Fri, 23 Dec 2022 17:15:28 +0000</pubDate>
+				<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[tools]]></category>
+		<guid isPermaLink="false">/?p=2292</guid>
+
+					<description><![CDATA[Kubernetes is a powerful container orchestration platform that enables users to deploy, manage, and scale applications quickly and easily. It has gained a lot of favor in the DevOps community for its ability to be highly automated. Unfortunately, like any&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p><a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a> is a powerful container orchestration platform that enables users to deploy, manage, and scale applications quickly and easily.  It has gained a lot of favor in the <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> community for its ability to be highly automated.  Unfortunately, like any other software, it can sometimes present cryptic errors which are hard to debug.</p>
+
+
+
+<p>One such error is the “This combination of host and port requires TLS” error.</p>
+
+
+
+<p>In this blog, we’ll explore what this error is, what causes it, and how to troubleshoot and fix it. We’ll also discuss some tips for avoiding this error and common mistakes to avoid when dealing with it. Lastly, we’ll look at some Kubernetes best practices for avoiding this error.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>What is the &#8216;This Combination of Host and Port Requires TLS&#8217; error?</h2>
+
+
+
+<p>The “This combination of host and port requires TLS” error is an error in Kubernetes that occurs when a user attempts to connect to a cluster without using a secure protocol such as Transport Layer Security (TLS). It is a common error that is seen in Kubernetes clusters and is usually caused by misconfigured network settings or incorrect authentication credentials.</p>
+
+
+
+<p>The error looks something like this:</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>Error: This combination of host and port requires TLS</p>
+</blockquote>
+
+
+
+<p>The “This combination of host and port requires TLS” error is a type of TLS handshake error. TLS is a cryptographic protocol that is used to secure communications between two entities. It is a vital part of any secure network, and thus it is important to ensure that TLS is enabled and configured properly in order to avoid this error.</p>
+
+
+
+<h2>What causes the &#8216;This Combination of Host and Port Requires TLS&#8217; error?</h2>
+
+
+
+<p>The “This combination of host and port requires TLS” error is usually caused by one of three things: an incorrect network configuration, an incorrect authentication configuration, connecting to a secure service via HTTP instead of HTTPS, or a missing or incorrect TLS certificate.</p>
+
+
+
+<p><strong>Incorrect network configurations</strong> can cause this error if the user is attempting to connect to the wrong host or port. This can happen if the user has mistakenly entered the wrong IP address or hostname, or if the user has entered the wrong port number. It is also possible that the user has misconfigured the network settings, such as a firewall or a proxy, which can prevent the user from connecting to the cluster.</p>
+
+
+
+<p><strong>Incorrect authentication configurations</strong> can also cause this error. If the user’s credentials are incorrect, then the user will not be able to connect to the cluster. This can happen if the user has entered the wrong username or password, or if the user has not set up authentication correctly.</p>
+
+
+
+<p><strong>Connecting to a secure service via HTTP instead of HTTPS</strong> can also cause this error to be displayed. Since Kubernetes services are a mapping between a load-balanced IP address and a running pod and Kubernetes can do this mapping on almost any port, your cluster is attempting to provide a helpful message telling you that the port you have configured only negotiates encrypted traffic transports.</p>
+
+
+
+<p>Finally, a <strong>missing or incorrect TLS certificate</strong> can also cause this error. TLS certificates are used to authenticate a user and allow them to connect to the cluster. Certificates are also used to perform end-to-end encryption between a user and a Kubernetes service. If the TLS certificate is missing or incorrect, then the user will not be able to connect to the cluster.</p>
+
+
+
+<h2>How to troubleshoot the &#8216;This Combination of Host and Port Requires TLS&#8217; error</h2>
+
+
+
+<p>The first step in troubleshooting the “This combination of host and port requires TLS” error is to check the network configuration. Make sure that the user has entered the correct IP address or hostname, as well as the correct port number. Additionally, check to make sure that all of the network settings, such as firewalls and proxies, are configured properly.</p>
+
+
+
+<p>The next step is to check the use of HTTPS versus HTTP in the URL being requested from the Kubernetes cluster. If your service is set up to utilize a certificate, but the request you are making is HTTP, then this error message will be returned.</p>
+
+
+
+<p>Finally, check the TLS certificate. Make sure that the TLS certificate is present and that it is valid. If the TLS certificate is missing or incorrect, then the user will not be able to connect to the cluster.</p>
+
+
+
+<p>Below are a few different reference examples of how you can configure Kubernetes to utilize SSL certificates on your cluster. The exact configuration will depend on your specific requirements and the characteristics of your environment.</p>
+
+
+
+<h4>Reference Service Definition</h4>
+
+
+
+<p>Here is an example Kubernetes service configuration that utilizes TLS certificates:</p>
+
+
+
+<pre class="wp-block-code language-yaml"><code>apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: my-app
+  ports:
+    - name: https
+      port: 443
+      targetPort: 8443
+      protocol: TCP
+  loadBalancerSourceRanges:
+    - 0.0.0.0/0
+  externalTrafficPolicy: Local
+  sessionAffinity: ClientIP
+  tls:
+    - secretName: my-tls-certs
+      termination: edge
+</code></pre>
+
+
+
+<p>This configuration defines a Kubernetes service called &#8220;my-service&#8221; that exposes port 443 to external traffic and directs it to port 8443 on the pods in the &#8220;my-app&#8221; deployment. It also specifies a TLS secret called &#8220;my-tls-certs&#8221; that contains the necessary certificates and keys for establishing a secure connection. The termination field is set to edge, which means that the service will terminate TLS at the edge of the cluster.</p>
+
+
+
+<h4>Reference Ingress NGINX Definition</h4>
+
+
+
+<p>Here is an example Kubernetes Ingress configuration that utilizes TLS certificates with NGINX:</p>
+
+
+
+<pre class="wp-block-code language-yaml"><code>apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  tls:
+  - secretName: my-tls-certs
+  rules:
+  - host: example.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: my-service
+          servicePort: 443
+</code></pre>
+
+
+
+<p>This configuration defines an Ingress resource called &#8220;my-ingress&#8221; that routes incoming traffic to the &#8220;my-service&#8221; service on port 443. It also specifies a TLS secret called &#8220;my-tls-certs&#8221; that contains the necessary certificates and keys for establishing a secure connection. The <a target="_blank" rel="noreferrer noopener" href="http://nginx.ingress.kubernetes.io/ssl-redirect">nginx.ingress.kubernetes.io/ssl-redirect</a> annotation tells NGINX to redirect all HTTP traffic to HTTPS.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>How to fix the &#8216;This Combination of Host and Port Requires TLS&#8217; error</h2>
+
+
+
+<p>To fix the &#8220;This Combination of Host and Port Requires TLS&#8221; error in Kubernetes, you will need to ensure that TLS is correctly configured for the host and port combination you are trying to access. Here are the steps you can take to do this:</p>
+
+
+
+<ol>
+<li><strong>Confirm that TLS is required:</strong> Make sure that the service you are trying to access requires TLS. If it does not, then the error may be caused by a misconfiguration or a typo in your configuration.</li>
+
+
+
+<li><strong>Check your TLS configuration:</strong> Review your TLS configuration to ensure that it is correct and complete. This includes verifying that you have the necessary certificates and keys and that you have specified the correct host and port in your configuration.</li>
+
+
+
+<li><strong>Use the correct host and port combination: </strong>Make sure that you are using the correct host and port combination in your configuration. If you are not sure what the correct combination is, you can consult the documentation for the service you are trying to access.</li>
+
+
+
+<li><strong>Use the correct protocol:</strong> Make sure that you are using the correct protocol (e.g. HTTPS) when accessing the service.</li>
+
+
+
+<li><strong>Check for typos: </strong>Check your configuration for typos or other mistakes that may be causing the error.</li>
+
+
+
+<li><strong>Restart affected services:</strong> If you have recently made changes to your TLS configuration, try restarting the affected services to see if that resolves the error.</li>
+
+
+
+<li><strong>Consult the documentation:</strong> If you are still having trouble, consult the documentation for the service you are trying to access, as well as the documentation for Kubernetes and TLS, to see if there are any additional troubleshooting tips or requirements you need to be aware of.</li>
+</ol>
+
+
+
+<p>By following these steps, you should be able to resolve the &#8220;This Combination of Host and Port Requires TLS&#8221; error and successfully access the service.</p>
+
+
+
+<h2>Tips for avoiding the &#8216;This Combination of Host and Port Requires TLS&#8217; error message</h2>
+
+
+
+<ol>
+<li><strong>Configure TLS correctly: </strong>Make sure that you have correctly configured TLS for your host and port combination. This includes setting up the necessary certificates and keys and specifying the correct host and port in your TLS configuration.</li>
+
+
+
+<li><strong>Use the correct host and port combination:</strong> Double-check that you are using the correct host and port combination in your configuration. If you are not sure what the correct combination is, you can consult the documentation for the service you are trying to access.</li>
+
+
+
+<li><strong>Use the correct protocol:</strong> Make sure that you are using the correct protocol (e.g. HTTPS) when accessing the service.</li>
+
+
+
+<li><strong>Check for typos: </strong>Check your configuration for typos or other mistakes that may be causing the error.</li>
+
+
+
+<li><strong>Use a linting tool:</strong> There are several linting tools specifically designed for linting Kubernetes configurations, such as kube-linter, kubeval, and conftest. These tools can check your configurations for common mistakes, syntax errors, and best practices violations.</li>
+
+
+
+<li><strong>Use the Kubernetes API server:</strong> You can use the Kubernetes API server to validate your configurations by sending them to the server and checking for errors. To do this, you can use the <code>kubectl create</code> or <code>kubectl apply</code> commands with the <code>--dry-run</code> flag, which will send your configurations to the API server for validation without actually creating any resources.</li>
+
+
+
+<li><strong>Use a configuration management tool:</strong> Configuration management tools like Helm, <a href="https://www.ansible.com/" data-internallinksmanager029f6b8e52c="7" title="Ansible">Ansible</a>, and Terraform have built-in linting functionality that can check your Kubernetes configurations for errors and best practices violations.</li>
+
+
+
+<li><strong>Consult the documentation:</strong> If you are still having trouble, consult the documentation for the service you are trying to access, as well as the documentation for Kubernetes and TLS, to see if there are any additional troubleshooting tips or requirements you need to be aware of.</li>
+</ol>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>In conclusion, the “This combination of host and port requires TLS” error is an error in Kubernetes that occurs when a user attempts to connect to a cluster without using a secure protocol such as TLS. This error can be caused by an incorrect network configuration, an incorrect authentication configuration, or a missing or incorrect TLS certificate. In order to troubleshoot and fix this error, the user should check the network configuration, the authentication configuration, and the TLS certificate. Additionally, there are several tips for avoiding this error as well as some common mistakes to avoid when dealing with it. Lastly, Kubernetes provides several best practices for avoiding this error.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>How ChatGPT Can Speed Up DevOps by Writing Ansible</title>
 		<link>https://www.valewood.org/how-chatgpt-can-speed-up-devops-by-writing-ansible/</link>
 		
@@ -2641,636 +3285,6 @@ if err != nil {
 			<media:title type="plain">Kustomize: The Best Way to Manage Your Kubernetes Configs</media:title>
 			<media:description type="html"><![CDATA[Kustomize is a way to customize your Kubernetes manifests files.  In this video I go over everything you you need to know about the theory of Kustomize as we...]]></media:description>
 			<media:thumbnail url="/wp-content/uploads/2022/12/devops-rollup-november.jpg" />
-			<media:rating scheme="urn:simple">nonadult</media:rating>
-		</media:content>
-	</item>
-		<item>
-		<title>Which Term Accurately Describes Agile and DevOps?</title>
-		<link>https://www.valewood.org/which-term-describes-devops-and-agile/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Sat, 26 Nov 2022 22:20:38 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[devops consistency]]></category>
-		<category><![CDATA[opinion]]></category>
-		<guid isPermaLink="false">/?p=1796</guid>
-
-					<description><![CDATA[DevOps is a culture and methodology that an organization can prescribe to aid in velocity, consistency, stability, and flow of value to the market. Often confused with &#8220;automation&#8221; being the only benefit of DevOps, the core principles behind DevOps offer&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is a culture and methodology that an organization can prescribe to aid in velocity, consistency, stability, and <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2022" target="_blank" rel="noopener">flow of value</a> to the market.  Often confused with &#8220;automation&#8221; being the only benefit of DevOps, the core principles behind DevOps offer a common set of ideals that a team can align under and strive to achieve.</p>
-
-
-
-<p>Big A Agile is a project management methodology that pairs well with DevOps to aid in rationalizing work delivery against a set of guardrails.  Agile also provides prescriptive visibility to work being performed ensuring engineers are not being overloaded by overwhelming business priorities.</p>
-
-
-
-<p>With those descriptions out of the way, what term best describes both Agile and DevOps?</p>
-
-
-
-<h2>Consistency</h2>
-
-
-
-<p>The goal of any organization going through change is to drive consistency in delivery.  Without consistency, a technology group cannot adapt to change and a business cannot meet the market where it is at.  </p>
-
-
-
-<p>By driving consistency, a business gets predictability which is powerful when scoping and planning new work.  By understanding real velocity, not aspirational velocity, a business can invest in its people and products to grow at a more sustainable rate.</p>
-
-
-
-<p>By driving consistency, technologists get the predictability that they need to make sound and rational decisions about how to approach work.  When working against an unpredictable cycle, technology groups will quickly get overwhelmed by the rate of change and produce solutions that do not meet the demands of the market.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Why Consistency Matters and How it Influences Velocity</h2>
-
-
-
-<p>Consistency is important for a couple of factors.  First, individual contributors like their jobs and are not really interested in consistent interruptions or unplanned requests.  While some people may look at those facets as an everyday part of doing business, they can be avoided if mitigation steps are put in place.</p>
-
-
-
-<p>When people are constantly interrupted quality suffers.  There is no way around that.  Technology is complex and people need time to focus and go through their problem-solving routines.</p>
-
-
-
-<p>Second, inconsistency in delivery has impacts on customers and their delivery.  In technology, you are generally not just working on your system.  There are consumers of your systems who have expectations of either utilization or integration.  By being inconsistent in delivery, you cannot manage the expectations of your consumers.</p>
-
-
-
-<p>Lastly, a lack of consistency means that you will never really understand your velocity.  Velocity is important because it tells you how much of X you can get by spending Y.  Think about it like auto manufacturing, they could turn the manufacturing dials up to 11 in their facilities but then you will end up with cars with 3 wheels or loose nuts and bolts.</p>
-
-
-
-<p>A trap that we fall into frequently is confusing aspirational velocity with real velocity.  Aspirational velocity is the speed that someone thinks something should get delivered.  Real velocity is a measurement of what can be delivered at a given speed.</p>
-
-
-
-<h3>Real Velocity vs Aspirational Velocity</h3>
-
-
-
-<p>Aspirational velocity is when a leader says &#8220;We need this product to launch by X date!&#8221;.  We have either all been in that position or will be in that position sometime in our careers.</p>
-
-
-
-<p>Without proper support, investment, and foresight in planning; aspirational velocity will almost always end with sub-standard products that greatly increase the future cost to the business.  Leaning harder on anyone in the delivery space always leads to decisions that are short-sighted toward a narrow goal.</p>
-
-
-
-<p>I believe aspirational velocity is firmly rooted in the idea of needing to &#8220;take a shot&#8221;.  Checks are constantly being written that others are expected to cash.  Sometimes this works out and I would say can be necessary for a startup or green field project.  Any organization looking to grow over time should be looking for its tipping point when aspirational velocity needs to transition into real velocity to offer a more reliable work environment for their employees.</p>
-
-
-
-<p>Real velocity is based on the idea that you are going to make hard choices about which work is important to feed into a model where delivery is consistent.  When more work needs to be done than can be achieved by the current velocity, hard choices will be made to cut work, increase staff, defer work, or invest in current technology to increase velocity.  </p>
-
-
-
-<p>Any business should have a firm goal of understanding its real velocity and do everything in its power to tamp down or extinguish aspirational velocity.</p>
-
-
-
-<h2>DevOps and Agile are Closely Related</h2>
-
-
-
-<p>I have another article that describes how DevOps and Agile are related to each other.  Primarily, Agile is about lean work being performed against targets and goals with frequent demos of the work being completed to influence pivots.  Agile was in need of a technology delivery methodology that could help realize the fundamental mission of Agile. </p>
-
-
-
-<p>You can read more about how <a href="https://www.valewood.org/devops-and-agile/" data-type="post" data-id="1264">DevOps and Agile are related here!</a></p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Runners Up</h2>
-
-
-
-<p>This question is also asked on a few official exams.  I want to make sure that my perspective on DevOps does not overshadow exams that do not have as much wiggle room in their answers.</p>
-
-
-
-<h3>Brainly.in</h3>
-
-
-
-<p><a href="https://brainly.in/" data-type="URL" data-id="https://brainly.in/question/36271184" target="_blank" rel="noopener">Brainly</a> answers the question like this:</p>
-
-
-
-<blockquote class="wp-block-quote">
-<p>Agile is refers to an interative approuch which focuses on collaboration, costumer feedback,and small rapid releases,DevOps is considered a practice bringing development and operations teams together.</p>
-<cite>https://brainly.in/question/36271184</cite></blockquote>
-
-
-
-<p>The problem is, I don&#8217;t think this answer refers to a specific term.  We can look at this and assume that they are looking at Agile and DevOps as two holistically different approaches which are getting merged together instead of looking for commonality between the project management methodology and the technology delivery methodology.</p>
-
-
-
-<p>While this may sound really good on a test, there are real business influences that come from each of the facets that they list in their answer.</p>
-
-
-
-<ul>
-<li><strong>Collaboration</strong>: Greater collaboration brings more of a hive-mind approach to problem-solving.  Too much collaboration on very large problems can bring analysis paralysis.  By breaking problems down into tiny and lean releases, everyone can stay more focused on achieving goals instead of trying to eat an entire elephant all at once.</li>
-
-
-
-<li><strong>Customer Feedback</strong>: Agile focused on getting valuable work products out to the market quickly to reduce investment risk.  Getting feedback from customers is a great way to manage risk and pivot quickly if needed. </li>
-
-
-
-<li><strong>Small Rapid Releases</strong>: To further the idea of managing risk, lessening the size of your releases helps you containerize risk into much smaller units.  If something isn&#8217;t working as expected, or the market shifts drastically, it is far less painful to throw that work out and pivot to something more palatable.  Additionally, the risk is lowered on incremental improvements to new features for existing functionality since the introduced change should not pose as great of an impact on an already healthy ecosystem.  This is something <a href="https://blog.cloudflare.com/october-2021-facebook-outage/" target="_blank" rel="noopener">Facebook</a> could learn a thing or two about.</li>
-
-
-
-<li><strong>Bringing DevOps and Operations Teams Together</strong>: This is the typical textbook definition of DevOps.  The reality is, DevOps and Agile are about breaking down silos and creating fully cross-functional teams who are able to fully deliver work in a highly efficient and lean way.  DevOps and Agile help drive decision-making down as close to the work being performed as possible while offering up a management framework to transparently keep other interested parties informed while work is being completed and shipped.</li>
-</ul>
-
-
-
-<p>As you can see, there are a lot of nuances packed into each one of those bullet points.</p>
-
-
-
-<h3>Intellipaat.com </h3>
-
-
-
-<p><a href="https://intellipaat.com/" data-type="URL" data-id="https://intellipaat.com/" target="_blank" rel="noopener">Intellipatt</a> answers the question like this</p>
-
-
-
-<blockquote class="wp-block-quote">
-<p>A set of values and principles. Because both follow a set of principles and offer the value that is similar.</p>
-<cite>https://intellipaat.com/community/74027/which-term-accurately-describes-agile-and-devops</cite></blockquote>
-
-
-
-<p>I believe that this answer is a primarily business-focused answer looking to understand the idea of value in the market.  While it is not an incorrect way to look at things, I do not believe it is the most important way to look at DevOps and Agile.  </p>
-
-
-
-<p>Value is a byproduct of DevOps and Agile.  The real benefit to DevOps and Agile is the consistent way that said value gets delivered to the market.  This means that you can calculate and quantify value through data-driven decision-making.  You are also able to manage market expectations and take potentially larger leaps to satisfy your customers.</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>The key to any technology product&#8217;s success is consistency.  DevOps and Agile offer consistency while remaining flexible and focused on common non-functional requirements like reliability and stability.  Other facets of Agile and DevOps like value are byproducts of a team or teams of teams who fully embrace the complementary delivery methodologies.</p>
-
-
-
-<p>How would you boil DevOps and Agile down to a single term?  <a href="https://www.valewood.org/contact/" data-type="page" data-id="984">Contact me</a> and let me know!</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Why DevOps is Boring in 2022?</title>
-		<link>https://www.valewood.org/more-like-boringops/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Sat, 26 Nov 2022 18:04:10 +0000</pubDate>
-				<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[coding]]></category>
-		<category><![CDATA[delivery]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[software]]></category>
-		<guid isPermaLink="false">/?p=1786</guid>
-
-					<description><![CDATA[DevOps is a hot topic in the technology world. It&#8217;s no longer just an isolated set of tools and processes which promise an automated future, it’s an entire culture that’s infiltrating every facet of software development. This post will try&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p><a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> is a hot topic in the technology world. It&#8217;s no longer just an isolated set of tools and processes which promise an automated future, it’s an entire culture that’s infiltrating every facet of software development.</p>
-
-
-
-<p>This post will try to explain why the DevOps methodology itself is not boring.  We will also try to explain why a feeling of boredom stems from properly implemented tools and processes. We also dive into how you can make DevOps more exciting while keeping your sanity intact.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>What Does DevOps Mean?</h2>
-
-
-
-<p>The term DevOps, or “development operations,” first appeared in the tech world in the early 2000s. It was a term used to describe a certain type of organization that was responsible for the entire application and software development lifecycle, from ideation to production.</p>
-
-
-
-<p>Teams would be responsible for both the development and operations workflows, providing a more efficient way of working. As DevOps has grown in popularity, it has expanded beyond just operations teams.</p>
-
-
-
-<p>Now, people are interested in speeding up their software development process using the term DevOps to describe the combined usage of infrastructure automation tools and best practices for team collaboration and communication.</p>
-
-
-
-<p>There are two main components within DevOps that drive the culture. They are infrastructure as code and automated delivery. IaC is really just a way of organizing your code and infrastructure so that it is easily reproducible and shareable. Automated delivery is a method for automatically deploying applications and configurations without human intervention.</p>
-
-
-
-<p>With the increase in automation, engineers may find themselves wondering when the next exciting change event may present itself. They may also wonder if they are automating themselves out of a job.</p>
-
-
-
-<p>As a basis for understanding DevOps, you must understand that this practice exists to remove the excitement of a chaotic technology delivery process. DevOps is meant to be boring by nature.</p>
-
-
-
-<p>As a side effect of DevOps being stable and consistent, organizations must look for other ways to keep their software engineers and DevOps engineers engaged through other means of excitement.</p>
-
-
-
-<h2>Why is DevOps Boring?</h2>
-
-
-
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe title="Why DevOps is Boring in 2022" width="1170" height="658" src="https://www.youtube.com/embed/bP5nWWFV2gg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div></figure>
-
-
-
-<p>As companies begin implementing modern DevOps practices, some people may notice a lull in excitement. The tools, processes, and overall culture of DevOps may feel exciting at first but quickly turn into monotony. Why?</p>
-
-
-
-<p>DevOps becomes boring because people approach it as a checklist. They focus on the tools and processes and completely ignore the culture and mindset that lies behind the methodology.</p>
-
-
-
-<p>These people don’t understand why they are implementing certain tools or why they are following specific processes. They are just doing it because they read an article that said their company should be adopting DevOps, or they read a book that talked about the “predictable <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2022" target="_blank" rel="noopener">flow of value</a>”.</p>
-
-
-
-<p>What makes DevOps exciting is the culture behind it. The practices and tools are just the means of achieving a certain culture. If you try to implement DevOps but don’t adopt the correct mindset and culture behind it, then you are going to end up with a boring and ineffective implementation.</p>
-
-
-
-<h3>Fewer Natural Learning and Growth Opportunities</h3>
-
-
-
-<p>A stable DevOps lifecycle will inherently bring a lower number of emerging technologies and opportunities to integrate emerging technologies. Sure, early on in DevOps adoption, the emerging tech will be all the rage, but that will subside as stability and consistency are driven into the pipeline.</p>
-
-
-
-<p>Since continuous improvement is a fundamental principle of DevOps, teams should be encouraged to do some data-driven analysis looking for opportunities to become more efficient in their delivery cycles.</p>
-
-
-
-<p>Pivots can also be made within the team. Someone who is primarily focused on ops should be put in a position to both share what they are doing and also be presented with opportunities to look at other fields like coding or security. This is true for all specialties that make up a function DevOps team.</p>
-
-
-
-<h3>Comfort in Previous Success</h3>
-
-
-
-<p>All too often, I see companies in the industry falling back on the comfort of their successes as an excuse to not rapidly evolve. DevOps should be putting companies in a position where pivots are much easier to pull off. Secondarily keeping a DNA of being lean and nimble should be a focus of any company.</p>
-
-
-
-<p>Any company sitting back on its heels thinking it can keep doing what they are doing forever is going to be consumed by its competitors operating at a different level. Break that cycle by listening to the opportunities being presented by your DevOps Engineers and your Software Engineers to keep DevOps from becoming boring and your company from stagnating.</p>
-
-
-
-<h3>Never Being Complete or Finished</h3>
-
-
-
-<p>When completing a project, a person can get a huge dopamine rush along with a personal sense of accomplishment. DevOps doesn’t really offer that in large quantities. Work is much more methodical, incremental, and bite-sized meaning a team’s ability to celebrate a big win is less frequent.</p>
-
-
-
-<p>If you want to truly adopt a culture of continuous improvement, you need to make sure that your team is constantly learning and improving their knowledge. This means your team should be continually looking for new books, podcasts, and ways that they can expand their skill set, improve their knowledge, and learn new things.</p>
-
-
-
-<p>When DevOps is paired with Agile, those opportunities are even more spread apart. Everyone on the team is incrementally feeding their work into a larger integrated system. Resources may be assigned to a larger initiative for only a short period of time before being rolled off to another set of work.</p>
-
-
-
-<h3>DevOps Engineers are a Figment of your Imagination</h3>
-
-
-
-<p>A DevOps Engineer does not exist. They are not real. Yetis are more real than DevOps Engineers are.</p>
-
-
-
-<p>DevOps is a methodology and a culture that does not require a role engineer it. There are many engineering practices that compose a full team practicing DevOps. Confusion about what someone is really intended to be working on will leave those individuals to fend for themselves and miss out on a healthy team dynamic.</p>
-
-
-
-<p>When culture is suffering in a team practicing DevOps it can become boring or worse extremely frustrating. There is not a shared vision or goal that team is trying to achieve. This means that the work being performed is being done in isolation and under-appreciated. Let’s face it, we are not doing our jobs for our own health, we do them to contribute to something bigger than ourselves.</p>
-
-
-
-<h3>The Hype Train</h3>
-
-
-
-<p>I see a lot of posts on <a target="_blank" rel="noreferrer noopener" href="https://www.reddit.com/">Reddit</a> which have individuals from different disciplines looking to make the jump from their current career path over to DevOps. Most of what I read leads me to believe that they are being sold a bill of goods which just isn’t reality.</p>
-
-
-
-<p>While I do believe that problem-solving in a space fully embracing DevOps is more complex than in any more traditional space, I do not believe that most companies are embracing DevOps fully. This means that job applicants are applying for and landing DevOps positions that are not actually meeting the spirit of DevOps. Organizations are generally looking for a little bit of help automating some manual processes but stop short of full adoption.</p>
-
-
-
-<p>This will lead engineers to be as bored at this new shiny DevOps role as they were in their former system administration role.</p>
-
-
-
-<h3>Running out of People to Blame</h3>
-
-
-
-<p>Office politics can be entertaining to some. In a fully functioning DevOps culture, everything is treated as code, tested in code, operations happen in code, and releases are automated all of which remove a lot of formal human interaction in the daily development and release cycle.</p>
-
-
-
-<p>Game of Thrones was not popular because Joffrey methodically picked apart Rob Stark and his armies. GoT was popular because of the drama, suspense, twists, and turns. Now, the office should not be a Game of Thrones style drama, but; DevOps is very good at transitioning from a culture full of interpersonal conflict into a blameless culture focused purely on technology which can be boring.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>What Are Some Examples of Engineers Boredom Executing DevOps?</h2>
-
-
-
-<p>Below are some examples of different roles and how they can become bored with their job when DevOps is being practically utilized for its processes but not viewed as a persistent growth opportunity.</p>
-
-
-
-<h3>Debbie Developer has a Case of the Mondays</h3>
-
-
-
-<p>Debbie became a software engineer because of her love for puzzles. Solving complex scenarios and producing elegant maintainable code is her passion.</p>
-
-
-
-<p>Early on in the DevOps adoption process, she was jazzed that there was a whole host of new problems to solve when transforming a traditional set of build jobs into something that could support CI/CD.</p>
-
-
-
-<p>As time has progressed, she is feeling less fulfilled in her day-to-day job. The kinds of work she is performing have become far less complex and much smaller. There is almost no coordination between members of her team since she can just push code at will and let automation take over to push it into production.</p>
-
-
-
-<p>It is the same daily slog over and over and over again.</p>
-
-
-
-<h3>Simon the Systems Administrator is Running Out of Work To Do</h3>
-
-
-
-<p>Servers create themselves. Simon doesn&#8217;t need to log into the <a href="https://aws.amazon.com/" data-internallinksmanager029f6b8e52c="14" title="AWS" rel="nofollow noopener" target="_blank">AWS</a> console anymore to check anything because the platform is completely self-service.</p>
-
-
-
-<p>When adopting DevOps, systems administrators will often find themselves developing a lot of code around system configurations. This works well because in their specific domain, they want consistency and operational efficiency.</p>
-
-
-
-<p>Over time, Simon&#8217;s work has been extremely helpful in level-setting expectations around solid delivery patterns. But what is next for Simon? There does not appear to be any new or related systems on the horizon for Simon to continue to grow his skills. Growth has stagnated and there really isn&#8217;t a path forward for Simon to earn a senior systems administrator position.</p>
-
-
-
-<h3>Quintin Feels Like Their Role as a Quality Assurance Engineer is Monotonous</h3>
-
-
-
-<p>Developers are writing their own unit, functional, and integration acceptance tests. Quintin is left building some visual testing to be added to the delivery pipeline.</p>
-
-
-
-<p>Quality assurance engineers are the glue that holds a development community together. They are well-versed in requirements and testing and they are constantly working with their developer counterparts to ensure their work will be accepted by customers.</p>
-
-
-
-<p>DevOps can take away this sense of community in the development process. Individuals are responsible for contributing their own tests while they write code. As tests are passed, the code moves its way into production.</p>
-
-
-
-<p>DevOps has effectively worked Quintin out of a job.</p>
-
-
-
-<h3>Connie the Cloud Engineer is Struggling to Provide Value</h3>
-
-
-
-<p>DevOps pipelines will consist of application code, test automation, system automation, and infrastructure automation (cloud or on-prem). Once developed, engineers will shift focus to day 2 operations. Once day 2 operations are tackled, what&#8217;s left?</p>
-
-
-
-<p>Connie felt value and excitement in the early days of DevOps, but is now isolated away from the rest of the team because systems have been stabilized, security is second nature, and AWS is effectively running itself.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>5 Tips to Make DevOps Exciting Again!</h2>
-
-
-
-<p>We’ve covered why DevOps can become tedious, but what can you do about it? If you want to make DevOps exciting again, then you have to understand why it is exciting in the first place!</p>
-
-
-
-<p>The reason DevOps is exciting for most companies is because of the focus on drastically improving your software development process. It’s a way of improving communication, collaboration, and the overall quality of your software. It’s a way of adopting a culture of automation.</p>
-
-
-
-<p>Automation is important in DevOps because it directly impacts the speed of your software release cycles. It can also help improve the overall quality of your software as well as your organization.</p>
-
-
-
-<p>Automation is a core component of DevOps. When you make automation a core part of your development process, you are able to reduce the number of repetitive tasks your organization has to perform. This means you can put less focus on manual tasks, and more focus on things that actually improve your software and the company as a whole.</p>
-
-
-
-<h3>Provide Growth Opportunities</h3>
-
-
-
-<p>Some companies confuse growth with “opportunities to become a manager”. Most of the really good engineers and architects that I have met will “manage” a project because they want to see it succeed not because they want to be a manager.</p>
-
-
-
-<p>Providing opportunities for growth in knowledge, automation, systems, development, operations, platforms, consulting, or any other area that your services or products may not be fully taking advantage of today.</p>
-
-
-
-<p>As an example, if you have an awesome set of pipelines that obfuscate some of the complexities of doing automated delivery, challenge your team to package that up and white-label it. Have them use those packages to consult with other teams in your organization to level their automation skills up.</p>
-
-
-
-<h3>Inject Failures</h3>
-
-
-
-<p>We are always focused on delivering key projects, functionality, or needs of the business. With a narrow view of the world being delivered first, that does not leave a lot of room to poke at the softer edges of your products.</p>
-
-
-
-<p>Introduce automated failure models like a chaos monkey. Start with planned times and have your chaos monkey start to take down some low criticality services and review the characteristics of what that means. There may be impacts in areas that you were not expecting.</p>
-
-
-
-<p>This provides an opportunity to add some advanced troubleshooting to an area that the DevOps methodology took away through its inherent consistency and stability.</p>
-
-
-
-<h3>Incorporate User Feedback Into DevOps Processes</h3>
-
-
-
-<p>User feedback is important to any business because it allows you to understand your customers and discover ways to improve your product. However, user feedback is hard to come by because customers don’t usually interact with businesses on a consistent basis.</p>
-
-
-
-<p>In order to incorporate user feedback into your software development lifecycle, you need to be able to get consistent feedback from customers. There are two main ways to do this:</p>
-
-
-
-<ul>
-<li>Use survey tools to let customers provide feedback on your product, team, and company.</li>
-
-
-
-<li>Let customers interact with your team using live chat tools.</li>
-</ul>
-
-
-
-<p>Both of these tools are easy to implement and can help you get useful and consistent feedback from customers. Feedback is also a great way to breathe some excitement into an otherwise stagnant work environment.</p>
-
-
-
-<h3>Be Realistic with Expectations</h3>
-
-
-
-<p>As I stated above, DevOps Engineers are not real. Business leaders need to come to grips with this fact and be very realistic with expectations around roles and work assignments. If you are looking to shortcut full DevOps adoption by hiring some DevOps engineers as a gap fill, you will not be able to provide an exciting environment that keeps your technology groups engaged.</p>
-
-
-
-<h3>Celebrate Completion</h3>
-
-
-
-<p>Get your teams together to do some good old-fashioned team building. Wins are wins no matter how big or small they are. Recognize your team’s accomplishments because they deserve to be recognized.</p>
-
-
-
-<p>The methodical pace of DevOps and Agile do not lend themselves to recognizing big wins or the sheer volume of work that it really takes to get to those wins. Team leads should focus on bringing their teams back to the center by recapping how much success they have had knowing their work is never done.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Conclusion</h2>
-
-
-
-<p>DevOps is not boring. It is an exciting change in the way that organizations approach software development. However, it is only exciting if you fully commit to the culture of DevOps and all the benefits it has to offer.</p>
-
-
-
-<p>If you just implement the tools and processes without the culture and mindset, then you are only doing half the work and missing out on the benefits of the fully implemented DevOps culture.</p>
-
-
-
-<p>If you want to make DevOps exciting again, you must ensure that you are fully committed to the culture. Only then will you be able to make the most of everything that DevOps has to offer.</p>
-]]></content:encoded>
-					
-		
-		
-		<media:content url="https://www.youtube.com/embed/bP5nWWFV2gg" medium="video" width="1280" height="720">
-			<media:player url="https://www.youtube.com/embed/bP5nWWFV2gg" />
-			<media:title type="plain">Why DevOps is Boring in 2022</media:title>
-			<media:description type="html"><![CDATA[DevOps is a hot topic in the technology world. It’s no longer just an isolated set of tools and processes which promise an automated future, it’s an entire c...]]></media:description>
-			<media:thumbnail url="/wp-content/uploads/2022/11/devops-boring.jpg" />
 			<media:rating scheme="urn:simple">nonadult</media:rating>
 		</media:content>
 	</item>
