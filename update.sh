@@ -88,12 +88,5 @@ grep -rl '<link rel="canonical" href="/' . --exclude='update.sh' | xargs sed -i 
 echo "Fix character issues with the DevOps readiness assessment"
 node fix_devops_readiness_assessment.js
 
-# Fix ads
-# echo "Replacing adsbygoogle.js\" with adsbygoogle.js?client=ca-pub-7120242057450442\""
-# grep -rl "adsbygoogle.js\"" . --exclude='update.sh' | xargs sed -i 's/\(adsbygoogle.js\)"/\1?client=ca-pub-7120242057450442"/g'
-
-#echo "Add push javascript to ins"
-#grep -rl "</ins>" . --exclude='update.sh' | xargs sed -i 's/\(<\/ins>\)\(\s*\)<\//\1<script>\(adsbygoogle = window.adsbygoogle || []\).push\({}\);<\/script>\s<\//g'
-
 echo "Removing source files from $SOURCE_FILE\n";
 rm -rf $SOURCE_FILE;
