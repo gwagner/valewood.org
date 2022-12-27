@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/author/gwagner/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 23 Dec 2022 20:24:30 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 19:55:09 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,7 +28,7 @@
 	<height>32</height>
 </image> 
 	<item>
-		<title>How to SSH into pod K8s</title>
+		<title>How to SSH into a K8s pod</title>
 		<link>https://www.valewood.org/how-to-ssh-into-pod-k8s/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -285,6 +285,71 @@ spec:
 	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </p>
 
+
+
+<h2>Frequently Asked Questions</h2>
+
+
+
+<p>Below are some frequently asked questions relating to SSHing (or gaining access) to a k8s pod:</p>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1672161158864" class="rank-math-list-item">
+<h3 class="rank-math-question ">How do I get SSH access to a k8s pod?</h3>
+<div class="rank-math-answer ">
+
+<p>To get SSH access to a Kubernetes (k8s) pod, you&#8217;ll need to do the following:</p>
+<p>1. <strong>Make sure that the pod has an SSH server running inside it.</strong> This typically involves installing and running an SSH daemon  <code>sshd</code> inside the container.<br />2. <strong>Expose the pod&#8217;s SSH service to the network.</strong> This can be done by creating a Kubernetes Service object that exposes the pod&#8217;s SSH port (usually port 22) to the cluster. Alternatively, you can use a tool like <code>kubectl port-forward</code> to forward traffic from a local port to the pod&#8217;s SSH port.<br />3. <strong>Connect to the pod&#8217;s SSH service using an SSH client.</strong> You&#8217;ll need to know the pod&#8217;s IP address or hostname, as well as any authentication credentials required to log in.</p>
+<p>It&#8217;s worth noting that SSH access to a k8s pod is not the recommended way to access and manage a pod. Instead, it&#8217;s generally better to use the k8s API and tools like <code>kubectl</code> to interact with and manage your pods.</p>
+
+</div>
+</div>
+<div id="faq-question-1672161161788" class="rank-math-list-item">
+<h3 class="rank-math-question ">Is it possible to SSH into a k8s pod?</h3>
+<div class="rank-math-answer ">
+
+<p>Yes, it is possible to SSH into a Kubernetes (k8s) pod, as long as the pod has an SSH server running inside it and the pod&#8217;s SSH service is exposed to the network.</p>
+
+</div>
+</div>
+<div id="faq-question-1672161172612" class="rank-math-list-item">
+<h3 class="rank-math-question ">How do I troubleshoot connectivity issues when trying to SSH into a k8s pod?</h3>
+<div class="rank-math-answer ">
+
+<p>If you&#8217;re having connectivity issues when trying to SSH into a Kubernetes (k8s) pod, here are some steps you can take to troubleshoot the problem:</p>
+<p>1. <strong>Check the pod&#8217;s status:</strong> Make sure that the pod is running and ready. If the pod is not running or is in a failed state, you won&#8217;t be able to SSH into it. You can use the <code>kubectl get pods</code> command to check the status of your pods.<br />2. <strong>Check the pod&#8217;s IP address:</strong> Make sure that you have the correct IP address or hostname for the pod. You can use the <code>kubectl describe pod</code> command to get the IP address of a pod.<br />3. <strong>Check the pod&#8217;s SSH port:</strong> Make sure that you&#8217;re trying to connect to the correct SSH port on the pod. The default SSH port is 22, but it&#8217;s possible that the pod&#8217;s SSH service is listening on a different port.<br /><strong>4. Check the pod&#8217;s network connectivity: </strong>Make sure that the pod has network connectivity and that there are no network issues or firewalls blocking the connection. You can use the <code>kubectl exec</code> command to run a command inside the pod and verify that it has network connectivity.<br />5. <strong>Check the pod&#8217;s SSH service:</strong> Make sure that the pod&#8217;s SSH service is running and accessible. You can use the <code>kubectl exec</code> command to run a command inside the pod and check the status of the SSH service.<br />6. <strong>Check your SSH client and configuration:</strong> Make sure that your SSH client is configured correctly and that you&#8217;re using the correct authentication credentials.<br />7. <strong>Check the pod&#8217;s logs:</strong> You can use the <code>kubectl logs</code> command to view the pod&#8217;s logs, which may contain clues about the cause of the connectivity issues.</p>
+<p>It&#8217;s worth noting that SSH access to a k8s pod is not the recommended way to access and manage a pod. Instead, it&#8217;s generally better to use the k8s API and tools like <code>kubectl</code> to interact with and manage your pods.</p>
+
+</div>
+</div>
+<div id="faq-question-1672161178009" class="rank-math-list-item">
+<h3 class="rank-math-question ">Can I use a private key to authenticate when SSHing into a k8s pod?</h3>
+<div class="rank-math-answer ">
+
+<p>Yes, you can use a private key to authenticate when SSHing into a Kubernetes (k8s) pod. This is typically done by creating a key pair (consisting of a private key and a public key) and installing the public key on the pod. The private key is then used to authenticate the connection when you SSH into the pod.</p>
+
+</div>
+</div>
+<div id="faq-question-1672161196133" class="rank-math-list-item">
+<h3 class="rank-math-question ">Is it possible to use a bastion host to SSH into a k8s pod?</h3>
+<div class="rank-math-answer ">
+
+<p>Yes, it is possible to use a bastion host to SSH into a Kubernetes (k8s) pod. A bastion host is a secure, remote server that acts as a gateway or jump host for accessing other servers on a network. By connecting to the bastion host first, you can then use the bastion host to SSH into the k8s pod, which can be useful for security or convenience reasons.</p>
+
+</div>
+</div>
+<div id="faq-question-1672161205027" class="rank-math-list-item">
+<h3 class="rank-math-question ">Can I use a tool like Ansible to manage SSH access to k8s pods?</h3>
+<div class="rank-math-answer ">
+
+<p>Yes, you can, but this is so far off the beaten path of how you should be managing a Kubernetes (k8s) cluster that I would highly recommend going back and reviewing all of your design decisions to ask yourself &#8220;Why??&#8221;</p>
+
+</div>
+</div>
+</div>
+</div>
 
 
 <h2>Conclusion</h2>
@@ -559,6 +624,10 @@ spec:
 
 
 <li><strong>IfNotPresent:</strong> This policy means that the container will only pull the image from the repository if it is not already present on the host machine. If the image is present on the host, the container will use the local version of the image.</li>
+
+
+
+<li><strong>Never:</strong> This policy is meant to tell Kubernetes to never pull down new images on behalf of a node.  Administrators need to make sure that they make images available on a node prior to pod deployment.</li>
 </ol>
 
 
@@ -641,6 +710,51 @@ spec:
 	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </p>
 
+
+
+<h2>Frequently Asked Questions</h2>
+
+
+
+<p>Below are some frequently asked questions about ImagePullPolicy:</p>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1672161780792" class="rank-math-list-item">
+<h3 class="rank-math-question ">What is an ImagePullPolicy?</h3>
+<div class="rank-math-answer ">
+
+<p>An ImagePullPolicy tells Kubernetes how you should like your pods to be refreshed or made available on your nodes.  <br />A policy of Always will tell Kubernetes to never use the local cache when deploying new containers.  This can be useful if you are using the latest tag but has security implications that you should do your research on before utilizing Always.<br />A policy of IfNotPresent will tell Kubernetes to only download a new image if an image matching your specific tag is not already present on your node.  This is useful to speed up deployments, by skipping a download step.<br />A policy of Never ensures that Kubernetes will never download any new images.  It is up to the administrator to ensure that images are cached locally on the node prior to deployment.</p>
+
+</div>
+</div>
+<div id="faq-question-1672161782439" class="rank-math-list-item">
+<h3 class="rank-math-question ">How does ImagePullPolicy work in Kubernetes?</h3>
+<div class="rank-math-answer ">
+
+<p>In Kubernetes, the ImagePullPolicy is a property of a container in a pod that determines when and how the container image should be pulled from a registry. When a pod is created or updated, the ImagePullPolicy for each container in the pod is used to determine whether to pull the image from the registry and when to do so.</p>
+
+</div>
+</div>
+<div id="faq-question-1672161792716" class="rank-math-list-item">
+<h3 class="rank-math-question ">Can I specify different ImagePullPolicy values for different containers in the same pod?</h3>
+<div class="rank-math-answer ">
+
+<p>Yes, you can specify different ImagePullPolicy values for different containers in the same pod in Kubernetes. Each container in a pod can have its own ImagePullPolicy, which determines when and how the container&#8217;s image should be pulled from the registry.</p>
+
+</div>
+</div>
+<div id="faq-question-1672161817204" class="rank-math-list-item">
+<h3 class="rank-math-question ">Can I change the ImagePullPolicy after a pod or deployment has been created?</h3>
+<div class="rank-math-answer ">
+
+<p>Yes, simply modify your configuration files and push a new config to Kubernetes.</p>
+
+</div>
+</div>
+</div>
+</div>
 
 
 <h2>Conclusion</h2>
@@ -2490,6 +2604,63 @@ if err != nil {
 
 
 
+<h2>Frequently Asked Questions</h2>
+
+
+
+<p>Below are questions frequently asked about pods stuck in a terminating status:</p>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1672170360551" class="rank-math-list-item">
+<h3 class="rank-math-question ">How do I delete all terminating pods in Kubernetes?</h3>
+<div class="rank-math-answer ">
+
+<p>You can delete all terminating pods in a namespace by running </p>
+<p><code>kubectl delete pods -n &lt;namespace> --field-selector='status.phase==Terminating'</code></p>
+<p>You can delete all terminating pods in all namespaces by running </p>
+<p><code>kubectl delete pods --all-namespaces --field-selector='status.phase==Terminating'</code></p>
+<p>These commands may still not delete your terminating pods for a variety of reasons.  You can add a force flag to the command which should forcibly remove stuck pods, but use it with caution.</p>
+<p><code>kubectl delete pods --force=true --all-namespaces --field-selector='status.phase==Terminating'</code></p>
+
+</div>
+</div>
+<div id="faq-question-1672170379976" class="rank-math-list-item">
+<h3 class="rank-math-question ">Why is my pod stuck in terminating?</h3>
+<div class="rank-math-answer ">
+
+<p>There are several reasons why a pod in Kubernetes might be stuck in the &#8220;Terminating&#8221; state:</p>
+<p>1. The pod is waiting for its associated resources (e.g. volumes, secrets, configmaps) to be deleted before it can be terminated.<br />2. The pod is waiting for its finalizers to run. Finalizers are special functions that are run before a resource is deleted. For example, a pod might have a finalizer that runs a cleanup script before the pod is terminated.<br />3. The pod is being evicted by a node, but the eviction process is taking longer than expected. This can happen if the pod has resources that are difficult to release (e.g. open files, network connections).<br />4. There is a problem with the Kubernetes API server, and the pod is unable to be terminated.</p>
+
+</div>
+</div>
+<div id="faq-question-1672170389680" class="rank-math-list-item">
+<h3 class="rank-math-question ">How do you gracefully terminate a pod?</h3>
+<div class="rank-math-answer ">
+
+<p>To gracefully terminate a pod in Kubernetes, you can use the <code>kubectl delete</code> command with the <code>--grace-period</code> flag, which allows you to specify a time period in seconds during which the pod will be allowed to finish running any in-progress tasks before it is terminated.</p>
+<p>For example, the following command will delete a pod named &#8220;my-pod&#8221; and give it a grace period of 30 seconds to finish any in-progress tasks before it is terminated:</p>
+<p><code>kubectl delete pod my-pod --grace-period=30</code></p>
+
+</div>
+</div>
+<div id="faq-question-1672170400332" class="rank-math-list-item">
+<h3 class="rank-math-question ">How to delete a Kubernetes namespace stuck in the terminating state?</h3>
+<div class="rank-math-answer ">
+
+<p>To delete a namespace in Kubernetes that is stuck in the &#8220;Terminating&#8221; state, you can use the following command:</p>
+<p><code>kubectl delete namespace &lt;namespace-name> --grace-period=0 --force</code></p>
+<p>This will force the namespace to be deleted immediately, regardless of whether there are any resources within the namespace that are still being terminated.</p>
+<p>Keep in mind that deleting a namespace will delete all resources within that namespace, including pods, services, and deployments. This can disrupt the operation of your application, so it is important to use this command with caution.</p>
+<p>If you are unable to delete the namespace using the above command, it is possible that there are resources within the namespace that are preventing it from being deleted. In this case, you can use the following command to list the resources within the namespace and try deleting them individually:<br /><code>kubectl get all --namespace=&lt;namespace-name></code></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
 <h2>Conclusion</h2>
 
 
@@ -2525,7 +2696,7 @@ if err != nil {
 
 					<description><![CDATA[Are you looking for ways to accelerate the development process and reduce costs? Shifting testing to the left should be on your radar. Automated testing is a practice that helps accelerate your flow of value to the market, and if&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p>Are you looking for ways to accelerate the development process and reduce costs? Shifting testing to the left should be on your radar.  <a href="https://www.valewood.org/devops-testing/" data-type="post" data-id="1239">Automated testing </a>is a practice that helps accelerate your <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2022" target="_blank" rel="noopener">flow of value</a> to the market, and if you haven&#8217;t started building automated testing yet, you should start ASAP!</p>
+<p>Are you looking for ways to accelerate the development process and reduce costs? Shifting testing to the left should be on your radar.  <a href="https://www.valewood.org/devops-testing/" data-type="post" data-id="1239">Automated testing </a>is a practice that helps accelerate your <a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2023" target="_blank" rel="noopener">flow of value</a> to the market, and if you haven&#8217;t started building automated testing yet, you should start ASAP!</p>
 
 
 
@@ -2872,7 +3043,7 @@ if err != nil {
 
 					<description><![CDATA[In this blog, we discuss&#160;DevOps and Agile at great length. DevOps is a methodology for technology delivery while Agile is a methodology for project management. The two pair together quite well to increase the&#160;flow of value&#160;to the market. They can&#8230;]]></description>
 										<content:encoded><![CDATA[
-<p>In this blog, we discuss&nbsp;<a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> and Agile at great length. DevOps is a methodology for technology delivery while Agile is a methodology for project management. The two pair together quite well to increase the&nbsp;<a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2022" target="_blank" rel="noopener">flow of value</a>&nbsp;to the market.</p>
+<p>In this blog, we discuss&nbsp;<a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> and Agile at great length. DevOps is a methodology for technology delivery while Agile is a methodology for project management. The two pair together quite well to increase the&nbsp;<a href="https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/" data-internallinksmanager029f6b8e52c="28" title="Understanding the DevOps Process Flow in 2023" target="_blank" rel="noopener">flow of value</a>&nbsp;to the market.</p>
 
 
 

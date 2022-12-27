@@ -20,9 +20,6 @@ node build_index.mjs
 # Generate the SERP page
 node create_serp_page.mjs
 
-# Generate the 404 page
-#node create_404_page.mjs
-
 # Generate table of contents
 node add_faq_structured_data.mjs
 
@@ -31,7 +28,5 @@ node fix_table_of_contents.mjs
 
 # Convert babel over to js
 node convert_babel.mjs
-
-npx babel ./topics/devops/resources/readiness-assessment/index.html --out-file ./topics/devops/resources/readiness-assessment/index.html --minified
 
 rm -rf webp.mjs build_index.mjs convert_babel.mjs create_serp_page.mjs add_faq_structured_data.mjs fix_table_of_contents.mjs package.json package-lock.json build.sh run.sh update.sh .gitignore

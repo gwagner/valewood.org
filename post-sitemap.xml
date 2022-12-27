@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.valewood.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://www.valewood.org/kubernetes-pod-stuck-terminating/</loc>
+		<lastmod>2022-12-27T13:55:09-06:00</lastmod>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/kubernetes-imagepullpolicy/</loc>
-		<lastmod>2022-12-23T14:24:30-06:00</lastmod>
+		<lastmod>2022-12-27T11:30:30-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/how-to-ssh-into-pod-k8s/</loc>
+		<lastmod>2022-12-27T11:21:01-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/more-like-boringops/</loc>
+		<lastmod>2022-12-27T08:24:11-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/are-devops-engineers-in-demand/</loc>
+		<lastmod>2022-12-27T08:23:37-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/kubernetes-port-requires-tls/</loc>
 		<lastmod>2022-12-23T14:24:25-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/how-to-ssh-into-pod-k8s/</loc>
-		<lastmod>2022-12-23T14:24:14-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/how-chatgpt-can-speed-up-devops-by-writing-ansible/</loc>
@@ -31,10 +43,6 @@
 	<url>
 		<loc>https://www.valewood.org/devops-interview-with-chatgpt/</loc>
 		<lastmod>2022-12-14T08:54:58-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/kubernetes-pod-stuck-terminating/</loc>
-		<lastmod>2022-12-10T11:36:40-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/kubernetes-crashloopbackoff-error/</loc>
@@ -85,10 +93,6 @@
 		<lastmod>2022-12-02T16:00:34-06:00</lastmod>
 	</url>
 	<url>
-		<loc>https://www.valewood.org/more-like-boringops/</loc>
-		<lastmod>2022-12-02T15:38:03-06:00</lastmod>
-	</url>
-	<url>
 		<loc>https://www.valewood.org/devops-monitoring/</loc>
 		<lastmod>2022-12-01T22:01:27-06:00</lastmod>
 	</url>
@@ -136,10 +140,6 @@
 	<url>
 		<loc>https://www.valewood.org/do-devops-engineers-need-a-coding-background/</loc>
 		<lastmod>2022-10-17T15:49:20-05:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/are-devops-engineers-in-demand/</loc>
-		<lastmod>2022-10-14T15:19:17-05:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-skills/</loc>

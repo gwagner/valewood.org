@@ -5,6 +5,13 @@
 		<lastmod>2022-12-06T16:07:58-06:00</lastmod>
 	</url>
 	<url>
+		<loc>https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/</loc>
+		<lastmod>2022-12-27T08:24:31-06:00</lastmod>
+		<image:image>
+			<image:loc>https://www.valewood.org/wp-content/uploads/2022/11/DevOps-Process-Flow-Image-1024x503.png</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/topics/devops/resources/readiness-checklist/</loc>
 		<lastmod>2022-12-23T12:16:41-06:00</lastmod>
 	</url>
@@ -31,13 +38,6 @@
 	<url>
 		<loc>https://www.valewood.org/topics/devops/faq/</loc>
 		<lastmod>2022-11-26T12:12:10-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/topics/devops/benefits-of-devops/devops-flow/</loc>
-		<lastmod>2022-11-22T12:10:01-06:00</lastmod>
-		<image:image>
-			<image:loc>https://www.valewood.org/wp-content/uploads/2022/11/DevOps-Process-Flow-Image-1024x503.png</image:loc>
-		</image:image>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/topics/devops/benefits-of-devops/flexibility/</loc>
