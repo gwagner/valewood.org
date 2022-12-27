@@ -7,11 +7,11 @@
 	>
 <channel>
 	<title>
-	Comments on: How to SSH into pod K8s	</title>
+	Comments on: How to SSH into a K8s pod	</title>
 	<atom:link href="https://www.valewood.org/how-to-ssh-into-pod-k8s/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/how-to-ssh-into-pod-k8s/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Fri, 23 Dec 2022 20:24:14 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Dec 2022 17:21:01 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
