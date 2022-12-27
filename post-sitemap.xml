@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.valewood.org/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://www.valewood.org/devops-shift-left-testing/</loc>
+		<lastmod>2022-12-27T16:22:18-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-testing/</loc>
+		<lastmod>2022-12-27T16:04:49-06:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.valewood.org/devops-without-education/</loc>
+		<lastmod>2022-12-27T15:38:39-06:00</lastmod>
+	</url>
+	<url>
 		<loc>https://www.valewood.org/kubernetes-pod-stuck-terminating/</loc>
 		<lastmod>2022-12-27T13:55:09-06:00</lastmod>
 	</url>
@@ -49,14 +61,6 @@
 		<lastmod>2022-12-10T11:34:39-06:00</lastmod>
 	</url>
 	<url>
-		<loc>https://www.valewood.org/devops-shift-left-testing/</loc>
-		<lastmod>2022-12-07T16:30:05-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/devops-without-education/</loc>
-		<lastmod>2022-12-07T16:16:43-06:00</lastmod>
-	</url>
-	<url>
 		<loc>https://www.valewood.org/why-are-ci-cd-pipelines-part-of-devops/</loc>
 		<lastmod>2022-12-07T16:13:57-06:00</lastmod>
 	</url>
@@ -103,10 +107,6 @@
 	<url>
 		<loc>https://www.valewood.org/devops-cycle-time/</loc>
 		<lastmod>2022-11-22T17:08:20-06:00</lastmod>
-	</url>
-	<url>
-		<loc>https://www.valewood.org/devops-testing/</loc>
-		<lastmod>2022-11-22T11:49:22-06:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.valewood.org/devops-trust/</loc>
