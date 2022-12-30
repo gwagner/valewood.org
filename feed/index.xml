@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Tue, 27 Dec 2022 22:22:18 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 30 Dec 2022 20:22:35 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -28,6 +28,237 @@
 	<height>32</height>
 </image> 
 	<item>
+		<title>How can DevOps Teams take Advantage of Artificial Intelligence?</title>
+		<link>https://www.valewood.org/how-can-devops-teams-take-advantage-of-artificial-intelligence/</link>
+		
+		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
+		<pubDate>Fri, 30 Dec 2022 20:15:40 +0000</pubDate>
+				<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[delivery]]></category>
+		<category><![CDATA[devops]]></category>
+		<category><![CDATA[opinion]]></category>
+		<guid isPermaLink="false">/?p=2458</guid>
+
+					<description><![CDATA[Artificial intelligence is everywhere in technology these days. If you are building software that captures data, odds are that you are also training ai models to enhance that data. AI tools have mostly been kept at arm&#8217;s length from the&#8230;]]></description>
+										<content:encoded><![CDATA[
+<p>Artificial intelligence is everywhere in technology these days. If you are building software that captures data, odds are that you are also training ai models to enhance that data. AI tools have mostly been kept at arm&#8217;s length from the <a href="https://www.valewood.org/topics/devops/" data-internallinksmanager029f6b8e52c="15" title="How To Leverage the DevOps Methodology for Success!​" target="_blank" rel="noopener">DevOps</a> space until recently.</p>
+
+
+
+<p>While your company is developing products for consumers out in the market, every company should be looking for ways to enhance that cycle to get their products and service to market more quickly. Augmenting your software development process, enhancing software testing, and removing complexity from complex tasks should be your primary focus if speed is your goal.</p>
+
+
+
+<p>Giving DevOps engineers access to AI tools to augment their workflows is a great way to continue to enhance your product&#8217;s stability, reliability, and availability. AI tools can assist DevOps teams to focus on rapidly accelerating their delivery objectives without sacrificing quality.</p>
+
+
+
+<p>Let&#8217;s dive into a few areas where AI systems can help achieve these goals to enhance your business model.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Automation</h2>
+
+
+
+<p>Artificial intelligence (AI) can be used to automate a range of jobs in the DevOps cycle, such as recognizing and solving issues in the production environment, implementing updates and patches, and monitoring the health of systems.</p>
+
+
+
+<p>For instance, AI can be taught to detect patterns in log files or error messages, and quickly detect and fix issues as they come up through automated remediation. This can boost the efficiency and dependability of production systems and ease the workload of DevOps teams.</p>
+
+
+
+<p>Moreover, AI can be employed to automate the testing and deployment of code changes, allowing teams to release updates faster and with fewer mistakes. This can be done through continuous integration and delivery (CI/CD) pipelines, which build, test, and deploy code changes as soon as they are added to version control.</p>
+
+
+
+<p>By utilizing AI in this way, the DevOps team can concentrate on more significant tasks, instead of expending time on manual, recurrent duties.</p>
+
+
+
+<h2>Predictive Maintenance</h2>
+
+
+
+<p>Predictive maintenance is a cutting-edge technique of upkeep that relies on data and analytics to anticipate when devices or infrastructure may possibly fail, and to take preventive measures before the breakdown occurs. Artificial intelligence (AI) can be employed to increase the accuracy and effectiveness of predictive maintenance in the DevOps workflow.</p>
+
+
+
+<p>Ongoing maintenance is necessary for any complex environment, but; at the end of the day, unplanned maintenance due to issues will take teams away from delivering value to the market. Predictive maintenance proposed by ai enabled monitoring tools can help in eliminating inefficiencies.</p>
+
+
+
+<p>For instance, AI can be used to investigate data from sensors or other monitoring systems to detect patterns or trends that could be indicative of an impending malfunction. By alerting the DevOps team to these prospective issues beforehand, AI can help to avoid outages or disturbances and reduce the demand for unscheduled maintenance.</p>
+
+
+
+<p>Plus, AI can be used to modify the upkeep schedule based on the predicted breakdown rates of different equipment, infrastructure, or services. This can assist the DevOps team to prioritize maintenance tasks and allocate resources more effectively.</p>
+
+
+
+<h2>Anomaly Detection</h2>
+
+
+
+<p>Artificial intelligence (AI) can be employed to enhance the precision and accuracy of anomaly detection in production systems. For instance, machine learning can be instructed to recognize trends in data from monitoring systems or log files, and to discover variances from these trends that could demonstrate a concern or problem.</p>
+
+
+
+<p>By providing the DevOps team with insight into these anomalies in real-time, AI can help to avert outages or disruptions and lessen the impact of problems on the production environment.</p>
+
+
+
+<p>Furthermore, AI can be used to investigate data from numerous sources, such as application logs, system performance metrics, and user feedback, to detect associations and patterns that might not be evident to a human viewer. This can aid the DevOps team to quickly determine the root cause of any issue and take any necessary corrective actions.</p>
+
+
+
+<p>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7120242057450442"
+     data-ad-slot="6094810801"></ins>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+
+
+
+<h2>Decision Making</h2>
+
+
+
+<p>Decision making is a critical aspect of the DevOps workflow, as it involves making informed decisions about how to optimize the workflow and improve efficiency. Artificial intelligence (AI) can be used to improve the accuracy and efficiency of decision making in DevOps.</p>
+
+
+
+<p>For example, AI can be used to analyze data from various sources, such as application logs, system performance metrics, and user feedback, to identify patterns and trends that may not be apparent to a human observer. This can help the DevOps team identify areas for improvement and make informed decisions about how to optimize their workflow.</p>
+
+
+
+<p>In addition, AI can be used to make recommendations to the DevOps team based on this analysis. For example, AI might recommend changes to the infrastructure, deployment processes, or monitoring systems to improve reliability or performance. By leveraging AI in this way, the DevOps team can make more informed and data-driven decisions about how to optimize their workflow.</p>
+
+
+
+<h2>Continuous Integration and Delivery</h2>
+
+
+
+<p>Continuous integration/delivery (CI/CD) is a method of software engineering where code changes are routinely built, tested, and deployed as they are saved in version control. Artificial intelligence (AI) can be applied to refine the accuracy and productivity of CI/CD in the DevOps workflow.</p>
+
+
+
+<p>AI can be used to mechanize the trial process by recognizing and ordering test cases based on the code alterations being deployed, aiding the DevOps group to guarantee that code changes are completely tested prior to going public.</p>
+
+
+
+<p>Here are a few of the benefits AI systems can provide DevOps teams:</p>
+
+
+
+<ul>
+<li><strong>Automating repetitive tasks:</strong> Utilizing AI to understand the overall timings of repetitive tasks and, with the advent of technologies such as <a href="https://www.github.com/" data-internallinksmanager029f6b8e52c="6" title="Github" rel="nofollow noopener" target="_blank">GitHub</a> Copilot and ChatGPT, propose more performant solutions to those problems can help speed up your pipelines.</li>
+
+
+
+<li><strong>Integrating Natural Language Processing:</strong> Depending on your environment, copywriters may be sending over new content to be added to your technology stacks. By integrating NLP into your CI/CD pipelines, grammatical errors can be detected before software is shipped.</li>
+
+
+
+<li><strong>Automated testing: </strong>While teams should still remain accountable for writing their own tests for their software, more quality issues can be discovered by enabling AI systems to perform exploratory testing on your systems as well.</li>
+
+
+
+<li><strong>Code Quality:</strong> AI has gotten really good at reading and understanding code. As previously mentioned GitHub Copilot and ChatGPT are great tools for this. By adding some AI-enabled testing tools you can let AI manage complex tasks like code smells or code optimization.</li>
+</ul>
+
+
+
+<p>Moreover, AI can be used to optimize the deployment process by scrutinizing data from previous deployments and making suggestions about the most effective way to deploy code changes. For instance, AI could suggest deploying code changes in small amounts, or in a precise sequence, to reduce the risk of disruption.</p>
+
+
+
+<h2>Frequently Asked Questions</h2>
+
+
+
+<p>Below are some frequently asked questions about how a devops team can take advantage of artificial intelligence:</p>
+
+
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1672431667102" class="rank-math-list-item">
+<h3 class="rank-math-question ">What is AI and how does it relate to DevOps?</h3>
+<div class="rank-math-answer ">
+
+<p>AI is a type of technology that allows computers to perform tasks that typically require human intelligence, such as learning, problem-solving, and decision making. In the context of DevOps, AI can be used to automate and optimize various processes, such as testing, deployment, and monitoring.</p>
+
+</div>
+</div>
+<div id="faq-question-1672431671691" class="rank-math-list-item">
+<h3 class="rank-math-question ">How can AI improve the efficiency of DevOps teams?</h3>
+<div class="rank-math-answer ">
+
+<p>AI can be used to automate repetitive tasks, such as testing and deployment, freeing up time for developers to focus on more important tasks. AI can also be used to optimize processes, such as build and deployment times, improving the overall efficiency of the team.</p>
+
+</div>
+</div>
+<div id="faq-question-1672431752368" class="rank-math-list-item">
+<h3 class="rank-math-question ">How can AI improve the quality of software developed by DevOps teams?</h3>
+<div class="rank-math-answer ">
+
+<p>AI can be used in software development to analyze code as it is being written, providing real-time feedback and suggestions to improve code quality. AI can also be used to analyze logs and identify patterns and trends, helping to identify and troubleshoot issues more efficiently.</p>
+
+</div>
+</div>
+<div id="faq-question-1672431778908" class="rank-math-list-item">
+<h3 class="rank-math-question ">What are the potential drawbacks of using AI in DevOps?</h3>
+<div class="rank-math-answer ">
+
+<p>One potential drawback of using AI in DevOps is the cost of implementing and maintaining the technology. In addition, there may be a learning curve associated with using AI, as team members may need to familiarize themselves with the technology and how to use it effectively. Finally, there may be concerns about bias in AI algorithms, which can impact the accuracy and fairness of the results generated by the technology.</p>
+
+</div>
+</div>
+<div id="faq-question-1672431811001" class="rank-math-list-item">
+<h3 class="rank-math-question ">How can DevOps teams effectively implement AI in their workflow?</h3>
+<div class="rank-math-answer ">
+
+<p>To effectively implement AI in their workflow, DevOps teams should carefully consider their needs and goals, and select the AI system and technologies that will best meet those needs. It may also be helpful to have team members trained in AI and machine learning, as well as to establish clear guidelines and best practices for using the technology.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>As you can see, AI is transforming DevOps teams, software developers, security, operations, and quality assurance. Teams are able to pinpoint and resolve technical errors more quickly, run more meaningful security tests, and automate repetitive tasks so that they can focus on delivering value to the market more quickly.</p>
+
+
+
+<p>AI is one of the primary technologies transforming DevOps today. If you are not considering AI to enhance your product development cycle, then you really should take a look to see what it can do for you and your business today!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>How to SSH into a K8s pod</title>
 		<link>https://www.valewood.org/how-to-ssh-into-pod-k8s/</link>
 		
@@ -2228,7 +2459,7 @@ if err != nil {
 		
 			</item>
 		<item>
-		<title>Solve Your Kubernetes Pod Stuck in Terminating Status Woes in no Time</title>
+		<title>Solve Kubernetes &#8220;Pod Stuck in Terminating Status&#8221; in no Time</title>
 		<link>https://www.valewood.org/kubernetes-pod-stuck-terminating/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
@@ -3413,200 +3644,6 @@ if err != nil {
 
 
 <p>I would encourage anyone out there to go get some training, watch some YouTube videos, and read as much as you can about the methodologies and what they have to offer.  DevOps and Agile together can really open up a lot of new benefits for your business and your customers.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Helm: Kubernetes Cluster Unreachable </title>
-		<link>https://www.valewood.org/helm-kubernetes-cluster-unreachable/</link>
-		
-		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
-		<pubDate>Sat, 03 Dec 2022 02:51:59 +0000</pubDate>
-				<category><![CDATA[Kubernetes]]></category>
-		<category><![CDATA[DevOps]]></category>
-		<category><![CDATA[devops]]></category>
-		<category><![CDATA[howto]]></category>
-		<category><![CDATA[kubernetes]]></category>
-		<category><![CDATA[tools]]></category>
-		<guid isPermaLink="false">/?p=1924</guid>
-
-					<description><![CDATA[Kubernetes, while fairly mature as a platform, is still considered an emerging technology in the business space. Due to this, lots of engineers are spending their free time trying to learn about Helm which can lead to some pretty frustrating&#8230;]]></description>
-										<content:encoded><![CDATA[
-<p><a href="https://kubernetes.io/" data-internallinksmanager029f6b8e52c="4" title="Kubernetes" rel="nofollow noopener" target="_blank">Kubernetes</a>, while fairly mature as a platform, is still considered an emerging technology in the business space.  Due to this, lots of engineers are spending their free time trying to learn about Helm which can lead to some pretty frustrating errors.  </p>
-
-
-
-<p>Let&#8217;s discuss why you might be receiving <code>Error: Kubernetes cluster unreachable</code> when trying to connect to your cluster for the first time.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Kubernetes Install</h2>
-
-
-
-<p>There are a lot of different mechanisms on the market today to get Kubernetes up and running depending on your environment.  How you installed Kubernetes is important for troubleshooting later.  Review the install methods and make sure you align underneath one of them in some fashion.</p>
-
-
-
-<h3>Local Environment</h3>
-
-
-
-<p>Local Kubernetes is going to use <a href="https://k3s.io/" target="_blank" rel="noopener">k3s</a> or <a href="https://minikube.sigs.k8s.io/docs/start/" target="_blank" rel="noopener">minikube</a> to run and install a local version on a standard workstation.  This is a great way to get familiar with Kubernetes because these products will download and install all the requisite dependencies to bootstrap anyone regardless of their skill level.</p>
-
-
-
-<h3>On-Prem Environment</h3>
-
-
-
-<p>I am differentiating local and on-prem simply from the viewpoint of servers vs desktops.  In a more server-focused environment, many people will use <a href="https://github.com/kubernetes-sigs/kubespray" target="_blank" rel="noopener">kubespray</a> or <a href="https://github.com/kubernetes/kops" target="_blank" rel="noopener">kops</a> to deploy their Kubernetes clusters.  Kubespray will ensure that servers are properly configured through IaC while downloading and installing baseline Kubernetes.  By the time you are done, a fully functional cluster should be available.</p>
-
-
-
-<p>Kubespray does come with a lot more knobs and dials since it makes fewer opinionated decisions about what your cluster setup should look like.  In a local environment, ingress is going to be handled in a very specific way.  In an on-prem environment, you may have network appliances that want to handle ingress in a very specific way.  Kubespray should be able to get most of your configurations taken care of for your special circumstances.</p>
-
-
-
-<h3>Cloud Environment</h3>
-
-
-
-<p>Cloud environments can be configured the same way on-prem environments are through kubespray and kops.  Cloud-based VM instances would be spun up on management networks and tools would be run against them to achieve a functioning cluster.</p>
-
-
-
-<p>Most cloud providers will have their own managed Kubernetes to be used as well.  Those are probably a much safer way to get started when just starting to dabble in the Kubernetes space.  </p>
-
-
-
-<ul>
-<li><a href="https://aws.amazon.com/eks/" target="_blank" rel="noopener">Amazon EKS</a></li>
-
-
-
-<li><a href="https://azure.microsoft.com/en-us/products/kubernetes-service/" target="_blank" rel="noopener">Azure AKS</a></li>
-
-
-
-<li><a href="https://www.digitalocean.com/products/kubernetes" target="_blank" rel="noopener">DigitalOcean</a></li>
-
-
-
-<li><a href="https://www.vultr.com/kubernetes/" target="_blank" rel="noopener">Vultr</a></li>
-</ul>
-
-
-
-<p>These solutions generally are only a few clicks away from a full-stack deployment.  Once you get a bit more comfortable, it would be a good idea to toss out your test cluster and start to move into Terraform, CloudFormation, or <a href="https://azure.microsoft.com/en-us/get-started/azure-portal" data-internallinksmanager029f6b8e52c="20" title="Azure" rel="nofollow noopener" target="_blank">Azure</a> Resource Manager automation to ensure your clusters are codified for future upgrades.</p>
-
-
-
-<h2>Error: Kubernetes cluster unreachable</h2>
-
-
-
-<p>There are going to be a few troubleshooting steps you should take to diagnose this issue.  Each of them is going to be a little bit different depending on your deployment setup.</p>
-
-
-
-<h3>Check Your Kubeconfig</h3>
-
-
-
-<p>The first thing to check is your <code>$HOME/.kube/config</code> file.  This file contains all of the relevant information for connecting to your Kubernetes cluster.  It is also very important you keep this file safe and secret since it holds credentials for that connection as well.</p>
-
-
-
-<h4>My Kubeconfig is Missing!</h4>
-
-
-
-<p>If your kubeconfig file is missing, review your Kubernetes installation instructions for anything specific about copying a kubeconfig to the proper folder on your local machine.  The instructions may also walk you through how to create one.  Helm will not work without this file being created and in the proper location.</p>
-
-
-
-<h4>My Kubeconfig Exists!</h4>
-
-
-
-<p>If you open that file to read it, you will find that it is YAML formatted with connection parameters in it.  These parameters should include some certificate information, which are credentials and cluster identification verification, and a hostname for the cluster management API address.</p>
-
-
-
-<p>If you have kubectl installed on the same machine as your kubeconfig, a simple test would be to run <code>kubectl get nodes</code> to see if you get a list of servers back from the kubernetes API.  If you get an error, then either you do not have the right level of access, or your kubeconfig is not properly configured.  See above <strong>&#8220;My Kubeconfig is Missing&#8221;</strong>.</p>
-
-
-
-<p>If this works as intended, and you see a list of servers the next step is to ensure that your kubeconfig is on the same computer that you would like to run helm from.  If you are running helm from a local workstation, make sure you have a proper kubeconfig on that workstation.  If you are running helm from a different server, ensure a kubeconfig is provided for that server.  Make sure to re-test.</p>
-
-
-
-<h4>Check Networking</h4>
-
-
-
-<p>Helm communicates with the Kubernetes API over port 6443.  Using NMap to check ports, ensure that the machine you are intending to run helm from has clear line of sight communication with the Kubernetes cluster over port 6443.  This can be achieved on Linux via this command: nmap –p 6443 {{cluster address/master hostname}}.  You can find the cluster address/master hostname inside of a validated kubeconfig.</p>
-
-
-
-<p>If you are using Windows and looking for an example of how to do port scans, I would suggest switching to Linux or Mac.</p>
-
-
-
-<p>If ports show closed or filtered, network communication will not be established with the cluster and Helm will not be able to run configurations.</p>
-
-
-
-<p>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7120242057450442"
-     data-ad-slot="6094810801"></ins>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</p>
-
-
-
-<h2>Additional Resources</h2>
-
-
-
-<p>The steps outlined above should get you pointed in the right direction when you receive Helm errors when trying to contact your cluster for the first time.</p>
-
-
-
-<p>If you did not find the answers you needed via this article, I have added a few additional resources below that may be able to help get you sorted out.  If you have additional information to share on this topic, please <a href="https://www.valewood.org/contact/" data-type="page" data-id="984">contact me</a> and I will update this post to reflect any changes.</p>
-
-
-
-<ul>
-<li><a href="https://github.com/k3s-io/k3s/issues/1126" target="_blank" rel="noopener">GitHub</a></li>
-
-
-
-<li><a href="https://stackoverflow.com/questions/63066604/error-kubernetes-cluster-unreachable-get-http-localhost8080-versiontimeou" target="_blank" rel="noopener">StackOverflow</a></li>
-
-
-
-<li><a href="https://pet2cattle.com/2022/07/install-helm-k3s" data-type="URL" data-id="https://pet2cattle.com/2022/07/install-helm-k3s" target="_blank" rel="noopener">Pet2Cattle</a></li>
-</ul>
 ]]></content:encoded>
 					
 		

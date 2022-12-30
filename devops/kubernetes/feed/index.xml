@@ -12,7 +12,7 @@
 	<atom:link href="https://www.valewood.org/devops/kubernetes/feed/" rel="self" type="application/rss+xml" />
 	<link>https://www.valewood.org/</link>
 	<description>Occasionally a developer makes an Ops!</description>
-	<lastBuildDate>Tue, 27 Dec 2022 19:55:09 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 30 Dec 2022 14:59:18 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -1056,7 +1056,7 @@ spec:
 		
 			</item>
 		<item>
-		<title>Solve Your Kubernetes Pod Stuck in Terminating Status Woes in no Time</title>
+		<title>Solve Kubernetes &#8220;Pod Stuck in Terminating Status&#8221; in no Time</title>
 		<link>https://www.valewood.org/kubernetes-pod-stuck-terminating/</link>
 		
 		<dc:creator><![CDATA[Geoff Wagner]]></dc:creator>
