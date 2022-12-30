@@ -15,10 +15,10 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-re
 node webp.mjs
 
 # Generate search index
-node build_index.mjs
+#node build_index.mjs
 
 # Generate the SERP page
-node create_serp_page.mjs
+#node create_serp_page.mjs
 
 # Generate table of contents
 node add_faq_structured_data.mjs
