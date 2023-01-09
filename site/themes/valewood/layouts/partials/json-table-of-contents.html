@@ -1,0 +1,29 @@
+<!-- ignore empty links with + -->
+{{ $headers := findRE "<h2.*?>(.|\n])+?</h2>" .Content }}
+<!-- at least one header to link to -->
+{{ $has_headers := ge (len $headers) 1 }}
+<!-- a post can explicitly disable Table of Contents with toc: false -->
+{{ $show_toc := (eq .ShowToC true) }}
+<!-- get the length of the headers -->
+{{ $len := (len $headers) }}
+
+{{ if and $has_headers $show_toc }}
+<script type="text/javascript">
+var tableOfContentsData = [  
+{{ range $index, $element := $headers }}
+    {{ $header := $element }}
+
+  
+    {{ $base := $.Page.File.LogicalName }}
+    {{ $anchorId := ($header | plainify | htmlEscape | urlize) }}
+    {{ $href := delimit (slice $base $anchorId) "#" | string }}
+    {{- if ne $index 0 -}},{{- end -}}
+    {
+        "href": "{{ relref $.Page $href }}",
+        "text": "{{ $header | plainify | htmlEscape }}"
+    }
+{{ end }}
+];
+</script>
+
+{{ end }}

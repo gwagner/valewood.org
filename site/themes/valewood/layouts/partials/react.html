@@ -1,0 +1,5 @@
+{{- $minify := "false" -}}
+{{- $shims := dict "react" "js/shims/react.js"  "react-dom" "js/shims/react-dom.js" -}}
+{{- $options := dict "targetPath" .dst "minify" $minify "shims" $shims "target" "es2020" -}}
+{{- $jsBundle := resources.Get .src | js.Build $options | fingerprint -}}
+<script src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}" defer></script>

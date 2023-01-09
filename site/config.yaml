@@ -1,0 +1,41 @@
+baseURL: 'https://www.valewood.org/'
+languageCode: en-us
+title: A DevOps Blog
+theme: valewood
+
+enableRobotsTXT: true
+
+outputFormats:
+  json:
+    baseName: index
+    isPlainText: true
+    isHTML: false
+    mediaType: application/json
+    permalinkable: true
+    noUgly: false
+
+outputs:
+  page:
+    - html
+  section:
+    - html
+
+params:
+  description: "Let's do some education about DevOps together!"
+  ReactVersion: 18.2.0
+
+permalinks:
+  blog: /:slug/
+
+security:
+  exec:
+    allow:
+      - ^go$
+      - ^npx$
+      - ^postcss$
+      - ^babel$
+
+sitemap:
+  changefreq: monthly
+  priority: 0.5
+  filename: sitemap.xml

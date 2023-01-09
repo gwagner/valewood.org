@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<div class="container mx-auto font-sans">
+
+    <div class="my-4 text-center">
+        <h1 class="text-xl tablet:text-2xl font-bold">{{ .Title }}</h1>
+    </div>
+    <div class="flex my-4">
+        <h2 class="font-bold">Recent Posts:</h2>
+    </div>
+    <div>
+        {{ range (where .Site.Pages "Section" "blog") }}
+        {{ range .Pages }}
+        {{- partial "blog-post-card.html" (dict "Page" . ) -}}
+        {{ end }}
+        {{ end }}
+    </div>
+</div>
+{{ end }}

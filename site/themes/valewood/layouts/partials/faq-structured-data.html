@@ -1,0 +1,19 @@
+{{ $len := (len .faq) }}
+<script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"FAQPage",
+        "mainEntity":[
+           {{ range $index, $element := .faq }}
+           {
+              "@type":"Question",
+              "name":"{{ $element.question }}",
+              "acceptedAnswer":{
+                 "@type":"Answer",
+                 "text":"{{ $element.answer | markdownify }}"
+              }
+           }{{ if eq (add $index 1) $len }}{{else}},{{end}}
+           {{ end }}
+        ]
+     }
+</script>

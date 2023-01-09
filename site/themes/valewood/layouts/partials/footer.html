@@ -1,0 +1,61 @@
+<div class="bg-blue-900 text-white p-4">
+    <div class="container text-center">
+        <h2 class="text-2xl my-4 font-bold">DevOps</h2>
+        <ul>
+            <li>
+                <a href="#">Assessment</a>
+            </li>
+            <li>
+                <a href="#">Checklist</a>
+            </li>
+            <li>
+                <a href="#">Consistency</a>
+            </li>
+            <li>
+                <a href="#">Frequently Asked Questions</a>
+            </li>
+            <li>
+                <a href="#">Flexibility</a>
+            </li>
+            <li>
+                <a href="#">Flow</a>
+            </li>
+            <li>
+                <a href="#">Languages</a>
+            </li>
+            <li>                
+                <a href="#">Methodology</a>
+            </li>
+            <li>
+                <a href="#">Quality</a>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+            </li>
+        </ul>
+        <h2 class="text-2xl my-4 font-bold">General</h2>
+        <ul>
+            <li>
+                <a href="#">About Me</a>
+            </li>
+            <li>
+                <a href="#">Contact Us</a>
+            </li>
+            <li>
+                <a href="#">Terms Of Use</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<script crossorigin src="//unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
+<script crossorigin src="//cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+{{- partial "react.html" (dict "src" "scripts/navigation.jsx" "dst" "js/navigation.js") -}}
+{{ if eq .Page.Type "blog" }}
+{{- partial "react.html" (dict "src" "scripts/table-of-contents.jsx" "dst" "js/table-of-contents.js") -}}
+{{ end }}

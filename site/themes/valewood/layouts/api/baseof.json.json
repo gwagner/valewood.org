@@ -1,0 +1,3 @@
+{
+    "{{ .Params.json_data_key | default "data"}}" : {{ block "response" .}}{{ end }}
+}

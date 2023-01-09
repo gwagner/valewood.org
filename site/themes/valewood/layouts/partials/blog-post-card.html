@@ -1,0 +1,16 @@
+<div class="block mb-16 w-full">
+    <div class="relative">
+        <div class="text-sm rounded-full py-1.5 px-2.5 bg-blue-500 leading-none absolute top-4 right-4">
+            <a class="text-white no-underline hover:text-gray-500 hover:underline" href="#">{{ index .Page.Params.categories 0 }}</a>
+        </div>
+        {{- partial "responsive-image.html" (dict "image_path" .Page.Params.hero.path "alt_text" "" ) -}}
+
+    </div>
+    <div class="my-2">
+        <h3 class="text-lg text-gray-800 font-bold"><a href="{{.Page.RelPermalink}}">{{ .Page.Title }}</a></h3>
+    </div>
+    <p class="font-light text-gray-800 text-base leading-6">
+        {{ .Page.Summary }}
+    </p>
+
+</div>
