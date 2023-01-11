@@ -5,3 +5,4 @@ tmp*
 site/resources/_gen/
 site/.hugo*
 site/dist/
+.git-backup/
