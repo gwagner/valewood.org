@@ -1,31 +1,36 @@
 <head>
     <meta charset="UTF-8">
-    
+
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta http-equiv='x-dns-prefetch-control' content='on'>
     <meta name="description" content="{{ .Page.Params.meta_description | default .Page.Summary }}" />
-    <meta name="robots" content="{{ .Params.robots.nofollow | default "follow"}}, {{ .Params.robots.index | default "index"}}, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <meta name="robots" content="{{ .Params.robots.nofollow | default " follow"}}, {{ .Params.robots.index |
+        default "index" }}, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
 
 
 
     <!-- Visuals -->
     <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' />
+    <link rel='preconnect' href='https://www.googletagmanager.com' />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel='dns-prefetch' href='//fonts.gstatic.com' />
+    <link rel='dns-prefetch' href='//www.googletagmanager.com' />
     <link rel='stylesheet' id='google-fonts-1-css'
-    href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto'
-    type='text/css' media='all' />
+        href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto'
+        type='text/css' media='all' />
 
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-twilight.min.css" />
-    
+
     {{ $style := resources.Get "style.css" }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}"/>
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
     <!-- End Visuals -->
 
-    <script type="module" crossorigin src="https://unpkg.com/react@{{ .Site.Params.ReactVersion }}/umd/react.development.js"></script>
-    <script type="module" crossorigin src="https://unpkg.com/react-dom@{{ .Site.Params.ReactVersion }}//umd/react-dom.development.js"></script>
+    <script type="module" crossorigin
+        src="https://unpkg.com/react@{{ .Site.Params.ReactVersion }}/umd/react.development.js"></script>
+    <script type="module" crossorigin
+        src="https://unpkg.com/react-dom@{{ .Site.Params.ReactVersion }}//umd/react-dom.development.js"></script>
 
     <!-- Social Metadata -->
     {{ if eq .Page.Type "blog" }}
@@ -38,13 +43,29 @@
     {{- partial "structured-data/website.html" . -}}
     {{- partial "structured-data/organization.html" . -}}
     {{- partial "structured-data/breadcrumbs.html" . -}}
-  
+
     {{ if eq .Page.Type "blog" }}
     {{- partial "structured-data/blog-post.html" . -}}
-    {{- partial "json-table-of-contents.html" (dict "Content" .Content "ShowToC" .Page.Params.toc "LogicalName" .Page.File.LogicalName "Page" .Page ) -}}
+    {{- partial "json-table-of-contents.html" (dict "Content" .Content "ShowToC" .Page.Params.toc "LogicalName"
+    .Page.File.LogicalName "Page" .Page ) -}}
     {{ end }}
 
     {{ with .Params.faq }}
     {{- partial "structured-data/faq.html" (dict "faq" .) -}}
     {{ end }}
+
+    <!-- Analytics -->
+    {{ if in "valewood.org" .Site.BaseURL }}
+    {{/*  <script type='text/javascript' src='https://www.googletagmanager.com/gtag/js?id=UA-237075643-1'
+        id='google_gtagjs-js' async></script>  */}}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-723L8NB2TD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-723L8NB2TD');
+    </script>
+    {{ end }}
+    <!-- End Analytics -->
 </head>
