@@ -7,6 +7,7 @@ hero:
     width: 1920
     height: 800
 categories:
+    - Kubernetes
     - DevOps
 published: true
 author: Geoff Wagner
@@ -51,7 +52,7 @@ faq:
 
     - 
         question: Can I use a tool like Ansible to manage SSH access to k8s pods?
-        answer: Yes, you can, but this is so far off the beaten path of how you should be managing a Kubernetes (k8s) cluster that I would highly recommend going back and reviewing all of your design decisions to ask yourself “Why??”
+        answer: Yes, you can, but this is so far off the beaten path of how you should be managing a Kubernetes (k8s) cluster that I would highly recommend going back and reviewing all of your design decisions to ask yourself "Why??"
 
 ---
 
@@ -64,6 +65,8 @@ Kubernetes was released in 2015 and has greatly accelerated container adoption i
 An activity that any systems administrator has performed is the remote administration of a server. On Linux, there will be an exchange of key files, and an SSH connection is established to an internal or external IP address, and boom you are in!
 
 How do you remotely administer a container running in a Kubernetes cluster? Let's explore that question below!
+
+{{< googleads >}}
 
 ## What is a Container Runtime?
 
@@ -83,9 +86,11 @@ When a container is created, it is based on a container image, which is a lightw
 
 To run a container, you can use a container runtime, such as Docker, to start the container based on the container image. The container runtime creates a new container instance and allocates the necessary resources, such as CPU, memory, and storage, to the container. The container runtime then launches the application inside the container and provides it with the necessary networking and storage services.
 
+{{< googleads >}}
+
 ## How Do I SSH Into a Running Container?
 
-The short answer is this; unless the container is running an SSH server with a port mapped to a service, you don't. The right question to ask is “How do I access a running Container or Pod's Shell?” That question is answered in another section down below.
+The short answer is this; unless the container is running an SSH server with a port mapped to a service, you don't. The right question to ask is "How do I access a running Container or Pod's Shell?" That question is answered in another section down below.
 
 A container is essentially carved out of user space from the operating system's kernel which is running one or more processes in isolation. When you SSH into a server, that server is running a process like OpenSSH to facilitate your connection and login. If your containers are not running an OpenSSH server as a process, then SSHing is not the answer.
 
@@ -93,7 +98,7 @@ What you are really trying to do is start up a new process inside of the contain
 
 ## How Do I access a running Container or Pod's Shell?
 
-To SSH into a pod, or more correctly stated “gain terminal access into a pod”, in Kubernetes, you can use the kubectl exec command. This command allows you to execute a command in a specific container within a pod.
+To SSH into a pod, or more correctly stated "gain terminal access into a pod", in Kubernetes, you can use the kubectl exec command. This command allows you to execute a command in a specific container within a pod.
 
 Here is an example of how to use kubectl exec to SSH into a pod:
 
@@ -106,6 +111,8 @@ This will open a shell inside the container of the pod. You can then use the ssh
 Keep in mind that the pod must be running in order for you to be able to exec into it. If the pod is not running, you will need to start it before you can exec into it.
 
 You can also use the kubectl exec command to execute other commands in the container, such as running scripts or checking the status of processes.
+
+{{< googleads >}}
 
 ## Caveats for accessing Container or Pod's Shell
 
@@ -125,7 +132,7 @@ CMD ["/my-app"]
 
 This Dockerfile will build a container image that includes only the my-app binary, without any other packages or dependencies.
 
-If the base of the container you are running is “scratch” then you will not have a shell installed on that container unless you explicitly add one as part of the build process.
+If the base of the container you are running is "scratch" then you will not have a shell installed on that container unless you explicitly add one as part of the build process.
 
 ### Missing Shell or Command Language Interpreter
 
@@ -137,7 +144,7 @@ There are many different shells available for different operating systems, each 
 
 In addition to providing a command-line interface, shells can also be used to write scripts that automate tasks and processes. These scripts, called shell scripts, are written in the syntax of the shell and can be executed from the command line or triggered by certain events.
 
-If the base of the container you are running is “scratch” then you will not have a shell installed on that container unless you explicitly add one as part of the build process. The container you are running may also be limited to something like /bin/sh and may not have your favorite shell such as fish installed.
+If the base of the container you are running is "scratch" then you will not have a shell installed on that container unless you explicitly add one as part of the build process. The container you are running may also be limited to something like /bin/sh and may not have your favorite shell such as fish installed.
 The Container is not Running
 
 If your container is not running, you may not be able to exec in to get a shell. You may need to spin up an out-of-band pod that does not fail so that you can get in and review things like env vars or connection params. Below is how Kubernetes recommends you do this with their DNS debug container.
@@ -173,6 +180,8 @@ kubectl exec dns-debug -it -- dig example.com
 
 This will execute the dig command inside the DNS debug container, allowing you to troubleshoot DNS issues in your cluster.
 
+{{< googleads >}}
+
 ## Frequently Asked Questions
 
 Below are some frequently asked questions relating to SSHing (or gaining access) to a k8s pod:
@@ -181,4 +190,4 @@ Below are some frequently asked questions relating to SSHing (or gaining access)
 
 ## Conclusion
 
-The answer to the question ‘How to SSH into pod K8s' is simply, you don't. What you are really looking to do is exec a Command Language Interpreter, or shell, inside of a running container.
+The answer to the question 'How to SSH into pod K8s' is simply, you don't. What you are really looking to do is exec a Command Language Interpreter, or shell, inside of a running container.

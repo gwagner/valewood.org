@@ -1,0 +1,6 @@
+{{ $image := resources.Get .Params.hero.path }}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ADevoops" />
+    <meta name="twitter:title" content="{{ .Params.title }}" />
+    <meta name="twitter:description" content="{{ .Params.Summary }}" />
+    <meta name="twitter:image" content="{{ $image.Permalink }}" />

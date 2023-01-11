@@ -12,6 +12,11 @@ module.exports = {
       'tablet': '768px',
       'desktop': '976px',
     },
+    extend: {
+      flex: {
+        '2': '0 0 calc(33.33% - 20px)'
+      }
+    },
     colors: {
       'blue': '#1d4ed8',
       'purple': '#7e5bef',

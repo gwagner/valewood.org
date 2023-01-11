@@ -4,3 +4,4 @@ temp*
 tmp*
 site/resources/_gen/
 site/.hugo*
+site/dist/

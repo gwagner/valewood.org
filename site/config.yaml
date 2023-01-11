@@ -2,6 +2,12 @@ baseURL: 'https://www.valewood.org/'
 languageCode: en-us
 title: A DevOps Blog
 theme: valewood
+summaryLength: 20
+paginate: 4
+enableGitInfo: true
+
+frontmatter:
+  lastmod: [':git', ':fileModTime']
 
 enableRobotsTXT: true
 

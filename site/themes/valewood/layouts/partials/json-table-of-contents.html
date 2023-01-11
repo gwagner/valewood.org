@@ -15,12 +15,12 @@ var tableOfContentsData = [
 
   
     {{ $base := $.Page.File.LogicalName }}
-    {{ $anchorId := ($header | plainify | htmlEscape | urlize) }}
+    {{ $anchorId := ($header | htmlUnescape | plainify | htmlEscape | urlize) }}
     {{ $href := delimit (slice $base $anchorId) "#" | string }}
     {{- if ne $index 0 -}},{{- end -}}
     {
         "href": "{{ relref $.Page $href }}",
-        "text": "{{ $header | plainify | htmlEscape }}"
+        "text": "{{ $header | htmlUnescape | plainify | safeHTML }}"
     }
 {{ end }}
 ];

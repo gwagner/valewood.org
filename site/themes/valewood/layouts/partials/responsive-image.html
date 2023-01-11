@@ -1,17 +1,18 @@
 {{ $image := resources.Get .image_path }}
+{{ $image = $image.Crop "1280x1024 Center webp"}}
 
 
-{{ $small_dims := "x480 webp" }}
-{{ $med_dims := "x768 webp" }}
-{{ $large_dims := "x976 webp" }}
+{{ $small_dims := "x480 Center webp q90" }}
+{{ $med_dims := "x768 Center webp q90" }}
+{{ $large_dims := "x976 Center webp q90" }}
 
 {{ $small_image := $image.Resize $small_dims }}
 {{ $med_image := $image.Resize $med_dims }}
 {{ $large_image := $image.Resize $large_dims }}
 
-<picture class="object-center">
-    <source media="(max-width: 480px)" srcset="{{ $small_image.RelPermalink }}" />
+<picture>
+    <source media="(mix-width: 480px)" srcset="{{ $small_image.RelPermalink }}" />
     <source media="(min-width: 768px)" srcset="{{ $med_image.RelPermalink }}" />
     <source media="(min-width: 976px)" srcset="{{ $large_image.RelPermalink }}" />
-    <img src="{{ $large_image.RelPermalink }}" alt="{{ .alt_text }}" width="{{ $large_image.Width }}" height="{{ $large_image.Height }}"  />
+    <img src="{{ $large_image.RelPermalink }}" alt="{{ .alt_text }}" />
 </picture>

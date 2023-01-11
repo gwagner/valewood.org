@@ -1,6 +1,20 @@
 {{ define "main" }}
 
-{{ $paginator := .Paginate (where .Site.RegularPages "Params.hero" "!=" nil) }}
+{{/*  {{ $pages := (where (where (where .Site.RegularPages "Params.hero" "!=" nil) "Section" "blog") "Params.categories" "in" (slice "devops")) }}  */}}
+{{ $pages := (where (where .Site.RegularPages "Section" "blog") "Params.hero" "!=" nil) }}
+{{ $data := newScratch }}
+
+{{ $title := .Params.title }}
+
+{{ range $pages }}
+{{ if eq (index .Params.categories 0) $title }}
+
+{{ $data.Add "pages" .Params.title }}
+
+{{ end }}
+{{ end }}
+
+{{ $paginator := .Paginate (where (where .Site.RegularPages "Section" "blog") "Params.title" "in" ($data.Get "pages")) }}
 
 <div class="container mx-auto font-sans">
 
@@ -20,6 +34,7 @@
     <div class="my-8">
     {{ partial "pagination.html" . }}
     </div>
+
 
 </div>
 

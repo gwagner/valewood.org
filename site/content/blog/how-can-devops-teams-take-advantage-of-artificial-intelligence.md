@@ -5,6 +5,7 @@ hero:
     path: /images/devops-artificial-intelligence.jpg
     width: 1920
     height: 800
+    alt: How can DevOps Teams take Advantage of Artificial Intelligence?
 categories:
     - DevOps
 published: true

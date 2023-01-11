@@ -8,38 +8,63 @@ pre[class*="language-"] {
     border: none;
 }
 
+
+
 .post a:hover {
     color: rgb(70, 127, 247);
     outline-color: rgb(70, 127, 247);
     text-decoration-color: rgb(70, 127, 247);
-    text-transform: capitalize;
 }
 
 .post-content * {
-    font-family: "Roboto",Sans-serif;
+    font-family: "Roboto", Sans-serif;
     margin-bottom: 17px;
     text-rendering: optimizeLegibility;
     text-transform: none;
 }
 
-.post-content h2 {
-    font-size: 32px;
+.post-content a {
     font-weight: 900;
-    line-height: 38px;
+    color: rgb(70, 127, 247);
+    outline-color: rgb(70, 127, 247);
+}
+
+.post a:hover {
+    color: rgb(35, 56, 118);
+    outline-color: rgb(35, 56, 118);
+    text-decoration-color: rgb(35, 56, 118);
+}
+
+.post-content h2 {
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
+    font-weight: 900;
 }
 
 .post-content h3 {
-    font-size: 22px;
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
     font-weight: 700;
-    line-height: 22px;
 }
 
-.post-content p, .post-content ul>li {
-    font-size: 14px;
+.post-content h4 {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
+    font-weight: 700;
+}
+
+.post-content p,
+.post-content ul>li,
+.post-content ol>li {
+    font-size: 0.875rem/* 14px */;
+    line-height: 1.25rem/* 20px */;
     font-weight: 300;
-    line-height: 28px;
-    color: rgb(49,49,49);
-    outline-color: rgb(49,49,49);
+    color: rgb(49, 49, 49);
+    outline-color: rgb(49, 49, 49);
+}
+
+.post-content strong {
+    font-weight: 900;
 }
 
 .post-content ul {
@@ -50,4 +75,25 @@ pre[class*="language-"] {
 .post-content ol {
     list-style-type: decimal;
     padding-left: 36px;
+}
+
+.post-content blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+.post-content blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+.post-content blockquote p {
+    display: inline;
 }

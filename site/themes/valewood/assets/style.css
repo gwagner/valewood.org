@@ -894,6 +894,10 @@ input[type="range"]::-ms-fill-lower {
   z-index: 50;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -904,9 +908,19 @@ input[type="range"]::-ms-fill-lower {
   margin-right: auto;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .mr-8 {
@@ -917,32 +931,48 @@ input[type="range"]::-ms-fill-lower {
   margin-top: 1rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
+.mt-12 {
+  margin-top: 3rem;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .block {
   display: block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .hidden {
@@ -961,6 +991,26 @@ input[type="range"]::-ms-fill-lower {
   height: 1.5rem;
 }
 
+.h-28 {
+  height: 7rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -973,8 +1023,36 @@ input[type="range"]::-ms-fill-lower {
   width: 1.5rem;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .shrink-0 {
   flex-shrink: 0;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.basis-full {
+  flex-basis: 100%;
 }
 
 .rotate-180 {
@@ -986,12 +1064,24 @@ input[type="range"]::-ms-fill-lower {
   resize: both;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-y-auto {
@@ -1008,6 +1098,18 @@ input[type="range"]::-ms-fill-lower {
 
 .border {
   border-width: 1px;
+}
+
+.border-8 {
+  border-width: 8px;
+}
+
+.border-t-2 {
+  border-top-width: 2px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
 .border-gray-200 {
@@ -1073,6 +1175,18 @@ input[type="range"]::-ms-fill-lower {
   padding-right: 0.5rem;
 }
 
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1087,6 +1201,16 @@ input[type="range"]::-ms-fill-lower {
 
 .font-sans {
   font-family: Graphik, sans-serif;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-xl {
@@ -1109,17 +1233,24 @@ input[type="range"]::-ms-fill-lower {
   line-height: 1.75rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .font-light {
   font-weight: 300;
 }
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .leading-none {
@@ -1140,12 +1271,26 @@ input[type="range"]::-ms-fill-lower {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(63 131 248 / var(--tw-text-opacity));
+}
+
 .no-underline {
   text-decoration-line: none;
 }
 
 .opacity-95 {
   opacity: 0.95;
+}
+
+.outline {
+  outline-style: solid;
 }
 
 .filter {
@@ -1162,34 +1307,63 @@ pre[class*="language-"] {
   color: rgb(70, 127, 247);
   outline-color: rgb(70, 127, 247);
   text-decoration-color: rgb(70, 127, 247);
-  text-transform: capitalize;
 }
 
 .post-content * {
-  font-family: "Roboto",Sans-serif;
+  font-family: "Roboto", Sans-serif;
   margin-bottom: 17px;
   text-rendering: optimizeLegibility;
   text-transform: none;
 }
 
-.post-content h2 {
-  font-size: 32px;
+.post-content a {
   font-weight: 900;
-  line-height: 38px;
+  color: rgb(70, 127, 247);
+  outline-color: rgb(70, 127, 247);
+}
+
+.post a:hover {
+  color: rgb(35, 56, 118);
+  outline-color: rgb(35, 56, 118);
+  text-decoration-color: rgb(35, 56, 118);
+}
+
+.post-content h2 {
+  font-size: 1.875rem;
+  /* 30px */
+  line-height: 2.25rem;
+  /* 36px */
+  font-weight: 900;
 }
 
 .post-content h3 {
-  font-size: 22px;
+  font-size: 1.5rem;
+  /* 24px */
+  line-height: 2rem;
+  /* 32px */
   font-weight: 700;
-  line-height: 22px;
 }
 
-.post-content p, .post-content ul>li {
-  font-size: 14px;
+.post-content h4 {
+  font-size: 1.25rem;
+  /* 20px */
+  line-height: 1.75rem;
+  /* 28px */
+  font-weight: 700;
+}
+
+.post-content p,
+.post-content ul>li,
+.post-content ol>li {
+  font-size: 0.875rem/* 14px */;
+  line-height: 1.25rem/* 20px */;
   font-weight: 300;
-  line-height: 28px;
-  color: rgb(49,49,49);
-  outline-color: rgb(49,49,49);
+  color: rgb(49, 49, 49);
+  outline-color: rgb(49, 49, 49);
+}
+
+.post-content strong {
+  font-weight: 900;
 }
 
 .post-content ul {
@@ -1202,9 +1376,35 @@ pre[class*="language-"] {
   padding-left: 36px;
 }
 
+.post-content blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+.post-content blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.post-content blockquote p {
+  display: inline;
+}
+
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(35 56 118 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -1243,8 +1443,24 @@ pre[class*="language-"] {
     height: 3rem;
   }
 
+  .tablet\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .tablet\:flex-2 {
+    flex: 0 0 calc(33.33% - 20px);
+  }
+
+  .tablet\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
   .tablet\:items-center {
     align-items: center;
+  }
+
+  .tablet\:items-stretch {
+    align-items: stretch;
   }
 
   .tablet\:justify-between {
@@ -1257,6 +1473,11 @@ pre[class*="language-"] {
 
   .tablet\:text-left {
     text-align: left;
+  }
+
+  .tablet\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .tablet\:text-2xl {

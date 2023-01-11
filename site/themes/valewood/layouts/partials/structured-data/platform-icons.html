@@ -1,0 +1,5 @@
+{{ $image := resources.Get "/images/a-devops-blog-logo.png" }}
+    <link rel="icon" href="{{ $image.Permalink }}" sizes="32x32" />
+    <link rel="icon" href="{{ $image.Permalink }}" sizes="192x192" />
+    <link rel="apple-touch-icon" href="{{ $image.Permalink }}" />
+    <meta name="msapplication-TileImage" content="{{ $image.Permalink }}" />
