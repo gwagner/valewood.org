@@ -58,7 +58,7 @@ function TopBar({ setMenuStatus, isMenuOpen, items }) {
       <div className="flex py-4 items-center justify-between">
         <div >
           <a href="/">
-            <img className={classNames('h-12', 'tablet:h-12')} src="https://www.valewood.org/wp-content/uploads/2022/08/A-DevOoops-1-e1660773390219.png"></img>
+            <img className={classNames('h-12', 'tablet:h-12')} src="/images/a-devops-blog-logo.png"></img>
           </a>
         </div>
         <div className="tablet:hidden">
